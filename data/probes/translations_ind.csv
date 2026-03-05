@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,ind,ind_Latn,individualisme,individualism,1.0,0.8733891248703003,high,0,0
+collectivism,ind,ind_Latn,kolektivisme,collectivism,1.0,0.87555992603302,high,0,0
+hierarchy,ind,ind_Latn,hierarki,the hierarchy,0.8181818181818182,0.6067254543304443,medium,0,0
+equality,ind,ind_Latn,kesetaraan,equality,1.0,0.8680084347724915,high,0,0
+authority,ind,ind_Latn,otoritas,authority,1.0,0.766642689704895,medium,0,0
+autonomy,ind,ind_Latn,Otonomi,It's autonomous.,0.5833333333333334,0.8531014919281006,high,0,0
+obedience,ind,ind_Latn,kepatuhan,Obedience,1.0,0.8398817181587219,high,0,0
+duty,ind,ind_Latn,kewajiban,liability,0.3076923076923077,0.8393306732177734,high,1,0
+freedom,ind,ind_Latn,Kebebasan,Freedom,1.0,0.8713592290878296,high,0,0
+honor,ind,ind_Latn,kehormatan,The honor,0.7142857142857143,0.7067795395851135,medium,0,0
+shame,ind,ind_Latn,malu,Shame on you.,0.5555555555555556,0.573536217212677,low,1,0
+virtue,ind,ind_Latn,kebajikan,virtue,1.0,0.8179917335510254,high,0,0
+vice,ind,ind_Latn,ketidaksetaraan,inequality,0.2857142857142857,0.7122935056686401,medium,1,0
+respect,ind,ind_Latn,Penghormatan,The Honor,0.125,0.866478681564331,high,1,0
+modesty,ind,ind_Latn,kesederhanaan,simplicity,0.35294117647058826,0.8268465995788574,high,1,0
+purity,ind,ind_Latn,kemurnian,purity,1.0,0.7855952382087708,medium,0,0
+pollution,ind,ind_Latn,polusi,pollution,1.0,0.873212993144989,high,0,0
+face,ind,ind_Latn,wajah,The face,0.6666666666666666,0.8153284788131714,high,0,0
+reputation,ind,ind_Latn,Reputasi,Reputation,1.0,0.8579096794128418,high,0,0
+hospitality,ind,ind_Latn,keramahan,Hospitality,1.0,0.8485960960388184,high,0,0
+charity,ind,ind_Latn,amal,charity,1.0,0.6683593392372131,medium,0,0
+cooperation,ind,ind_Latn,kerjasama,cooperation,1.0,0.8379055857658386,high,0,0
+competition,ind,ind_Latn,Persaingan,Competition,1.0,0.8495670557022095,high,0,0
+fairness,ind,ind_Latn,keadilan,Justice,0.26666666666666666,0.8288025856018066,high,1,1
+justice,ind,ind_Latn,keadilan,Justice,1.0,0.8568753004074097,high,1,1
+taboo,ind,ind_Latn,tabu,Taboo,1.0,0.7941576838493347,medium,0,0
+tradition,ind,ind_Latn,tradisi,tradition,1.0,0.8500543832778931,high,0,0
+modernity,ind,ind_Latn,modernitas,modernity,1.0,0.8515260815620422,high,0,0
+sacred,ind,ind_Latn,suci,holy,0.0,0.7267404794692993,medium,1,0
+secular,ind,ind_Latn,sekuler,secular,1.0,0.7649641633033752,medium,0,0
+conformity,ind,ind_Latn,Konformitas,Conformity,1.0,0.8321961760520935,high,0,0
+dissent,ind,ind_Latn,penentangan,resistance,0.35294117647058826,0.8188217878341675,high,1,0
+restraint,ind,ind_Latn,pengendalian,control,0.25,0.8064101338386536,high,1,0
+indulgence,ind,ind_Latn,penyesalan,regrets,0.23529411764705882,0.7952244281768799,medium,1,0
+solidarity,ind,ind_Latn,solidaritas,Solidarity,1.0,0.6244018077850342,medium,0,0
+merit,ind,ind_Latn,Penghargaan,The Award,0.2857142857142857,0.5437172651290894,low,1,0
+trust,ind,ind_Latn,kepercayaan,trust,1.0,0.8575692176818848,high,0,0
+loyalty,ind,ind_Latn,kesetiaan,loyalty,1.0,0.8715483546257019,high,0,0
+integrity,ind,ind_Latn,integritas,integrity,1.0,0.8422549366950989,high,0,0
+discretion,ind,ind_Latn,Kebijaksanaan,The Wisdom,0.3,0.8162740468978882,high,1,0
+humility,ind,ind_Latn,rendah hati,humility,1.0,0.8534566164016724,high,1,1
+discipline,ind,ind_Latn,disiplin,discipline,1.0,0.8493881225585938,high,0,0
+self control,ind,ind_Latn,kontrol diri,self-control,0.9166666666666666,0.8649452924728394,high,0,0
+deference,ind,ind_Latn,deferensi,Deference,1.0,0.5736009478569031,low,1,0
+civic individualism,ind,ind_Latn,individualisme sipil,civil individualism,0.9473684210526315,0.8419340252876282,high,0,0
+civic collectivism,ind,ind_Latn,kolektivisme sipil,civil collectivism,0.9444444444444444,0.8720447421073914,high,0,0
+civic hierarchy,ind,ind_Latn,hierarki sipil,civil hierarchy,0.9333333333333333,0.8675018548965454,high,0,0
+civic equality,ind,ind_Latn,kesetaraan sipil,civil equality,0.9285714285714286,0.8724232912063599,high,0,0
+civic authority,ind,ind_Latn,otoritas sipil,civil authority,0.9333333333333333,0.8315842747688293,high,0,0
+civic autonomy,ind,ind_Latn,Otonomi sipil,Civil autonomy,0.9285714285714286,0.8642938137054443,high,0,0
+civic obedience,ind,ind_Latn,kepatuhan warga negara,compliance of citizens,0.2702702702702703,0.856421709060669,high,1,0
+civic duty,ind,ind_Latn,kewajiban sipil,civil liability,0.56,0.8810083270072937,high,0,0
+civic freedom,ind,ind_Latn,Kebebasan sipil,Civil liberties,0.5,0.8909648656845093,high,1,0
+civic honor,ind,ind_Latn,Kehormatan sipil,Civilian honor,0.8,0.8713054656982422,high,0,0
+civic shame,ind,ind_Latn,rasa malu warga,The shame of citizens,0.375,0.8384296894073486,high,1,0
+civic virtue,ind,ind_Latn,kebajikan sipil,civic virtue,1.0,0.8521628379821777,high,0,0
+civic vice,ind,ind_Latn,Kejahatan sipil,Civilian crime,0.5833333333333334,0.8547489047050476,high,0,0
+civic respect,ind,ind_Latn,Penghormatan warga negara,Respect for citizens,0.42424242424242425,0.8110048770904541,high,1,1
+civic modesty,ind,ind_Latn,Kebangkitan warga,Resurrection of the Citizen,0.2,0.4429042935371399,low,1,0
+civic purity,ind,ind_Latn,kebersihan sipil,civilian cleanliness,0.375,0.873206377029419,high,1,0
+civic pollution,ind,ind_Latn,polusi sipil,civil pollution,0.9333333333333333,0.7453858852386475,medium,0,0
+civic face,ind,ind_Latn,wajah warga,faces of citizens,0.2962962962962963,0.8004320859909058,high,1,0
+civic reputation,ind,ind_Latn,Reputasi sipil,Civilian reputation,0.8571428571428571,0.8851683139801025,high,0,0
+civic hospitality,ind,ind_Latn,keramahan warga,civic hospitality,1.0,0.8593214750289917,high,0,0
+civic charity,ind,ind_Latn,amal sipil,civic charities,0.8571428571428571,0.8422746062278748,high,0,0
+civic cooperation,ind,ind_Latn,kerjasama sipil,civil cooperation,0.9411764705882353,0.8852349519729614,high,0,0
+civic competition,ind,ind_Latn,Persaingan sipil,Civil competition,0.9411764705882353,0.8513481020927429,high,0,0
+civic fairness,ind,ind_Latn,keadilan sipil,civil justice,0.4444444444444444,0.8626640439033508,high,1,1
+civic justice,ind,ind_Latn,keadilan sipil,civil justice,0.9230769230769231,0.8641359806060791,high,1,1
+civic taboo,ind,ind_Latn,Taboo sipil,Civilian taboo,0.8,0.8317561745643616,high,0,0
+civic tradition,ind,ind_Latn,tradisi sipil,civic traditions,0.967741935483871,0.8743972778320312,high,0,0
+civic modernity,ind,ind_Latn,modernitas sipil,civil modernity,0.9333333333333333,0.6813462376594543,medium,0,0
+civic sacred,ind,ind_Latn,sakral sipil,civil sanctity,0.6153846153846154,0.5223062634468079,low,1,0
+civic secular,ind,ind_Latn,sipil sekuler,secular civilians,0.4666666666666667,0.774799108505249,medium,1,0
+civic conformity,ind,ind_Latn,kepatuhan sipil,civil compliance,0.5,0.871122419834137,high,1,0
+civic dissent,ind,ind_Latn,perselisihan warga sipil,civil disputes,0.6666666666666666,0.872610867023468,high,0,0
+civic restraint,ind,ind_Latn,pengendalian sipil,civil control,0.5,0.8557189106941223,high,1,0
+civic indulgence,ind,ind_Latn,kepuasan sipil,civil satisfaction,0.4117647058823529,0.6981300115585327,medium,1,0
+civic solidarity,ind,ind_Latn,solidaritas sipil,civil solidarity,0.9375,0.5990163087844849,low,1,0
+civic merit,ind,ind_Latn,merit sipil,civil merit,0.9090909090909091,0.2809114456176758,low,1,0
+civic trust,ind,ind_Latn,kepercayaan warga,citizen's trust,0.6923076923076923,0.8721972107887268,high,0,0
+civic loyalty,ind,ind_Latn,loyalitas warga negara,loyalty of citizens,0.4375,0.885116696357727,high,1,0
+civic integrity,ind,ind_Latn,integritas warga negara,integrity of citizens,0.5,0.8791635632514954,high,1,0
+civic discretion,ind,ind_Latn,Kebijaksanaan warga negara,The wisdom of the citizen,0.24390243902439024,0.7578187584877014,medium,1,0
+civic humility,ind,ind_Latn,rendah hati sebagai warga negara,humility as a citizen,0.45714285714285713,0.8297982811927795,high,1,0
+civic discipline,ind,ind_Latn,disiplin sipil,civil discipline,0.9375,0.8849295377731323,high,0,0
+civic self control,ind,ind_Latn,kendali diri sipil,civil self-control,0.8888888888888888,0.8599315881729126,high,0,0
+civic deference,ind,ind_Latn,Penghormatan warga negara,Respect for citizens,0.2857142857142857,0.7663509845733643,medium,1,1
+moral individualism,ind,ind_Latn,individualisme moral,Moral individualism,1.0,0.875471830368042,high,0,0
+moral collectivism,ind,ind_Latn,kolektivisme moral,moral collectivism,1.0,0.8707365989685059,high,0,0
+moral hierarchy,ind,ind_Latn,hierarki moral,moral hierarchy,1.0,0.7557681202888489,medium,0,0
+moral equality,ind,ind_Latn,kesetaraan moral,moral equality,1.0,0.8374542593955994,high,0,0
+moral authority,ind,ind_Latn,otoritas moral,moral authority,1.0,0.6968873739242554,medium,0,0
+moral autonomy,ind,ind_Latn,otonomi moral,moral autonomy,1.0,0.8652134537696838,high,0,0
+moral obedience,ind,ind_Latn,ketaatan moral,moral obedience,1.0,0.8621565103530884,high,0,0
+moral duty,ind,ind_Latn,kewajiban moral,moral obligation,0.5384615384615384,0.8667376041412354,high,1,0
+moral freedom,ind,ind_Latn,kebebasan moral,moral freedom,1.0,0.8734418153762817,high,0,0
+moral honor,ind,ind_Latn,kehormatan moral,moral honor,1.0,0.6561508178710938,medium,0,0
+moral shame,ind,ind_Latn,rasa malu moral,Moral shame,1.0,0.8192688822746277,high,0,0
+moral virtue,ind,ind_Latn,kebajikan moral,moral virtue,1.0,0.8515851497650146,high,0,0
+family,ind,ind_Latn,keluarga,family,1.0,0.8558233976364136,high,0,0
+kinship,ind,ind_Latn,kerabat,Relatives,0.25,0.796360969543457,medium,1,0
+mother,ind,ind_Latn,ibu,My mother.,0.75,0.8410664200782776,high,1,1
+father,ind,ind_Latn,ayah,I'm your father.,0.5454545454545454,0.7879538536071777,medium,1,0
+parent,ind,ind_Latn,orang tua,parents,0.9230769230769231,0.8299466967582703,high,0,0
+child,ind,ind_Latn,anak,the child,0.7142857142857143,0.8595035672187805,high,0,0
+daughter,ind,ind_Latn,putri,daughter,1.0,0.8279419541358948,high,0,0
+son,ind,ind_Latn,anak laki-laki,The boys,0.18181818181818182,0.8584854006767273,high,1,0
+uncle,ind,ind_Latn,Paman,My uncle.,0.7142857142857143,0.8107184171676636,high,0,0
+aunt,ind,ind_Latn,Pamanku,That's my uncle.,0.3,0.8329976201057434,high,1,0
+cousin,ind,ind_Latn,sepupu,cousin,1.0,0.8569862842559814,high,0,0
+grandmother,ind,ind_Latn,nenek,My grandmother,0.88,0.8391443490982056,high,0,0
+grandfather,ind,ind_Latn,kakek,My grandfather,0.88,0.8444444537162781,high,0,0
+nephew,ind,ind_Latn,keponakan,Nephew,1.0,0.8109484910964966,high,1,1
+niece,ind,ind_Latn,keponakan,Nephew,0.5454545454545454,0.8029360771179199,high,1,1
+ancestor,ind,ind_Latn,nenek moyang,the ancestors,0.7619047619047619,0.7952384948730469,medium,0,0
+lineage,ind,ind_Latn,keturunan,offspring,0.375,0.8338742852210999,high,1,0
+clan,ind,ind_Latn,klan,the clan,0.6666666666666666,0.834343671798706,high,0,0
+household,ind,ind_Latn,rumah tangga,household,1.0,0.8466761112213135,high,1,1
+joint family,ind,ind_Latn,keluarga bersama,family together,0.4444444444444444,0.8334619998931885,high,1,0
+nuclear family,ind,ind_Latn,keluarga nuklir,nuclear family,1.0,0.8779163360595703,high,0,0
+marriage,ind,ind_Latn,perkawinan,marriage,1.0,0.8621278405189514,high,1,1
+wedding,ind,ind_Latn,pernikahan,marriage,0.13333333333333333,0.8563063144683838,high,1,0
+bride,ind,ind_Latn,pengantin perempuan,the bride,0.7142857142857143,0.8319891095161438,high,0,0
+groom,ind,ind_Latn,pengantin pria,the bridegroom,0.5263157894736842,0.7737017273902893,medium,1,0
+engagement,ind,ind_Latn,keterlibatan,involvement,0.5714285714285714,0.8069847822189331,high,0,0
+dowry,ind,ind_Latn,pengunduran diri,resignation,0.125,0.48609331250190735,low,1,0
+bridewealth,ind,ind_Latn,pengantin,the bride,0.5,0.4245782196521759,low,1,1
+inheritance,ind,ind_Latn,warisan,heritage,0.7368421052631579,0.4311133027076721,low,1,1
+widow,ind,ind_Latn,janda,widow,1.0,0.47449830174446106,low,1,1
+widower,ind,ind_Latn,janda,widow,0.8333333333333334,0.4687332808971405,low,1,1
+courtship,ind,ind_Latn,perkawinan,marriage,0.23529411764705882,0.8495010733604431,high,1,1
+matchmaker,ind,ind_Latn,pengantin,the bride,0.42105263157894735,0.40084996819496155,low,1,1
+surname,ind,ind_Latn,nama keluarga,family name,0.4444444444444444,0.8325427770614624,high,1,1
+patronymic,ind,ind_Latn,nama keluarga,family name,0.2857142857142857,0.6942834854125977,medium,1,1
+matronymic,ind,ind_Latn,matronim,the matronim,0.6363636363636364,0.5516003370285034,low,1,0
+firstborn,ind,ind_Latn,anak sulung,firstborn,1.0,0.8552830219268799,high,0,0
+heir,ind,ind_Latn,pewaris,the heirs,0.6153846153846154,0.36479702591896057,low,1,0
+filial piety,ind,ind_Latn,keikhlasan anak-anak,the sanctity of children,0.2222222222222222,0.5848163366317749,low,1,0
+caregiving,ind,ind_Latn,penitipan,the caretaker,0.34782608695652173,0.721467137336731,medium,1,0
+motherhood,ind,ind_Latn,ibu,My mother.,0.6,0.7822698950767517,medium,1,1
+fatherhood,ind,ind_Latn,kewarganegaraan,citizenship,0.19047619047619047,0.5369623899459839,low,1,1
+in laws,ind,ind_Latn,dalam undang-undang,in the law,0.7058823529411765,0.7560814619064331,medium,0,0
+brother in law,ind,ind_Latn,mertuanya,Her daughter-in-law,0.5454545454545454,0.6776713132858276,medium,1,0
+sister in law,ind,ind_Latn,kakak ipar,sister-in-law,0.8461538461538461,0.8507387042045593,high,0,0
+ancestral home,ind,ind_Latn,rumah nenek moyang,ancestral home,1.0,0.8699289560317993,high,0,0
+household labor,ind,ind_Latn,pekerjaan rumah tangga,household chores,0.7741935483870968,0.8583959341049194,high,0,0
+extended family,ind,ind_Latn,Keluarga besar,Large family,0.5925925925925926,0.8618385195732117,high,0,0
+extended kinship,ind,ind_Latn,kerabat yang luas,extended relatives,0.6470588235294118,0.814531147480011,high,0,0
+extended mother,ind,ind_Latn,ibu lanjut usia,elderly mother,0.6896551724137931,0.7222146987915039,medium,0,0
+extended father,ind,ind_Latn,ayah lanjut usia,An elderly father,0.625,0.7256825566291809,medium,0,0
+extended parent,ind,ind_Latn,orang tua yang diperluas,extended parents,0.967741935483871,0.46661117672920227,low,1,0
+extended child,ind,ind_Latn,anak lanjut usia,elderly,0.38095238095238093,0.64731764793396,medium,1,0
+extended daughter,ind,ind_Latn,putrinya yang diperpanjang,His extended daughter.,0.8717948717948718,0.4848083555698395,low,1,0
+extended son,ind,ind_Latn,anak yang diperpanjang,extended child,0.6923076923076923,0.48337265849113464,low,1,0
+extended uncle,ind,ind_Latn,Paman besar,Big uncle,0.5217391304347826,0.8194352388381958,high,1,1
+extended aunt,ind,ind_Latn,Paman besar,Big uncle,0.2727272727272727,0.7339419722557068,medium,1,1
+extended cousin,ind,ind_Latn,sepupunya,His cousin.,0.5384615384615384,0.7265322208404541,medium,1,0
+extended grandmother,ind,ind_Latn,nenek lama,The old grandmother.,0.7,0.5754408240318298,low,1,0
+extended grandfather,ind,ind_Latn,kakek besar,My great-grandfather,0.65,0.8370473384857178,high,0,0
+extended nephew,ind,ind_Latn,Keponakan yang diperpanjang,Extended Nephew,1.0,0.5461893677711487,low,1,1
+extended niece,ind,ind_Latn,keponakan yang diperpanjang,extended nephew,0.8275862068965517,0.5569247007369995,low,1,1
+extended ancestor,ind,ind_Latn,nenek moyang yang diperluas,extended ancestors,0.9714285714285714,0.5250542163848877,low,1,0
+extended lineage,ind,ind_Latn,garis keturunan yang diperpanjang,extended lineage,1.0,0.776355504989624,medium,0,0
+extended clan,ind,ind_Latn,klan yang diperluas,expanded clan,0.8461538461538461,0.7655864953994751,medium,0,0
+extended household,ind,ind_Latn,rumah tangga luas,large households,0.6470588235294118,0.8180433511734009,high,0,0
+extended joint family,ind,ind_Latn,keluarga bersama yang diperluas,extended family,0.8333333333333334,0.7912565469741821,medium,0,0
+extended nuclear family,ind,ind_Latn,keluarga nuklir yang diperluas,expanded nuclear family,0.9130434782608695,0.6821494102478027,medium,0,0
+extended marriage,ind,ind_Latn,Perkawinan yang diperpanjang,An extended marriage,0.918918918918919,0.8377822637557983,high,1,1
+extended wedding,ind,ind_Latn,pernikahan yang diperpanjang,extended marriage,0.6060606060606061,0.8065956234931946,high,0,0
+extended bride,ind,ind_Latn,pengantin perempuan yang diperpanjang,extended bride,1.0,0.5538985729217529,low,1,0
+extended groom,ind,ind_Latn,pengantin laki-laki yang diperpanjang,extended bride,0.7142857142857143,0.42928454279899597,low,1,0
+extended engagement,ind,ind_Latn,keterlibatan yang diperpanjang,Extended involvement,0.7692307692307693,0.7764154076576233,medium,0,0
+extended dowry,ind,ind_Latn,Penghantaran yang diperpanjang,Extended delivery,0.7741935483870968,0.38796544075012207,low,1,0
+extended bridewealth,ind,ind_Latn,perkawinan yang diperluas,extended marriages,0.631578947368421,0.46450915932655334,low,1,0
+extended inheritance,ind,ind_Latn,warisan yang diperpanjang,an extended legacy,0.631578947368421,0.75153648853302,medium,0,0
+extended widow,ind,ind_Latn,janda panjang,long widow,0.5833333333333334,0.5305891633033752,low,1,1
+extended widower,ind,ind_Latn,janda panjang,long widow,0.5384615384615384,0.534050703048706,low,1,1
+extended courtship,ind,ind_Latn,perkawinan yang diperpanjang,extended marriages,0.6111111111111112,0.7816352844238281,medium,1,1
+extended matchmaker,ind,ind_Latn,perkawinan yang diperpanjang,extended marriages,0.7027027027027027,0.39329278469085693,low,1,1
+extended surname,ind,ind_Latn,nama keluarga yang diperpanjang,extended family name,0.7222222222222222,0.7911479473114014,medium,1,1
+extended patronymic,ind,ind_Latn,nama keluarga yang diperpanjang,extended family name,0.6153846153846154,0.6747546792030334,medium,1,1
+extended matronymic,ind,ind_Latn,matronim yang diperpanjang,extended matronyms,0.918918918918919,0.580762505531311,low,1,0
+extended firstborn,ind,ind_Latn,anak sulung yang diperpanjang,the firstborn who is extended,0.46808510638297873,0.6032536029815674,medium,1,0
+extended heir,ind,ind_Latn,ahli waris yang diperpanjang,an extended heir,0.896551724137931,0.5457950234413147,low,1,0
+extended filial piety,ind,ind_Latn,memperluas keikhlasan anak,expanding the sanctity of the child,0.32142857142857145,0.5670168995857239,low,1,0
+extended caregiving,ind,ind_Latn,Penyimpanan yang diperpanjang,Extended storage,0.6285714285714286,0.46197670698165894,low,1,0
+extended motherhood,ind,ind_Latn,Kehidupan ibu yang diperpanjang,An extended mother's life,0.6818181818181818,0.7549468278884888,medium,0,0
+extended fatherhood,ind,ind_Latn,kewarganegaraan yang diperpanjang,extended citizenship,0.5641025641025641,0.41036197543144226,low,1,0
+extended in laws,ind,ind_Latn,diperluas dalam undang-undang,expanded in law,0.8387096774193549,0.654043436050415,medium,0,0
+extended brother in law,ind,ind_Latn,saudara laki-laki yang diperpanjang,extended brother,0.8205128205128205,0.48345646262168884,low,1,0
+extended sister in law,ind,ind_Latn,kakak ipar besar,Big brother-in-law,0.4,0.7484349608421326,medium,1,0
+extended ancestral home,ind,ind_Latn,rumah nenek moyang yang diperluas,extended ancestral home,1.0,0.8613061308860779,high,0,0
+extended household labor,ind,ind_Latn,tenaga kerja rumah tangga yang diperpanjang,extended household work,0.8936170212765957,0.8144123554229736,high,0,0
+nuclear kinship,ind,ind_Latn,kerabat nuklir,Nuclear relatives,0.625,0.8627276420593262,high,0,0
+nuclear mother,ind,ind_Latn,ibu nuklir,nuclear mother,1.0,0.8488940000534058,high,0,0
+nuclear father,ind,ind_Latn,ayah nuklir,Nuclear father,1.0,0.8303922414779663,high,0,0
+nuclear parent,ind,ind_Latn,induk nuklir,nuclear power,0.7407407407407407,0.8407276272773743,high,0,0
+nuclear child,ind,ind_Latn,anak nuklir,nuclear child,1.0,0.882164478302002,high,0,0
+nuclear daughter,ind,ind_Latn,putri nuklir,nuclear daughter,1.0,0.8769959211349487,high,0,0
+religion,ind,ind_Latn,agama,religion,1.0,0.8632261157035828,high,0,0
+ritual,ind,ind_Latn,ritual,ritual,1.0,0.8108405470848083,high,0,0
+prayer,ind,ind_Latn,doa,Prayer,1.0,0.8367968797683716,high,0,0
+temple,ind,ind_Latn,candi,the temple,0.75,0.4037117063999176,low,1,0
+church,ind,ind_Latn,gereja,church,1.0,0.8626247048377991,high,0,0
+mosque,ind,ind_Latn,masjid,mosque,1.0,0.8564656972885132,high,0,0
+synagogue,ind,ind_Latn,sinagoga,synagogue,1.0,0.8699237704277039,high,0,0
+shrine,ind,ind_Latn,kuil,temple,0.16666666666666666,0.756327748298645,medium,1,0
+pilgrimage,ind,ind_Latn,Perjalanan haji,The pilgrimage,0.8333333333333334,0.8620150089263916,high,0,0
+scripture,ind,ind_Latn,Alkitab,The Bible,0.2222222222222222,0.8575131893157959,high,1,0
+monk,ind,ind_Latn,biarawan,monks,0.8888888888888888,0.8464423418045044,high,0,0
+priest,ind,ind_Latn,pendeta,The priest,0.75,0.40562477707862854,low,1,0
+imam,ind,ind_Latn,imam,the priest,0.14285714285714285,0.8003988265991211,high,1,0
+nun,ind,ind_Latn,biarawati,nuns,0.8571428571428571,0.45637452602386475,low,1,0
+saint,ind,ind_Latn,orang kudus,holy man,0.3076923076923077,0.4637434780597687,low,1,1
+martyr,ind,ind_Latn,mati syahid,martyred,0.8571428571428571,0.7331742644309998,medium,0,0
+prophet,ind,ind_Latn,nabi,the prophet,0.7777777777777778,0.8202527165412903,high,0,0
+zakat,ind,ind_Latn,zakat,charity,0.3333333333333333,0.8485167026519775,high,1,0
+tithe,ind,ind_Latn,persepuluh,a tenth,0.5,0.7091609239578247,medium,1,0
+karma,ind,ind_Latn,karma,The karma,0.7142857142857143,0.5997187495231628,low,1,0
+altar,ind,ind_Latn,mezbah,the altar,0.7142857142857143,0.8376132249832153,high,0,0
+incense,ind,ind_Latn,dupa,incense,1.0,0.3658369779586792,low,1,0
+rosary,ind,ind_Latn,Rosary,The Rosary,0.75,0.7373491525650024,medium,0,0
+blessing,ind,ind_Latn,berkat,Thank you.,0.1111111111111111,0.8003934621810913,high,1,0
+curse,ind,ind_Latn,kutukan,The curse,0.7142857142857143,0.8539279103279114,high,0,0
+sabbath,ind,ind_Latn,hari Sabat,Sabbath day,0.7777777777777778,0.8369050621986389,high,0,0
+halal,ind,ind_Latn,halal,the halal,0.7142857142857143,0.7490266561508179,medium,0,0
+kosher,ind,ind_Latn,kosher,kosher,1.0,0.6207026839256287,medium,0,0
+fasting,ind,ind_Latn,puasa,Fasting,1.0,0.845069408416748,high,0,0
+sacrifice,ind,ind_Latn,pengorbanan,Sacrifice,1.0,0.8522656559944153,high,0,0
+monastery,ind,ind_Latn,biara,monastery,1.0,0.44591864943504333,low,1,1
+convent,ind,ind_Latn,biara,monastery,0.375,0.38693079352378845,low,1,1
+abbey,ind,ind_Latn,abbey,abbey,1.0,0.8045498132705688,high,0,0
+minaret,ind,ind_Latn,menara,tower,0.16666666666666666,0.8556601405143738,high,1,0
+pagoda,ind,ind_Latn,pagoda,the pagoda,0.75,0.8082132339477539,high,0,0
+stupa,ind,ind_Latn,stupa,the stupa,0.7142857142857143,0.494798868894577,low,1,0
+ancestral altar,ind,ind_Latn,altar leluhur,The altar of the ancestors,0.34146341463414637,0.8503930568695068,high,1,0
+funeral rite,ind,ind_Latn,Upacara pemakaman,Funeral service,0.8148148148148148,0.8587918281555176,high,0,0
+mourning rite,ind,ind_Latn,Upacara berkabung,Ceremony of mourning,0.48484848484848486,0.8150631785392761,high,1,0
+memorial service,ind,ind_Latn,pelayanan peringatan,warning service,0.6451612903225806,0.7687656283378601,medium,0,0
+ancestor worship,ind,ind_Latn,penyembahan leluhur,the worship of the ancestors,0.4090909090909091,0.8665620684623718,high,1,0
+tabernacle,ind,ind_Latn,tabernakel,the tabernacle,0.8333333333333334,0.8355879187583923,high,0,0
+prayer mat,ind,ind_Latn,tempat doa,a place of prayer,0.4444444444444444,0.8344526290893555,high,1,0
+chanting,ind,ind_Latn,bernyanyi,singing,0.4,0.831182599067688,high,1,0
+hymn,ind,ind_Latn,nyanyian,singing,0.18181818181818182,0.7922952771186829,medium,1,0
+sermon,ind,ind_Latn,khotbah,the sermon,0.75,0.8418877124786377,high,0,0
+liturgy,ind,ind_Latn,liturgi,the liturgy,0.7777777777777778,0.8386491537094116,high,0,0
+sacred religion,ind,ind_Latn,agama suci,sacred religion,1.0,0.8540960550308228,high,0,0
+sacred ritual,ind,ind_Latn,ritual suci,sacred ritual,1.0,0.8362866640090942,high,0,0
+sacred prayer,ind,ind_Latn,doa suci,holy prayer,0.5833333333333334,0.8610186576843262,high,0,0
+sacred temple,ind,ind_Latn,kuil suci,holy temple,0.5833333333333334,0.8660112023353577,high,1,1
+sacred church,ind,ind_Latn,gereja suci,holy church,0.5833333333333334,0.871113121509552,high,0,0
+sacred mosque,ind,ind_Latn,masjid suci,holy mosque,0.5833333333333334,0.8584791421890259,high,0,0
+sacred synagogue,ind,ind_Latn,sinagoga suci,holy synagogue,0.6666666666666666,0.8823561072349548,high,0,0
+sacred shrine,ind,ind_Latn,kuil suci,holy temple,0.16666666666666666,0.8392147421836853,high,1,1
+sacred pilgrimage,ind,ind_Latn,ziarah suci,holy pilgrimage,0.6875,0.8626679182052612,high,0,0
+sacred scripture,ind,ind_Latn,kitab suci,holy book,0.08,0.8590022921562195,high,1,0
+sacred monk,ind,ind_Latn,biarawan suci,holy monks,0.47619047619047616,0.8695523738861084,high,1,0
+sacred priest,ind,ind_Latn,imam suci,holy priest,0.5833333333333334,0.84870845079422,high,1,1
+sacred imam,ind,ind_Latn,imam suci,holy priest,0.09090909090909091,0.8601037263870239,high,1,1
+sacred nun,ind,ind_Latn,biarawati suci,holy nuns,0.42105263157894735,0.8547455072402954,high,1,0
+sacred saint,ind,ind_Latn,orang kudus,holy man,0.2,0.6447054743766785,medium,1,1
+sacred martyr,ind,ind_Latn,martir suci,holy martyr,0.5833333333333334,0.843450129032135,high,0,0
+sacred prophet,ind,ind_Latn,nabi suci,holy prophet,0.6153846153846154,0.8439258337020874,high,0,0
+sacred zakat,ind,ind_Latn,zakat suci,Holy charity,0.25,0.8559365272521973,high,1,0
+sacred tithe,ind,ind_Latn,persepuluhan suci,sacred tithes,0.96,0.8396396636962891,high,0,0
+sacred karma,ind,ind_Latn,karma suci,Sacred karma,1.0,0.8212164044380188,high,0,0
+sacred altar,ind,ind_Latn,altar suci,holy altar,0.5454545454545454,0.8545740246772766,high,1,0
+sacred incense,ind,ind_Latn,dupa suci,holy incense,0.6153846153846154,0.681458592414856,medium,0,0
+sacred rosary,ind,ind_Latn,Rosary suci,Holy Rosary,0.5833333333333334,0.6797440052032471,medium,0,0
+sacred blessing,ind,ind_Latn,berkah suci,holy blessings,0.6206896551724138,0.8081862926483154,high,0,0
+sacred curse,ind,ind_Latn,kutukan suci,Holy curse,0.5454545454545454,0.8644399642944336,high,1,0
+sacred sabbath,ind,ind_Latn,Sabat suci,Holy Sabbath,0.6153846153846154,0.8767761588096619,high,0,0
+sacred halal,ind,ind_Latn,halal suci,holy halal,0.5454545454545454,0.727278470993042,medium,1,0
+sacred kosher,ind,ind_Latn,kosher suci,holy kosher,0.5833333333333334,0.5305516123771667,low,1,0
+sacred fasting,ind,ind_Latn,Puasa suci,Holy fasting,0.6153846153846154,0.8616090416908264,high,0,0
+sacred sacrifice,ind,ind_Latn,korban suci,sacred sacrifice,1.0,0.8510974049568176,high,0,0
+sacred monastery,ind,ind_Latn,biara suci,holy monastery,0.6666666666666666,0.7625251412391663,medium,1,1
+sacred convent,ind,ind_Latn,biara suci,holy monastery,0.2857142857142857,0.7425340414047241,medium,1,1
+sacred abbey,ind,ind_Latn,biara suci,holy monastery,0.23076923076923078,0.847697913646698,high,1,1
+sacred minaret,ind,ind_Latn,menara suci,holy tower,0.08333333333333333,0.8702324032783508,high,1,0
+sacred pagoda,ind,ind_Latn,pagoda suci,sacred pagoda,1.0,0.8560434579849243,high,0,0
+sacred stupa,ind,ind_Latn,stupa suci,holy stupa,0.5454545454545454,0.8576368689537048,high,1,0
+sacred ancestral altar,ind,ind_Latn,altar leluhur yang suci,The holy altar of the ancestors,0.41509433962264153,0.8508913516998291,high,1,0
+sacred funeral rite,ind,ind_Latn,Upacara pemakaman suci,Sacred Funeral Ceremony,0.8095238095238095,0.8655658960342407,high,0,0
+sacred mourning rite,ind,ind_Latn,Upacara berkabung suci,A sacred mourning ceremony,0.782608695652174,0.8449762463569641,high,0,0
+sacred memorial service,ind,ind_Latn,pelayanan peringatan suci,sacred reminder ministry,0.5531914893617021,0.7768502235412598,medium,0,0
+sacred ancestor worship,ind,ind_Latn,Ibadat nenek moyang yang suci,The worship of the holy ancestors,0.42857142857142855,0.8543851375579834,high,1,0
+sacred tabernacle,ind,ind_Latn,tabernakel kudus,holy tabernacle,0.6875,0.6429997086524963,medium,0,0
+sacred prayer mat,ind,ind_Latn,tempat doa suci,holy place of prayer,0.5405405405405406,0.7766896486282349,medium,1,0
+sacred chanting,ind,ind_Latn,nyanyian suci,a sacred song,0.6428571428571429,0.8581501245498657,high,0,0
+sacred hymn,ind,ind_Latn,lagu suci,a sacred song,0.6666666666666666,0.8533347249031067,high,0,0
+sacred sermon,ind,ind_Latn,khotbah suci,holy sermon,0.5833333333333334,0.856049656867981,high,0,0
+sacred liturgy,ind,ind_Latn,liturgi suci,sacred liturgy,1.0,0.8430116176605225,high,0,0
+ritual religion,ind,ind_Latn,agama ritual,Ritual religion,1.0,0.7487524747848511,medium,0,0
+ritual ritual,ind,ind_Latn,ritual ritual,ritual ritual,1.0,0.4654638171195984,low,1,0
+ritual prayer,ind,ind_Latn,doa ritual,ritual prayer,1.0,0.5488936901092529,low,1,0
+ritual temple,ind,ind_Latn,kuil ritual,ritual temple,1.0,0.4120649993419647,low,1,0
+ritual church,ind,ind_Latn,Gereja ritual,Ritual church,1.0,0.8429749011993408,high,0,0
+ritual mosque,ind,ind_Latn,masjid ritual,ritual mosque,1.0,0.5122749209403992,low,1,0
+rice,ind,ind_Latn,nasi,rice,1.0,0.8163504600524902,high,0,0
+bread,ind,ind_Latn,roti,bread,1.0,0.8395189046859741,high,1,1
+noodle,ind,ind_Latn,mie,the noodles,0.7058823529411765,0.7175517082214355,medium,0,0
+dumpling,ind,ind_Latn,bumbu,Spices,0.2857142857142857,0.4691850543022156,low,1,0
+curry,ind,ind_Latn,kari,curry,1.0,0.7403584718704224,medium,0,0
+spice,ind,ind_Latn,rempah-rempah,spices,0.9090909090909091,0.695751428604126,medium,1,1
+tea,ind,ind_Latn,teh,tea,1.0,0.8290314674377441,high,0,0
+coffee,ind,ind_Latn,kopi,Coffee,1.0,0.8491005897521973,high,0,0
+meat,ind,ind_Latn,daging,meat,1.0,0.8241427540779114,high,0,0
+vegetarian,ind,ind_Latn,vegetarian,vegetarian,1.0,0.8111699819564819,high,0,0
+vegan,ind,ind_Latn,vegan,Vegans and vegans,0.45454545454545453,0.8014938831329346,high,1,0
+soup,ind,ind_Latn,sup,the soup,0.6666666666666666,0.8008056879043579,high,0,0
+stew,ind,ind_Latn,rempah-rempah,spices,0.4,0.41044744849205017,low,1,1
+barbecue,ind,ind_Latn,barbecue,barbecue,1.0,0.7660024166107178,medium,0,0
+fermented,ind,ind_Latn,fermentasi,fermentation,0.6666666666666666,0.695285439491272,medium,0,0
+pickled,ind,ind_Latn,berwarna cokelat,brown,0.0,0.5247324109077454,low,1,0
+banquet,ind,ind_Latn,perjamuan,The feast,0.25,0.6376025080680847,medium,1,0
+feast,ind,ind_Latn,pesta,Party,0.4,0.8197308778762817,high,1,0
+street food,ind,ind_Latn,makanan jalanan,street food,1.0,0.869640588760376,high,0,0
+dessert,ind,ind_Latn,makanan penutup,dessert,1.0,0.8378757238388062,high,0,0
+sauce,ind,ind_Latn,saus,Sausage,0.6666666666666666,0.7608351111412048,medium,0,0
+grain,ind,ind_Latn,biji-bijian,grains,0.9090909090909091,0.8198579549789429,high,0,0
+fruit,ind,ind_Latn,buah,fruit,1.0,0.8338574171066284,high,0,0
+vegetable,ind,ind_Latn,sayur-sayuran,vegetables,0.9473684210526315,0.8394737243652344,high,0,0
+kebab,ind,ind_Latn,kebab,the kebab,0.7142857142857143,0.7904033660888672,medium,0,0
+shawarma,ind,ind_Latn,shawarma,shawarma,1.0,0.7599551677703857,medium,0,0
+ramen,ind,ind_Latn,Ramen,Ramen,1.0,0.7520402669906616,medium,0,0
+sushi,ind,ind_Latn,sushi,Sushi,1.0,0.8490602374076843,high,0,0
+kimchi,ind,ind_Latn,Kimchi,Kimchi,1.0,0.786262571811676,medium,0,0
+pho,ind,ind_Latn,pho,The pho,0.6,0.7692074775695801,medium,0,0
+biryani,ind,ind_Latn,biryani,beers,0.3333333333333333,0.8234901428222656,high,1,0
+falafel,ind,ind_Latn,falafel,The falafel,0.7777777777777778,0.8524880409240723,high,0,0
+pasta,ind,ind_Latn,pasta,pasta,1.0,0.7744356393814087,medium,0,0
+cheese,ind,ind_Latn,keju,cheese,1.0,0.6156273484230042,medium,0,0
+wine,ind,ind_Latn,anggur,wine,1.0,0.6424570083618164,medium,0,0
+beer,ind,ind_Latn,Bir,Beer,1.0,0.4779118299484253,low,1,0
+chai,ind,ind_Latn,chai,the chai,0.6666666666666666,0.7446372509002686,medium,0,0
+espresso,ind,ind_Latn,Espresso,It's an espresso.,0.64,0.8222754001617432,high,0,0
+udon,ind,ind_Latn,udon,the udon,0.6666666666666666,0.7301923632621765,medium,0,0
+soba,ind,ind_Latn,soba,Soya soup,0.46153846153846156,0.7858744263648987,medium,1,0
+congee,ind,ind_Latn,congee,congee,1.0,0.6122226715087891,medium,0,0
+bibimbap,ind,ind_Latn,bibimbap,What are you doing?,0.07407407407407407,0.7628610134124756,medium,1,0
+hummus,ind,ind_Latn,humus,Humus,0.9090909090909091,0.8018244504928589,high,0,0
+tabbouleh,ind,ind_Latn,tabouleh,The tabouleh,0.7619047619047619,0.8131462931632996,high,0,0
+paella,ind,ind_Latn,paella,paella,1.0,0.810839056968689,high,0,0
+risotto,ind,ind_Latn,risotto,the risotto,0.7777777777777778,0.829171895980835,high,0,0
+couscous,ind,ind_Latn,couscous,couscous,1.0,0.7624606490135193,medium,0,0
+injera,ind,ind_Latn,injera,injera,1.0,0.7264312505722046,medium,0,0
+tortilla,ind,ind_Latn,tortilla,The tortilla,0.8,0.7766686677932739,medium,0,0
+tamale,ind,ind_Latn,tamale,tamale,1.0,0.6471132636070251,medium,0,0
+arepa,ind,ind_Latn,kelapa sawit,coconut palm,0.23529411764705882,0.608918309211731,medium,1,0
+empanada,ind,ind_Latn,empanada,the empanada,0.8,0.731246829032898,medium,0,0
+mochi,ind,ind_Latn,mochi,the mochi,0.7142857142857143,0.7020443677902222,medium,0,0
+matcha,ind,ind_Latn,matcha,The matcha,0.75,0.8030986785888672,high,0,0
+jalebi,ind,ind_Latn,Jalebi,Jalebi,1.0,0.5045085549354553,low,1,0
+halwa,ind,ind_Latn,halwa,the halwa,0.7142857142857143,0.6186439990997314,medium,0,0
+flatbread,ind,ind_Latn,roti rata,flat bread,0.9473684210526315,0.8190302848815918,high,0,0
+naan,ind,ind_Latn,naan,naan,1.0,0.7369649410247803,medium,0,0
+roti,ind,ind_Latn,roti,bread,0.2222222222222222,0.7091162204742432,medium,1,1
+chapati,ind,ind_Latn,chapati,The chapati,0.7777777777777778,0.779541015625,medium,0,0
+paratha,ind,ind_Latn,Paratha,The Paratha,0.7777777777777778,0.6700663566589355,medium,0,0
+soy sauce,ind,ind_Latn,saus kedelai,soy sauce,1.0,0.8028895258903503,high,0,0
+fish sauce,ind,ind_Latn,saus ikan,Fish sauce,1.0,0.8569306135177612,high,0,0
+ghee,ind,ind_Latn,Ghee,Ghee,1.0,0.8003828525543213,high,0,0
+paneer,ind,ind_Latn,paner,paner,0.9090909090909091,0.5094199180603027,low,1,0
+pickles,ind,ind_Latn,bawang putih,garlic,0.3076923076923077,0.8267562389373779,high,1,1
+broth,ind,ind_Latn,kaldu,The broth,0.7142857142857143,0.6835182905197144,medium,0,0
+porridge,ind,ind_Latn,bubur,Flowers,0.26666666666666666,0.8070076704025269,high,1,0
+lentil,ind,ind_Latn,Lentil,Lentils,0.9230769230769231,0.7860082387924194,medium,0,0
+chickpea,ind,ind_Latn,kacang kedelai,soybeans,0.25,0.8329018354415894,high,1,0
+cassava,ind,ind_Latn,kedelai,soybeans,0.26666666666666666,0.7508265972137451,medium,1,0
+plantain,ind,ind_Latn,tanaman,plants,0.7142857142857143,0.8249632120132446,high,0,0
+okra,ind,ind_Latn,okra,the okra,0.6666666666666666,0.8344203233718872,high,0,0
+eggplant,ind,ind_Latn,bawang putih,garlic,0.2857142857142857,0.7884286642074585,medium,1,1
+traditional rice,ind,ind_Latn,beras tradisional,traditional rice,1.0,0.8678301572799683,high,0,0
+traditional bread,ind,ind_Latn,roti tradisional,traditional bread,1.0,0.8675228953361511,high,0,0
+traditional noodle,ind,ind_Latn,mie tradisional,traditional noodles,0.972972972972973,0.8535484075546265,high,0,0
+traditional dumpling,ind,ind_Latn,Dumpling tradisional,Traditional dumpling,1.0,0.7893320322036743,medium,0,0
+traditional curry,ind,ind_Latn,kari tradisional,traditional curry,1.0,0.8660897612571716,high,0,0
+traditional spice,ind,ind_Latn,bumbu tradisional,traditional spices,0.9714285714285714,0.8156373500823975,high,0,0
+traditional tea,ind,ind_Latn,teh tradisional,traditional tea,1.0,0.8697314262390137,high,0,0
+traditional coffee,ind,ind_Latn,kopi tradisional,traditional coffee,1.0,0.8816512227058411,high,0,0
+traditional meat,ind,ind_Latn,Daging tradisional,Traditional meat,1.0,0.8698558807373047,high,0,0
+traditional vegetarian,ind,ind_Latn,vegetarian tradisional,traditional vegetarian,1.0,0.8515747785568237,high,0,0
+traditional vegan,ind,ind_Latn,vegan tradisional,Traditional vegan,1.0,0.8391416072845459,high,0,0
+traditional soup,ind,ind_Latn,Sup tradisional,Traditional soup,1.0,0.8611031770706177,high,0,0
+traditional stew,ind,ind_Latn,hidangan tradisional,traditional dishes,0.8235294117647058,0.7478698492050171,medium,0,0
+traditional barbecue,ind,ind_Latn,barbecue tradisional,traditional barbecue,1.0,0.8593480587005615,high,0,0
+traditional fermented,ind,ind_Latn,Tradisional fermentasi,Traditional fermentation,0.8444444444444444,0.642207145690918,medium,0,0
+traditional pickled,ind,ind_Latn,Pisang tradisional,Traditional bananas,0.631578947368421,0.4652916491031647,low,1,0
+traditional banquet,ind,ind_Latn,Perjamuan tradisional,A traditional feast,0.7368421052631579,0.8503397703170776,high,0,0
+traditional feast,ind,ind_Latn,Perayaan tradisional,Traditional celebrations,0.7317073170731707,0.850882351398468,high,0,0
+traditional street food,ind,ind_Latn,makanan jalanan tradisional,traditional street food,1.0,0.8832175135612488,high,0,0
+traditional dessert,ind,ind_Latn,makanan penutup tradisional,traditional desserts,0.9743589743589743,0.8588755130767822,high,0,0
+traditional sauce,ind,ind_Latn,saus tradisional,traditional sauce,1.0,0.8505550622940063,high,0,0
+traditional grain,ind,ind_Latn,biji-bijian tradisional,traditional cereals,0.7777777777777778,0.8515459895133972,high,0,0
+traditional fruit,ind,ind_Latn,buah tradisional,traditional fruit,1.0,0.8497656583786011,high,0,0
+traditional vegetable,ind,ind_Latn,sayuran tradisional,traditional vegetables,0.9767441860465116,0.8582100868225098,high,0,0
+traditional kebab,ind,ind_Latn,kebab tradisional,traditional kebab,1.0,0.8613610863685608,high,0,0
+traditional shawarma,ind,ind_Latn,shawarma tradisional,traditional shawarma,1.0,0.8094485402107239,high,0,0
+festival,ind,ind_Latn,festival,the festival,0.8,0.7463006973266602,medium,0,0
+holiday,ind,ind_Latn,liburan,holidays,0.9333333333333333,0.8290915489196777,high,0,0
+new year,ind,ind_Latn,tahun baru,New year,1.0,0.8834880590438843,high,0,0
+easter,ind,ind_Latn,Paskah,Easter,1.0,0.7241594791412354,medium,1,1
+ramadan,ind,ind_Latn,Ramadhan,The month of Ramadan,0.5185185185185185,0.8614059686660767,high,1,0
+eid,ind,ind_Latn,Idul Fitri,Idul Fitri,0.3076923076923077,0.8190842866897583,high,1,1
+diwali,ind,ind_Latn,diwali,Diwali,1.0,0.7130053043365479,medium,0,0
+vesak,ind,ind_Latn,vesak,the bladder,0.25,0.7725563645362854,medium,1,0
+hanukkah,ind,ind_Latn,Hanukkah,What is Hanukkah?,0.64,0.8373600244522095,high,0,0
+passover,ind,ind_Latn,Paskah,Easter,0.5714285714285714,0.49790868163108826,low,1,1
+nowruz,ind,ind_Latn,Nowruz,Nowruz,1.0,0.7245827913284302,medium,0,0
+carnival,ind,ind_Latn,karnaval,the carnival,0.8,0.8507688045501709,high,0,0
+thanksgiving,ind,ind_Latn,Thanksgiving,Thanksgiving,1.0,0.650338888168335,medium,0,0
+harvest festival,ind,ind_Latn,festival panen,harvest festival,1.0,0.47095420956611633,low,1,0
+obon,ind,ind_Latn,Obon (dalam bahasa Inggris),Obon (English),0.4444444444444444,0.6877329349517822,medium,1,0
+tet,ind,ind_Latn,Tet,It's still there.,0.2,0.3756626844406128,low,1,0
+songkran,ind,ind_Latn,songkran,songkran,1.0,0.6940979957580566,medium,0,0
+dragon boat festival,ind,ind_Latn,festival perahu naga,Dragon boat festival,1.0,0.7122237086296082,medium,0,0
+mid autumn festival,ind,ind_Latn,festival pertengahan musim gugur,mid-autumn festival,0.9473684210526315,0.8654115796089172,high,0,0
+qingming,ind,ind_Latn,Qingming,Qingming,1.0,0.7909857034683228,medium,0,0
+yom kippur,ind,ind_Latn,yom kippur,youm kippur,0.9523809523809523,0.7940739989280701,medium,0,0
+rosh hashanah,ind,ind_Latn,rosh hashanah,rosh hashanah,1.0,0.7636078596115112,medium,0,0
+purim,ind,ind_Latn,Purim,Purim,1.0,0.7698426246643066,medium,0,0
+sukkot,ind,ind_Latn,Sukkot,Sukkot,1.0,0.7383760213851929,medium,0,0
+advent,ind,ind_Latn,kedatangan,the arrival,0.23529411764705882,0.7008585333824158,medium,1,0
+holi,ind,ind_Latn,Holi,The Holi,0.6666666666666666,0.7481667995452881,medium,0,0
+navratri,ind,ind_Latn,Nawaratri,The Nawaratri,0.6666666666666666,0.7697046995162964,medium,0,0
+onam,ind,ind_Latn,onam,onam,1.0,0.5663965940475464,low,1,0
+pongal,ind,ind_Latn,Pongal,Pongal,1.0,0.620875358581543,medium,0,0
+durga puja,ind,ind_Latn,durga puja,the durga puja,0.8333333333333334,0.7120572924613953,medium,0,0
+janmashtami,ind,ind_Latn,Jamashtami,Jamashtami,0.9523809523809523,0.7890797853469849,medium,0,0
+good friday,ind,ind_Latn,Jum'at yang baik,Good Friday.,0.9565217391304348,0.8469333648681641,high,0,0
+pentecost,ind,ind_Latn,Pentakosta,The Pentateuch,0.5217391304347826,0.8255292177200317,high,1,0
+epiphany,ind,ind_Latn,wahyu,Revelation,0.3333333333333333,0.8206905722618103,high,1,0
+all saints day,ind,ind_Latn,hari semua orang kudus,the day of all saints,0.5714285714285714,0.8358849287033081,high,0,0
+lunar new year,ind,ind_Latn,Tahun Baru Bulan,New year's moon,0.5517241379310345,0.81110680103302,high,0,0
+thingyan,ind,ind_Latn,halyan,The dress,0.23529411764705882,0.40881651639938354,low,1,0
+day of the dead,ind,ind_Latn,hari orang mati,Day of the dead,1.0,0.84272301197052,high,0,0
+mardi gras,ind,ind_Latn,mardi gras,mardi gras,1.0,0.8239923715591431,high,0,0
+saint day,ind,ind_Latn,hari santo,holy day,0.47058823529411764,0.8174722194671631,high,1,0
+martinmas,ind,ind_Latn,Martinmas,It's all right.,0.25,0.8119286894798279,high,1,0
+st patricks day,ind,ind_Latn,Hari St Patrick,This is St. Patrick's Day.,0.7317073170731707,0.8502764701843262,high,0,0
+independence day,ind,ind_Latn,Hari kemerdekaan,Independence day,1.0,0.870417058467865,high,0,0
+mawlid,ind,ind_Latn,mawlid,Mauld,0.7272727272727273,0.5382214188575745,low,1,0
+ashura,ind,ind_Latn,Ashura,Ashura,1.0,0.8121255040168762,high,0,0
+hajj,ind,ind_Latn,haji,the hajj,0.6666666666666666,0.8258295059204102,high,0,0
+umrah,ind,ind_Latn,umrah,Umrah,1.0,0.8004367351531982,high,0,0
+setsubun,ind,ind_Latn,setubun,a seedling,0.3333333333333333,0.8015258312225342,high,1,0
+religious festival,ind,ind_Latn,perayaan agama,religious celebrations,0.65,0.8645263910293579,high,0,0
+religious holiday,ind,ind_Latn,hari libur agama,religious holidays,0.9714285714285714,0.8550831079483032,high,0,0
+religious new year,ind,ind_Latn,tahun baru agama,religious new year,1.0,0.8780252933502197,high,0,0
+religious easter,ind,ind_Latn,Paskah religius,Religious Easter,1.0,0.8650975227355957,high,0,0
+religious ramadan,ind,ind_Latn,Ramadhan agama,Religious Ramadan,1.0,0.845649242401123,high,0,0
+religious eid,ind,ind_Latn,Idul Fitri,Idul Fitri,0.17391304347826086,0.48842549324035645,low,1,1
+religious diwali,ind,ind_Latn,Diwali agama,Diwali of religion,0.4117647058823529,0.8451007008552551,high,1,0
+religious vesak,ind,ind_Latn,Vesak agama,Religious Vespers,0.8125,0.7660548686981201,medium,0,0
+religious hanukkah,ind,ind_Latn,Hanukkah agama,What about religion?,0.42105263157894735,0.8314511775970459,high,1,0
+religious passover,ind,ind_Latn,Paskah agama,Religious Easter,0.8235294117647058,0.6782896518707275,medium,0,0
+religious nowruz,ind,ind_Latn,agama Nowruz,The religion of Nowruz,0.7368421052631579,0.7110321521759033,medium,0,0
+religious carnival,ind,ind_Latn,karnaval agama,religious carnival,1.0,0.8600623607635498,high,0,0
+religious thanksgiving,ind,ind_Latn,Pengucap syukur agama,Religious Gratitude,0.5853658536585366,0.8279334306716919,high,0,0
+religious harvest festival,ind,ind_Latn,perayaan pemotongan agama,celebration of religious cuts,0.4,0.7706218957901001,medium,1,0
+religious obon,ind,ind_Latn,Obon keagamaan,Religious Obon,1.0,0.6829244494438171,medium,0,0
+religious tet,ind,ind_Latn,Tet agama,Faithful,0.09523809523809523,0.651914656162262,medium,1,0
+religious songkran,ind,ind_Latn,lagu agamakran,religious songs,0.8484848484848485,0.5781286358833313,low,1,0
+religious dragon boat festival,ind,ind_Latn,festival perahu naga religius,religious dragon boat festival,1.0,0.7861722707748413,medium,0,0
+religious mid autumn festival,ind,ind_Latn,festival religius pertengahan musim gugur,mid-autumn religious festival,0.6206896551724138,0.8751903772354126,high,0,0
+religious qingming,ind,ind_Latn,Qingming agama,Qingming religion,0.45714285714285713,0.4829813539981842,low,1,0
+religious yom kippur,ind,ind_Latn,agama yom kippur,religion of yom kippur,0.8571428571428571,0.6874738931655884,medium,0,0
+religious rosh hashanah,ind,ind_Latn,agama rosh hashanah,religion of rosh hashanah,0.875,0.6406958103179932,medium,0,0
+religious purim,ind,ind_Latn,Purim agama,Religious Purim,1.0,0.8435049057006836,high,0,0
+religious sukkot,ind,ind_Latn,Sukkot agama,Religious Sukkot,1.0,0.8148007988929749,high,0,0
+religious advent,ind,ind_Latn,kedatangan agama,the arrival of religion,0.41025641025641024,0.8538103699684143,high,1,0
+religious holi,ind,ind_Latn,agama holi,Holy religion,0.5185185185185185,0.6618951559066772,medium,1,0
+religious navratri,ind,ind_Latn,religius navratri,religious navratri,1.0,0.5992096662521362,low,1,0
+religious onam,ind,ind_Latn,onam agama,religious onam,1.0,0.8398040533065796,high,0,0
+religious pongal,ind,ind_Latn,pongal agama,religious leaders,0.6666666666666666,0.8050087690353394,high,0,0
+religious durga puja,ind,ind_Latn,agama durga puja,religion of durga puja,0.8571428571428571,0.6728852987289429,medium,0,0
+religious janmashtami,ind,ind_Latn,agama janmashtami,The religion of janmashtami,0.7916666666666666,0.6572320461273193,medium,0,0
+religious good friday,ind,ind_Latn,hari Jumat yang baik,Good Friday.,0.6666666666666666,0.6140215396881104,medium,0,0
+religious pentecost,ind,ind_Latn,agama Pentakosta,Pentecostal religion,0.46153846153846156,0.6703543066978455,medium,1,0
+religious epiphany,ind,ind_Latn,Pengungkapan agama,Religious Disclosure,0.5789473684210527,0.8370250463485718,high,0,0
+religious all saints day,ind,ind_Latn,agama semua orang kudus hari,The religion of all men is holy day,0.576271186440678,0.5341775417327881,low,1,0
+religious lunar new year,ind,ind_Latn,tahun baru lunar religius,religious lunar new year,1.0,0.8750466704368591,high,0,0
+religious thingyan,ind,ind_Latn,hal-hal agamayan,religious matters,0.6285714285714286,0.7125198245048523,medium,0,0
+religious day of the dead,ind,ind_Latn,Hari religius orang mati,Religious Day of the Dead,1.0,0.7457597255706787,medium,0,0
+religious mardi gras,ind,ind_Latn,religius mardi gras,religious mardi gras,1.0,0.7989752888679504,medium,0,0
+religious saint day,ind,ind_Latn,hari santo religius,religious saint day,1.0,0.8290892839431763,high,0,0
+religious martinmas,ind,ind_Latn,Martinmas agama,Martin is religious.,0.46153846153846156,0.4889363944530487,low,1,0
+religious st patricks day,ind,ind_Latn,agama St Patrick hari,religious St Patrick's day,0.9803921568627451,0.5878989100456238,low,1,0
+religious independence day,ind,ind_Latn,Hari kemerdekaan agama,Religious Independence Day,1.0,0.8621305823326111,high,0,0
+religious mawlid,ind,ind_Latn,agama mawlid,religion of the Mawlids,0.717948717948718,0.7232526540756226,medium,0,0
+religious ashura,ind,ind_Latn,Ashura agama,Ashura religion,0.45161290322580644,0.8172715306282043,high,1,0
+religious hajj,ind,ind_Latn,haji agama,religious pilgrimage,0.6470588235294118,0.8508796095848083,high,0,0
+religious umrah,ind,ind_Latn,Umrah agama,Religious Umrah,1.0,0.8615459203720093,high,0,0
+religious setsubun,ind,ind_Latn,Setubun agama,A Religious Sacrifice,0.6153846153846154,0.7456998229026794,medium,0,0
+seasonal festival,ind,ind_Latn,festival musiman,seasonal festivals,0.9714285714285714,0.8676893711090088,high,0,0
+seasonal holiday,ind,ind_Latn,liburan musiman,seasonal holidays,0.9696969696969697,0.8581305742263794,high,0,0
+seasonal new year,ind,ind_Latn,tahun baru musiman,New year's season,0.47058823529411764,0.8267661333084106,high,1,0
+seasonal easter,ind,ind_Latn,Paskah musiman,Easter of the Season,0.34285714285714286,0.838456392288208,high,1,0
+dress,ind,ind_Latn,pakaian,Clothes,0.3333333333333333,0.7776982188224792,medium,1,1
+clothing,ind,ind_Latn,pakaian,Clothes,0.6666666666666666,0.835558295249939,high,1,1
+garment,ind,ind_Latn,pakaian,Clothes,0.14285714285714285,0.8212297558784485,high,1,1
+veil,ind,ind_Latn,pelindung,protector,0.15384615384615385,0.8102204203605652,high,1,0
+hijab,ind,ind_Latn,jilbab,the veil,0.3076923076923077,0.8403253555297852,high,1,1
+niqab,ind,ind_Latn,niqab,the niqab,0.7142857142857143,0.8420669436454773,high,0,0
+burqa,ind,ind_Latn,Burqa,Burqa,1.0,0.7607638835906982,medium,0,0
+sari,ind,ind_Latn,sari,the squirrels,0.23529411764705882,0.6398570537567139,medium,1,0
+kimono,ind,ind_Latn,Kimono,The kimono,0.75,0.823645293712616,high,0,0
+hanbok,ind,ind_Latn,Hanbok,The Hanbok,0.75,0.7911286354064941,medium,0,0
+turban,ind,ind_Latn,turban,turban,1.0,0.8511532545089722,high,0,0
+abaya,ind,ind_Latn,abaya,the abaya,0.7142857142857143,0.7772417068481445,medium,0,0
+thobe,ind,ind_Latn,di sana,There it is.,0.35294117647058826,0.37906062602996826,low,1,0
+dupatta,ind,ind_Latn,dupatta,The dupatta,0.7777777777777778,0.6450144052505493,medium,0,0
+lehenga,ind,ind_Latn,Lehenga,The neck,0.4,0.6903021335601807,medium,1,0
+kurta,ind,ind_Latn,kurta,the curtains,0.47058823529411764,0.5298410058021545,low,1,0
+dhoti,ind,ind_Latn,dhoti,the dhoti,0.7142857142857143,0.6507517099380493,medium,0,0
+qipao,ind,ind_Latn,qipao,the qipao,0.7142857142857143,0.7154684066772461,medium,0,0
+uniform,ind,ind_Latn,seragam,Uniforms,0.9333333333333333,0.834360659122467,high,0,0
+formal,ind,ind_Latn,formal,formal,1.0,0.6527488231658936,medium,0,0
+casual,ind,ind_Latn,kasual,Casual,1.0,0.6612358093261719,medium,0,0
+modest,ind,ind_Latn,rendah hati,humility,0.2857142857142857,0.8227241039276123,high,1,1
+ornate,ind,ind_Latn,menghiasi,decorating,0.5,0.7065718173980713,medium,1,0
+jewelry,ind,ind_Latn,Perhiasan,Jewelry,1.0,0.837997555732727,high,0,0
+necklace,ind,ind_Latn,kalung,The necklace,0.8,0.7740838527679443,medium,0,0
+earring,ind,ind_Latn,cincin telinga,earrings,0.9333333333333333,0.7817391157150269,medium,0,0
+bracelet,ind,ind_Latn,gelang,bracelet,1.0,0.8200555443763733,high,0,0
+ring,ind,ind_Latn,cincin,rings,0.8888888888888888,0.7307032346725464,medium,0,0
+headscarf,ind,ind_Latn,jilbab,the veil,0.23529411764705882,0.8384302854537964,high,1,1
+tattoo,ind,ind_Latn,tato,Tattoo,1.0,0.8237505555152893,high,0,0
+piercing,ind,ind_Latn,penembakan,Shots fired,0.21052631578947367,0.5065561532974243,low,1,0
+mask,ind,ind_Latn,topeng,The mask,0.6666666666666666,0.8464519381523132,high,0,0
+gown,ind,ind_Latn,gaun,Dress,0.0,0.5005314946174622,low,1,0
+tuxedo,ind,ind_Latn,smoking,smoking,0.15384615384615385,0.386473685503006,low,1,0
+wedding dress,ind,ind_Latn,gaun pengantin,wedding dress,1.0,0.8657293319702148,high,0,0
+sash,ind,ind_Latn,sisir,the ribs,0.16666666666666666,0.7638624310493469,medium,1,0
+sandals,ind,ind_Latn,sandal,sandals,1.0,0.7299616932868958,medium,0,0
+slippers,ind,ind_Latn,Sepatu,Shoes,0.46153846153846156,0.8327924013137817,high,1,0
+bangle,ind,ind_Latn,bergelombang,Waves,0.36363636363636365,0.3582857847213745,low,1,0
+anklet,ind,ind_Latn,pergelangan kaki,wrists,0.16666666666666666,0.5356364846229553,low,1,0
+kaftan,ind,ind_Latn,Kaftan,The Kaftan,0.75,0.827193558216095,high,0,0
+poncho,ind,ind_Latn,poncho,The poncho,0.75,0.7836407423019409,medium,0,0
+sombrero,ind,ind_Latn,sombrero,The sweater,0.3157894736842105,0.8139011859893799,high,1,0
+kippah,ind,ind_Latn,Kippah,What's the matter?,0.16666666666666666,0.6460239291191101,medium,1,0
+yarmulke,ind,ind_Latn,yarmulke,the yarmulke,0.8,0.7479261755943298,medium,0,0
+mourning dress,ind,ind_Latn,pakaian duka,Sadly dressed,0.4444444444444444,0.7918332815170288,medium,1,0
+ceremonial mask,ind,ind_Latn,topeng upacara,Ceremonial mask,1.0,0.8675838708877563,high,0,0
+formal dress,ind,ind_Latn,pakaian formal,Formal clothing,0.5185185185185185,0.8549522757530212,high,1,1
+formal clothing,ind,ind_Latn,pakaian formal,Formal clothing,1.0,0.8597948551177979,high,1,1
+formal garment,ind,ind_Latn,pakaian formal,Formal clothing,0.5517241379310345,0.8493289351463318,high,1,1
+formal veil,ind,ind_Latn,kerudung formal,formal coat of arms,0.4666666666666667,0.7908898591995239,medium,1,0
+formal hijab,ind,ind_Latn,jilbab formal,formal veil,0.6956521739130435,0.831089198589325,high,1,1
+formal niqab,ind,ind_Latn,niqab formal,formal niqab,1.0,0.4804399609565735,low,1,0
+formal burqa,ind,ind_Latn,Burqa formal,Formal burqa,1.0,0.6412013173103333,medium,0,0
+formal sari,ind,ind_Latn,sari formal,formal sari,1.0,0.5723576545715332,low,1,0
+formal kimono,ind,ind_Latn,Kimono formal,The formal kimono,0.8666666666666667,0.6904919147491455,medium,0,0
+formal hanbok,ind,ind_Latn,Hanbok formal,The formal Hanbok,0.8666666666666667,0.4458215534687042,low,1,0
+formal turban,ind,ind_Latn,turban formal,formal turban,1.0,0.5443597435951233,low,1,0
+formal abaya,ind,ind_Latn,abaya formal,formal abaya,1.0,0.7998958826065063,medium,0,0
+formal thobe,ind,ind_Latn,formal thobe,formal thobe,1.0,0.4319387972354889,low,1,0
+formal dupatta,ind,ind_Latn,dupatta formal,The formal dupatta,0.875,0.40256911516189575,low,1,0
+formal lehenga,ind,ind_Latn,Lehenga formal,Formal collar,0.6666666666666666,0.5259092450141907,low,1,0
+formal kurta,ind,ind_Latn,Kurta formal,The formal curtain,0.7333333333333333,0.4233788549900055,low,1,0
+formal dhoti,ind,ind_Latn,dhoti formal,formal dhoti,1.0,0.5168554782867432,low,1,0
+formal qipao,ind,ind_Latn,Qipao formal,Qipao is formal,0.4444444444444444,0.46651309728622437,low,1,0
+formal uniform,ind,ind_Latn,seragam formal,formal uniforms,0.9655172413793104,0.8526962995529175,high,0,0
+formal formal,ind,ind_Latn,formal formal formal,formal formal formal,0.7878787878787878,0.3629471957683563,low,1,0
+formal casual,ind,ind_Latn,formal casual,formal casual,1.0,0.4852409064769745,low,1,0
+formal modest,ind,ind_Latn,formal sederhana,simple formal,0.46153846153846156,0.5947757959365845,low,1,0
+formal ornate,ind,ind_Latn,dihiasi secara formal,formally decorated,0.7741935483870968,0.7628577947616577,medium,0,0
+formal jewelry,ind,ind_Latn,Perhiasan formal,Formal jewelry,1.0,0.8281009197235107,high,0,0
+formal necklace,ind,ind_Latn,kalung formal,Formal collar,0.7142857142857143,0.57857346534729,low,1,0
+formal earring,ind,ind_Latn,pergelangan telinga formal,formal earplugs,0.7586206896551724,0.5366215109825134,low,1,0
+formal bracelet,ind,ind_Latn,gelang formal,formal bracelet,1.0,0.8194237947463989,high,0,0
+formal ring,ind,ind_Latn,cincin formal,formal rings,0.9565217391304348,0.6632667779922485,medium,0,0
+formal headscarf,ind,ind_Latn,jilbab formal,formal veil,0.5925925925925926,0.8155456185340881,high,1,1
+formal tattoo,ind,ind_Latn,tato formal,formal tattoos,0.9629629629629629,0.8369272351264954,high,0,0
+formal piercing,ind,ind_Latn,pencoblosan formal,formal decomposition,0.6285714285714286,0.6909613609313965,medium,0,0
+formal mask,ind,ind_Latn,topeng formal,Formal masks,0.9565217391304348,0.847411036491394,high,0,0
+formal gown,ind,ind_Latn,gaun formal,formal dress,0.6086956521739131,0.730746328830719,medium,0,0
+formal tuxedo,ind,ind_Latn,smoking formal,formal smoking,0.5925925925925926,0.3507795035839081,low,1,0
+formal wedding dress,ind,ind_Latn,gaun pernikahan formal,formal wedding dress,1.0,0.8706399202346802,high,0,0
+formal sash,ind,ind_Latn,sisir formal,Formal ribs,0.7272727272727273,0.6409142017364502,medium,0,0
+formal sandals,ind,ind_Latn,sandal formal,formal sandals,1.0,0.4065038859844208,low,1,0
+formal slippers,ind,ind_Latn,Sepatu formal,Formal shoes,0.7407407407407407,0.8502289056777954,high,0,0
+formal bangle,ind,ind_Latn,pergelangan tangan formal,formal wrists,0.5384615384615384,0.5282952785491943,low,1,0
+formal anklet,ind,ind_Latn,pergelangan kaki formal,formal ankle,0.96,0.7077757716178894,medium,0,0
+formal kaftan,ind,ind_Latn,formal kaftan,formal kaftan,1.0,0.5244309902191162,low,1,0
+formal poncho,ind,ind_Latn,poncho formal,The formal poncho,0.8666666666666667,0.552810788154602,low,1,0
+formal sombrero,ind,ind_Latn,formal sombrero,formal hat,0.56,0.46311381459236145,low,1,0
+formal kippah,ind,ind_Latn,Kippah formal,The formal package,0.5806451612903226,0.44660475850105286,low,1,0
+formal yarmulke,ind,ind_Latn,formal yarmulke,formal yarmulke,1.0,0.48879948258399963,low,1,0
+formal mourning dress,ind,ind_Latn,gaun pengasingan resmi,official exile dress,0.5365853658536586,0.7945899963378906,medium,1,0
+formal ceremonial mask,ind,ind_Latn,topeng upacara formal,Masks for formal ceremonies,0.6530612244897959,0.867043137550354,high,0,0
+casual dress,ind,ind_Latn,pakaian kasual,Casual clothes,0.6923076923076923,0.8627544641494751,high,1,1
+casual clothing,ind,ind_Latn,pakaian santai,Relaxing clothes,0.45161290322580644,0.8550145626068115,high,1,0
+casual garment,ind,ind_Latn,pakaian kasual,Casual clothes,0.5714285714285714,0.8589534163475037,high,1,1
+casual veil,ind,ind_Latn,pelindung kasual,the casual protector,0.5161290322580645,0.7612744569778442,medium,1,0
+casual hijab,ind,ind_Latn,jilbab kasual,Casual headscarf,0.6428571428571429,0.8589048385620117,high,0,0
+casual niqab,ind,ind_Latn,niqab kasual,Casual niqab,1.0,0.44539880752563477,low,1,0
+white,ind,ind_Latn,putih,white,1.0,0.8226315975189209,high,0,0
+red,ind,ind_Latn,merah,Red,1.0,0.8346529603004456,high,0,0
+black,ind,ind_Latn,hitam,The black,0.7142857142857143,0.8427770137786865,high,0,0
+blue,ind,ind_Latn,biru,blue,1.0,0.7016063928604126,medium,0,0
+green,ind,ind_Latn,hijau,Green,1.0,0.8319036960601807,high,0,0
+yellow,ind,ind_Latn,kuning,yellow,1.0,0.8361415266990662,high,0,0
+purple,ind,ind_Latn,ungu,purple,1.0,0.8444597721099854,high,0,0
+orange,ind,ind_Latn,jeruk,orange,1.0,0.8135223388671875,high,0,0
+gold,ind,ind_Latn,emas,gold,1.0,0.862457275390625,high,0,0
+silver,ind,ind_Latn,perak,silver,1.0,0.76308274269104,medium,0,0
+dragon,ind,ind_Latn,naga,The dragon,0.75,0.5419058203697205,low,1,0
+phoenix,ind,ind_Latn,Phoenix,The Phoenix,0.7777777777777778,0.817457914352417,high,0,0
+lotus,ind,ind_Latn,lotus,lotus,1.0,0.8112611770629883,high,0,0
+bamboo,ind,ind_Latn,bambu,the bamboo,0.75,0.845889151096344,high,0,0
+olive,ind,ind_Latn,zaitun,olive oil,0.7142857142857143,0.845106303691864,high,0,0
+maple,ind,ind_Latn,maple,Maple,1.0,0.7882207036018372,medium,0,0
+totem,ind,ind_Latn,Totem,The totem.,0.6666666666666666,0.8317453861236572,high,0,0
+emblem,ind,ind_Latn,lambang,emblems,0.9230769230769231,0.8237193822860718,high,0,0
+anthem,ind,ind_Latn,lagu kebangsaan,national anthem,0.5714285714285714,0.8310415744781494,high,0,0
+flag,ind,ind_Latn,bendera,the flag,0.6666666666666666,0.8447773456573486,high,0,0
+icon,ind,ind_Latn,ikon,the icon,0.6666666666666666,0.8120114207267761,high,0,0
+script,ind,ind_Latn,naskah,The script,0.75,0.4645042419433594,low,1,0
+calligraphy,ind,ind_Latn,Kaligrafi,Calligraphy,1.0,0.8666353225708008,high,0,0
+lantern,ind,ind_Latn,pencahayaan,lighting,0.26666666666666666,0.7337949275970459,medium,1,0
+opera,ind,ind_Latn,opera,opera,1.0,0.7458502650260925,medium,0,0
+dance,ind,ind_Latn,menari,Dancing,0.6666666666666666,0.40057259798049927,low,1,0
+music,ind,ind_Latn,musik,music,1.0,0.8412992358207703,high,0,0
+folklore,ind,ind_Latn,cerita rakyat,folk tales,0.6666666666666666,0.863732099533081,high,0,0
+myth,ind,ind_Latn,mitos,Myths,0.8888888888888888,0.852831244468689,high,0,0
+legend,ind,ind_Latn,Legenda,The legend,0.75,0.8174713850021362,high,0,0
+oral tradition,ind,ind_Latn,tradisi lisan,oral tradition,1.0,0.8633534908294678,high,0,0
+epic,ind,ind_Latn,epik,The epic,0.6666666666666666,0.5966814756393433,low,1,0
+fable,ind,ind_Latn,dongeng,A fairy tale,0.47058823529411764,0.8520187139511108,high,1,0
+choir,ind,ind_Latn,paduan suara,the choir,0.7142857142857143,0.7344647645950317,medium,0,0
+orchestra,ind,ind_Latn,orkestra,orchestra,1.0,0.8374265432357788,high,0,0
+drumming,ind,ind_Latn,drum,drums,0.6153846153846154,0.3429841697216034,low,1,0
+tango,ind,ind_Latn,Tangga,Stairs,0.36363636363636365,0.4817435145378113,low,1,0
+flamenco,ind,ind_Latn,flamenco,The flamenco,0.8,0.8553621768951416,high,0,0
+bharatanatyam,ind,ind_Latn,bharatanatyam,Bharatanatyam,1.0,0.6719465255737305,medium,0,0
+kabuki,ind,ind_Latn,kabuki,the kabuki,0.75,0.8549501895904541,high,0,0
+lion dance,ind,ind_Latn,tarian singa,the lion's dance,0.7692307692307693,0.290346622467041,low,1,0
+dragon dance,ind,ind_Latn,tari naga,dragon dance,1.0,0.5012030601501465,low,1,0
+totem pole,ind,ind_Latn,tongkat totem,Totem stick,0.5714285714285714,0.5784364342689514,low,1,0
+prayer beads,ind,ind_Latn,manik-manik doa,Prayer beads,1.0,0.3708067834377289,low,1,0
+chopsticks,ind,ind_Latn,tongkat makan,The eating stick,0.46153846153846156,0.8011544346809387,high,1,0
+tea ceremony,ind,ind_Latn,Upacara teh,The tea ceremony,0.8571428571428571,0.8412613868713379,high,0,0
+martial arts,ind,ind_Latn,seni bela diri,martial arts,1.0,0.8609520792961121,high,0,0
+cultural white,ind,ind_Latn,putih budaya,white culture,0.5185185185185185,0.6064102649688721,medium,1,0
+cultural red,ind,ind_Latn,merah budaya,cultural red,1.0,0.8047271370887756,high,0,0
+cultural black,ind,ind_Latn,hitam budaya,black culture,0.4444444444444444,0.6175675392150879,medium,1,0
+cultural blue,ind,ind_Latn,biru budaya,cultural blue,1.0,0.6927852630615234,medium,0,0
+cultural green,ind,ind_Latn,hijau budaya,cultural green,1.0,0.7188372611999512,medium,0,0
+cultural yellow,ind,ind_Latn,kuning budaya,cultural yellow,1.0,0.7499467134475708,medium,0,0
+cultural purple,ind,ind_Latn,ungu budaya,purple culture,0.4827586206896552,0.8113893270492554,high,1,0
+cultural orange,ind,ind_Latn,jeruk budaya,orange culture,0.4827586206896552,0.6323460340499878,medium,1,0
+cultural gold,ind,ind_Latn,emas budaya,cultural gold,1.0,0.8648496866226196,high,0,0
+cultural silver,ind,ind_Latn,perak budaya,cultural silver,1.0,0.8239810466766357,high,0,0
+cultural dragon,ind,ind_Latn,naga budaya,cultural dragon,1.0,0.7901816368103027,medium,0,0
+cultural phoenix,ind,ind_Latn,budaya phoenix,culture of phoenix,0.8235294117647058,0.5540597438812256,low,1,0
+cultural lotus,ind,ind_Latn,lotus budaya,lotus culture,0.4444444444444444,0.5767359733581543,low,1,0
+cultural bamboo,ind,ind_Latn,bambu budaya,cultural bamboo,1.0,0.868686318397522,high,0,0
+cultural olive,ind,ind_Latn,zaitun budaya,olive culture,0.5185185185185185,0.8454868197441101,high,1,0
+cultural maple,ind,ind_Latn,Maple budaya,Maple culture,0.5185185185185185,0.6210825443267822,medium,1,0
+cultural totem,ind,ind_Latn,totem budaya,cultural totem,1.0,0.8594894409179688,high,0,0
+cultural emblem,ind,ind_Latn,lambang budaya,cultural symbols,0.7741935483870968,0.8700532913208008,high,0,0
+cultural anthem,ind,ind_Latn,lagu budaya,cultural songs,0.6896551724137931,0.8488925695419312,high,0,0
+cultural flag,ind,ind_Latn,bendera budaya,cultural flag,1.0,0.8627382516860962,high,0,0
+cultural icon,ind,ind_Latn,ikon budaya,cultural icons,0.9629629629629629,0.8778442144393921,high,0,0
+cultural script,ind,ind_Latn,naskah budaya,cultural manuscripts,0.8571428571428571,0.7864336371421814,medium,0,0
+cultural calligraphy,ind,ind_Latn,kalligrafi budaya,cultural calligraphy,1.0,0.8787493705749512,high,0,0
+cultural lantern,ind,ind_Latn,lampu budaya,cultural lights,0.7096774193548387,0.8345592021942139,high,0,0
+cultural incense,ind,ind_Latn,dupa budaya,culture incense,0.9032258064516129,0.42842933535575867,low,1,0
+cultural opera,ind,ind_Latn,opera budaya,cultural opera,1.0,0.8587338924407959,high,0,0
+cultural dance,ind,ind_Latn,tarian budaya,cultural dance,1.0,0.8590989708900452,high,0,0
+cultural music,ind,ind_Latn,musik budaya,cultural music,1.0,0.8669642210006714,high,0,0
+cultural folklore,ind,ind_Latn,folklore budaya,folklore of culture,0.4444444444444444,0.6050279140472412,medium,1,0
+cultural myth,ind,ind_Latn,mitos budaya,cultural myths,0.9629629629629629,0.8744586706161499,high,0,0
+cultural legend,ind,ind_Latn,legenda budaya,cultural legends,0.967741935483871,0.8556050062179565,high,0,0
+cultural oral tradition,ind,ind_Latn,tradisi lisan budaya,oral tradition of culture,0.5833333333333334,0.8584070801734924,high,0,0
+cultural epic,ind,ind_Latn,epik budaya,cultural epics,0.9629629629629629,0.7978823184967041,medium,0,0
+cultural fable,ind,ind_Latn,dongeng budaya,cultural fairy tales,0.7647058823529411,0.8692312836647034,high,0,0
+cultural choir,ind,ind_Latn,paduan suara budaya,cultural choir,1.0,0.8006652593612671,high,0,0
+cultural orchestra,ind,ind_Latn,orkestra budaya,cultural orchestra,1.0,0.8435543775558472,high,0,0
+cultural drumming,ind,ind_Latn,drum budaya,culture drum,0.7586206896551724,0.7628567218780518,medium,0,0
+cultural chanting,ind,ind_Latn,nyanyian budaya,cultural singing,0.7272727272727273,0.8407328724861145,high,0,0
+cultural tango,ind,ind_Latn,tango budaya,cultural tango,1.0,0.8183619976043701,high,0,0
+cultural flamenco,ind,ind_Latn,flamenco budaya,flamenco culture,0.48484848484848486,0.6086229085922241,medium,1,0
+cultural bharatanatyam,ind,ind_Latn,budaya bharatanatyam,culture of bharatanatyam,0.8695652173913043,0.6432855129241943,medium,0,0
+cultural kabuki,ind,ind_Latn,kabuki budaya,kabuki culture,0.41379310344827586,0.7283011674880981,medium,1,0
+cultural lion dance,ind,ind_Latn,tarian singa budaya,cultural lion dance,1.0,0.8263077735900879,high,0,0
+cultural dragon dance,ind,ind_Latn,tari naga budaya,dance of the dragon culture,0.5,0.8522615432739258,high,1,0
+cultural totem pole,ind,ind_Latn,Pole totem budaya,The culture totem pole,0.8292682926829268,0.846406877040863,high,0,0
+cultural prayer beads,ind,ind_Latn,manik-manik doa budaya,cultural prayer beads,1.0,0.6681782603263855,medium,0,0
+cultural rosary,ind,ind_Latn,Rosary budaya,Rosary culture,0.41379310344827586,0.553941547870636,low,1,0
+cultural chopsticks,ind,ind_Latn,tongkat makan budaya,culture eating stick,0.6666666666666666,0.7810308933258057,medium,0,0
+cultural tea ceremony,ind,ind_Latn,Upacara teh budaya,Cultural tea ceremony,1.0,0.8631328344345093,high,0,0
+cultural martial arts,ind,ind_Latn,seni bela diri budaya,martial arts culture,0.5853658536585366,0.8653573989868164,high,0,0
+democracy,ind,ind_Latn,Demokrasi,Democracy,1.0,0.8742570877075195,high,0,0
+monarchy,ind,ind_Latn,monarki,the monarchy,0.8,0.8582669496536255,high,0,0
+republic,ind,ind_Latn,Republik,The Republic,0.8,0.8120366930961609,high,0,0
+federal,ind,ind_Latn,federal,federal,1.0,0.5735976696014404,low,1,0
+unitary,ind,ind_Latn,unit,unit,0.7272727272727273,0.47617319226264954,low,1,0
+parliament,ind,ind_Latn,Parlemen,Parliament,1.0,0.8505557775497437,high,0,0
+senate,ind,ind_Latn,Senat,Senate,1.0,0.8245714902877808,high,0,0
+constitution,ind,ind_Latn,konstitusi,constitution,1.0,0.8677193522453308,high,0,0
+bureaucracy,ind,ind_Latn,Birokrasi,Bureaucracy,1.0,0.8803664445877075,high,0,0
+meritocracy,ind,ind_Latn,Meritocracy,Meritocracy,1.0,0.5192056894302368,low,1,0
+oligarchy,ind,ind_Latn,Oligarki,The oligarchy,0.8181818181818182,0.8513337969779968,high,0,0
+aristocracy,ind,ind_Latn,bangsawan,Nobility,0.3157894736842105,0.6205646991729736,medium,1,0
+tribunal,ind,ind_Latn,pengadilan,court,0.15384615384615385,0.8510117530822754,high,1,0
+mediation,ind,ind_Latn,mediasi,mediation,1.0,0.8603360652923584,high,0,0
+civil law,ind,ind_Latn,hukum sipil,civil law,1.0,0.8834505081176758,high,0,0
+common law,ind,ind_Latn,hukum umum,common law,1.0,0.8780244588851929,high,1,1
+customary law,ind,ind_Latn,hukum adat,customary law,1.0,0.8664856553077698,high,0,0
+council,ind,ind_Latn,dewan,council,1.0,0.39912277460098267,low,1,0
+chieftain,ind,ind_Latn,kepala,head,0.46153846153846156,0.8180220723152161,high,1,0
+citizen,ind,ind_Latn,warga negara,citizen of the country,0.4827586206896552,0.8613589406013489,high,1,1
+state,ind,ind_Latn,negara bagian,State of the Union,0.43478260869565216,0.8089589476585388,high,1,0
+nation,ind,ind_Latn,bangsa,nations,0.9230769230769231,0.7873899340629578,medium,0,0
+border,ind,ind_Latn,perbatasan,The border,0.75,0.8465808629989624,high,0,0
+governance,ind,ind_Latn,pemerintahan,government,0.7,0.8584316968917847,high,0,0
+policy,ind,ind_Latn,kebijakan,policy,1.0,0.8444250226020813,high,0,0
+regulation,ind,ind_Latn,Peraturan,The Rules,0.3157894736842105,0.830001950263977,high,1,0
+empire,ind,ind_Latn,kekaisaran,the empire,0.75,0.8265360593795776,high,0,0
+colonial,ind,ind_Latn,kolonial,the colonial,0.8,0.8053471446037292,high,0,0
+decolonization,ind,ind_Latn,dekolonisasi,decolonization,1.0,0.8744835257530212,high,0,0
+judiciary,ind,ind_Latn,penegak hukum,law enforcement,0.08333333333333333,0.8730641603469849,high,1,0
+legislature,ind,ind_Latn,legislatif,the legislature,0.8461538461538461,0.6895233988761902,medium,0,0
+executive,ind,ind_Latn,eksekutif,executive,1.0,0.8368088006973267,high,0,0
+ministry,ind,ind_Latn,pelayanan,ministry,1.0,0.807812511920929,high,0,0
+administration,ind,ind_Latn,administrasi,the administration,0.875,0.8513323664665222,high,0,0
+charter,ind,ind_Latn,Undang-undang,The Law,0.2857142857142857,0.42555949091911316,low,1,1
+ordinance,ind,ind_Latn,Undang-undang,The Law,0.125,0.8110172748565674,high,1,1
+treaty,ind,ind_Latn,perjanjian,covenants,0.13333333333333333,0.8597508668899536,high,1,0
+diplomacy,ind,ind_Latn,diplomasi,diplomacy,1.0,0.8696922659873962,high,0,0
+taxation,ind,ind_Latn,pajak,taxes,0.46153846153846156,0.8570117950439453,high,1,0
+public office,ind,ind_Latn,kantor publik,public office,1.0,0.8582875728607178,high,1,1
+village council,ind,ind_Latn,dewan desa,village council,1.0,0.7751012444496155,medium,0,0
+city council,ind,ind_Latn,dewan kota,city council,1.0,0.8529985547065735,high,0,0
+mayor,ind,ind_Latn,Walikota,The mayor.,0.6666666666666666,0.8568539619445801,high,0,0
+governor,ind,ind_Latn,Gubernur,Governor,1.0,0.8344882130622864,high,0,0
+public democracy,ind,ind_Latn,demokrasi publik,public democracy,1.0,0.8749289512634277,high,0,0
+public monarchy,ind,ind_Latn,monarki publik,public monarchy,1.0,0.8188421726226807,high,0,0
+public republic,ind,ind_Latn,republik publik,public republic,1.0,0.8119319081306458,high,0,0
+public federal,ind,ind_Latn,publik federal,federal public,0.5,0.7259124517440796,medium,1,0
+public unitary,ind,ind_Latn,unit umum,common unit,0.48,0.683901309967041,medium,1,0
+public parliament,ind,ind_Latn,parlemen publik,public parliament,1.0,0.8259490728378296,high,0,0
+public senate,ind,ind_Latn,Senat umum,General Senate,0.5925925925925926,0.8526864051818848,high,0,0
+public constitution,ind,ind_Latn,konstitusi publik,public constitution,1.0,0.6521130204200745,medium,0,0
+public bureaucracy,ind,ind_Latn,birokrasi publik,public bureaucracy,1.0,0.7500883936882019,medium,0,0
+public meritocracy,ind,ind_Latn,meritokrasi publik,public meritocracy,1.0,0.8393140435218811,high,0,0
+public oligarchy,ind,ind_Latn,Oligarki publik,The public oligarchy,0.8888888888888888,0.8628908395767212,high,0,0
+public aristocracy,ind,ind_Latn,bangsawan publik,public nobility,0.6060606060606061,0.7682309746742249,medium,0,0
+public tribunal,ind,ind_Latn,pengadilan publik,public court,0.5925925925925926,0.8615496158599854,high,0,0
+public mediation,ind,ind_Latn,mediasi publik,public mediation,1.0,0.8508292436599731,high,0,0
+public civil law,ind,ind_Latn,hukum sipil publik,public civil law,1.0,0.889305591583252,high,0,0
+public common law,ind,ind_Latn,hukum umum,common law,0.7407407407407407,0.8355473875999451,high,1,1
+public customary law,ind,ind_Latn,hukum adat publik,public customary law,1.0,0.8698687553405762,high,0,0
+public council,ind,ind_Latn,dewan publik,public council,1.0,0.8405694961547852,high,0,0
+public chieftain,ind,ind_Latn,kepala masyarakat,head of society,0.25806451612903225,0.8458831310272217,high,1,0
+public citizen,ind,ind_Latn,warga negara,citizen of the country,0.3888888888888889,0.8170180320739746,high,1,1
+public state,ind,ind_Latn,negara publik,public state,1.0,0.8704691529273987,high,1,1
+public nation,ind,ind_Latn,negara publik,public state,0.72,0.8640133142471313,high,1,1
+public border,ind,ind_Latn,perbatasan publik,public borders,0.9629629629629629,0.8641509413719177,high,0,0
+public governance,ind,ind_Latn,pemerintahan publik,public administration,0.47368421052631576,0.8783780336380005,high,1,0
+public policy,ind,ind_Latn,kebijakan publik,public policy,1.0,0.877697229385376,high,0,0
+public regulation,ind,ind_Latn,peraturan publik,public rules,0.6896551724137931,0.8525485992431641,high,0,0
+public empire,ind,ind_Latn,kekaisaran publik,public empire,1.0,0.8510315418243408,high,0,0
+public colonial,ind,ind_Latn,kolonial publik,public colonial,1.0,0.708092451095581,medium,0,0
+public decolonization,ind,ind_Latn,dekolonisasi publik,decolonization of the public,0.5714285714285714,0.7950884103775024,medium,0,0
+public judiciary,ind,ind_Latn,peradilan publik,public justice,0.7333333333333333,0.8725359439849854,high,0,0
+public legislature,ind,ind_Latn,legislatif publik,public legislature,1.0,0.7316523790359497,medium,0,0
+public executive,ind,ind_Latn,eksekutif publik,public executive,1.0,0.8149462342262268,high,0,0
+public ministry,ind,ind_Latn,pelayanan publik,public service,0.5517241379310345,0.8738429546356201,high,0,0
+public administration,ind,ind_Latn,administrasi publik,public administration,1.0,0.8864911794662476,high,0,0
+public charter,ind,ind_Latn,Undang-undang umum,Common law,0.16666666666666666,0.6700447201728821,medium,1,0
+public ordinance,ind,ind_Latn,Ordo publik,Public order,0.7857142857142857,0.8501250743865967,high,0,0
+public treaty,ind,ind_Latn,perjanjian publik,public agreement,0.6896551724137931,0.8745636940002441,high,0,0
+public diplomacy,ind,ind_Latn,diplomasi publik,public diplomacy,1.0,0.8755705952644348,high,0,0
+public taxation,ind,ind_Latn,pajak publik,public tax,0.8,0.8703427910804749,high,0,0
+public public office,ind,ind_Latn,kantor publik,public office,0.7878787878787878,0.7939229011535645,medium,1,1
+public village council,ind,ind_Latn,dewan desa umum,general village council,0.7555555555555555,0.863426685333252,high,0,0
+public city council,ind,ind_Latn,dewan kota publik,public city council,1.0,0.842812180519104,high,0,0
+public mayor,ind,ind_Latn,Walikota umum,Mayor general,0.4,0.845663845539093,high,1,0
+public governor,ind,ind_Latn,gubernur umum,governor general,0.5161290322580645,0.8519779443740845,high,1,0
+state democracy,ind,ind_Latn,demokrasi negara,democracy of the state,0.4864864864864865,0.8635433912277222,high,1,0
+state monarchy,ind,ind_Latn,monarki negara,state monarchy,1.0,0.8755733966827393,high,0,0
+state republic,ind,ind_Latn,republik negara bagian,state republic,1.0,0.7296195030212402,medium,0,0
+state federal,ind,ind_Latn,negara bagian federal,federal state,0.5384615384615384,0.7812660932540894,medium,1,0
+state unitary,ind,ind_Latn,unit negara bagian,unit of state,0.38461538461538464,0.740879476070404,medium,1,0
+state parliament,ind,ind_Latn,parlemen negara bagian,state parliament,1.0,0.8600702285766602,high,0,0
+state senate,ind,ind_Latn,Senat negara bagian,State Senate,1.0,0.8411444425582886,high,0,0
+state constitution,ind,ind_Latn,konstitusi negara bagian,state constitution,1.0,0.879975438117981,high,0,0
+state bureaucracy,ind,ind_Latn,birokrasi negara,state bureaucracy,1.0,0.8643655776977539,high,0,0
+state meritocracy,ind,ind_Latn,meritokrasi negara,State meritocracy,1.0,0.8584818840026855,high,0,0
+state oligarchy,ind,ind_Latn,Oligarki negara,State oligarchy,1.0,0.8767686486244202,high,0,0
+state aristocracy,ind,ind_Latn,bangsawan negara,the nobility of the country,0.22727272727272727,0.8129125833511353,high,1,0
+identity,ind,ind_Latn,identitas,identity,1.0,0.8352938890457153,high,0,0
+ethnicity,ind,ind_Latn,etnisitas,ethnicity,1.0,0.8388001918792725,high,0,0
+diaspora,ind,ind_Latn,diaspora,the diaspora,0.8,0.785218358039856,medium,0,0
+migration,ind,ind_Latn,migrasi,migration,1.0,0.8791075348854065,high,0,0
+immigrant,ind,ind_Latn,imigran,immigrants,0.9473684210526315,0.8007039427757263,high,0,0
+refugee,ind,ind_Latn,pengungsi,refugees,0.9333333333333333,0.526817262172699,low,1,0
+minority,ind,ind_Latn,minoritas,minority,1.0,0.8202271461486816,high,0,0
+majority,ind,ind_Latn,mayoritas,majority,1.0,0.8218132853507996,high,0,0
+assimilation,ind,ind_Latn,asimilasi,the assimilation,0.8571428571428571,0.841609001159668,high,0,0
+integration,ind,ind_Latn,integrasi,the integration,0.8461538461538461,0.8427470326423645,high,0,0
+segregation,ind,ind_Latn,pemisahan,separation,0.7619047619047619,0.8614435791969299,high,0,0
+pluralism,ind,ind_Latn,pluralisme,pluralism,1.0,0.8694003820419312,high,0,0
+multiculturalism,ind,ind_Latn,multikulturalisme,multiculturalism,1.0,0.8774921894073486,high,0,0
+indigenous,ind,ind_Latn,penduduk asli,indigenous peoples,0.7142857142857143,0.8165963888168335,high,0,0
+native,ind,ind_Latn,asli,the original,0.2222222222222222,0.7203078269958496,medium,1,0
+foreign,ind,ind_Latn,asing,a foreigner,0.7777777777777778,0.777194082736969,medium,0,0
+local,ind,ind_Latn,lokal,local,1.0,0.7889972925186157,medium,0,0
+global,ind,ind_Latn,global,globally,0.8571428571428571,0.7076497673988342,medium,0,0
+community,ind,ind_Latn,komunitas,community,1.0,0.827862024307251,high,0,0
+belonging,ind,ind_Latn,milik,It belongs to me.,0.46153846153846156,0.6480225324630737,medium,1,0
+language,ind,ind_Latn,bahasa,language,1.0,0.84061199426651,high,0,0
+dialect,ind,ind_Latn,dialek,dialects,0.9333333333333333,0.8177754878997803,high,0,0
+heritage,ind,ind_Latn,warisan,heritage,1.0,0.41321897506713867,low,1,1
+xenophobia,ind,ind_Latn,xenophobia,xenophobia,1.0,0.8068703413009644,high,0,0
+stereotype,ind,ind_Latn,stereotip,Stereotypes,0.9523809523809523,0.854385495185852,high,0,0
+prejudice,ind,ind_Latn,prasangka,preconceived notions,0.3448275862068966,0.8520873785018921,high,1,0
+citizenship,ind,ind_Latn,Kewarganegaraan,Citizenship,1.0,0.8740826845169067,high,1,1
+acculturation,ind,ind_Latn,akulturasi,acculturation,1.0,0.8437449336051941,high,0,0
+hybridity,ind,ind_Latn,hibriditas,hybrids,0.75,0.8651452660560608,high,0,0
+homeland,ind,ind_Latn,tanah air,Motherland,0.6666666666666666,0.8339223861694336,high,0,0
+exile,ind,ind_Latn,pengasingan,exclusion,0.42857142857142855,0.8340809345245361,high,1,0
+settler,ind,ind_Latn,pemukiman,settlement,0.7058823529411765,0.771327018737793,medium,0,0
+cosmopolitan,ind,ind_Latn,kosmopolitan,cosmopolitan,1.0,0.7292406558990479,medium,0,0
+transnational,ind,ind_Latn,transnasional,transnational,1.0,0.5770277380943298,low,1,0
+identity politics,ind,ind_Latn,Politik identitas,Identity policy,0.875,0.8366715312004089,high,0,0
+mother tongue,ind,ind_Latn,bahasa ibu,mother tongue,1.0,0.8514386415481567,high,0,0
+second language,ind,ind_Latn,bahasa kedua,second language,1.0,0.8684827089309692,high,0,0
+local identity,ind,ind_Latn,identitas lokal,local identity,1.0,0.8748393058776855,high,0,0
+local ethnicity,ind,ind_Latn,etnisitas lokal,local ethnicity,1.0,0.8585488796234131,high,0,0
+local diaspora,ind,ind_Latn,diaspora lokal,local diaspora,1.0,0.8705465793609619,high,0,0
+local migration,ind,ind_Latn,migrasi lokal,local migration,1.0,0.8782361149787903,high,0,0
+local immigrant,ind,ind_Latn,imigran lokal,local immigrants,0.967741935483871,0.8791165351867676,high,0,0
+local refugee,ind,ind_Latn,pengungsi lokal,local refugees,0.9629629629629629,0.8153796195983887,high,0,0
+local minority,ind,ind_Latn,minoritas lokal,local minority,1.0,0.8640035390853882,high,0,0
+local majority,ind,ind_Latn,mayoritas lokal,local majority,1.0,0.8541766405105591,high,0,0
+local assimilation,ind,ind_Latn,asimilasi lokal,local assimilation,1.0,0.8596349954605103,high,0,0
+local integration,ind,ind_Latn,integrasi lokal,local integration,1.0,0.8119115829467773,high,0,0
+local segregation,ind,ind_Latn,segregasi lokal,local segregation,1.0,0.7965172529220581,medium,0,0
+local pluralism,ind,ind_Latn,pluralisme lokal,local pluralism,1.0,0.8754144906997681,high,0,0
+local multiculturalism,ind,ind_Latn,multikulturalisme lokal,local multiculturalism,1.0,0.8618576526641846,high,0,0
+local indigenous,ind,ind_Latn,penduduk asli lokal,indigenous people,0.6060606060606061,0.7915909290313721,medium,0,0
+local native,ind,ind_Latn,asli lokal,local native,1.0,0.7792580127716064,medium,0,0
+local foreign,ind,ind_Latn,lokal asing,foreign local,0.5384615384615384,0.7882139682769775,medium,1,0
+local local,ind,ind_Latn,lokal lokal,local local,1.0,0.7246816158294678,medium,0,0
+local global,ind,ind_Latn,lokal global,local global,1.0,0.8340491056442261,high,0,0
+local community,ind,ind_Latn,komunitas lokal,local community,1.0,0.8562158346176147,high,0,0
+local belonging,ind,ind_Latn,kepunyaan lokal,locally owned,0.5,0.833126962184906,high,1,0
+local language,ind,ind_Latn,bahasa lokal,local language,1.0,0.85127854347229,high,0,0
+local dialect,ind,ind_Latn,dialek lokal,local dialect,1.0,0.863900899887085,high,0,0
+local heritage,ind,ind_Latn,warisan lokal,local heritage,1.0,0.751980721950531,medium,0,0
+local xenophobia,ind,ind_Latn,xenophobia lokal,Local xenophobia,1.0,0.878151535987854,high,0,0
+local stereotype,ind,ind_Latn,stereotip lokal,Local stereotypes,0.9696969696969697,0.8697761297225952,high,0,0
+local prejudice,ind,ind_Latn,prasangka lokal,local prejudice,1.0,0.8426733016967773,high,0,0
+local solidarity,ind,ind_Latn,solidaritas lokal,Local solidarity,1.0,0.8521319031715393,high,0,0
+local citizenship,ind,ind_Latn,Kewarganegaraan lokal,Local citizenship,1.0,0.8776386976242065,high,0,0
+local acculturation,ind,ind_Latn,akulturasi lokal,local acculturation,1.0,0.8082428574562073,high,0,0
+local hybridity,ind,ind_Latn,hibriditas lokal,local hybridity,1.0,0.8601404428482056,high,0,0
+local homeland,ind,ind_Latn,tanah air lokal,local homeland,1.0,0.8063462972640991,high,0,0
+local exile,ind,ind_Latn,pengasingan lokal,local exile,1.0,0.8027994632720947,high,0,0
+local settler,ind,ind_Latn,pemukiman lokal,local settlement,0.8275862068965517,0.74354088306427,medium,0,0
+local cosmopolitan,ind,ind_Latn,Kosmopolitan lokal,Local cosmopolitan,1.0,0.649700403213501,medium,0,0
+local transnational,ind,ind_Latn,transnasional lokal,local transnational,1.0,0.5820848345756531,low,1,0
+local identity politics,ind,ind_Latn,Politik identitas lokal,Local identity politics,1.0,0.8652205467224121,high,0,0
+local mother tongue,ind,ind_Latn,bahasa ibu lokal,local mother tongue,1.0,0.8400216102600098,high,0,0
+local second language,ind,ind_Latn,bahasa kedua lokal,second local language,0.7142857142857143,0.8452966809272766,high,0,0
+global identity,ind,ind_Latn,identitas global,global identity,1.0,0.8633626103401184,high,0,0
+global ethnicity,ind,ind_Latn,etnisitas global,global ethnicity,1.0,0.7257418036460876,medium,0,0
+global diaspora,ind,ind_Latn,diaspora global,The global diaspora,0.8823529411764706,0.6476987600326538,medium,0,0
+global migration,ind,ind_Latn,migrasi global,global migration,1.0,0.8785344958305359,high,0,0
+global immigrant,ind,ind_Latn,imigran global,global immigrants,0.9696969696969697,0.8645180463790894,high,0,0
+global refugee,ind,ind_Latn,pengungsi global,global refugees,0.9655172413793104,0.5637742280960083,low,1,0
+global minority,ind,ind_Latn,minoritas global,a global minority,0.9375,0.6567187309265137,medium,0,0
+global majority,ind,ind_Latn,mayoritas global,the global majority,0.8823529411764706,0.8495593070983887,high,0,0
+global assimilation,ind,ind_Latn,asimilasi global,global assimilation,1.0,0.8422227501869202,high,0,0
+global integration,ind,ind_Latn,integrasi global,global integration,1.0,0.6247960925102234,medium,0,0
+global segregation,ind,ind_Latn,segregasi global,global segregation,1.0,0.588111937046051,low,1,0
+global pluralism,ind,ind_Latn,pluralisme global,global pluralism,1.0,0.8784366846084595,high,0,0
+global multiculturalism,ind,ind_Latn,multikulturalisme global,global multiculturalism,1.0,0.8682550191879272,high,0,0
+global indigenous,ind,ind_Latn,penduduk asli global,indigenous peoples of the world,0.4166666666666667,0.8197486400604248,high,1,0
+global native,ind,ind_Latn,asli global,global origin,0.6153846153846154,0.7591149806976318,medium,0,0
+global foreign,ind,ind_Latn,luar negeri global,global overseas,0.6896551724137931,0.6826387643814087,medium,0,0
+global local,ind,ind_Latn,global lokal,local global,0.5,0.6577243804931641,medium,1,0
+global global,ind,ind_Latn,global global,the global,0.6086956521739131,0.4600582420825958,low,1,0
+global community,ind,ind_Latn,komunitas global,global community,1.0,0.8575233221054077,high,0,0
+global belonging,ind,ind_Latn,kepemilikan global,global ownership,0.5625,0.784508228302002,medium,0,0
+global language,ind,ind_Latn,bahasa global,global languages,0.967741935483871,0.8391903638839722,high,0,0
+global dialect,ind,ind_Latn,dialek global,global dialects,0.9655172413793104,0.8492612242698669,high,0,0
+global heritage,ind,ind_Latn,warisan global,global heritage,1.0,0.4162251651287079,low,1,0
+global xenophobia,ind,ind_Latn,xenophobia global,Global xenophobia,1.0,0.42863088846206665,low,1,0
+greeting,ind,ind_Latn,salam,"Hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey, hey",0.024096385542168676,0.5761482119560242,low,1,0
+handshake,ind,ind_Latn,berjabat tangan,shake hands,0.5,0.8350210189819336,high,1,0
+bow,ind,ind_Latn,menunduk,Bowing down,0.42857142857142855,0.47189632058143616,low,1,0
+hug,ind,ind_Latn,pelukan,A hug,0.75,0.8462266325950623,high,0,0
+kiss,ind,ind_Latn,ciuman,A kiss,0.8,0.8231229782104492,high,0,0
+gift giving,ind,ind_Latn,memberi hadiah,Giving gifts,0.5217391304347826,0.8538506031036377,high,1,0
+hosting,ind,ind_Latn,hosting,hosting,1.0,0.5083507299423218,low,1,0
+shared meal,ind,ind_Latn,makan bersama,Eat together,0.17391304347826086,0.8374128341674805,high,1,0
+tea time,ind,ind_Latn,waktu teh,tea time,1.0,0.8570020198822021,high,0,0
+funeral,ind,ind_Latn,pemakaman,The funeral,0.7777777777777778,0.836658775806427,high,1,1
+mourning,ind,ind_Latn,berkabung,mourning,1.0,0.6787721514701843,medium,0,0
+burial,ind,ind_Latn,pemakaman,The funeral,0.47058823529411764,0.8683153986930847,high,1,1
+cremation,ind,ind_Latn,pembakaran,burning,0.375,0.8561451435089111,high,1,0
+birth,ind,ind_Latn,kelahiran,birth,1.0,0.8585861921310425,high,0,0
+naming ceremony,ind,ind_Latn,Upacara penamaan,The naming ceremony,0.8823529411764706,0.8514887094497681,high,0,0
+coming of age,ind,ind_Latn,Mencapai usia dewasa,Coming of age,1.0,0.8461951017379761,high,0,0
+rite of passage,ind,ind_Latn,Upacara Perjalanan,The Traveling Ceremony,0.21621621621621623,0.7004592418670654,medium,1,0
+ceremony,ind,ind_Latn,Upacara,The ceremony,0.8,0.8355736136436462,high,0,0
+weekday,ind,ind_Latn,hari kerja,working day,0.5555555555555556,0.8433314561843872,high,1,1
+weekend,ind,ind_Latn,akhir pekan,The weekend.,0.7368421052631579,0.8550015091896057,high,0,0
+workday,ind,ind_Latn,hari kerja,working day,0.7777777777777778,0.8389551639556885,high,1,1
+rest day,ind,ind_Latn,hari istirahat,day of rest,0.42105263157894735,0.846330463886261,high,1,0
+queue,ind,ind_Latn,antrian,the queue,0.7142857142857143,0.31942009925842285,low,1,0
+punctuality,ind,ind_Latn,ketetapan waktu,the timetable,0.25,0.8479549884796143,high,1,0
+lateness,ind,ind_Latn,keterlambatan,Delay,0.3076923076923077,0.8272013068199158,high,1,0
+privacy,ind,ind_Latn,privasi,privacy,1.0,0.86823570728302,high,0,0
+public space,ind,ind_Latn,ruang publik,public space,1.0,0.8614226579666138,high,0,0
+neighbor,ind,ind_Latn,tetangga,Neighbors,0.9411764705882353,0.8129892349243164,high,0,0
+household visit,ind,ind_Latn,kunjungan rumah tangga,household visits,0.967741935483871,0.8450907468795776,high,0,0
+guest,ind,ind_Latn,tamu,Guests,0.9090909090909091,0.750669002532959,medium,0,0
+host,ind,ind_Latn,tuan rumah,The host,0.6666666666666666,0.8443756103515625,high,0,0
+table manners,ind,ind_Latn,tata cara makan,eating habits,0.3076923076923077,0.839128315448761,high,1,0
+home cooking,ind,ind_Latn,memasak di rumah,cooking at home,0.5185185185185185,0.8691105246543884,high,1,0
+festival meal,ind,ind_Latn,makan malam perayaan,Celebration dinner,0.3225806451612903,0.848577082157135,high,1,0
+fast day,ind,ind_Latn,hari puasa,day of fasting,0.36363636363636365,0.8505993485450745,high,1,0
+memorial day,ind,ind_Latn,hari peringatan,The Day of Remembrance,0.29411764705882354,0.8132793307304382,high,1,0
+ancestor day,ind,ind_Latn,hari nenek moyang,the day of the ancestors,0.4444444444444444,0.8547623753547668,high,1,0
+seasonal ritual,ind,ind_Latn,ritual musiman,seasonal ritual,1.0,0.8609670400619507,high,0,0
+daily greeting,ind,ind_Latn,salam sehari-hari,Greetings every day.,0.47058823529411764,0.8439494371414185,high,1,0
+daily handshake,ind,ind_Latn,berjabat tangan setiap hari,Shake hands every day,0.4444444444444444,0.8212250471115112,high,1,0
+daily bow,ind,ind_Latn,bendungan harian,daily dams,0.631578947368421,0.40393394231796265,low,1,0
+daily hug,ind,ind_Latn,pelukan harian,a daily hug,0.9,0.8415489196777344,high,0,0
+daily kiss,ind,ind_Latn,ciuman harian,a daily kiss,0.9090909090909091,0.8463018536567688,high,0,0
+daily gift giving,ind,ind_Latn,memberi hadiah setiap hari,Giving gifts every day,0.3076923076923077,0.8313940763473511,high,1,0
+daily hosting,ind,ind_Latn,hosting harian,Daily hosting,1.0,0.7531280517578125,medium,0,0
+daily hospitality,ind,ind_Latn,perhotelan sehari-hari,daily hospitality,1.0,0.7431861162185669,medium,0,0
+daily shared meal,ind,ind_Latn,makan bersama setiap hari,Eat together every day,0.15384615384615385,0.8441184759140015,high,1,0
+daily banquet,ind,ind_Latn,perjamuan harian,a daily feast,0.6153846153846154,0.7842142581939697,medium,0,0
+daily tea time,ind,ind_Latn,waktu minum teh sehari-hari,time to drink tea every day,0.3902439024390244,0.8497968912124634,high,1,0
+daily funeral,ind,ind_Latn,pemakaman harian,daily funeral,1.0,0.81806480884552,high,1,1
+daily mourning,ind,ind_Latn,berkabung setiap hari,mourning every day,0.5,0.8317651748657227,high,1,0
+daily burial,ind,ind_Latn,pemakaman harian,daily funeral,0.8,0.8178746700286865,high,1,1
+daily cremation,ind,ind_Latn,pembakaran harian,daily burning,0.6428571428571429,0.8371812701225281,high,0,0
+daily birth,ind,ind_Latn,kelahiran harian,daily births,0.9565217391304348,0.7755418419837952,medium,0,0
+daily naming ceremony,ind,ind_Latn,Upacara penamaan setiap hari,The naming ceremony every day,0.64,0.8327288031578064,high,0,0
+daily coming of age,ind,ind_Latn,dewasa setiap hari,Growing up every day,0.358974358974359,0.6936642527580261,medium,1,0
+daily rite of passage,ind,ind_Latn,Upacara harian lewat,The daily ceremony passes,0.6521739130434783,0.5080676078796387,low,1,0
+daily ceremony,ind,ind_Latn,Upacara harian,The daily ceremony,0.875,0.82633376121521,high,0,0
+daily weekday,ind,ind_Latn,hari kerja harian,day of work,0.25,0.6140936017036438,medium,1,1
+daily weekend,ind,ind_Latn,setiap akhir pekan,every weekend.,0.6666666666666666,0.8016462326049805,high,0,0
+daily workday,ind,ind_Latn,hari kerja harian,day of work,0.6666666666666666,0.7699765563011169,medium,1,1
+daily rest day,ind,ind_Latn,hari istirahat harian,day of rest,0.64,0.8291824460029602,high,0,0
+daily queue,ind,ind_Latn,antrian harian,daily queues,0.9565217391304348,0.8454641103744507,high,0,0
+daily punctuality,ind,ind_Latn,ketetapan harian,day-to-day rules,0.36363636363636365,0.7829006314277649,medium,1,0
+daily lateness,ind,ind_Latn,keterlambatan harian,daily delays,0.6923076923076923,0.8404417037963867,high,0,0
+daily privacy,ind,ind_Latn,privasi sehari-hari,everyday privacy,0.7586206896551724,0.8505096435546875,high,0,0
+daily public space,ind,ind_Latn,ruang publik sehari-hari,day-to-day public spaces,0.7619047619047619,0.8026467561721802,high,0,0
+daily neighbor,ind,ind_Latn,tetangga harian,daily neighbors,0.9655172413793104,0.8370161652565002,high,0,0
+daily household visit,ind,ind_Latn,kunjungan rumah tangga harian,daily household visits,0.9767441860465116,0.848562479019165,high,0,0
+daily guest,ind,ind_Latn,tamu harian,Daily guests,0.9565217391304348,0.8468419313430786,high,0,0
+daily host,ind,ind_Latn,rumah tangga harian,daily household,0.72,0.5003355145454407,low,1,0
+daily table manners,ind,ind_Latn,tata cara meja sehari-hari,the daily routine of the table,0.4489795918367347,0.8241665363311768,high,1,0
+daily home cooking,ind,ind_Latn,memasak sehari-hari di rumah,cooking every day at home,0.32558139534883723,0.8288023471832275,high,1,0
+daily festival meal,ind,ind_Latn,makan malam perayaan harian,a daily celebration dinner,0.4888888888888889,0.8114593029022217,high,1,0
+daily fast day,ind,ind_Latn,hari puasa harian,daily fasting day,0.9032258064516129,0.8095483779907227,high,0,0
+daily memorial day,ind,ind_Latn,Hari peringatan harian,Day of Remembrance,0.5,0.775300145149231,medium,1,0
+daily ancestor day,ind,ind_Latn,Hari leluhur harian,Father's Day every day,0.35,0.6686832904815674,medium,1,0
+daily seasonal ritual,ind,ind_Latn,ritual musiman harian,daily seasonal ritual,1.0,0.8462643027305603,high,0,0
+household greeting,ind,ind_Latn,salam rumah tangga,Greetings from home,0.43243243243243246,0.8351141810417175,high,1,0
+household handshake,ind,ind_Latn,genggaman tangan rumah tangga,The handshake of the household,0.4897959183673469,0.6495477557182312,medium,1,0
+household bow,ind,ind_Latn,busur rumah tangga,household bow,1.0,0.6981619596481323,medium,0,0
+household hug,ind,ind_Latn,pelukan rumah tangga,a household hug,0.9285714285714286,0.8163459300994873,high,0,0
+household kiss,ind,ind_Latn,ciuman rumah tangga,A household kiss,0.9333333333333333,0.8147022128105164,high,0,0
+household gift giving,ind,ind_Latn,pemberian hadiah rumah tangga,giving gifts to households,0.3829787234042553,0.812029242515564,high,1,0
+household hosting,ind,ind_Latn,rumah tangga,household,0.6923076923076923,0.5102896094322205,low,1,1
+household hospitality,ind,ind_Latn,keramahan rumah tangga,household hospitality,1.0,0.8569332361221313,high,0,0
+household shared meal,ind,ind_Latn,makan bersama keluarga,eating with family,0.15384615384615385,0.7710171937942505,medium,1,0
+household banquet,ind,ind_Latn,perjamuan rumah tangga,household banquets,0.9714285714285714,0.8015604019165039,high,0,0
+household tea time,ind,ind_Latn,waktu teh rumah tangga,household tea time,1.0,0.8297549486160278,high,0,0
+household funeral,ind,ind_Latn,pemakaman rumah tangga,household funerals,0.9714285714285714,0.8266257047653198,high,1,1
+household mourning,ind,ind_Latn,duka rumah tangga,household mourning,1.0,0.8471745252609253,high,0,0
+household burial,ind,ind_Latn,pemakaman rumah tangga,household funerals,0.8235294117647058,0.8383812308311462,high,1,1
+household cremation,ind,ind_Latn,pembakaran rumah tangga,burning of households,0.45,0.850007951259613,high,1,0
+household birth,ind,ind_Latn,kelahiran rumah tangga,household birth,1.0,0.7840130925178528,medium,0,0
+household naming ceremony,ind,ind_Latn,upacara penamaan rumah tangga,household naming ceremony,1.0,0.8099606037139893,high,0,0
+household coming of age,ind,ind_Latn,rumah tangga dewasa,adult households,0.46153846153846156,0.5483949780464172,low,1,0
+household rite of passage,ind,ind_Latn,Ritual perjalanan rumah tangga,Ritual of household travel,0.47058823529411764,0.7701976895332336,medium,1,0
+household ceremony,ind,ind_Latn,upacara rumah tangga,household ceremonies,0.8947368421052632,0.8000913858413696,high,0,0
+public,ind,ind_Latn,publik,public,1.0,0.7212963700294495,medium,0,0
+fast,ind,ind_Latn,cepat,Hurry up.,0.0,0.7875047326087952,medium,1,0
+grand,ind,ind_Latn,besar,It's big.,0.14285714285714285,0.6523409485816956,medium,1,0
+gift,ind,ind_Latn,Hadiah,The Gift,0.6666666666666666,0.831354022026062,high,0,0
+meal,ind,ind_Latn,makanan,food,0.0,0.8100555539131165,high,1,0
+custom,ind,ind_Latn,adat,customs,0.9230769230769231,0.8177234530448914,high,0,0

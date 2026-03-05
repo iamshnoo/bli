@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,deu,deu_Latn,Individualismus,Individualism,1.0,0.8654268980026245,high,0,0
+collectivism,deu,deu_Latn,Kollektivismus,Collectivism,1.0,0.8635091781616211,high,0,0
+hierarchy,deu,deu_Latn,Hierarchie,The hierarchy,0.8181818181818182,0.8464521169662476,high,0,0
+equality,deu,deu_Latn,Gleichheit,Equality,1.0,0.8452194333076477,high,0,0
+authority,deu,deu_Latn,Autorität,Authorities,0.8,0.8428896069526672,high,0,0
+autonomy,deu,deu_Latn,Autonomie,Self-government,0.08695652173913043,0.861253023147583,high,1,0
+obedience,deu,deu_Latn,Gehorsam,Obedience,1.0,0.8413637280464172,high,0,0
+duty,deu,deu_Latn,Dienstleistung,Provision of services,0.0,0.42162472009658813,low,1,0
+freedom,deu,deu_Latn,Freiheit,Freedom of movement,0.5384615384615384,0.8414857387542725,high,1,0
+honor,deu,deu_Latn,die Ehre,The honour,0.6666666666666666,0.8087495565414429,high,0,0
+shame,deu,deu_Latn,Scham,Shame on you,0.5882352941176471,0.8452848196029663,high,0,0
+virtue,deu,deu_Latn,Tugend,Virtue,1.0,0.7681867480278015,medium,0,0
+vice,deu,deu_Latn,Verfehlung,Misconduct,0.2857142857142857,0.6629171371459961,medium,1,0
+respect,deu,deu_Latn,Respekt,Respect,1.0,0.856163740158081,high,0,0
+modesty,deu,deu_Latn,Bescheidenheit,Modesty,1.0,0.8376522064208984,high,0,0
+purity,deu,deu_Latn,Reinheit,Purity,1.0,0.8514891862869263,high,0,0
+pollution,deu,deu_Latn,Umweltverschmutzung,Pollution of the environment,0.4864864864864865,0.8021606206893921,high,1,0
+face,deu,deu_Latn,Gesicht,Face,1.0,0.819791316986084,high,0,0
+reputation,deu,deu_Latn,Reputation,Reputation,1.0,0.7091666460037231,medium,0,0
+hospitality,deu,deu_Latn,Gastfreundschaft,Hospitality,1.0,0.8562208414077759,high,0,0
+charity,deu,deu_Latn,Wohltätigkeitsorganisation,Charity organisation,0.5185185185185185,0.8108202219009399,high,1,0
+cooperation,deu,deu_Latn,Zusammenarbeit,Cooperation,1.0,0.8134377002716064,high,0,0
+competition,deu,deu_Latn,Wettbewerb,Competition,1.0,0.8120284080505371,high,0,0
+fairness,deu,deu_Latn,Gerechtigkeit,Justice,0.26666666666666666,0.8470656275749207,high,1,1
+justice,deu,deu_Latn,Gerechtigkeit,Justice,1.0,0.8295311331748962,high,1,1
+taboo,deu,deu_Latn,Tabus,Taboo,1.0,0.8387265205383301,high,0,0
+tradition,deu,deu_Latn,Tradition,Tradition,1.0,0.7088239192962646,medium,0,0
+modernity,deu,deu_Latn,Modernität,Modernity,1.0,0.8498117923736572,high,0,0
+sacred,deu,deu_Latn,Heilig,It 's holy .,0.1111111111111111,0.816034734249115,high,1,0
+secular,deu,deu_Latn,weltliche,worldly,0.14285714285714285,0.4428543150424957,low,1,0
+conformity,deu,deu_Latn,Konformität,Conformity,1.0,0.829475998878479,high,0,0
+dissent,deu,deu_Latn,Meinungsverschiedenheit,Difference of opinion,0.2857142857142857,0.8221473693847656,high,1,0
+restraint,deu,deu_Latn,Zurückhaltung,Restraint,1.0,0.838158369064331,high,0,0
+indulgence,deu,deu_Latn,Nachlässigkeit,Neglect and neglect,0.3448275862068966,0.8099517822265625,high,1,0
+solidarity,deu,deu_Latn,Solidarität,Solidarity,1.0,0.8719117641448975,high,0,0
+merit,deu,deu_Latn,Verdienst,Earned,0.36363636363636365,0.7792789936065674,medium,1,0
+trust,deu,deu_Latn,Vertrauen,Confidence,0.0,0.8204743266105652,high,1,0
+loyalty,deu,deu_Latn,Loyalität,Loyalty,1.0,0.8596691489219666,high,0,0
+integrity,deu,deu_Latn,Integrität,Integrity,1.0,0.8348261117935181,high,0,0
+discretion,deu,deu_Latn,Diskretion,Discretion,1.0,0.7651628255844116,medium,0,0
+humility,deu,deu_Latn,Demütigkeit,Humility,1.0,0.8071116209030151,high,0,0
+discipline,deu,deu_Latn,Disziplin,Discipline,1.0,0.8473284244537354,high,0,0
+self control,deu,deu_Latn,Selbstkontrolle,Self-control,0.9166666666666666,0.8495345115661621,high,0,0
+deference,deu,deu_Latn,Ablehnung,Rejection,0.3333333333333333,0.5615440011024475,low,1,0
+civic individualism,deu,deu_Latn,bürgerlicher Individualismus,Citizen individualism,0.85,0.8488624095916748,high,0,0
+civic collectivism,deu,deu_Latn,Bürgerkollektivismus,Citizen collectivism,0.8421052631578947,0.841996431350708,high,0,0
+civic hierarchy,deu,deu_Latn,bürgerliche Hierarchie,the hierarchy of the bourgeoisie,0.425531914893617,0.8411761522293091,high,1,0
+civic equality,deu,deu_Latn,Bürgerliche Gleichheit,Citizens' equality,0.75,0.8559459447860718,high,0,0
+civic authority,deu,deu_Latn,bürgerliche Autorität,civil authority,0.9333333333333333,0.830957293510437,high,0,0
+civic autonomy,deu,deu_Latn,bürgerliche Autonomie,Civil autonomy,0.9285714285714286,0.844693660736084,high,0,0
+civic obedience,deu,deu_Latn,Bürgerliches Gehorsam,Citizen obedience,0.8125,0.8530020713806152,high,0,0
+civic duty,deu,deu_Latn,bürgerliche Pflicht,Civil duty,0.9,0.8407657146453857,high,0,0
+civic freedom,deu,deu_Latn,Bürgerliche Freiheit,Freedom of the press,0.42424242424242425,0.8704403042793274,high,1,0
+civic honor,deu,deu_Latn,Bürgerliche Ehre,Citizen honour,0.72,0.8362805247306824,high,0,0
+civic shame,deu,deu_Latn,Bürgerlicher Scham,Civil disgrace,0.48,0.8207167387008667,high,1,0
+civic virtue,deu,deu_Latn,bürgerliche Tugend,civic virtue,1.0,0.835120677947998,high,0,0
+civic vice,deu,deu_Latn,bürgerliche Abweichungen,civil disturbances,0.5714285714285714,0.47811615467071533,low,1,0
+civic respect,deu,deu_Latn,Bürgerlicher Respekt,Respect for citizenship,0.3888888888888889,0.8667768239974976,high,1,0
+civic modesty,deu,deu_Latn,Bürgerliche Bescheidenheit,Civil modesty,0.9230769230769231,0.8397495746612549,high,0,0
+civic purity,deu,deu_Latn,bürgerliche Reinheit,Civil purity,0.9166666666666666,0.8362516760826111,high,0,0
+civic pollution,deu,deu_Latn,Zivilverschmutzung,Civil pollution,0.9333333333333333,0.8210183382034302,high,0,0
+civic face,deu,deu_Latn,bürgerliches Gesicht,a civilian face,0.72,0.8128557801246643,high,0,0
+civic reputation,deu,deu_Latn,bürgerliche Reputation,civil reputation,0.9375,0.8345545530319214,high,0,0
+civic hospitality,deu,deu_Latn,Bürgerliche Gastfreundschaft,Citizen hospitality,0.8333333333333334,0.8524080514907837,high,0,0
+civic charity,deu,deu_Latn,bürgerliche Wohltätigkeitsorganisation,civil service charity organisation,0.5531914893617021,0.8173917531967163,high,0,0
+civic cooperation,deu,deu_Latn,bürgerliche Zusammenarbeit,Civil cooperation,0.9411764705882353,0.8334972858428955,high,0,0
+civic competition,deu,deu_Latn,Bürgerwettbewerb,Citizens' competition,0.7894736842105263,0.8545311689376831,high,0,0
+civic fairness,deu,deu_Latn,Bürgerliche Gerechtigkeit,Civil justice,0.4444444444444444,0.8578816652297974,high,1,1
+civic justice,deu,deu_Latn,bürgerliche Gerechtigkeit,Civil justice,0.9230769230769231,0.850603461265564,high,1,1
+civic taboo,deu,deu_Latn,bürgerliches Tabu,the taboo of the bourgeoisie,0.3076923076923077,0.8346121311187744,high,1,0
+civic tradition,deu,deu_Latn,bürgerliche Tradition,the bourgeois tradition,0.5789473684210527,0.856840193271637,high,0,0
+civic modernity,deu,deu_Latn,bürgerliche Modernität,Civic modernity,1.0,0.8485298156738281,high,0,0
+civic sacred,deu,deu_Latn,bürgerliche Heiligkeit,civil sanctity,0.6153846153846154,0.5938084125518799,low,1,0
+civic secular,deu,deu_Latn,Bürgerliche Säkularität,Citizen secularism,0.7096774193548387,0.7904474139213562,medium,0,0
+civic conformity,deu,deu_Latn,Bürgerliche Konformität,Citizenship compliance,0.3684210526315789,0.8513631820678711,high,1,0
+civic dissent,deu,deu_Latn,Bürgerliche Abweichung,Citizens' differences,0.47058823529411764,0.7739885449409485,medium,1,0
+civic restraint,deu,deu_Latn,Bürgerliche Zurückhaltung,Civic restraint,1.0,0.8420316576957703,high,0,0
+civic indulgence,deu,deu_Latn,bürgerliche Genugtuung,Citizens' satisfaction,0.3157894736842105,0.7813289165496826,medium,1,0
+civic solidarity,deu,deu_Latn,bürgerliche Solidarität,Citizens' solidarity,0.7777777777777778,0.8521447777748108,high,0,0
+civic merit,deu,deu_Latn,bürgerliche Verdienste,civil service merits,0.7096774193548387,0.8202939629554749,high,0,0
+civic trust,deu,deu_Latn,Bürgervertrauen,Citizens' trust,0.6923076923076923,0.849967896938324,high,0,0
+civic loyalty,deu,deu_Latn,Bürgerliche Loyalität,Citizen loyalty,0.7857142857142857,0.8616288900375366,high,0,0
+civic integrity,deu,deu_Latn,Bürgerliche Integrität,Citizen's integrity,0.7647058823529411,0.858254611492157,high,0,0
+civic discretion,deu,deu_Latn,Bürgerliches Ermessen,Civil discretion,0.9375,0.8260132074356079,high,0,0
+civic humility,deu,deu_Latn,bürgerliche Demut,civic humility,1.0,0.8345644474029541,high,0,0
+civic discipline,deu,deu_Latn,bürgerliche Disziplin,Civil Discipline,0.9375,0.8588820695877075,high,0,0
+civic self control,deu,deu_Latn,Bürgerliche Selbstkontrolle,Citizen self-control,0.7894736842105263,0.8489750623703003,high,0,0
+civic deference,deu,deu_Latn,Bürgerfreundlichkeit,Citizens' friendliness,0.32432432432432434,0.7608155608177185,medium,1,0
+moral individualism,deu,deu_Latn,moralischer Individualismus,Moral individualism,1.0,0.8543276190757751,high,0,0
+moral collectivism,deu,deu_Latn,moralischer Kollektivismus,Moral collectivism,1.0,0.8452557921409607,high,0,0
+moral hierarchy,deu,deu_Latn,moralische Hierarchie,moral hierarchy,1.0,0.8541834354400635,high,0,0
+moral equality,deu,deu_Latn,moralische Gleichheit,moral equality,1.0,0.8539737462997437,high,0,0
+moral authority,deu,deu_Latn,moralische Autorität,moral authority,1.0,0.8378524780273438,high,0,0
+moral autonomy,deu,deu_Latn,moralische Autonomie,moral autonomy,1.0,0.8435506820678711,high,0,0
+moral obedience,deu,deu_Latn,moralischen Gehorsam,moral obedience,1.0,0.7817637920379639,medium,0,0
+moral duty,deu,deu_Latn,moralische Pflicht,a moral obligation,0.5,0.8491010665893555,high,1,0
+moral freedom,deu,deu_Latn,moralische Freiheit,Moral freedom,1.0,0.8639259934425354,high,0,0
+moral honor,deu,deu_Latn,moralische Ehre,moral honour,0.9565217391304348,0.8301264047622681,high,0,0
+moral shame,deu,deu_Latn,moralische Scham,moral shame,1.0,0.8421800136566162,high,0,0
+moral virtue,deu,deu_Latn,moralische Tugend,Moral virtue,1.0,0.82790607213974,high,0,0
+family,deu,deu_Latn,Familie,Family,1.0,0.8514724969863892,high,0,0
+kinship,deu,deu_Latn,Verwandtschaft,Relation,0.26666666666666666,0.8128570914268494,high,1,0
+mother,deu,deu_Latn,Mutter,Mother,1.0,0.8011882305145264,high,0,0
+father,deu,deu_Latn,Vater,Father,1.0,0.8314181566238403,high,0,0
+parent,deu,deu_Latn,Elternteil,Parent,1.0,0.7710729837417603,medium,0,0
+child,deu,deu_Latn,Kind,Child,1.0,0.6921387910842896,medium,0,0
+daughter,deu,deu_Latn,Tochter,Daughter,1.0,0.843045711517334,high,0,0
+son,deu,deu_Latn,der Sohn,the son,0.6,0.8374732732772827,high,0,0
+uncle,deu,deu_Latn,Onkel,Uncle .,0.8333333333333334,0.846972644329071,high,0,0
+aunt,deu,deu_Latn,Tante,Aunt .,0.8,0.8346863389015198,high,0,0
+cousin,deu,deu_Latn,Cousin,Cousin,1.0,0.8214573264122009,high,0,0
+grandmother,deu,deu_Latn,Großmutter,Grandmother,1.0,0.832282304763794,high,1,1
+grandfather,deu,deu_Latn,Großvater,Grandfather,1.0,0.827144980430603,high,1,1
+nephew,deu,deu_Latn,Neffe,Nephew,1.0,0.8439639806747437,high,0,0
+niece,deu,deu_Latn,Nichte,Nephew,0.5454545454545454,0.8603603839874268,high,1,0
+ancestor,deu,deu_Latn,Vorfahren,Ancestors,0.9411764705882353,0.8135138750076294,high,0,0
+lineage,deu,deu_Latn,Abstammung,offspring,0.375,0.8324698805809021,high,1,0
+clan,deu,deu_Latn,Klan,Clan,1.0,0.8260354995727539,high,0,0
+household,deu,deu_Latn,Haushalt,Budget,0.26666666666666666,0.8223859071731567,high,1,0
+joint family,deu,deu_Latn,Gemeinsame Familie,Joint family,1.0,0.8195701837539673,high,0,0
+nuclear family,deu,deu_Latn,Kernfamilie,Nuclear family,1.0,0.85167396068573,high,0,0
+marriage,deu,deu_Latn,Eheschließung,Marriage,1.0,0.8303076028823853,high,0,0
+wedding,deu,deu_Latn,Hochzeit,Marriage,0.13333333333333333,0.8339939713478088,high,1,0
+bride,deu,deu_Latn,Bräute,Brides and grooms,0.45454545454545453,0.7839568853378296,medium,1,0
+groom,deu,deu_Latn,Bräutigam,The Bridegroom,0.5263157894736842,0.7851033210754395,medium,1,0
+engagement,deu,deu_Latn,Engagement,Commitment,0.4,0.6517137289047241,medium,1,0
+dowry,deu,deu_Latn,Geburtsgabe,Payment of childbirth,0.15384615384615385,0.683938205242157,medium,1,0
+bridewealth,deu,deu_Latn,Bridewealth,Bridewealth,1.0,0.5602174997329712,low,1,0
+inheritance,deu,deu_Latn,Erbschaft,Inheritance,1.0,0.8193551301956177,high,0,0
+widow,deu,deu_Latn,Witwe,Widow,1.0,0.8402411341667175,high,0,0
+widower,deu,deu_Latn,Witwer,Widower,1.0,0.8227736949920654,high,0,0
+courtship,deu,deu_Latn,Verheiratung,Marriage,0.23529411764705882,0.8470037579536438,high,1,0
+matchmaker,deu,deu_Latn,Verheiratungsmacher,Marriage maker,0.5833333333333334,0.5382430553436279,low,1,0
+surname,deu,deu_Latn,Nachname,Family name,0.4444444444444444,0.8314783573150635,high,1,0
+patronymic,deu,deu_Latn,Schriftzeichen,Signature,0.3157894736842105,0.558273196220398,low,1,0
+matronymic,deu,deu_Latn,Matronymisch,Matronymic,1.0,0.5576583743095398,low,1,0
+firstborn,deu,deu_Latn,Erstgeborene,Firstborn,1.0,0.8408704996109009,high,0,0
+heir,deu,deu_Latn,der Erbe,the inheritance,0.42105263157894735,0.732728123664856,medium,1,0
+filial piety,deu,deu_Latn,Kindesfrömmigkeit,Children's piety,0.5714285714285714,0.733151912689209,medium,0,0
+caregiving,deu,deu_Latn,Betreuung,Provision of care,0.2962962962962963,0.8319785594940186,high,1,0
+motherhood,deu,deu_Latn,Mutterschaft,Maternity,0.42105263157894735,0.8439400792121887,high,1,0
+fatherhood,deu,deu_Latn,Vaterschaft,Paternity,0.42105263157894735,0.8482990264892578,high,1,0
+in laws,deu,deu_Latn,in den Gesetzen,in the laws,0.7777777777777778,0.6798251867294312,medium,0,0
+brother in law,deu,deu_Latn,Schwiegerbruder,Brother-in-law,0.8571428571428571,0.8359482884407043,high,0,0
+sister in law,deu,deu_Latn,Schwiegermutter,Mother-in-law,0.6153846153846154,0.78802889585495,medium,0,0
+ancestral home,deu,deu_Latn,Urheberhaus,House of authors,0.2,0.6431865096092224,medium,1,0
+household labor,deu,deu_Latn,Hausarbeit,Household work,0.8275862068965517,0.8338808417320251,high,0,0
+extended family,deu,deu_Latn,Erweiterte Familie,Extended Family,1.0,0.8336998820304871,high,0,0
+extended kinship,deu,deu_Latn,Erweiterte Verwandtschaft,Extended kinship,1.0,0.8070428371429443,high,0,0
+extended mother,deu,deu_Latn,Erweiterte Mutter,Extended mother,1.0,0.6960186958312988,medium,0,0
+extended father,deu,deu_Latn,Großvater,Grandfather,0.6153846153846154,0.7407808303833008,medium,1,1
+extended parent,deu,deu_Latn,Erweiterter Elternteil,Extended parent,1.0,0.8060739040374756,high,0,0
+extended child,deu,deu_Latn,Verlängertes Kind,Extended child,1.0,0.6959335803985596,medium,0,0
+extended daughter,deu,deu_Latn,Erweiterte Tochter,Extended daughter,1.0,0.8081800937652588,high,0,0
+extended son,deu,deu_Latn,Erweiterter Sohn,Elderly son,0.6086956521739131,0.8353139758110046,high,0,0
+extended uncle,deu,deu_Latn,Erweiterter Onkel,Extended Uncle,1.0,0.8295454382896423,high,0,0
+extended aunt,deu,deu_Latn,Erweiterte Tante,Extended Aunt,1.0,0.7978817820549011,medium,0,0
+extended cousin,deu,deu_Latn,Erweiterter Cousin,Extended cousin,1.0,0.8473966717720032,high,0,0
+extended grandmother,deu,deu_Latn,Großmutter,Grandmother,0.7096774193548387,0.7288385033607483,medium,1,1
+extended grandfather,deu,deu_Latn,Großvater,Grandfather,0.7096774193548387,0.7618366479873657,medium,1,1
+extended nephew,deu,deu_Latn,Erweiterter Neffe,Extended nephew,1.0,0.8525417447090149,high,0,0
+extended niece,deu,deu_Latn,Erweiterte Nichte,Extended niece,1.0,0.811020016670227,high,0,0
+extended ancestor,deu,deu_Latn,Erweiterter Vorfahren,Extended Ancestors,0.9714285714285714,0.7710018754005432,medium,0,0
+extended lineage,deu,deu_Latn,Erweiterte Abstammung,Extended lineage,1.0,0.7876244783401489,medium,0,0
+extended clan,deu,deu_Latn,Erweiterter Clan,Extended Clan,1.0,0.8177897930145264,high,0,0
+extended household,deu,deu_Latn,Erweiterter Haushalt,The enlarged budget,0.43243243243243246,0.8210787177085876,high,1,0
+extended joint family,deu,deu_Latn,Erweiterte gemeinsame Familie,Enlarged common family,0.6511627906976745,0.817744255065918,high,0,0
+extended nuclear family,deu,deu_Latn,Erweiterte Kernfamilie,Extended nuclear family,1.0,0.8368107676506042,high,0,0
+extended marriage,deu,deu_Latn,Verlängerte Ehe,Prolonged Marriage,0.6857142857142857,0.8101054430007935,high,0,0
+extended wedding,deu,deu_Latn,Verlängerte Hochzeit,Prolonged Wedding,0.6666666666666666,0.798012375831604,medium,0,0
+extended bride,deu,deu_Latn,Erweiterte Braut,Enlarged Bride,0.7142857142857143,0.7184264063835144,medium,0,0
+extended groom,deu,deu_Latn,Erweiterter Bräutigam,Extended Bridegroom,0.8484848484848485,0.41677072644233704,low,1,0
+extended engagement,deu,deu_Latn,Verlängertes Engagement,Extended commitment,0.6842105263157895,0.8161818981170654,high,0,0
+extended dowry,deu,deu_Latn,Erweiterte Mitgift,Extended co-gifting,0.6060606060606061,0.7785638570785522,medium,0,0
+extended bridewealth,deu,deu_Latn,Erweiterte Brautreichkeit,Increased marital status,0.4090909090909091,0.7834604978561401,medium,1,0
+extended inheritance,deu,deu_Latn,erweiterte Erbschaft,extended inheritance,1.0,0.78440260887146,medium,0,0
+extended widow,deu,deu_Latn,Verlängerte Witwe,Extended Widow,1.0,0.6919130086898804,medium,0,0
+extended widower,deu,deu_Latn,Erweiterte Witwe,Extended Widow,0.9333333333333333,0.5718053579330444,low,1,0
+extended courtship,deu,deu_Latn,Erweiterte Courtship,Enhanced courtship,0.7777777777777778,0.4661047160625458,low,1,0
+extended matchmaker,deu,deu_Latn,Erweiterte Verheiratung,Extended Marriage,0.7222222222222222,0.37351587414741516,low,1,0
+extended surname,deu,deu_Latn,Erweiterter Nachname,Extended surname,1.0,0.840094804763794,high,0,0
+extended patronymic,deu,deu_Latn,ausgedehntes Vornamen,Extended first name,0.5789473684210527,0.7587096691131592,medium,0,0
+extended matronymic,deu,deu_Latn,Erweiterte Matronymik,Extended matronymics,0.9743589743589743,0.8363653421401978,high,0,0
+extended firstborn,deu,deu_Latn,erweiterte Erstgeborene,Extended firstborn,1.0,0.7070784568786621,medium,0,0
+extended heir,deu,deu_Latn,Verlängerte Erbe,Extended inheritance,0.7272727272727273,0.5760871171951294,low,1,0
+extended filial piety,deu,deu_Latn,Erweiterte kindliche Frömmigkeit,Extended Childly Devotion,0.5217391304347826,0.7491049766540527,medium,1,0
+extended caregiving,deu,deu_Latn,Erweiterte Betreuung,Extended care,0.8125,0.8276070952415466,high,0,0
+extended motherhood,deu,deu_Latn,Verlängerte Mutterschaft,Extended motherhood,1.0,0.816261351108551,high,0,0
+extended fatherhood,deu,deu_Latn,Erweiterte Vaterschaft,Extended fatherhood,1.0,0.7994831800460815,medium,0,0
+extended in laws,deu,deu_Latn,in Gesetzen erweitert,Expanded in legislation,0.6153846153846154,0.6779431700706482,medium,0,0
+extended brother in law,deu,deu_Latn,Erweiterter Schwiegerbruder,Extended brother-in-law,0.9130434782608695,0.8108566999435425,high,0,0
+extended sister in law,deu,deu_Latn,Erweiterte Schwiegermutter,Extended mother-in-law,0.7727272727272727,0.7265791893005371,medium,0,0
+extended ancestral home,deu,deu_Latn,ausgedehntes Vorfahrenhaus,extended ancestral home,1.0,0.8328036665916443,high,0,0
+extended household labor,deu,deu_Latn,Erweiterte Haushaltsarbeit,Extended household work,0.8936170212765957,0.8200150728225708,high,0,0
+nuclear kinship,deu,deu_Latn,Kernverwandtschaft,Nuclear kinship,1.0,0.8307235240936279,high,0,0
+nuclear mother,deu,deu_Latn,Kernmutter,Nuclear mother,1.0,0.8159021139144897,high,1,1
+nuclear father,deu,deu_Latn,Kernvater,Nuclear father,1.0,0.8235487937927246,high,0,0
+nuclear parent,deu,deu_Latn,Kernmutter,Nuclear mother,0.6428571428571429,0.8089706897735596,high,1,1
+nuclear child,deu,deu_Latn,Kernkinder,Primary children,0.5517241379310345,0.8059065341949463,high,0,0
+nuclear daughter,deu,deu_Latn,nukleare Tochter,Nuclear subsidiary,0.6470588235294118,0.8447664976119995,high,0,0
+religion,deu,deu_Latn,Religion,Religious,0.8235294117647058,0.7974820733070374,medium,0,0
+ritual,deu,deu_Latn,Ritual,Ritual,1.0,0.7785704135894775,medium,0,0
+prayer,deu,deu_Latn,Gebet,Prayer,1.0,0.8531057238578796,high,0,0
+temple,deu,deu_Latn,Tempel,Temples,0.9230769230769231,0.857979953289032,high,0,0
+church,deu,deu_Latn,Kirche,Church,1.0,0.8393264412879944,high,0,0
+mosque,deu,deu_Latn,Moschee,Mosque,1.0,0.8575536012649536,high,0,0
+synagogue,deu,deu_Latn,Synagoge,Synagogue,1.0,0.8302013278007507,high,0,0
+shrine,deu,deu_Latn,Schrein,Shrine,1.0,0.8327177166938782,high,0,0
+pilgrimage,deu,deu_Latn,Pilgerfahrt,Pilgrimage,1.0,0.8487638235092163,high,0,0
+scripture,deu,deu_Latn,Schrift,Writing,0.375,0.7609433531761169,medium,1,0
+monk,deu,deu_Latn,Mönch,Monk,1.0,0.8543407320976257,high,0,0
+priest,deu,deu_Latn,Priester,Priests,0.9230769230769231,0.8210245966911316,high,0,0
+imam,deu,deu_Latn,Imam,The Imam,0.6666666666666666,0.8010189533233643,high,0,0
+nun,deu,deu_Latn,nunne,now,0.3333333333333333,0.5368158221244812,low,1,0
+saint,deu,deu_Latn,der Heilige,The Holy One,0.11764705882352941,0.7831252813339233,medium,1,0
+martyr,deu,deu_Latn,Märtyrer,Martyrs,0.9230769230769231,0.8331199288368225,high,0,0
+prophet,deu,deu_Latn,der Prophet,The Prophet,0.7777777777777778,0.8245462775230408,high,0,0
+zakat,deu,deu_Latn,Zakat,Zakat,1.0,0.8572487831115723,high,0,0
+tithe,deu,deu_Latn,der Zehntel,the tithe,0.7142857142857143,0.47183486819267273,low,1,0
+karma,deu,deu_Latn,Karma,It 's karma .,0.5555555555555556,0.855607271194458,high,0,0
+altar,deu,deu_Latn,Altar,Altar,1.0,0.804223358631134,high,0,0
+incense,deu,deu_Latn,Weihrauch,Fragrances and incense,0.4827586206896552,0.775521993637085,medium,1,0
+rosary,deu,deu_Latn,Rosenkranz,Rosary,1.0,0.8360525369644165,high,0,0
+blessing,deu,deu_Latn,der Segen,The Blessing,0.8,0.8019689321517944,high,0,0
+curse,deu,deu_Latn,Verflucht,Damn it .,0.0,0.6391149759292603,medium,1,0
+sabbath,deu,deu_Latn,Sabbat,The Sabbath,0.7777777777777778,0.827860951423645,high,0,0
+halal,deu,deu_Latn,Halal,Fresh fruit and vegetables,0.1935483870967742,0.7474721670150757,medium,1,0
+kosher,deu,deu_Latn,Kosher,Kosher,1.0,0.6993707418441772,medium,0,0
+fasting,deu,deu_Latn,Fasten,Fasting,1.0,0.836644172668457,high,0,0
+sacrifice,deu,deu_Latn,Opfer,Victims,0.25,0.800055980682373,high,1,0
+monastery,deu,deu_Latn,Kloster,Monastery,1.0,0.8484029769897461,high,1,1
+convent,deu,deu_Latn,Kloster,Monastery,0.375,0.8477236032485962,high,1,1
+abbey,deu,deu_Latn,Abbey,Abbey,1.0,0.8024818897247314,high,0,0
+minaret,deu,deu_Latn,Minarett,Minarets,0.9333333333333333,0.854844331741333,high,0,0
+pagoda,deu,deu_Latn,Pagoda,Pagoda,1.0,0.8338760137557983,high,0,0
+stupa,deu,deu_Latn,Stupa,Stupa,1.0,0.6045540571212769,medium,0,0
+ancestral altar,deu,deu_Latn,Altar der Vorfahren,Altar of the Ancestors,0.3783783783783784,0.8500235676765442,high,1,0
+funeral rite,deu,deu_Latn,Begräbnisritus,Funeral Ritual,0.8461538461538461,0.8501057028770447,high,0,0
+mourning rite,deu,deu_Latn,Trauerritus,Ritual of mourning,0.5161290322580645,0.8499422073364258,high,1,0
+memorial service,deu,deu_Latn,Gedenkfeier,Commemorative feast,0.45714285714285713,0.8507670760154724,high,1,0
+ancestor worship,deu,deu_Latn,Vorfahrenverehrung,Worship of the Ancestors,0.45,0.8478835821151733,high,1,0
+tabernacle,deu,deu_Latn,Tabernakel,Tabernacles and Tabernacles,0.5405405405405406,0.8393356204032898,high,1,0
+prayer mat,deu,deu_Latn,Gebetsmatte,Praying Mat,0.7619047619047619,0.8590817451477051,high,0,0
+chanting,deu,deu_Latn,Gesang,Singing,0.4,0.8202496767044067,high,1,0
+hymn,deu,deu_Latn,Hymne,Hymns,0.8888888888888888,0.8236424326896667,high,1,1
+sermon,deu,deu_Latn,Predigt,Preaching,0.26666666666666666,0.8363111615180969,high,1,0
+liturgy,deu,deu_Latn,Liturgie,The Liturgy,0.7777777777777778,0.8618154525756836,high,0,0
+sacred religion,deu,deu_Latn,heilige Religion,sacred religion,1.0,0.8514363169670105,high,0,0
+sacred ritual,deu,deu_Latn,Heiliges Ritual,Sacred Ritual,1.0,0.8468211889266968,high,0,0
+sacred prayer,deu,deu_Latn,Heiliges Gebet,Holy Prayer,0.5833333333333334,0.8338998556137085,high,0,0
+sacred temple,deu,deu_Latn,heilige Tempel,Holy Temple,0.5833333333333334,0.8465877175331116,high,0,0
+sacred church,deu,deu_Latn,heilige Kirche,Holy Church,0.5833333333333334,0.8437575697898865,high,0,0
+sacred mosque,deu,deu_Latn,heilige Moschee,holy mosque,0.5833333333333334,0.857947051525116,high,0,0
+sacred synagogue,deu,deu_Latn,die heilige Synagoge,The holy synagogue,0.6470588235294118,0.8317803740501404,high,0,0
+sacred shrine,deu,deu_Latn,Heiliges Heiligtum,The Holy Sanctuary,0.25806451612903225,0.7731990814208984,medium,1,0
+sacred pilgrimage,deu,deu_Latn,heilige Pilgerreise,Holy pilgrimage,0.6875,0.8339288234710693,high,0,0
+sacred scripture,deu,deu_Latn,heilige Schrift,Sacred Scripture,1.0,0.831165075302124,high,0,0
+sacred monk,deu,deu_Latn,Heiliger Mönch,Holy Monk,0.5,0.8363208770751953,high,1,0
+sacred priest,deu,deu_Latn,heilige Priester,Holy Priest,0.5833333333333334,0.8288977146148682,high,0,0
+sacred imam,deu,deu_Latn,heiliger Imam,Holy Imam,0.5,0.8445022106170654,high,1,0
+sacred nun,deu,deu_Latn,heilige Nonne,Holy nun,0.4444444444444444,0.8080146908760071,high,1,0
+sacred saint,deu,deu_Latn,Heiliger Heiliger,The Holy One,0.25,0.3922801911830902,low,1,0
+sacred martyr,deu,deu_Latn,Heiliger Märtyrer,Holy Martyrs,0.56,0.8094385862350464,high,0,0
+sacred prophet,deu,deu_Latn,der heilige Prophet,The Holy Prophet,0.6,0.827584981918335,high,0,0
+sacred zakat,deu,deu_Latn,die heilige Zakat,the sacred zakat,0.8571428571428571,0.7993587255477905,medium,0,0
+sacred tithe,deu,deu_Latn,Heiliges Zehntel,Holy tithes,0.5217391304347826,0.8092621564865112,high,1,0
+sacred karma,deu,deu_Latn,Heiliges Karma,Sacred Karma,1.0,0.8211137652397156,high,0,0
+sacred altar,deu,deu_Latn,heiliges Altar,holy altar,0.5454545454545454,0.8236898183822632,high,1,0
+sacred incense,deu,deu_Latn,Heiliges Weihrauch,Sacred Frankincense,0.8484848484848485,0.805372416973114,high,0,0
+sacred rosary,deu,deu_Latn,Heiliger Rosenkranz,Holy Rosary,0.5833333333333334,0.8272868394851685,high,0,0
+sacred blessing,deu,deu_Latn,Heiliger Segen,Holy Blessing,0.6428571428571429,0.833179235458374,high,0,0
+sacred curse,deu,deu_Latn,Heiliger Fluch,Holy Curse,0.5454545454545454,0.8309840559959412,high,1,0
+sacred sabbath,deu,deu_Latn,heilige Sabbat,Holy Sabbath,0.6153846153846154,0.8419572114944458,high,0,0
+sacred halal,deu,deu_Latn,heilige Halal,Holy Halal,0.5454545454545454,0.8039771318435669,high,1,0
+sacred kosher,deu,deu_Latn,heilige Kosher,holy kosher,0.5833333333333334,0.7053692936897278,medium,0,0
+sacred fasting,deu,deu_Latn,Heiliges Fasten,Holy Fasting,0.6153846153846154,0.840238094329834,high,0,0
+sacred sacrifice,deu,deu_Latn,Heiliges Opfer,Sacred Sacrifice,1.0,0.8362939953804016,high,0,0
+sacred monastery,deu,deu_Latn,Heiliges Kloster,Holy Monastery,0.6666666666666666,0.8448392152786255,high,1,1
+sacred convent,deu,deu_Latn,Heiliges Kloster,Holy Monastery,0.2857142857142857,0.845287561416626,high,1,1
+sacred abbey,deu,deu_Latn,heilige Abtei,Holy Abbey,0.5454545454545454,0.8289433717727661,high,1,0
+sacred minaret,deu,deu_Latn,Heiliges Minarett,Holy Minaret,0.6153846153846154,0.8628671169281006,high,0,0
+sacred pagoda,deu,deu_Latn,heilige Pagoda,sacred pagoda,1.0,0.8149182796478271,high,0,0
+sacred stupa,deu,deu_Latn,heilige Stupa,holy stupa,0.5454545454545454,0.8330918550491333,high,1,0
+sacred ancestral altar,deu,deu_Latn,heiliges Altar der Vorfahren,The holy altar of the ancestors.,0.4074074074074074,0.8288984298706055,high,1,0
+sacred funeral rite,deu,deu_Latn,Heilige Begräbnisritus,Sacred Funeral Rite,1.0,0.8197055459022522,high,0,0
+sacred mourning rite,deu,deu_Latn,heilige Trauerritus,Sacred Mourning Rite,1.0,0.825660228729248,high,0,0
+sacred memorial service,deu,deu_Latn,heilige Gedenkfeier,holy commemoration,0.34146341463414637,0.8298132419586182,high,1,0
+sacred ancestor worship,deu,deu_Latn,heilige Vorfahrenverehrung,Holy worship of ancestors,0.4583333333333333,0.8367406129837036,high,1,0
+sacred tabernacle,deu,deu_Latn,das heilige Tabernakel,the holy tabernacle,0.6666666666666666,0.8096684217453003,high,0,0
+sacred prayer mat,deu,deu_Latn,heilige Gebetsmatte,holy prayer mat,0.6875,0.8398659229278564,high,0,0
+sacred chanting,deu,deu_Latn,Heiliges Gesang,Sacred Singing,0.6896551724137931,0.8428283929824829,high,0,0
+sacred hymn,deu,deu_Latn,heilige Hymne,Holy hymn,0.5,0.8158719539642334,high,1,0
+sacred sermon,deu,deu_Latn,heilige Predigt,Holy preaching,0.2222222222222222,0.8571534752845764,high,1,0
+sacred liturgy,deu,deu_Latn,heilige Liturgie,Sacred Liturgy,1.0,0.8452706336975098,high,0,0
+ritual religion,deu,deu_Latn,Ritualreligion,Ritual religion,1.0,0.6998223066329956,medium,0,0
+ritual ritual,deu,deu_Latn,Ritual-Ritual,Ritual - Ritual,0.9285714285714286,0.34044328331947327,low,1,0
+ritual prayer,deu,deu_Latn,rituelles Gebet,Ritual prayer,1.0,0.8415513038635254,high,0,0
+ritual temple,deu,deu_Latn,ritueller Tempel,Ritual temples,0.9629629629629629,0.8386669754981995,high,0,0
+ritual church,deu,deu_Latn,Rituelle Kirche,Ritual Church,1.0,0.8565249443054199,high,0,0
+ritual mosque,deu,deu_Latn,rituelle Moschee,Ritual mosque,1.0,0.8119730949401855,high,0,0
+rice,deu,deu_Latn,Reis,Rice,1.0,0.852584958076477,high,0,0
+bread,deu,deu_Latn,Brot,Bread,1.0,0.8339566588401794,high,0,0
+noodle,deu,deu_Latn,Nudeln,Noodles,0.9230769230769231,0.8172267079353333,high,1,1
+dumpling,deu,deu_Latn,Dümmel,That 's stupid .,0.08333333333333333,0.6626181602478027,medium,1,0
+curry,deu,deu_Latn,Curry,Curry,1.0,0.7962509393692017,medium,0,0
+spice,deu,deu_Latn,Gewürze,Spices,0.9090909090909091,0.8102999925613403,high,0,0
+tea,deu,deu_Latn,Tee,Tea,1.0,0.8502165079116821,high,1,1
+coffee,deu,deu_Latn,Kaffee,Coffee,1.0,0.8517929315567017,high,0,0
+meat,deu,deu_Latn,Fleisch,Meat,1.0,0.8234138488769531,high,0,0
+vegetarian,deu,deu_Latn,Vegetarier,Vegetarians,0.9523809523809523,0.8111518025398254,high,0,0
+vegan,deu,deu_Latn,Vegan,Vegans and vegans,0.45454545454545453,0.8266956210136414,high,1,0
+soup,deu,deu_Latn,Suppe,Soup,1.0,0.8319078087806702,high,0,0
+stew,deu,deu_Latn,Stew,Stew,1.0,0.6691812872886658,medium,0,0
+barbecue,deu,deu_Latn,Barbecue,Barbecue,1.0,0.8192217946052551,high,0,0
+fermented,deu,deu_Latn,fermentiert,Fermented,1.0,0.8183237314224243,high,0,0
+pickled,deu,deu_Latn,"mit einem Gehalt von 0,5% oder mehr","Containing by weight 0,5% or more but not more than 0,5%",0.06349206349206349,0.4902473986148834,low,1,0
+banquet,deu,deu_Latn,Bankett,Banquet,1.0,0.8246850371360779,high,0,0
+feast,deu,deu_Latn,Fest,Party,0.4,0.7934133410453796,medium,1,1
+street food,deu,deu_Latn,Straßennahrung,Street food,1.0,0.8582062125205994,high,0,0
+dessert,deu,deu_Latn,Süßigkeiten,Sweets,0.3076923076923077,0.8275812864303589,high,1,0
+sauce,deu,deu_Latn,Salz,Salt,0.4444444444444444,0.750757098197937,medium,1,0
+grain,deu,deu_Latn,Getreide,Cereals,0.3333333333333333,0.8314485549926758,high,1,0
+fruit,deu,deu_Latn,Früchte,Fruit and nuts,0.5263157894736842,0.8081129789352417,high,1,0
+vegetable,deu,deu_Latn,Gemüse,Fruit and vegetables,0.6206896551724138,0.8095816969871521,high,0,0
+kebab,deu,deu_Latn,Kebab,Cheese and other edible mushrooms,0.10526315789473684,0.7849699258804321,medium,1,0
+shawarma,deu,deu_Latn,Schwarm,Swarm,0.7692307692307693,0.3486294150352478,low,1,0
+ramen,deu,deu_Latn,Ramen,Fresh fruit and vegetables,0.1935483870967742,0.7520402669906616,medium,1,0
+sushi,deu,deu_Latn,Sushi,Sushi,1.0,0.8390706181526184,high,0,0
+kimchi,deu,deu_Latn,Kimchi,Kimchi,1.0,0.786262571811676,medium,0,0
+pho,deu,deu_Latn,PHO,The Commission shall adopt delegated acts in accordance with the opinion of the European Parliament and of the Council.,0.04918032786885246,0.7275243997573853,medium,1,0
+biryani,deu,deu_Latn,Biryani,Biryani,1.0,0.8400407433509827,high,0,0
+falafel,deu,deu_Latn,Fallafel,Fallable paper and paperboard,0.2777777777777778,0.8247334957122803,high,1,0
+pasta,deu,deu_Latn,Nudeln,Noodles,0.16666666666666666,0.7568863034248352,medium,1,1
+cheese,deu,deu_Latn,Käse,Cheese,1.0,0.850506067276001,high,0,0
+wine,deu,deu_Latn,Wein,Wine,1.0,0.8440966010093689,high,0,0
+beer,deu,deu_Latn,Bier,Beer,1.0,0.8515676259994507,high,0,0
+chai,deu,deu_Latn,Tee,Tea,0.2857142857142857,0.8428313136100769,high,1,1
+espresso,deu,deu_Latn,Espresso,Espresso,1.0,0.8222754001617432,high,0,0
+udon,deu,deu_Latn,Udon,Manufacture in which all the materials used are:,0.07692307692307693,0.7330915331840515,medium,1,0
+soba,deu,deu_Latn,Soba,Soba,1.0,0.7745790481567383,medium,0,0
+congee,deu,deu_Latn,Vergütung,Compensation,0.3333333333333333,0.41531866788864136,low,1,0
+bibimbap,deu,deu_Latn,Schädel,Skulls,0.0,0.35429513454437256,low,1,0
+hummus,deu,deu_Latn,Hummus,Hummus,1.0,0.8294957876205444,high,0,0
+tabbouleh,deu,deu_Latn,Tabouleh,Table of contents,0.38461538461538464,0.78846675157547,medium,1,0
+paella,deu,deu_Latn,Paella,Paella,1.0,0.8390180468559265,high,0,0
+risotto,deu,deu_Latn,Risotto,Risotto,1.0,0.8358168601989746,high,0,0
+couscous,deu,deu_Latn,Couscous,Couscous,1.0,0.8232746720314026,high,0,0
+injera,deu,deu_Latn,injera,injera,1.0,0.7264312505722046,medium,0,0
+tortilla,deu,deu_Latn,Tortilla,Tortillas and other cereals,0.45714285714285713,0.8240267634391785,high,1,0
+tamale,deu,deu_Latn,"""Tamale""","""Tamales""",0.8,0.6142411231994629,medium,0,0
+arepa,deu,deu_Latn,Gänse,Goose,0.2,0.39512765407562256,low,1,0
+empanada,deu,deu_Latn,Verpflanzung,Planting,0.375,0.46850821375846863,low,1,0
+mochi,deu,deu_Latn,Mochi,Mochi,1.0,0.6971137523651123,medium,0,0
+matcha,deu,deu_Latn,Matcha,Matcha,1.0,0.8240079879760742,high,0,0
+jalebi,deu,deu_Latn,Jalebi,Jalebi,1.0,0.5045085549354553,low,1,0
+halwa,deu,deu_Latn,Halwa,Half of it,0.4,0.6169279217720032,medium,1,0
+flatbread,deu,deu_Latn,Flachbrot,Flatbread,1.0,0.8414222002029419,high,0,0
+naan,deu,deu_Latn,naan,The Commission shall adopt implementing acts in accordance with Article 2 of this Regulation.,0.08247422680412371,0.7369649410247803,medium,1,0
+roti,deu,deu_Latn,Roti,Roti,1.0,0.8430690765380859,high,0,0
+chapati,deu,deu_Latn,Chapati,Manufacture in which all the materials used are classified,0.18461538461538463,0.7807174921035767,medium,1,0
+paratha,deu,deu_Latn,Paratha,Paratha,1.0,0.6700663566589355,medium,0,0
+soy sauce,deu,deu_Latn,Sojasoß,Soybean juice,0.6363636363636364,0.8496406078338623,high,0,0
+fish sauce,deu,deu_Latn,Fischsauce,Fish sauce,1.0,0.8422144055366516,high,0,0
+ghee,deu,deu_Latn,Ghee,Ghee,1.0,0.8003828525543213,high,0,0
+paneer,deu,deu_Latn,Pfeffer,Pepper,0.6666666666666666,0.46784529089927673,low,1,0
+pickles,deu,deu_Latn,Pickeln,Pimples,0.7142857142857143,0.745996356010437,medium,0,0
+broth,deu,deu_Latn,Brühe,Fresh or chilled,0.2857142857142857,0.7976745963096619,medium,1,0
+porridge,deu,deu_Latn,Frühstück,Breakfast,0.23529411764705882,0.7849496603012085,medium,1,0
+lentil,deu,deu_Latn,Linsen,Lenses,0.5,0.4504900276660919,low,1,0
+chickpea,deu,deu_Latn,Hühner,Chickens,0.75,0.5984874367713928,low,1,0
+cassava,deu,deu_Latn,Kassasche,Cashier,0.42857142857142855,0.7271913290023804,medium,1,0
+plantain,deu,deu_Latn,Pflanzen,Crops and vegetables,0.35714285714285715,0.7644678354263306,medium,1,0
+okra,deu,deu_Latn,okra,oak or other edible oak,0.2962962962962963,0.8344203233718872,high,1,0
+eggplant,deu,deu_Latn,Erdbeeren,Strawberries,0.1,0.7940161228179932,medium,1,0
+traditional rice,deu,deu_Latn,traditioneller Reis,Traditional rice,1.0,0.8453696370124817,high,0,0
+traditional bread,deu,deu_Latn,traditionelles Brot,Traditional bread,1.0,0.8389343023300171,high,0,0
+traditional noodle,deu,deu_Latn,Traditionelle Nudeln,Traditional noodles,0.972972972972973,0.8430931568145752,high,0,0
+traditional dumpling,deu,deu_Latn,Traditionelle Dumpling,Traditional dumpling,1.0,0.6651465892791748,medium,0,0
+traditional curry,deu,deu_Latn,Traditionelle Curry,Traditional curry,1.0,0.7710759043693542,medium,0,0
+traditional spice,deu,deu_Latn,Traditionelle Gewürze,Traditional spices,0.9714285714285714,0.8276774883270264,high,0,0
+traditional tea,deu,deu_Latn,Traditioneller Tee,Traditional tea,1.0,0.862397313117981,high,0,0
+traditional coffee,deu,deu_Latn,traditioneller Kaffee,Traditional coffee,1.0,0.8678518533706665,high,0,0
+traditional meat,deu,deu_Latn,traditionelles Fleisch,Traditional meat,1.0,0.8283519744873047,high,0,0
+traditional vegetarian,deu,deu_Latn,Traditionelle Vegetarier,Traditional vegetarians,0.9777777777777777,0.8486319184303284,high,0,0
+traditional vegan,deu,deu_Latn,Traditionelle Veganer,Traditional vegans,0.9714285714285714,0.8549444675445557,high,0,0
+traditional soup,deu,deu_Latn,Traditionelle Suppe,Traditional soup,1.0,0.8445415496826172,high,0,0
+traditional stew,deu,deu_Latn,Traditionelle Stew,Traditional stew,1.0,0.5716947913169861,low,1,0
+traditional barbecue,deu,deu_Latn,Traditionsbarbecue,Traditional barbecue,1.0,0.8276770114898682,high,0,0
+traditional fermented,deu,deu_Latn,traditionell fermentierte,Traditionally fermented,0.9545454545454546,0.7286557555198669,medium,0,0
+traditional pickled,deu,deu_Latn,herkömmliche Rüben,Traditional strawberries,0.6511627906976745,0.5495202541351318,low,1,0
+traditional banquet,deu,deu_Latn,traditionelles Bankett,Traditional banquet,1.0,0.8478288650512695,high,0,0
+traditional feast,deu,deu_Latn,Traditionsfest,Traditional feast,1.0,0.8220274448394775,high,0,0
+traditional street food,deu,deu_Latn,Traditionelles Straßenessen,Traditional street food,1.0,0.854684054851532,high,0,0
+traditional dessert,deu,deu_Latn,traditioneller Dessert,Traditional dessert,1.0,0.8548082113265991,high,0,0
+traditional sauce,deu,deu_Latn,Traditionelle Sauce,Traditional sauce,1.0,0.8498079180717468,high,0,0
+traditional grain,deu,deu_Latn,Traditionelle Getreide,Traditional cereals,0.7777777777777778,0.842725932598114,high,0,0
+traditional fruit,deu,deu_Latn,Traditionelle Früchte,Traditional fruit,1.0,0.8400700092315674,high,0,0
+traditional vegetable,deu,deu_Latn,traditionelles Gemüse,Traditional vegetables,0.9767441860465116,0.8345361948013306,high,0,0
+traditional kebab,deu,deu_Latn,traditioneller Kebab,traditional kebab,1.0,0.8555285930633545,high,0,0
+traditional shawarma,deu,deu_Latn,Traditionelle Schwarma,Traditional dishes,0.7368421052631579,0.8227792978286743,high,0,0
+festival,deu,deu_Latn,Fest,Party,0.15384615384615385,0.7929080128669739,medium,1,1
+holiday,deu,deu_Latn,Urlaub,Holidays,0.9333333333333333,0.8320019245147705,high,0,0
+new year,deu,deu_Latn,Neujahr,New year,1.0,0.8616349697113037,high,0,0
+easter,deu,deu_Latn,Ostern,Easter,1.0,0.5572044253349304,low,1,0
+ramadan,deu,deu_Latn,Ramadan,Ramadan,1.0,0.8596591949462891,high,0,0
+eid,deu,deu_Latn,Eid,The oath,0.18181818181818182,0.8325691223144531,high,1,0
+diwali,deu,deu_Latn,Diwali,Diwali,1.0,0.7942797541618347,medium,0,0
+vesak,deu,deu_Latn,Vesack,Vesack,0.9090909090909091,0.7240490317344666,medium,0,0
+hanukkah,deu,deu_Latn,Hanukkah,Hanukkah,1.0,0.8373600244522095,high,0,0
+passover,deu,deu_Latn,Passah,It 's all right .,0.16,0.5969627499580383,low,1,0
+nowruz,deu,deu_Latn,Nowruz,In the case of Nowruz,0.4444444444444444,0.7245827913284302,medium,1,0
+carnival,deu,deu_Latn,Karneval,Carnival,1.0,0.8553121089935303,high,0,0
+thanksgiving,deu,deu_Latn,Dankbarkeit,Gratitude,0.19047619047619047,0.8513501286506653,high,1,0
+harvest festival,deu,deu_Latn,Fest der Ernte,Feast of the Harvest,0.3888888888888889,0.855681836605072,high,1,0
+obon,deu,deu_Latn,in der Vergangenheit,In the past,0.13333333333333333,0.3272342383861542,low,1,0
+tet,deu,deu_Latn,Tet,Tet,1.0,0.3756626844406128,low,1,0
+songkran,deu,deu_Latn,Songkran,"Flat-rolled products of iron or non-alloy steel, of iron or non-alloy steel",0.14457831325301204,0.8171160221099854,high,1,0
+dragon boat festival,deu,deu_Latn,Drachenbootfest,Dragon Boat Festival,1.0,0.8402944803237915,high,0,0
+mid autumn festival,deu,deu_Latn,Mitte Herbstfest,Mid-Autumn Festival,0.9473684210526315,0.6966127157211304,medium,0,0
+qingming,deu,deu_Latn,Qingming,Qingming,1.0,0.7909857034683228,medium,0,0
+yom kippur,deu,deu_Latn,yom kippur,of a kind used for the manufacture of foodstuffs,0.20689655172413793,0.7940739989280701,medium,1,0
+rosh hashanah,deu,deu_Latn,Rosh Hashanah,Rosh Hashanah,1.0,0.8379498720169067,high,0,0
+purim,deu,deu_Latn,Purim,Purim,1.0,0.7698426246643066,medium,0,0
+sukkot,deu,deu_Latn,Sukkot,Sukkot,1.0,0.7383760213851929,medium,0,0
+advent,deu,deu_Latn,Auferstehung,The Resurrection,0.18181818181818182,0.769385814666748,medium,1,0
+holi,deu,deu_Latn,Heiligkeit,Holiness,0.6666666666666666,0.6234648823738098,medium,0,0
+navratri,deu,deu_Latn,Navratri,"Notwithstanding the provisions of this Article,",0.21818181818181817,0.7849185466766357,medium,1,0
+onam,deu,deu_Latn,Onam,Onam,1.0,0.6437961459159851,medium,0,0
+pongal,deu,deu_Latn,Pongal,Pongal,1.0,0.620875358581543,medium,0,0
+durga puja,deu,deu_Latn,Durga Puja,Durga Puja,1.0,0.8500069379806519,high,0,0
+janmashtami,deu,deu_Latn,Jannashtami,Jannashtami,0.9090909090909091,0.7655242681503296,medium,0,0
+good friday,deu,deu_Latn,Guten Freitag,Good Friday .,0.9166666666666666,0.8588466644287109,high,0,0
+pentecost,deu,deu_Latn,Pfingsten,Fresh fruit and vegetables,0.2857142857142857,0.7861034274101257,medium,1,0
+epiphany,deu,deu_Latn,Offenbarung,Revelation,0.3333333333333333,0.8079108595848083,high,1,0
+all saints day,deu,deu_Latn,Tag aller Heiligen,The Day of All Saints,0.5714285714285714,0.8237550258636475,high,0,0
+lunar new year,deu,deu_Latn,Lunar Neujahr,Lunar New Year,1.0,0.8164995908737183,high,0,0
+thingyan,deu,deu_Latn,Dingyan,Dingyan,0.8,0.5433412790298462,low,1,0
+day of the dead,deu,deu_Latn,Tag der Toten,Day of the Dead,1.0,0.8379929661750793,high,0,0
+mardi gras,deu,deu_Latn,Mardi Gras,Mardi Gras,1.0,0.8387557864189148,high,0,0
+saint day,deu,deu_Latn,Tag der Heiligen,Day of the Saints,0.38461538461538464,0.7862294912338257,medium,1,0
+martinmas,deu,deu_Latn,Martinmas,The Commission shall adopt delegated acts in accordance with the opinion of the European Parliament and of the Council.,0.078125,0.8119286894798279,high,1,0
+st patricks day,deu,deu_Latn,St. Patrick's Day,This is St. Patrick's Day.,0.7317073170731707,0.8267805576324463,high,0,0
+independence day,deu,deu_Latn,Unabhängigkeitstag,Independence day,1.0,0.8349403142929077,high,0,0
+mawlid,deu,deu_Latn,Mawlyd,Mawlyd,0.8333333333333334,0.6337404251098633,medium,0,0
+ashura,deu,deu_Latn,Ashura,Ashura,1.0,0.8121255040168762,high,0,0
+hajj,deu,deu_Latn,Hajj,Hajj,1.0,0.7358120679855347,medium,0,0
+umrah,deu,deu_Latn,Umrah,Rate of arrival,0.2,0.8080208897590637,high,1,0
+setsubun,deu,deu_Latn,Satsubun,Satsubun,0.875,0.7801002264022827,medium,0,0
+religious festival,deu,deu_Latn,religiöse Feste,religious holidays,0.6111111111111112,0.8335063457489014,high,0,0
+religious holiday,deu,deu_Latn,religiöse Feiertage,religious holidays,0.9714285714285714,0.8445616960525513,high,0,0
+religious new year,deu,deu_Latn,religiöses Neujahr,Religious New Year,1.0,0.8711230158805847,high,0,0
+religious easter,deu,deu_Latn,religiöse Ostern,religious Easter,1.0,0.8375192880630493,high,0,0
+religious ramadan,deu,deu_Latn,religiöse Ramadan,Religious Ramadan,1.0,0.8327951431274414,high,0,0
+religious eid,deu,deu_Latn,religiöse Feiertag,religious holidays,0.7741935483870968,0.663374662399292,medium,0,0
+religious diwali,deu,deu_Latn,religiöse Diwali,religious Diwali,1.0,0.8522998094558716,high,0,0
+religious vesak,deu,deu_Latn,religiöse Vesak,Religious Vesak,1.0,0.6773701906204224,medium,0,0
+religious hanukkah,deu,deu_Latn,religiöse Hanukkah,religious Hanukkah,1.0,0.8533535003662109,high,0,0
+religious passover,deu,deu_Latn,religiöse Passah,religious Passover,1.0,0.7731320261955261,medium,0,0
+religious nowruz,deu,deu_Latn,religiöse Nowruz,Religious Nowruz,1.0,0.8618714213371277,high,0,0
+religious carnival,deu,deu_Latn,religiöse Karneval,religious carnival,1.0,0.8300067782402039,high,0,0
+religious thanksgiving,deu,deu_Latn,religiöse Dankbarkeit,Religious gratitude,0.5853658536585366,0.8430936932563782,high,0,0
+religious harvest festival,deu,deu_Latn,religiöse Erntefeier,religious harvest celebration,0.7636363636363637,0.8604263663291931,high,0,0
+religious obon,deu,deu_Latn,religiöse Ablehnung,Religious Rejection,0.7272727272727273,0.49455752968788147,low,1,0
+religious tet,deu,deu_Latn,religiöse,Religious,0.8181818181818182,0.34272363781929016,low,1,0
+religious songkran,deu,deu_Latn,religiöse Songkran,Religious song cranes,0.8717948717948718,0.8535241484642029,high,0,0
+religious dragon boat festival,deu,deu_Latn,religiöse Drachenbootfest,Religious Dragon Boat Festival,1.0,0.8238926529884338,high,0,0
+religious mid autumn festival,deu,deu_Latn,religiöse Mitte Herbstfest,Religious Mid-Autumn Festival,0.9655172413793104,0.6001982688903809,medium,0,0
+religious qingming,deu,deu_Latn,religiöse Qingming,religious Qingming,1.0,0.5934025645256042,low,1,0
+religious yom kippur,deu,deu_Latn,religiöse yom kippur,religious Yom Kippur,1.0,0.8182487487792969,high,0,0
+religious rosh hashanah,deu,deu_Latn,religiöse Rosh Hashanah,religious Rosh Hashanah,1.0,0.8571780920028687,high,0,0
+religious purim,deu,deu_Latn,religiöse Purim,Religious Purim,1.0,0.8347054719924927,high,0,0
+religious sukkot,deu,deu_Latn,religiöse Sukkot,Religious Sukkot,1.0,0.8265267014503479,high,0,0
+religious advent,deu,deu_Latn,religiöse Ankunft,religious arrival,0.7272727272727273,0.8017846345901489,high,0,0
+religious holi,deu,deu_Latn,religiöse Heiligkeit,Religious Holiness,0.875,0.6154422760009766,medium,0,0
+religious navratri,deu,deu_Latn,religiöse Navratri,religious Navratri,1.0,0.8318185210227966,high,0,0
+religious onam,deu,deu_Latn,religiöse Onam,Religious Onam,1.0,0.5015770792961121,low,1,0
+religious pongal,deu,deu_Latn,religiöse Pongal,Religious Pongal,1.0,0.6402486562728882,medium,0,0
+religious durga puja,deu,deu_Latn,religiöse Durga Puja,Religious Durga Puja,1.0,0.8547873497009277,high,0,0
+religious janmashtami,deu,deu_Latn,religiöse Janashtami,religious Janashtami,0.975609756097561,0.818795382976532,high,0,0
+religious good friday,deu,deu_Latn,religiöse gute Freitag,Religious Good Friday,1.0,0.5660620927810669,low,1,0
+religious pentecost,deu,deu_Latn,religiöse Pfingsten,Religious Pentecost,1.0,0.8134453296661377,high,0,0
+religious epiphany,deu,deu_Latn,religiöse Offenbarung,Religious Revelation,0.6842105263157895,0.8350540399551392,high,0,0
+religious all saints day,deu,deu_Latn,religiöse All Saints Tag,Religious All Saints Day,1.0,0.7532579898834229,medium,0,0
+religious lunar new year,deu,deu_Latn,religiöse Mondne Neujahr,Religious New Year moons,0.75,0.7161242961883545,medium,0,0
+religious thingyan,deu,deu_Latn,religiöse Dinge,Religious matters,0.6285714285714286,0.7416585683822632,medium,0,0
+religious day of the dead,deu,deu_Latn,religiöser Tag der Toten,Religious Day of the Dead,1.0,0.8422644138336182,high,0,0
+religious mardi gras,deu,deu_Latn,religiöse Mardi Gras,Religious Mardi Gras,1.0,0.8535633087158203,high,0,0
+religious saint day,deu,deu_Latn,religiöser Heiliger Tag,religious holy day,0.7567567567567568,0.812736451625824,high,0,0
+religious martinmas,deu,deu_Latn,religiöse Martinmas,religious martinmas,1.0,0.750905454158783,medium,0,0
+religious st patricks day,deu,deu_Latn,religiöse St. Patrick Tag,Religious St. Patrick's Day,0.9615384615384616,0.8160844445228577,high,0,0
+religious independence day,deu,deu_Latn,Tag der religiösen Unabhängigkeit,Day of Religious Independence,0.8,0.8393567204475403,high,0,0
+religious mawlid,deu,deu_Latn,religiöse Mawlid,religious Mawlid,1.0,0.684565544128418,medium,0,0
+religious ashura,deu,deu_Latn,religiöse Ashura,religious Ashura,1.0,0.8429561853408813,high,0,0
+religious hajj,deu,deu_Latn,religiöse Hajj,religious Hajj,1.0,0.8179646730422974,high,0,0
+religious umrah,deu,deu_Latn,religiöse Umrah,Religious Umrah,1.0,0.860838770866394,high,0,0
+religious setsubun,deu,deu_Latn,religiöse Setubun,religious setubun,0.9714285714285714,0.7365671992301941,medium,0,0
+seasonal festival,deu,deu_Latn,Saisonfest,Festival of the Season,0.41025641025641024,0.8329085111618042,high,1,0
+seasonal holiday,deu,deu_Latn,Saisonurlaub,Holidays of the season,0.3684210526315789,0.8270307779312134,high,1,0
+seasonal new year,deu,deu_Latn,Saisonneues Jahr,New year of the season,0.41025641025641024,0.7531797289848328,medium,1,0
+seasonal easter,deu,deu_Latn,Saisonale Ostern,Seasonal Easter,1.0,0.716820240020752,medium,0,0
+dress,deu,deu_Latn,Kleider,Clothes,0.3333333333333333,0.7939019799232483,medium,1,1
+clothing,deu,deu_Latn,Kleidung,Clothes and accessories,0.3870967741935484,0.8133776187896729,high,1,0
+garment,deu,deu_Latn,Kleidungsstücke,Articles of apparel and clothing accessories,0.19607843137254902,0.7891448736190796,medium,1,1
+veil,deu,deu_Latn,Schleier,Other articles of iron or non-alloy steel,0.13333333333333333,0.8095165491104126,high,1,0
+hijab,deu,deu_Latn,Hijab,Hijab,1.0,0.801409125328064,high,0,0
+niqab,deu,deu_Latn,Niqab,Niqab,1.0,0.8386545181274414,high,0,0
+burqa,deu,deu_Latn,Burqa,Burqa,1.0,0.7607638835906982,medium,0,0
+sari,deu,deu_Latn,Sarie,Sary,0.75,0.6208162307739258,medium,0,0
+kimono,deu,deu_Latn,Kimono,Fresh fruit and vegetables,0.125,0.823645293712616,high,1,0
+hanbok,deu,deu_Latn,Hanbok,Hemp and beef,0.42105263157894735,0.7911286354064941,medium,1,0
+turban,deu,deu_Latn,Turban,Turbanes and their derivatives,0.3333333333333333,0.8533047437667847,high,1,0
+abaya,deu,deu_Latn,Abaya,Abaya,1.0,0.8031669855117798,high,0,0
+thobe,deu,deu_Latn,Siebe,Seventh,0.3333333333333333,0.4221971333026886,low,1,0
+dupatta,deu,deu_Latn,Dupatta,Dupatta,1.0,0.6295036673545837,medium,0,0
+lehenga,deu,deu_Latn,Lehenga,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.09523809523809523,0.6903021335601807,medium,1,0
+kurta,deu,deu_Latn,kurta,of a kind used for the manufacture of foodstuffs,0.1509433962264151,0.5298410058021545,low,1,0
+dhoti,deu,deu_Latn,Dhoti,Dhoti,1.0,0.7369797229766846,medium,0,0
+qipao,deu,deu_Latn,Qipao,Qipao,1.0,0.6828315258026123,medium,0,0
+uniform,deu,deu_Latn,Uniform,Uniforms,0.9333333333333333,0.7649300694465637,medium,0,0
+formal,deu,deu_Latn,formelle,Formal,1.0,0.7580340504646301,medium,0,0
+casual,deu,deu_Latn,zufällig,by chance,0.26666666666666666,0.777837872505188,medium,1,0
+modest,deu,deu_Latn,bescheiden,Modest,1.0,0.7390801906585693,medium,0,0
+ornate,deu,deu_Latn,Schmuck und Schmuck,Jewelry and jewellery,0.2222222222222222,0.2993241846561432,low,1,0
+jewelry,deu,deu_Latn,Schmuck,Jewelry,1.0,0.8213789463043213,high,1,1
+necklace,deu,deu_Latn,Halskette,Necklace,1.0,0.8395200967788696,high,0,0
+earring,deu,deu_Latn,Ohrring,Earrings,0.9333333333333333,0.8240417242050171,high,0,0
+bracelet,deu,deu_Latn,Armband,Wristbands,0.2222222222222222,0.6202225685119629,medium,1,0
+ring,deu,deu_Latn,Ringe,Rings,0.8888888888888888,0.46902182698249817,low,1,0
+headscarf,deu,deu_Latn,Kopfbedeckung,Headgear,0.7058823529411765,0.8301869630813599,high,0,0
+tattoo,deu,deu_Latn,Tattoo,Tattoo,1.0,0.7935961484909058,medium,0,0
+piercing,deu,deu_Latn,Durchdringung,Penetration,0.3157894736842105,0.49985337257385254,low,1,0
+mask,deu,deu_Latn,Maske,Masks,0.8888888888888888,0.8414663076400757,high,0,0
+gown,deu,deu_Latn,Kleider,Clothes,0.18181818181818182,0.6580594778060913,medium,1,1
+tuxedo,deu,deu_Latn,Schmuck,Jewelry,0.15384615384615385,0.42439004778862,low,1,1
+wedding dress,deu,deu_Latn,Hochzeitskleid,Wedding dress,1.0,0.8474520444869995,high,0,0
+sash,deu,deu_Latn,Schlagkörper,Parts and accessories,0.24,0.4050149619579315,low,1,0
+sandals,deu,deu_Latn,Sandalen,Sandals,1.0,0.8410283327102661,high,0,0
+slippers,deu,deu_Latn,Schuhen,Shoes,0.46153846153846156,0.8155841827392578,high,1,0
+bangle,deu,deu_Latn,Schläger,Manufacture from materials of any heading,0.1276595744680851,0.31318530440330505,low,1,0
+anklet,deu,deu_Latn,Knöchel,Knees and ankles,0.45454545454545453,0.6522918939590454,medium,1,0
+kaftan,deu,deu_Latn,Kaftan,Cockroaches,0.23529411764705882,0.827193558216095,high,1,0
+poncho,deu,deu_Latn,Poncho,Poncho,1.0,0.6696746349334717,medium,0,0
+sombrero,deu,deu_Latn,Sombrero,Sombrero,1.0,0.8556361198425293,high,0,0
+kippah,deu,deu_Latn,Kippah,Kippah,1.0,0.6460239291191101,medium,0,0
+yarmulke,deu,deu_Latn,Järmulke,Ferrous or non-ferrous metals,0.10810810810810811,0.7731842398643494,medium,1,0
+mourning dress,deu,deu_Latn,Trauerkleid,Clothes for mourning,0.47058823529411764,0.8368765711784363,high,1,0
+ceremonial mask,deu,deu_Latn,Zeremonielle Maske,Ceremonial mask,1.0,0.8533167243003845,high,0,0
+formal dress,deu,deu_Latn,Formelle Kleidung,Formal clothing,0.5185185185185185,0.8349769115447998,high,1,1
+formal clothing,deu,deu_Latn,Formelle Kleidung,Formal clothing,1.0,0.8374568223953247,high,1,1
+formal garment,deu,deu_Latn,Formelle Kleidung,Formal clothing,0.5517241379310345,0.8201884031295776,high,1,1
+formal veil,deu,deu_Latn,Formelle Schleier,Formal veils,0.9565217391304348,0.8080050945281982,high,0,0
+formal hijab,deu,deu_Latn,Formeller Hijab,Forms of hijab,0.7692307692307693,0.8413132429122925,high,0,0
+formal niqab,deu,deu_Latn,Formaler Niqab,Formal niqab,1.0,0.5899845361709595,low,1,0
+formal burqa,deu,deu_Latn,formelle Burka,Formal burka,0.9166666666666666,0.8501280546188354,high,0,0
+formal sari,deu,deu_Latn,formelle Sari,Formal sari,1.0,0.7191412448883057,medium,0,0
+formal kimono,deu,deu_Latn,Formelle Kimono,Formal kimono,1.0,0.814418375492096,high,0,0
+formal hanbok,deu,deu_Latn,formelle Hanbok,Formal Hanbok,1.0,0.8106809854507446,high,0,0
+formal turban,deu,deu_Latn,Formeller Turban,"Manufacture from materials of any heading, except that of iron or non-alloy steel",0.14893617021276595,0.8159449696540833,high,1,0
+formal abaya,deu,deu_Latn,formelle Abaya,formal abaya,1.0,0.8235917687416077,high,0,0
+formal thobe,deu,deu_Latn,offizieller Tag,official day,0.3333333333333333,0.5499331951141357,low,1,0
+formal dupatta,deu,deu_Latn,formelle Dupatta,Formal dupatta,1.0,0.5101263523101807,low,1,0
+formal lehenga,deu,deu_Latn,formelle Lehenga,Formal Lehenga,1.0,0.49535784125328064,low,1,0
+formal kurta,deu,deu_Latn,formelle Kurta,Formal courtship,0.7142857142857143,0.45438656210899353,low,1,0
+formal dhoti,deu,deu_Latn,formelle Dhoti,formal Dhoti,1.0,0.6922273635864258,medium,0,0
+formal qipao,deu,deu_Latn,formelle Qipao,Formal Qipao,1.0,0.6034773588180542,medium,0,0
+formal uniform,deu,deu_Latn,Formelle Uniform,Formal uniforms,0.9655172413793104,0.85368412733078,high,0,0
+formal formal,deu,deu_Latn,formelle formelle,Formal formal,1.0,0.45003610849380493,low,1,0
+formal casual,deu,deu_Latn,formelle Gelegenheit,Formal opportunity,0.5161290322580645,0.46612605452537537,low,1,0
+formal modest,deu,deu_Latn,formal bescheiden,Formally modest,0.9285714285714286,0.705437958240509,medium,0,0
+formal ornate,deu,deu_Latn,formal geschmückt,Formally decorated,0.7741935483870968,0.7050633430480957,medium,0,0
+formal jewelry,deu,deu_Latn,Formelle Schmuck,Formal jewellery,0.9333333333333333,0.7085505723953247,medium,0,0
+formal necklace,deu,deu_Latn,Formelle Halskette,Formal necklace,1.0,0.8452086448669434,high,0,0
+formal earring,deu,deu_Latn,Formelle Ohrringe,Formal earrings,0.9655172413793104,0.788425624370575,medium,0,0
+formal bracelet,deu,deu_Latn,Formelle Armband,Formal wristbands,0.5625,0.8238271474838257,high,0,0
+formal ring,deu,deu_Latn,formaler Ring,Formal rings,0.9565217391304348,0.5941905379295349,low,1,0
+formal headscarf,deu,deu_Latn,Formelle Kopftuch,Formal headgear,0.8387096774193549,0.7245656251907349,medium,0,0
+formal tattoo,deu,deu_Latn,Formelle Tätowierung,Formal tattooing,0.896551724137931,0.836844801902771,high,0,0
+formal piercing,deu,deu_Latn,Formelle Piercings,Formal piercings,0.967741935483871,0.7845045924186707,medium,0,0
+formal mask,deu,deu_Latn,Formelle Maske,Formal masks,0.9565217391304348,0.8379196524620056,high,0,0
+formal gown,deu,deu_Latn,Formelle Kleidung,Formal clothing,0.6153846153846154,0.7851090431213379,medium,1,1
+formal tuxedo,deu,deu_Latn,Formelle Smoking,Formal smoking,0.5925925925925926,0.2809695601463318,low,1,0
+formal wedding dress,deu,deu_Latn,formaler Hochzeitskleid,formal wedding dress,1.0,0.8327591419219971,high,0,0
+formal sash,deu,deu_Latn,Formelle Schaltfläche,Formal button,0.5833333333333334,0.6462289094924927,medium,0,0
+formal sandals,deu,deu_Latn,Formelle Sandalen,Formal sandals,1.0,0.8338033556938171,high,0,0
+formal slippers,deu,deu_Latn,Formelle Stiefel,Formal boots,0.5925925925925926,0.8281481266021729,high,0,0
+formal bangle,deu,deu_Latn,Formelle Klammer,Formal brackets,0.7142857142857143,0.34732958674430847,low,1,0
+formal anklet,deu,deu_Latn,Formelle Knöchel,Formal ankles,0.9230769230769231,0.4571521580219269,low,1,0
+formal kaftan,deu,deu_Latn,formeller Kaftan,Of a kind used for the manufacture of goods,0.25,0.8133817911148071,high,1,0
+formal poncho,deu,deu_Latn,Formaler Poncho,Formal poncho,1.0,0.5316277146339417,low,1,0
+formal sombrero,deu,deu_Latn,formaler Sombrero,Of a thickness of not more than 10 mm,0.19230769230769232,0.4562382996082306,low,1,0
+formal kippah,deu,deu_Latn,formelle Kippah,Formal Kippah,1.0,0.6553016901016235,medium,0,0
+formal yarmulke,deu,deu_Latn,formelle Jarmulke,Formal jarmulke,0.9333333333333333,0.5274045467376709,low,1,0
+formal mourning dress,deu,deu_Latn,formaler Trauerkleid,Formal mourning dresses,0.9545454545454546,0.8090733289718628,high,0,0
+formal ceremonial mask,deu,deu_Latn,Formelle zeremonielle Maske,Formal ceremonial mask,1.0,0.798028826713562,medium,0,0
+casual dress,deu,deu_Latn,Freizeitkleidung,Recreational clothing,0.30303030303030304,0.8505465388298035,high,1,0
+casual clothing,deu,deu_Latn,Freizeitbekleidung,Recreational clothing,0.7222222222222222,0.8441627025604248,high,0,0
+casual garment,deu,deu_Latn,Kleidungsstücke,Articles of apparel and clothing accessories,0.3103448275862069,0.5331743955612183,low,1,1
+casual veil,deu,deu_Latn,Schleier und Schleier,"Woven fabrics of cotton, containing predominantly, but < 85% cotton by weight, mixed principally or solely with man-made fibres, mixed principally or solely with man-made fibres",0.09574468085106383,0.2775156497955322,low,1,0
+casual hijab,deu,deu_Latn,Gelegenheitsschutzschutzschutz,Occasion protection protection,0.23809523809523808,0.3348621726036072,low,1,0
+casual niqab,deu,deu_Latn,Gelegentliche Niqab,Occasional niqab,0.7857142857142857,0.614922046661377,medium,0,0
+white,deu,deu_Latn,Weiß,White,1.0,0.8237648010253906,high,0,0
+red,deu,deu_Latn,Rot,Red,1.0,0.804082989692688,high,0,0
+black,deu,deu_Latn,schwarz,black,1.0,0.8332374095916748,high,0,0
+blue,deu,deu_Latn,Blau,Blue,1.0,0.8100659847259521,high,0,0
+green,deu,deu_Latn,Grün,Green,1.0,0.8082408905029297,high,0,0
+yellow,deu,deu_Latn,gelb,yellow,1.0,0.8470584750175476,high,0,0
+purple,deu,deu_Latn,Purpur,Purple,1.0,0.8426673412322998,high,0,0
+orange,deu,deu_Latn,orange,orange,1.0,0.6388964653015137,medium,0,0
+gold,deu,deu_Latn,Gold,Gold,1.0,0.6697483062744141,medium,0,0
+silver,deu,deu_Latn,Silber,"Other articles of iron or steel, not elsewhere specified or included",0.05405405405405406,0.8498522043228149,high,1,0
+dragon,deu,deu_Latn,Drache,Dragon,1.0,0.8456700444221497,high,0,0
+phoenix,deu,deu_Latn,Phönix,Fenix,0.6666666666666666,0.8344903588294983,high,0,0
+lotus,deu,deu_Latn,Lotus,Lotus,1.0,0.8149954676628113,high,0,0
+bamboo,deu,deu_Latn,Bambus,Bamboo,1.0,0.844825267791748,high,0,0
+olive,deu,deu_Latn,Oliven,Olives,0.9090909090909091,0.8406798839569092,high,0,0
+maple,deu,deu_Latn,Ahorn,Cucumbers,0.2857142857142857,0.8467556238174438,high,1,0
+totem,deu,deu_Latn,Totem,The totem,0.7142857142857143,0.8317453861236572,high,0,0
+emblem,deu,deu_Latn,Emblem,Coat of arms,0.1111111111111111,0.8280915021896362,high,1,0
+anthem,deu,deu_Latn,Hymne,Hymns,0.18181818181818182,0.844869077205658,high,1,1
+flag,deu,deu_Latn,Flagge,Flags and flags,0.42105263157894735,0.8435910940170288,high,1,0
+icon,deu,deu_Latn,Symbol,The symbol,0.14285714285714285,0.6107123494148254,medium,1,0
+script,deu,deu_Latn,Drehbuch,The script,0.75,0.8349491357803345,high,0,0
+calligraphy,deu,deu_Latn,Kalligraphie,Calligraphy,1.0,0.8649612665176392,high,0,0
+lantern,deu,deu_Latn,Leuchtturm,Lighthouse,0.35294117647058826,0.7989249229431152,medium,1,0
+opera,deu,deu_Latn,Oper,Opera,1.0,0.8039216995239258,high,0,0
+dance,deu,deu_Latn,Tanz,Dancing,0.6666666666666666,0.8421335816383362,high,0,0
+music,deu,deu_Latn,Musik,Music,1.0,0.8400968909263611,high,0,0
+folklore,deu,deu_Latn,Folklore,Folklore,1.0,0.8005494475364685,high,0,0
+myth,deu,deu_Latn,Mythos,Myth,1.0,0.8348891139030457,high,0,0
+legend,deu,deu_Latn,Legende,Legendary,0.8,0.8219190239906311,high,0,0
+oral tradition,deu,deu_Latn,mündliche Tradition,Oral tradition,1.0,0.8650466799736023,high,0,0
+epic,deu,deu_Latn,epische,epic,1.0,0.6576454639434814,medium,0,0
+fable,deu,deu_Latn,Fabel,It 's a fairy tale .,0.32,0.7012872695922852,medium,1,0
+choir,deu,deu_Latn,Chor,Choir,1.0,0.839590847492218,high,0,0
+orchestra,deu,deu_Latn,Orchester,Orchestra,1.0,0.8434399366378784,high,0,0
+drumming,deu,deu_Latn,Schlagzeug,Drums and percussion instruments,0.3,0.8139922022819519,high,1,0
+tango,deu,deu_Latn,Tango,Tango and other musical instruments,0.25,0.8292121887207031,high,1,0
+flamenco,deu,deu_Latn,Flamenco,Flamenco,1.0,0.8581326007843018,high,0,0
+bharatanatyam,deu,deu_Latn,Bharatanatyam,Bharatanatyam,1.0,0.7884352207183838,medium,0,0
+kabuki,deu,deu_Latn,Kabuki,It's called Kabuki.,0.48,0.8515368700027466,high,1,0
+lion dance,deu,deu_Latn,Löwen-Tanz,Lion dance,1.0,0.8504657745361328,high,0,0
+dragon dance,deu,deu_Latn,Drachentanz,The Dragon Dance,0.8571428571428571,0.860231339931488,high,0,0
+totem pole,deu,deu_Latn,Totemstange,"Other, of a thickness of not more than 10 mm",0.18518518518518517,0.8394207954406738,high,1,0
+prayer beads,deu,deu_Latn,Gebetsperlen,Pearls of Prayer,0.42857142857142855,0.7926002740859985,medium,1,0
+chopsticks,deu,deu_Latn,Stäbchen,"Other, of a thickness of not more than 10 mm",0.25925925925925924,0.8185409307479858,high,1,0
+tea ceremony,deu,deu_Latn,Teezeremonie,Tea ceremony,1.0,0.8606701493263245,high,0,0
+martial arts,deu,deu_Latn,Kampfkunst,Martial arts,1.0,0.8506820797920227,high,0,0
+cultural white,deu,deu_Latn,kulturellen Weiß,cultural whiteness,0.875,0.5445065498352051,low,1,0
+cultural red,deu,deu_Latn,Kultur-Rot,Cultural red,1.0,0.669529914855957,medium,0,0
+cultural black,deu,deu_Latn,Kulturel schwarz,Cultural black,1.0,0.5454337000846863,low,1,0
+cultural blue,deu,deu_Latn,Kulturblau,Cultured blue,0.8461538461538461,0.8461068868637085,high,0,0
+cultural green,deu,deu_Latn,Kulturgrün,Culturally green,0.9333333333333333,0.8129915595054626,high,0,0
+cultural yellow,deu,deu_Latn,Kulturgelb,Culture yellow,0.896551724137931,0.849104642868042,high,0,0
+cultural purple,deu,deu_Latn,Kulturpurpur,Purple culture,0.4827586206896552,0.8511641621589661,high,1,0
+cultural orange,deu,deu_Latn,Kulturorangen,Cultured oranges,0.8387096774193549,0.8081941604614258,high,0,0
+cultural gold,deu,deu_Latn,Kulturgold,Cultural gold,1.0,0.8501671552658081,high,0,0
+cultural silver,deu,deu_Latn,Kultursilber,Manufacture in which the value of all the materials used does not exceed 40% of the ex-works price of the product,0.15625,0.8453112840652466,high,1,0
+cultural dragon,deu,deu_Latn,kultureller Drache,cultural dragon,1.0,0.8313683271408081,high,0,0
+cultural phoenix,deu,deu_Latn,Kulturelle Phönix,Cultural phoenix,1.0,0.7655045986175537,medium,0,0
+cultural lotus,deu,deu_Latn,Kultureller Lotus,Cultural lotus,1.0,0.8280001878738403,high,0,0
+cultural bamboo,deu,deu_Latn,kultureller Bambus,cultural bamboo,1.0,0.8319213390350342,high,0,0
+cultural olive,deu,deu_Latn,Kulturöliven,Cultured olives,0.8275862068965517,0.8130837678909302,high,0,0
+cultural maple,deu,deu_Latn,kulturelle Ahorn,Cultured maple,0.8571428571428571,0.8107751607894897,high,0,0
+cultural totem,deu,deu_Latn,kulturelles Totem,cultural totem,1.0,0.8474889993667603,high,0,0
+cultural emblem,deu,deu_Latn,Kultursymbol,It is a cultural symbol.,0.6153846153846154,0.869991660118103,high,0,0
+cultural anthem,deu,deu_Latn,Kulturhymne,Cultural anthems,0.967741935483871,0.8600291013717651,high,0,0
+cultural flag,deu,deu_Latn,Kulturflagge,Cultural flag,1.0,0.8564992547035217,high,0,0
+cultural icon,deu,deu_Latn,Kultur-Ikon,Icon of culture,0.42857142857142855,0.8706694841384888,high,1,0
+cultural script,deu,deu_Latn,Kulturschrift,Cultural writing,0.7741935483870968,0.7349044680595398,medium,0,0
+cultural calligraphy,deu,deu_Latn,Kulturelle Kalligraphie,Cultural calligraphy,1.0,0.8522632122039795,high,0,0
+cultural lantern,deu,deu_Latn,Kulturlantern,Cultural lanterns,0.9696969696969697,0.8250847458839417,high,0,0
+cultural incense,deu,deu_Latn,kulturelle Räucherstoffe,cultural incense,1.0,0.6663963794708252,medium,0,0
+cultural opera,deu,deu_Latn,Kulturoper,Cultural Europe,0.8275862068965517,0.8275142908096313,high,0,0
+cultural dance,deu,deu_Latn,kultureller Tanz,cultural dance,1.0,0.8424828052520752,high,0,0
+cultural music,deu,deu_Latn,Kulturmusik,Cultural music,1.0,0.8524792790412903,high,0,0
+cultural folklore,deu,deu_Latn,Kulturelle Folklore,Cultural folklore,1.0,0.8303649425506592,high,0,0
+cultural myth,deu,deu_Latn,Kulturmythe,Cultural myth,1.0,0.833958625793457,high,0,0
+cultural legend,deu,deu_Latn,Kulturlegende,Cultural legends,0.967741935483871,0.8499248623847961,high,0,0
+cultural oral tradition,deu,deu_Latn,Kulturelle mündliche Tradition,Cultural oral tradition,1.0,0.849263608455658,high,0,0
+cultural epic,deu,deu_Latn,Kultur-Epope,Popes of culture,0.4827586206896552,0.80125492811203,high,1,0
+cultural fable,deu,deu_Latn,Kulturgeschichte,Cultural history,0.6,0.7382347583770752,medium,0,0
+cultural choir,deu,deu_Latn,Kulturkor,Crops,0.3157894736842105,0.857222318649292,high,1,0
+cultural orchestra,deu,deu_Latn,Kulturorchester,Cultural orchestra,1.0,0.8189636468887329,high,0,0
+cultural drumming,deu,deu_Latn,Kulturelle Trommeln,Cultural drums,0.8387096774193549,0.7763475179672241,medium,0,0
+cultural chanting,deu,deu_Latn,Kulturgesang,Cultural singing,0.7272727272727273,0.8093536496162415,high,0,0
+cultural tango,deu,deu_Latn,kultureller Tango,cultural tango,1.0,0.8547552824020386,high,0,0
+cultural flamenco,deu,deu_Latn,Kulturelles Flamenco,Cultural flamenco,1.0,0.8289295434951782,high,0,0
+cultural bharatanatyam,deu,deu_Latn,Kulturelle Bharatanatyam,Cultural Bharatanatyam,1.0,0.7409587502479553,medium,0,0
+cultural kabuki,deu,deu_Latn,kulturelle Kabuki,cultural kabuki,1.0,0.7473948001861572,medium,0,0
+cultural lion dance,deu,deu_Latn,Kultureller Löwen-Tanz,Cultural lion dance,1.0,0.8282422423362732,high,0,0
+cultural dragon dance,deu,deu_Latn,Kultureller Drachentanz,Cultural Dragon Dance,1.0,0.8322803974151611,high,0,0
+cultural totem pole,deu,deu_Latn,Kulturelle Totempole,The cultural dead-end,0.55,0.5888124704360962,low,1,0
+cultural prayer beads,deu,deu_Latn,Kulturelle Gebetsperlen,Cultural Gems of Prayer,0.6818181818181818,0.7966388463973999,medium,0,0
+cultural rosary,deu,deu_Latn,kulturelle Rosenkranz,cultural rosary,1.0,0.7790957689285278,medium,0,0
+cultural chopsticks,deu,deu_Latn,Kultursticks,Cultured sticks,0.7647058823529411,0.6899733543395996,medium,0,0
+cultural tea ceremony,deu,deu_Latn,kulturelle Teezeremonie,cultural tea ceremony,1.0,0.8517692685127258,high,0,0
+cultural martial arts,deu,deu_Latn,Kulturelle Kampfkünste,Cultural martial arts,1.0,0.8546669483184814,high,0,0
+democracy,deu,deu_Latn,Demokratie,Democracy,1.0,0.8566770553588867,high,0,0
+monarchy,deu,deu_Latn,Monarchie,Monarchy,1.0,0.8534208536148071,high,0,0
+republic,deu,deu_Latn,Republik,Republic of the Union,0.5517241379310345,0.8120366930961609,high,0,0
+federal,deu,deu_Latn,Bundesregierung,Federal Government,0.56,0.6476370692253113,medium,0,0
+unitary,deu,deu_Latn,Einheitliche,Uniform,0.5714285714285714,0.5548338890075684,low,1,0
+parliament,deu,deu_Latn,Parlament,Parliament,1.0,0.8466109037399292,high,0,0
+senate,deu,deu_Latn,Senat,Senate,1.0,0.8245714902877808,high,0,0
+constitution,deu,deu_Latn,Verfassung,The Constitution,0.8571428571428571,0.8363772630691528,high,0,0
+bureaucracy,deu,deu_Latn,Bürokratie,Bureaucracy,1.0,0.8684568405151367,high,0,0
+meritocracy,deu,deu_Latn,Meritokratie,Meritocracy,1.0,0.8577224016189575,high,0,0
+oligarchy,deu,deu_Latn,Oligarchie,Oligarchy,1.0,0.8387528657913208,high,0,0
+aristocracy,deu,deu_Latn,die Aristokratie,the aristocracy,0.8461538461538461,0.8149060606956482,high,0,0
+tribunal,deu,deu_Latn,Gerichtshof,Court of Justice,0.16666666666666666,0.7412369251251221,medium,1,0
+mediation,deu,deu_Latn,Vermittlung,Mediation,1.0,0.8371977806091309,high,0,0
+civil law,deu,deu_Latn,Zivilrecht,Civil law,1.0,0.8637667894363403,high,0,0
+common law,deu,deu_Latn,Gemeinschaftsrecht,Community law,0.782608695652174,0.8304486274719238,high,0,0
+customary law,deu,deu_Latn,Gewohnheitsrecht,Customs law,0.8333333333333334,0.8352755308151245,high,0,0
+council,deu,deu_Latn,Ratsvorsitz,President-in-Office of the Council,0.34146341463414637,0.5827454328536987,low,1,0
+chieftain,deu,deu_Latn,Häuptling,Chief .,0.625,0.845956563949585,high,0,0
+citizen,deu,deu_Latn,Staatsbürger,Citizens,0.9333333333333333,0.8394995927810669,high,1,1
+state,deu,deu_Latn,Staatsangehörigkeit,Citizenship,0.125,0.7449252605438232,medium,1,0
+nation,deu,deu_Latn,Nation,Nation,1.0,0.8109604120254517,high,0,0
+border,deu,deu_Latn,Grenze,Boundary,0.42857142857142855,0.8316632509231567,high,1,0
+governance,deu,deu_Latn,Regierungsführung,Governance,1.0,0.843260645866394,high,0,0
+policy,deu,deu_Latn,Politik,Policy,1.0,0.8252362012863159,high,0,0
+regulation,deu,deu_Latn,Verordnung (EG) Nr.,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.13333333333333333,0.5994552373886108,low,1,0
+empire,deu,deu_Latn,Reich,Wealthy,0.15384615384615385,0.713085412979126,medium,1,0
+colonial,deu,deu_Latn,Kolonial,Colonial,1.0,0.7810394167900085,medium,0,0
+decolonization,deu,deu_Latn,Entkolonialisierung,Decolonization,1.0,0.8494873046875,high,0,0
+judiciary,deu,deu_Latn,Justiz,Justice,0.5,0.8599472641944885,high,1,0
+legislature,deu,deu_Latn,Gesetzgeber,Lawmakers,0.3,0.773769199848175,medium,1,0
+executive,deu,deu_Latn,Führungskräfte,Leaders,0.25,0.7439552545547485,medium,1,0
+ministry,deu,deu_Latn,Dienst,Service,0.13333333333333333,0.5155442357063293,low,1,0
+administration,deu,deu_Latn,Verwaltung,Administrative matters,0.6666666666666666,0.8363526463508606,high,0,0
+charter,deu,deu_Latn,Charter,Charter,1.0,0.5826159715652466,low,1,0
+ordinance,deu,deu_Latn,Verordnungsvorschrift,Regulation (EEC) No 1408/71 of the European Parliament and of the Council,0.12195121951219512,0.7204369902610779,medium,1,0
+treaty,deu,deu_Latn,Vertrag,Contract,0.5714285714285714,0.8274093866348267,high,0,0
+diplomacy,deu,deu_Latn,Diplomatie,Diplomacy,1.0,0.8693873882293701,high,0,0
+taxation,deu,deu_Latn,Steuern,Taxes,0.46153846153846156,0.8517913818359375,high,1,0
+public office,deu,deu_Latn,öffentliche Amtsstelle,public office,1.0,0.8064831495285034,high,0,0
+village council,deu,deu_Latn,Dorfrat,Village council,1.0,0.8521486520767212,high,0,0
+city council,deu,deu_Latn,Stadtrat,City Council,1.0,0.8487139940261841,high,0,0
+mayor,deu,deu_Latn,Bürgermeister,Mayor,1.0,0.8323410749435425,high,1,1
+governor,deu,deu_Latn,Regierungschef,Head of Government,0.46153846153846156,0.8370249271392822,high,1,0
+public democracy,deu,deu_Latn,öffentliche Demokratie,public democracy,1.0,0.8371835947036743,high,0,0
+public monarchy,deu,deu_Latn,öffentliche Monarchie,public monarchy,1.0,0.839523196220398,high,0,0
+public republic,deu,deu_Latn,öffentliche Republik,the public republic,0.8823529411764706,0.8325725197792053,high,0,0
+public federal,deu,deu_Latn,öffentliche Bundesregierung,Federal government,0.4375,0.6244849562644958,medium,1,0
+public unitary,deu,deu_Latn,öffentliche Einheit,public unit,0.88,0.669750452041626,medium,0,0
+public parliament,deu,deu_Latn,öffentliches Parlament,Parliament of the People's Republic of China,0.32786885245901637,0.8273829221725464,high,1,0
+public senate,deu,deu_Latn,öffentlicher Senat,Public Senate,1.0,0.8278490900993347,high,0,0
+public constitution,deu,deu_Latn,öffentliche Verfassung,public constitution,1.0,0.835487425327301,high,0,0
+public bureaucracy,deu,deu_Latn,öffentliche Bürokratie,Public bureaucracy,1.0,0.836091935634613,high,0,0
+public meritocracy,deu,deu_Latn,öffentliche Meritokratie,public meritocracy,1.0,0.827349066734314,high,0,0
+public oligarchy,deu,deu_Latn,Öffentliche Oligarchie,Public oligarchy,1.0,0.8511170744895935,high,0,0
+public aristocracy,deu,deu_Latn,öffentliche Aristokratie,Public aristocracy,1.0,0.819480299949646,high,0,0
+public tribunal,deu,deu_Latn,öffentliches Gericht,Court of First Instance,0.15789473684210525,0.8233206272125244,high,1,0
+public mediation,deu,deu_Latn,öffentliche Vermittlung,Public mediation,1.0,0.830798864364624,high,0,0
+public civil law,deu,deu_Latn,öffentliches Zivilrecht,Public civil law,1.0,0.8460953235626221,high,0,0
+public common law,deu,deu_Latn,öffentliches gemeinsames Recht,Common public law,0.5882352941176471,0.8333984017372131,high,0,0
+public customary law,deu,deu_Latn,öffentliches Gewohnheitsrecht,Public customary law,1.0,0.8348902463912964,high,0,0
+public council,deu,deu_Latn,öffentlicher Rat,Council of Ministers,0.4117647058823529,0.813340425491333,high,1,0
+public chieftain,deu,deu_Latn,Staatschef,Head of State,0.27586206896551724,0.7888237237930298,medium,1,0
+public citizen,deu,deu_Latn,Staatsbürger,Citizens,0.6363636363636364,0.8183980584144592,high,1,1
+public state,deu,deu_Latn,öffentlicher Staat,publicly owned enterprises,0.47368421052631576,0.8372527956962585,high,1,0
+public nation,deu,deu_Latn,öffentliche Nation,public nation,1.0,0.8328748941421509,high,0,0
+public border,deu,deu_Latn,öffentliche Grenze,public border,1.0,0.8347879648208618,high,0,0
+public governance,deu,deu_Latn,öffentliche Regierungsführung,public governance,1.0,0.8459826707839966,high,0,0
+public policy,deu,deu_Latn,öffentliche Ordnung,Public policy,1.0,0.8230829238891602,high,0,0
+public regulation,deu,deu_Latn,öffentliche Regulierung,public regulation,1.0,0.81890869140625,high,0,0
+public empire,deu,deu_Latn,öffentliches Reich,public realm,0.72,0.8357189893722534,high,0,0
+public colonial,deu,deu_Latn,öffentliche Kolonial,public colony,0.8571428571428571,0.6994788646697998,medium,0,0
+public decolonization,deu,deu_Latn,öffentliche Dekolonialisierung,Public decolonization,1.0,0.8360090851783752,high,0,0
+public judiciary,deu,deu_Latn,öffentliche Justiz,Public law,0.6153846153846154,0.8596532344818115,high,0,0
+public legislature,deu,deu_Latn,öffentliche Gesetzgebung,Public law,0.6428571428571429,0.8425216674804688,high,0,0
+public executive,deu,deu_Latn,öffentliche Führungskräfte,Public officials,0.5625,0.8138918280601501,high,0,0
+public ministry,deu,deu_Latn,öffentliche Dienste,public services,0.6,0.8336277604103088,high,0,0
+public administration,deu,deu_Latn,öffentliche Verwaltung,public administration,1.0,0.8589252233505249,high,0,0
+public charter,deu,deu_Latn,öffentliche Charta,public charter,1.0,0.7202141880989075,medium,0,0
+public ordinance,deu,deu_Latn,öffentliche Verordnung,public regulation,0.5454545454545454,0.8058911561965942,high,1,0
+public treaty,deu,deu_Latn,öffentlicher Vertrag,public contract,0.7857142857142857,0.8268876075744629,high,0,0
+public diplomacy,deu,deu_Latn,öffentliche Diplomatie,public diplomacy,1.0,0.8393148183822632,high,0,0
+public taxation,deu,deu_Latn,öffentliche Besteuerung,public taxation,1.0,0.8297363519668579,high,0,0
+public public office,deu,deu_Latn,öffentliche öffentliche Amtsstelle,public office,0.7878787878787878,0.7227843999862671,medium,0,0
+public village council,deu,deu_Latn,öffentlicher Dorfrat,Public village council,1.0,0.8350710272789001,high,0,0
+public city council,deu,deu_Latn,öffentliche Stadtverwaltung,Public administration of the city,0.4230769230769231,0.8498544692993164,high,1,0
+public mayor,deu,deu_Latn,Bürgermeister,Mayor,0.5882352941176471,0.6966159343719482,medium,1,1
+public governor,deu,deu_Latn,öffentlicher Gouverneur,Governor of the State,0.4444444444444444,0.8324877023696899,high,1,0
+state democracy,deu,deu_Latn,Staatsdemokratie,Democracy of the State,0.4864864864864865,0.8615597486495972,high,1,0
+state monarchy,deu,deu_Latn,Staatsmonarchie,State monarchy,1.0,0.8478418588638306,high,0,0
+state republic,deu,deu_Latn,Staatsrepublik,Republic of the Union,0.45714285714285713,0.8295676112174988,high,1,0
+state federal,deu,deu_Latn,Bundesstaat,State of the Union,0.5161290322580645,0.7015829086303711,medium,1,0
+state unitary,deu,deu_Latn,Staatliche Einheit,Unity of the State,0.3225806451612903,0.7609983682632446,medium,1,0
+state parliament,deu,deu_Latn,Staatsparlament,Parliament of the European Union,0.4166666666666667,0.8487262725830078,high,1,0
+state senate,deu,deu_Latn,Staatssenat,State Senate,1.0,0.8469629883766174,high,0,0
+state constitution,deu,deu_Latn,Staatsverfassung,State constitution,1.0,0.8306931257247925,high,0,0
+state bureaucracy,deu,deu_Latn,Staatsbürokratie,State bureaucracy,1.0,0.8556455373764038,high,0,0
+state meritocracy,deu,deu_Latn,Staatliche Meritokratie,State meritocracy,1.0,0.8397138118743896,high,0,0
+state oligarchy,deu,deu_Latn,Staatsoligarchie,State oligarchy,1.0,0.8464673757553101,high,0,0
+state aristocracy,deu,deu_Latn,Staatliche Aristokratie,State aristocracy,1.0,0.8395509719848633,high,0,0
+identity,deu,deu_Latn,Identität,Identity of the person,0.5333333333333333,0.838861346244812,high,1,0
+ethnicity,deu,deu_Latn,ethnische Zugehörigkeit,ethnicity,1.0,0.8530299067497253,high,0,0
+diaspora,deu,deu_Latn,Diaspora,The Diaspora,0.8,0.7677722573280334,medium,0,0
+migration,deu,deu_Latn,Migration,Migration,1.0,0.8413527011871338,high,0,0
+immigrant,deu,deu_Latn,Einwanderer,Immigrants,0.9473684210526315,0.8473642468452454,high,0,0
+refugee,deu,deu_Latn,Flüchtling,Refugees,0.9333333333333333,0.8611486554145813,high,0,0
+minority,deu,deu_Latn,Minderheit,Minority,1.0,0.8261200189590454,high,0,0
+majority,deu,deu_Latn,Mehrheit,Majority,1.0,0.7999372482299805,medium,0,0
+assimilation,deu,deu_Latn,die Assimilation,the assimilation,0.8571428571428571,0.634851336479187,medium,0,0
+integration,deu,deu_Latn,Integration,Inclusion,0.5,0.5994638204574585,low,1,0
+segregation,deu,deu_Latn,Ausgrenzung,Exclusion,0.4,0.8064575791358948,high,1,0
+pluralism,deu,deu_Latn,Pluralismus,Pluralism,1.0,0.8598310947418213,high,0,0
+multiculturalism,deu,deu_Latn,Multikulturalismus,Multiculturalism,1.0,0.8654543161392212,high,0,0
+indigenous,deu,deu_Latn,Einheimische,Indigenous people,0.7407407407407407,0.7903125286102295,medium,1,1
+native,deu,deu_Latn,Einheimische,Indigenous people,0.2608695652173913,0.7569066286087036,medium,1,1
+foreign,deu,deu_Latn,ausländische,Foreign nationals,0.5833333333333334,0.7245551943778992,medium,0,0
+local,deu,deu_Latn,lokalen,local,1.0,0.5855472087860107,low,1,0
+global,deu,deu_Latn,weltweit,Worldwide,0.13333333333333333,0.7929421663284302,medium,1,0
+community,deu,deu_Latn,Gemeinschaft,Community,1.0,0.8096250891685486,high,0,0
+belonging,deu,deu_Latn,Zugehörigkeit,Membership,0.3157894736842105,0.8179500102996826,high,1,0
+language,deu,deu_Latn,Sprache,Language,1.0,0.8111226558685303,high,0,0
+dialect,deu,deu_Latn,Dialekt,Dialogues and dialects,0.4827586206896552,0.833905041217804,high,1,0
+heritage,deu,deu_Latn,Vermächtnis,Inheritance,0.7368421052631579,0.7774571180343628,medium,0,0
+xenophobia,deu,deu_Latn,Fremdenfeindlichkeit,Enmity against strangers,0.23529411764705882,0.8543269038200378,high,1,0
+stereotype,deu,deu_Latn,Stereotypen,Stereotypes,0.9523809523809523,0.8535159230232239,high,0,0
+prejudice,deu,deu_Latn,Vorurteile,Prejudice,1.0,0.8338673114776611,high,0,0
+citizenship,deu,deu_Latn,Staatsbürgerschaft,Citizenship,1.0,0.8515821099281311,high,0,0
+acculturation,deu,deu_Latn,Akkultivierung,Acculturation,1.0,0.8300504684448242,high,0,0
+hybridity,deu,deu_Latn,Hybridität,Hybridity,1.0,0.8571892380714417,high,0,0
+homeland,deu,deu_Latn,Heimat,Home country,0.5,0.8319506049156189,high,1,0
+exile,deu,deu_Latn,Exil,Exile,1.0,0.780756950378418,medium,0,0
+settler,deu,deu_Latn,Siedler,Settlers,0.9333333333333333,0.8561714887619019,high,0,0
+cosmopolitan,deu,deu_Latn,kosmopolitisch,Cosmopolitan,1.0,0.8344988226890564,high,0,0
+transnational,deu,deu_Latn,transnational,transnational,1.0,0.6810621619224548,medium,0,0
+identity politics,deu,deu_Latn,Identitätspolitik,Identity policy,0.875,0.8523301482200623,high,0,0
+mother tongue,deu,deu_Latn,Muttersprache,Mother tongue,1.0,0.8247917294502258,high,0,0
+second language,deu,deu_Latn,Zweite Sprache,Second language,1.0,0.8241108655929565,high,0,0
+local identity,deu,deu_Latn,Einheimische Identität,Indigenous identity,0.6060606060606061,0.8702707886695862,high,0,0
+local ethnicity,deu,deu_Latn,Einheimische ethnische Zugehörigkeit,Indigenous ethnicity,0.6285714285714286,0.8343802690505981,high,0,0
+local diaspora,deu,deu_Latn,lokale Diaspora,Local Diaspora,1.0,0.8450652360916138,high,0,0
+local migration,deu,deu_Latn,lokale Migration,Local migration,1.0,0.8596922755241394,high,0,0
+local immigrant,deu,deu_Latn,Einheimische Einwanderer,Indigenous immigrants,0.6111111111111112,0.8260213732719421,high,0,0
+local refugee,deu,deu_Latn,Einheimische Flüchtlinge,Indigenous refugees,0.5625,0.8266361951828003,high,0,0
+local minority,deu,deu_Latn,lokale Minderheit,Local minority,1.0,0.831856906414032,high,0,0
+local majority,deu,deu_Latn,lokale Mehrheit,Local majority,1.0,0.8492374420166016,high,0,0
+local assimilation,deu,deu_Latn,lokale Assimilation,Local assimilation,1.0,0.5731059312820435,low,1,0
+local integration,deu,deu_Latn,lokale Integration,Local integration,1.0,0.8595802783966064,high,0,0
+local segregation,deu,deu_Latn,Einheimische Segregation,Local segregation,1.0,0.8243128061294556,high,0,0
+local pluralism,deu,deu_Latn,lokaler Pluralismus,Local Pluralism,1.0,0.8555497527122498,high,0,0
+local multiculturalism,deu,deu_Latn,lokale Multikulturalismus,Local multiculturalism,1.0,0.8522011041641235,high,0,0
+local indigenous,deu,deu_Latn,Einheimische Einheimische,Indigenous Indigenous peoples,0.5333333333333333,0.5690822601318359,low,1,0
+local native,deu,deu_Latn,Einheimische,Indigenous people,0.13793103448275862,0.7459388375282288,medium,1,1
+local foreign,deu,deu_Latn,Einheimische ausländische,Domestic and foreign,0.6666666666666666,0.7143058776855469,medium,0,0
+local local,deu,deu_Latn,lokalen lokalen,local local,1.0,0.4896950423717499,low,1,0
+local global,deu,deu_Latn,lokalen und globalen,Local and global,0.8571428571428571,0.5345894694328308,low,1,0
+local community,deu,deu_Latn,Einheimische Gemeinde,Local community,1.0,0.828587532043457,high,0,0
+local belonging,deu,deu_Latn,Einheimische Zugehörigkeit,Indigenous people,0.1875,0.8431429862976074,high,1,0
+local language,deu,deu_Latn,Einheimische Sprache,Indigenous language,0.6060606060606061,0.8375248312950134,high,0,0
+local dialect,deu,deu_Latn,Einheimischer Dialekt,Indigenous dialect,0.5806451612903226,0.8533481955528259,high,0,0
+local heritage,deu,deu_Latn,Einheimisches Erbe,Indigenous heritage,0.6060606060606061,0.8507647514343262,high,0,0
+local xenophobia,deu,deu_Latn,lokale Fremdenfeindlichkeit,local xenophobia,1.0,0.8536323308944702,high,0,0
+local stereotype,deu,deu_Latn,lokale Stereotypen,Local stereotypes,0.9696969696969697,0.845453143119812,high,0,0
+local prejudice,deu,deu_Latn,lokale Vorurteile,Local prejudices,0.967741935483871,0.871484637260437,high,0,0
+local solidarity,deu,deu_Latn,lokale Solidarität,Local solidarity,1.0,0.8710141181945801,high,0,0
+local citizenship,deu,deu_Latn,Einheimische Staatsbürgerschaft,Citizenship of a Member State,0.4782608695652174,0.8540708422660828,high,1,0
+local acculturation,deu,deu_Latn,lokale Akulturation,Local acculturation,1.0,0.8376106023788452,high,0,0
+local hybridity,deu,deu_Latn,lokale Hybridität,local hybridity,1.0,0.8363810777664185,high,0,0
+local homeland,deu,deu_Latn,lokale Heimat,Local homeland,1.0,0.8229761123657227,high,0,0
+local exile,deu,deu_Latn,Einheimisches Exil,Domestic Exile,0.64,0.8402696251869202,high,0,0
+local settler,deu,deu_Latn,Einheimische Siedler,Local settlers,0.9629629629629629,0.8429265022277832,high,0,0
+local cosmopolitan,deu,deu_Latn,lokaler kosmopolitischer,local cosmopolitan,1.0,0.5855251550674438,low,1,0
+local transnational,deu,deu_Latn,lokale transnationale,Local transnational,1.0,0.7113857269287109,medium,0,0
+local identity politics,deu,deu_Latn,lokale Identitätspolitik,Local identity policy,0.9090909090909091,0.8517596125602722,high,0,0
+local mother tongue,deu,deu_Latn,lokale Muttersprache,Local mother tongue,1.0,0.8294259905815125,high,0,0
+local second language,deu,deu_Latn,lokale zweite Sprache,Local second language,1.0,0.8324859142303467,high,0,0
+global identity,deu,deu_Latn,globale Identität,Global identity,1.0,0.8396767377853394,high,0,0
+global ethnicity,deu,deu_Latn,Weltweite ethnische Zugehörigkeit,Worldwide ethnicity,0.6285714285714286,0.8346571922302246,high,0,0
+global diaspora,deu,deu_Latn,weltweite Diaspora,Diaspora worldwide,0.48484848484848486,0.8497145175933838,high,1,0
+global migration,deu,deu_Latn,weltweite Migration,Worldwide migration,0.6285714285714286,0.8358570337295532,high,0,0
+global immigrant,deu,deu_Latn,weltweite Einwanderer,Immigrants from all over the world,0.36,0.8342882990837097,high,1,0
+global refugee,deu,deu_Latn,weltweite Flüchtlinge,Worldwide refugees,0.5625,0.828612208366394,high,0,0
+global minority,deu,deu_Latn,weltweite Minderheit,Global minority,1.0,0.8423631191253662,high,0,0
+global majority,deu,deu_Latn,globale Mehrheit,the global majority,0.8823529411764706,0.8369039297103882,high,0,0
+global assimilation,deu,deu_Latn,globale Assimilation,Global assimilation,1.0,0.5228796005249023,low,1,0
+global integration,deu,deu_Latn,globale Integration,Global integration,1.0,0.8574889302253723,high,0,0
+global segregation,deu,deu_Latn,weltweite Segregation,Worldwide segregation,0.6666666666666666,0.852533757686615,high,0,0
+global pluralism,deu,deu_Latn,Globale Pluralismus,Global pluralism,1.0,0.7794746160507202,medium,0,0
+global multiculturalism,deu,deu_Latn,Globale Multikulturalismus,Global multiculturalism,1.0,0.7956985235214233,medium,0,0
+global indigenous,deu,deu_Latn,Weltweit einheimische,Indigenous peoples worldwide,0.4444444444444444,0.6812648773193359,medium,1,0
+global native,deu,deu_Latn,weltweite Geburtsstätte,Worldwide place of birth,0.21621621621621623,0.7020936608314514,medium,1,0
+global foreign,deu,deu_Latn,weltweite ausländische,Worldwide foreign exchange,0.45,0.509914219379425,low,1,0
+global local,deu,deu_Latn,weltweite lokale,worldwide local,0.5185185185185185,0.6677674055099487,medium,1,0
+global global,deu,deu_Latn,weltweite,Worldwide,0.09090909090909091,0.3926914632320404,low,1,0
+global community,deu,deu_Latn,Weltgemeinschaft,The world community,0.6285714285714286,0.8510225415229797,high,0,0
+global belonging,deu,deu_Latn,weltweite Zugehörigkeit,Worldwide membership,0.2777777777777778,0.8432669639587402,high,1,0
+global language,deu,deu_Latn,Weltsprache,Language of the world,0.4444444444444444,0.8360562324523926,high,1,0
+global dialect,deu,deu_Latn,weltweiter Dialekt,Worldwide dialect,0.5806451612903226,0.8440569639205933,high,0,0
+global heritage,deu,deu_Latn,Weltkulturerbe,World heritage,0.6896551724137931,0.8209854364395142,high,0,0
+global xenophobia,deu,deu_Latn,Globale Fremdenfeindlichkeit,Global hostility to foreigners,0.425531914893617,0.8539546132087708,high,1,0
+greeting,deu,deu_Latn,Begrüßung,Greetings,0.9411764705882353,0.7960739135742188,medium,0,0
+handshake,deu,deu_Latn,Handschlag,Handshake,1.0,0.8234702944755554,high,0,0
+bow,deu,deu_Latn,Bogen,Arches and arches,0.0,0.4641369879245758,low,1,0
+hug,deu,deu_Latn,Umarmung,Embrace,0.0,0.8242555856704712,high,1,0
+kiss,deu,deu_Latn,Kuss,I kissed you .,0.4444444444444444,0.8355106115341187,high,1,0
+gift giving,deu,deu_Latn,Geschenk geben,Giving gifts,0.5217391304347826,0.842191219329834,high,1,0
+hosting,deu,deu_Latn,Gastgeber,Host,0.7272727272727273,0.730471134185791,medium,1,1
+shared meal,deu,deu_Latn,gemeinsame Mahlzeit,common meal,0.45454545454545453,0.8202523589134216,high,1,0
+tea time,deu,deu_Latn,Teezeit,Tea time,1.0,0.8476869463920593,high,0,0
+funeral,deu,deu_Latn,Begräbnis,Funerals,0.9333333333333333,0.8368266820907593,high,1,1
+mourning,deu,deu_Latn,Trauer,Grief,0.3076923076923077,0.8276128172874451,high,1,0
+burial,deu,deu_Latn,Begräbnis,Funerals,0.5714285714285714,0.8443137407302856,high,1,1
+cremation,deu,deu_Latn,Verbrennung,Incineration,0.6666666666666666,0.8556046485900879,high,0,0
+birth,deu,deu_Latn,Geburt,Birth of a child,0.47619047619047616,0.8100765347480774,high,1,0
+naming ceremony,deu,deu_Latn,Namenszeremonie,Ceremony of names,0.5,0.8335404992103577,high,1,0
+coming of age,deu,deu_Latn,Volljährigkeit,Age of majority,0.42857142857142855,0.5804564952850342,low,1,0
+rite of passage,deu,deu_Latn,Übergangsritus,Ritual of transition,0.5142857142857142,0.8126875758171082,high,1,0
+ceremony,deu,deu_Latn,Zeremonie,Ceremony,1.0,0.8423398733139038,high,0,0
+weekday,deu,deu_Latn,Tag der Woche,Day of the week,0.36363636363636365,0.7625360488891602,medium,1,0
+weekend,deu,deu_Latn,Wochenende,The weekend,0.7777777777777778,0.8158026933670044,high,0,0
+workday,deu,deu_Latn,Arbeitstag,Working day,0.7777777777777778,0.8053785562515259,high,0,0
+rest day,deu,deu_Latn,Tag der Ruhe,Day of rest,0.42105263157894735,0.8500392436981201,high,1,0
+queue,deu,deu_Latn,Schlange,Serpent,0.3333333333333333,0.6773329973220825,medium,1,0
+punctuality,deu,deu_Latn,Pünktlichkeit,Punctuality,1.0,0.8414738178253174,high,0,0
+lateness,deu,deu_Latn,Verzögerung,Delay,0.3076923076923077,0.8206303119659424,high,1,0
+privacy,deu,deu_Latn,Privatsphäre,Privacy,1.0,0.8376450538635254,high,0,0
+public space,deu,deu_Latn,öffentlicher Raum,public space,1.0,0.8401327729225159,high,0,0
+neighbor,deu,deu_Latn,Nachbar,Neighbor,1.0,0.825859546661377,high,0,0
+household visit,deu,deu_Latn,Hausbesuch,Home visits,0.6923076923076923,0.8120942711830139,high,0,0
+guest,deu,deu_Latn,Gast,Guests,0.9090909090909091,0.796492338180542,medium,0,0
+host,deu,deu_Latn,Gastgeber,Host,1.0,0.8256934881210327,high,1,1
+table manners,deu,deu_Latn,Tischmanieren,Table manners,1.0,0.8121938109397888,high,0,0
+home cooking,deu,deu_Latn,Zuhause zu kochen,Cooking at Home,0.5185185185185185,0.7687932252883911,medium,1,0
+festival meal,deu,deu_Latn,Festmahlzeit,Feast Meals,0.75,0.8327030539512634,high,0,0
+fast day,deu,deu_Latn,Ein schneller Tag.,It's been a quick day.,0.3333333333333333,0.7240877151489258,medium,1,0
+memorial day,deu,deu_Latn,Gedenktag,Remembrance day,0.6666666666666666,0.8244607448577881,high,0,0
+ancestor day,deu,deu_Latn,Tag der Vorfahren,The Day of the Ancestors,0.4444444444444444,0.8399480581283569,high,1,0
+seasonal ritual,deu,deu_Latn,Saisonrituale,Rituals of the season,0.3333333333333333,0.8481119871139526,high,1,0
+daily greeting,deu,deu_Latn,tägliche Begrüßung,Day by day greetings,0.7058823529411765,0.789465606212616,medium,0,0
+daily handshake,deu,deu_Latn,tägliche Handschlag,daily handshake,1.0,0.7780122756958008,medium,0,0
+daily bow,deu,deu_Latn,tägliche Bogen,daily arches,0.5714285714285714,0.4187321960926056,low,1,0
+daily hug,deu,deu_Latn,tägliche Umarmung,Everyday embrace,0.32,0.778793454170227,medium,1,0
+daily kiss,deu,deu_Latn,täglichen Kuss,a daily kiss,0.9090909090909091,0.8008731007575989,high,0,0
+daily gift giving,deu,deu_Latn,täglich Geschenke geben,Giving gifts every day,0.3076923076923077,0.8034690618515015,high,1,0
+daily hosting,deu,deu_Latn,tägliches Hosting,daily accommodation,0.625,0.7882322669029236,medium,0,0
+daily hospitality,deu,deu_Latn,tägliche Gastfreundschaft,daily hospitality,1.0,0.8309934139251709,high,0,0
+daily shared meal,deu,deu_Latn,tägliche gemeinsame Mahlzeit,daily meal together,0.5555555555555556,0.8312828540802002,high,0,0
+daily banquet,deu,deu_Latn,tägliches Bankett,daily banquet,1.0,0.8276000022888184,high,0,0
+daily tea time,deu,deu_Latn,Tageszeit für Tee,Time of day for tea,0.42424242424242425,0.8444041013717651,high,1,0
+daily funeral,deu,deu_Latn,tägliche Beerdigung,Daily funeral,1.0,0.7807908058166504,medium,0,0
+daily mourning,deu,deu_Latn,tägliche Trauer,daily mourning,1.0,0.811715841293335,high,0,0
+daily burial,deu,deu_Latn,tägliche Begräbnis,Daily funerals,0.7692307692307693,0.7913550138473511,medium,0,0
+daily cremation,deu,deu_Latn,tägliche Verbrennung,daily combustion,0.7741935483870968,0.8052468299865723,high,0,0
+daily birth,deu,deu_Latn,tägliche Geburten,daily births,0.9565217391304348,0.8123965263366699,high,0,0
+daily naming ceremony,deu,deu_Latn,Tägliche Namenszeremonie,Daily naming ceremony,1.0,0.8283881545066833,high,0,0
+daily coming of age,deu,deu_Latn,tägliches Erwachsenwerden,Growing up every day,0.358974358974359,0.8315541744232178,high,1,0
+daily rite of passage,deu,deu_Latn,Täglicher Übergangsritual,Day to day transition ritual,0.32653061224489793,0.7811417579650879,medium,1,0
+daily ceremony,deu,deu_Latn,Tägliche Zeremonie,Day by day ceremony,0.7272727272727273,0.8297196626663208,high,0,0
+daily weekday,deu,deu_Latn,Tag für Tag,Day by day,0.2608695652173913,0.5463059544563293,low,1,1
+daily weekend,deu,deu_Latn,täglich am Wochenende,Every day on weekends,0.6470588235294118,0.7569179534912109,medium,0,0
+daily workday,deu,deu_Latn,täglicher Arbeitstag,daily working day,0.8666666666666667,0.8225523233413696,high,0,0
+daily rest day,deu,deu_Latn,Tag der täglichen Ruhe,Day of daily rest,0.6451612903225806,0.7985332608222961,medium,0,0
+daily queue,deu,deu_Latn,tägliche Warteschlange,daily queue,1.0,0.7834787964820862,medium,0,0
+daily punctuality,deu,deu_Latn,tägliche Pünktlichkeit,daily punctuality,1.0,0.831518292427063,high,0,0
+daily lateness,deu,deu_Latn,tägliche Verzögerung,daily delay,0.64,0.8022323250770569,high,0,0
+daily privacy,deu,deu_Latn,tägliche Privatsphäre,daily privacy,1.0,0.8112136125564575,high,0,0
+daily public space,deu,deu_Latn,täglicher öffentlicher Raum,daily public space,1.0,0.7527623176574707,medium,0,0
+daily neighbor,deu,deu_Latn,täglicher Nachbar,Daily neighbour,0.9655172413793104,0.8159934282302856,high,0,0
+daily household visit,deu,deu_Latn,tägliche Haushaltsaufenthalte,daily household visits,0.9767441860465116,0.7974233031272888,medium,0,0
+daily guest,deu,deu_Latn,täglicher Gast,daily guest,1.0,0.8139334917068481,high,0,0
+daily host,deu,deu_Latn,tägliche Gastgeber,daily hosts,0.9523809523809523,0.7073518633842468,medium,0,0
+daily table manners,deu,deu_Latn,tägliche Tischmanieren,Table manners on a daily basis,0.5306122448979592,0.7975707650184631,medium,1,0
+daily home cooking,deu,deu_Latn,täglich zu Hause kochen,cooking at home every day,0.32558139534883723,0.836804211139679,high,1,0
+daily festival meal,deu,deu_Latn,tägliches Festessen,Daily feasting,0.6666666666666666,0.7628116011619568,medium,0,0
+daily fast day,deu,deu_Latn,Tag für Tag,Day by day,0.6666666666666666,0.40553173422813416,low,1,1
+daily memorial day,deu,deu_Latn,Tag für Tag,Day by day,0.5714285714285714,0.4062547981739044,low,1,1
+daily ancestor day,deu,deu_Latn,Tag für Vorfahren,Day of the Ancestors,0.631578947368421,0.6093233823776245,medium,0,0
+daily seasonal ritual,deu,deu_Latn,Tägliches saisonales Ritual,Daily seasonal ritual,1.0,0.8417273163795471,high,0,0
+household greeting,deu,deu_Latn,Grüße aus dem Haushalt,Greetings from the House,0.38095238095238093,0.783315896987915,medium,1,0
+household handshake,deu,deu_Latn,Haushaltshandshake,Household handshake,1.0,0.6789015531539917,medium,0,0
+household bow,deu,deu_Latn,Haushaltsbogen,Financial statements,0.12121212121212122,0.48893192410469055,low,1,0
+household hug,deu,deu_Latn,Umarmung im Haushalt,Embrace in the household,0.4864864864864865,0.7874383926391602,medium,1,0
+household kiss,deu,deu_Latn,Haushaltskuss,A household kiss,0.9333333333333333,0.7989603281021118,medium,0,0
+household gift giving,deu,deu_Latn,Geschenke für den Haushalt,Gifts for the household,0.4090909090909091,0.8271270990371704,high,1,0
+household hosting,deu,deu_Latn,Haushaltshaltung,Household management,0.5945945945945946,0.7319016456604004,medium,0,0
+household hospitality,deu,deu_Latn,Gastfreundschaft im Haushalt,Hospitality in the household,0.4489795918367347,0.8372542858123779,high,1,0
+household shared meal,deu,deu_Latn,gemeinsame Mahlzeiten für Haushalte,Common meals for households,0.4166666666666667,0.7896020412445068,medium,1,0
+household banquet,deu,deu_Latn,Hausbanquet,House banquet,0.8666666666666667,0.810588538646698,high,0,0
+household tea time,deu,deu_Latn,Zuhause-Teezeit,Home tea time,0.7741935483870968,0.7862016558647156,medium,0,0
+household funeral,deu,deu_Latn,Hausbegräbnis,Funerals at home,0.42424242424242425,0.795170783996582,medium,1,0
+household mourning,deu,deu_Latn,Hausbrüder,Home brothers and sisters,0.27906976744186046,0.400394469499588,low,1,0
+household burial,deu,deu_Latn,Unterkunftsbegräbnis,Funeral accommodation,0.2702702702702703,0.6129992008209229,medium,1,0
+household cremation,deu,deu_Latn,Hausverbrennung,Burning of houses,0.2777777777777778,0.8376514911651611,high,1,0
+household birth,deu,deu_Latn,Geburt im Haushalt,Childbirth in the household,0.42857142857142855,0.8245011568069458,high,1,0
+household naming ceremony,deu,deu_Latn,Namenszeremonie des Haushaltes,Name ceremony of the household,0.32727272727272727,0.7964142560958862,medium,1,0
+household coming of age,deu,deu_Latn,Erwachsenwerden des Haushaltes,Growth of the household,0.391304347826087,0.7737265825271606,medium,1,0
+household rite of passage,deu,deu_Latn,Ritual des Übergangs im Haushalt,Ritual of the transition in the household,0.2727272727272727,0.7742995619773865,medium,1,0
+household ceremony,deu,deu_Latn,Häusliche Zeremonie,Household Ceremony,1.0,0.811011791229248,high,0,0
+public,deu,deu_Latn,der Öffentlichkeit,the public,0.75,0.6679931282997131,medium,0,0
+fast,deu,deu_Latn,Schnell,Hurry up .,0.0,0.8093210458755493,high,1,0
+grand,deu,deu_Latn,Großes,It 's big .,0.125,0.5157061219215393,low,1,0
+gift,deu,deu_Latn,Geschenk,A gift,0.8,0.8296714425086975,high,0,0
+meal,deu,deu_Latn,Mahlzeit,Meals,0.8888888888888888,0.8078563809394836,high,0,0
+custom,deu,deu_Latn,Gewohnheit,Habit,0.18181818181818182,0.8299766182899475,high,1,0

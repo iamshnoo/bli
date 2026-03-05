@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Local env/cache
+.env
+.venv/
+venv/
+.cache/
+
+# Heavy/generated training artifacts
+/logs/
+/models/
+/data/raw/
+/data/processed/
+/outputs/
+/latex/
+/AGENT.md
+/CLAUDE_PLAN.md
+
+# Common large binary artifacts
+*.pt
+*.bin
+*.safetensors
+*.npy
+*.npz
+*.arrow
+*.ds
+
+# LaTeX build scratch
+latex/.build/
+latex/.build2/
+latex/*.aux
+latex/*.bbl
+latex/*.blg
+latex/*.log
+latex/*.out

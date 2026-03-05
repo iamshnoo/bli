@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,fas,pes_Arab,انفرادیسم,I'm isolated.,0.23076923076923078,0.8660053014755249,high,1,0
+collectivism,fas,pes_Arab,اجتماع گرایی,Socialism.,0.45454545454545453,0.8702937364578247,high,1,0
+hierarchy,fas,pes_Arab,سلسله مراتب,The hierarchy.,0.782608695652174,0.8517979979515076,high,0,0
+equality,fas,pes_Arab,برابری,Equality.,0.9411764705882353,0.853765606880188,high,0,0
+authority,fas,pes_Arab,مقام,The official.,0.36363636363636365,0.6944904327392578,medium,1,0
+autonomy,fas,pes_Arab,استقلال,Independence,0.1,0.8409103751182556,high,1,0
+obedience,fas,pes_Arab,اطاعت,Obedience,1.0,0.8408296704292297,high,0,0
+duty,fas,pes_Arab,وظیفه,The duty.,0.6153846153846154,0.8370206356048584,high,0,0
+freedom,fas,pes_Arab,آزادی,The freedom.,0.7368421052631579,0.8472375273704529,high,0,0
+honor,fas,pes_Arab,افتخار,It's an honor.,0.5263157894736842,0.8346092104911804,high,1,0
+shame,fas,pes_Arab,شرمنده,I'm sorry about that.,0.23076923076923078,0.7750937342643738,medium,1,0
+virtue,fas,pes_Arab,فضیلت,Your virtue.,0.6666666666666666,0.811921238899231,high,0,0
+vice,fas,pes_Arab,عیب,The flaw.,0.15384615384615385,0.8112320303916931,high,1,0
+respect,fas,pes_Arab,احترام,Respect.,0.9333333333333333,0.849829375743866,high,1,1
+modesty,fas,pes_Arab,فروتنی,Humility.,0.375,0.8553577661514282,high,1,1
+purity,fas,pes_Arab,طاهری,It's clean.,0.23529411764705882,0.7048836946487427,medium,1,0
+pollution,fas,pes_Arab,آلودگی,The pollution.,0.782608695652174,0.8476883172988892,high,0,0
+face,fas,pes_Arab,چهره,The face.,0.6153846153846154,0.8064459562301636,high,0,0
+reputation,fas,pes_Arab,شهرت,Your fame.,0.2,0.8353509902954102,high,1,0
+hospitality,fas,pes_Arab,مهمان نوازی,Hospitality,1.0,0.8542778491973877,high,0,0
+charity,fas,pes_Arab,خیریه,It's charity.,0.7,0.8463969230651855,high,0,0
+cooperation,fas,pes_Arab,همکاری,Co-operation,0.9565217391304348,0.8379881381988525,high,0,0
+competition,fas,pes_Arab,رقابت,Competition.,0.9565217391304348,0.8381437659263611,high,0,0
+fairness,fas,pes_Arab,عدالت,Justice.,0.25,0.8378883600234985,high,1,1
+justice,fas,pes_Arab,عدالت,Justice.,0.9333333333333333,0.8494471311569214,high,1,1
+taboo,fas,pes_Arab,ممنوعیت,The ban.,0.3076923076923077,0.832491397857666,high,1,0
+tradition,fas,pes_Arab,سنت,- What?,0.125,0.8457185626029968,high,1,0
+modernity,fas,pes_Arab,مدرنیت,The modernity.,0.782608695652174,0.8674748539924622,high,0,0
+sacred,fas,pes_Arab,مقدس,The Holy One.,0.10526315789473684,0.8158259391784668,high,1,0
+secular,fas,pes_Arab,سکولار,Secular.,0.9333333333333333,0.6981588006019592,medium,0,0
+conformity,fas,pes_Arab,مطابقت,Matching,0.2222222222222222,0.8520514965057373,high,1,0
+dissent,fas,pes_Arab,مخالفت,Opposition,0.23529411764705882,0.7977347373962402,medium,1,0
+restraint,fas,pes_Arab,بازدارنده,The blocker.,0.09523809523809523,0.6462417840957642,medium,1,0
+indulgence,fas,pes_Arab,بخشیدن,Forgiveness.,0.36363636363636365,0.814509391784668,high,1,0
+solidarity,fas,pes_Arab,همبستگی,Co-operation,0.18181818181818182,0.8447986841201782,high,1,0
+merit,fas,pes_Arab,شایستگی,Qualifications,0.21052631578947367,0.8464773893356323,high,1,0
+trust,fas,pes_Arab,اعتماد,Confidence.,0.0,0.8552365899085999,high,1,0
+loyalty,fas,pes_Arab,وفاداری,Loyalty,1.0,0.866773784160614,high,0,0
+integrity,fas,pes_Arab,صداقت,Your honesty.,0.36363636363636365,0.8502835035324097,high,1,0
+discretion,fas,pes_Arab,اختیاری,It's optional.,0.5,0.8285324573516846,high,1,0
+humility,fas,pes_Arab,فروتنی,Humility.,0.9411764705882353,0.8594369888305664,high,1,1
+discipline,fas,pes_Arab,تنبیه,It's a punishment.,0.21428571428571427,0.8415552973747253,high,1,0
+self control,fas,pes_Arab,کنترل خود,Control yourself.,0.4827586206896552,0.836883008480072,high,1,0
+deference,fas,pes_Arab,احترام,Respect.,0.35294117647058826,0.8283414840698242,high,1,1
+civic individualism,fas,pes_Arab,انفرادیسم مدنی,Civic isolationism.,0.5789473684210527,0.8637116551399231,high,0,0
+civic collectivism,fas,pes_Arab,کلکتیویسم مدنی,I'm a civic collectivist.,0.7906976744186046,0.85863196849823,high,0,0
+civic hierarchy,fas,pes_Arab,سلسله مراتب مدنی,Civil ranks,0.5384615384615384,0.8680527806282043,high,1,0
+civic equality,fas,pes_Arab,برابری مدنی,Civil equality,0.9285714285714286,0.8679416179656982,high,0,0
+civic authority,fas,pes_Arab,مقام مدنی,Civil office,0.37037037037037035,0.7964783906936646,medium,1,0
+civic autonomy,fas,pes_Arab,استقلال مدنی,Civil independence,0.3125,0.8437628746032715,high,1,0
+civic obedience,fas,pes_Arab,اطاعت از مردم,Obedience to the People,0.47368421052631576,0.8019087910652161,high,1,0
+civic duty,fas,pes_Arab,وظیفه مدنی,Civil duty,0.9,0.8665159344673157,high,0,0
+civic freedom,fas,pes_Arab,آزادی مدنی,Civil liberties,0.5,0.877267599105835,high,1,0
+civic honor,fas,pes_Arab,افتخار مدنی,It's a civic honor.,0.7333333333333333,0.8409554958343506,high,0,0
+civic shame,fas,pes_Arab,شرم مدنی,It's a civil disgrace.,0.36363636363636365,0.8310021162033081,high,1,0
+civic virtue,fas,pes_Arab,فضیلت مدنی,Your civic virtue.,0.8,0.8534940481185913,high,0,0
+civic vice,fas,pes_Arab,نقص مدنی,Civilian disability,0.41379310344827586,0.784120500087738,medium,1,0
+civic respect,fas,pes_Arab,احترام مدنی,Civic respect.,0.9629629629629629,0.8713446259498596,high,1,1
+civic modesty,fas,pes_Arab,متواضعیت مدنی,Civil humility,0.5925925925925926,0.8421772718429565,high,0,0
+civic purity,fas,pes_Arab,پاکیزگی مدنی,Civic cleanliness,0.4827586206896552,0.8469606041908264,high,1,0
+civic pollution,fas,pes_Arab,آلودگی مدنی,Civil pollution,0.9333333333333333,0.8646893501281738,high,0,0
+civic face,fas,pes_Arab,چهره مدنی,A civilian face.,0.6923076923076923,0.8497011065483093,high,0,0
+civic reputation,fas,pes_Arab,شهرت مدنی,Civic reputation,1.0,0.8480315208435059,high,0,0
+civic hospitality,fas,pes_Arab,مهمان نوازی مدنی,Civil hospitality,0.9411764705882353,0.871387243270874,high,0,0
+civic charity,fas,pes_Arab,خیریه مدنی,It's a civic charity.,0.7647058823529411,0.8364670872688293,high,0,0
+civic cooperation,fas,pes_Arab,همکاری مدنی,Civil cooperation,0.9411764705882353,0.8614231944084167,high,0,0
+civic competition,fas,pes_Arab,رقابت مدنی,Civil competition,0.9411764705882353,0.8620590567588806,high,0,0
+civic fairness,fas,pes_Arab,عدالت مدنی,Civil justice,0.4444444444444444,0.8636510372161865,high,1,1
+civic justice,fas,pes_Arab,عدالت مدنی,Civil justice,0.9230769230769231,0.8729891180992126,high,1,1
+civic taboo,fas,pes_Arab,ممنوعیت مدنی,The Civil Prohibition,0.4375,0.8378136157989502,high,1,0
+civic tradition,fas,pes_Arab,سنت مدنی,It's a civic tradition.,0.7894736842105263,0.8519272804260254,high,0,0
+civic modernity,fas,pes_Arab,مدرنیت مدنی,Civic modernity,1.0,0.8655109405517578,high,0,0
+civic sacred,fas,pes_Arab,مدنی مقدس,A holy citizen.,0.2962962962962963,0.5661213397979736,low,1,0
+civic secular,fas,pes_Arab,مدنی سکولار,A secular citizen.,0.5161290322580645,0.8091261386871338,high,1,0
+civic conformity,fas,pes_Arab,موافقت مدنی,Consent of the citizen.,0.3076923076923077,0.7754117250442505,medium,1,0
+civic dissent,fas,pes_Arab,مخالفان مدنی,Civil dissidents,0.8275862068965517,0.845667839050293,high,0,0
+civic restraint,fas,pes_Arab,بازدارندگی مدنی,Civil restraint,0.9333333333333333,0.8150175213813782,high,0,0
+civic indulgence,fas,pes_Arab,رضایت مدنی,Civil satisfaction,0.4117647058823529,0.8160126209259033,high,1,0
+civic solidarity,fas,pes_Arab,همبستگی مدنی,Civil cohesion,0.4666666666666667,0.8589614629745483,high,1,0
+civic merit,fas,pes_Arab,شایستگی مدنی,Civil merit,0.9090909090909091,0.8685506582260132,high,0,0
+civic trust,fas,pes_Arab,اعتماد مدنی,Civil trust,0.9090909090909091,0.859774112701416,high,0,0
+civic loyalty,fas,pes_Arab,وفاداری مدنی,Civil loyalty,0.9230769230769231,0.8779537081718445,high,0,0
+civic integrity,fas,pes_Arab,یکپارچگی مدنی,Civil integrity,0.9333333333333333,0.7954075932502747,medium,0,0
+civic discretion,fas,pes_Arab,امتیازات مدنی,Civil privileges,0.4375,0.5941499471664429,low,1,0
+civic humility,fas,pes_Arab,فروتنی مدنی,Civil humility,0.9285714285714286,0.8584033250808716,high,0,0
+civic discipline,fas,pes_Arab,نظم مدنی,Civil order,0.5185185185185185,0.8624608516693115,high,1,0
+civic self control,fas,pes_Arab,کنترل شخصی مدنی,Civilian personal control,0.6976744186046512,0.8582037687301636,high,0,0
+civic deference,fas,pes_Arab,احترام مدنی,Civic respect.,0.6206896551724138,0.8145105838775635,high,1,1
+moral individualism,fas,pes_Arab,انفرادیت اخلاقی,Moral isolation,0.47058823529411764,0.8743571043014526,high,1,0
+moral collectivism,fas,pes_Arab,اجتماع گرایی اخلاقی,Moral socialism.,0.6470588235294118,0.8666800260543823,high,0,0
+moral hierarchy,fas,pes_Arab,سلسله مراتب اخلاقی,The moral hierarchy.,0.8571428571428571,0.8706285357475281,high,0,0
+moral equality,fas,pes_Arab,برابری اخلاقی,Moral equality,1.0,0.8757139444351196,high,0,0
+moral authority,fas,pes_Arab,مقام اخلاقی,Moral authority,1.0,0.7985058426856995,medium,0,0
+moral autonomy,fas,pes_Arab,استقلال اخلاقی,Moral independence,0.4375,0.8482154607772827,high,1,0
+moral obedience,fas,pes_Arab,اطاعت اخلاقی,Moral obedience,1.0,0.8522704839706421,high,0,0
+moral duty,fas,pes_Arab,وظیفه اخلاقی,Moral duty.,0.9523809523809523,0.8597103357315063,high,0,0
+moral freedom,fas,pes_Arab,آزادی اخلاقی,Moral freedom,1.0,0.8741375207901001,high,0,0
+moral honor,fas,pes_Arab,احترام اخلاقی,Moral respect.,0.56,0.8511598110198975,high,0,0
+moral shame,fas,pes_Arab,شرم اخلاقی,Moral shame.,0.9565217391304348,0.8394984602928162,high,0,0
+moral virtue,fas,pes_Arab,فضیلت اخلاقی,Your moral virtue.,0.8,0.8540258407592773,high,0,0
+family,fas,pes_Arab,خانواده,Family.,0.9230769230769231,0.8475183844566345,high,1,1
+kinship,fas,pes_Arab,خویشاوندی,Relatives,0.25,0.830207884311676,high,1,0
+mother,fas,pes_Arab,مادر,My mother.,0.75,0.8202449083328247,high,0,0
+father,fas,pes_Arab,پدر,Father.,0.9230769230769231,0.837544322013855,high,0,0
+parent,fas,pes_Arab,پدر و مادر,Parents.,0.8571428571428571,0.7615181803703308,medium,0,0
+child,fas,pes_Arab,کودک,The baby.,0.14285714285714285,0.860667884349823,high,1,0
+daughter,fas,pes_Arab,دختر,The girl.,0.23529411764705882,0.8436031937599182,high,1,0
+son,fas,pes_Arab,پسر,That's my boy.,0.23529411764705882,0.8640034794807434,high,1,0
+uncle,fas,pes_Arab,عمو,My uncle.,0.7142857142857143,0.83519047498703,high,0,0
+aunt,fas,pes_Arab,خاله,My aunt.,0.6666666666666666,0.8339023590087891,high,0,0
+cousin,fas,pes_Arab,پسر عموی,My cousin.,0.75,0.844019889831543,high,0,0
+grandmother,fas,pes_Arab,مادربزرگ,My grandmother.,0.8461538461538461,0.8311282396316528,high,0,0
+grandfather,fas,pes_Arab,پدربزرگ,My grandfather.,0.8461538461538461,0.8309687972068787,high,0,0
+nephew,fas,pes_Arab,برادرزاده,My cousin.,0.125,0.8573387265205383,high,1,0
+niece,fas,pes_Arab,خواهر خواهر,"My sister, my sister.",0.23076923076923078,0.5611908435821533,low,1,0
+ancestor,fas,pes_Arab,اجداد,The ancestors.,0.7272727272727273,0.8125985860824585,high,0,0
+lineage,fas,pes_Arab,نسب,The lineage.,0.7368421052631579,0.7787637114524841,medium,0,0
+clan,fas,pes_Arab,قبیله,The tribe.,0.0,0.8436942100524902,high,1,0
+household,fas,pes_Arab,خانواده,Family.,0.125,0.8280817270278931,high,1,1
+joint family,fas,pes_Arab,خانواده مشترک,Common family.,0.6923076923076923,0.8479923009872437,high,0,0
+nuclear family,fas,pes_Arab,خانواده هسته ای,The nuclear family.,0.8484848484848485,0.8600187301635742,high,0,0
+marriage,fas,pes_Arab,ازدواج,Marriage,1.0,0.8488171100616455,high,0,0
+wedding,fas,pes_Arab,عروسی,The wedding.,0.7368421052631579,0.8570207357406616,high,0,0
+bride,fas,pes_Arab,عروس,The bride.,0.6666666666666666,0.831601619720459,high,0,0
+groom,fas,pes_Arab,داماد,The son-in-law.,0.1,0.7255796194076538,medium,1,0
+engagement,fas,pes_Arab,دخالت,Get in the way.,0.24,0.7383596301078796,medium,1,0
+dowry,fas,pes_Arab,مهر,The seal.,0.0,0.767457127571106,medium,1,0
+bridewealth,fas,pes_Arab,ثروت عروسی,The wealth of a wedding.,0.4,0.7096714973449707,medium,1,0
+inheritance,fas,pes_Arab,ارث,The inheritance.,0.8148148148148148,0.8306684494018555,high,0,0
+widow,fas,pes_Arab,بیوه,A widow.,0.7692307692307693,0.849633514881134,high,1,1
+widower,fas,pes_Arab,بیوه,A widow.,0.6666666666666666,0.8119226694107056,high,1,1
+courtship,fas,pes_Arab,دوست داشتنی,That's lovely.,0.08695652173913043,0.41441282629966736,low,1,0
+matchmaker,fas,pes_Arab,سازنده ازدواج,The Builder of Marriage,0.24242424242424243,0.45250311493873596,low,1,0
+surname,fas,pes_Arab,نام خانوادگی,Family name.,0.42105263157894735,0.8411275744438171,high,1,1
+patronymic,fas,pes_Arab,نام خانوادگی,Family name.,0.2727272727272727,0.7701287269592285,medium,1,1
+matronymic,fas,pes_Arab,ماترونیم,We're going home.,0.07407407407407407,0.5934933423995972,low,1,0
+firstborn,fas,pes_Arab,اولین فرزند,First child.,0.47619047619047616,0.8637992739677429,high,1,0
+heir,fas,pes_Arab,وارث,The heir.,0.6153846153846154,0.8196883201599121,high,0,0
+filial piety,fas,pes_Arab,تقوا فرزندان,Fear of Children,0.2857142857142857,0.679345965385437,medium,1,0
+caregiving,fas,pes_Arab,مراقبت,Take care of yourself.,0.25,0.7393753528594971,medium,1,0
+motherhood,fas,pes_Arab,مادر شدن,They become mothers.,0.4,0.8588873744010925,high,1,0
+fatherhood,fas,pes_Arab,پدر بودن,They were fathers.,0.42857142857142855,0.8542322516441345,high,1,0
+in laws,fas,pes_Arab,در قوانین,In the rules.,0.5,0.7073332071304321,medium,1,0
+brother in law,fas,pes_Arab,شوهر شوهر,Husband to husband.,0.24242424242424243,0.4114411771297455,low,1,0
+sister in law,fas,pes_Arab,خواهر شوهر,The sister-in-law.,0.7096774193548387,0.7714852094650269,medium,0,0
+ancestral home,fas,pes_Arab,خانه اجداد,The ancestral home.,0.8484848484848485,0.8608731627464294,high,0,0
+household labor,fas,pes_Arab,کار خانوادگی,Family business.,0.1935483870967742,0.8347073793411255,high,1,0
+extended family,fas,pes_Arab,خانواده گسترده,Large family.,0.5714285714285714,0.738231360912323,medium,0,0
+extended kinship,fas,pes_Arab,خویشاوندی گسترده,Extensive kinship,0.8484848484848485,0.8068197965621948,high,0,0
+extended mother,fas,pes_Arab,مادر بزرگ,My grandmother.,0.5333333333333333,0.6819596886634827,medium,1,0
+extended father,fas,pes_Arab,پدر بزرگ,My grandfather.,0.5333333333333333,0.6910685300827026,medium,1,0
+extended parent,fas,pes_Arab,پدر و مادر بزرگ,My grandparents.,0.5161290322580645,0.666674017906189,medium,1,0
+extended child,fas,pes_Arab,فرزند بزرگ,The eldest son.,0.3448275862068966,0.6656451225280762,medium,1,0
+extended daughter,fas,pes_Arab,دختر بزرگ,The big girl.,0.26666666666666666,0.6668509244918823,medium,1,0
+extended son,fas,pes_Arab,پسر بزرگ,The big boy.,0.25,0.6231735944747925,medium,1,0
+extended uncle,fas,pes_Arab,عمو بزرگ,My great uncle.,0.5517241379310345,0.7715400457382202,medium,0,0
+extended aunt,fas,pes_Arab,عمه بزرگ,My great-aunt.,0.4444444444444444,0.7995122075080872,medium,1,0
+extended cousin,fas,pes_Arab,پسر عموی بزرگ,Big cousin.,0.5384615384615384,0.839232861995697,high,1,0
+extended grandmother,fas,pes_Arab,مادربزرگ بزرگ,My great-grandmother.,0.6341463414634146,0.7712017297744751,medium,0,0
+extended grandfather,fas,pes_Arab,پدربزرگ بزرگ,My great-grandfather.,0.6341463414634146,0.788730800151825,medium,0,0
+extended nephew,fas,pes_Arab,برادرزاده بزرگ,Big cousin.,0.07692307692307693,0.7847651839256287,medium,1,1
+extended niece,fas,pes_Arab,خواهر خواهر بزرگ,Big sister.,0.16,0.4928838908672333,low,1,0
+extended ancestor,fas,pes_Arab,اجداد گسترده,Extensive ancestors,0.8333333333333334,0.6116105318069458,medium,0,0
+extended lineage,fas,pes_Arab,نسب طولانی,Long lineage,0.6428571428571429,0.6386498808860779,medium,0,0
+extended clan,fas,pes_Arab,قبیله گسترده,A large tribe.,0.2222222222222222,0.6384165287017822,medium,1,0
+extended household,fas,pes_Arab,خانواده های بزرگ,Large families.,0.18181818181818182,0.8115041255950928,high,1,0
+extended joint family,fas,pes_Arab,خانواده مشترک گسترش یافته,The common family expanded.,0.375,0.7801237106323242,medium,1,0
+extended nuclear family,fas,pes_Arab,خانواده هسته ای گسترده,Large nuclear family.,0.7272727272727273,0.7863592505455017,medium,0,0
+extended marriage,fas,pes_Arab,ازدواج طولانی مدت,A long marriage,0.625,0.7928033471107483,medium,1,1
+extended wedding,fas,pes_Arab,ازدواج طولانی مدت,A long marriage,0.1935483870967742,0.744885265827179,medium,1,1
+extended bride,fas,pes_Arab,عروس بزرگ,The great bride.,0.5333333333333333,0.5094864964485168,low,1,0
+extended groom,fas,pes_Arab,عروسی طولانی,A long wedding.,0.27586206896551724,0.4795418381690979,low,1,0
+extended engagement,fas,pes_Arab,مشارکت طولانی تر,Longer involvement,0.3783783783783784,0.7677408456802368,medium,1,0
+extended dowry,fas,pes_Arab,مهریه تمدید شده,The fever is prolonged.,0.2702702702702703,0.8534466028213501,high,1,0
+extended bridewealth,fas,pes_Arab,ثروت عروسی گسترش یافته,The wealth of marriage has expanded.,0.2857142857142857,0.6154094934463501,medium,1,0
+extended inheritance,fas,pes_Arab,موروثیت گسترش یافته,The legacy is widespread.,0.2222222222222222,0.7684304714202881,medium,1,0
+extended widow,fas,pes_Arab,بیوه بزرگ,The great widow.,0.5333333333333333,0.6885486841201782,medium,1,1
+extended widower,fas,pes_Arab,بیوه بزرگ,The great widow.,0.5,0.6827872395515442,medium,1,1
+extended courtship,fas,pes_Arab,ازدواج طولانی مدت,A long marriage,0.06060606060606061,0.8074744343757629,high,1,1
+extended matchmaker,fas,pes_Arab,سازنده ازدواج طولانی مدت,The Builder of a Long Marriage,0.32653061224489793,0.43801233172416687,low,1,0
+extended surname,fas,pes_Arab,نام خانوادگی گسترده,Large family name.,0.35294117647058826,0.6640321016311646,medium,1,1
+extended patronymic,fas,pes_Arab,نام خانوادگی گسترده,Large family name.,0.2702702702702703,0.6294886469841003,medium,1,1
+extended matronymic,fas,pes_Arab,ماترونیمک گسترش یافته,Matronymics has expanded.,0.45454545454545453,0.8379440307617188,high,1,0
+extended firstborn,fas,pes_Arab,اولین فرزند بلند مدت,The first long-term child.,0.4090909090909091,0.5344573855400085,low,1,0
+extended heir,fas,pes_Arab,وارث تمدید شده,The heir is extended.,0.47058823529411764,0.7429718375205994,medium,1,0
+extended filial piety,fas,pes_Arab,تقوا فرزندانی گسترش یافته,Godly fear is widespread.,0.17391304347826086,0.5019958019256592,low,1,0
+extended caregiving,fas,pes_Arab,مراقبت های طولانی مدت,Long-term care,0.42424242424242425,0.844709038734436,high,1,0
+extended motherhood,fas,pes_Arab,مادر شدن طولانی مدت,Being a mother for a long time.,0.44,0.6059401631355286,medium,1,0
+extended fatherhood,fas,pes_Arab,پدر شدن طولانی مدت,Being a long-term father.,0.45454545454545453,0.5939563512802124,low,1,0
+extended in laws,fas,pes_Arab,در قوانین گسترش یافته است,It's widespread in rules.,0.4878048780487805,0.658089816570282,medium,1,0
+extended brother in law,fas,pes_Arab,برادرزاده بزرگ,Big cousin.,0.23529411764705882,0.7623699903488159,medium,1,1
+extended sister in law,fas,pes_Arab,خواهر شوهر بزرگ,The older sister-in-law.,0.6521739130434783,0.6842986941337585,medium,0,0
+extended ancestral home,fas,pes_Arab,خانه اجداد گسترش یافته,The ancestral home expanded.,0.6274509803921569,0.773574948310852,medium,0,0
+extended household labor,fas,pes_Arab,کار خانوادگی طولانی مدت,A long family business.,0.2127659574468085,0.8353270292282104,high,1,0
+nuclear kinship,fas,pes_Arab,خویشاوندی هسته ای,Nuclear kinship,1.0,0.859473705291748,high,0,0
+nuclear mother,fas,pes_Arab,مادر هسته ای,The nuclear mother.,0.8484848484848485,0.8585001230239868,high,1,1
+nuclear father,fas,pes_Arab,پدر هسته ای,The father of nuclear.,0.3888888888888889,0.8614940643310547,high,1,0
+nuclear parent,fas,pes_Arab,مادر هسته ای,The nuclear mother.,0.5454545454545454,0.8539946675300598,high,1,1
+nuclear child,fas,pes_Arab,کودک هسته ای,The nuclear child.,0.8387096774193549,0.874613344669342,high,0,0
+nuclear daughter,fas,pes_Arab,دختر هسته ای,Nuclear daughter.,0.9696969696969697,0.87095707654953,high,0,0
+religion,fas,pes_Arab,مذهب,Religion,1.0,0.8537687659263611,high,0,0
+ritual,fas,pes_Arab,مراسم,The ceremony.,0.10526315789473684,0.8093106746673584,high,1,1
+prayer,fas,pes_Arab,دعا,Prayer,1.0,0.8332353830337524,high,0,0
+temple,fas,pes_Arab,معبد,The temple.,0.7058823529411765,0.8513220548629761,high,0,0
+church,fas,pes_Arab,کلیسا,The church.,0.7058823529411765,0.8600857257843018,high,0,0
+mosque,fas,pes_Arab,مسجد,The mosque.,0.7058823529411765,0.8551531434059143,high,0,0
+synagogue,fas,pes_Arab,عبادتگاه,The Temple,0.10526315789473684,0.8453508019447327,high,1,1
+shrine,fas,pes_Arab,زیارتگاه,The pilgrimage site.,0.3076923076923077,0.8385324478149414,high,1,0
+pilgrimage,fas,pes_Arab,زیارت,The pilgrimage.,0.8,0.8319314122200012,high,0,0
+scripture,fas,pes_Arab,کتاب مقدّس,The Bible,0.2222222222222222,0.8539868593215942,high,1,1
+monk,fas,pes_Arab,راهب,The monk.,0.6153846153846154,0.8551037907600403,high,1,1
+priest,fas,pes_Arab,کشیش,The priest.,0.7058823529411765,0.8582216501235962,high,0,0
+imam,fas,pes_Arab,امام,In front of me.,0.21052631578947367,0.8310346603393555,high,1,0
+nun,fas,pes_Arab,راهب,The monk.,0.16666666666666666,0.6420224905014038,medium,1,1
+saint,fas,pes_Arab,مُقدّس,It's sacred.,0.23529411764705882,0.814322829246521,high,1,0
+martyr,fas,pes_Arab,شهید,The martyr.,0.7058823529411765,0.8191064596176147,high,0,0
+prophet,fas,pes_Arab,نبوی,You didn't.,0.2222222222222222,0.7965651154518127,medium,1,0
+zakat,fas,pes_Arab,زکات,The charity.,0.23529411764705882,0.8486645221710205,high,1,0
+tithe,fas,pes_Arab,دسم,The tenth.,0.4,0.5911849737167358,low,1,0
+karma,fas,pes_Arab,کارما,This is Karma.,0.5263157894736842,0.8343123197555542,high,1,0
+altar,fas,pes_Arab,قربانگاه,"Sir, please.",0.11764705882352941,0.8237080574035645,high,1,0
+incense,fas,pes_Arab,بوخوری,You smell it.,0.1,0.5758303999900818,low,1,0
+rosary,fas,pes_Arab,رزری,The reservation.,0.18181818181818182,0.8353416919708252,high,1,0
+blessing,fas,pes_Arab,برکت,Blessings,0.9411764705882353,0.8057966232299805,high,0,0
+curse,fas,pes_Arab,لعنت,Shit! Shit!,0.125,0.775156557559967,medium,1,0
+sabbath,fas,pes_Arab,شنبه,It's Saturday.,0.2857142857142857,0.7658043503761292,medium,1,0
+halal,fas,pes_Arab,حلال,It's all right.,0.3,0.7876142263412476,medium,1,0
+kosher,fas,pes_Arab,کاشر,I wish.,0.3076923076923077,0.6813312768936157,medium,1,0
+fasting,fas,pes_Arab,روزه گرفتن,They fasted.,0.42105263157894735,0.857266902923584,high,1,0
+sacrifice,fas,pes_Arab,قربانی,The victim.,0.2,0.7875274419784546,medium,1,0
+monastery,fas,pes_Arab,صومعه,The monastery.,0.782608695652174,0.8517823815345764,high,1,1
+convent,fas,pes_Arab,صومعه,The monastery.,0.2857142857142857,0.8448082804679871,high,1,1
+abbey,fas,pes_Arab,صومعه,The monastery.,0.3157894736842105,0.8259413838386536,high,1,1
+minaret,fas,pes_Arab,مینار,The minar.,0.5882352941176471,0.8584743738174438,high,0,0
+pagoda,fas,pes_Arab,پگودا,The Pagoda.,0.7058823529411765,0.85212641954422,high,0,0
+stupa,fas,pes_Arab,استوپا,Stop it.,0.46153846153846156,0.6377737522125244,medium,1,0
+ancestral altar,fas,pes_Arab,قربانگاه اجداد,The altar of the ancestors.,0.3333333333333333,0.8361527919769287,high,1,0
+funeral rite,fas,pes_Arab,مراسم خاکسپاری,The funeral.,0.5833333333333334,0.8610280752182007,high,1,1
+mourning rite,fas,pes_Arab,مراسم عزاداری,A mourning ceremony.,0.6666666666666666,0.8270768523216248,high,0,0
+memorial service,fas,pes_Arab,مراسم یادبود,The memorial service.,0.8648648648648649,0.8532646894454956,high,0,0
+ancestor worship,fas,pes_Arab,پرستش اجداد,The worship of the ancestors.,0.4,0.8634489178657532,high,1,0
+tabernacle,fas,pes_Arab,خیمه مقدس,The sanctuary.,0.25,0.770508885383606,medium,1,1
+prayer mat,fas,pes_Arab,فرش نماز,The prayer carpet.,0.6428571428571429,0.8033871650695801,high,0,0
+chanting,fas,pes_Arab,گوينده,It's supposed to be.,0.07142857142857142,0.6412983536720276,medium,1,0
+hymn,fas,pes_Arab,سرود,The hymn.,0.6153846153846154,0.8306633830070496,high,1,1
+sermon,fas,pes_Arab,خطبه,The sermon.,0.7058823529411765,0.8489936590194702,high,0,0
+liturgy,fas,pes_Arab,عبادتگاه,The Temple,0.11764705882352941,0.8258090019226074,high,1,1
+sacred religion,fas,pes_Arab,مذهب مقدس,The Sacred Religion,0.8823529411764706,0.8586220741271973,high,0,0
+sacred ritual,fas,pes_Arab,مراسم مقدس,The sacred ceremony.,0.48484848484848486,0.8379533290863037,high,1,0
+sacred prayer,fas,pes_Arab,دعا مقدس,Holy prayer.,0.56,0.8539702892303467,high,0,0
+sacred temple,fas,pes_Arab,معبد مقدس,The holy temple.,0.5517241379310345,0.8604655265808105,high,1,1
+sacred church,fas,pes_Arab,کلیسا مقدس,The Holy Church.,0.5517241379310345,0.8625149130821228,high,0,0
+sacred mosque,fas,pes_Arab,مسجد مقدس,The Holy Mosque.,0.5517241379310345,0.8559046983718872,high,0,0
+sacred synagogue,fas,pes_Arab,عبادتگاه مقدس,The holy temple.,0.25,0.8317362070083618,high,1,0
+sacred shrine,fas,pes_Arab,معبد مقدس,The holy temple.,0.27586206896551724,0.85102379322052,high,1,1
+sacred pilgrimage,fas,pes_Arab,زیارت مقدس,Holy pilgrimage.,0.6666666666666666,0.8181552290916443,high,0,0
+sacred scripture,fas,pes_Arab,کتاب مقدّس,The Bible,0.32,0.8640972375869751,high,1,1
+sacred monk,fas,pes_Arab,راهب مقدس,The holy monk.,0.48,0.8598722219467163,high,1,1
+sacred priest,fas,pes_Arab,کاهن مقدس,The Holy Priest.,0.5517241379310345,0.8534361124038696,high,0,0
+sacred imam,fas,pes_Arab,امام مقدس,In the presence of the Holy One.,0.13953488372093023,0.838526725769043,high,1,0
+sacred nun,fas,pes_Arab,راهب مقدس,The holy monk.,0.25,0.8412594795227051,high,1,1
+sacred saint,fas,pes_Arab,سنت مقدس,The sacred tradition.,0.6060606060606061,0.7031453847885132,medium,1,1
+sacred martyr,fas,pes_Arab,شهید مقدس,The holy martyr.,0.5517241379310345,0.8097956776618958,high,0,0
+sacred prophet,fas,pes_Arab,پيامبر مقدس,The Holy Prophet.,0.5806451612903226,0.8381873369216919,high,0,0
+sacred zakat,fas,pes_Arab,زکات مقدس,Holy charity.,0.24,0.8505440950393677,high,1,0
+sacred tithe,fas,pes_Arab,دسم مقدس,The holy tenth.,0.2222222222222222,0.724346935749054,medium,1,0
+sacred karma,fas,pes_Arab,کارما مقدس,Sacred Karma.,0.96,0.7939040660858154,medium,0,0
+sacred altar,fas,pes_Arab,قربانگاه مقدس,The sacred altar.,0.8275862068965517,0.833591103553772,high,0,0
+sacred incense,fas,pes_Arab,بخور مقدس,Holy food.,0.08333333333333333,0.8041481971740723,high,1,0
+sacred rosary,fas,pes_Arab,رزری مقدس,The sacred rosary.,0.8387096774193549,0.8498014211654663,high,0,0
+sacred blessing,fas,pes_Arab,برکت مقدس,Holy blessings.,0.6,0.8040482997894287,high,0,0
+sacred curse,fas,pes_Arab,لعنت مقدس,Holy shit.,0.09090909090909091,0.818941593170166,high,1,0
+sacred sabbath,fas,pes_Arab,شنبه مقدس,Holy Saturday.,0.2857142857142857,0.8434180617332458,high,1,0
+sacred halal,fas,pes_Arab,حلال مقدس,The Holy Grail.,0.37037037037037035,0.7591894268989563,medium,1,0
+sacred kosher,fas,pes_Arab,کاشر مقدس,Holy cow.,0.18181818181818182,0.7919172644615173,medium,1,0
+sacred fasting,fas,pes_Arab,روزه مقدس,It's a holy day.,0.26666666666666666,0.8481478691101074,high,1,0
+sacred sacrifice,fas,pes_Arab,قربانی مقدس,The sacred sacrifice.,0.8648648648648649,0.8477871417999268,high,0,0
+sacred monastery,fas,pes_Arab,صومعه مقدس,The Holy Monastery.,0.6285714285714286,0.8013277053833008,high,1,1
+sacred convent,fas,pes_Arab,صومعه مقدس,The Holy Monastery.,0.30303030303030304,0.828500509262085,high,1,1
+sacred abbey,fas,pes_Arab,صومعه مقدس,The Holy Monastery.,0.1935483870967742,0.8081421852111816,high,1,1
+sacred minaret,fas,pes_Arab,مینار مقدس,The Holy Minar.,0.4827586206896552,0.8598934412002563,high,1,0
+sacred pagoda,fas,pes_Arab,پگودا مقدس,The holy pagoda.,0.5517241379310345,0.8659286499023438,high,0,0
+sacred stupa,fas,pes_Arab,استوپای مقدس,The holy stupa.,0.5185185185185185,0.7882466316223145,medium,1,0
+sacred ancestral altar,fas,pes_Arab,قربانگاه مقدس اجداد,The sacred altar of the ancestors.,0.5,0.8325924873352051,high,1,0
+sacred funeral rite,fas,pes_Arab,مراسم خاکسپاری مقدس,A sacred funeral.,0.7777777777777778,0.863690197467804,high,0,0
+sacred mourning rite,fas,pes_Arab,مراسم عزاداری مقدس,A sacred mourning ceremony.,0.7659574468085106,0.8241865038871765,high,0,0
+sacred memorial service,fas,pes_Arab,خدمت یادبود مقدس,A sacred memorial service.,0.9387755102040817,0.7788128852844238,medium,0,0
+sacred ancestor worship,fas,pes_Arab,پرستش اجداد مقدس,Worship of the Holy Ancestors,0.46153846153846156,0.8578134775161743,high,1,0
+sacred tabernacle,fas,pes_Arab,خیمه مقدس,The sanctuary.,0.25806451612903225,0.824105978012085,high,1,1
+sacred prayer mat,fas,pes_Arab,فرش نماز مقدس,The holy prayer rug.,0.4864864864864865,0.8028971552848816,high,1,0
+sacred chanting,fas,pes_Arab,خواندن مقدس,A sacred recitation.,0.6857142857142857,0.814906120300293,high,0,0
+sacred hymn,fas,pes_Arab,سرود مقدس,A sacred hymn.,0.88,0.8540094494819641,high,0,0
+sacred sermon,fas,pes_Arab,خطبه مقدس,The sacred sermon.,0.8387096774193549,0.7908241748809814,medium,0,0
+sacred liturgy,fas,pes_Arab,سنت مقدس,The sacred tradition.,0.5142857142857142,0.8229356408119202,high,1,1
+ritual religion,fas,pes_Arab,مذهب رسوم,Ritual religion,1.0,0.6603545546531677,medium,0,0
+ritual ritual,fas,pes_Arab,رسوم رسوم,The custom.,0.25,0.5865035057067871,low,1,0
+ritual prayer,fas,pes_Arab,دعای مراسم,Ceremonial prayer.,0.7096774193548387,0.7573182582855225,medium,0,0
+ritual temple,fas,pes_Arab,معبد مراسم,The ceremonial temple.,0.6285714285714286,0.6953091621398926,medium,0,0
+ritual church,fas,pes_Arab,کلیسای آیینی,Religious Church,0.6896551724137931,0.8730073571205139,high,0,0
+ritual mosque,fas,pes_Arab,مسجد مراسم,The ceremonial mosque.,0.6285714285714286,0.6305692195892334,medium,0,0
+rice,fas,pes_Arab,برنج,The rice.,0.6153846153846154,0.8485711812973022,high,0,0
+bread,fas,pes_Arab,نان,The bread.,0.6666666666666666,0.833003044128418,high,1,1
+noodle,fas,pes_Arab,نودل,The noodles.,0.6666666666666666,0.8300117254257202,high,0,0
+dumpling,fas,pes_Arab,کلوچه,It's a lock.,0.1,0.8173303008079529,high,1,0
+curry,fas,pes_Arab,کری,"Curry, please.",0.5263157894736842,0.7680137753486633,medium,1,0
+spice,fas,pes_Arab,سبزیجات,The vegetables.,0.1,0.6606653332710266,medium,1,1
+tea,fas,pes_Arab,چای,The tea.,0.5454545454545454,0.8554103374481201,high,1,1
+coffee,fas,pes_Arab,قهوه,Coffee.,0.9230769230769231,0.8608379364013672,high,0,0
+meat,fas,pes_Arab,گوشت,The meat.,0.6153846153846154,0.8264157772064209,high,0,0
+vegetarian,fas,pes_Arab,گیاهخوار,Vegetarian,1.0,0.8664910793304443,high,1,1
+vegan,fas,pes_Arab,گیاهخوار,Vegetarian,0.6666666666666666,0.8622593283653259,high,1,1
+soup,fas,pes_Arab,سوپ,The soup.,0.6153846153846154,0.8557352423667908,high,0,0
+stew,fas,pes_Arab,پخته شده,It's cooked.,0.25,0.5544325113296509,low,1,0
+barbecue,fas,pes_Arab,کباب,The Kabbalah.,0.19047619047619047,0.8376336097717285,high,1,1
+fermented,fas,pes_Arab,تخمیر شده,It's fermented.,0.75,0.8218076825141907,high,0,0
+pickled,fas,pes_Arab,گندمده شده,It's messed up.,0.2727272727272727,0.5797269940376282,low,1,0
+banquet,fas,pes_Arab,ضیافت,The feast.,0.23529411764705882,0.8344788551330566,high,1,0
+feast,fas,pes_Arab,جشن,The party.,0.4,0.8238360285758972,high,1,0
+street food,fas,pes_Arab,غذای خیابانی,Street food.,0.9565217391304348,0.8751434683799744,high,0,0
+dessert,fas,pes_Arab,دسر,"Deser, please.",0.47619047619047616,0.8229566812515259,high,1,0
+sauce,fas,pes_Arab,سس,The sauce.,0.6666666666666666,0.7528839111328125,medium,0,0
+grain,fas,pes_Arab,دانه ها,The seeds.,0.0,0.8277508020401001,high,1,0
+fruit,fas,pes_Arab,میوه ها,Fruits,0.9090909090909091,0.8373406529426575,high,0,0
+vegetable,fas,pes_Arab,سبزیجات,The vegetables.,0.75,0.826777994632721,high,1,1
+kebab,fas,pes_Arab,کباب,The Kabbalah.,0.3333333333333333,0.855332612991333,high,1,1
+shawarma,fas,pes_Arab,شاورما,The shower.,0.42105263157894735,0.8192659616470337,high,1,0
+ramen,fas,pes_Arab,ریمن,What are you doing?,0.25,0.7941511273384094,medium,1,0
+sushi,fas,pes_Arab,سوشی,The sushi.,0.6666666666666666,0.8680903315544128,high,0,0
+kimchi,fas,pes_Arab,کیمچی,"Kimchi, please.",0.5714285714285714,0.8476334810256958,high,0,0
+pho,fas,pes_Arab,pho,The pho.,0.5454545454545454,0.7692074775695801,medium,1,0
+biryani,fas,pes_Arab,بیرانی,You know what?,0.19047619047619047,0.8456504344940186,high,1,0
+falafel,fas,pes_Arab,فالافل,The fallout.,0.42105263157894735,0.8386192321777344,high,1,0
+pasta,fas,pes_Arab,پاستا,The pasta.,0.6666666666666666,0.8399907946586609,high,0,0
+cheese,fas,pes_Arab,پنیر,The cheese.,0.7058823529411765,0.8577547073364258,high,1,1
+wine,fas,pes_Arab,شراب,The wine.,0.6153846153846154,0.8554233312606812,high,0,0
+beer,fas,pes_Arab,آبجو,The beer.,0.6153846153846154,0.8572198152542114,high,0,0
+chai,fas,pes_Arab,چای,The tea.,0.3333333333333333,0.8566498756408691,high,1,1
+espresso,fas,pes_Arab,اسپریسو,The spray.,0.4444444444444444,0.8610183000564575,high,1,0
+udon,fas,pes_Arab,وودون,The Woodmen.,0.25,0.8147655725479126,high,1,0
+soba,fas,pes_Arab,سوبا,"Subba, please.",0.3333333333333333,0.8280603885650635,high,1,0
+congee,fas,pes_Arab,کنگی,The King.,0.26666666666666666,0.5126814842224121,low,1,0
+bibimbap,fas,pes_Arab,بیبیمپ,Baby bump.,0.3333333333333333,0.8162937164306641,high,1,0
+hummus,fas,pes_Arab,هوموس,This is Homosexual.,0.16,0.8455164432525635,high,1,0
+tabbouleh,fas,pes_Arab,تابلوه,The painting.,0.18181818181818182,0.5025161504745483,low,1,0
+paella,fas,pes_Arab,پایللا,"Paella, what are you doing?",0.36363636363636365,0.832123875617981,high,1,0
+risotto,fas,pes_Arab,ریزوتو,The Rizzuto.,0.42105263157894735,0.8345869779586792,high,1,0
+couscous,fas,pes_Arab,کوسکوس,The couscous.,0.7619047619047619,0.8530470132827759,high,0,0
+injera,fas,pes_Arab,اینجرا,There you go.,0.21052631578947367,0.8225018978118896,high,1,0
+tortilla,fas,pes_Arab,تورتیلا,The tortilla.,0.7619047619047619,0.8500727415084839,high,0,0
+tamale,fas,pes_Arab,تامیل,Tamil,0.7272727272727273,0.7226982712745667,medium,0,0
+arepa,fas,pes_Arab,آریپا,"Arepa, what are you doing?",0.3225806451612903,0.8296166658401489,high,1,0
+empanada,fas,pes_Arab,امبانادا,The Ambanada.,0.6666666666666666,0.784685492515564,medium,0,0
+mochi,fas,pes_Arab,موچی,It's all right.,0.1,0.7855108976364136,medium,1,0
+matcha,fas,pes_Arab,مچا,That's right.,0.3157894736842105,0.7811279892921448,medium,1,0
+jalebi,fas,pes_Arab,ژالبی,The Jalebi.,0.7058823529411765,0.804024338722229,high,0,0
+halwa,fas,pes_Arab,هالوا,What's going on?,0.19047619047619047,0.6599792838096619,medium,1,0
+flatbread,fas,pes_Arab,نان فاضل,Unleavened bread,0.56,0.6087383031845093,medium,0,0
+naan,fas,pes_Arab,نان,The bread.,0.14285714285714285,0.8402472734451294,high,1,1
+roti,fas,pes_Arab,روتی,"Ruthie, what are you doing?",0.1935483870967742,0.8482769727706909,high,1,0
+chapati,fas,pes_Arab,چپاتی,You're on the left.,0.15384615384615385,0.8315841555595398,high,1,0
+paratha,fas,pes_Arab,پارات,The parachute.,0.47619047619047616,0.7065465450286865,medium,1,0
+soy sauce,fas,pes_Arab,سس سویا,Soya sauce,0.9473684210526315,0.8584181070327759,high,0,0
+fish sauce,fas,pes_Arab,سس ماهی,Fish sauce.,0.9523809523809523,0.8487678170204163,high,0,0
+ghee,fas,pes_Arab,گیس,The gas.,0.3333333333333333,0.7599130868911743,medium,1,0
+paneer,fas,pes_Arab,پنیر,The cheese.,0.23529411764705882,0.8419738411903381,high,1,1
+pickles,fas,pes_Arab,گوجه فرنگی,Tomatoes and strawberries.,0.12121212121212122,0.8339083790779114,high,1,0
+broth,fas,pes_Arab,شوروی,The Soviet Union.,0.18181818181818182,0.3727271854877472,low,1,1
+porridge,fas,pes_Arab,کپسول,The capsule.,0.2,0.6400165557861328,medium,1,1
+lentil,fas,pes_Arab,عدس,The lens.,0.4,0.7583532929420471,medium,1,0
+chickpea,fas,pes_Arab,پیاز,The onions.,0.21052631578947367,0.8399547338485718,high,1,0
+cassava,fas,pes_Arab,کپسول,The capsule.,0.3157894736842105,0.46072646975517273,low,1,1
+plantain,fas,pes_Arab,گلدان,The pottery.,0.2,0.77287757396698,medium,1,0
+okra,fas,pes_Arab,اوکر,"Oker, please.",0.47058823529411764,0.8447203636169434,high,1,0
+eggplant,fas,pes_Arab,بادام,The almonds.,0.3,0.8281922936439514,high,1,0
+traditional rice,fas,pes_Arab,برنج سنتی,Traditional rice.,0.9696969696969697,0.8593983054161072,high,0,0
+traditional bread,fas,pes_Arab,نان سنتی,Traditional bread,1.0,0.8514460325241089,high,0,0
+traditional noodle,fas,pes_Arab,نودل سنتی,Traditional noodles,0.972972972972973,0.848688006401062,high,0,0
+traditional dumpling,fas,pes_Arab,قوطی های سنتی,Traditional boxes,0.6486486486486487,0.6670743823051453,medium,0,0
+traditional curry,fas,pes_Arab,کری سنتی,Traditional curry.,0.9714285714285714,0.8334833383560181,high,0,0
+traditional spice,fas,pes_Arab,ادویه های سنتی,Traditional herbs,0.7647058823529411,0.848403811454773,high,0,0
+traditional tea,fas,pes_Arab,چای سنتی,Traditional tea.,0.967741935483871,0.8677355647087097,high,0,0
+traditional coffee,fas,pes_Arab,قهوه سنتی,Traditional coffee.,0.972972972972973,0.8803516626358032,high,0,0
+traditional meat,fas,pes_Arab,گوشت سنتی,Traditional meat,1.0,0.8454170823097229,high,0,0
+traditional vegetarian,fas,pes_Arab,گیاهخوار سنتی,Traditional vegetarian,1.0,0.8734137415885925,high,1,1
+traditional vegan,fas,pes_Arab,گیاهخوار سنتی,Traditional vegetarian,0.8717948717948718,0.8712167739868164,high,1,1
+traditional soup,fas,pes_Arab,سوپ سنتی,Traditional soup.,0.9696969696969697,0.8693263530731201,high,0,0
+traditional stew,fas,pes_Arab,پخته های سنتی,Traditional dishes,0.8235294117647058,0.6601519584655762,medium,0,0
+traditional barbecue,fas,pes_Arab,کباب سنتی,Traditional Kabba,0.7567567567567568,0.8637537360191345,high,1,1
+traditional fermented,fas,pes_Arab,تخمیر سنتی,Traditional yeast,0.7368421052631579,0.710563063621521,medium,0,0
+traditional pickled,fas,pes_Arab,مرطوب سنتی,Traditional moisture,0.717948717948718,0.5577372908592224,low,1,0
+traditional banquet,fas,pes_Arab,ضیافت سنتی,A traditional feast.,0.717948717948718,0.8536568880081177,high,0,0
+traditional feast,fas,pes_Arab,جشن سنتی,A traditional celebration.,0.6976744186046512,0.8412685394287109,high,0,0
+traditional street food,fas,pes_Arab,غذاهای خیابانی سنتی,Traditional street food,1.0,0.8790382146835327,high,0,0
+traditional dessert,fas,pes_Arab,دسر سنتی,Traditional dessert,1.0,0.8513650894165039,high,0,0
+traditional sauce,fas,pes_Arab,سس سنتی,Traditional sauce,1.0,0.8199617266654968,high,0,0
+traditional grain,fas,pes_Arab,دانه های سنتی,Traditional seeds,0.7058823529411765,0.8640480041503906,high,0,0
+traditional fruit,fas,pes_Arab,میوه های سنتی,Traditional fruits,0.9714285714285714,0.8693538904190063,high,0,0
+traditional vegetable,fas,pes_Arab,سبزیجات سنتی,Traditional vegetables,0.9767441860465116,0.850619912147522,high,0,0
+traditional kebab,fas,pes_Arab,کباب سنتی,Traditional Kabba,0.8823529411764706,0.8673675656318665,high,1,1
+traditional shawarma,fas,pes_Arab,شاورما سنتی,Traditional showers.,0.8,0.8454744815826416,high,0,0
+festival,fas,pes_Arab,جشنواره,The festival.,0.7619047619047619,0.8408899307250977,high,0,0
+holiday,fas,pes_Arab,تعطیلات,The holidays.,0.7,0.852092981338501,high,0,0
+new year,fas,pes_Arab,سال جدید,It's the new year.,0.6153846153846154,0.8770710229873657,high,0,0
+easter,fas,pes_Arab,پاییز,The fall.,0.26666666666666666,0.5233734250068665,low,1,0
+ramadan,fas,pes_Arab,رمضان,This is Ramadan.,0.6086956521739131,0.8552929162979126,high,0,0
+eid,fas,pes_Arab,عید,The feast.,0.15384615384615385,0.8153231143951416,high,1,0
+diwali,fas,pes_Arab,دیوالی,It's crazy.,0.23529411764705882,0.8436589241027832,high,1,0
+vesak,fas,pes_Arab,ویساک,We are.,0.3333333333333333,0.6923608779907227,medium,1,0
+hanukkah,fas,pes_Arab,هانوکا,The Hanukkah.,0.7619047619047619,0.8580304384231567,high,0,0
+passover,fas,pes_Arab,عید فصح,The Passover,0.8,0.44376784563064575,low,1,0
+nowruz,fas,pes_Arab,نوروز,The Norwegians.,0.2857142857142857,0.8367342352867126,high,1,0
+carnival,fas,pes_Arab,کارنیوال,The carnival.,0.7619047619047619,0.8595923185348511,high,0,0
+thanksgiving,fas,pes_Arab,شکرگزاری,Thank you.,0.45454545454545453,0.8629765510559082,high,1,0
+harvest festival,fas,pes_Arab,جشن درو,The door party.,0.25806451612903225,0.8541959524154663,high,1,0
+obon,fas,pes_Arab,اوبون,Obon.,0.8888888888888888,0.7852295637130737,medium,0,0
+tet,fas,pes_Arab,تیت,The Tate.,0.3333333333333333,0.5510614514350891,low,1,0
+songkran,fas,pes_Arab,سنگکرن,The rocks.,0.1111111111111111,0.7088338136672974,medium,1,0
+dragon boat festival,fas,pes_Arab,جشنواره قایق اژدها,The Dragon Boat Festival.,0.8888888888888888,0.8518520593643188,high,0,0
+mid autumn festival,fas,pes_Arab,جشنواره اواسط پاییز,The Mid-Autumn Festival,0.8571428571428571,0.8440449237823486,high,0,0
+qingming,fas,pes_Arab,قنگمینگ,Qingming,1.0,0.8499236106872559,high,0,0
+yom kippur,fas,pes_Arab,یوم کیپور,Day of Kippur.,0.75,0.817935585975647,high,0,0
+rosh hashanah,fas,pes_Arab,روش هاشنا,It's their way.,0.21428571428571427,0.8012886643409729,high,1,0
+purim,fas,pes_Arab,پوریم,Purim.,0.9090909090909091,0.7903836369514465,medium,0,0
+sukkot,fas,pes_Arab,سوکوت,It's all right.,0.19047619047619047,0.8434462547302246,high,1,0
+advent,fas,pes_Arab,ظهور,The appearance.,0.2857142857142857,0.7896771430969238,medium,1,0
+holi,fas,pes_Arab,هولی,Holy shit.,0.5714285714285714,0.7173177003860474,medium,0,0
+navratri,fas,pes_Arab,نابراتری,I'm not a robot.,0.3333333333333333,0.8555095195770264,high,1,0
+onam,fas,pes_Arab,اونام,I'm right there.,0.1,0.7989771366119385,medium,1,0
+pongal,fas,pes_Arab,پنگال,The bangalore.,0.4,0.7873824834823608,medium,1,0
+durga puja,fas,pes_Arab,درگا پوجا,Dragha Pooja,0.7272727272727273,0.7919195890426636,medium,0,0
+janmashtami,fas,pes_Arab,جانامشتامی,You are alive.,0.24,0.813794732093811,high,1,0
+good friday,fas,pes_Arab,جمعه خوب,Good Friday.,0.9565217391304348,0.8352581858634949,high,0,0
+pentecost,fas,pes_Arab,پنتیکست,It's Pentecostal.,0.6923076923076923,0.7422622442245483,medium,0,0
+epiphany,fas,pes_Arab,آشکارسازی,Disclosure,0.1111111111111111,0.7688007354736328,medium,1,0
+all saints day,fas,pes_Arab,روز همه سنت ها,All traditions day.,0.7272727272727273,0.5310691595077515,low,1,0
+lunar new year,fas,pes_Arab,سال نو ماه,New year's moon.,0.5333333333333333,0.744968593120575,medium,1,0
+thingyan,fas,pes_Arab,چیزان,The things.,0.5263157894736842,0.533535897731781,low,1,0
+day of the dead,fas,pes_Arab,روز مردگان,The Day of the Dead.,0.8571428571428571,0.8242406845092773,high,0,0
+mardi gras,fas,pes_Arab,ماردی گری,This is Mardi Gras.,0.6896551724137931,0.8523472547531128,high,0,0
+saint day,fas,pes_Arab,روز مقدس,It's a holy day.,0.48,0.8087751865386963,high,1,0
+martinmas,fas,pes_Arab,مارتینماس,What are you doing?,0.2857142857142857,0.8486191630363464,high,1,0
+st patricks day,fas,pes_Arab,روز سنت پاتریکس,This is St. Patrick's Day.,0.7317073170731707,0.8628093004226685,high,0,0
+independence day,fas,pes_Arab,روز استقلال,Independence day.,0.9696969696969697,0.8579307198524475,high,0,0
+mawlid,fas,pes_Arab,ماولید,Mauld.,0.6666666666666666,0.6806149482727051,medium,0,0
+ashura,fas,pes_Arab,آشورا,The Assyrian.,0.42105263157894735,0.8272551894187927,high,1,0
+hajj,fas,pes_Arab,حج,The Hajj.,0.6153846153846154,0.8573002815246582,high,0,0
+umrah,fas,pes_Arab,امرا,It's all right.,0.2,0.8122851848602295,high,1,0
+setsubun,fas,pes_Arab,سیتسوبون,It's the situsbon.,0.46153846153846156,0.8303040266036987,high,1,0
+religious festival,fas,pes_Arab,جشن مذهبی,Religious Celebration,0.6666666666666666,0.8604162931442261,high,0,0
+religious holiday,fas,pes_Arab,تعطیلات مذهبی,Religious Holidays,0.9714285714285714,0.8734188079833984,high,0,0
+religious new year,fas,pes_Arab,سال جدید مذهبی,The religious New Year.,0.8780487804878049,0.8796951770782471,high,0,0
+religious easter,fas,pes_Arab,عید فصح مذهبی,Religious Easter,1.0,0.8383487462997437,high,1,1
+religious ramadan,fas,pes_Arab,رمضان مذهبی,Religious Ramadan,1.0,0.8661720752716064,high,0,0
+religious eid,fas,pes_Arab,عید مذهبی,Religious Feast,0.7857142857142857,0.7892584800720215,medium,0,0
+religious diwali,fas,pes_Arab,دیوالی مذهبی,The religious wall.,0.7428571428571429,0.8663257956504822,high,0,0
+religious vesak,fas,pes_Arab,ویساک مذهبی,Religious whiskers.,0.7058823529411765,0.7622684240341187,medium,0,0
+religious hanukkah,fas,pes_Arab,هانوکه مذهبی,Hanukkah is religious.,0.45,0.8646115660667419,high,1,0
+religious passover,fas,pes_Arab,عید فصح مذهبی,Religious Easter,0.8235294117647058,0.6135661602020264,medium,1,1
+religious nowruz,fas,pes_Arab,مذهبي نوروز,Religious Norwegians.,0.7027027027027027,0.8310279250144958,high,0,0
+religious carnival,fas,pes_Arab,کارنیوال مذهبی,Religious Carnival,1.0,0.8755409121513367,high,0,0
+religious thanksgiving,fas,pes_Arab,شکرگزاری مذهبی,Religious Gratitude,0.5853658536585366,0.877159595489502,high,0,0
+religious harvest festival,fas,pes_Arab,جشن محصول مذهبی,The Feast of Religious Production,0.4406779661016949,0.8262947797775269,high,1,0
+religious obon,fas,pes_Arab,آبهای مذهبی,Religious Waters,0.6666666666666666,0.4231981337070465,low,1,0
+religious tet,fas,pes_Arab,تیت مذهبی,Religious Tit.,0.8888888888888888,0.48124632239341736,low,1,0
+religious songkran,fas,pes_Arab,آهنگ های مذهبی,Religious songs,0.8484848484848485,0.5518766641616821,low,1,0
+religious dragon boat festival,fas,pes_Arab,جشن قایق اژدها مذهبی,Religious Dragon Boat Celebration,0.7936507936507936,0.8508982062339783,high,0,0
+religious mid autumn festival,fas,pes_Arab,جشن مذهبی در اواسط پاییز,Religious celebrations in mid-autumn,0.5846153846153846,0.8467381596565247,high,0,0
+religious qingming,fas,pes_Arab,قنگمنگ مذهبی,Religious Conflict,0.6111111111111112,0.6633359789848328,medium,0,0
+religious yom kippur,fas,pes_Arab,مذهبی یوم کیپور,Religious of Yom Kippur,0.9302325581395349,0.816939651966095,high,0,0
+religious rosh hashanah,fas,pes_Arab,روش هاشنا مذهبی,They're religious.,0.43902439024390244,0.7470171451568604,medium,1,0
+religious purim,fas,pes_Arab,پوریم مذهبی,Religious Purim,1.0,0.824927568435669,high,0,0
+religious sukkot,fas,pes_Arab,سوکوت مذهبی,Religious silence.,0.6470588235294118,0.8656014800071716,high,0,0
+religious advent,fas,pes_Arab,ظهور مذهبی,The Emergence of Religion,0.3902439024390244,0.846157968044281,high,1,0
+religious holi,fas,pes_Arab,مقدس مذهبی,A religious saint.,0.6875,0.4765075445175171,low,1,0
+religious navratri,fas,pes_Arab,نابراتری مذهبی,A religious laborer.,0.6842105263157895,0.8704303503036499,high,0,0
+religious onam,fas,pes_Arab,اونام مذهبی,My name is Religious.,0.5142857142857142,0.7159547805786133,medium,1,0
+religious pongal,fas,pes_Arab,پنگال مذهبی,Religious bangalore,0.8,0.8114054203033447,high,0,0
+religious durga puja,fas,pes_Arab,دورگا پوجا مذهبی,Durga is a religious pooja.,0.5531914893617021,0.8108647465705872,high,0,0
+religious janmashtami,fas,pes_Arab,جنماشتمی مذهبی,Religious birth.,0.5945945945945946,0.7806259989738464,medium,0,0
+religious good friday,fas,pes_Arab,جمعه مبارک مذهبی,Happy religious Friday.,0.7272727272727273,0.7943241596221924,medium,0,0
+religious pentecost,fas,pes_Arab,پنتیکست مذهبی,Religious Pentecostal,0.95,0.8327949047088623,high,0,0
+religious epiphany,fas,pes_Arab,آشکارسازی مذهبی,Religious Revelation,0.6842105263157895,0.8071876764297485,high,0,0
+religious all saints day,fas,pes_Arab,مذهبي همه سنت روز,Religious all-day tradition.,0.6153846153846154,0.454790323972702,low,1,0
+religious lunar new year,fas,pes_Arab,سال جدید قمری مذهبی,The religious Lunar New Year.,0.9056603773584906,0.8840628266334534,high,0,0
+religious thingyan,fas,pes_Arab,چيزاي مذهبي,Religious things.,0.8571428571428571,0.665988564491272,medium,0,0
+religious day of the dead,fas,pes_Arab,روز مذهبی مردگان,Religious Day of the Dead,1.0,0.8411068916320801,high,0,0
+religious mardi gras,fas,pes_Arab,مذهبی ماردی گراس,Religious Mardi Gras.,0.975609756097561,0.836918294429779,high,0,0
+religious saint day,fas,pes_Arab,روز مقدس مذهبی,Religious holy day.,0.7368421052631579,0.7077515721321106,medium,0,0
+religious martinmas,fas,pes_Arab,جشن های مذهبی,Religious Celebrations,0.7317073170731707,0.6118761301040649,medium,0,0
+religious st patricks day,fas,pes_Arab,روز مذهبی سنت پاتریک,St. Patrick's Day is religious.,0.32142857142857145,0.8508706092834473,high,1,0
+religious independence day,fas,pes_Arab,روز استقلال مذهبی,Religious Independence Day,1.0,0.8515481948852539,high,0,0
+religious mawlid,fas,pes_Arab,مذهبي,Religious.,0.6923076923076923,0.3937889039516449,low,1,0
+religious ashura,fas,pes_Arab,عاشورا مذهبی,Religious Assyrians,0.8,0.8395828008651733,high,0,0
+religious hajj,fas,pes_Arab,حج مذهبی,Religious Hajj,1.0,0.865683913230896,high,0,0
+religious umrah,fas,pes_Arab,عمره مذهبی,Religious age.,0.7586206896551724,0.8708463907241821,high,0,0
+religious setsubun,fas,pes_Arab,سنتوبون مذهبی,Religious synagogue.,0.631578947368421,0.7964484691619873,medium,0,0
+seasonal festival,fas,pes_Arab,جشنواره فصلی,Festival of the Seasons,0.4,0.8569588661193848,high,1,0
+seasonal holiday,fas,pes_Arab,تعطیلات فصلی,Seasonal holidays.,0.9411764705882353,0.8598991632461548,high,0,0
+seasonal new year,fas,pes_Arab,سال جدید فصلی,New year's season.,0.45714285714285713,0.7767539024353027,medium,1,0
+seasonal easter,fas,pes_Arab,اختر فصلی,The seasonal star.,0.7272727272727273,0.748553454875946,medium,0,0
+dress,fas,pes_Arab,لباس,Clothes.,0.3076923076923077,0.7872828245162964,medium,1,1
+clothing,fas,pes_Arab,لباس,Clothes.,0.625,0.8299777507781982,high,1,1
+garment,fas,pes_Arab,لباس,Clothes.,0.13333333333333333,0.8153312802314758,high,1,1
+veil,fas,pes_Arab,پرده,The curtain.,0.25,0.8106992244720459,high,1,0
+hijab,fas,pes_Arab,حجاب,The veil.,0.2857142857142857,0.848035454750061,high,1,0
+niqab,fas,pes_Arab,نیقاب,Get out of here.,0.0,0.8348840475082397,high,1,0
+burqa,fas,pes_Arab,بورکا,It's not a big deal.,0.16,0.8273943662643433,high,1,0
+sari,fas,pes_Arab,ساري,It's all right.,0.42105263157894735,0.7679339647293091,medium,1,0
+kimono,fas,pes_Arab,کیمون,What?,0.0,0.8311790227890015,high,1,0
+hanbok,fas,pes_Arab,هانبوک,The Hanbok.,0.7058823529411765,0.838234007358551,high,0,0
+turban,fas,pes_Arab,توربان,The turbine.,0.5555555555555556,0.8379738330841064,high,0,0
+abaya,fas,pes_Arab,abaya,Abaya,1.0,0.7772417068481445,medium,0,0
+thobe,fas,pes_Arab,توب,You know what?,0.10526315789473684,0.6353297233581543,medium,1,0
+dupatta,fas,pes_Arab,دوپاتا,This is Dupata.,0.5454545454545454,0.7659611701965332,medium,1,0
+lehenga,fas,pes_Arab,لهنگا,It's a long shot.,0.25,0.7393045425415039,medium,1,0
+kurta,fas,pes_Arab,کورتا,The short.,0.26666666666666666,0.714841902256012,medium,1,0
+dhoti,fas,pes_Arab,دوتی,Doughty.,0.46153846153846156,0.7672545313835144,medium,1,0
+qipao,fas,pes_Arab,کیپاو,Keep it up.,0.25,0.8050143122673035,high,1,0
+uniform,fas,pes_Arab,یونیفورم,The uniform.,0.7368421052631579,0.8510348796844482,high,0,0
+formal,fas,pes_Arab,رسمی,Officially.,0.35294117647058826,0.7890922427177429,medium,1,1
+casual,fas,pes_Arab,تصادفی,It was an accident.,0.24,0.7801221609115601,medium,1,0
+modest,fas,pes_Arab,متواضع,The humble.,0.23529411764705882,0.8022003173828125,high,1,0
+ornate,fas,pes_Arab,زینب,What's going on?,0.18181818181818182,0.36659833788871765,low,1,0
+jewelry,fas,pes_Arab,جواهرات,The jewels.,0.5555555555555556,0.8553759455680847,high,0,0
+necklace,fas,pes_Arab,گردنبند,The necklace.,0.7619047619047619,0.840842604637146,high,0,0
+earring,fas,pes_Arab,گوشواره,The earring.,0.7368421052631579,0.8317923545837402,high,0,0
+bracelet,fas,pes_Arab,دستبند,The bracelet.,0.7619047619047619,0.817893385887146,high,0,0
+ring,fas,pes_Arab,حلقه,The ring.,0.6153846153846154,0.8081479072570801,high,0,0
+headscarf,fas,pes_Arab,پوشک سر,The headscarf.,0.782608695652174,0.8261869549751282,high,0,0
+tattoo,fas,pes_Arab,خالکوبی,The tattoo.,0.7058823529411765,0.8574049472808838,high,0,0
+piercing,fas,pes_Arab,سوراخ کردن,They drilled.,0.19047619047619047,0.6746137142181396,medium,1,0
+mask,fas,pes_Arab,ماسک,The mask.,0.6153846153846154,0.8338104486465454,high,0,0
+gown,fas,pes_Arab,لباس,Clothes.,0.16666666666666666,0.6978163719177246,medium,1,1
+tuxedo,fas,pes_Arab,توکسید,You're poisoned.,0.2727272727272727,0.4089195430278778,low,1,0
+wedding dress,fas,pes_Arab,لباس عروسی,The wedding dress.,0.8387096774193549,0.8586910963058472,high,0,0
+sash,fas,pes_Arab,ساش,Sash.,0.8888888888888888,0.7097337245941162,medium,0,0
+sandals,fas,pes_Arab,صندل ها,The chairs.,0.1111111111111111,0.7893936634063721,medium,1,0
+slippers,fas,pes_Arab,کفش ها,The shoes.,0.3333333333333333,0.8184278011322021,high,1,0
+bangle,fas,pes_Arab,گلوله,The bullet.,0.35294117647058826,0.46119749546051025,low,1,0
+anklet,fas,pes_Arab,مچ پا,The ankle.,0.625,0.74574875831604,medium,0,0
+kaftan,fas,pes_Arab,کافتن,The coffin.,0.23529411764705882,0.771570086479187,medium,1,0
+poncho,fas,pes_Arab,پونچو,The punch.,0.5,0.8521890640258789,high,1,0
+sombrero,fas,pes_Arab,سومبریو,The Sombrio.,0.6,0.8180766701698303,high,0,0
+kippah,fas,pes_Arab,کیپا,Keep it up.,0.35294117647058826,0.8224287033081055,high,1,0
+yarmulke,fas,pes_Arab,یارملک,It's all right.,0.17391304347826086,0.6164829730987549,medium,1,0
+mourning dress,fas,pes_Arab,لباس عزاداری,Clothes of mourning.,0.47058823529411764,0.8293429613113403,high,1,0
+ceremonial mask,fas,pes_Arab,ماسک مراسم,The ceremony mask.,0.7272727272727273,0.7552277445793152,medium,0,0
+formal dress,fas,pes_Arab,لباس رسمی,The official dress.,0.5806451612903226,0.8526710271835327,high,1,1
+formal clothing,fas,pes_Arab,لباس رسمی,The official dress.,0.23529411764705882,0.8575718402862549,high,1,1
+formal garment,fas,pes_Arab,لباس رسمی,The official dress.,0.36363636363636365,0.8426031470298767,high,1,1
+formal veil,fas,pes_Arab,حجاب رسمی,The official veil.,0.5517241379310345,0.8465926647186279,high,1,1
+formal hijab,fas,pes_Arab,حجاب رسمی,The official veil.,0.3333333333333333,0.8479301333427429,high,1,1
+formal niqab,fas,pes_Arab,نیقاب رسمی,The official mascot.,0.3125,0.8241295218467712,high,1,0
+formal burqa,fas,pes_Arab,برقا رسمی,It's official.,0.23076923076923078,0.8408465385437012,high,1,0
+formal sari,fas,pes_Arab,ساری رسمی,The official ceremony.,0.30303030303030304,0.7551826238632202,medium,1,0
+formal kimono,fas,pes_Arab,کیمون رسمی,The official kimono.,0.6060606060606061,0.8108895421028137,high,0,0
+formal hanbok,fas,pes_Arab,هانبوک رسمی,The official Hanbok.,0.6060606060606061,0.8259718418121338,high,0,0
+formal turban,fas,pes_Arab,توربان رسمی,The official turban.,0.6060606060606061,0.8324859142303467,high,0,0
+formal abaya,fas,pes_Arab,آبای رسمی,It's official.,0.23076923076923078,0.6333886384963989,medium,1,0
+formal thobe,fas,pes_Arab,رسمی,Officially.,0.2608695652173913,0.3894656300544739,low,1,1
+formal dupatta,fas,pes_Arab,دوپاتا رسمی,The official DuPatta.,0.6285714285714286,0.7165884971618652,medium,0,0
+formal lehenga,fas,pes_Arab,لهنگا رسمی,The official tongue.,0.35294117647058826,0.7223787307739258,medium,1,0
+formal kurta,fas,pes_Arab,کورتا رسمی,The official brief.,0.3225806451612903,0.7809597253799438,medium,1,0
+formal dhoti,fas,pes_Arab,دوتی رسمی,The official duties.,0.4375,0.7878655195236206,medium,1,0
+formal qipao,fas,pes_Arab,شیپاو رسمی,The official shipao.,0.5,0.5582157373428345,low,1,0
+formal uniform,fas,pes_Arab,یونیفورم رسمی,The official uniform.,0.6285714285714286,0.8666567802429199,high,0,0
+formal formal,fas,pes_Arab,رسمی رسمی,It's official.,0.2222222222222222,0.47148093581199646,low,1,0
+formal casual,fas,pes_Arab,رسمی,Officially.,0.3333333333333333,0.5119308829307556,low,1,1
+formal modest,fas,pes_Arab,اعتدال رسمی,Official moderation,0.5625,0.5843425989151001,low,1,0
+formal ornate,fas,pes_Arab,زینت رسمی,Official decoration.,0.48484848484848486,0.7206740379333496,medium,1,0
+formal jewelry,fas,pes_Arab,جواهرات رسمی,Official jewelry,0.7333333333333333,0.844607412815094,high,0,0
+formal necklace,fas,pes_Arab,گردنبند رسمی,The official necklace.,0.6486486486486487,0.8516513109207153,high,0,0
+formal earring,fas,pes_Arab,گوشواره رسمی,The official earring.,0.6285714285714286,0.8379324674606323,high,0,0
+formal bracelet,fas,pes_Arab,دستبند رسمی,The official bracelet.,0.6486486486486487,0.8410517573356628,high,1,1
+formal ring,fas,pes_Arab,حلقه رسمی,The official ring.,0.5517241379310345,0.8231502175331116,high,0,0
+formal headscarf,fas,pes_Arab,پوشک سر رسمی,The official headscarf.,0.6666666666666666,0.8154869079589844,high,0,0
+formal tattoo,fas,pes_Arab,خالکوبی رسمی,The official tattoo.,0.6060606060606061,0.8550314903259277,high,0,0
+formal piercing,fas,pes_Arab,سوراخ کردن رسمی,The official drill.,0.29411764705882354,0.6148847341537476,medium,1,0
+formal mask,fas,pes_Arab,ماسک رسمی,The official mask.,0.5517241379310345,0.8551176190376282,high,0,0
+formal gown,fas,pes_Arab,لباس رسمی,The official dress.,0.26666666666666666,0.8380124568939209,high,1,1
+formal tuxedo,fas,pes_Arab,استوکسیدی رسمی,Official suicide.,0.4,0.42463749647140503,low,1,0
+formal wedding dress,fas,pes_Arab,لباس عروسی رسمی,The official wedding dress.,0.723404255319149,0.8539892435073853,high,0,0
+formal sash,fas,pes_Arab,شلوار رسمی,The official pants.,0.3333333333333333,0.7177342772483826,medium,1,0
+formal sandals,fas,pes_Arab,صندل های رسمی,Official chairs,0.3448275862068966,0.8460173010826111,high,1,0
+formal slippers,fas,pes_Arab,کفش های رسمی,Official shoes.,0.4666666666666667,0.832443118095398,high,1,0
+formal bangle,fas,pes_Arab,دستبند رسمی,The official bracelet.,0.45714285714285713,0.8477345108985901,high,1,1
+formal anklet,fas,pes_Arab,دستبند رسمی,The official bracelet.,0.45714285714285713,0.8429180383682251,high,1,1
+formal kaftan,fas,pes_Arab,کافتن رسمی,The official captain.,0.47058823529411764,0.8087454438209534,high,1,0
+formal poncho,fas,pes_Arab,پونچو رسمی,The official poncho.,0.6060606060606061,0.8585565686225891,high,0,0
+formal sombrero,fas,pes_Arab,سومبریو رسمی,The official Sombrio.,0.5555555555555556,0.5435612797737122,low,1,0
+formal kippah,fas,pes_Arab,کیپا رسمی,The official cap.,0.3333333333333333,0.8023033142089844,high,1,0
+formal yarmulke,fas,pes_Arab,یارملک رسمی,The official flag.,0.30303030303030304,0.45052745938301086,low,1,0
+formal mourning dress,fas,pes_Arab,لباس عزاداری رسمی,The official mourning dress.,0.7346938775510204,0.8393735289573669,high,0,0
+formal ceremonial mask,fas,pes_Arab,ماسک رسمی مراسم,The official masks of the ceremony.,0.38596491228070173,0.7929680347442627,medium,1,0
+casual dress,fas,pes_Arab,لباس عادي,Ordinary clothes.,0.27586206896551724,0.842117965221405,high,1,0
+casual clothing,fas,pes_Arab,لباس های آرام,Calm clothes.,0.6428571428571429,0.690380871295929,medium,0,0
+casual garment,fas,pes_Arab,لباس های عادي,Ordinary clothes.,0.1935483870967742,0.8361853957176208,high,1,0
+casual veil,fas,pes_Arab,حجاب عادي,Ordinary hijab.,0.15384615384615385,0.7900242805480957,medium,1,0
+casual hijab,fas,pes_Arab,حجاب تصادفی,The hijab was accidental.,0.32432432432432434,0.7908669114112854,medium,1,0
+casual niqab,fas,pes_Arab,نیکاب عادي,It's a good one.,0.21428571428571427,0.7817860841751099,medium,1,0
+white,fas,pes_Arab,سفید,It's white.,0.625,0.8186862468719482,high,0,0
+red,fas,pes_Arab,قرمز,Red.,0.8571428571428571,0.834625244140625,high,0,0
+black,fas,pes_Arab,سیاه,It's black.,0.625,0.8161568641662598,high,0,0
+blue,fas,pes_Arab,آبی,It's blue.,0.5714285714285714,0.8173071146011353,high,0,0
+green,fas,pes_Arab,سبز,It's green.,0.625,0.7974134087562561,medium,0,0
+yellow,fas,pes_Arab,زرد,Yellow.,0.9230769230769231,0.8220203518867493,high,0,0
+purple,fas,pes_Arab,بنفش,It's purple.,0.6666666666666666,0.8426775932312012,high,0,0
+orange,fas,pes_Arab,نارنجی,The orange.,0.7058823529411765,0.8568548560142517,high,0,0
+gold,fas,pes_Arab,طلا,It's gold.,0.5714285714285714,0.852972149848938,high,0,0
+silver,fas,pes_Arab,نقره,The silver.,0.7058823529411765,0.851405918598175,high,0,0
+dragon,fas,pes_Arab,اژدها,The dragon.,0.7058823529411765,0.8475731015205383,high,0,0
+phoenix,fas,pes_Arab,فینکس,I'm going to Phoenix.,0.5,0.8267335295677185,high,1,0
+lotus,fas,pes_Arab,لوتوس,The lotus.,0.6666666666666666,0.8425676822662354,high,0,0
+bamboo,fas,pes_Arab,بامبو,The bamboo.,0.7058823529411765,0.8420852422714233,high,0,0
+olive,fas,pes_Arab,زیتون,The olive.,0.6666666666666666,0.8476250767707825,high,0,0
+maple,fas,pes_Arab,خاردار,It's all right.,0.2,0.6497204899787903,medium,1,0
+totem,fas,pes_Arab,توتم,It's you.,0.2857142857142857,0.8350251317024231,high,1,0
+emblem,fas,pes_Arab,شعار,The motto,0.26666666666666666,0.7835256457328796,medium,1,0
+anthem,fas,pes_Arab,سرود,The hymn.,0.5333333333333333,0.8365899920463562,high,1,1
+flag,fas,pes_Arab,پرچم,The flag.,0.6153846153846154,0.8257564306259155,high,0,0
+icon,fas,pes_Arab,آیکون,The icon.,0.6153846153846154,0.8410086631774902,high,0,0
+script,fas,pes_Arab,اسکریپت,The script.,0.7058823529411765,0.8426586389541626,high,0,0
+calligraphy,fas,pes_Arab,کالیگرافی,Calligraphy,1.0,0.8642224073410034,high,0,0
+lantern,fas,pes_Arab,لامپ,The lamp.,0.25,0.811517596244812,high,1,0
+opera,fas,pes_Arab,اوپرا,The opera.,0.6666666666666666,0.858581006526947,high,0,0
+dance,fas,pes_Arab,رقص,The dance.,0.6666666666666666,0.8481791019439697,high,0,0
+music,fas,pes_Arab,موسیقی,The music.,0.6666666666666666,0.8575764298439026,high,0,0
+folklore,fas,pes_Arab,فولکلور,Folklore.,0.9411764705882353,0.8616686463356018,high,0,0
+myth,fas,pes_Arab,افسانه,It's a myth.,0.5,0.8607230186462402,high,1,1
+legend,fas,pes_Arab,افسانه,It's a myth.,0.0,0.8596625924110413,high,1,1
+oral tradition,fas,pes_Arab,سنت شفاهی,Oral tradition,1.0,0.8549163341522217,high,0,0
+epic,fas,pes_Arab,حماسی,The epic.,0.6153846153846154,0.7865185737609863,medium,0,0
+fable,fas,pes_Arab,افسانه,It's a myth.,0.11764705882352941,0.8561923503875732,high,1,1
+choir,fas,pes_Arab,گروه خواننده,The choir.,0.6666666666666666,0.8161734342575073,high,0,0
+orchestra,fas,pes_Arab,ارکستر,The orchestra.,0.782608695652174,0.8312559127807617,high,0,0
+drumming,fas,pes_Arab,طبل زدن,Drumming.,0.9411764705882353,0.8220446705818176,high,0,0
+tango,fas,pes_Arab,تاندو,The Tando.,0.5333333333333333,0.8557207584381104,high,1,0
+flamenco,fas,pes_Arab,فلامنکو,The flamenco.,0.7619047619047619,0.8637287616729736,high,0,0
+bharatanatyam,fas,pes_Arab,بهارتاناتیم,It's your spring.,0.13333333333333333,0.8196067810058594,high,1,0
+kabuki,fas,pes_Arab,کبکی,It's Quebec.,0.1111111111111111,0.5792566537857056,low,1,0
+lion dance,fas,pes_Arab,رقص شیر,The milk dance.,0.56,0.85279381275177,high,0,0
+dragon dance,fas,pes_Arab,رقص اژدها,The dance of the dragon.,0.3333333333333333,0.8641781806945801,high,1,0
+totem pole,fas,pes_Arab,قطب توتم,It's your pole.,0.56,0.638540506362915,medium,0,0
+prayer beads,fas,pes_Arab,مروارید نماز,The pearl of prayer.,0.375,0.7846556901931763,medium,1,0
+chopsticks,fas,pes_Arab,چوب های غذاخوری,Food sticks.,0.6363636363636364,0.6954057812690735,medium,0,0
+tea ceremony,fas,pes_Arab,مراسم چای,The tea ceremony.,0.8275862068965517,0.8608624935150146,high,0,0
+martial arts,fas,pes_Arab,هنرهای رزمی,The martial arts.,0.8275862068965517,0.87254399061203,high,0,0
+cultural white,fas,pes_Arab,سفید فرهنگی,Cultural whites.,0.9333333333333333,0.8215140700340271,high,0,0
+cultural red,fas,pes_Arab,قرمز فرهنگی,Cultural red.,0.96,0.8377606272697449,high,0,0
+cultural black,fas,pes_Arab,سیاه فرهنگی,The cultural black.,0.8484848484848485,0.7163219451904297,medium,0,0
+cultural blue,fas,pes_Arab,آبی فرهنگی,The cultural blue.,0.8387096774193549,0.8511631488800049,high,0,0
+cultural green,fas,pes_Arab,سبز فرهنگی,The cultural green.,0.8484848484848485,0.8094885349273682,high,0,0
+cultural yellow,fas,pes_Arab,زرد فرهنگی,Cultural yellow.,0.967741935483871,0.8308064937591553,high,0,0
+cultural purple,fas,pes_Arab,بنفش فرهنگی,The cultural purple.,0.8571428571428571,0.7696855068206787,medium,0,0
+cultural orange,fas,pes_Arab,نارنجی فرهنگی,Cultural orange,1.0,0.8142332434654236,high,0,0
+cultural gold,fas,pes_Arab,طلا فرهنگی,Cultural gold.,0.9629629629629629,0.8583870530128479,high,0,0
+cultural silver,fas,pes_Arab,نقره فرهنگی,Cultural silver,1.0,0.8588898181915283,high,0,0
+cultural dragon,fas,pes_Arab,اژدها فرهنگی,The cultural dragon.,0.8571428571428571,0.8284584283828735,high,0,0
+cultural phoenix,fas,pes_Arab,فینکس فرهنگی,The cultural Phoenix.,0.8648648648648649,0.6713782548904419,medium,0,0
+cultural lotus,fas,pes_Arab,لوتوس فرهنگی,The cultural lotus.,0.8484848484848485,0.850601315498352,high,0,0
+cultural bamboo,fas,pes_Arab,بامبو فرهنگی,Cultural bamboo,1.0,0.8524923920631409,high,0,0
+cultural olive,fas,pes_Arab,زیتون فرهنگی,The cultural olive.,0.8484848484848485,0.866340160369873,high,0,0
+cultural maple,fas,pes_Arab,آبر فرهنگی,The cultural cradle.,0.7058823529411765,0.8110477924346924,high,0,0
+cultural totem,fas,pes_Arab,توتم فرهنگی,It's a cultural thing.,0.5555555555555556,0.8231282234191895,high,0,0
+cultural emblem,fas,pes_Arab,نماد فرهنگی,It's a cultural symbol.,0.631578947368421,0.8670114278793335,high,0,0
+cultural anthem,fas,pes_Arab,سرود فرهنگی,A cultural anthem,0.9375,0.8530783653259277,high,0,0
+cultural flag,fas,pes_Arab,پرچم فرهنگی,The cultural flag.,0.8387096774193549,0.8517087697982788,high,0,0
+cultural icon,fas,pes_Arab,آیکون فرهنگی,A cultural icon.,0.896551724137931,0.8661861419677734,high,0,0
+cultural script,fas,pes_Arab,نوشته های فرهنگی,Cultural writings,0.75,0.7773740291595459,medium,0,0
+cultural calligraphy,fas,pes_Arab,کالیگرافی فرهنگی,Cultural calligraphy,1.0,0.8558650016784668,high,0,0
+cultural lantern,fas,pes_Arab,لامپ فرهنگی,The culture lamp.,0.5454545454545454,0.8279550671577454,high,1,0
+cultural incense,fas,pes_Arab,بخور فرهنگی,Have a cultural meal.,0.5405405405405406,0.7656805515289307,medium,1,0
+cultural opera,fas,pes_Arab,اوپرا فرهنگی,The cultural opera.,0.8484848484848485,0.8545876741409302,high,0,0
+cultural dance,fas,pes_Arab,رقص فرهنگی,Cultural dance,1.0,0.8485435843467712,high,0,0
+cultural music,fas,pes_Arab,موسیقی فرهنگی,Cultural music,1.0,0.8732428550720215,high,0,0
+cultural folklore,fas,pes_Arab,فولکلور فرهنگی,Cultural folklore,1.0,0.8605442047119141,high,0,0
+cultural myth,fas,pes_Arab,افسانه ی فرهنگی,A cultural myth.,0.896551724137931,0.8497897386550903,high,0,0
+cultural legend,fas,pes_Arab,افسانه های فرهنگی,Cultural legends,0.967741935483871,0.8574386835098267,high,1,1
+cultural oral tradition,fas,pes_Arab,سنت شفاهی فرهنگی,Cultural oral tradition,1.0,0.8514615297317505,high,0,0
+cultural epic,fas,pes_Arab,داستان فرهنگی,A cultural story.,0.6,0.7909867763519287,medium,0,0
+cultural fable,fas,pes_Arab,افسانه های فرهنگی,Cultural legends,0.7333333333333333,0.8460600972175598,high,1,1
+cultural choir,fas,pes_Arab,گروه خواننده فرهنگی,Cultural singing group,0.5555555555555556,0.8264392018318176,high,0,0
+cultural orchestra,fas,pes_Arab,ارکستر فرهنگی,A cultural orchestra.,0.9230769230769231,0.8243601322174072,high,0,0
+cultural drumming,fas,pes_Arab,طبل فرهنگی,Cultural drums,0.8387096774193549,0.7661014795303345,medium,0,0
+cultural chanting,fas,pes_Arab,ترانه های فرهنگی,Cultural songs,0.7096774193548387,0.8177040815353394,high,0,0
+cultural tango,fas,pes_Arab,تانگو فرهنگی,The cultural tango.,0.8484848484848485,0.8472838401794434,high,0,0
+cultural flamenco,fas,pes_Arab,فلامنکو فرهنگی,The cultural flamenco.,0.8717948717948718,0.8529478311538696,high,0,0
+cultural bharatanatyam,fas,pes_Arab,برتاناتیم فرهنگی,We are cultural Brittany.,0.6382978723404256,0.7081446647644043,medium,0,0
+cultural kabuki,fas,pes_Arab,کبکی فرهنگی,Culture of Quebec,0.5,0.572853147983551,low,1,0
+cultural lion dance,fas,pes_Arab,رقص شیر فرهنگی,The cultural milk dance.,0.7441860465116279,0.7986819744110107,medium,0,0
+cultural dragon dance,fas,pes_Arab,رقص اژدها فرهنگی,The dance of the cultural dragon.,0.5555555555555556,0.8062583804130554,high,0,0
+cultural totem pole,fas,pes_Arab,قطب توتم فرهنگی,It's the cultural pole.,0.6190476190476191,0.6927999258041382,medium,0,0
+cultural prayer beads,fas,pes_Arab,مروارید نماز فرهنگی,The Pearl of Cultural Prayer,0.6122448979591837,0.7615872621536255,medium,0,0
+cultural rosary,fas,pes_Arab,روزار فرهنگی,The cultural rosary.,0.8571428571428571,0.7640668153762817,medium,0,0
+cultural chopsticks,fas,pes_Arab,چوب های فرهنگی,Cultural woods,0.6666666666666666,0.7023436427116394,medium,0,0
+cultural tea ceremony,fas,pes_Arab,مراسم چای فرهنگی,Cultural tea ceremony.,0.9767441860465116,0.8608924746513367,high,0,0
+cultural martial arts,fas,pes_Arab,هنرهای رزمی فرهنگی,Cultural martial arts,1.0,0.8688867092132568,high,0,0
+democracy,fas,pes_Arab,دموکراسی,Democracy.,0.9473684210526315,0.8636600971221924,high,0,0
+monarchy,fas,pes_Arab,حکومت سلطنتی,A royal government.,0.14814814814814814,0.8659336566925049,high,1,0
+republic,fas,pes_Arab,جمهوری,The Republic,0.8,0.8023287057876587,high,0,0
+federal,fas,pes_Arab,فدرال,The federal government.,0.4666666666666667,0.7119041681289673,medium,1,0
+unitary,fas,pes_Arab,واحد,Unit.,0.6666666666666666,0.6494420766830444,medium,0,0
+parliament,fas,pes_Arab,پارلمان,Parliament,1.0,0.8479260802268982,high,0,0
+senate,fas,pes_Arab,مجلس سنا,The Senate.,0.7058823529411765,0.846172571182251,high,0,0
+constitution,fas,pes_Arab,قانون اساسی,The Constitution.,0.8275862068965517,0.8439399600028992,high,1,1
+bureaucracy,fas,pes_Arab,بوروکراسی,The bureaucracy.,0.8148148148148148,0.8718113899230957,high,0,0
+meritocracy,fas,pes_Arab,مروتوکراسی,It's a whorehouse.,0.27586206896551724,0.6048662662506104,medium,1,0
+oligarchy,fas,pes_Arab,اولیگارشی,The first.,0.21052631578947367,0.8719300031661987,high,1,0
+aristocracy,fas,pes_Arab,اشراف,The nobles.,0.09090909090909091,0.6186995506286621,medium,1,0
+tribunal,fas,pes_Arab,دادگاه,The court.,0.2222222222222222,0.8296407461166382,high,1,0
+mediation,fas,pes_Arab,واسطه,The middleman.,0.34782608695652173,0.8147190809249878,high,1,0
+civil law,fas,pes_Arab,حقوق مدنی,Civil rights,0.5714285714285714,0.8716294765472412,high,0,0
+common law,fas,pes_Arab,قانون مشترک,Common law.,0.9523809523809523,0.8384614586830139,high,0,0
+customary law,fas,pes_Arab,قانون سنت,The Law of Tradition.,0.29411764705882354,0.7970218062400818,medium,1,0
+council,fas,pes_Arab,شوروی,The Soviet Union.,0.3333333333333333,0.4304749071598053,low,1,1
+chieftain,fas,pes_Arab,رییس جمهور,The president.,0.34782608695652173,0.6973135471343994,medium,1,0
+citizen,fas,pes_Arab,شهروند,He's a citizen.,0.6363636363636364,0.8501633405685425,high,0,0
+state,fas,pes_Arab,دولت,The government.,0.2,0.8333277702331543,high,1,0
+nation,fas,pes_Arab,ملت,The nation.,0.7058823529411765,0.8212900757789612,high,0,0
+border,fas,pes_Arab,مرز,The border.,0.7058823529411765,0.8291999101638794,high,0,0
+governance,fas,pes_Arab,حاکمیت,Sovereignty,0.47619047619047616,0.8581564426422119,high,1,0
+policy,fas,pes_Arab,سیاست,Politics,0.7142857142857143,0.8334170579910278,high,0,0
+regulation,fas,pes_Arab,مقررات,The rules.,0.3,0.7853370308876038,medium,1,0
+empire,fas,pes_Arab,امپراتوری,The Empire.,0.7058823529411765,0.8483952283859253,high,0,0
+colonial,fas,pes_Arab,استعمار,Colonial,1.0,0.768470823764801,medium,1,1
+decolonization,fas,pes_Arab,استعمار,Colonial,0.6363636363636364,0.7558149099349976,medium,1,1
+judiciary,fas,pes_Arab,قوه قضایی,The judiciary.,0.782608695652174,0.8504360318183899,high,0,0
+legislature,fas,pes_Arab,قانون ساز,The legislature.,0.8148148148148148,0.7602546811103821,medium,0,0
+executive,fas,pes_Arab,مقام اجرایی,Chief executive officer,0.5625,0.773043692111969,medium,0,0
+ministry,fas,pes_Arab,خدمت,The service.,0.1,0.6917376518249512,medium,1,0
+administration,fas,pes_Arab,اداره,The office.,0.08,0.7564625144004822,medium,1,0
+charter,fas,pes_Arab,نامه نامه,The letter.,0.4444444444444444,0.3894388973712921,low,1,0
+ordinance,fas,pes_Arab,قانون اساسی,The Constitution.,0.23076923076923078,0.589533805847168,low,1,1
+treaty,fas,pes_Arab,معاهده,The treaty.,0.7058823529411765,0.8528323769569397,high,0,0
+diplomacy,fas,pes_Arab,دیپلماسی,The diplomacy.,0.782608695652174,0.8642525672912598,high,0,0
+taxation,fas,pes_Arab,مالیات,Taxes,0.46153846153846156,0.854741096496582,high,1,0
+public office,fas,pes_Arab,اداره عمومی,Public office,1.0,0.8091080784797668,high,1,1
+village council,fas,pes_Arab,شورای روستایی,Village council.,0.967741935483871,0.8618217706680298,high,0,0
+city council,fas,pes_Arab,شورای شهر,City Council.,0.96,0.8569595813751221,high,0,0
+mayor,fas,pes_Arab,شهردار,The mayor.,0.6666666666666666,0.8457859754562378,high,0,0
+governor,fas,pes_Arab,فرمانده,The commander.,0.2727272727272727,0.8400723338127136,high,1,0
+public democracy,fas,pes_Arab,دموکراسی عمومی,Public democracy,1.0,0.8692469596862793,high,0,0
+public monarchy,fas,pes_Arab,سلطنت عمومی,A public monarchy,0.9375,0.8669549822807312,high,0,0
+public republic,fas,pes_Arab,جمهوری عمومی,The People's Republic,0.6111111111111112,0.84754878282547,high,0,0
+public federal,fas,pes_Arab,دولت فدرال,The federal government.,0.43243243243243246,0.677865743637085,medium,1,1
+public unitary,fas,pes_Arab,واحد عمومی,General unit,0.46153846153846156,0.6909505128860474,medium,1,0
+public parliament,fas,pes_Arab,پارلمان عمومی,General Assembly,0.12121212121212122,0.8577016592025757,high,1,0
+public senate,fas,pes_Arab,مجلس سنا عمومی,The General Senate,0.5161290322580645,0.8127859830856323,high,1,0
+public constitution,fas,pes_Arab,قانون اساسی عمومی,The public constitution,0.9047619047619048,0.8533354997634888,high,0,0
+public bureaucracy,fas,pes_Arab,بوروکراسی عمومی,Public bureaucracy,1.0,0.8780900835990906,high,0,0
+public meritocracy,fas,pes_Arab,مروتوکراسی عمومی,The public monarchy.,0.5789473684210527,0.6928094625473022,medium,0,0
+public oligarchy,fas,pes_Arab,اولیگارشی عمومی,Public Priority,0.6451612903225806,0.8656690716743469,high,0,0
+public aristocracy,fas,pes_Arab,اشراف عمومی,The nobility.,0.3225806451612903,0.6352636218070984,medium,1,0
+public tribunal,fas,pes_Arab,دادگاه عمومی,The General Court.,0.24242424242424243,0.8255615234375,high,1,0
+public mediation,fas,pes_Arab,واسطه عمومی,The public intermediary.,0.6,0.8084965348243713,high,0,0
+public civil law,fas,pes_Arab,حقوق مدنی عمومی,Public civil rights,0.7428571428571429,0.873102605342865,high,0,0
+public common law,fas,pes_Arab,قانون عمومی مشترک,Common law,0.7407407407407407,0.8192873597145081,high,0,0
+public customary law,fas,pes_Arab,قانون عمومی و سنت,Public Law and Tradition,0.45454545454545453,0.7828472852706909,medium,1,0
+public council,fas,pes_Arab,شورای عمومی,General Council,0.6206896551724138,0.8482082486152649,high,0,0
+public chieftain,fas,pes_Arab,رئیس عمومی,Chief of the General Staff.,0.32558139534883723,0.8253896236419678,high,1,0
+public citizen,fas,pes_Arab,شهروند عمومی,A public citizen.,0.9032258064516129,0.8591768741607666,high,0,0
+public state,fas,pes_Arab,دولت عمومی,Public government,0.5517241379310345,0.8660721778869629,high,0,0
+public nation,fas,pes_Arab,ملت عمومی,The public nation.,0.8387096774193549,0.8493668437004089,high,0,0
+public border,fas,pes_Arab,مرز عمومی,The public border,0.8666666666666667,0.837687611579895,high,0,0
+public governance,fas,pes_Arab,حاکمیت عمومی,Public sovereignty,0.6857142857142857,0.8587332367897034,high,0,0
+public policy,fas,pes_Arab,سیاست عمومی,Public policy,1.0,0.8704598546028137,high,0,0
+public regulation,fas,pes_Arab,مقررات عمومی,General rules,0.3333333333333333,0.815919816493988,high,1,0
+public empire,fas,pes_Arab,امپراطوری عمومی,The general empire.,0.5,0.8422144055366516,high,1,0
+public colonial,fas,pes_Arab,مستعمرات عمومی,Public Colonies,0.8666666666666667,0.7432807087898254,medium,0,0
+public decolonization,fas,pes_Arab,تخفیف استعمار عمومی,Reduction of public colonization,0.7169811320754716,0.6641561388969421,medium,0,0
+public judiciary,fas,pes_Arab,قوه قضایی عمومی,The General Judiciary,0.5945945945945946,0.8698293566703796,high,0,0
+public legislature,fas,pes_Arab,قانونگذاری عمومی,Public legislation,0.8333333333333334,0.8566399216651917,high,0,0
+public executive,fas,pes_Arab,مقام اجرایی دولتی,A government executive,0.5263157894736842,0.853556752204895,high,1,0
+public ministry,fas,pes_Arab,خدمت عمومی,Public service,0.5517241379310345,0.848131537437439,high,0,0
+public administration,fas,pes_Arab,اداره عمومی,Public office,0.47058823529411764,0.858960747718811,high,1,1
+public charter,fas,pes_Arab,نامه عمومی,A public letter,0.6896551724137931,0.7300605177879333,medium,0,0
+public ordinance,fas,pes_Arab,قانون عمومی,Public law,0.6153846153846154,0.8325586318969727,high,0,0
+public treaty,fas,pes_Arab,معاهده عمومی,General agreement,0.3333333333333333,0.8526273369789124,high,1,0
+public diplomacy,fas,pes_Arab,دیپلماسی عمومی,Public diplomacy,1.0,0.8650249242782593,high,0,0
+public taxation,fas,pes_Arab,مالیات عمومی,Public taxes,0.7407407407407407,0.8649075031280518,high,0,0
+public public office,fas,pes_Arab,اداره عمومی عمومی,Office of the Public Prosecutor,0.39215686274509803,0.6613245606422424,medium,1,0
+public village council,fas,pes_Arab,شورای روستایی عمومی,Public village council,1.0,0.856657862663269,high,0,0
+public city council,fas,pes_Arab,شورای شهر عمومی,Public City Council,1.0,0.8537774682044983,high,0,0
+public mayor,fas,pes_Arab,شهردار عمومی,The Mayor General.,0.4,0.8485895991325378,high,1,0
+public governor,fas,pes_Arab,فرمانده دولتی,Governor of the State.,0.43243243243243246,0.8464685678482056,high,1,0
+state democracy,fas,pes_Arab,دموکراسی دولتی,State democracy,1.0,0.8731855750083923,high,0,0
+state monarchy,fas,pes_Arab,سلطنت دولتی,Government rule,0.13793103448275862,0.8680359125137329,high,1,0
+state republic,fas,pes_Arab,جمهوری دولتی,Republic of the State,0.45714285714285713,0.8626978397369385,high,1,0
+state federal,fas,pes_Arab,دولت فدرال,The federal government.,0.5555555555555556,0.7937281131744385,medium,1,1
+state unitary,fas,pes_Arab,واحد دولتی,State unit,0.8695652173913043,0.7547282576560974,medium,0,0
+state parliament,fas,pes_Arab,پارلمان ایالتی,The state legislature.,0.47368421052631576,0.8623639345169067,high,1,0
+state senate,fas,pes_Arab,مجلس سنا ایالتی,State Senate.,0.96,0.8519428372383118,high,0,0
+state constitution,fas,pes_Arab,قانون اساسی کشور,The constitution of the country,0.6122448979591837,0.8719874620437622,high,0,0
+state bureaucracy,fas,pes_Arab,بوروکراسی دولتی,Government bureaucracy,0.6666666666666666,0.8798278570175171,high,0,0
+state meritocracy,fas,pes_Arab,مروتوکراسی دولت,The government's monopoly.,0.37209302325581395,0.660060703754425,medium,1,0
+state oligarchy,fas,pes_Arab,اولیگارشیای دولتی,The state oligarchy.,0.8571428571428571,0.874445378780365,high,0,0
+state aristocracy,fas,pes_Arab,اشراف دولتی,The nobility of the state.,0.23255813953488372,0.8445428609848022,high,1,0
+identity,fas,pes_Arab,هویت,The identity.,0.7619047619047619,0.8483568429946899,high,0,0
+ethnicity,fas,pes_Arab,قومیت,Your ethnicity.,0.75,0.8699203133583069,high,0,0
+diaspora,fas,pes_Arab,دیاسپورا,The Diaspora.,0.7619047619047619,0.8195016384124756,high,0,0
+migration,fas,pes_Arab,مهاجرت,Immigration,0.9,0.8706277012825012,high,0,0
+immigrant,fas,pes_Arab,مهاجر,The immigrants.,0.75,0.8545837998390198,high,0,0
+refugee,fas,pes_Arab,پناهنده,Refugees,0.9333333333333333,0.85783851146698,high,0,0
+minority,fas,pes_Arab,اقلیت,The minority.,0.7619047619047619,0.8343803286552429,high,0,0
+majority,fas,pes_Arab,اکثریت,The majority.,0.7619047619047619,0.8142653107643127,high,0,0
+assimilation,fas,pes_Arab,انضمام,The merger.,0.08695652173913043,0.7547692060470581,medium,1,0
+integration,fas,pes_Arab,ادغام,I'm going to merge.,0.3333333333333333,0.847814679145813,high,1,0
+segregation,fas,pes_Arab,جداسازی,Separation,0.7619047619047619,0.8284894227981567,high,0,0
+pluralism,fas,pes_Arab,تعدد گرایی,Multiculturalism,0.64,0.8735131621360779,high,0,0
+multiculturalism,fas,pes_Arab,چند فرهنگی,Multicultural,0.896551724137931,0.7974952459335327,medium,0,0
+indigenous,fas,pes_Arab,بومی,Indigenous,1.0,0.810359537601471,high,1,1
+native,fas,pes_Arab,بومی,Indigenous,0.375,0.8217886686325073,high,1,1
+foreign,fas,pes_Arab,خارجی,Foreigners.,0.7777777777777778,0.7055766582489014,medium,0,0
+local,fas,pes_Arab,محلی,Locally.,0.7692307692307693,0.7469673752784729,medium,0,0
+global,fas,pes_Arab,جهانی,The world.,0.125,0.7829698920249939,medium,1,1
+community,fas,pes_Arab,جامعه,The community.,0.782608695652174,0.8127473592758179,high,0,0
+belonging,fas,pes_Arab,تعلق داشتن,They belonged.,0.5217391304347826,0.8038547039031982,high,1,0
+language,fas,pes_Arab,زبان,Language,1.0,0.8162407875061035,high,0,0
+dialect,fas,pes_Arab,گویش,Say it.,0.2857142857142857,0.8248056769371033,high,1,0
+heritage,fas,pes_Arab,میراث,A legacy,0.25,0.8359861373901367,high,1,0
+xenophobia,fas,pes_Arab,بیگانه ترس,Stranger to fear.,0.2222222222222222,0.8630667924880981,high,1,0
+stereotype,fas,pes_Arab,استریوتیپ,The stereotype.,0.8,0.8502515554428101,high,0,0
+prejudice,fas,pes_Arab,تعصب,The bigotry.,0.09523809523809523,0.8487502336502075,high,1,0
+citizenship,fas,pes_Arab,شهروندی,Citizenship,1.0,0.8753725290298462,high,0,0
+acculturation,fas,pes_Arab,فرهنگ سازی,Culturation,0.9166666666666666,0.8553444147109985,high,0,0
+hybridity,fas,pes_Arab,ترکیبی,It's a combination.,0.14285714285714285,0.7165969610214233,medium,1,0
+homeland,fas,pes_Arab,وطن,The homeland.,0.7619047619047619,0.8374345898628235,high,0,0
+exile,fas,pes_Arab,تبعید,Get out of the way.,0.16666666666666666,0.8547017574310303,high,1,0
+settler,fas,pes_Arab,مستوطن,The settlement.,0.5454545454545454,0.8445645570755005,high,1,0
+cosmopolitan,fas,pes_Arab,جهانگردي,It's the universe.,0.2,0.8442944288253784,high,1,0
+transnational,fas,pes_Arab,بین المللی,Internationally,0.7142857142857143,0.8102116584777832,high,0,0
+identity politics,fas,pes_Arab,سیاست هویت,Identity policy,0.875,0.8513040542602539,high,0,0
+mother tongue,fas,pes_Arab,زبان مادری,Mother tongue,1.0,0.848974347114563,high,0,0
+second language,fas,pes_Arab,زبان دوم,Second language.,0.967741935483871,0.8557270765304565,high,0,0
+local identity,fas,pes_Arab,هویت محلی,Local identity,1.0,0.8741813898086548,high,0,0
+local ethnicity,fas,pes_Arab,قومیتی محلی,Local ethnicity,1.0,0.7958338260650635,medium,0,0
+local diaspora,fas,pes_Arab,دیاسپورای محلی,Local Diaspora,1.0,0.8233745694160461,high,0,0
+local migration,fas,pes_Arab,مهاجرت محلی,Local migration,1.0,0.874616801738739,high,0,0
+local immigrant,fas,pes_Arab,مهاجران محلی,Local immigrants,0.967741935483871,0.8547174334526062,high,0,0
+local refugee,fas,pes_Arab,پناهنده محلی,Local refugees,0.9629629629629629,0.8658859729766846,high,0,0
+local minority,fas,pes_Arab,اقلیت محلی,Local minority,1.0,0.8444927334785461,high,0,0
+local majority,fas,pes_Arab,اکثریت محلی,The local majority,0.875,0.8535361289978027,high,0,0
+local assimilation,fas,pes_Arab,انطباق محلی,Local adaptation,0.7058823529411765,0.785099983215332,medium,0,0
+local integration,fas,pes_Arab,ادغام محلی,Local integration,1.0,0.8707032203674316,high,0,0
+local segregation,fas,pes_Arab,جداسازی محلی,Local isolation,0.75,0.8428431153297424,high,0,0
+local pluralism,fas,pes_Arab,تعدد گرایی محلی,Local pluralism,1.0,0.8700575232505798,high,0,0
+local multiculturalism,fas,pes_Arab,چند فرهنگی محلی,Multicultural local,0.6341463414634146,0.7751783132553101,medium,0,0
+local indigenous,fas,pes_Arab,بومی محلی,Local Indigenous,1.0,0.7500903606414795,medium,1,1
+local native,fas,pes_Arab,بومی محلی,Local Indigenous,0.6428571428571429,0.8424667119979858,high,1,1
+local foreign,fas,pes_Arab,خارجی های محلی,Local foreigners,0.896551724137931,0.7465405464172363,medium,0,0
+local local,fas,pes_Arab,محلی محلی,Local area.,0.6363636363636364,0.5743834972381592,low,1,0
+local global,fas,pes_Arab,محلی جهانی,"Locally, globally.",0.8,0.81177818775177,high,1,1
+local community,fas,pes_Arab,جامعه محلی,The local community,0.8823529411764706,0.8673441410064697,high,0,0
+local belonging,fas,pes_Arab,تعلق محلی,It's local.,0.38461538461538464,0.8408651351928711,high,1,0
+local language,fas,pes_Arab,زبان محلی,Local language,1.0,0.8624298572540283,high,0,0
+local dialect,fas,pes_Arab,گویش محلی,It's a local language.,0.45714285714285713,0.8645086288452148,high,1,0
+local heritage,fas,pes_Arab,میراث محلی,Local heritage,1.0,0.8690493106842041,high,0,0
+local xenophobia,fas,pes_Arab,بیگانه گرایی محلی,Local alienation,0.5625,0.8676063418388367,high,0,0
+local stereotype,fas,pes_Arab,کلیشه های محلی,Local clichés,0.4827586206896552,0.8694382309913635,high,1,0
+local prejudice,fas,pes_Arab,تعصب محلی,Local intolerance,0.5625,0.866597056388855,high,0,0
+local solidarity,fas,pes_Arab,همبستگی محلی,Local co-operation,0.47058823529411764,0.8480556011199951,high,1,0
+local citizenship,fas,pes_Arab,شهروندی محلی,Local citizenship,1.0,0.8835574388504028,high,0,0
+local acculturation,fas,pes_Arab,فرهنگ گذاری محلی,Local culture,0.75,0.8144952654838562,high,0,0
+local hybridity,fas,pes_Arab,ترکیبی محلی,Local mix.,0.56,0.7142676115036011,medium,0,0
+local homeland,fas,pes_Arab,وطن محلی,The local homeland.,0.8484848484848485,0.8045672178268433,high,0,0
+local exile,fas,pes_Arab,تبعید محلی,Local exile,1.0,0.8539596199989319,high,0,0
+local settler,fas,pes_Arab,مستوطن محلی,Local settlement,0.8275862068965517,0.8666415214538574,high,0,0
+local cosmopolitan,fas,pes_Arab,کسموپولیتی محلی,The local cosmopolitan.,0.8780487804878049,0.8415881395339966,high,0,0
+local transnational,fas,pes_Arab,بین المللی محلی,Local international,0.8421052631578947,0.6857866644859314,medium,0,0
+local identity politics,fas,pes_Arab,سیاست هویت محلی,Local identity policy,0.9090909090909091,0.8574085235595703,high,0,0
+local mother tongue,fas,pes_Arab,زبان مادری محلی,Local mother tongue,1.0,0.8522446751594543,high,0,0
+local second language,fas,pes_Arab,زبان دوم محلی,Local second language,1.0,0.8481686115264893,high,0,0
+global identity,fas,pes_Arab,هویت جهانی,A global identity,0.9375,0.8766316175460815,high,0,0
+global ethnicity,fas,pes_Arab,قومیت جهانی,Global ethnicity,1.0,0.8547273278236389,high,0,0
+global diaspora,fas,pes_Arab,دیاسپورای جهانی,The global diaspora,0.8823529411764706,0.8311318159103394,high,0,0
+global migration,fas,pes_Arab,مهاجرت جهانی,Global migration,1.0,0.8729302883148193,high,0,0
+global immigrant,fas,pes_Arab,مهاجران جهانی,Global migrants,0.9032258064516129,0.8265631198883057,high,0,0
+global refugee,fas,pes_Arab,پناهنده جهانی,A global refugee,0.9333333333333333,0.8655121326446533,high,0,0
+global minority,fas,pes_Arab,اقلیت جهانی,A global minority,0.9375,0.8491672277450562,high,0,0
+global majority,fas,pes_Arab,اکثریت جهانی,The global majority,0.8823529411764706,0.8490421772003174,high,0,0
+global assimilation,fas,pes_Arab,تطبیق جهانی,Global adaptation,0.7222222222222222,0.7739444971084595,medium,0,0
+global integration,fas,pes_Arab,ادغام جهانی,Global integration,1.0,0.876518726348877,high,0,0
+global segregation,fas,pes_Arab,جداسازی جهانی,Separation of the world.,0.38095238095238093,0.8371573686599731,high,1,0
+global pluralism,fas,pes_Arab,تعدادی جهانی,A global number.,0.5625,0.484779417514801,low,1,0
+global multiculturalism,fas,pes_Arab,چند فرهنگی جهانی,Multicultural world,0.6190476190476191,0.8485475182533264,high,0,0
+global indigenous,fas,pes_Arab,بومی جهانی,Worldwide native,0.24242424242424243,0.7752401232719421,medium,1,1
+global native,fas,pes_Arab,بومی جهانی,Worldwide native,0.5517241379310345,0.8110169172286987,high,1,1
+global foreign,fas,pes_Arab,خارجی جهانی,A global foreigner.,0.8484848484848485,0.653288722038269,medium,0,0
+global local,fas,pes_Arab,محلی جهانی,"Locally, globally.",0.4666666666666667,0.739808201789856,medium,1,1
+global global,fas,pes_Arab,جهانی,The world.,0.08695652173913043,0.49265381693840027,low,1,1
+global community,fas,pes_Arab,جامعه جهانی,The global community,0.8888888888888888,0.866962194442749,high,0,0
+global belonging,fas,pes_Arab,تعلق جهانی,It belongs to the world.,0.35,0.8342056274414062,high,1,0
+global language,fas,pes_Arab,زبان جهانی,World language,0.6896551724137931,0.8578541278839111,high,0,0
+global dialect,fas,pes_Arab,گویش جهانی,It's a universal language.,0.25,0.8611295223236084,high,1,0
+global heritage,fas,pes_Arab,میراث جهانی,World heritage,0.6896551724137931,0.866191565990448,high,0,0
+global xenophobia,fas,pes_Arab,بیگانه ترس جهانی,The alien fear of the world.,0.3111111111111111,0.8772681355476379,high,1,0
+greeting,fas,pes_Arab,سلام,What's up?,0.1111111111111111,0.8071601390838623,high,1,0
+handshake,fas,pes_Arab,دست دادن,Hands on your shoulders.,0.42424242424242425,0.8314754962921143,high,1,0
+bow,fas,pes_Arab,خم کردن,They bend.,0.15384615384615385,0.6427243947982788,medium,1,0
+hug,fas,pes_Arab,آغوش دادن,They hugged.,0.4,0.8150272369384766,high,1,0
+kiss,fas,pes_Arab,بوسه,It's a kiss.,0.5,0.8474894165992737,high,1,0
+gift giving,fas,pes_Arab,دادن هدیه,Giving a gift.,0.48,0.8521251082420349,high,1,0
+hosting,fas,pes_Arab,میزبانی,The host.,0.5,0.7763778567314148,medium,1,0
+shared meal,fas,pes_Arab,وعده های غذایی مشترک,Common meals,0.43478260869565216,0.852019190788269,high,1,0
+tea time,fas,pes_Arab,وقت چای,Tea time.,0.9411764705882353,0.8642690181732178,high,0,0
+funeral,fas,pes_Arab,مراسم خاکسپاری,The funeral.,0.7368421052631579,0.8491154313087463,high,1,1
+mourning,fas,pes_Arab,عزاداری,My condolences.,0.34782608695652173,0.8288071155548096,high,1,0
+burial,fas,pes_Arab,خاکسپاری,The burial.,0.7058823529411765,0.8601309061050415,high,0,0
+cremation,fas,pes_Arab,سوختن,They're burning.,0.32,0.8212248086929321,high,1,0
+birth,fas,pes_Arab,تولد,It's your birthday.,0.4166666666666667,0.8349857330322266,high,1,0
+naming ceremony,fas,pes_Arab,مراسم نامگذاری,The naming ceremony.,0.8571428571428571,0.8390925526618958,high,0,0
+coming of age,fas,pes_Arab,بلوغ,The coming of age.,0.8387096774193549,0.8387924432754517,high,0,0
+rite of passage,fas,pes_Arab,مراسم گذراندن,The graduation ceremony.,0.3076923076923077,0.7100563049316406,medium,1,0
+ceremony,fas,pes_Arab,مراسم,The ceremony.,0.7619047619047619,0.8194252252578735,high,1,1
+weekday,fas,pes_Arab,روز هفته,Day of the week.,0.34782608695652173,0.7736656069755554,medium,1,1
+weekend,fas,pes_Arab,آخر هفته,The weekend.,0.7368421052631579,0.8498943448066711,high,0,0
+workday,fas,pes_Arab,روز کار,It's a workday.,0.6363636363636364,0.8286255598068237,high,0,0
+rest day,fas,pes_Arab,روز استراحت,It's a day off.,0.43478260869565216,0.855483889579773,high,1,0
+queue,fas,pes_Arab,صف,Line up.,0.15384615384615385,0.8030040264129639,high,1,0
+punctuality,fas,pes_Arab,زمانبندی,You're on time.,0.3076923076923077,0.8452824950218201,high,1,0
+lateness,fas,pes_Arab,تاخیر,It's late.,0.4444444444444444,0.8257454633712769,high,1,0
+privacy,fas,pes_Arab,حریم خصوصی,It's private.,0.5,0.8668100833892822,high,1,0
+public space,fas,pes_Arab,فضای عمومی,Public space,1.0,0.8581469655036926,high,0,0
+neighbor,fas,pes_Arab,همسایه,Neighbor.,0.9411764705882353,0.8134089708328247,high,0,0
+household visit,fas,pes_Arab,سفر خانوادگی,A family trip.,0.20689655172413793,0.8304510116577148,high,1,0
+guest,fas,pes_Arab,مهمان,The guest.,0.6666666666666666,0.7847762107849121,medium,0,0
+host,fas,pes_Arab,میزبان,The host.,0.6153846153846154,0.8375012874603271,high,0,0
+table manners,fas,pes_Arab,آداب میز,The courtesy of the table.,0.2564102564102564,0.8059496879577637,high,1,0
+home cooking,fas,pes_Arab,آشپزی خانگی,Home cooking,1.0,0.8682958483695984,high,0,0
+festival meal,fas,pes_Arab,غذا جشن,Party food.,0.08333333333333333,0.6272194981575012,medium,1,0
+fast day,fas,pes_Arab,روز سریع,It's a fast day.,0.6666666666666666,0.6936200857162476,medium,0,0
+memorial day,fas,pes_Arab,روز یادبود,It's a day of remembrance.,0.3157894736842105,0.8338013887405396,high,1,0
+ancestor day,fas,pes_Arab,روز اجداد,This is Grandfather's Day.,0.42105263157894735,0.8312445878982544,high,1,1
+seasonal ritual,fas,pes_Arab,مراسم فصلی,The seasonal ceremony.,0.5405405405405406,0.8560191988945007,high,1,0
+daily greeting,fas,pes_Arab,سلام روزانه,"Hey, every day.",0.20689655172413793,0.8085925579071045,high,1,0
+daily handshake,fas,pes_Arab,دست دادن روزانه,Handshake every day.,0.5142857142857142,0.8153852820396423,high,1,0
+daily bow,fas,pes_Arab,خم روزانه,The daily curve.,0.48,0.7057002782821655,medium,1,0
+daily hug,fas,pes_Arab,آغوش روزانه,A hug every day.,0.4,0.8479183316230774,high,1,0
+daily kiss,fas,pes_Arab,بوسه روزانه,A kiss every day.,0.4444444444444444,0.8463919162750244,high,1,0
+daily gift giving,fas,pes_Arab,هدیه دادن روزانه,Giving gifts every day.,0.3,0.8502126932144165,high,1,0
+daily hosting,fas,pes_Arab,میزبانی روزانه,Hosted daily.,0.38461538461538464,0.8061364889144897,high,1,0
+daily hospitality,fas,pes_Arab,مهمان نوازی روزانه,Daily hospitality,1.0,0.8434207439422607,high,0,0
+daily shared meal,fas,pes_Arab,وعده غذایی مشترک روزانه,A common daily meal,0.5555555555555556,0.8503882884979248,high,0,0
+daily banquet,fas,pes_Arab,ضیافت روزانه,The daily feast.,0.5517241379310345,0.830284833908081,high,0,0
+daily tea time,fas,pes_Arab,زمان چای روزانه,Daily tea time.,0.9655172413793104,0.8596450090408325,high,0,0
+daily funeral,fas,pes_Arab,مراسم خاکسپاری روزانه,A daily funeral.,0.896551724137931,0.8334846496582031,high,0,0
+daily mourning,fas,pes_Arab,ماتم روزانه,I mourn every day.,0.4375,0.8280958533287048,high,1,0
+daily burial,fas,pes_Arab,دفن روزانه,Burial every day.,0.41379310344827586,0.8043876886367798,high,1,0
+daily cremation,fas,pes_Arab,سوختن روزانه,Burning every day.,0.18181818181818182,0.7062957286834717,medium,1,0
+daily birth,fas,pes_Arab,تولد روزانه,Birthday every day.,0.3333333333333333,0.7569222450256348,medium,1,0
+daily naming ceremony,fas,pes_Arab,مراسم نامگذاری روزانه,The daily naming ceremony.,0.8936170212765957,0.8284779787063599,high,0,0
+daily coming of age,fas,pes_Arab,روز به روز رسيدن به سن,It's your birthday.,0.15789473684210525,0.7212842106819153,medium,1,0
+daily rite of passage,fas,pes_Arab,مراسم گذراندن روزانه,The day-to-day passing ceremony.,0.4528301886792453,0.7023969888687134,medium,1,0
+daily ceremony,fas,pes_Arab,مراسم روزانه,The daily ceremony.,0.8484848484848485,0.7806578874588013,medium,0,0
+daily weekday,fas,pes_Arab,روز هفته,Day of the week.,0.5517241379310345,0.6518425345420837,medium,1,1
+daily weekend,fas,pes_Arab,روزانه در آخر هفته,Every weekend.,0.6666666666666666,0.7221291065216064,medium,0,0
+daily workday,fas,pes_Arab,روز کار روزانه,Day of work.,0.64,0.799198567867279,medium,0,0
+daily rest day,fas,pes_Arab,روز استراحت روزانه,Day of rest.,0.6153846153846154,0.8319083452224731,high,0,0
+daily queue,fas,pes_Arab,صف روزانه,The daily line.,0.5384615384615384,0.792022168636322,medium,1,0
+daily punctuality,fas,pes_Arab,دقت روزانه,Careful every day.,0.17142857142857143,0.7406144142150879,medium,1,0
+daily lateness,fas,pes_Arab,تاخیر روزانه,Day by day.,0.4,0.8150442838668823,high,1,0
+daily privacy,fas,pes_Arab,حریم خصوصی روزانه,Privacy every day.,0.45161290322580644,0.7644363045692444,medium,1,0
+daily public space,fas,pes_Arab,فضای عمومی روزانه,Public space on a daily basis,0.5106382978723404,0.7522289156913757,medium,1,0
+daily neighbor,fas,pes_Arab,همسایه روزانه,A daily neighbor.,0.9032258064516129,0.8026928901672363,high,0,0
+daily household visit,fas,pes_Arab,بازدید روزانه از خانواده ها,Daily family visits,0.65,0.8407855033874512,high,0,0
+daily guest,fas,pes_Arab,مهمان روزانه,A daily guest.,0.88,0.8332363367080688,high,0,0
+daily host,fas,pes_Arab,میزبان روزانه,Host of the day.,0.3076923076923077,0.7557142376899719,medium,1,0
+daily table manners,fas,pes_Arab,آداب میز روزانه,The manners of the daily table.,0.44,0.7823209762573242,medium,1,0
+daily home cooking,fas,pes_Arab,آشپزی خانگی روزانه,Home cooking every day,0.6,0.8497018814086914,high,0,0
+daily festival meal,fas,pes_Arab,وعده غذایی روزانه جشن,A daily meal of celebration.,0.425531914893617,0.694900393486023,medium,1,0
+daily fast day,fas,pes_Arab,روز روز روزه,Day by day.,0.64,0.621340274810791,medium,0,0
+daily memorial day,fas,pes_Arab,روز خاطره,It's a day of remembrance.,0.22727272727272727,0.5636515021324158,low,1,0
+daily ancestor day,fas,pes_Arab,روز اجداد,This is Grandfather's Day.,0.45454545454545453,0.6583588719367981,medium,1,1
+daily seasonal ritual,fas,pes_Arab,مراسم فصلی روزانه,The daily seasonal ceremony.,0.6530612244897959,0.8384515643119812,high,0,0
+household greeting,fas,pes_Arab,سلام خانوادگی,"Hey, family.",0.2,0.7990444898605347,medium,1,0
+household handshake,fas,pes_Arab,دست دادن خانوادگی,The family's giving up.,0.09523809523809523,0.8221458196640015,high,1,0
+household bow,fas,pes_Arab,قوس خانوادگی,The Family Arc.,0.2857142857142857,0.7828426361083984,medium,1,0
+household hug,fas,pes_Arab,آغوش خانوادگی,A family hug.,0.38461538461538464,0.8424203395843506,high,1,0
+household kiss,fas,pes_Arab,بوسه خانوادگی,A family kiss.,0.42857142857142855,0.8500611782073975,high,1,0
+household gift giving,fas,pes_Arab,هدیه دادن به خانواده,Giving gifts to the family.,0.25,0.8420615196228027,high,1,0
+household hosting,fas,pes_Arab,میزبانی خانوادگی,Family hospitality.,0.3888888888888889,0.8137757182121277,high,1,0
+household hospitality,fas,pes_Arab,مهمان نوازی خانوادگی,Family hospitality,0.6666666666666666,0.8560380935668945,high,0,0
+household shared meal,fas,pes_Arab,وعده غذایی مشترک خانوادگی,A family meal.,0.34285714285714286,0.8439431190490723,high,1,0
+household banquet,fas,pes_Arab,ضیافت خانوادگی,A family feast.,0.125,0.8391239047050476,high,1,0
+household tea time,fas,pes_Arab,زمان چای خانگی,Home tea time.,0.75,0.8381209969520569,high,0,0
+household funeral,fas,pes_Arab,مراسم تدفین خانوادگی,A family funeral.,0.5294117647058824,0.8148751258850098,high,1,0
+household mourning,fas,pes_Arab,عزاداری خانوادگی,Family Condolences,0.2222222222222222,0.8357123136520386,high,1,0
+household burial,fas,pes_Arab,خاکسپاری خانوادگی,Family Funeral,0.3333333333333333,0.8563061952590942,high,1,0
+household cremation,fas,pes_Arab,سوختن خانگی,Home burning,0.3870967741935484,0.7603176832199097,medium,1,0
+household birth,fas,pes_Arab,تولد خانوادگی,Family birthdays.,0.4375,0.7961459755897522,medium,1,0
+household naming ceremony,fas,pes_Arab,مراسم نامگذاری خانوادگی,The family naming ceremony.,0.7307692307692307,0.8329168558120728,high,0,0
+household coming of age,fas,pes_Arab,بلوغ خانواده,Family coming of age,0.6976744186046512,0.763524055480957,medium,0,0
+household rite of passage,fas,pes_Arab,سنت عبور خانوادگی,Family tradition.,0.23809523809523808,0.7041568756103516,medium,1,0
+household ceremony,fas,pes_Arab,مراسم خانوادگی,A family ceremony.,0.5555555555555556,0.7994743585586548,medium,0,0
+public,fas,pes_Arab,عمومی,The public.,0.7058823529411765,0.801673412322998,high,0,0
+fast,fas,pes_Arab,سریع,Hurry up.,0.0,0.8021532297134399,high,1,0
+grand,fas,pes_Arab,بزرگ,The big one.,0.23529411764705882,0.6013803482055664,medium,1,0
+gift,fas,pes_Arab,هدیه,It's a gift.,0.5,0.826932430267334,high,1,0
+meal,fas,pes_Arab,غذا,The food.,0.15384615384615385,0.8186646699905396,high,1,0
+custom,fas,pes_Arab,آداب و رسوم,It's a matter of manners.,0.25806451612903225,0.8197876214981079,high,1,0

@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,ukr,ukr_Cyrl,індивідуалізм,Individualism,1.0,0.8670125007629395,high,0,0
+collectivism,ukr,ukr_Cyrl,колективізм,collectivism,1.0,0.8716310262680054,high,0,0
+hierarchy,ukr,ukr_Cyrl,ієрархія,the hierarchy,0.8181818181818182,0.8672161102294922,high,0,0
+equality,ukr,ukr_Cyrl,рівність,equality,1.0,0.8588421940803528,high,0,0
+authority,ukr,ukr_Cyrl,орган,organ,0.2857142857142857,0.7584211230278015,medium,1,0
+autonomy,ukr,ukr_Cyrl,автономія,self-determination,0.3076923076923077,0.8604727387428284,high,1,0
+obedience,ukr,ukr_Cyrl,слухняність,obedience,1.0,0.8545777797698975,high,0,0
+duty,ukr,ukr_Cyrl,обов'язки,Responsibilities,0.1,0.8337095379829407,high,1,0
+freedom,ukr,ukr_Cyrl,свобода,freedom,1.0,0.8449932336807251,high,0,0
+honor,ukr,ukr_Cyrl,честь,honor,1.0,0.8379109501838684,high,0,0
+shame,ukr,ukr_Cyrl,соромність,shyness,0.5,0.8512067198753357,high,1,0
+virtue,ukr,ukr_Cyrl,добродечність,Virtue,1.0,0.8535109758377075,high,0,0
+vice,ukr,ukr_Cyrl,порочность,wickedness,0.42857142857142855,0.8241556286811829,high,1,0
+respect,ukr,ukr_Cyrl,повагу,respect,1.0,0.8117877244949341,high,0,0
+modesty,ukr,ukr_Cyrl,скромність,modesty,1.0,0.8532031178474426,high,0,0
+purity,ukr,ukr_Cyrl,чистість,Purity,1.0,0.861106276512146,high,0,0
+pollution,ukr,ukr_Cyrl,забруднення,pollution,1.0,0.8416827917098999,high,0,0
+face,ukr,ukr_Cyrl,обличчя,the face,0.6666666666666666,0.8174325227737427,high,0,0
+reputation,ukr,ukr_Cyrl,репутація,reputation,1.0,0.8585723042488098,high,0,0
+hospitality,ukr,ukr_Cyrl,гостинність,hospitality,1.0,0.8710228800773621,high,0,0
+charity,ukr,ukr_Cyrl,благодійність,charity,1.0,0.8749040365219116,high,0,0
+cooperation,ukr,ukr_Cyrl,співробітництво,cooperation,1.0,0.8520665168762207,high,0,0
+competition,ukr,ukr_Cyrl,конкуренція,Competition,1.0,0.8680541515350342,high,0,0
+fairness,ukr,ukr_Cyrl,справедливість,justice,0.26666666666666666,0.8690778613090515,high,1,0
+justice,ukr,ukr_Cyrl,правосуддя,Justice,1.0,0.7161279916763306,medium,1,1
+taboo,ukr,ukr_Cyrl,табу,It's taboo.,0.625,0.817353367805481,high,0,0
+tradition,ukr,ukr_Cyrl,традиція,tradition,1.0,0.8628830909729004,high,0,0
+modernity,ukr,ukr_Cyrl,сучасність,modernity,1.0,0.8712410926818848,high,0,0
+sacred,ukr,ukr_Cyrl,священна,sacred,1.0,0.8007239103317261,high,0,0
+secular,ukr,ukr_Cyrl,світська,worldly,0.14285714285714285,0.648431122303009,medium,1,0
+conformity,ukr,ukr_Cyrl,відповідності,the correspondence,0.21428571428571427,0.6352563500404358,medium,1,0
+dissent,ukr,ukr_Cyrl,розбіжності,Differences,0.4444444444444444,0.7890115976333618,medium,1,0
+restraint,ukr,ukr_Cyrl,стримування,restraint,1.0,0.8133929967880249,high,0,0
+indulgence,ukr,ukr_Cyrl,розпущення,fornication,0.19047619047619047,0.7877917289733887,medium,1,0
+solidarity,ukr,ukr_Cyrl,Солідарність,Solidarity,1.0,0.8833113312721252,high,0,0
+merit,ukr,ukr_Cyrl,заслуги,merits,0.9090909090909091,0.8326095342636108,high,0,0
+trust,ukr,ukr_Cyrl,довіра,Confidence,0.0,0.8660600781440735,high,1,0
+loyalty,ukr,ukr_Cyrl,лояльність,loyalty,1.0,0.8743832111358643,high,0,0
+integrity,ukr,ukr_Cyrl,цілісність,integrity,1.0,0.8592212200164795,high,0,0
+discretion,ukr,ukr_Cyrl,розсудність,reasonableness,0.3333333333333333,0.8342159986495972,high,1,0
+humility,ukr,ukr_Cyrl,смиріння,humility,1.0,0.8437345027923584,high,0,0
+discipline,ukr,ukr_Cyrl,дисципліна,Discipline,1.0,0.8314772248268127,high,0,0
+self control,ukr,ukr_Cyrl,самоконтроль,self-control,0.9166666666666666,0.8598700761795044,high,0,0
+deference,ukr,ukr_Cyrl,поваги,respect,0.375,0.6657457947731018,medium,1,0
+civic individualism,ukr,ukr_Cyrl,громадянський індивідуалізм,civic individualism,1.0,0.879969596862793,high,0,0
+civic collectivism,ukr,ukr_Cyrl,громадянський колективізм,civic collectivism,1.0,0.8782360553741455,high,0,0
+civic hierarchy,ukr,ukr_Cyrl,громадянська ієрархія,the civic hierarchy,0.8823529411764706,0.8819675445556641,high,0,0
+civic equality,ukr,ukr_Cyrl,громадянська рівність,civil equality,0.9285714285714286,0.8929617404937744,high,0,0
+civic authority,ukr,ukr_Cyrl,громадянська влада,civil authority,0.9333333333333333,0.8795570135116577,high,0,0
+civic autonomy,ukr,ukr_Cyrl,громадянська автономія,civil autonomy,0.9285714285714286,0.8818926811218262,high,0,0
+civic obedience,ukr,ukr_Cyrl,громадянська послушаність,civic obedience,1.0,0.8637004494667053,high,0,0
+civic duty,ukr,ukr_Cyrl,громадянський обов'язок,civic duty,1.0,0.8823278546333313,high,0,0
+civic freedom,ukr,ukr_Cyrl,громадянська свобода,civil liberties,0.5,0.8869267702102661,high,1,0
+civic honor,ukr,ukr_Cyrl,громадянська честь,civic honour,0.9565217391304348,0.8769878149032593,high,0,0
+civic shame,ukr,ukr_Cyrl,громадянська сорома,civil straw,0.6363636363636364,0.8712996244430542,high,0,0
+civic virtue,ukr,ukr_Cyrl,громадянська чеснота,civic decency,0.56,0.8755979537963867,high,0,0
+civic vice,ukr,ukr_Cyrl,громадянські пороки,civic vices,0.9523809523809523,0.856381893157959,high,0,0
+civic respect,ukr,ukr_Cyrl,громадянська повага,civic respect,1.0,0.8806159496307373,high,1,1
+civic modesty,ukr,ukr_Cyrl,громадянська скромність,civic modesty,1.0,0.8705390095710754,high,0,0
+civic purity,ukr,ukr_Cyrl,громадянська чистота,civil cleansing,0.4444444444444444,0.8745951652526855,high,1,0
+civic pollution,ukr,ukr_Cyrl,громадянське забруднення,civil pollution,0.9333333333333333,0.8675117492675781,high,0,0
+civic face,ukr,ukr_Cyrl,громадянське обличчя,a civic face,0.9090909090909091,0.8705620765686035,high,0,0
+civic reputation,ukr,ukr_Cyrl,громадянська репутація,public reputation,0.7878787878787878,0.876476526260376,high,0,0
+civic hospitality,ukr,ukr_Cyrl,громадянська гостинність,civic hospitality,1.0,0.8780539035797119,high,0,0
+civic charity,ukr,ukr_Cyrl,громадянська благодійність,civic charity,1.0,0.8728865385055542,high,0,0
+civic cooperation,ukr,ukr_Cyrl,громадянське співробітництво,civil cooperation,0.9411764705882353,0.8860882520675659,high,0,0
+civic competition,ukr,ukr_Cyrl,громадянська конкуренція,civil competition,0.9411764705882353,0.8782451152801514,high,0,0
+civic fairness,ukr,ukr_Cyrl,громадянська справедливість,civil justice,0.4444444444444444,0.8855420351028442,high,1,1
+civic justice,ukr,ukr_Cyrl,громадянська справедливість,civil justice,0.9230769230769231,0.8837531805038452,high,1,1
+civic taboo,ukr,ukr_Cyrl,громадянський табу,the civil taboo,0.7692307692307693,0.7577743530273438,medium,0,0
+civic tradition,ukr,ukr_Cyrl,громадянська традиція,civic tradition,1.0,0.8853880167007446,high,0,0
+civic modernity,ukr,ukr_Cyrl,громадянська модернізм,civic modernism,0.8666666666666667,0.7401856184005737,medium,0,0
+civic sacred,ukr,ukr_Cyrl,громадянське свято,a public holiday,0.2857142857142857,0.727726936340332,medium,1,0
+civic secular,ukr,ukr_Cyrl,громадянський світський,civil and secular,0.8,0.6081503629684448,medium,0,0
+civic conformity,ukr,ukr_Cyrl,громадянська відповідність,civil liability,0.5161290322580645,0.8656499981880188,high,1,0
+civic dissent,ukr,ukr_Cyrl,громадянські розбіжності,civil disagreements,0.6875,0.8882955312728882,high,0,0
+civic restraint,ukr,ukr_Cyrl,громадянська стриманість,civic restraint,1.0,0.8755442500114441,high,0,0
+civic indulgence,ukr,ukr_Cyrl,грамадський припущення,the social assumption,0.21621621621621623,0.4672446548938751,low,1,0
+civic solidarity,ukr,ukr_Cyrl,громадянська солідарність,civil solidarity,0.9375,0.8893208503723145,high,0,0
+civic merit,ukr,ukr_Cyrl,громадянські заслуги,civil service,0.6666666666666666,0.8658092021942139,high,0,0
+civic trust,ukr,ukr_Cyrl,грамадський довіра,public confidence,0.21428571428571427,0.7313321232795715,medium,1,0
+civic loyalty,ukr,ukr_Cyrl,громадянська лояльність,civic loyalty,1.0,0.8829153776168823,high,0,0
+civic integrity,ukr,ukr_Cyrl,громадянська цілісність,civil integrity,0.9333333333333333,0.8697491884231567,high,0,0
+civic discretion,ukr,ukr_Cyrl,громадянська дискреція,civil discretion,0.9375,0.8721967935562134,high,0,0
+civic humility,ukr,ukr_Cyrl,громадянське смиріння,civic humility,1.0,0.8724895715713501,high,0,0
+civic discipline,ukr,ukr_Cyrl,громадянська дисципліна,civic discipline,1.0,0.8807477355003357,high,0,0
+civic self control,ukr,ukr_Cyrl,громадянський самоконтроль,civic self-control,0.9444444444444444,0.877126932144165,high,0,0
+civic deference,ukr,ukr_Cyrl,громадянська повага,civic respect,0.6428571428571429,0.8646659255027771,high,1,1
+moral individualism,ukr,ukr_Cyrl,моральний індивідуалізм,moral individualism,1.0,0.86605304479599,high,0,0
+moral collectivism,ukr,ukr_Cyrl,моральний колективізм,moral collectivism,1.0,0.8746386170387268,high,0,0
+moral hierarchy,ukr,ukr_Cyrl,моральна ієрархія,moral hierarchy,1.0,0.8707984089851379,high,0,0
+moral equality,ukr,ukr_Cyrl,моральна рівність,moral equality,1.0,0.8755649328231812,high,0,0
+moral authority,ukr,ukr_Cyrl,моральний авторитет,moral authority,1.0,0.8514410257339478,high,0,0
+moral autonomy,ukr,ukr_Cyrl,моральна автономія,moral autonomy,1.0,0.8627354502677917,high,0,0
+moral obedience,ukr,ukr_Cyrl,моральна послушаність,moral obedience,1.0,0.8652237057685852,high,0,0
+moral duty,ukr,ukr_Cyrl,моральний обов'язок,moral obligation,0.5384615384615384,0.8677659034729004,high,1,0
+moral freedom,ukr,ukr_Cyrl,моральна свобода,moral freedom,1.0,0.8824474215507507,high,0,0
+moral honor,ukr,ukr_Cyrl,моральна честь,moral honor,1.0,0.861420750617981,high,0,0
+moral shame,ukr,ukr_Cyrl,моральний сором,moral shame,1.0,0.8349862098693848,high,0,0
+moral virtue,ukr,ukr_Cyrl,моральна доброта,moral goodness,0.5384615384615384,0.8593956232070923,high,1,0
+family,ukr,ukr_Cyrl,сім'я,family,1.0,0.8650825023651123,high,0,0
+kinship,ukr,ukr_Cyrl,родичі,relatives,0.25,0.8315763473510742,high,1,0
+mother,ukr,ukr_Cyrl,матір'я,mother,1.0,0.8422127962112427,high,0,0
+father,ukr,ukr_Cyrl,батько,father,1.0,0.8250589370727539,high,1,1
+parent,ukr,ukr_Cyrl,батько,father,0.3333333333333333,0.8109232187271118,high,1,1
+child,ukr,ukr_Cyrl,дитина,the child,0.7142857142857143,0.8570572733879089,high,0,0
+daughter,ukr,ukr_Cyrl,донька,daughter,1.0,0.8592413067817688,high,0,0
+son,ukr,ukr_Cyrl,сину,My son.,0.6,0.7904203534126282,medium,0,0
+uncle,ukr,ukr_Cyrl,дядько,My uncle.,0.7142857142857143,0.8469069004058838,high,1,1
+aunt,ukr,ukr_Cyrl,Тетя,Aunt,1.0,0.8394914865493774,high,0,0
+cousin,ukr,ukr_Cyrl,кузен,cousin,1.0,0.8490790128707886,high,0,0
+grandmother,ukr,ukr_Cyrl,бабуся,Grandmother,1.0,0.837213397026062,high,1,1
+grandfather,ukr,ukr_Cyrl,дідусь,I'm going to be a grandfather.,0.5365853658536586,0.8368086814880371,high,1,0
+nephew,ukr,ukr_Cyrl,племінник,Nephew,1.0,0.8581639528274536,high,0,0
+niece,ukr,ukr_Cyrl,племінниця,Nephew,0.5454545454545454,0.8453608155250549,high,1,0
+ancestor,ukr,ukr_Cyrl,попередник,the predecessor,0.43478260869565216,0.8233609795570374,high,1,0
+lineage,ukr,ukr_Cyrl,походження,origin,0.3076923076923077,0.7921484708786011,medium,1,0
+clan,ukr,ukr_Cyrl,клана,Clan,1.0,0.8139872550964355,high,0,0
+household,ukr,ukr_Cyrl,домогосподарство,household,1.0,0.8133469820022583,high,1,1
+joint family,ukr,ukr_Cyrl,спільна сім'я,common family,0.72,0.8286111354827881,high,0,0
+nuclear family,ukr,ukr_Cyrl,ядерна сім'я,nuclear family,1.0,0.8595683574676514,high,0,0
+marriage,ukr,ukr_Cyrl,шлюбу,marriage,1.0,0.7083498239517212,medium,0,0
+wedding,ukr,ukr_Cyrl,весілля,wedding,1.0,0.8414191007614136,high,1,1
+bride,ukr,ukr_Cyrl,невеста,the bride,0.7142857142857143,0.8419892191886902,high,0,0
+groom,ukr,ukr_Cyrl,жених,the bride,0.14285714285714285,0.7079445123672485,medium,1,0
+engagement,ukr,ukr_Cyrl,участі,participation,0.08695652173913043,0.5951505899429321,low,1,0
+dowry,ukr,ukr_Cyrl,дота,the date,0.15384615384615385,0.7366611957550049,medium,1,0
+bridewealth,ukr,ukr_Cyrl,невеста багатство,bride wealth,0.9565217391304348,0.46118420362472534,low,1,0
+inheritance,ukr,ukr_Cyrl,спадщина,inheritance,1.0,0.8399056196212769,high,1,1
+widow,ukr,ukr_Cyrl,вдова,widow,1.0,0.8524780869483948,high,1,1
+widower,ukr,ukr_Cyrl,вдова,widow,0.8333333333333334,0.8451500535011292,high,1,1
+courtship,ukr,ukr_Cyrl,куртованість,coatings,0.47058823529411764,0.46057218313217163,low,1,0
+matchmaker,ukr,ukr_Cyrl,союзник,Ally,0.14285714285714285,0.4473709166049957,low,1,0
+surname,ukr,ukr_Cyrl,прізвище,first name,0.5882352941176471,0.8408802151679993,high,0,0
+patronymic,ukr,ukr_Cyrl,патронімічна,the patronymic,0.8333333333333334,0.7028141021728516,medium,0,0
+matronymic,ukr,ukr_Cyrl,матроніміка,Matronymics,0.9523809523809523,0.8270605802536011,high,0,0
+firstborn,ukr,ukr_Cyrl,перший народжений,First born,0.9473684210526315,0.7127150297164917,medium,0,0
+heir,ukr,ukr_Cyrl,спадкоємець,heir to the throne,0.36363636363636365,0.8257327079772949,high,1,0
+filial piety,ukr,ukr_Cyrl,дитяча благочесність,childlike godliness,0.3870967741935484,0.8166847229003906,high,1,0
+caregiving,ukr,ukr_Cyrl,опікування,nursing,0.47058823529411764,0.8456567525863647,high,1,0
+motherhood,ukr,ukr_Cyrl,материнство,motherhood,1.0,0.8730268478393555,high,0,0
+fatherhood,ukr,ukr_Cyrl,батьківство,fatherhood,1.0,0.8626235723495483,high,0,0
+in laws,ukr,ukr_Cyrl,в законах,in the law,0.7058823529411765,0.7267578840255737,medium,0,0
+brother in law,ukr,ukr_Cyrl,братець-захист,brother-in-law,0.8571428571428571,0.5067431330680847,low,1,0
+sister in law,ukr,ukr_Cyrl,сістра-захистка,Sister-in-law,0.8461538461538461,0.5506150126457214,low,1,0
+ancestral home,ukr,ukr_Cyrl,родина предків,family of ancestors,0.42424242424242425,0.8543615341186523,high,1,0
+household labor,ukr,ukr_Cyrl,домашня робота,Homework,0.43478260869565216,0.8563957214355469,high,1,0
+extended family,ukr,ukr_Cyrl,розширена сім'я,extended family,1.0,0.8579546809196472,high,0,0
+extended kinship,ukr,ukr_Cyrl,розширеної родині,extended family,0.6451612903225806,0.6643030643463135,medium,0,0
+extended mother,ukr,ukr_Cyrl,розтягнута матір'я,A stretched mother,0.6666666666666666,0.45010966062545776,low,1,0
+extended father,ukr,ukr_Cyrl,старший батько,elderly father,0.6896551724137931,0.7822885513305664,medium,0,0
+extended parent,ukr,ukr_Cyrl,Розширені батьки,Extended Parents,0.967741935483871,0.5635749101638794,low,1,0
+extended child,ukr,ukr_Cyrl,Розширені діти,Enlarged Children,0.6451612903225806,0.7134209275245667,medium,0,0
+extended daughter,ukr,ukr_Cyrl,вищою донькою,A high-ranking daughter.,0.4878048780487805,0.5253599882125854,low,1,0
+extended son,ukr,ukr_Cyrl,старший син,eldest son,0.6363636363636364,0.8069508075714111,high,0,0
+extended uncle,ukr,ukr_Cyrl,дядько,My uncle.,0.5217391304347826,0.6485424041748047,medium,1,1
+extended aunt,ukr,ukr_Cyrl,витягнута тітка,Aunt pulled out,0.2857142857142857,0.5263614058494568,low,1,0
+extended cousin,ukr,ukr_Cyrl,старший двоюрідний брат,older cousin,0.6666666666666666,0.84651118516922,high,0,0
+extended grandmother,ukr,ukr_Cyrl,бабуся,Grandmother,0.7096774193548387,0.6773586869239807,medium,1,1
+extended grandfather,ukr,ukr_Cyrl,Великий дідусь,Grandfather,0.7096774193548387,0.8123903274536133,high,0,0
+extended nephew,ukr,ukr_Cyrl,витягнутий племінник,an extended nephew,0.9090909090909091,0.6181952357292175,medium,0,0
+extended niece,ukr,ukr_Cyrl,вищої племінниці,the eldest niece,0.6666666666666666,0.7280188202857971,medium,0,0
+extended ancestor,ukr,ukr_Cyrl,розширеного предка,extended ancestor,1.0,0.6410113573074341,medium,0,0
+extended lineage,ukr,ukr_Cyrl,розширеної лінії,extended line,0.896551724137931,0.6880728006362915,medium,0,0
+extended clan,ukr,ukr_Cyrl,розширеного клану,extended clan,1.0,0.7086436748504639,medium,0,0
+extended household,ukr,ukr_Cyrl,розширені домогосподарства,expanded households,0.8648648648648649,0.7428380250930786,medium,0,0
+extended joint family,ukr,ukr_Cyrl,розширена спільна сім'я,expanded common family,0.7441860465116279,0.8465099334716797,high,0,0
+extended nuclear family,ukr,ukr_Cyrl,розширена ядерна сім'я,the expanded nuclear family,0.84,0.8429515361785889,high,0,0
+extended marriage,ukr,ukr_Cyrl,тривалий шлюб,a long marriage,0.625,0.8197693228721619,high,0,0
+extended wedding,ukr,ukr_Cyrl,розповсюджені весілля,widespread weddings,0.6285714285714286,0.5469420552253723,low,1,0
+extended bride,ukr,ukr_Cyrl,розтягнута наречена,extended bride,1.0,0.39622145891189575,low,1,0
+extended groom,ukr,ukr_Cyrl,розтягнутий наречений,The extended bridegroom,0.7567567567567568,0.3449692130088806,low,1,0
+extended engagement,ukr,ukr_Cyrl,розширення участі,expanding participation,0.38095238095238093,0.7278647422790527,medium,1,0
+extended dowry,ukr,ukr_Cyrl,розширеної доти,Extended tooth,0.7142857142857143,0.5992570519447327,low,1,0
+extended bridewealth,ukr,ukr_Cyrl,розповсюдженої подружжньої багатства,widespread marital wealth,0.4,0.44892656803131104,low,1,0
+extended inheritance,ukr,ukr_Cyrl,розширеної спадщини,expanded heritage,0.7567567567567568,0.6475145816802979,medium,0,0
+extended widow,ukr,ukr_Cyrl,розтягнута вдова,a long-suffering widow,0.4444444444444444,0.5111544132232666,low,1,0
+extended widower,ukr,ukr_Cyrl,розтягнутий вдовець,a long-term widower,0.5714285714285714,0.45844364166259766,low,1,0
+extended courtship,ukr,ukr_Cyrl,продовження куртованості,prolongation of curvature,0.32558139534883723,0.43038931488990784,low,1,0
+extended matchmaker,ukr,ukr_Cyrl,Розширені шлюбниці,Widespread Marriage,0.42105263157894735,0.3941723108291626,low,1,0
+extended surname,ukr,ukr_Cyrl,розширеної прізвища,extended family name,0.7222222222222222,0.6108039617538452,medium,0,0
+extended patronymic,ukr,ukr_Cyrl,розширені патроніми,expanded by cartridges,0.5365853658536586,0.6529483199119568,medium,1,0
+extended matronymic,ukr,ukr_Cyrl,розширена матроніміка,extended matronymics,0.9743589743589743,0.8631408214569092,high,0,0
+extended firstborn,ukr,ukr_Cyrl,Розширені первонароджені,Expanded Firstborn,0.8888888888888888,0.5549716353416443,low,1,0
+extended heir,ukr,ukr_Cyrl,розширеного спадкоємця,the extended heir,0.8666666666666667,0.6505769491195679,medium,0,0
+extended filial piety,ukr,ukr_Cyrl,розширеної дітньої благочесності,extended childlike godliness,0.6122448979591837,0.6379111409187317,medium,0,0
+extended caregiving,ukr,ukr_Cyrl,продовження догляду,continuation of care,0.358974358974359,0.8035156726837158,high,1,0
+extended motherhood,ukr,ukr_Cyrl,продовження материнства,continuation of motherhood,0.5777777777777777,0.792513906955719,medium,0,0
+extended fatherhood,ukr,ukr_Cyrl,продовження батьківства,continuation of parenting,0.18181818181818182,0.6944911479949951,medium,1,0
+extended in laws,ukr,ukr_Cyrl,розширено законодавством,expanded by legislation,0.5128205128205128,0.7524360418319702,medium,1,0
+extended brother in law,ukr,ukr_Cyrl,старший брат-захист,Elder brother protector,0.5217391304347826,0.4590355455875397,low,1,0
+extended sister in law,ukr,ukr_Cyrl,вищої сестри в законах,Senior sister in law,0.7619047619047619,0.4557369649410248,low,1,0
+extended ancestral home,ukr,ukr_Cyrl,розширений дім предків,extended ancestral home,1.0,0.8294123411178589,high,0,0
+extended household labor,ukr,ukr_Cyrl,розширеної домашньої праці,extended homework,0.6829268292682927,0.6933071613311768,medium,0,0
+nuclear kinship,ukr,ukr_Cyrl,ядерна родичість,nuclear kinship,1.0,0.8699919581413269,high,0,0
+nuclear mother,ukr,ukr_Cyrl,ядерна мати,nuclear mother,1.0,0.8586530685424805,high,1,1
+nuclear father,ukr,ukr_Cyrl,ядерний батько,the nuclear father,0.875,0.861176609992981,high,0,0
+nuclear parent,ukr,ukr_Cyrl,ядерна мати,nuclear mother,0.6428571428571429,0.8488081693649292,high,1,1
+nuclear child,ukr,ukr_Cyrl,ядерна дитина,nuclear child,1.0,0.8831014037132263,high,0,0
+nuclear daughter,ukr,ukr_Cyrl,ядерна донька,Nuclear daughter,1.0,0.813011109828949,high,0,0
+religion,ukr,ukr_Cyrl,релігія,religion,1.0,0.8759235143661499,high,0,0
+ritual,ukr,ukr_Cyrl,ритуал,Ritual,1.0,0.8329402804374695,high,0,0
+prayer,ukr,ukr_Cyrl,молитва,prayer,1.0,0.8560694456100464,high,0,0
+temple,ukr,ukr_Cyrl,храму,the temple,0.75,0.696732223033905,medium,0,0
+church,ukr,ukr_Cyrl,церква,church,1.0,0.8609045147895813,high,0,0
+mosque,ukr,ukr_Cyrl,мечеть,the mosque,0.75,0.8561530113220215,high,0,0
+synagogue,ukr,ukr_Cyrl,синагога,the synagogue,0.8181818181818182,0.8658079504966736,high,0,0
+shrine,ukr,ukr_Cyrl,святилище,the sanctuary,0.21052631578947367,0.8478271961212158,high,1,0
+pilgrimage,ukr,ukr_Cyrl,паломництво,pilgrimage,1.0,0.8707865476608276,high,0,0
+scripture,ukr,ukr_Cyrl,Святе Письмо,The Holy Scriptures,0.6428571428571429,0.8416604995727539,high,0,0
+monk,ukr,ukr_Cyrl,монах,monk,1.0,0.8548592329025269,high,0,0
+priest,ukr,ukr_Cyrl,священик,a priest,0.8571428571428571,0.8507768511772156,high,0,0
+imam,ukr,ukr_Cyrl,Імам,I have,0.4,0.8429217338562012,high,1,0
+nun,ukr,ukr_Cyrl,монахиня,The nun,0.6,0.8409004211425781,high,0,0
+saint,ukr,ukr_Cyrl,святий,The Holy One,0.11764705882352941,0.8153344988822937,high,1,0
+martyr,ukr,ukr_Cyrl,мученик,the martyr,0.75,0.8401443958282471,high,0,0
+prophet,ukr,ukr_Cyrl,пророка,the prophet,0.7777777777777778,0.7007805109024048,medium,0,0
+zakat,ukr,ukr_Cyrl,закат,sunset,0.18181818181818182,0.773195743560791,medium,1,0
+tithe,ukr,ukr_Cyrl,десятина,the tenth,0.42857142857142855,0.835495114326477,high,1,0
+karma,ukr,ukr_Cyrl,карма,the karma,0.7142857142857143,0.806348979473114,high,0,0
+altar,ukr,ukr_Cyrl,алтарь,the altar,0.7142857142857143,0.8565430641174316,high,0,0
+incense,ukr,ukr_Cyrl,інкубатор,the incubator,0.3,0.4591194689273834,low,1,0
+rosary,ukr,ukr_Cyrl,розарій,the rosary,0.75,0.8610384464263916,high,0,0
+blessing,ukr,ukr_Cyrl,благословення,Blessings,0.9411764705882353,0.8356491327285767,high,0,0
+curse,ukr,ukr_Cyrl,прокляття,The curse.,0.6666666666666666,0.7933223247528076,medium,0,0
+sabbath,ukr,ukr_Cyrl,суботу,Saturday,0.4,0.7440944910049438,medium,1,0
+halal,ukr,ukr_Cyrl,халах,God bless you.,0.10526315789473684,0.5671880841255188,low,1,0
+kosher,ukr,ukr_Cyrl,кошер,coshers,0.7692307692307693,0.5923274755477905,low,1,0
+fasting,ukr,ukr_Cyrl,голодування,hunger,0.3076923076923077,0.8647054433822632,high,1,0
+sacrifice,ukr,ukr_Cyrl,жертвоприношення,offerings,0.2222222222222222,0.8388383984565735,high,1,0
+monastery,ukr,ukr_Cyrl,монастир,monastery,1.0,0.8599392175674438,high,1,1
+convent,ukr,ukr_Cyrl,монастир,monastery,0.375,0.8595584630966187,high,1,1
+abbey,ukr,ukr_Cyrl,абатство,Abbey,1.0,0.8464932441711426,high,0,0
+minaret,ukr,ukr_Cyrl,мінарет,Minaret,1.0,0.8621326684951782,high,0,0
+pagoda,ukr,ukr_Cyrl,пагода,The Pagoda,0.75,0.8429614305496216,high,0,0
+stupa,ukr,ukr_Cyrl,ступа,stepping stone,0.3157894736842105,0.5287216901779175,low,1,0
+ancestral altar,ukr,ukr_Cyrl,алтарі предків,Altars of the Ancestors,0.3684210526315789,0.8409723043441772,high,1,0
+funeral rite,ukr,ukr_Cyrl,похоронний обряд,Funeral service,0.8148148148148148,0.8631041646003723,high,0,0
+mourning rite,ukr,ukr_Cyrl,ритуал скорботи,Ritual of mourning,0.5161290322580645,0.8571044206619263,high,1,0
+memorial service,ukr,ukr_Cyrl,пам'ятна служба,Memorial service,1.0,0.8271573185920715,high,0,0
+ancestor worship,ukr,ukr_Cyrl,поклоніння предкам,worship of ancestors,0.5,0.8678303956985474,high,1,0
+tabernacle,ukr,ukr_Cyrl,скинії,the tabernacle,0.8333333333333334,0.4341982305049896,low,1,0
+prayer mat,ukr,ukr_Cyrl,молитовний мат,a prayer mat,0.9090909090909091,0.843247652053833,high,0,0
+chanting,ukr,ukr_Cyrl,скандали,scandals,0.375,0.40865781903266907,low,1,0
+hymn,ukr,ukr_Cyrl,гімн,anthem,0.4,0.819945216178894,high,1,1
+sermon,ukr,ukr_Cyrl,проповідь,preaching,0.26666666666666666,0.8641315698623657,high,1,0
+liturgy,ukr,ukr_Cyrl,літургія,liturgy,1.0,0.8584465384483337,high,0,0
+sacred religion,ukr,ukr_Cyrl,священна релігія,sacred religion,1.0,0.8680250644683838,high,0,0
+sacred ritual,ukr,ukr_Cyrl,священний ритуал,sacred ritual,1.0,0.8648900985717773,high,0,0
+sacred prayer,ukr,ukr_Cyrl,священна молитва,holy prayer,0.5833333333333334,0.8672286868095398,high,0,0
+sacred temple,ukr,ukr_Cyrl,священний храм,holy temple,0.5833333333333334,0.8635848760604858,high,0,0
+sacred church,ukr,ukr_Cyrl,священна церква,holy church,0.5833333333333334,0.8667916655540466,high,0,0
+sacred mosque,ukr,ukr_Cyrl,священна мечеть,holy mosque,0.5833333333333334,0.8687066435813904,high,0,0
+sacred synagogue,ukr,ukr_Cyrl,священна синагога,holy synagogue,0.6666666666666666,0.8708563446998596,high,0,0
+sacred shrine,ukr,ukr_Cyrl,священне святилище,holy shrine,0.5833333333333334,0.8253559470176697,high,0,0
+sacred pilgrimage,ukr,ukr_Cyrl,священне паломництво,sacred pilgrimage,1.0,0.8624124526977539,high,0,0
+sacred scripture,ukr,ukr_Cyrl,священне письмо,Sacred Scripture,1.0,0.8467725515365601,high,0,0
+sacred monk,ukr,ukr_Cyrl,священний монах,a holy monk,0.5454545454545454,0.8559598326683044,high,1,0
+sacred priest,ukr,ukr_Cyrl,священник,a priest,0.7619047619047619,0.7855343222618103,medium,0,0
+sacred imam,ukr,ukr_Cyrl,священний ім'ам,holy name,0.3,0.7860308289527893,medium,1,0
+sacred nun,ukr,ukr_Cyrl,священна монахиня,a holy nun,0.5,0.8590905666351318,high,1,0
+sacred saint,ukr,ukr_Cyrl,святий святий,holy holy,0.09523809523809523,0.6605923175811768,medium,1,0
+sacred martyr,ukr,ukr_Cyrl,святий мученик,the holy martyr,0.5714285714285714,0.8359704613685608,high,0,0
+sacred prophet,ukr,ukr_Cyrl,святий пророк,the holy prophet,0.6,0.8517248630523682,high,0,0
+sacred zakat,ukr,ukr_Cyrl,священна закята,sacred charity,0.6923076923076923,0.8187492489814758,high,0,0
+sacred tithe,ukr,ukr_Cyrl,священна десятина,sacred tithe,1.0,0.8538082242012024,high,0,0
+sacred karma,ukr,ukr_Cyrl,священна карма,sacred karma,1.0,0.8600599765777588,high,0,0
+sacred altar,ukr,ukr_Cyrl,священний алтар,sacred altar,1.0,0.8541478514671326,high,0,0
+sacred incense,ukr,ukr_Cyrl,священний інциенс,The Sacred Incense,0.875,0.6207611560821533,medium,0,0
+sacred rosary,ukr,ukr_Cyrl,священний розарій,Holy Rosary,0.5833333333333334,0.8584985733032227,high,0,0
+sacred blessing,ukr,ukr_Cyrl,священне благословення,a sacred blessing,0.9375,0.8543208241462708,high,0,0
+sacred curse,ukr,ukr_Cyrl,священна прокляття,A holy curse.,0.56,0.5853513479232788,low,1,0
+sacred sabbath,ukr,ukr_Cyrl,священний субота,Holy Sabbath,0.6153846153846154,0.6943634152412415,medium,0,0
+sacred halal,ukr,ukr_Cyrl,священний халал,the holy halal,0.5384615384615384,0.8235565423965454,high,1,0
+sacred kosher,ukr,ukr_Cyrl,священний кошер,sacred kosher,1.0,0.7928649187088013,medium,0,0
+sacred fasting,ukr,ukr_Cyrl,священний пост,holy fast,0.43478260869565216,0.8640530109405518,high,1,0
+sacred sacrifice,ukr,ukr_Cyrl,священна жертва,sacred sacrifice,1.0,0.8594382405281067,high,0,0
+sacred monastery,ukr,ukr_Cyrl,священний монастир,sacred monastery,1.0,0.8570567965507507,high,1,1
+sacred convent,ukr,ukr_Cyrl,священний монастир,sacred monastery,0.6666666666666666,0.8659077882766724,high,1,1
+sacred abbey,ukr,ukr_Cyrl,священне аббатство,Holy Abbey,0.5454545454545454,0.8515999913215637,high,1,0
+sacred minaret,ukr,ukr_Cyrl,священний мінарет,sacred minaret,1.0,0.8613821268081665,high,0,0
+sacred pagoda,ukr,ukr_Cyrl,священна пагода,the sacred pagoda,0.8666666666666667,0.8606008291244507,high,0,0
+sacred stupa,ukr,ukr_Cyrl,священна ступа,sacred footstool,0.6428571428571429,0.804476261138916,high,0,0
+sacred ancestral altar,ukr,ukr_Cyrl,священний батьківський алтар,holy father's altar,0.34146341463414637,0.833003044128418,high,1,0
+sacred funeral rite,ukr,ukr_Cyrl,священний похоронний обряд,sacred funeral service,0.8780487804878049,0.8656729459762573,high,0,0
+sacred mourning rite,ukr,ukr_Cyrl,священний траурний обряд,sacred mourning ceremony,0.8181818181818182,0.8465398550033569,high,0,0
+sacred memorial service,ukr,ukr_Cyrl,священна служба пам'яті,sacred service of remembrance,0.5384615384615384,0.8595770001411438,high,1,0
+sacred ancestor worship,ukr,ukr_Cyrl,священне поклоніння предкам,sacred worship of ancestors,0.64,0.8633133769035339,high,0,0
+sacred tabernacle,ukr,ukr_Cyrl,священний шатер,sacred tent,0.7142857142857143,0.796715497970581,medium,0,0
+sacred prayer mat,ukr,ukr_Cyrl,священна матка для молитви,A sacred womb for prayer,0.6341463414634146,0.5349622368812561,low,1,0
+sacred chanting,ukr,ukr_Cyrl,священне танцювання,sacred dancing,0.8275862068965517,0.8539179563522339,high,0,0
+sacred hymn,ukr,ukr_Cyrl,священний гімн,a sacred hymn,0.9166666666666666,0.8587596416473389,high,0,0
+sacred sermon,ukr,ukr_Cyrl,священна проповідь,sacred preaching,0.6206896551724138,0.8689256310462952,high,0,0
+sacred liturgy,ukr,ukr_Cyrl,священна літургія,sacred liturgy,1.0,0.8638163805007935,high,0,0
+ritual religion,ukr,ukr_Cyrl,ритуальна релігія,Ritual religion,1.0,0.8810914754867554,high,0,0
+ritual ritual,ukr,ukr_Cyrl,ритуальний ритуал,the ritual ritual,0.8666666666666667,0.8287228345870972,high,0,0
+ritual prayer,ukr,ukr_Cyrl,ритуальна молитва,Ritual prayer,1.0,0.8655669689178467,high,0,0
+ritual temple,ukr,ukr_Cyrl,ритуальний храм,ritual temple,1.0,0.863061249256134,high,0,0
+ritual church,ukr,ukr_Cyrl,ритуальна церква,Ritual church,1.0,0.8664637804031372,high,0,0
+ritual mosque,ukr,ukr_Cyrl,ритуальна мечеть,ritual mosque,1.0,0.8718938827514648,high,0,0
+rice,ukr,ukr_Cyrl,рис,rice,1.0,0.8434164524078369,high,0,0
+bread,ukr,ukr_Cyrl,хліб,Bread,1.0,0.8433258533477783,high,0,0
+noodle,ukr,ukr_Cyrl,нодуль,Noodle,1.0,0.5536634922027588,low,1,0
+dumpling,ukr,ukr_Cyrl,печенька,the liver,0.23529411764705882,0.6039056777954102,medium,1,0
+curry,ukr,ukr_Cyrl,каррі,Carrie,0.5454545454545454,0.8379765748977661,high,1,0
+spice,ukr,ukr_Cyrl,спеції,Species,0.6666666666666666,0.7886199355125427,medium,0,0
+tea,ukr,ukr_Cyrl,чай,tea,1.0,0.8412819504737854,high,1,1
+coffee,ukr,ukr_Cyrl,кава,coffee,1.0,0.8643991351127625,high,0,0
+meat,ukr,ukr_Cyrl,м'ясо,Meat,1.0,0.8443946242332458,high,0,0
+vegetarian,ukr,ukr_Cyrl,вегетаріанці,Vegetarians,0.9523809523809523,0.8617131114006042,high,0,0
+vegan,ukr,ukr_Cyrl,веганський,Vegetarian,0.6666666666666666,0.842677116394043,high,0,0
+soup,ukr,ukr_Cyrl,супа,soup,1.0,0.851318359375,high,0,0
+stew,ukr,ukr_Cyrl,випечка,baked goods,0.13333333333333333,0.741869330406189,medium,1,0
+barbecue,ukr,ukr_Cyrl,барбекю,Barbecue,1.0,0.854182243347168,high,0,0
+fermented,ukr,ukr_Cyrl,ферментовані,fermented,1.0,0.8501327037811279,high,0,0
+pickled,ukr,ukr_Cyrl,орієнтовані,oriented,0.4,0.39412978291511536,low,1,1
+banquet,ukr,ukr_Cyrl,банкет,banquet,1.0,0.8400141000747681,high,0,0
+feast,ukr,ukr_Cyrl,Вечір,The evening,0.125,0.8260730504989624,high,1,0
+street food,ukr,ukr_Cyrl,вулична їжа,street food,1.0,0.8705793619155884,high,0,0
+dessert,ukr,ukr_Cyrl,десерт,dessert,1.0,0.8343989253044128,high,0,0
+sauce,ukr,ukr_Cyrl,соус,sauce,1.0,0.7717147469520569,medium,0,0
+grain,ukr,ukr_Cyrl,зерно,grain,1.0,0.8393505811691284,high,0,0
+fruit,ukr,ukr_Cyrl,фрукти,Fruits,0.9090909090909091,0.8580458164215088,high,0,0
+vegetable,ukr,ukr_Cyrl,овочі,vegetables,0.9473684210526315,0.8468791246414185,high,0,0
+kebab,ukr,ukr_Cyrl,кебаб,Kebab,1.0,0.8600689768791199,high,0,0
+shawarma,ukr,ukr_Cyrl,Шварма,The Sword,0.35294117647058826,0.7308107614517212,medium,1,0
+ramen,ukr,ukr_Cyrl,Рамен,Ramen,1.0,0.7547034025192261,medium,0,0
+sushi,ukr,ukr_Cyrl,суші,land,0.0,0.8620118498802185,high,1,0
+kimchi,ukr,ukr_Cyrl,кімчі,of a kind used in the manufacture of goods,0.16666666666666666,0.8325055837631226,high,1,0
+pho,ukr,ukr_Cyrl,pho,What's the matter?,0.09523809523809523,0.7692074775695801,medium,1,0
+biryani,ukr,ukr_Cyrl,Біряні,Countryside,0.3333333333333333,0.7448846101760864,medium,1,0
+falafel,ukr,ukr_Cyrl,Фалафель,Fallout,0.5714285714285714,0.8636836409568787,high,0,0
+pasta,ukr,ukr_Cyrl,макаронки,French fries,0.11764705882352941,0.8373706340789795,high,1,0
+cheese,ukr,ukr_Cyrl,сирові,"of a fat content, by weight, not exceeding 5% by weight",0.16393442622950818,0.6883435249328613,medium,1,0
+wine,ukr,ukr_Cyrl,віно,wine,1.0,0.8655694127082825,high,0,0
+beer,ukr,ukr_Cyrl,пиво,beer,1.0,0.8682032823562622,high,0,0
+chai,ukr,ukr_Cyrl,чай,tea,0.2857142857142857,0.8487229943275452,high,1,1
+espresso,ukr,ukr_Cyrl,еспрессо,Espresso,1.0,0.8715921640396118,high,0,0
+udon,ukr,ukr_Cyrl,Удон,The Udon,0.6666666666666666,0.8178324103355408,high,0,0
+soba,ukr,ukr_Cyrl,Соба,The room,0.16666666666666666,0.7601081728935242,medium,1,0
+congee,ukr,ukr_Cyrl,конґеї,the Congolese,0.631578947368421,0.7017309665679932,medium,0,0
+bibimbap,ukr,ukr_Cyrl,Бібімбап,Baby-Baby,0.23529411764705882,0.859125018119812,high,1,0
+hummus,ukr,ukr_Cyrl,гумус,hummus,1.0,0.8316776752471924,high,0,0
+tabbouleh,ukr,ukr_Cyrl,Табуле,The table,0.5555555555555556,0.7105804681777954,medium,0,0
+paella,ukr,ukr_Cyrl,паела,paella,1.0,0.7898733615875244,medium,0,0
+risotto,ukr,ukr_Cyrl,рисото,white rice,0.23529411764705882,0.8252255320549011,high,1,0
+couscous,ukr,ukr_Cyrl,кускус,couscous,1.0,0.7925335764884949,medium,0,0
+injera,ukr,ukr_Cyrl,інжера,ingers,0.6666666666666666,0.5142309665679932,low,1,0
+tortilla,ukr,ukr_Cyrl,тортіля,the tortoise,0.5,0.8248592019081116,high,1,0
+tamale,ukr,ukr_Cyrl,тамале,the tamal,0.6666666666666666,0.7737246155738831,medium,0,0
+arepa,ukr,ukr_Cyrl,апера,opera,0.2,0.7467559576034546,medium,1,0
+empanada,ukr,ukr_Cyrl,емпанда,the empanada,0.8,0.7647433280944824,medium,0,0
+mochi,ukr,ukr_Cyrl,Мочі,Urine,0.2,0.5753790736198425,low,1,0
+matcha,ukr,ukr_Cyrl,матча,the match,0.6666666666666666,0.3959537744522095,low,1,0
+jalebi,ukr,ukr_Cyrl,Ялебі,The apple,0.4,0.7356641292572021,medium,1,0
+halwa,ukr,ukr_Cyrl,хальва,What's the matter?,0.2608695652173913,0.7326787710189819,medium,1,0
+flatbread,ukr,ukr_Cyrl,хлібний хліб,bread bread,0.5,0.558025598526001,low,1,0
+naan,ukr,ukr_Cyrl,Нана,What is it?,0.13333333333333333,0.821219801902771,high,1,0
+roti,ukr,ukr_Cyrl,Роті,The mouth,0.3076923076923077,0.8298931121826172,high,1,0
+chapati,ukr,ukr_Cyrl,Чапати,Cheating,0.6666666666666666,0.8292922377586365,high,0,0
+paratha,ukr,ukr_Cyrl,парата,the pair,0.4,0.6245546340942383,medium,1,0
+soy sauce,ukr,ukr_Cyrl,соєвий соус,soy sauce,1.0,0.868269681930542,high,0,0
+fish sauce,ukr,ukr_Cyrl,рибний соус,fish sauce,1.0,0.8660582900047302,high,0,0
+ghee,ukr,ukr_Cyrl,Гі,What is it?,0.13333333333333333,0.7420048713684082,medium,1,0
+paneer,ukr,ukr_Cyrl,панер,the paner,0.6666666666666666,0.7978347539901733,medium,0,0
+pickles,ukr,ukr_Cyrl,гвозди,Nails,0.5,0.8130032420158386,high,1,0
+broth,ukr,ukr_Cyrl,бульон,broth,1.0,0.8122456073760986,high,0,0
+porridge,ukr,ukr_Cyrl,капуста,Cabbage,0.26666666666666666,0.8236912488937378,high,1,0
+lentil,ukr,ukr_Cyrl,льощів,cloves,0.3333333333333333,0.504786491394043,low,1,0
+chickpea,ukr,ukr_Cyrl,цыплюна,chicken,0.8,0.7266615629196167,medium,0,0
+cassava,ukr,ukr_Cyrl,касовіна,beef and veal,0.2,0.783432126045227,medium,1,0
+plantain,ukr,ukr_Cyrl,пластинка,the record,0.1111111111111111,0.41025108098983765,low,1,0
+okra,ukr,ukr_Cyrl,Окра,It's very nice.,0.10526315789473684,0.848095178604126,high,1,0
+eggplant,ukr,ukr_Cyrl,яйцеклітини,eggs,0.5,0.7304120063781738,medium,1,0
+traditional rice,ukr,ukr_Cyrl,традиційний рис,traditional rice,1.0,0.8642466068267822,high,0,0
+traditional bread,ukr,ukr_Cyrl,традиційний хліб,Traditional bread,1.0,0.8554174900054932,high,0,0
+traditional noodle,ukr,ukr_Cyrl,традиційні лавки,traditional benches,0.7567567567567568,0.4304434657096863,low,1,0
+traditional dumpling,ukr,ukr_Cyrl,традиційні печеньки,traditional cookies,0.6666666666666666,0.7632111310958862,medium,0,0
+traditional curry,ukr,ukr_Cyrl,традиційний каррі,traditional curry,1.0,0.8515742421150208,high,0,0
+traditional spice,ukr,ukr_Cyrl,традиційні спеції,traditional spices,0.9714285714285714,0.8310672044754028,high,0,0
+traditional tea,ukr,ukr_Cyrl,традиційний чай,Traditional tea,1.0,0.8619276285171509,high,0,0
+traditional coffee,ukr,ukr_Cyrl,традиційна кава,traditional coffee,1.0,0.8815314769744873,high,0,0
+traditional meat,ukr,ukr_Cyrl,традиційне м'ясо,Traditional meat,1.0,0.8583981394767761,high,0,0
+traditional vegetarian,ukr,ukr_Cyrl,традиційні вегетаріанці,Traditional vegetarians,0.9777777777777777,0.8708498477935791,high,0,0
+traditional vegan,ukr,ukr_Cyrl,традиційний веган,traditional vegan,1.0,0.8739553093910217,high,0,0
+traditional soup,ukr,ukr_Cyrl,традиційний суп,Traditional soup,1.0,0.8583782315254211,high,0,0
+traditional stew,ukr,ukr_Cyrl,традиційний страв,traditional dishes,0.8235294117647058,0.5153215527534485,low,1,0
+traditional barbecue,ukr,ukr_Cyrl,традиційний барбекю,traditional barbecue,1.0,0.8708285689353943,high,0,0
+traditional fermented,ukr,ukr_Cyrl,традиційна ферментація,Traditional fermentation,0.8444444444444444,0.7783071994781494,medium,0,0
+traditional pickled,ukr,ukr_Cyrl,традиційні орігані,traditional organs,0.6486486486486487,0.5075905323028564,low,1,0
+traditional banquet,ukr,ukr_Cyrl,традиційний банкет,traditional banquet,1.0,0.8613362908363342,high,0,0
+traditional feast,ukr,ukr_Cyrl,традиційне свято,a traditional holiday,0.6842105263157895,0.8485151529312134,high,0,0
+traditional street food,ukr,ukr_Cyrl,традиційна вулична їжа,Traditional street food,1.0,0.8709645867347717,high,0,0
+traditional dessert,ukr,ukr_Cyrl,традиційний десерт,traditional dessert,1.0,0.8579530715942383,high,0,0
+traditional sauce,ukr,ukr_Cyrl,традиційний соус,Traditional sauce,1.0,0.8599790334701538,high,0,0
+traditional grain,ukr,ukr_Cyrl,традиційні зерна,traditional grains,0.9714285714285714,0.8550466895103455,high,0,0
+traditional fruit,ukr,ukr_Cyrl,традиційні фрукти,traditional fruit,1.0,0.8663675785064697,high,0,0
+traditional vegetable,ukr,ukr_Cyrl,традиційні овочі,traditional vegetables,0.9767441860465116,0.8592915534973145,high,0,0
+traditional kebab,ukr,ukr_Cyrl,традиційний кебаб,traditional kebab,1.0,0.870124340057373,high,0,0
+traditional shawarma,ukr,ukr_Cyrl,традиційна шварма,the traditional swarm,0.8292682926829268,0.8091167211532593,high,0,0
+festival,ukr,ukr_Cyrl,фестиваль,the festival,0.8,0.8434880375862122,high,0,0
+holiday,ukr,ukr_Cyrl,відпочинку,resting,0.14285714285714285,0.6033605337142944,medium,1,0
+new year,ukr,ukr_Cyrl,Новий рік,The New Year,0.8,0.8767049312591553,high,0,0
+easter,ukr,ukr_Cyrl,Великдень,Easter,1.0,0.6956403255462646,medium,0,0
+ramadan,ukr,ukr_Cyrl,Рамадан,Ramadan,1.0,0.8735247254371643,high,0,0
+eid,ukr,ukr_Cyrl,ід,I'd like to know.,0.1,0.8065416812896729,high,1,0
+diwali,ukr,ukr_Cyrl,дивалі,The savages,0.11764705882352941,0.646787166595459,medium,1,0
+vesak,ukr,ukr_Cyrl,Весак,Relaxation,0.26666666666666666,0.7259023189544678,medium,1,0
+hanukkah,ukr,ukr_Cyrl,ханука,the Hanukkah,0.8,0.8519132137298584,high,0,0
+passover,ukr,ukr_Cyrl,Пасха,The Passover,0.8,0.5693979263305664,low,1,0
+nowruz,ukr,ukr_Cyrl,Норуз,The Rose,0.14285714285714285,0.8402166366577148,high,1,0
+carnival,ukr,ukr_Cyrl,карнавал,carnival,1.0,0.8602429628372192,high,0,0
+thanksgiving,ukr,ukr_Cyrl,Дякуючи,Thankful,0.5,0.8033254742622375,high,1,0
+harvest festival,ukr,ukr_Cyrl,фестиваль урожаю,the harvest festival,0.8888888888888888,0.8583223819732666,high,0,0
+obon,ukr,ukr_Cyrl,абон,subscriber,0.14285714285714285,0.4694996774196625,low,1,0
+tet,ukr,ukr_Cyrl,tet,What's wrong with you?,0.16,0.3778562843799591,low,1,0
+songkran,ukr,ukr_Cyrl,Songkran,Songkran,1.0,0.8171160221099854,high,0,0
+dragon boat festival,ukr,ukr_Cyrl,Фестиваль драконових човнів,The Dragon Boat Festival,0.9090909090909091,0.8696649670600891,high,0,0
+mid autumn festival,ukr,ukr_Cyrl,Середньовосенний фестиваль,The Mid-Autumn Festival,0.8571428571428571,0.8427852392196655,high,0,0
+qingming,ukr,ukr_Cyrl,Кіньмінг,Qingming,1.0,0.8557904958724976,high,0,0
+yom kippur,ukr,ukr_Cyrl,Йом Киппур,Yom Kippur,1.0,0.8622118234634399,high,0,0
+rosh hashanah,ukr,ukr_Cyrl,рош хашана,Rosh Hashanah,1.0,0.7916314601898193,medium,0,0
+purim,ukr,ukr_Cyrl,пурим,We're going to smoke.,0.23076923076923078,0.5645351409912109,low,1,0
+sukkot,ukr,ukr_Cyrl,Суккот,Sweetheart,0.25,0.7762123346328735,medium,1,0
+advent,ukr,ukr_Cyrl,Прихід,The Arrival,0.23529411764705882,0.6746347546577454,medium,1,0
+holi,ukr,ukr_Cyrl,святої,the sacred,0.14285714285714285,0.47049638628959656,low,1,0
+navratri,ukr,ukr_Cyrl,Наватрі,The Navatri,0.7368421052631579,0.8466497659683228,high,0,0
+onam,ukr,ukr_Cyrl,наам,my name,0.5454545454545454,0.5196343660354614,low,1,0
+pongal,ukr,ukr_Cyrl,Понгал,Pongal,1.0,0.7341788411140442,medium,0,0
+durga puja,ukr,ukr_Cyrl,Дурга пужа,It's a long shot.,0.14814814814814814,0.7455077171325684,medium,1,0
+janmashtami,ukr,ukr_Cyrl,Янмаштамі,by Janmasthami,0.8,0.8203898072242737,high,0,0
+good friday,ukr,ukr_Cyrl,Добра п'ятниця,Good Friday,1.0,0.8516319990158081,high,0,0
+pentecost,ukr,ukr_Cyrl,п'ятидесятниця,the fiftieth,0.38095238095238093,0.742226243019104,medium,1,0
+epiphany,ukr,ukr_Cyrl,з'явлення,the appearance,0.45454545454545453,0.7557322382926941,medium,1,0
+all saints day,ukr,ukr_Cyrl,День всіх святих,All Saints' Day,0.9655172413793104,0.8566287755966187,high,0,0
+lunar new year,ukr,ukr_Cyrl,Місячний Новий рік,Monthly New Year,0.6666666666666666,0.8544759154319763,high,0,0
+thingyan,ukr,ukr_Cyrl,річ,the thing,0.5882352941176471,0.6106597185134888,medium,0,0
+day of the dead,ukr,ukr_Cyrl,День мертвих,Day of the Dead,1.0,0.8444004058837891,high,0,0
+mardi gras,ukr,ukr_Cyrl,Марді грас,Mardi Gras,1.0,0.8467859625816345,high,0,0
+saint day,ukr,ukr_Cyrl,святий день,holy day,0.47058823529411764,0.8067297339439392,high,1,0
+martinmas,ukr,ukr_Cyrl,Мартинма,What are you doing?,0.2857142857142857,0.6654631495475769,medium,1,0
+st patricks day,ukr,ukr_Cyrl,День Святого Патріка,What is St. Patrick's Day?,0.7317073170731707,0.8664321899414062,high,0,0
+independence day,ukr,ukr_Cyrl,День незалежності,Independence Day,1.0,0.8676387071609497,high,0,0
+mawlid,ukr,ukr_Cyrl,Мавлід,The Maldives,0.4444444444444444,0.7379108667373657,medium,1,0
+ashura,ukr,ukr_Cyrl,Ашура,Ashura,1.0,0.7875328063964844,medium,0,0
+hajj,ukr,ukr_Cyrl,хадж,Hajj,1.0,0.8605266213417053,high,0,0
+umrah,ukr,ukr_Cyrl,Умра,The Death,0.2857142857142857,0.862513542175293,high,1,0
+setsubun,ukr,ukr_Cyrl,Сетсубун,Setsubun,1.0,0.8247841596603394,high,0,0
+religious festival,ukr,ukr_Cyrl,релігійний фестиваль,religious festival,1.0,0.8667159080505371,high,0,0
+religious holiday,ukr,ukr_Cyrl,релігійні свята,religious holidays,0.9714285714285714,0.8373935222625732,high,0,0
+religious new year,ukr,ukr_Cyrl,релігійний новий рік,religious new year,1.0,0.8743062019348145,high,0,0
+religious easter,ukr,ukr_Cyrl,релігійна Пасха,religious Passover,0.8235294117647058,0.826703667640686,high,1,1
+religious ramadan,ukr,ukr_Cyrl,релігійний рамадан,religious Ramadan,1.0,0.8768159747123718,high,0,0
+religious eid,ukr,ukr_Cyrl,релігійна свята,religious celebration,0.7058823529411765,0.6457800269126892,medium,0,0
+religious diwali,ukr,ukr_Cyrl,релігійна дивалі,religious savages,0.6666666666666666,0.6678096055984497,medium,0,0
+religious vesak,ukr,ukr_Cyrl,релігійний весак,religious veil,0.8275862068965517,0.6243307590484619,medium,0,0
+religious hanukkah,ukr,ukr_Cyrl,релігійна ханука,religious hanukkah,1.0,0.8585313558578491,high,0,0
+religious passover,ukr,ukr_Cyrl,релігійна Пасха,religious Passover,1.0,0.695961594581604,medium,1,1
+religious nowruz,ukr,ukr_Cyrl,релігійний Nowruz,religious Nowruz,1.0,0.8342096209526062,high,0,0
+religious carnival,ukr,ukr_Cyrl,релігійний карнавал,religious carnival,1.0,0.8574894666671753,high,0,0
+religious thanksgiving,ukr,ukr_Cyrl,релігійний вдячний день,Religious Thanksgiving,1.0,0.8436739444732666,high,0,0
+religious harvest festival,ukr,ukr_Cyrl,релігійна свята врожаю,religious feast of the harvest,0.6071428571428571,0.8250192403793335,high,0,0
+religious obon,ukr,ukr_Cyrl,релігійний обон,religious worship,0.7096774193548387,0.7167705297470093,medium,0,0
+religious tet,ukr,ukr_Cyrl,релігійний тет,religious thesis,0.8275862068965517,0.485885351896286,low,1,0
+religious songkran,ukr,ukr_Cyrl,релігійні піснікран,religious song screen,0.8205128205128205,0.489964097738266,low,1,0
+religious dragon boat festival,ukr,ukr_Cyrl,релігійний фестиваль драконових човнів,Religious Dragon Boat Festival,1.0,0.8712034225463867,high,0,0
+religious mid autumn festival,ukr,ukr_Cyrl,релігійний фестиваль середини осені,religious festival in the middle of autumn,0.5070422535211268,0.8571217060089111,high,1,0
+religious qingming,ukr,ukr_Cyrl,релігійний чингмінг,religious changming,0.8648648648648649,0.8027713298797607,high,0,0
+religious yom kippur,ukr,ukr_Cyrl,релігійний йом кипур,religious Yot Cyprus,0.75,0.8219428062438965,high,0,0
+religious rosh hashanah,ukr,ukr_Cyrl,релігійний рош хашана,Religious Rosh Hashanah,1.0,0.7533862590789795,medium,0,0
+religious purim,ukr,ukr_Cyrl,релігійний пурим,religious purim,1.0,0.8172848224639893,high,0,0
+religious sukkot,ukr,ukr_Cyrl,релігійний сукот,religious suckling,0.7647058823529411,0.8171210885047913,high,0,0
+religious advent,ukr,ukr_Cyrl,релігійний прихід,religious conversion,0.7222222222222222,0.82015061378479,high,0,0
+religious holi,ukr,ukr_Cyrl,релігійний свято,religious holiday,0.9032258064516129,0.6718060970306396,medium,0,0
+religious navratri,ukr,ukr_Cyrl,релігійні наврати,religious backsliding,0.5641025641025641,0.8439992666244507,high,0,0
+religious onam,ukr,ukr_Cyrl,релігійний онам,religious to them,0.7741935483870968,0.6891977787017822,medium,0,0
+religious pongal,ukr,ukr_Cyrl,релігійний понгал,Religious Pongal,1.0,0.6752229928970337,medium,0,0
+religious durga puja,ukr,ukr_Cyrl,релігійна дурга-пужа,Religious foolishness,0.4878048780487805,0.5965461730957031,low,1,0
+religious janmashtami,ukr,ukr_Cyrl,релігійний янмаштамі,Religious Yanmasthami,0.9047619047619048,0.8282483816146851,high,0,0
+religious good friday,ukr,ukr_Cyrl,релігійна Добра п'ятниця,religious Good Friday,1.0,0.739646315574646,medium,0,0
+religious pentecost,ukr,ukr_Cyrl,релігійна п'ятидесятниця,religious Pentecostal,0.95,0.8036148548126221,high,0,0
+religious epiphany,ukr,ukr_Cyrl,релігійне проявлення,religious expression,0.7368421052631579,0.7842368483543396,medium,0,0
+religious all saints day,ukr,ukr_Cyrl,релігійний всі святі день,religious all holy day,0.782608695652174,0.6657790541648865,medium,0,0
+religious lunar new year,ukr,ukr_Cyrl,релігійний місячний Новий рік,religious lunar new year,1.0,0.8727010488510132,high,0,0
+religious thingyan,ukr,ukr_Cyrl,релігійні речі,Religious matters,0.6285714285714286,0.7290269732475281,medium,0,0
+religious day of the dead,ukr,ukr_Cyrl,релігійний день померлих,Religious Day of the Dead,1.0,0.8577264547348022,high,0,0
+religious mardi gras,ukr,ukr_Cyrl,релігійний mardi gras,religious mardi gras,1.0,0.8675131797790527,high,0,0
+religious saint day,ukr,ukr_Cyrl,релігійний день святого,religious day of the saint,0.6666666666666666,0.8151755332946777,high,0,0
+religious martinmas,ukr,ukr_Cyrl,релігійні мартинми,religious martyrs,0.8333333333333334,0.7456196546554565,medium,0,0
+religious st patricks day,ukr,ukr_Cyrl,релігійний день святого Патрика,religious day of St. Patrick,0.7547169811320755,0.8468788862228394,high,0,0
+religious independence day,ukr,ukr_Cyrl,День релігійної незалежності,Religious Independence Day,1.0,0.8483719825744629,high,0,0
+religious mawlid,ukr,ukr_Cyrl,релігійний маулід,religious Maoulid,0.9090909090909091,0.7105646729469299,medium,0,0
+religious ashura,ukr,ukr_Cyrl,релігійна ашура,religious deception,0.5714285714285714,0.7123345136642456,medium,0,0
+religious hajj,ukr,ukr_Cyrl,релігійний хадж,religious pilgrimage,0.6470588235294118,0.8678178787231445,high,0,0
+religious umrah,ukr,ukr_Cyrl,релігійна амра,religious amra,0.896551724137931,0.8672934770584106,high,0,0
+religious setsubun,ukr,ukr_Cyrl,релігійний сетсубун,religious sit-subun,0.918918918918919,0.8461735248565674,high,0,0
+seasonal festival,ukr,ukr_Cyrl,сезонний фестиваль,seasonal festival,1.0,0.8439551591873169,high,0,0
+seasonal holiday,ukr,ukr_Cyrl,сезонний відпочинок,seasonal holidays,0.9696969696969697,0.8521877527236938,high,0,0
+seasonal new year,ukr,ukr_Cyrl,сезонний новий рік,seasonal new year,1.0,0.708734393119812,medium,0,0
+seasonal easter,ukr,ukr_Cyrl,сезонна Великдень,seasonal Easter,1.0,0.5581928491592407,low,1,0
+dress,ukr,ukr_Cyrl,одяг,clothing,0.0,0.8031576871871948,high,1,1
+clothing,ukr,ukr_Cyrl,одяг,clothing,1.0,0.8414991497993469,high,1,1
+garment,ukr,ukr_Cyrl,одяг,clothing,0.13333333333333333,0.8320735692977905,high,1,1
+veil,ukr,ukr_Cyrl,прикриття,the cover,0.3076923076923077,0.8241980671882629,high,1,0
+hijab,ukr,ukr_Cyrl,хиджаб,the hijab,0.7142857142857143,0.8507139682769775,high,0,0
+niqab,ukr,ukr_Cyrl,нікаб,It's like...,0.11764705882352941,0.8544853925704956,high,1,0
+burqa,ukr,ukr_Cyrl,Бурка,The Storm,0.14285714285714285,0.8472517728805542,high,1,0
+sari,ukr,ukr_Cyrl,Сари,Sarah,0.6666666666666666,0.7865002751350403,medium,0,0
+kimono,ukr,ukr_Cyrl,кімоно,Cinnamon,0.5714285714285714,0.8520427346229553,high,0,0
+hanbok,ukr,ukr_Cyrl,ганбок,of a kind used in the manufacture of foodstuffs,0.1509433962264151,0.7889833450317383,medium,1,0
+turban,ukr,ukr_Cyrl,турбан,turban,1.0,0.8635153770446777,high,0,0
+abaya,ukr,ukr_Cyrl,Абая,Abaya,1.0,0.6479779481887817,medium,0,0
+thobe,ukr,ukr_Cyrl,Тобі,To you.,0.3333333333333333,0.5617890357971191,low,1,0
+dupatta,ukr,ukr_Cyrl,Дупатта,What is this?,0.3,0.7331311702728271,medium,1,0
+lehenga,ukr,ukr_Cyrl,лехенга,Lecheng,0.8571428571428571,0.7544275522232056,medium,0,0
+kurta,ukr,ukr_Cyrl,Курта,Coat of arms,0.11764705882352941,0.8150883913040161,high,1,0
+dhoti,ukr,ukr_Cyrl,Дхоти,Ghosts,0.5454545454545454,0.8134332895278931,high,1,0
+qipao,ukr,ukr_Cyrl,Кіпао,Cypriot,0.3333333333333333,0.7877044677734375,medium,1,0
+uniform,ukr,ukr_Cyrl,уніформа,Uniforms,0.9333333333333333,0.838010311126709,high,0,0
+formal,ukr,ukr_Cyrl,формальний,formal,1.0,0.8294771313667297,high,0,0
+casual,ukr,ukr_Cyrl,випадкові,by chance.,0.25,0.7585951089859009,medium,1,0
+modest,ukr,ukr_Cyrl,скромний,modest,1.0,0.7978599071502686,medium,0,0
+ornate,ukr,ukr_Cyrl,орієнтовані,oriented,0.7142857142857143,0.412573903799057,low,1,1
+jewelry,ukr,ukr_Cyrl,ювелірні вироби,jewellery,0.875,0.8632665276527405,high,0,0
+necklace,ukr,ukr_Cyrl,ожерелье,necklace,1.0,0.8514376878738403,high,0,0
+earring,ukr,ukr_Cyrl,вухові кольори,ear colours,0.4444444444444444,0.5357369780540466,low,1,0
+bracelet,ukr,ukr_Cyrl,браслет,bracelet,1.0,0.8303600549697876,high,0,0
+ring,ukr,ukr_Cyrl,кільце,the ring,0.6666666666666666,0.7802692651748657,medium,0,0
+headscarf,ukr,ukr_Cyrl,шерсть на голову,hair on the head,0.32,0.5673609375953674,low,1,0
+tattoo,ukr,ukr_Cyrl,татуїровка,the tattoo,0.75,0.8673186302185059,high,0,0
+piercing,ukr,ukr_Cyrl,пірсінг,drying,0.5714285714285714,0.699647068977356,medium,0,0
+mask,ukr,ukr_Cyrl,маска,the mask,0.6666666666666666,0.8265418410301208,high,0,0
+gown,ukr,ukr_Cyrl,сукенка,Dress,0.0,0.7695850133895874,medium,1,0
+tuxedo,ukr,ukr_Cyrl,Смуксе,Smokes,0.16666666666666666,0.48160359263420105,low,1,0
+wedding dress,ukr,ukr_Cyrl,весілля,wedding,0.7,0.553970456123352,low,1,1
+sash,ukr,ukr_Cyrl,ков'я,cow,0.0,0.4491020739078522,low,1,0
+sandals,ukr,ukr_Cyrl,сандали,sandals,1.0,0.8544327020645142,high,0,0
+slippers,ukr,ukr_Cyrl,туфлі,shoes,0.46153846153846156,0.8536777496337891,high,1,0
+bangle,ukr,ukr_Cyrl,бланк,the form,0.14285714285714285,0.3880116939544678,low,1,0
+anklet,ukr,ukr_Cyrl,носорога,the rhinoceros,0.2,0.4786088168621063,low,1,0
+kaftan,ukr,ukr_Cyrl,кафтан,the captain,0.47058823529411764,0.8533616065979004,high,1,0
+poncho,ukr,ukr_Cyrl,Пончо,The poncho,0.75,0.8586162328720093,high,0,0
+sombrero,ukr,ukr_Cyrl,sombrero,the sombrero,0.8,0.8139011859893799,high,0,0
+kippah,ukr,ukr_Cyrl,Кіппа,Keeping up with the Joneses,0.24242424242424243,0.7239317893981934,medium,1,0
+yarmulke,ukr,ukr_Cyrl,ярмальке,the fairy tale,0.36363636363636365,0.7542069554328918,medium,1,0
+mourning dress,ukr,ukr_Cyrl,плаття за скорботу,clothing for mourning,0.45714285714285713,0.7804195284843445,medium,1,0
+ceremonial mask,ukr,ukr_Cyrl,церемоніальна маска,the ceremonial mask,0.8823529411764706,0.858189582824707,high,0,0
+formal dress,ukr,ukr_Cyrl,формальний одяг,formal clothing,0.5185185185185185,0.8595839738845825,high,1,1
+formal clothing,ukr,ukr_Cyrl,формальна одяг,formal clothing,1.0,0.8157218098640442,high,0,0
+formal garment,ukr,ukr_Cyrl,формальний одяг,formal clothing,0.5517241379310345,0.8567200899124146,high,1,1
+formal veil,ukr,ukr_Cyrl,формальний завіс,a formal curtain,0.5925925925925926,0.826652467250824,high,0,0
+formal hijab,ukr,ukr_Cyrl,формальний хиджаб,the formal hijab,0.8571428571428571,0.8577417135238647,high,0,0
+formal niqab,ukr,ukr_Cyrl,формальний нікаб,formal niqab,1.0,0.8477015495300293,high,0,0
+formal burqa,ukr,ukr_Cyrl,формальна бурка,formal burqa,1.0,0.8234573602676392,high,0,0
+formal sari,ukr,ukr_Cyrl,формальний сарі,formal sari,1.0,0.7645571231842041,medium,0,0
+formal kimono,ukr,ukr_Cyrl,формальний кімоно,formal kimono,1.0,0.8166587948799133,high,0,0
+formal hanbok,ukr,ukr_Cyrl,формальний ханбок,formal knot,0.75,0.7975360751152039,medium,0,0
+formal turban,ukr,ukr_Cyrl,формальний турбан,a formal turban,0.9285714285714286,0.8347347974777222,high,0,0
+formal abaya,ukr,ukr_Cyrl,формальна абая,formal abaya,1.0,0.6939741969108582,medium,0,0
+formal thobe,ukr,ukr_Cyrl,Формальний день,Formal day,0.6363636363636364,0.5555989146232605,low,1,0
+formal dupatta,ukr,ukr_Cyrl,формальна дупатта,the formal dupatta,0.875,0.4576078951358795,low,1,0
+formal lehenga,ukr,ukr_Cyrl,формальна лехенга,formal lehen,0.9230769230769231,0.49723878502845764,low,1,0
+formal kurta,ukr,ukr_Cyrl,формальна курта,formal coat,0.6956521739130435,0.7474935054779053,medium,0,0
+formal dhoti,ukr,ukr_Cyrl,формальний dhoti,formal dhoti,1.0,0.4489577114582062,low,1,0
+formal qipao,ukr,ukr_Cyrl,формальний чипао,a formal chipao,0.8148148148148148,0.4548585116863251,low,1,0
+formal uniform,ukr,ukr_Cyrl,формальна уніформа,formal uniforms,0.9655172413793104,0.8511016368865967,high,0,0
+formal formal,ukr,ukr_Cyrl,формальна формальна формальна,formally formally formally formally,0.5416666666666666,0.39318227767944336,low,1,0
+formal casual,ukr,ukr_Cyrl,формальний випадковий,the formal casual,0.8666666666666667,0.5731033682823181,low,1,0
+formal modest,ukr,ukr_Cyrl,формальна скромність,formal modesty,0.9629629629629629,0.7136912941932678,medium,0,0
+formal ornate,ukr,ukr_Cyrl,формальна орнаментація,formal ornamentation,0.7272727272727273,0.6895902156829834,medium,0,0
+formal jewelry,ukr,ukr_Cyrl,формальний ювелір,a formal jeweler,0.8666666666666667,0.8107509613037109,high,0,0
+formal necklace,ukr,ukr_Cyrl,формальний ожерелок,a formal collar,0.6666666666666666,0.7970477342605591,medium,0,0
+formal earring,ukr,ukr_Cyrl,формальний вушник,formal earring,1.0,0.6920812129974365,medium,0,0
+formal bracelet,ukr,ukr_Cyrl,формальний браслет,a formal bracelet,0.9375,0.8288282155990601,high,0,0
+formal ring,ukr,ukr_Cyrl,формальний кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кільцевий кі,Formal ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring ring,0.14012738853503184,0.2719193994998932,low,1,0
+formal headscarf,ukr,ukr_Cyrl,формальний платок на голову,formal headgear,0.8387096774193549,0.8307703733444214,high,0,0
+formal tattoo,ukr,ukr_Cyrl,формальна татуїровка,a formal tattoo,0.9285714285714286,0.8552649021148682,high,0,0
+formal piercing,ukr,ukr_Cyrl,формальний пірсінг,formal drilling,0.7333333333333333,0.6725409030914307,medium,0,0
+formal mask,ukr,ukr_Cyrl,формальна маска,a formal mask,0.9166666666666666,0.8362876176834106,high,0,0
+formal gown,ukr,ukr_Cyrl,формальна сукня,formal dress,0.6086956521739131,0.8645542860031128,high,0,0
+formal tuxedo,ukr,ukr_Cyrl,формальний смокинг,formal tuxedo,1.0,0.754468560218811,medium,0,0
+formal wedding dress,ukr,ukr_Cyrl,формальна весільна сукня,formal wedding dress,1.0,0.8505989909172058,high,0,0
+formal sash,ukr,ukr_Cyrl,формальна шерша,formal grey,0.6363636363636364,0.5138421058654785,low,1,0
+formal sandals,ukr,ukr_Cyrl,формальні сандали,formal sandals,1.0,0.8447469472885132,high,0,0
+formal slippers,ukr,ukr_Cyrl,формальні туфлі,formal shoes,0.7407407407407407,0.8461121320724487,high,0,0
+formal bangle,ukr,ukr_Cyrl,формальний банкет,a formal banquet,0.7586206896551724,0.4961172938346863,low,1,0
+formal anklet,ukr,ukr_Cyrl,формальна ложка,a formal spoon,0.5925925925925926,0.43129172921180725,low,1,0
+formal kaftan,ukr,ukr_Cyrl,формальний кафтан,Formal boiler,0.5384615384615384,0.7907499670982361,medium,1,0
+formal poncho,ukr,ukr_Cyrl,формальний пончо,a formal donut,0.6666666666666666,0.8451002836227417,high,0,0
+formal sombrero,ukr,ukr_Cyrl,формальний сомбреро,the formal sombrero,0.8823529411764706,0.7635884284973145,medium,0,0
+formal kippah,ukr,ukr_Cyrl,формальна кіпа,the formal kit,0.6666666666666666,0.7047567367553711,medium,0,0
+formal yarmulke,ukr,ukr_Cyrl,формальна ярмалька,the formal fair,0.6,0.495016485452652,low,1,0
+formal mourning dress,ukr,ukr_Cyrl,формальне плаття для скорботи,formal mourning garments,0.8444444444444444,0.7628126740455627,medium,0,0
+formal ceremonial mask,ukr,ukr_Cyrl,формальна церемоніальна маска,a formal ceremonial mask,0.9565217391304348,0.8475791811943054,high,0,0
+casual dress,ukr,ukr_Cyrl,порожня одяг,empty clothes,0.32,0.5600564479827881,low,1,0
+casual clothing,ukr,ukr_Cyrl,неформальна одяг,informal clothing,0.6875,0.7734909057617188,medium,1,1
+casual garment,ukr,ukr_Cyrl,неформальна одяг,informal clothing,0.25806451612903225,0.7657690048217773,medium,1,1
+casual veil,ukr,ukr_Cyrl,випадковий завіс,a randomly drawn curtain,0.17142857142857143,0.7799705266952515,medium,1,0
+casual hijab,ukr,ukr_Cyrl,випадковий хіджаб,a casual hijab,0.9230769230769231,0.773399829864502,medium,0,0
+casual niqab,ukr,ukr_Cyrl,казуальний нікаб,a casual niqab,0.9230769230769231,0.7880542278289795,medium,0,0
+white,ukr,ukr_Cyrl,білий,white,1.0,0.8433116674423218,high,0,0
+red,ukr,ukr_Cyrl,червоний,red,1.0,0.8407074213027954,high,0,0
+black,ukr,ukr_Cyrl,чорна,It's black.,0.625,0.7810730338096619,medium,0,0
+blue,ukr,ukr_Cyrl,синій,blue,1.0,0.8157379627227783,high,0,0
+green,ukr,ukr_Cyrl,зелений,green,1.0,0.8430702686309814,high,0,0
+yellow,ukr,ukr_Cyrl,жовтий,yellow,1.0,0.8384474515914917,high,0,0
+purple,ukr,ukr_Cyrl,фіолетовий,purple,1.0,0.8536924123764038,high,0,0
+orange,ukr,ukr_Cyrl,оранжевий,orange,1.0,0.8536760807037354,high,0,0
+gold,ukr,ukr_Cyrl,Золото,Gold,1.0,0.8525708913803101,high,0,0
+silver,ukr,ukr_Cyrl,срібло,silver,1.0,0.8551604151725769,high,0,0
+dragon,ukr,ukr_Cyrl,дракон,the dragon,0.75,0.8579350113868713,high,0,0
+phoenix,ukr,ukr_Cyrl,Фінікс,The Phoenix,0.7777777777777778,0.752375602722168,medium,0,0
+lotus,ukr,ukr_Cyrl,лотос,lotus,1.0,0.8334196209907532,high,0,0
+bamboo,ukr,ukr_Cyrl,бамбук,the bamboo,0.75,0.8555930852890015,high,0,0
+olive,ukr,ukr_Cyrl,оливкові,olive oil,0.7142857142857143,0.6807715892791748,medium,0,0
+maple,ukr,ukr_Cyrl,яблука,the apple,0.5714285714285714,0.7466158866882324,medium,0,0
+totem,ukr,ukr_Cyrl,тотем,the totem,0.7142857142857143,0.8503289222717285,high,0,0
+emblem,ukr,ukr_Cyrl,емблема,the emblem,0.75,0.8631607294082642,high,0,0
+anthem,ukr,ukr_Cyrl,Гімн,The Anthem,0.75,0.8508074879646301,high,1,1
+flag,ukr,ukr_Cyrl,прапор,the flag,0.6666666666666666,0.8412535190582275,high,0,0
+icon,ukr,ukr_Cyrl,ікона,the icon,0.6666666666666666,0.8480278253555298,high,0,0
+script,ukr,ukr_Cyrl,сценарій,the script,0.75,0.8626303672790527,high,0,0
+calligraphy,ukr,ukr_Cyrl,каллиграфія,calligraphy,1.0,0.8630503416061401,high,0,0
+lantern,ukr,ukr_Cyrl,фонарик,a flashlight,0.3157894736842105,0.8389504551887512,high,1,0
+opera,ukr,ukr_Cyrl,опера,opera,1.0,0.8559212684631348,high,0,0
+dance,ukr,ukr_Cyrl,танцювання,dancing,0.6666666666666666,0.8489753007888794,high,0,0
+music,ukr,ukr_Cyrl,музика,music,1.0,0.8675161600112915,high,0,0
+folklore,ukr,ukr_Cyrl,фольклор,Folklore,1.0,0.861865758895874,high,0,0
+myth,ukr,ukr_Cyrl,міф,Myth,1.0,0.8363189697265625,high,0,0
+legend,ukr,ukr_Cyrl,легенда,The legend,0.75,0.835859477519989,high,1,1
+oral tradition,ukr,ukr_Cyrl,устна традиція,Oral tradition,1.0,0.8743985891342163,high,0,0
+epic,ukr,ukr_Cyrl,Епічний,The Epic,0.6666666666666666,0.7833524942398071,medium,0,0
+fable,ukr,ukr_Cyrl,легенда,The legend,0.26666666666666666,0.8376830220222473,high,1,1
+choir,ukr,ukr_Cyrl,хор,the choir,0.7142857142857143,0.8544681072235107,high,0,0
+orchestra,ukr,ukr_Cyrl,оркестр,the orchestra,0.8181818181818182,0.8395183086395264,high,0,0
+drumming,ukr,ukr_Cyrl,барабанні,drums,0.6153846153846154,0.6874724626541138,medium,0,0
+tango,ukr,ukr_Cyrl,танго,the tango,0.7142857142857143,0.8657915592193604,high,0,0
+flamenco,ukr,ukr_Cyrl,фламенко,Flemish,0.4,0.8701262474060059,high,1,0
+bharatanatyam,ukr,ukr_Cyrl,Бхартанатям,The Bharatanaths,0.6896551724137931,0.829223096370697,high,0,0
+kabuki,ukr,ukr_Cyrl,кабукі,the kabuki,0.75,0.8623412847518921,high,0,0
+lion dance,ukr,ukr_Cyrl,танці львів,the dancing of lions,0.3333333333333333,0.8102423548698425,high,1,0
+dragon dance,ukr,ukr_Cyrl,танці дракона,the dance of the dragon,0.34285714285714286,0.8728636503219604,high,1,0
+totem pole,ukr,ukr_Cyrl,Тотемний полюс,The totem pole,0.8333333333333334,0.6585617065429688,medium,0,0
+prayer beads,ukr,ukr_Cyrl,Молитвенні колонки,Columns of Prayer,0.41379310344827586,0.6343425512313843,medium,1,0
+chopsticks,ukr,ukr_Cyrl,палочки,the rods,0.3333333333333333,0.8289313912391663,high,1,0
+tea ceremony,ukr,ukr_Cyrl,церемонія чаю,tea ceremony,1.0,0.862311840057373,high,0,0
+martial arts,ukr,ukr_Cyrl,бойові мистецтви,martial arts,1.0,0.8760260343551636,high,0,0
+cultural white,ukr,ukr_Cyrl,культурний білий,cultural white,1.0,0.6099568009376526,medium,0,0
+cultural red,ukr,ukr_Cyrl,культурний червоний,cultural red,1.0,0.7244217395782471,medium,0,0
+cultural black,ukr,ukr_Cyrl,культурний чорний,cultural black,1.0,0.5722748041152954,low,1,0
+cultural blue,ukr,ukr_Cyrl,культурний синій,cultural blue,1.0,0.8131381273269653,high,0,0
+cultural green,ukr,ukr_Cyrl,культурний зелений,cultural green,1.0,0.6818282604217529,medium,0,0
+cultural yellow,ukr,ukr_Cyrl,культурний жовтий,cultural yellow,1.0,0.7001487016677856,medium,0,0
+cultural purple,ukr,ukr_Cyrl,культурний фіолетовий,cultural purple,1.0,0.8143956661224365,high,0,0
+cultural orange,ukr,ukr_Cyrl,культурний апельсин,culture orange,0.896551724137931,0.836263120174408,high,0,0
+cultural gold,ukr,ukr_Cyrl,культурне золото,cultural gold,1.0,0.8685654997825623,high,0,0
+cultural silver,ukr,ukr_Cyrl,культурне срібло,cultural silver,1.0,0.8540757894515991,high,0,0
+cultural dragon,ukr,ukr_Cyrl,культурний дракон,cultural dragon,1.0,0.8446061611175537,high,0,0
+cultural phoenix,ukr,ukr_Cyrl,культурний фінікс,cultural phoenix,1.0,0.8235316276550293,high,0,0
+cultural lotus,ukr,ukr_Cyrl,культурний лотос,culture lotus,0.8888888888888888,0.8398816585540771,high,0,0
+cultural bamboo,ukr,ukr_Cyrl,культурний бамбук,cultural bamboo,1.0,0.8547451496124268,high,0,0
+cultural olive,ukr,ukr_Cyrl,культурні оливки,cultivated olives,0.7096774193548387,0.834685742855072,high,0,0
+cultural maple,ukr,ukr_Cyrl,культурний крем,culture cream,0.5925925925925926,0.45688971877098083,low,1,0
+cultural totem,ukr,ukr_Cyrl,культурний тотем,cultural totem,1.0,0.8574413061141968,high,0,0
+cultural emblem,ukr,ukr_Cyrl,культурний емблема,cultural emblem,1.0,0.7632957696914673,medium,0,0
+cultural anthem,ukr,ukr_Cyrl,культурний гімн,cultural anthem,1.0,0.8556279540061951,high,0,0
+cultural flag,ukr,ukr_Cyrl,культурний прапор,cultural flag,1.0,0.8525150418281555,high,0,0
+cultural icon,ukr,ukr_Cyrl,культурна ікона,cultural icon,1.0,0.870879054069519,high,0,0
+cultural script,ukr,ukr_Cyrl,культурний сценарій,cultural scenario,0.8125,0.8463397026062012,high,0,0
+cultural calligraphy,ukr,ukr_Cyrl,культурна каліграфія,cultural calligraphy,1.0,0.8590977191925049,high,0,0
+cultural lantern,ukr,ukr_Cyrl,культурний фонарик,cultural lantern,1.0,0.8369190692901611,high,0,0
+cultural incense,ukr,ukr_Cyrl,культурний інкубатор,cultural incubator,0.7058823529411765,0.46409615874290466,low,1,0
+cultural opera,ukr,ukr_Cyrl,культурна опера,cultural opera,1.0,0.851624608039856,high,0,0
+cultural dance,ukr,ukr_Cyrl,культурний танець,cultural dance,1.0,0.837908148765564,high,0,0
+cultural music,ukr,ukr_Cyrl,культурна музика,cultural music,1.0,0.8675671815872192,high,0,0
+cultural folklore,ukr,ukr_Cyrl,культурний фольклор,cultural folklore,1.0,0.8526357412338257,high,0,0
+cultural myth,ukr,ukr_Cyrl,культурний міф,cultural myth,1.0,0.8565234541893005,high,0,0
+cultural legend,ukr,ukr_Cyrl,культурна легенда,cultural legend,1.0,0.855952799320221,high,0,0
+cultural oral tradition,ukr,ukr_Cyrl,Культурна устна традиція,Cultural oral tradition,1.0,0.8733755350112915,high,0,0
+cultural epic,ukr,ukr_Cyrl,культурний епос,cultural epic,1.0,0.8144153952598572,high,0,0
+cultural fable,ukr,ukr_Cyrl,культурна казка,a cultural fairy tale,0.7428571428571429,0.8616118431091309,high,0,0
+cultural choir,ukr,ukr_Cyrl,культурний хор,cultural choir,1.0,0.8540873527526855,high,0,0
+cultural orchestra,ukr,ukr_Cyrl,культурний оркестр,cultural orchestra,1.0,0.83729088306427,high,0,0
+cultural drumming,ukr,ukr_Cyrl,культурні барабанні,cultural drums,0.8387096774193549,0.5903251767158508,low,1,0
+cultural chanting,ukr,ukr_Cyrl,культурні співи,cultural songs,0.7096774193548387,0.8420996069908142,high,0,0
+cultural tango,ukr,ukr_Cyrl,культурне танго,cultural tango,1.0,0.8315620422363281,high,0,0
+cultural flamenco,ukr,ukr_Cyrl,культурний фламенко,the Flemish culture,0.3888888888888889,0.8651568293571472,high,1,0
+cultural bharatanatyam,ukr,ukr_Cyrl,Культурний Бхаратанатям,Cultural to the Bharatanaths,0.76,0.7180681228637695,medium,0,0
+cultural kabuki,ukr,ukr_Cyrl,культурне кабукі,cultural kabuki,1.0,0.8265467882156372,high,0,0
+cultural lion dance,ukr,ukr_Cyrl,культурний танц львів,cultural dance of lions,0.6666666666666666,0.5807781219482422,low,1,0
+cultural dragon dance,ukr,ukr_Cyrl,культурний танець дракона,The cultural dance of the dragon,0.5660377358490566,0.852841317653656,high,0,0
+cultural totem pole,ukr,ukr_Cyrl,культурний тотемний полюс,the cultural totem pole,0.9047619047619048,0.7335984706878662,medium,0,0
+cultural prayer beads,ukr,ukr_Cyrl,культурні молитви,cultural prayers,0.8648648648648649,0.5516589283943176,low,1,0
+cultural rosary,ukr,ukr_Cyrl,культурний розмірник,cultural gauge,0.6896551724137931,0.40602144598960876,low,1,0
+cultural chopsticks,ukr,ukr_Cyrl,культурні палички,cultural sticks,0.8823529411764706,0.8177230358123779,high,0,0
+cultural tea ceremony,ukr,ukr_Cyrl,культурна церемонія чаю,cultural ceremony of tea,0.7555555555555555,0.846149742603302,high,0,0
+cultural martial arts,ukr,ukr_Cyrl,культурні бойові мистецтви,cultural martial arts,1.0,0.8632675409317017,high,0,0
+democracy,ukr,ukr_Cyrl,демократія,Democracy,1.0,0.8809300661087036,high,0,0
+monarchy,ukr,ukr_Cyrl,монархія,the monarchy,0.8,0.8760911226272583,high,0,0
+republic,ukr,ukr_Cyrl,республіка,the Republic,0.8,0.8470059633255005,high,0,0
+federal,ukr,ukr_Cyrl,федеральний,the federal,0.7777777777777778,0.8207930326461792,high,0,0
+unitary,ukr,ukr_Cyrl,одиничний,single,0.15384615384615385,0.7355407476425171,medium,1,0
+parliament,ukr,ukr_Cyrl,парламент,Parliament,1.0,0.847396969795227,high,0,0
+senate,ukr,ukr_Cyrl,Сенат,Senate,1.0,0.8590950965881348,high,0,0
+constitution,ukr,ukr_Cyrl,Конституція,The Constitution,0.8571428571428571,0.8703347444534302,high,0,0
+bureaucracy,ukr,ukr_Cyrl,бюрократія,bureaucracy,1.0,0.8774635791778564,high,0,0
+meritocracy,ukr,ukr_Cyrl,меритократія,Meritocracy,1.0,0.8657659888267517,high,0,0
+oligarchy,ukr,ukr_Cyrl,олігархія,oligarchy,1.0,0.862082839012146,high,0,0
+aristocracy,ukr,ukr_Cyrl,аристократія,aristocracy,1.0,0.8554286956787109,high,0,0
+tribunal,ukr,ukr_Cyrl,трибунал,court,0.15384615384615385,0.8375787734985352,high,1,0
+mediation,ukr,ukr_Cyrl,посередництво,mediation,1.0,0.8663316965103149,high,0,0
+civil law,ukr,ukr_Cyrl,цивільне право,civil law,1.0,0.879364013671875,high,0,0
+common law,ukr,ukr_Cyrl,спільне право,common law,1.0,0.8584212064743042,high,0,0
+customary law,ukr,ukr_Cyrl,звичайне право,common law,0.6086956521739131,0.8682820200920105,high,0,0
+council,ukr,ukr_Cyrl,Рада,It's nice to meet you.,0.20689655172413793,0.8072112202644348,high,1,0
+chieftain,ukr,ukr_Cyrl,Начальник,Chief,0.7142857142857143,0.7167888879776001,medium,0,0
+citizen,ukr,ukr_Cyrl,громадянин,citizen,1.0,0.8660542368888855,high,0,0
+state,ukr,ukr_Cyrl,держава,the state,0.7142857142857143,0.8060274124145508,high,0,0
+nation,ukr,ukr_Cyrl,нація,nation,1.0,0.8540990948677063,high,0,0
+border,ukr,ukr_Cyrl,кордону,the border,0.75,0.6178805232048035,medium,0,0
+governance,ukr,ukr_Cyrl,Управління,Management,0.3,0.8462459444999695,high,1,0
+policy,ukr,ukr_Cyrl,політика,policy,1.0,0.8536805510520935,high,0,0
+regulation,ukr,ukr_Cyrl,Регулювання,Regulations,0.9523809523809523,0.846709132194519,high,0,0
+empire,ukr,ukr_Cyrl,імперія,the empire,0.75,0.8295102119445801,high,0,0
+colonial,ukr,ukr_Cyrl,колоніальний,Colonial,1.0,0.7952418327331543,medium,0,0
+decolonization,ukr,ukr_Cyrl,деколонізація,decolonization,1.0,0.8735798597335815,high,0,0
+judiciary,ukr,ukr_Cyrl,правосуддя,Justice,0.5,0.7766402959823608,medium,1,1
+legislature,ukr,ukr_Cyrl,законодавчий орган,legislative body,0.6666666666666666,0.8451915979385376,high,0,0
+executive,ukr,ukr_Cyrl,виконавчий орган,the executive body,0.6666666666666666,0.8045972585678101,high,0,0
+ministry,ukr,ukr_Cyrl,служіння,ministry,1.0,0.7584922313690186,medium,0,0
+administration,ukr,ukr_Cyrl,адміністрація,administration,1.0,0.8375917077064514,high,0,0
+charter,ukr,ukr_Cyrl,статут,by statute,0.35294117647058826,0.6528043746948242,medium,1,0
+ordinance,ukr,ukr_Cyrl,розпорядження,the order,0.4444444444444444,0.7971362471580505,medium,1,0
+treaty,ukr,ukr_Cyrl,Договір,The Contract,0.4444444444444444,0.8503137230873108,high,1,0
+diplomacy,ukr,ukr_Cyrl,дипломатія,diplomacy,1.0,0.8755149245262146,high,0,0
+taxation,ukr,ukr_Cyrl,оподаткування,taxation,1.0,0.8565895557403564,high,0,0
+public office,ukr,ukr_Cyrl,державне служіння,public service,0.7407407407407407,0.857638955116272,high,0,0
+village council,ukr,ukr_Cyrl,сільська рада,village council,1.0,0.8601154088973999,high,0,0
+city council,ukr,ukr_Cyrl,міська рада,city council,1.0,0.8761321306228638,high,0,0
+mayor,ukr,ukr_Cyrl,градоначальник,the mayor,0.7142857142857143,0.8617165088653564,high,1,1
+governor,ukr,ukr_Cyrl,губернатор,governor,1.0,0.8444916009902954,high,0,0
+public democracy,ukr,ukr_Cyrl,громадська демократія,public democracy,1.0,0.8734219074249268,high,0,0
+public monarchy,ukr,ukr_Cyrl,публічна монархія,public monarchy,1.0,0.8713308572769165,high,0,0
+public republic,ukr,ukr_Cyrl,громадська республіка,public republic,1.0,0.8671579957008362,high,0,0
+public federal,ukr,ukr_Cyrl,державний федеральний,the state federal,0.5161290322580645,0.6952470541000366,medium,1,1
+public unitary,ukr,ukr_Cyrl,державна єдиниця,State unit,0.4166666666666667,0.8209580183029175,high,1,0
+public parliament,ukr,ukr_Cyrl,громадський парламент,public parliament,1.0,0.8680650591850281,high,0,0
+public senate,ukr,ukr_Cyrl,громадський сенат,public senate,1.0,0.8514267206192017,high,0,0
+public constitution,ukr,ukr_Cyrl,публічна конституція,public constitution,1.0,0.8724430799484253,high,0,0
+public bureaucracy,ukr,ukr_Cyrl,публічна бюрократія,public bureaucracy,1.0,0.882236897945404,high,0,0
+public meritocracy,ukr,ukr_Cyrl,публічна меритократія,public meritocracy,1.0,0.8765302896499634,high,0,0
+public oligarchy,ukr,ukr_Cyrl,публічна олігархія,public oligarchy,1.0,0.8748234510421753,high,0,0
+public aristocracy,ukr,ukr_Cyrl,публічна аристократія,public aristocracy,1.0,0.8625495433807373,high,0,0
+public tribunal,ukr,ukr_Cyrl,публічний трибунал,public court,0.5925925925925926,0.8643596172332764,high,0,0
+public mediation,ukr,ukr_Cyrl,публічне посередництво,public intermediation,0.8648648648648649,0.8633036613464355,high,0,0
+public civil law,ukr,ukr_Cyrl,громадське цивільне право,public civil law,1.0,0.8756498098373413,high,0,0
+public common law,ukr,ukr_Cyrl,публічне загальне право,public common law,1.0,0.8587489128112793,high,0,0
+public customary law,ukr,ukr_Cyrl,публічне звичайное право,public ordinary law,0.7692307692307693,0.8229837417602539,high,0,0
+public council,ukr,ukr_Cyrl,громадська рада,public council,1.0,0.854796290397644,high,0,0
+public chieftain,ukr,ukr_Cyrl,державний начальник,head of state,0.27586206896551724,0.8278781175613403,high,1,0
+public citizen,ukr,ukr_Cyrl,громадський громадянин,public citizen,1.0,0.8657552003860474,high,0,0
+public state,ukr,ukr_Cyrl,державна держава,state government,0.35714285714285715,0.8561429977416992,high,1,0
+public nation,ukr,ukr_Cyrl,державна нація,nation state,0.48,0.8106291890144348,high,1,0
+public border,ukr,ukr_Cyrl,громадські кордони,public borders,0.9629629629629629,0.850060224533081,high,0,0
+public governance,ukr,ukr_Cyrl,державне управління,public administration,0.47368421052631576,0.8713297843933105,high,1,0
+public policy,ukr,ukr_Cyrl,державна політика,public policy,1.0,0.8764206171035767,high,0,0
+public regulation,ukr,ukr_Cyrl,державне регулювання,government regulation,0.5789473684210527,0.8677263259887695,high,0,0
+public empire,ukr,ukr_Cyrl,державна імперія,state empire,0.56,0.8613753318786621,high,0,0
+public colonial,ukr,ukr_Cyrl,державний колоніальний,the state colonial,0.5454545454545454,0.6024210453033447,medium,1,0
+public decolonization,ukr,ukr_Cyrl,публічна деколонізація,public decolonization,1.0,0.8608682751655579,high,0,0
+public judiciary,ukr,ukr_Cyrl,державна юстиція,public justice,0.7333333333333333,0.8779942989349365,high,0,0
+public legislature,ukr,ukr_Cyrl,громадський законодавчий орган,public legislature,1.0,0.8439634442329407,high,0,0
+public executive,ukr,ukr_Cyrl,державний виконавчий орган,the state executive body,0.5,0.8324439525604248,high,1,0
+public ministry,ukr,ukr_Cyrl,публічне служіння,public service,0.5517241379310345,0.856193482875824,high,0,0
+public administration,ukr,ukr_Cyrl,державна адміністрація,public administration,1.0,0.8633528351783752,high,0,0
+public charter,ukr,ukr_Cyrl,публічний статут,public charter,1.0,0.7868731617927551,medium,0,0
+public ordinance,ukr,ukr_Cyrl,громадський розпорядження,public order,0.7857142857142857,0.5196993947029114,low,1,0
+public treaty,ukr,ukr_Cyrl,публічний договір,public contract,0.7857142857142857,0.8611302375793457,high,0,0
+public diplomacy,ukr,ukr_Cyrl,публічна дипломатія,public diplomacy,1.0,0.8797662258148193,high,0,0
+public taxation,ukr,ukr_Cyrl,державне оподаткування,public taxation,1.0,0.8638061285018921,high,0,0
+public public office,ukr,ukr_Cyrl,державне державне служіння,public public service,0.8292682926829268,0.5212709307670593,low,1,0
+public village council,ukr,ukr_Cyrl,громадська сільська рада,public village council,1.0,0.8593196868896484,high,0,0
+public city council,ukr,ukr_Cyrl,громадська міська рада,public city council,1.0,0.8618919849395752,high,0,0
+public mayor,ukr,ukr_Cyrl,градоначальник,the mayor,0.5714285714285714,0.8119125962257385,high,1,1
+public governor,ukr,ukr_Cyrl,державний губернатор,governor of the state,0.4444444444444444,0.8509970307350159,high,1,0
+state democracy,ukr,ukr_Cyrl,державна демократія,state democracy,1.0,0.8812648057937622,high,0,0
+state monarchy,ukr,ukr_Cyrl,державна монархія,state monarchy,1.0,0.8721939325332642,high,0,0
+state republic,ukr,ukr_Cyrl,державна республіка,the state republic,0.875,0.8447821140289307,high,0,0
+state federal,ukr,ukr_Cyrl,державний федеральний,the state federal,0.8666666666666667,0.6587665677070618,medium,1,1
+state unitary,ukr,ukr_Cyrl,державна унітарна,state unitary,1.0,0.6366435885429382,medium,0,0
+state parliament,ukr,ukr_Cyrl,Державний парламент,Parliament of the State,0.5128205128205128,0.8656700849533081,high,1,0
+state senate,ukr,ukr_Cyrl,щатський сенат,the state senate,0.8571428571428571,0.8642756938934326,high,0,0
+state constitution,ukr,ukr_Cyrl,конституція держави,constitution of the state,0.5581395348837209,0.8797619342803955,high,0,0
+state bureaucracy,ukr,ukr_Cyrl,державна бюрократія,government bureaucracy,0.6666666666666666,0.8763932585716248,high,0,0
+state meritocracy,ukr,ukr_Cyrl,Державна меритократія,State meritocracy,1.0,0.877763032913208,high,0,0
+state oligarchy,ukr,ukr_Cyrl,державна олігархія,the state oligarchy,0.8823529411764706,0.8714044690132141,high,0,0
+state aristocracy,ukr,ukr_Cyrl,державна аристократія,state aristocracy,1.0,0.8719527125358582,high,0,0
+identity,ukr,ukr_Cyrl,ідентичність,the identity,0.8,0.8640050888061523,high,0,0
+ethnicity,ukr,ukr_Cyrl,етнічна приналежність,ethnicity,1.0,0.8715389370918274,high,0,0
+diaspora,ukr,ukr_Cyrl,Диаспора,The Diaspora,0.8,0.8727011680603027,high,0,0
+migration,ukr,ukr_Cyrl,міграція,migration,1.0,0.8762620091438293,high,0,0
+immigrant,ukr,ukr_Cyrl,іммігрант,immigrant,1.0,0.8628576993942261,high,0,0
+refugee,ukr,ukr_Cyrl,біженці,Refugees,0.9333333333333333,0.864814043045044,high,0,0
+minority,ukr,ukr_Cyrl,меншинність,minority,1.0,0.8592106699943542,high,0,0
+majority,ukr,ukr_Cyrl,більшість,Most of them,0.3,0.8367393016815186,high,1,0
+assimilation,ukr,ukr_Cyrl,асиміляція,assimilation,1.0,0.8486727476119995,high,0,0
+integration,ukr,ukr_Cyrl,інтеграція,Integration,1.0,0.877593994140625,high,0,0
+segregation,ukr,ukr_Cyrl,сегрегація,segregation,1.0,0.8691694140434265,high,0,0
+pluralism,ukr,ukr_Cyrl,плюралізм,pluralism,1.0,0.875943660736084,high,0,0
+multiculturalism,ukr,ukr_Cyrl,мультикультуралізм,Multiculturalism,1.0,0.8751918077468872,high,0,0
+indigenous,ukr,ukr_Cyrl,корінні,roots,0.26666666666666666,0.7965984344482422,medium,1,0
+native,ukr,ukr_Cyrl,рідній,family,0.3333333333333333,0.5506845712661743,low,1,0
+foreign,ukr,ukr_Cyrl,іноземні,foreigners,0.8235294117647058,0.6654251217842102,medium,0,0
+local,ukr,ukr_Cyrl,місцеві,local,1.0,0.7508687973022461,medium,0,0
+global,ukr,ukr_Cyrl,глобальний,the global,0.75,0.81972336769104,high,1,1
+community,ukr,ukr_Cyrl,співтовариство,community,1.0,0.8312229514122009,high,0,0
+belonging,ukr,ukr_Cyrl,приналежність,belonging,1.0,0.847551167011261,high,0,0
+language,ukr,ukr_Cyrl,мова,language,1.0,0.8504912257194519,high,0,0
+dialect,ukr,ukr_Cyrl,діалект,dialect,1.0,0.847419023513794,high,0,0
+heritage,ukr,ukr_Cyrl,спадщина,inheritance,0.7368421052631579,0.850914478302002,high,1,1
+xenophobia,ukr,ukr_Cyrl,ксенофобія,Xenophobia,1.0,0.8795645833015442,high,0,0
+stereotype,ukr,ukr_Cyrl,стереотип,the stereotype,0.8333333333333334,0.8632782697677612,high,0,0
+prejudice,ukr,ukr_Cyrl,Упередження,Prejudice,1.0,0.8273110389709473,high,0,0
+citizenship,ukr,ukr_Cyrl,громадянство,citizenship,1.0,0.8722782135009766,high,0,0
+acculturation,ukr,ukr_Cyrl,аккультурація,cultivation,0.75,0.8653579950332642,high,0,0
+hybridity,ukr,ukr_Cyrl,гібридність,hybrids,0.75,0.8655850887298584,high,0,0
+homeland,ukr,ukr_Cyrl,батьківщина,the homeland,0.8,0.8633774518966675,high,0,0
+exile,ukr,ukr_Cyrl,вигнання,Exile,1.0,0.8152481913566589,high,0,0
+settler,ukr,ukr_Cyrl,поселенці,settlers,0.9333333333333333,0.8425631523132324,high,0,0
+cosmopolitan,ukr,ukr_Cyrl,космополітична,Cosmopolitan,1.0,0.808203935623169,high,0,0
+transnational,ukr,ukr_Cyrl,транснаціональний,transnational,1.0,0.8324277997016907,high,0,0
+identity politics,ukr,ukr_Cyrl,політика ідентичності,Identity policy,0.875,0.8837258219718933,high,0,0
+mother tongue,ukr,ukr_Cyrl,рідна мова,native language,0.5,0.8460092544555664,high,1,0
+second language,ukr,ukr_Cyrl,друга мова,a second language,0.9375,0.8501392602920532,high,0,0
+local identity,ukr,ukr_Cyrl,місцева ідентичність,local identity,1.0,0.8766365647315979,high,0,0
+local ethnicity,ukr,ukr_Cyrl,місцева етнічність,local ethnicity,1.0,0.8682767152786255,high,0,0
+local diaspora,ukr,ukr_Cyrl,місцева діаспора,local diaspora,1.0,0.8777263164520264,high,0,0
+local migration,ukr,ukr_Cyrl,місцева міграція,local migration,1.0,0.8757907748222351,high,0,0
+local immigrant,ukr,ukr_Cyrl,місцевий іммігрант,local immigrant,1.0,0.8656259775161743,high,0,0
+local refugee,ukr,ukr_Cyrl,місцевий біженці,local refugees,0.9629629629629629,0.7608888745307922,medium,0,0
+local minority,ukr,ukr_Cyrl,місцева меншість,local minority,1.0,0.8704456686973572,high,0,0
+local majority,ukr,ukr_Cyrl,місцева більшість,local majority,1.0,0.8668205142021179,high,0,0
+local assimilation,ukr,ukr_Cyrl,місцева асиміляція,local assimilation,1.0,0.8597089648246765,high,0,0
+local integration,ukr,ukr_Cyrl,місцева інтеграція,local integration,1.0,0.8783453702926636,high,0,0
+local segregation,ukr,ukr_Cyrl,місцева сегрегація,local segregation,1.0,0.8760182857513428,high,0,0
+local pluralism,ukr,ukr_Cyrl,місцевий плюралізм,local pluralism,1.0,0.8629299998283386,high,0,0
+local multiculturalism,ukr,ukr_Cyrl,місцевий мультикультуралізм,local multiculturalism,1.0,0.8803593516349792,high,0,0
+local indigenous,ukr,ukr_Cyrl,місцеві корінні,local roots,0.5925925925925926,0.7626868486404419,medium,0,0
+local native,ukr,ukr_Cyrl,місцевий рід,Indigenous people,0.13793103448275862,0.7145205736160278,medium,1,0
+local foreign,ukr,ukr_Cyrl,місцеві іноземні,local foreigners,0.896551724137931,0.6628998517990112,medium,0,0
+local local,ukr,ukr_Cyrl,місцеві місцеві,local local,1.0,0.5345828533172607,low,1,0
+local global,ukr,ukr_Cyrl,локальний глобальний,the local global,0.8571428571428571,0.787853479385376,medium,0,0
+local community,ukr,ukr_Cyrl,місцева спільнота,local community,1.0,0.8677710294723511,high,0,0
+local belonging,ukr,ukr_Cyrl,місцева приналежність,local affiliation,0.5625,0.8589303493499756,high,0,0
+local language,ukr,ukr_Cyrl,місцева мова,local language,1.0,0.8646070957183838,high,0,0
+local dialect,ukr,ukr_Cyrl,місцевий діалект,local dialect,1.0,0.8698043823242188,high,0,0
+local heritage,ukr,ukr_Cyrl,місцева спадщина,local heritage,1.0,0.8676282167434692,high,0,0
+local xenophobia,ukr,ukr_Cyrl,місцева ксенофобія,local xenophobia,1.0,0.8707860708236694,high,0,0
+local stereotype,ukr,ukr_Cyrl,місцевий стереотип,the local stereotype,0.8888888888888888,0.8611828088760376,high,0,0
+local prejudice,ukr,ukr_Cyrl,місцеві упередження,local prejudice,1.0,0.8713119029998779,high,0,0
+local solidarity,ukr,ukr_Cyrl,місцева солідарність,local solidarity,1.0,0.8867115378379822,high,0,0
+local citizenship,ukr,ukr_Cyrl,місцеве громадянство,local citizenship,1.0,0.8799816966056824,high,0,0
+local acculturation,ukr,ukr_Cyrl,місцева аккультурація,local farming,0.625,0.8655107021331787,high,0,0
+local hybridity,ukr,ukr_Cyrl,місцевий гібрид,local hybrid,0.8888888888888888,0.7915016412734985,medium,0,0
+local homeland,ukr,ukr_Cyrl,місцева рідина,local fluid,0.64,0.45862439274787903,low,1,0
+local exile,ukr,ukr_Cyrl,місцевий вигнання,local exile,1.0,0.5732890367507935,low,1,0
+local settler,ukr,ukr_Cyrl,місцевий поселенці,local settlers,0.9629629629629629,0.6908734440803528,medium,0,0
+local cosmopolitan,ukr,ukr_Cyrl,місцевий космополітичний,the local cosmopolitan,0.9,0.615809977054596,medium,0,0
+local transnational,ukr,ukr_Cyrl,місцеві транснаціональні,local transnational,1.0,0.7694963216781616,medium,0,0
+local identity politics,ukr,ukr_Cyrl,місцева політика ідентичності,local identity policy,0.9090909090909091,0.8599081635475159,high,0,0
+local mother tongue,ukr,ukr_Cyrl,місцева рідна мова,local native language,0.65,0.8491553068161011,high,0,0
+local second language,ukr,ukr_Cyrl,місцева друга мова,local second language,1.0,0.8461491465568542,high,0,0
+global identity,ukr,ukr_Cyrl,глобальна ідентичність,global identity,1.0,0.8734031915664673,high,0,0
+global ethnicity,ukr,ukr_Cyrl,глобальна етнічність,the global ethnicity,0.8888888888888888,0.8630884885787964,high,0,0
+global diaspora,ukr,ukr_Cyrl,глобальна діаспора,the global diaspora,0.8823529411764706,0.8749059438705444,high,0,0
+global migration,ukr,ukr_Cyrl,глобальна міграція,Global migration,1.0,0.874468207359314,high,0,0
+global immigrant,ukr,ukr_Cyrl,глобальний іммігрант,a global immigrant,0.9411764705882353,0.8692219257354736,high,0,0
+global refugee,ukr,ukr_Cyrl,глобальний біженці,global refugees,0.9655172413793104,0.6459154486656189,medium,0,0
+global minority,ukr,ukr_Cyrl,глобальна меншість,a global minority,0.9375,0.8609603643417358,high,0,0
+global majority,ukr,ukr_Cyrl,глобальна більшість,The global majority,0.8823529411764706,0.8673949241638184,high,0,0
+global assimilation,ukr,ukr_Cyrl,глобальна асиміляція,Global assimilation,1.0,0.8756632208824158,high,0,0
+global integration,ukr,ukr_Cyrl,глобальна інтеграція,It's a global integration.,0.8181818181818182,0.8751991987228394,high,0,0
+global segregation,ukr,ukr_Cyrl,глобальна сегрегація,Global segregation,1.0,0.8753498196601868,high,0,0
+global pluralism,ukr,ukr_Cyrl,глобальний плюралізм,global pluralism,1.0,0.8765755891799927,high,0,0
+global multiculturalism,ukr,ukr_Cyrl,глобальний мультикультуралізм,global multiculturalism,1.0,0.8790550827980042,high,0,0
+global indigenous,ukr,ukr_Cyrl,глобальні корінні,Global roots,0.6206896551724138,0.7019674181938171,medium,0,0
+global native,ukr,ukr_Cyrl,глобальна рідна,global native,1.0,0.6264673471450806,medium,0,0
+global foreign,ukr,ukr_Cyrl,глобальний іноземний,the global foreign,0.875,0.5810276865959167,low,1,0
+global local,ukr,ukr_Cyrl,глобальний місцевий,the global local,0.8571428571428571,0.7678949236869812,medium,0,0
+global global,ukr,ukr_Cyrl,глобальний,the global,0.6086956521739131,0.5101251006126404,low,1,1
+global community,ukr,ukr_Cyrl,глобальна спільнота,The global community,0.8888888888888888,0.8789086937904358,high,0,0
+global belonging,ukr,ukr_Cyrl,глобальна приналежність,global belonging,1.0,0.8685227036476135,high,0,0
+global language,ukr,ukr_Cyrl,глобальна мова,a global language,0.9375,0.8650643229484558,high,0,0
+global dialect,ukr,ukr_Cyrl,глобальний діалект,a global dialect,0.9333333333333333,0.8578418493270874,high,0,0
+global heritage,ukr,ukr_Cyrl,глобальна спадщина,the global heritage,0.8823529411764706,0.8587870597839355,high,0,0
+global xenophobia,ukr,ukr_Cyrl,глобальна ксенофобія,global xenophobia,1.0,0.8878776431083679,high,0,0
+greeting,ukr,ukr_Cyrl,Вітання,Greetings,0.9411764705882353,0.829994797706604,high,0,0
+handshake,ukr,ukr_Cyrl,стискання рук,A handshake,0.9,0.8069360256195068,high,0,0
+bow,ukr,ukr_Cyrl,лук,the bow,0.6,0.5727179646492004,low,1,0
+hug,ukr,ukr_Cyrl,обійом,by embracing,0.13333333333333333,0.827727198600769,high,1,0
+kiss,ukr,ukr_Cyrl,поцілунок,The kiss.,0.6153846153846154,0.851906418800354,high,0,0
+gift giving,ukr,ukr_Cyrl,подарунок,The gift,0.42105263157894735,0.822542130947113,high,1,1
+hosting,ukr,ukr_Cyrl,хостинг,hosting,1.0,0.838639497756958,high,1,1
+shared meal,ukr,ukr_Cyrl,спільний обід,shared lunch,0.6956521739130435,0.8522037863731384,high,0,0
+tea time,ukr,ukr_Cyrl,Чайний час,Tea time,1.0,0.8573229312896729,high,0,0
+funeral,ukr,ukr_Cyrl,поховання,burial,0.6153846153846154,0.841376543045044,high,1,1
+mourning,ukr,ukr_Cyrl,скорботу,sadness,0.13333333333333333,0.789763331413269,medium,1,0
+burial,ukr,ukr_Cyrl,поховання,burial,1.0,0.8449738025665283,high,1,1
+cremation,ukr,ukr_Cyrl,кремація,cremation,1.0,0.8712416887283325,high,0,0
+birth,ukr,ukr_Cyrl,народження,birth,1.0,0.8053833842277527,high,0,0
+naming ceremony,ukr,ukr_Cyrl,церемонія ім'явання,naming ceremony,1.0,0.7512933015823364,medium,0,0
+coming of age,ukr,ukr_Cyrl,дорослість,adulthood,0.18181818181818182,0.8555796146392822,high,1,0
+rite of passage,ukr,ukr_Cyrl,ритуал проходження,ritual of passage,0.875,0.7970300316810608,medium,0,0
+ceremony,ukr,ukr_Cyrl,церемонія,ceremony,1.0,0.8008361458778381,high,0,0
+weekday,ukr,ukr_Cyrl,робочий день,working day,0.5555555555555556,0.8369125127792358,high,1,1
+weekend,ukr,ukr_Cyrl,вихідні,weekends,0.9333333333333333,0.8568612337112427,high,0,0
+workday,ukr,ukr_Cyrl,робочий день,working day,0.7777777777777778,0.8399220108985901,high,1,1
+rest day,ukr,ukr_Cyrl,день відпочинку,day of rest,0.42105263157894735,0.8516311645507812,high,1,0
+queue,ukr,ukr_Cyrl,рядок,row,0.0,0.5537986159324646,low,1,0
+punctuality,ukr,ukr_Cyrl,пунктуальність,Punctuality,1.0,0.8667105436325073,high,0,0
+lateness,ukr,ukr_Cyrl,запізнення,delayed,0.4,0.8402284979820251,high,1,0
+privacy,ukr,ukr_Cyrl,конфіденційність,confidentiality,0.2727272727272727,0.8734976053237915,high,1,0
+public space,ukr,ukr_Cyrl,громадська простір,public space,1.0,0.649105429649353,medium,0,0
+neighbor,ukr,ukr_Cyrl,сусід,neighbour,0.9411764705882353,0.8403206467628479,high,0,0
+household visit,ukr,ukr_Cyrl,візит до домогосподарства,visit to the household,0.4864864864864865,0.8473085761070251,high,1,0
+guest,ukr,ukr_Cyrl,гость,The guest,0.7142857142857143,0.8187055587768555,high,0,0
+host,ukr,ukr_Cyrl,хостинг,hosting,0.7272727272727273,0.8161530494689941,high,1,1
+table manners,ukr,ukr_Cyrl,манери за столом,the manners at the table,0.5405405405405406,0.8393480777740479,high,1,0
+home cooking,ukr,ukr_Cyrl,домашнє готування,home cooking,1.0,0.8543195724487305,high,0,0
+festival meal,ukr,ukr_Cyrl,фестивальний обід,the festival lunch,0.6451612903225806,0.8514277935028076,high,0,0
+fast day,ukr,ukr_Cyrl,швидкий день,It's a fast day.,0.6666666666666666,0.7798267602920532,medium,0,0
+memorial day,ukr,ukr_Cyrl,День пам'яті,Day of Remembrance,0.3333333333333333,0.8573920130729675,high,1,0
+ancestor day,ukr,ukr_Cyrl,День предків,The Day of the Ancestors,0.4444444444444444,0.8576672077178955,high,1,0
+seasonal ritual,ukr,ukr_Cyrl,сезонний ритуал,seasonal ritual,1.0,0.8550921678543091,high,0,0
+daily greeting,ukr,ukr_Cyrl,щоденні привітання,daily greetings,0.9655172413793104,0.8383846879005432,high,0,0
+daily handshake,ukr,ukr_Cyrl,щоденне рукопожадання,The daily greeting,0.42424242424242425,0.775192141532898,medium,1,0
+daily bow,ukr,ukr_Cyrl,щоденний лук,the daily bow,0.8181818181818182,0.4718848168849945,low,1,0
+daily hug,ukr,ukr_Cyrl,щоденний обійом,a daily embrace,0.5,0.8334717750549316,high,1,0
+daily kiss,ukr,ukr_Cyrl,щоденний поцілунок,A kiss every day.,0.4444444444444444,0.8446877002716064,high,1,0
+daily gift giving,ukr,ukr_Cyrl,щоденні подарунки,daily gifts,0.7142857142857143,0.831702709197998,high,0,0
+daily hosting,ukr,ukr_Cyrl,щоденний хостинг,day-to-day hosting,0.7096774193548387,0.8476125001907349,high,0,0
+daily hospitality,ukr,ukr_Cyrl,щоденна гостинність,daily hospitality,1.0,0.8463888168334961,high,0,0
+daily shared meal,ukr,ukr_Cyrl,щоденний спільний обід,a daily meal together,0.5263157894736842,0.8534954786300659,high,1,0
+daily banquet,ukr,ukr_Cyrl,щоденний банкет,a daily banquet,0.9285714285714286,0.8435940742492676,high,0,0
+daily tea time,ukr,ukr_Cyrl,щоденний час чаю,daily tea time,1.0,0.8565078973770142,high,0,0
+daily funeral,ukr,ukr_Cyrl,щоденні похорони,daily funerals,0.9629629629629629,0.8574299216270447,high,0,0
+daily mourning,ukr,ukr_Cyrl,щоденна скорбота,daily mourning,1.0,0.8528110980987549,high,0,0
+daily burial,ukr,ukr_Cyrl,щоденні поховання,daily funerals,0.7692307692307693,0.8129892349243164,high,0,0
+daily cremation,ukr,ukr_Cyrl,щоденна кремація,daily cremation,1.0,0.866481602191925,high,0,0
+daily birth,ukr,ukr_Cyrl,щоденні народження,every birthday,0.56,0.8039373755455017,high,0,0
+daily naming ceremony,ukr,ukr_Cyrl,щоденна церемонія назви,the daily naming ceremony,0.9130434782608695,0.662071943283081,medium,0,0
+daily coming of age,ukr,ukr_Cyrl,щоденна дорослість,adulthood every day,0.15789473684210525,0.8366681337356567,high,1,0
+daily rite of passage,ukr,ukr_Cyrl,щоденний обряд проходження,the daily rite of passage,0.9130434782608695,0.7568323612213135,medium,0,0
+daily ceremony,ukr,ukr_Cyrl,щоденна церемонія,the daily ceremony,0.875,0.8130593299865723,high,0,0
+daily weekday,ukr,ukr_Cyrl,щоденний робочий день,daily working day,0.7333333333333333,0.6738003492355347,medium,1,1
+daily weekend,ukr,ukr_Cyrl,щоденні вихідні,weekends,0.6666666666666666,0.8160459995269775,high,0,0
+daily workday,ukr,ukr_Cyrl,щоденний робочий день,daily working day,0.8666666666666667,0.8418995141983032,high,1,1
+daily rest day,ukr,ukr_Cyrl,щоденний день відпочинку,day of rest,0.64,0.8434162139892578,high,0,0
+daily queue,ukr,ukr_Cyrl,щоденна черга,Day by day,0.38095238095238093,0.8545566201210022,high,1,0
+daily punctuality,ukr,ukr_Cyrl,щоденна пунктуальність,daily punctuality,1.0,0.8511379957199097,high,0,0
+daily lateness,ukr,ukr_Cyrl,щоденна затримка,daily delay,0.64,0.8225703835487366,high,0,0
+daily privacy,ukr,ukr_Cyrl,щоденна конфіденційність,daily confidentiality,0.5294117647058824,0.831991970539093,high,1,0
+daily public space,ukr,ukr_Cyrl,щоденний громадський простір,everyday public space,0.8205128205128205,0.8235538005828857,high,0,0
+daily neighbor,ukr,ukr_Cyrl,щоденний сусід,a daily neighbor,0.9333333333333333,0.7871381044387817,medium,0,0
+daily household visit,ukr,ukr_Cyrl,щоденний візит до домогосподарства,daily visits to the household,0.6,0.8448230028152466,high,0,0
+daily guest,ukr,ukr_Cyrl,щоденний гость,a daily guest,0.9166666666666666,0.837096095085144,high,0,0
+daily host,ukr,ukr_Cyrl,щоденний приймач,daily receiver,0.5,0.5433120727539062,low,1,0
+daily table manners,ukr,ukr_Cyrl,щоденні манери за столом,everyday manners at the table,0.4583333333333333,0.803649365901947,high,1,0
+daily home cooking,ukr,ukr_Cyrl,щоденна домашня кухня,everyday household kitchen,0.5,0.849949061870575,high,1,0
+daily festival meal,ukr,ukr_Cyrl,щоденний фестивальний обід,a daily festival lunch,0.7804878048780488,0.8416955471038818,high,0,0
+daily fast day,ukr,ukr_Cyrl,щоденний постний день,a daily fasting day,0.8484848484848485,0.8353662490844727,high,0,0
+daily memorial day,ukr,ukr_Cyrl,щоденний день пам'яті,Every day is a day of remembrance,0.19607843137254902,0.8347707986831665,high,1,0
+daily ancestor day,ukr,ukr_Cyrl,щоденний день предків,the day of the ancestors,0.5714285714285714,0.7001630067825317,medium,0,0
+daily seasonal ritual,ukr,ukr_Cyrl,щоденний сезонний ритуал,a daily seasonal ritual,0.9545454545454546,0.8535969853401184,high,0,0
+household greeting,ukr,ukr_Cyrl,вітання домогосподарства,Welcome to the household,0.42857142857142855,0.7430193424224854,medium,1,0
+household handshake,ukr,ukr_Cyrl,домашнє рукопожадання,home handshake,0.7878787878787878,0.7330406904220581,medium,0,0
+household bow,ukr,ukr_Cyrl,домогосподарський лук,household bow,1.0,0.6641198396682739,medium,0,0
+household hug,ukr,ukr_Cyrl,домогосподарські обійми,household embraces,0.6451612903225806,0.820075273513794,high,0,0
+household kiss,ukr,ukr_Cyrl,домашнє поцілування,Kissing at home,0.27586206896551724,0.8268990516662598,high,1,0
+household gift giving,ukr,ukr_Cyrl,подарування подарунків домогосподарству,giving gifts to households,0.3829787234042553,0.8116518259048462,high,1,0
+household hosting,ukr,ukr_Cyrl,домогосподарство,household,0.6923076923076923,0.625641942024231,medium,1,1
+household hospitality,ukr,ukr_Cyrl,Гостеприимство в домашніх умовах,Hospitality at home,0.55,0.8557600975036621,high,0,0
+household shared meal,ukr,ukr_Cyrl,спільна їжа домогосподарства,common household food,0.5238095238095238,0.7791852951049805,medium,1,0
+household banquet,ukr,ukr_Cyrl,домашній банкет,Home banquet,0.7586206896551724,0.8231097459793091,high,0,0
+household tea time,ukr,ukr_Cyrl,домашнє чаєве час,Home tea time,0.7741935483870968,0.5914240479469299,low,1,0
+household funeral,ukr,ukr_Cyrl,поховання вдома,Burial at home,0.1935483870967742,0.8217191696166992,high,1,0
+household mourning,ukr,ukr_Cyrl,домогосподарські скорботи,Household mourning,1.0,0.8347785472869873,high,0,0
+household burial,ukr,ukr_Cyrl,поховання в домашніх умовах,burial at home,0.4,0.8554766178131104,high,1,0
+household cremation,ukr,ukr_Cyrl,кремація в домашніх умовах,cremation at home,0.5,0.8666541576385498,high,1,0
+household birth,ukr,ukr_Cyrl,народження в домашніх умовах,birth at home,0.35714285714285715,0.8444691896438599,high,1,0
+household naming ceremony,ukr,ukr_Cyrl,Церемонія назви домогосподарства,The naming ceremony of the household,0.5901639344262295,0.7613518238067627,medium,0,0
+household coming of age,ukr,ukr_Cyrl,домогосподарство,household,0.5625,0.4024374186992645,low,1,1
+household rite of passage,ukr,ukr_Cyrl,сімейний ритуал проходження,family rite of passage,0.723404255319149,0.6743296980857849,medium,0,0
+household ceremony,ukr,ukr_Cyrl,церемонія домогосподарства,ceremony of housekeeping,0.38095238095238093,0.6883144974708557,medium,1,0
+public,ukr,ukr_Cyrl,громадськість,the public,0.75,0.8587265014648438,high,0,0
+fast,ukr,ukr_Cyrl,швидко,Quickly.,0.0,0.8056684136390686,high,1,0
+grand,ukr,ukr_Cyrl,Великий,The Great,0.42857142857142855,0.6547640562057495,medium,1,0
+gift,ukr,ukr_Cyrl,подарунок,The gift,0.6666666666666666,0.83936607837677,high,1,1
+meal,ukr,ukr_Cyrl,їжа,food,0.0,0.8203182816505432,high,1,0
+custom,ukr,ukr_Cyrl,звичайний,common,0.5,0.7579520344734192,medium,1,0

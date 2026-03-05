@@ -1,0 +1,6 @@
+{
+  "ukr_50m": "/scratch/amukher6/bli/models/hf/ukr_50m",
+  "ukr_100m": "/scratch/amukher6/bli/models/hf/ukr_100m",
+  "en_ukr_a": "/scratch/amukher6/bli/models/hf/en_ukr_a",
+  "en_ukr_b": "/scratch/amukher6/bli/models/hf/en_ukr_b"
+}

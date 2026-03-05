@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,bul,bul_Cyrl,Индивидуализъм,Individuality,0.8461538461538461,0.8860049247741699,high,0,0
+collectivism,bul,bul_Cyrl,колективизъм,collectivism,1.0,0.8865149021148682,high,0,0
+hierarchy,bul,bul_Cyrl,йерархия,the hierarchy,0.8181818181818182,0.8701710104942322,high,0,0
+equality,bul,bul_Cyrl,Равенство,Equality,1.0,0.8742984533309937,high,0,0
+authority,bul,bul_Cyrl,авторитета,authority,1.0,0.6637815237045288,medium,0,0
+autonomy,bul,bul_Cyrl,автономия,the autonomy,0.8,0.8568969368934631,high,0,0
+obedience,bul,bul_Cyrl,послушание,Obedience,1.0,0.8580001592636108,high,0,0
+duty,bul,bul_Cyrl,задължения,liabilities,0.13333333333333333,0.8303653597831726,high,1,0
+freedom,bul,bul_Cyrl,свобода,Freedom of movement,0.5384615384615384,0.8449932336807251,high,1,0
+honor,bul,bul_Cyrl,честта,The honour,0.6666666666666666,0.8654229044914246,high,0,0
+shame,bul,bul_Cyrl,срам,Shame on you.,0.5555555555555556,0.8408458232879639,high,0,0
+virtue,bul,bul_Cyrl,добродетел,Virtue,1.0,0.842806339263916,high,0,0
+vice,bul,bul_Cyrl,Вице-престъпник,Co-defendant,0.25,0.5467182397842407,low,1,0
+respect,bul,bul_Cyrl,Уважаване,Respect,1.0,0.8664915561676025,high,0,0
+modesty,bul,bul_Cyrl,скромност,Modesty,1.0,0.8428570032119751,high,0,0
+purity,bul,bul_Cyrl,чистота,cleanliness,0.11764705882352941,0.8633776903152466,high,1,0
+pollution,bul,bul_Cyrl,замърсяване,Pollution,1.0,0.8735693693161011,high,0,0
+face,bul,bul_Cyrl,лице,the face,0.6666666666666666,0.8211116194725037,high,0,0
+reputation,bul,bul_Cyrl,репутация,Reputation,1.0,0.8556934595108032,high,0,0
+hospitality,bul,bul_Cyrl,гостоприемство,Hospitality,1.0,0.8666248321533203,high,0,0
+charity,bul,bul_Cyrl,благотворителност,charity,1.0,0.8640283346176147,high,0,0
+cooperation,bul,bul_Cyrl,сътрудничество,Cooperation,1.0,0.8467652797698975,high,0,0
+competition,bul,bul_Cyrl,Конкуренция,Competition,1.0,0.8707523345947266,high,0,0
+fairness,bul,bul_Cyrl,справедливост,Justice,0.26666666666666666,0.8359396457672119,high,1,0
+justice,bul,bul_Cyrl,правосъдие,Justice,1.0,0.8643003106117249,high,0,0
+taboo,bul,bul_Cyrl,табу,It's taboo.,0.625,0.817353367805481,high,0,0
+tradition,bul,bul_Cyrl,традиция,Tradition,1.0,0.8567838668823242,high,0,0
+modernity,bul,bul_Cyrl,модерност,modernity,1.0,0.8726965188980103,high,0,0
+sacred,bul,bul_Cyrl,свещено,Sacred,1.0,0.786630392074585,medium,0,0
+secular,bul,bul_Cyrl,световни,Worldwide,0.125,0.43247273564338684,low,1,0
+conformity,bul,bul_Cyrl,Съответствие,Conformity,1.0,0.84978187084198,high,0,0
+dissent,bul,bul_Cyrl,несъгласие,disagreement,0.631578947368421,0.8433687686920166,high,0,0
+restraint,bul,bul_Cyrl,задържане,Detention,0.4444444444444444,0.8451388478279114,high,1,0
+indulgence,bul,bul_Cyrl,отпускане,Release,0.35294117647058826,0.8235365152359009,high,1,0
+solidarity,bul,bul_Cyrl,Солидарност,Solidarity,1.0,0.8865540027618408,high,0,0
+merit,bul,bul_Cyrl,заслуги,Benefits,0.46153846153846156,0.8326095342636108,high,1,0
+trust,bul,bul_Cyrl,доверие,Confidence,0.0,0.861382246017456,high,1,0
+loyalty,bul,bul_Cyrl,лоялност,Loyalty,1.0,0.8752714991569519,high,0,0
+integrity,bul,bul_Cyrl,непрекъснатост,continuity,0.5263157894736842,0.6604912877082825,medium,1,0
+discretion,bul,bul_Cyrl,свободно преценка,free judgment,0.2608695652173913,0.5709688663482666,low,1,0
+humility,bul,bul_Cyrl,смирение,Humility,1.0,0.8609503507614136,high,0,0
+discipline,bul,bul_Cyrl,дисциплина,Discipline,1.0,0.8437976837158203,high,0,0
+self control,bul,bul_Cyrl,самоконтрол,self-control,0.9166666666666666,0.7977439165115356,medium,0,0
+deference,bul,bul_Cyrl,почитане,Worship,0.125,0.8079140782356262,high,1,0
+civic individualism,bul,bul_Cyrl,Граждански индивидуализъм,Citizen individualism,0.85,0.8876001834869385,high,0,0
+civic collectivism,bul,bul_Cyrl,Граждански колективизъм,Civil collectivism,0.9444444444444444,0.8680389523506165,high,0,0
+civic hierarchy,bul,bul_Cyrl,гражданска йерархия,civil hierarchy,0.9333333333333333,0.8854835033416748,high,0,0
+civic equality,bul,bul_Cyrl,гражданско равенство,civil equality,0.9285714285714286,0.8852465152740479,high,0,0
+civic authority,bul,bul_Cyrl,гражданска власт,civil authority,0.9333333333333333,0.8805705308914185,high,0,0
+civic autonomy,bul,bul_Cyrl,гражданска автономия,civil autonomy,0.9285714285714286,0.8837622404098511,high,0,0
+civic obedience,bul,bul_Cyrl,Гражданско послушание,Citizen's obedience,0.7647058823529411,0.8666845560073853,high,0,0
+civic duty,bul,bul_Cyrl,граждански дълг,civil liability,0.56,0.8835358023643494,high,0,0
+civic freedom,bul,bul_Cyrl,Гражданска свобода,Freedom of the press,0.42424242424242425,0.8843532204627991,high,1,0
+civic honor,bul,bul_Cyrl,Гражданска чест,It's a civil honour.,0.6451612903225806,0.8659607768058777,high,0,0
+civic shame,bul,bul_Cyrl,Граждански срам,Civil disgrace,0.48,0.870255172252655,high,1,0
+civic virtue,bul,bul_Cyrl,Гражданска добродетел,Civil virtue,0.9166666666666666,0.877200186252594,high,0,0
+civic vice,bul,bul_Cyrl,Граждански пороци,Civil misconduct,0.46153846153846156,0.8578823804855347,high,1,0
+civic respect,bul,bul_Cyrl,Гражданско уважение,Respect for citizenship,0.3888888888888889,0.872207760810852,high,1,0
+civic modesty,bul,bul_Cyrl,Гражданска скромност,Civil modesty,0.9230769230769231,0.8681677579879761,high,0,0
+civic purity,bul,bul_Cyrl,Гражданска чистота,Civil cleansing,0.4444444444444444,0.8568251132965088,high,1,0
+civic pollution,bul,bul_Cyrl,гражданско замърсяване,civil pollution,0.9333333333333333,0.8585101962089539,high,0,0
+civic face,bul,bul_Cyrl,гражданско лице,a person who is a citizen,0.22857142857142856,0.8366599082946777,high,1,0
+civic reputation,bul,bul_Cyrl,Гражданска репутация,Citizen's reputation,0.7777777777777778,0.8750317096710205,high,0,0
+civic hospitality,bul,bul_Cyrl,Гражданско гостоприемство,Civil hospitality,0.9411764705882353,0.8748230934143066,high,0,0
+civic charity,bul,bul_Cyrl,гражданска благотворителност,civil charity,0.9230769230769231,0.8721082210540771,high,0,0
+civic cooperation,bul,bul_Cyrl,гражданско сътрудничество,civil cooperation,0.9411764705882353,0.8858711123466492,high,0,0
+civic competition,bul,bul_Cyrl,Гражданска конкуренция,Civil competition,0.9411764705882353,0.8637701869010925,high,0,0
+civic fairness,bul,bul_Cyrl,Гражданска справедливост,Civil justice,0.4444444444444444,0.8802729249000549,high,1,0
+civic justice,bul,bul_Cyrl,гражданско правосъдие,civil justice,0.9230769230769231,0.8826107978820801,high,0,0
+civic taboo,bul,bul_Cyrl,Граждански табу,It's a civil taboo.,0.6666666666666666,0.8582751750946045,high,0,0
+civic tradition,bul,bul_Cyrl,Гражданска традиция,Civil tradition,0.9333333333333333,0.8792406320571899,high,0,0
+civic modernity,bul,bul_Cyrl,Гражданска модерност,Civil modernity,0.9333333333333333,0.8782631158828735,high,0,0
+civic sacred,bul,bul_Cyrl,гражданско свещено,civil sacredness,0.7857142857142857,0.516203761100769,low,1,0
+civic secular,bul,bul_Cyrl,Граждански световни,Citizens of the world,0.35294117647058826,0.4359463155269623,low,1,0
+civic conformity,bul,bul_Cyrl,гражданско съответствие,civil conformity,0.9375,0.8645310997962952,high,0,0
+civic dissent,bul,bul_Cyrl,Гражданско противоречие,Civil dispute,0.6923076923076923,0.8332827091217041,high,0,0
+civic restraint,bul,bul_Cyrl,Гражданско ограничаване,"In the event of a failure to comply with the conditions set out in this Regulation, the Commission shall adopt implementing acts in accordance with the procedure referred to in paragraph 1 of this Article.",0.00909090909090909,0.6874387264251709,medium,1,0
+civic indulgence,bul,bul_Cyrl,Гражданско удоволствие,Civil pleasure,0.4666666666666667,0.8035564422607422,high,1,0
+civic solidarity,bul,bul_Cyrl,гражданска солидарност,civil solidarity,0.9375,0.8825925588607788,high,0,0
+civic merit,bul,bul_Cyrl,Граждански заслуги,Civil service,0.6666666666666666,0.8204142451286316,high,0,0
+civic trust,bul,bul_Cyrl,Гражданско доверие,This appropriation is intended to cover:,0.19607843137254902,0.8798373937606812,high,1,0
+civic loyalty,bul,bul_Cyrl,гражданска лоялност,civil loyalty,0.9230769230769231,0.883591890335083,high,0,0
+civic integrity,bul,bul_Cyrl,Гражданска почтеност,Civil integrity,0.9333333333333333,0.8783276677131653,high,0,0
+civic discretion,bul,bul_Cyrl,гражданска дискреция,civil discretion,0.9375,0.874199390411377,high,0,0
+civic humility,bul,bul_Cyrl,Гражданска смирение,Civil Humility,0.9285714285714286,0.769836962223053,medium,0,0
+civic discipline,bul,bul_Cyrl,Гражданска дисциплина,Civil Discipline,0.9375,0.8829786777496338,high,0,0
+civic self control,bul,bul_Cyrl,Граждански самоконтрол,Civil self-control,0.8888888888888888,0.8569835424423218,high,0,0
+civic deference,bul,bul_Cyrl,Гражданска почит,Respect for citizenship,0.2631578947368421,0.8455861806869507,high,1,0
+moral individualism,bul,bul_Cyrl,моралният индивидуализъм,Moral individualism,1.0,0.8857231140136719,high,0,0
+moral collectivism,bul,bul_Cyrl,морален колективизъм,Moral collectivism,1.0,0.8780409097671509,high,0,0
+moral hierarchy,bul,bul_Cyrl,морална йерархия,Moral hierarchy,1.0,0.8803749084472656,high,0,0
+moral equality,bul,bul_Cyrl,морално равенство,moral equality,1.0,0.877088189125061,high,0,0
+moral authority,bul,bul_Cyrl,морален авторитет,moral authority,1.0,0.8655248284339905,high,0,0
+moral autonomy,bul,bul_Cyrl,Морална автономия,Moral autonomy,1.0,0.8750509023666382,high,0,0
+moral obedience,bul,bul_Cyrl,нравственото послушание,moral obedience,1.0,0.8608951568603516,high,0,0
+moral duty,bul,bul_Cyrl,морален дълг,Moral duty,1.0,0.8750306367874146,high,0,0
+moral freedom,bul,bul_Cyrl,Морална свобода,Moral freedom,1.0,0.8838376402854919,high,0,0
+moral honor,bul,bul_Cyrl,Морална чест,Moral honor,1.0,0.8699331283569336,high,0,0
+moral shame,bul,bul_Cyrl,нравствен срам,moral shame,1.0,0.8537907004356384,high,0,0
+moral virtue,bul,bul_Cyrl,Морална добродетел,Moral Virtue,1.0,0.8708603382110596,high,0,0
+family,bul,bul_Cyrl,семейство,family,1.0,0.853984534740448,high,0,0
+kinship,bul,bul_Cyrl,родниничество,Relativity,0.23529411764705882,0.8233144879341125,high,1,0
+mother,bul,bul_Cyrl,Майка,My mother.,0.75,0.8426060676574707,high,0,0
+father,bul,bul_Cyrl,баща,Father,1.0,0.8529697060585022,high,0,0
+parent,bul,bul_Cyrl,родител,Parent,1.0,0.83482825756073,high,0,0
+child,bul,bul_Cyrl,Дете,The child.,0.6666666666666666,0.8595094680786133,high,0,0
+daughter,bul,bul_Cyrl,Дъщеря,Daughter,1.0,0.857961893081665,high,0,0
+son,bul,bul_Cyrl,Синът ми,My son.,0.6,0.8492066860198975,high,0,0
+uncle,bul,bul_Cyrl,чичо,My uncle.,0.7142857142857143,0.8366642594337463,high,0,0
+aunt,bul,bul_Cyrl,Леля.,"Aunt, please.",0.47058823529411764,0.44237974286079407,low,1,0
+cousin,bul,bul_Cyrl,братовчед,Cousin,1.0,0.8524559736251831,high,0,0
+grandmother,bul,bul_Cyrl,Дядо,My grandfather.,0.6923076923076923,0.7436114549636841,medium,1,1
+grandfather,bul,bul_Cyrl,Дядо,My grandfather.,0.8461538461538461,0.8395406603813171,high,1,1
+nephew,bul,bul_Cyrl,племенник,Nephew,1.0,0.7617917060852051,medium,0,0
+niece,bul,bul_Cyrl,племенница,Nephew,0.5454545454545454,0.6833357214927673,medium,1,0
+ancestor,bul,bul_Cyrl,предци,the ancestors,0.7619047619047619,0.8020126819610596,high,0,0
+lineage,bul,bul_Cyrl,родословие,offspring,0.375,0.8266391754150391,high,1,0
+clan,bul,bul_Cyrl,клан,Clan,1.0,0.8434529900550842,high,0,0
+household,bul,bul_Cyrl,домакинство,Household,1.0,0.8586083054542542,high,1,1
+joint family,bul,bul_Cyrl,съвместно семейство,Joint family,1.0,0.851330041885376,high,0,0
+nuclear family,bul,bul_Cyrl,ядрено семейство,nuclear family,1.0,0.8755648136138916,high,0,0
+marriage,bul,bul_Cyrl,сватба,Wedding,0.26666666666666666,0.8665695786476135,high,1,1
+wedding,bul,bul_Cyrl,сватба,Wedding,1.0,0.8506870865821838,high,1,1
+bride,bul,bul_Cyrl,Невеста,The bride,0.7142857142857143,0.8457094430923462,high,1,1
+groom,bul,bul_Cyrl,младоженец,The bridegroom,0.5263157894736842,0.7323521375656128,medium,1,0
+engagement,bul,bul_Cyrl,ангажимент,Commitment,0.4,0.8466699719429016,high,1,0
+dowry,bul,bul_Cyrl,двойка,a pair,0.18181818181818182,0.41574975848197937,low,1,0
+bridewealth,bul,bul_Cyrl,невеста,The bride,0.5,0.5193795561790466,low,1,1
+inheritance,bul,bul_Cyrl,наследство,Inheritance,1.0,0.8311909437179565,high,1,1
+widow,bul,bul_Cyrl,вдовица,widow,1.0,0.8571500778198242,high,1,1
+widower,bul,bul_Cyrl,вдовица,widow,0.8333333333333334,0.8570747971534729,high,1,1
+courtship,bul,bul_Cyrl,състезание,Competition,0.4,0.6468452215194702,medium,1,0
+matchmaker,bul,bul_Cyrl,Съчетание,Combined,0.2222222222222222,0.43504655361175537,low,1,0
+surname,bul,bul_Cyrl,фамилия,Family name,0.4444444444444444,0.8225589394569397,high,1,0
+patronymic,bul,bul_Cyrl,роднини имена,Family names,0.2727272727272727,0.49753865599632263,low,1,0
+matronymic,bul,bul_Cyrl,матронимна,of a thickness of not more than 10 mm,0.1702127659574468,0.5660768747329712,low,1,0
+firstborn,bul,bul_Cyrl,първороден,firstborn,1.0,0.8319432735443115,high,0,0
+heir,bul,bul_Cyrl,наследник,Successor,0.3076923076923077,0.8444021940231323,high,1,0
+filial piety,bul,bul_Cyrl,детска благочестивост,Childly piety,0.72,0.8232415914535522,high,0,0
+caregiving,bul,bul_Cyrl,грижа,I'll take care of you.,0.25,0.8010132312774658,high,1,0
+motherhood,bul,bul_Cyrl,майчинство,Maternity,0.42105263157894735,0.8567962050437927,high,1,0
+fatherhood,bul,bul_Cyrl,бащинство,paternity,0.42105263157894735,0.8475296497344971,high,1,0
+in laws,bul,bul_Cyrl,в законите,in the laws,0.7777777777777778,0.7131928205490112,medium,0,0
+brother in law,bul,bul_Cyrl,Брат на съпруга.,My husband's brother.,0.4,0.5344992876052856,low,1,1
+sister in law,bul,bul_Cyrl,сестричка.,She's my sister.,0.41379310344827586,0.6604427099227905,medium,1,0
+ancestral home,bul,bul_Cyrl,дом на предците,the house of the ancestors,0.35,0.8742942214012146,high,1,0
+household labor,bul,bul_Cyrl,домакински труд,Household work,0.8275862068965517,0.8610321879386902,high,0,0
+extended family,bul,bul_Cyrl,Разширено семейство,Extended family,1.0,0.8627119064331055,high,0,0
+extended kinship,bul,bul_Cyrl,разширено родниничество,extended kinship,1.0,0.8507062196731567,high,0,0
+extended mother,bul,bul_Cyrl,по-голяма майка,older mother,0.6666666666666666,0.6294689178466797,medium,0,0
+extended father,bul,bul_Cyrl,по-големият баща,The older father.,0.625,0.7449714541435242,medium,0,0
+extended parent,bul,bul_Cyrl,разширен родител,extended parent,1.0,0.5471887588500977,low,1,0
+extended child,bul,bul_Cyrl,удълженото дете,the extended child,0.875,0.5366530418395996,low,1,0
+extended daughter,bul,bul_Cyrl,по-голяма дъщеря,eldest daughter,0.75,0.8358756899833679,high,0,0
+extended son,bul,bul_Cyrl,удължен син,extended son,1.0,0.6328750848770142,medium,0,0
+extended uncle,bul,bul_Cyrl,Дядо на по-голямата възраст,Grandfather of old age,0.3333333333333333,0.45208314061164856,low,1,0
+extended aunt,bul,bul_Cyrl,Дъщерна леля,Daughter-in-law,0.2857142857142857,0.6523565053939819,medium,1,0
+extended cousin,bul,bul_Cyrl,удължен братовчед,Extended cousin,1.0,0.7533137202262878,medium,0,0
+extended grandmother,bul,bul_Cyrl,възрастна баба,elderly grandmother,0.7692307692307693,0.8202499151229858,high,0,0
+extended grandfather,bul,bul_Cyrl,Дядо на дядо,My grandfather's grandfather,0.5,0.4012846350669861,low,1,0
+extended nephew,bul,bul_Cyrl,удължен племенник,extended nephew,1.0,0.7008262872695923,medium,0,0
+extended niece,bul,bul_Cyrl,удължена племенница,Extended nieces and nephews,0.6829268292682927,0.5695762038230896,low,1,0
+extended ancestor,bul,bul_Cyrl,Продължени предци,Continued Ancestors,0.7222222222222222,0.6845628023147583,medium,0,0
+extended lineage,bul,bul_Cyrl,разширено родословие,extended pedigree,0.7272727272727273,0.8340668678283691,high,0,0
+extended clan,bul,bul_Cyrl,разширен клан,Extended clan,1.0,0.840616762638092,high,0,0
+extended household,bul,bul_Cyrl,разширено домакинство,Extended household,1.0,0.8542742133140564,high,0,0
+extended joint family,bul,bul_Cyrl,разширено съвместно семейство,Extended joint family,1.0,0.8603246808052063,high,0,0
+extended nuclear family,bul,bul_Cyrl,разширено ядрено семейство,Expanded nuclear family,0.9130434782608695,0.8322089910507202,high,0,0
+extended marriage,bul,bul_Cyrl,удължен брак,extended marriage,1.0,0.7977851033210754,medium,0,0
+extended wedding,bul,bul_Cyrl,Продължени сватби,Prolonged Marriages,0.2857142857142857,0.7384438514709473,medium,1,0
+extended bride,bul,bul_Cyrl,разширена невеста,The extended bride,0.875,0.5953231453895569,low,1,1
+extended groom,bul,bul_Cyrl,Удължен младоженец,Prolonged Bridegroom,0.5294117647058824,0.40853455662727356,low,1,0
+extended engagement,bul,bul_Cyrl,Удължено участие,Extended participation,0.4878048780487805,0.7848829030990601,medium,1,0
+extended dowry,bul,bul_Cyrl,продължително дато,the extended date,0.6451612903225806,0.36958977580070496,low,1,0
+extended bridewealth,bul,bul_Cyrl,Разширена невеста,The extended bride,0.7368421052631579,0.4417433440685272,low,1,1
+extended inheritance,bul,bul_Cyrl,разширено наследство,Extended inheritance,1.0,0.8081541061401367,high,0,0
+extended widow,bul,bul_Cyrl,удължена вдовица,Extended widow,1.0,0.6563501358032227,medium,0,0
+extended widower,bul,bul_Cyrl,удължен вдовик,Extended widow,0.9333333333333333,0.6421746015548706,medium,0,0
+extended courtship,bul,bul_Cyrl,продължително сътрудничество,continuous cooperation,0.4,0.7364144921302795,medium,1,0
+extended matchmaker,bul,bul_Cyrl,разширен бракосъчетател,extended marriages,0.7027027027027027,0.4171953499317169,low,1,0
+extended surname,bul,bul_Cyrl,разширено фамилие,extended family name,0.7222222222222222,0.60148686170578,medium,0,0
+extended patronymic,bul,bul_Cyrl,разширена фамилия,extended family name,0.6153846153846154,0.7738912105560303,medium,0,0
+extended matronymic,bul,bul_Cyrl,разширена матронимика,Extended matronymics,0.9743589743589743,0.86176997423172,high,0,0
+extended firstborn,bul,bul_Cyrl,удължени първични деца,Extended primary children,0.6046511627906976,0.44528934359550476,low,1,0
+extended heir,bul,bul_Cyrl,удължен наследник,Extended successor,0.7096774193548387,0.625838041305542,medium,0,0
+extended filial piety,bul,bul_Cyrl,разширяване на синска благочестивост,Expansion of filial piety,0.6956521739130435,0.45686784386634827,low,1,0
+extended caregiving,bul,bul_Cyrl,продължително осигуряване на грижи,Provision of long-term care,0.30434782608695654,0.8398455381393433,high,1,0
+extended motherhood,bul,bul_Cyrl,продължително майчинство,long-term motherhood,0.6666666666666666,0.8620424270629883,high,0,0
+extended fatherhood,bul,bul_Cyrl,продължително бащинство,long-term paternity,0.3684210526315789,0.8205862641334534,high,1,0
+extended in laws,bul,bul_Cyrl,Разширено в закони,Expanded in laws,0.875,0.6764698028564453,medium,0,0
+extended brother in law,bul,bul_Cyrl,Брат на съпруга.,My husband's brother.,0.45454545454545453,0.4474785029888153,low,1,1
+extended sister in law,bul,bul_Cyrl,По-голяма свекърня,Greater mother-in-law,0.46511627906976744,0.7906602621078491,medium,1,0
+extended ancestral home,bul,bul_Cyrl,разширен прадеден дом,extended grandfather's house,0.6666666666666666,0.8359748125076294,high,0,0
+extended household labor,bul,bul_Cyrl,удължен домакински труд,extended household work,0.8936170212765957,0.8554253578186035,high,0,0
+nuclear kinship,bul,bul_Cyrl,ядрено родниничество,Nuclear kinship,1.0,0.8772881627082825,high,0,0
+nuclear mother,bul,bul_Cyrl,ядрена майка,Nuclear mother,1.0,0.8475000262260437,high,0,0
+nuclear father,bul,bul_Cyrl,ядрен баща,Nuclear father,1.0,0.8782380819320679,high,0,0
+nuclear parent,bul,bul_Cyrl,ядрен родител,Nuclear parent,1.0,0.8313799500465393,high,0,0
+nuclear child,bul,bul_Cyrl,ядрено дете,Nuclear child,1.0,0.8876853585243225,high,0,0
+nuclear daughter,bul,bul_Cyrl,ядрена дъщеря,Nuclear daughter,1.0,0.8546167612075806,high,0,0
+religion,bul,bul_Cyrl,Религия,What is religion?,0.64,0.8720748424530029,high,0,0
+ritual,bul,bul_Cyrl,ритуал,Ritual,1.0,0.8329402804374695,high,0,0
+prayer,bul,bul_Cyrl,молитва,Prayer,1.0,0.8560694456100464,high,0,0
+temple,bul,bul_Cyrl,храмовете,Temples,0.9230769230769231,0.7948791980743408,medium,0,0
+church,bul,bul_Cyrl,църква,Church,1.0,0.8623635172843933,high,0,0
+mosque,bul,bul_Cyrl,джамия,The mosque,0.75,0.8655890226364136,high,0,0
+synagogue,bul,bul_Cyrl,синагога,the synagogue,0.8181818181818182,0.8658079504966736,high,0,0
+shrine,bul,bul_Cyrl,светилище,Sanctuary,0.26666666666666666,0.8503494262695312,high,1,0
+pilgrimage,bul,bul_Cyrl,паломничество,Pilgrimage,1.0,0.8653333783149719,high,0,0
+scripture,bul,bul_Cyrl,Писание,The Scripture,0.8181818181818182,0.8473988771438599,high,0,0
+monk,bul,bul_Cyrl,монах,Monk,1.0,0.8548592329025269,high,0,0
+priest,bul,bul_Cyrl,свещеник,a priest,0.8571428571428571,0.8613343834877014,high,0,0
+imam,bul,bul_Cyrl,имам,I got it.,0.15384615384615385,0.8398606181144714,high,1,0
+nun,bul,bul_Cyrl,монахиня,The nun,0.6,0.8409004211425781,high,0,0
+saint,bul,bul_Cyrl,светец,A saint,0.8333333333333334,0.8408313989639282,high,0,0
+martyr,bul,bul_Cyrl,мъченик,The martyr,0.75,0.8529263734817505,high,0,0
+prophet,bul,bul_Cyrl,пророк,The Prophet,0.7777777777777778,0.8454917669296265,high,0,0
+zakat,bul,bul_Cyrl,закат,of a kind used for the manufacture of foodstuffs,0.1509433962264151,0.773195743560791,medium,1,0
+tithe,bul,bul_Cyrl,десетилетие,decade,0.18181818181818182,0.46489402651786804,low,1,0
+karma,bul,bul_Cyrl,кармата,of a kind used for the manufacture of foodstuffs,0.1509433962264151,0.5711371302604675,low,1,0
+altar,bul,bul_Cyrl,Алтар,Altar,1.0,0.8529583811759949,high,0,0
+incense,bul,bul_Cyrl,парфюм,Parfumes and other cosmetic products,0.13953488372093023,0.6145461201667786,medium,1,0
+rosary,bul,bul_Cyrl,розарий,of a kind used for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations of foodstuffs,0.0,0.8484331369400024,high,1,0
+blessing,bul,bul_Cyrl,благословия,Blessings,0.9411764705882353,0.8367286324501038,high,0,0
+curse,bul,bul_Cyrl,проклятието,The curse.,0.6666666666666666,0.8270136713981628,high,0,0
+sabbath,bul,bul_Cyrl,съботен ден,Saturday,0.4,0.8485400676727295,high,1,0
+halal,bul,bul_Cyrl,халал,I can't believe this.,0.07692307692307693,0.7371608018875122,medium,1,0
+kosher,bul,bul_Cyrl,Кошер,Cushion,0.3076923076923077,0.7076554894447327,medium,1,0
+fasting,bul,bul_Cyrl,гладуване,Hunger,0.3076923076923077,0.8667751550674438,high,1,0
+sacrifice,bul,bul_Cyrl,жертвоприношение,Sacrifice,1.0,0.830826997756958,high,0,0
+monastery,bul,bul_Cyrl,манастир,Monastery,1.0,0.8613039255142212,high,1,1
+convent,bul,bul_Cyrl,манастир,Monastery,0.375,0.8602471947669983,high,1,1
+abbey,bul,bul_Cyrl,аббатство,Abbey,1.0,0.8548967838287354,high,0,0
+minaret,bul,bul_Cyrl,Минарет,Minerals,0.5333333333333333,0.8709979057312012,high,1,0
+pagoda,bul,bul_Cyrl,пагода,Pagoda,1.0,0.8429614305496216,high,0,0
+stupa,bul,bul_Cyrl,Стъпа,The step,0.46153846153846156,0.4603876769542694,low,1,0
+ancestral altar,bul,bul_Cyrl,Алтар на предците,Altar of the Ancestors,0.3783783783783784,0.8682599663734436,high,1,0
+funeral rite,bul,bul_Cyrl,погребален ритуал,Funeral ritual,0.8461538461538461,0.8729785084724426,high,0,0
+mourning rite,bul,bul_Cyrl,ритуал на траур,Ritual of mourning,0.5161290322580645,0.8517298102378845,high,1,0
+memorial service,bul,bul_Cyrl,погребална служба,Funeral service,0.7741935483870968,0.8670865297317505,high,0,0
+ancestor worship,bul,bul_Cyrl,поклонение на предците,the worship of the forefathers,0.391304347826087,0.8687986731529236,high,1,0
+tabernacle,bul,bul_Cyrl,скинията,the tent,0.3333333333333333,0.5207498073577881,low,1,0
+prayer mat,bul,bul_Cyrl,молитвен мач,A prayer match.,0.8,0.8483839631080627,high,0,0
+chanting,bul,bul_Cyrl,Скандиране,Scanning,0.75,0.5051411986351013,low,1,0
+hymn,bul,bul_Cyrl,Химн,Hymn,1.0,0.8447452187538147,high,1,1
+sermon,bul,bul_Cyrl,проповед,preaching,0.26666666666666666,0.8374178409576416,high,1,0
+liturgy,bul,bul_Cyrl,Литургия,The Liturgy,0.7777777777777778,0.8664510846138,high,0,0
+sacred religion,bul,bul_Cyrl,свещена религия,sacred religion,1.0,0.8685638904571533,high,0,0
+sacred ritual,bul,bul_Cyrl,Свещен ритуал,Sacred Ritual,1.0,0.8597773313522339,high,0,0
+sacred prayer,bul,bul_Cyrl,свещена молитва,Holy Prayer,0.5833333333333334,0.8643523454666138,high,0,0
+sacred temple,bul,bul_Cyrl,свещен храм,sacred temple,1.0,0.8577225804328918,high,0,0
+sacred church,bul,bul_Cyrl,свещена църква,Holy church,0.5833333333333334,0.8671230673789978,high,0,0
+sacred mosque,bul,bul_Cyrl,свещена джамия,Holy mosque,0.5833333333333334,0.8582037687301636,high,0,0
+sacred synagogue,bul,bul_Cyrl,свещена синагога,holy synagogue,0.6666666666666666,0.8672645688056946,high,0,0
+sacred shrine,bul,bul_Cyrl,свещено светилище,sacred sanctuary,0.6206896551724138,0.8340234756469727,high,0,0
+sacred pilgrimage,bul,bul_Cyrl,свещено паломничество,sacred pilgrimage,1.0,0.8513807654380798,high,0,0
+sacred scripture,bul,bul_Cyrl,свещено писание,Sacred Scripture,1.0,0.8510472774505615,high,0,0
+sacred monk,bul,bul_Cyrl,свещен монах,A holy monk.,0.5217391304347826,0.8582872152328491,high,1,0
+sacred priest,bul,bul_Cyrl,свещен свещеник,a holy priest,0.6153846153846154,0.8384389877319336,high,0,0
+sacred imam,bul,bul_Cyrl,свещен имам,I have a sacred,0.46153846153846156,0.8572465181350708,high,1,0
+sacred nun,bul,bul_Cyrl,свещена монахиня,A holy nun.,0.47619047619047616,0.8573918342590332,high,1,0
+sacred saint,bul,bul_Cyrl,свещен светец,A holy saint.,0.56,0.7994306087493896,medium,0,0
+sacred martyr,bul,bul_Cyrl,Свещен мъченик,The Holy Martyr,0.5714285714285714,0.8505542278289795,high,0,0
+sacred prophet,bul,bul_Cyrl,свещен пророк,A holy prophet.,0.6206896551724138,0.8559279441833496,high,0,0
+sacred zakat,bul,bul_Cyrl,Свещен зекат,Sacred Zakat,1.0,0.7730780243873596,medium,0,0
+sacred tithe,bul,bul_Cyrl,свещено десетилетие,Holy decade,0.17391304347826086,0.5264090299606323,low,1,0
+sacred karma,bul,bul_Cyrl,свещена карма,Sacred Karma,1.0,0.8565584421157837,high,0,0
+sacred altar,bul,bul_Cyrl,свещен олтар,sacred altar,1.0,0.8545336723327637,high,0,0
+sacred incense,bul,bul_Cyrl,свещено парфюм,Sacred perfume,0.6428571428571429,0.43172094225883484,low,1,0
+sacred rosary,bul,bul_Cyrl,Свещен розарий,Sacred Rosary,1.0,0.8527665734291077,high,0,0
+sacred blessing,bul,bul_Cyrl,свещено благословение,a sacred blessing,0.9375,0.8338756561279297,high,0,0
+sacred curse,bul,bul_Cyrl,свято проклятие.,It's a holy curse.,0.5333333333333333,0.8314241170883179,high,1,0
+sacred sabbath,bul,bul_Cyrl,свещен съботен ден,Holy Sabbath day,0.5333333333333333,0.8547933101654053,high,1,0
+sacred halal,bul,bul_Cyrl,свещен халал,holy halal,0.5454545454545454,0.8086992502212524,high,1,0
+sacred kosher,bul,bul_Cyrl,Свещен кошер,Sacred kosher,1.0,0.717571496963501,medium,0,0
+sacred fasting,bul,bul_Cyrl,Свещен пост.,It's a holy fast.,0.45161290322580644,0.8578817844390869,high,1,0
+sacred sacrifice,bul,bul_Cyrl,свещено жертвоприношение,sacred sacrifice,1.0,0.8220555782318115,high,0,0
+sacred monastery,bul,bul_Cyrl,свещен манастир,a sacred monastery,0.9411764705882353,0.8598078489303589,high,1,1
+sacred convent,bul,bul_Cyrl,свещен манастир,a sacred monastery,0.625,0.8596861362457275,high,1,1
+sacred abbey,bul,bul_Cyrl,свещено аббатство,Holy Abbey,0.5454545454545454,0.8500791788101196,high,1,0
+sacred minaret,bul,bul_Cyrl,Свещен минарет,Sacred Minaret,1.0,0.8586353063583374,high,0,0
+sacred pagoda,bul,bul_Cyrl,свещена пагода,sacred pagoda,1.0,0.8609017133712769,high,0,0
+sacred stupa,bul,bul_Cyrl,свещена ступа,sacred stupa,1.0,0.8025473356246948,high,0,0
+sacred ancestral altar,bul,bul_Cyrl,свещен алтар на предците,The sacred altar of the ancestors.,0.5,0.8594789505004883,high,1,0
+sacred funeral rite,bul,bul_Cyrl,Свещен погребален ритуал,Sacred Funeral Ritual,0.9,0.8725939393043518,high,0,0
+sacred mourning rite,bul,bul_Cyrl,Свещен ритуал за оплакване,A Sacred Ritual of Complaint,0.4166666666666667,0.7095334529876709,medium,1,0
+sacred memorial service,bul,bul_Cyrl,свещено споменно служение,sacred memorial service,1.0,0.8255787491798401,high,0,0
+sacred ancestor worship,bul,bul_Cyrl,поклонение на свещени предци,Worship of Holy Ancestors,0.4583333333333333,0.8615487217903137,high,1,0
+sacred tabernacle,bul,bul_Cyrl,свещен скинията,the sacred tabernacle,0.8947368421052632,0.43771347403526306,low,1,0
+sacred prayer mat,bul,bul_Cyrl,Свещен мач за молитва,A Sacred Battle for Prayer,0.6046511627906976,0.8479160666465759,high,0,0
+sacred chanting,bul,bul_Cyrl,свещено пеене,sacred singing,0.6896551724137931,0.8234574198722839,high,0,0
+sacred hymn,bul,bul_Cyrl,свещен химн,a sacred hymn,0.9166666666666666,0.8481428027153015,high,0,0
+sacred sermon,bul,bul_Cyrl,свещено проповед,sacred preaching,0.6206896551724138,0.6134535670280457,medium,0,0
+sacred liturgy,bul,bul_Cyrl,свещена литургия,Sacred Liturgy,1.0,0.8640422224998474,high,0,0
+ritual religion,bul,bul_Cyrl,ритуална религия,Ritual religion,1.0,0.8750448822975159,high,0,0
+ritual ritual,bul,bul_Cyrl,ритуален ритуал,Ritual ritual,1.0,0.8433609008789062,high,0,0
+ritual prayer,bul,bul_Cyrl,ритуална молитва,Ritual prayer,1.0,0.8632605671882629,high,0,0
+ritual temple,bul,bul_Cyrl,ритуален храм,Ritual temple,1.0,0.8687404990196228,high,0,0
+ritual church,bul,bul_Cyrl,ритуална църква,Ritual church,1.0,0.876562237739563,high,0,0
+ritual mosque,bul,bul_Cyrl,ритуална джамия,Ritual mosque,1.0,0.8756420612335205,high,0,0
+rice,bul,bul_Cyrl,ориз,Rice,1.0,0.8665953278541565,high,0,0
+bread,bul,bul_Cyrl,хляб,Bread,1.0,0.8415743112564087,high,0,0
+noodle,bul,bul_Cyrl,яхти,boats,0.18181818181818182,0.4005071520805359,low,1,0
+dumpling,bul,bul_Cyrl,печенце,of a kind used for the manufacture of foodstuffs,0.07142857142857142,0.4962798058986664,low,1,0
+curry,bul,bul_Cyrl,Кари,Carry on,0.6153846153846154,0.6912363171577454,medium,0,0
+spice,bul,bul_Cyrl,подправки,Spices and seasonings,0.38461538461538464,0.7890010476112366,medium,1,0
+tea,bul,bul_Cyrl,чай,Tea,1.0,0.8412819504737854,high,1,1
+coffee,bul,bul_Cyrl,кафе,coffee,1.0,0.8534475564956665,high,0,0
+meat,bul,bul_Cyrl,месо,Meat,1.0,0.843542754650116,high,0,0
+vegetarian,bul,bul_Cyrl,вегетариански,Vegetarian,1.0,0.8518052697181702,high,0,0
+vegan,bul,bul_Cyrl,Вегански,Vegans and vegans,0.45454545454545453,0.8335261940956116,high,1,0
+soup,bul,bul_Cyrl,супа,Soup,1.0,0.851318359375,high,0,0
+stew,bul,bul_Cyrl,печенето,baking,0.0,0.6618716716766357,medium,1,0
+barbecue,bul,bul_Cyrl,Бърбекю,It's a barbecue.,0.6666666666666666,0.8561860918998718,high,0,0
+fermented,bul,bul_Cyrl,ферментирани,Fermented,1.0,0.8521352410316467,high,0,0
+pickled,bul,bul_Cyrl,оцветени,of a thickness of not more than 10 mm,0.18181818181818182,0.4774189889431,low,1,0
+banquet,bul,bul_Cyrl,банкет,A banquet,0.875,0.8400141000747681,high,0,0
+feast,bul,bul_Cyrl,Вечеря,I'm going to dinner.,0.08,0.8258026242256165,high,1,0
+street food,bul,bul_Cyrl,улична храна,street food,1.0,0.8833895921707153,high,0,0
+dessert,bul,bul_Cyrl,десерт,Dishes,0.46153846153846156,0.8343989253044128,high,1,0
+sauce,bul,bul_Cyrl,сос,"Other, of a fat content, by weight",0.15384615384615385,0.5639722347259521,low,1,0
+grain,bul,bul_Cyrl,зърнени храни,cereals,0.3333333333333333,0.8634451627731323,high,1,0
+fruit,bul,bul_Cyrl,плодове,Fruit and vegetables,0.4,0.8506602644920349,high,1,0
+vegetable,bul,bul_Cyrl,зеленчуци,Fruit and vegetables,0.6206896551724138,0.8373444080352783,high,0,0
+kebab,bul,bul_Cyrl,кебаб,of a kind used for the manufacture of foodstuffs or preparations of foodstuffs,0.07228915662650602,0.8600689768791199,high,1,0
+shawarma,bul,bul_Cyrl,Шварма,Swarm,0.7692307692307693,0.7308107614517212,medium,0,0
+ramen,bul,bul_Cyrl,Рамен,Ramen,1.0,0.7547034025192261,medium,0,0
+sushi,bul,bul_Cyrl,Суши,Sushi,1.0,0.8605768084526062,high,0,0
+kimchi,bul,bul_Cyrl,Кимчи,Kimchi,1.0,0.8410739302635193,high,0,0
+pho,bul,bul_Cyrl,Фо,What's the matter?,0.09523809523809523,0.5164881944656372,low,1,0
+biryani,bul,bul_Cyrl,Биряни,Fresh or chilled,0.08695652173913043,0.8265715837478638,high,1,0
+falafel,bul,bul_Cyrl,Фалафел,Fallafel,0.9333333333333333,0.8757254481315613,high,0,0
+pasta,bul,bul_Cyrl,макаронки,"Other, of a thickness of not more than 10 mm",0.16326530612244897,0.8373706340789795,high,1,0
+cheese,bul,bul_Cyrl,сирене,Cheese,1.0,0.8587227463722229,high,0,0
+wine,bul,bul_Cyrl,вино,Wine,1.0,0.8634383082389832,high,0,0
+beer,bul,bul_Cyrl,пиво,"Other, of a kind used for the manufacture of ceramics",0.07017543859649122,0.8682032823562622,high,1,0
+chai,bul,bul_Cyrl,Чай,What's that?,0.25,0.8543409109115601,high,1,1
+espresso,bul,bul_Cyrl,Еспресо,Dishes and preparations of meat or meat offal,0.2641509433962264,0.8763279914855957,high,1,0
+udon,bul,bul_Cyrl,Удон,Whedon.,0.5454545454545454,0.8178324103355408,high,1,0
+soba,bul,bul_Cyrl,Соба,The room.,0.15384615384615385,0.7601081728935242,medium,1,0
+congee,bul,bul_Cyrl,съвместимост,Compatibility,0.21052631578947367,0.3952883780002594,low,1,0
+bibimbap,bul,bul_Cyrl,бибимбап,Baby boomers,0.2,0.8504552841186523,high,1,0
+hummus,bul,bul_Cyrl,Хъммус,Hummus,1.0,0.8542150259017944,high,0,0
+tabbouleh,bul,bul_Cyrl,Табуле,Table of contents,0.38461538461538464,0.7105804681777954,medium,1,0
+paella,bul,bul_Cyrl,паела,Paella,1.0,0.7898733615875244,medium,0,0
+risotto,bul,bul_Cyrl,ризото,the rice,0.26666666666666666,0.8453696966171265,high,1,0
+couscous,bul,bul_Cyrl,кускус,Cucumbers and other edible mushrooms,0.2727272727272727,0.7925335764884949,medium,1,0
+injera,bul,bul_Cyrl,инжера,of a thickness of not more than 10 mm,0.23255813953488372,0.680942952632904,medium,1,0
+tortilla,bul,bul_Cyrl,тортилия,of a kind used for the manufacture of foodstuffs,0.14285714285714285,0.8441435098648071,high,1,0
+tamale,bul,bul_Cyrl,Тамале,Tamal,0.9090909090909091,0.7651252150535583,medium,0,0
+arepa,bul,bul_Cyrl,епа,So what?,0.15384615384615385,0.7838422656059265,medium,1,0
+empanada,bul,bul_Cyrl,Емпанда,Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product,0.08264462809917356,0.7793436050415039,medium,1,0
+mochi,bul,bul_Cyrl,Мочи,Urine,0.2,0.5773637890815735,low,1,0
+matcha,bul,bul_Cyrl,Мача,The match.,0.625,0.828956127166748,high,0,0
+jalebi,bul,bul_Cyrl,джалеби,"Other, of a thickness of not more than 10 mm",0.08,0.8040007948875427,high,1,0
+halwa,bul,bul_Cyrl,Халва,I'm sorry about that.,0.15384615384615385,0.7720838785171509,medium,1,0
+flatbread,bul,bul_Cyrl,плоски хляб,Flat bread,0.9473684210526315,0.8066850304603577,high,0,0
+naan,bul,bul_Cyrl,Нана,- What? - Nana.,0.3157894736842105,0.821219801902771,high,1,0
+roti,bul,bul_Cyrl,Роти,Rotty,0.6666666666666666,0.8204340934753418,high,0,0
+chapati,bul,bul_Cyrl,Чапати,What are you talking about?,0.29411764705882354,0.8292922377586365,high,1,0
+paratha,bul,bul_Cyrl,парата,the steam,0.375,0.6245546340942383,medium,1,0
+soy sauce,bul,bul_Cyrl,соеви соси,Soy sauces,0.9473684210526315,0.7717716693878174,medium,0,0
+fish sauce,bul,bul_Cyrl,рибен сос,Fish sauce,1.0,0.861234188079834,high,0,0
+ghee,bul,bul_Cyrl,гей,I'm not gay.,0.125,0.4077184200286865,low,1,0
+paneer,bul,bul_Cyrl,Панеер,Fresh fruit and vegetables (excluding fresh fruit and vegetables),0.14084507042253522,0.7962226867675781,medium,1,0
+pickles,bul,bul_Cyrl,орехи,nuts,0.18181818181818182,0.816890299320221,high,1,0
+broth,bul,bul_Cyrl,бульон,of a kind used for the preparation of foodstuffs or preparations,0.08695652173913043,0.8122456073760986,high,1,0
+porridge,bul,bul_Cyrl,каша,clutter,0.13333333333333333,0.8411699533462524,high,1,0
+lentil,bul,bul_Cyrl,Слънчеви очила,Flat-rolled products of iron or non-alloy steel,0.18867924528301888,0.4800991714000702,low,1,0
+chickpea,bul,bul_Cyrl,гъбички,Mushrooms,0.11764705882352941,0.4994458258152008,low,1,0
+cassava,bul,bul_Cyrl,касива,of a kind used for the manufacture of foodstuffs,0.10909090909090909,0.8430075645446777,high,1,0
+plantain,bul,bul_Cyrl,Плантин,Plants and shrubs,0.56,0.8612775802612305,high,0,0
+okra,bul,bul_Cyrl,Окра,It's the other way around.,0.2,0.848095178604126,high,1,0
+eggplant,bul,bul_Cyrl,яйцеклетки,Eggs and other edible offal,0.34285714285714286,0.6774451732635498,medium,1,0
+traditional rice,bul,bul_Cyrl,традиционен ориз,Traditional rice,1.0,0.8783894181251526,high,0,0
+traditional bread,bul,bul_Cyrl,традиционен хляб,Traditional bread,1.0,0.8750303983688354,high,0,0
+traditional noodle,bul,bul_Cyrl,традиционни лапени,"For the purposes of this Regulation, the following definitions shall apply:",0.27956989247311825,0.7933822870254517,medium,1,0
+traditional dumpling,bul,bul_Cyrl,традиционни кърпички,Traditional towels,0.6842105263157895,0.4613676965236664,low,1,0
+traditional curry,bul,bul_Cyrl,традиционни къри,Traditional curries,0.8888888888888888,0.8099818825721741,high,0,0
+traditional spice,bul,bul_Cyrl,традиционни подправки,Traditional spices,0.9714285714285714,0.8588640689849854,high,0,0
+traditional tea,bul,bul_Cyrl,традиционен чай,Traditional tea,1.0,0.8754888772964478,high,0,0
+traditional coffee,bul,bul_Cyrl,традиционен кафе,Traditional coffee,1.0,0.8635389804840088,high,0,0
+traditional meat,bul,bul_Cyrl,традиционно месо,Traditional meat,1.0,0.8629376292228699,high,0,0
+traditional vegetarian,bul,bul_Cyrl,традиционни вегетарианци,Traditional vegetarians,0.9777777777777777,0.8827992677688599,high,0,0
+traditional vegan,bul,bul_Cyrl,традиционни вегани,Traditional vegans,0.9714285714285714,0.8730921745300293,high,0,0
+traditional soup,bul,bul_Cyrl,традиционна супа,Traditional soup,1.0,0.8799957036972046,high,0,0
+traditional stew,bul,bul_Cyrl,традиционна запечена,Traditional baked goods,0.6666666666666666,0.4891437888145447,low,1,0
+traditional barbecue,bul,bul_Cyrl,традиционен барбекю,Traditional barbecue,1.0,0.8791496753692627,high,0,0
+traditional fermented,bul,bul_Cyrl,традиционно ферментирано,Traditionally fermented,0.9545454545454546,0.8296681642532349,high,0,0
+traditional pickled,bul,bul_Cyrl,традиционни орехи,Traditional nuts,0.6857142857142857,0.4120190739631653,low,1,0
+traditional banquet,bul,bul_Cyrl,традиционен банкет,A traditional banquet,0.95,0.875006377696991,high,0,0
+traditional feast,bul,bul_Cyrl,традиционен празник,A traditional holiday,0.6842105263157895,0.8642578125,high,0,0
+traditional street food,bul,bul_Cyrl,традиционна улична храна,Traditional street food,1.0,0.8900123834609985,high,0,0
+traditional dessert,bul,bul_Cyrl,традиционен десерт,Traditional dessert,1.0,0.8747034072875977,high,0,0
+traditional sauce,bul,bul_Cyrl,традиционен сос,Traditional sauce,1.0,0.7483323216438293,medium,0,0
+traditional grain,bul,bul_Cyrl,традиционни зърнени храни,Traditional cereals,0.7777777777777778,0.8550773859024048,high,0,0
+traditional fruit,bul,bul_Cyrl,традиционни плодове,Traditional fruits,0.9714285714285714,0.8738611340522766,high,0,0
+traditional vegetable,bul,bul_Cyrl,традиционни зеленчуци,Traditional vegetables,0.9767441860465116,0.8609918355941772,high,0,0
+traditional kebab,bul,bul_Cyrl,традиционен кебаб,Traditional kebab,1.0,0.8823856115341187,high,0,0
+traditional shawarma,bul,bul_Cyrl,традиционна шварма,Traditional sewing thread,0.6666666666666666,0.783511221408844,medium,0,0
+festival,bul,bul_Cyrl,фестивал,the festival,0.8,0.8431106805801392,high,0,0
+holiday,bul,bul_Cyrl,почивка,Rest,0.0,0.8437965512275696,high,1,0
+new year,bul,bul_Cyrl,Нова година,It's a new year.,0.6666666666666666,0.8861258029937744,high,0,0
+easter,bul,bul_Cyrl,Великден,It's Easter.,0.6666666666666666,0.731681227684021,medium,1,1
+ramadan,bul,bul_Cyrl,Рамадан,The day of Ramadan,0.56,0.8735247254371643,high,0,0
+eid,bul,bul_Cyrl,Ейд,"Ed, what's the matter?",0.16,0.781413197517395,medium,1,0
+diwali,bul,bul_Cyrl,Дивали,The wild,0.14285714285714285,0.7978759407997131,medium,1,0
+vesak,bul,bul_Cyrl,Весак,Weighing,0.15384615384615385,0.7259023189544678,medium,1,0
+hanukkah,bul,bul_Cyrl,Ханука,Fresh fruit and vegetables,0.23529411764705882,0.8643754720687866,high,1,0
+passover,bul,bul_Cyrl,Великден,It's Easter.,0.4,0.5141326785087585,low,1,1
+nowruz,bul,bul_Cyrl,Норуз,"Notwithstanding the provisions of this Article,",0.1509433962264151,0.8402166366577148,high,1,0
+carnival,bul,bul_Cyrl,карнавал,Carnival,1.0,0.8602429628372192,high,0,0
+thanksgiving,bul,bul_Cyrl,Денят на благодарността,Thanksgiving Day,0.8571428571428571,0.8707298040390015,high,0,0
+harvest festival,bul,bul_Cyrl,празникът на реколтата,the harvest festival,0.8888888888888888,0.8821417689323425,high,0,0
+obon,bul,bul_Cyrl,Обун,O'Brien and his wife,0.25,0.6326586008071899,medium,1,0
+tet,bul,bul_Cyrl,Тет,What's the matter?,0.19047619047619047,0.4670398533344269,low,1,0
+songkran,bul,bul_Cyrl,Сандкран,"For the purposes of this Regulation, the following definitions shall apply:",0.12048192771084337,0.5883190631866455,low,1,0
+dragon boat festival,bul,bul_Cyrl,Фестивал на драконовите лодки,The Dragon Boat Festival,0.9090909090909091,0.8749526739120483,high,0,0
+mid autumn festival,bul,bul_Cyrl,Фестивал в средата на есента,Festival in the middle of autumn,0.3137254901960784,0.8716230392456055,high,1,0
+qingming,bul,bul_Cyrl,Кингминг,Kingming,0.875,0.8491861820220947,high,0,0
+yom kippur,bul,bul_Cyrl,Йом Кипур,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.09333333333333334,0.8316739797592163,high,1,0
+rosh hashanah,bul,bul_Cyrl,Рош Хашана,Rosh Hashanah,1.0,0.812712550163269,high,0,0
+purim,bul,bul_Cyrl,пурим,We smoke.,0.14285714285714285,0.5645351409912109,low,1,0
+sukkot,bul,bul_Cyrl,Сукот,Socote,0.5,0.8240513801574707,high,1,0
+advent,bul,bul_Cyrl,възникване,occurrence,0.25,0.6593309640884399,medium,1,0
+holi,bul,bul_Cyrl,Холи,Holly,0.6666666666666666,0.6081618666648865,medium,0,0
+navratri,bul,bul_Cyrl,Наватри,"Manufacture from materials of any heading, except that of iron or non-alloy steel",0.15730337078651685,0.6455216407775879,medium,1,0
+onam,bul,bul_Cyrl,наам,of a kind used for the manufacture of foodstuffs,0.11538461538461539,0.5196343660354614,low,1,0
+pongal,bul,bul_Cyrl,Понгал,Pongal,1.0,0.7341788411140442,medium,0,0
+durga puja,bul,bul_Cyrl,Дурга пужа,The Durga rifle,0.48,0.7455077171325684,medium,1,0
+janmashtami,bul,bul_Cyrl,джамаштами,of a thickness of not more than 10 mm,0.16666666666666666,0.8423160314559937,high,1,0
+good friday,bul,bul_Cyrl,Добър петък.,Good Friday. Good Friday.,0.6111111111111112,0.8740164637565613,high,0,0
+pentecost,bul,bul_Cyrl,Петдесетница,Fifty years,0.2,0.8403050899505615,high,1,0
+epiphany,bul,bul_Cyrl,Епифания,The Epiphany,0.8,0.8389761447906494,high,0,0
+all saints day,bul,bul_Cyrl,Денят на всички светии,All Saints' Day,0.9655172413793104,0.8718258142471313,high,0,0
+lunar new year,bul,bul_Cyrl,лунна нова година,Lunar New Year,1.0,0.8739600777626038,high,0,0
+thingyan,bul,bul_Cyrl,нещоян,"I mean, something.",0.38461538461538464,0.5493392944335938,low,1,0
+day of the dead,bul,bul_Cyrl,Денят на мъртвите,The Day of the Dead,0.8823529411764706,0.8733677268028259,high,0,0
+mardi gras,bul,bul_Cyrl,марди грас,Mardi Gras,1.0,0.844724178314209,high,0,0
+saint day,bul,bul_Cyrl,Свети ден,Holy day,0.47058823529411764,0.8274170756340027,high,1,0
+martinmas,bul,bul_Cyrl,Мартинма,What's the matter?,0.2222222222222222,0.6654631495475769,medium,1,0
+st patricks day,bul,bul_Cyrl,Денят на Свети Патрик,This is St. Patrick's Day.,0.7317073170731707,0.8665350675582886,high,0,0
+independence day,bul,bul_Cyrl,Ден на независимостта,Independence day,1.0,0.8744423389434814,high,0,0
+mawlid,bul,bul_Cyrl,Маулид,Mauld,0.7272727272727273,0.732109785079956,medium,0,0
+ashura,bul,bul_Cyrl,Ашура,Ashura,1.0,0.7875328063964844,medium,0,0
+hajj,bul,bul_Cyrl,хадж,Hajj,1.0,0.8605266213417053,high,0,0
+umrah,bul,bul_Cyrl,Умра,He's going to die.,0.08695652173913043,0.862513542175293,high,1,0
+setsubun,bul,bul_Cyrl,сетсубън,"Other, of a kind used for the manufacture of foodstuffs",0.15873015873015872,0.7718313336372375,medium,1,0
+religious festival,bul,bul_Cyrl,религиозен празник,religious holiday,0.6857142857142857,0.8838906288146973,high,1,1
+religious holiday,bul,bul_Cyrl,религиозен празник,religious holiday,1.0,0.8860739469528198,high,1,1
+religious new year,bul,bul_Cyrl,религиозна нова година,Religious New Year,1.0,0.8873878717422485,high,0,0
+religious easter,bul,bul_Cyrl,религиозна Великден,Religious Easter,1.0,0.7604599595069885,medium,0,0
+religious ramadan,bul,bul_Cyrl,религиозен рамадан,Religious Ramadan,1.0,0.8851596713066101,high,0,0
+religious eid,bul,bul_Cyrl,религиозен празник,religious holiday,0.8,0.7346353530883789,medium,1,1
+religious diwali,bul,bul_Cyrl,религиозна Дивали,Religious Diwali,1.0,0.7539100646972656,medium,0,0
+religious vesak,bul,bul_Cyrl,религиозен весак,religious scales,0.7741935483870968,0.620394229888916,medium,0,0
+religious hanukkah,bul,bul_Cyrl,религиозна ханука,religious hanukkah,1.0,0.8636512756347656,high,0,0
+religious passover,bul,bul_Cyrl,религиозна Пасха,Religious Passover,1.0,0.7397149801254272,medium,0,0
+religious nowruz,bul,bul_Cyrl,религиозен Nowruz,Religious Nowruz,1.0,0.7667332291603088,medium,0,0
+religious carnival,bul,bul_Cyrl,религиозен карнавал,religious carnival,1.0,0.8692907691001892,high,0,0
+religious thanksgiving,bul,bul_Cyrl,религиозна благодарност,Religious gratitude,0.5853658536585366,0.8735520243644714,high,0,0
+religious harvest festival,bul,bul_Cyrl,религиозен празник на реколтата,A religious festival of the harvest,0.5901639344262295,0.8843575716018677,high,0,0
+religious obon,bul,bul_Cyrl,религиозно облекчение,Religious relief,0.6666666666666666,0.4625680148601532,low,1,0
+religious tet,bul,bul_Cyrl,религиозен тет,religious heritage,0.7741935483870968,0.5880286693572998,low,1,0
+religious songkran,bul,bul_Cyrl,религиозни песникран,Religious songwriting,0.8205128205128205,0.6352895498275757,medium,0,0
+religious dragon boat festival,bul,bul_Cyrl,религиозен фестивал на драконовите лодки,A religious festival of dragon boats.,0.6567164179104478,0.8755403757095337,high,0,0
+religious mid autumn festival,bul,bul_Cyrl,религиозен празник в средата на есента,A religious holiday in mid-autumn,0.6129032258064516,0.8806302547454834,high,0,0
+religious qingming,bul,bul_Cyrl,религиозен чингминг,Religious Qingming,1.0,0.7729461789131165,medium,0,0
+religious yom kippur,bul,bul_Cyrl,религиозен йом кипур,Religious soft Cyprus,0.6341463414634146,0.8252160549163818,high,0,0
+religious rosh hashanah,bul,bul_Cyrl,религиозен рош хашана,Religious Rosh Hashanah,1.0,0.7483283281326294,medium,0,0
+religious purim,bul,bul_Cyrl,религиозни пурим,religious purim,1.0,0.7064915895462036,medium,0,0
+religious sukkot,bul,bul_Cyrl,религиозен сукот,Religious succot,0.875,0.837358832359314,high,0,0
+religious advent,bul,bul_Cyrl,религиозно възникване,religious origin,0.6875,0.7232110500335693,medium,0,0
+religious holi,bul,bul_Cyrl,религиозен холи,religious hall,0.8571428571428571,0.5752138495445251,low,1,0
+religious navratri,bul,bul_Cyrl,религиозни наврати,Religious returns,0.6285714285714286,0.8458253145217896,high,0,0
+religious onam,bul,bul_Cyrl,религиозен онам,Religious Onam,1.0,0.7446939945220947,medium,0,0
+religious pongal,bul,bul_Cyrl,религиозен понгал,Religious Pongal,1.0,0.707988440990448,medium,0,0
+religious durga puja,bul,bul_Cyrl,религиозна дурга пужа,Religious gunpowder,0.6153846153846154,0.47875282168388367,low,1,0
+religious janmashtami,bul,bul_Cyrl,религиозни джанмаштами,religious gnomes,0.7027027027027027,0.836514949798584,high,0,0
+religious good friday,bul,bul_Cyrl,религиозен добър петък,Religious Good Friday,1.0,0.7576241493225098,medium,0,0
+religious pentecost,bul,bul_Cyrl,религиозен петнощник,Religious Friday,0.5714285714285714,0.48201948404312134,low,1,0
+religious epiphany,bul,bul_Cyrl,Религиозно проявление,Religious Manifestation,0.5853658536585366,0.8208433389663696,high,0,0
+religious all saints day,bul,bul_Cyrl,религиозни всички светии ден,Religious All Saints Day,1.0,0.6768531799316406,medium,0,0
+religious lunar new year,bul,bul_Cyrl,религиозна лунна нова година,Religious Lunar New Year,1.0,0.8786453604698181,high,0,0
+religious thingyan,bul,bul_Cyrl,Религиозни неща,Religious matters,0.6285714285714286,0.7634231448173523,medium,0,0
+religious day of the dead,bul,bul_Cyrl,религиозен ден на мъртвите,Religious Day of the Dead,1.0,0.8707455396652222,high,0,0
+religious mardi gras,bul,bul_Cyrl,религиозен марди грас,Religious Mardi Gras,1.0,0.8620741367340088,high,0,0
+religious saint day,bul,bul_Cyrl,религиозен светец ден,Religious holy day,0.7567567567567568,0.7176973819732666,medium,0,0
+religious martinmas,bul,bul_Cyrl,религиозни мартинма,religious martyrdom,0.7894736842105263,0.6495833992958069,medium,0,0
+religious st patricks day,bul,bul_Cyrl,религиозен ден на Свети Патрик,Religious day of St. Patrick,0.7547169811320755,0.8573067784309387,high,0,0
+religious independence day,bul,bul_Cyrl,Ден на религиозната независимост,Religious Independence Day,1.0,0.8708354830741882,high,0,0
+religious mawlid,bul,bul_Cyrl,религиозни маулиди,religious motifs,0.75,0.7479681372642517,medium,0,0
+religious ashura,bul,bul_Cyrl,религиозна ашура,Religious fraud,0.7741935483870968,0.722357451915741,medium,0,0
+religious hajj,bul,bul_Cyrl,религиозен хадж,religious pilgrimage,0.6470588235294118,0.8736081123352051,high,0,0
+religious umrah,bul,bul_Cyrl,религиозна умра,Religious death,0.8,0.8728740215301514,high,0,0
+religious setsubun,bul,bul_Cyrl,религиозни сетсубуни,Religious Setsubuni,0.972972972972973,0.8314344882965088,high,0,0
+seasonal festival,bul,bul_Cyrl,сезонен фестивал,seasonal festival,1.0,0.8579456806182861,high,0,0
+seasonal holiday,bul,bul_Cyrl,сезонни празници,seasonal holidays,0.9696969696969697,0.8619074821472168,high,0,0
+seasonal new year,bul,bul_Cyrl,сезонна нова година,seasonal new year,1.0,0.7804924845695496,medium,0,0
+seasonal easter,bul,bul_Cyrl,сезонна Великден,seasonal Easter,1.0,0.6096810698509216,medium,0,0
+dress,bul,bul_Cyrl,рокля,Dress,1.0,0.8345781564712524,high,1,1
+clothing,bul,bul_Cyrl,дрехи,clothing,1.0,0.8414819240570068,high,1,1
+garment,bul,bul_Cyrl,дрехи,clothing,0.13333333333333333,0.8125481009483337,high,1,1
+veil,bul,bul_Cyrl,превръзка,of a thickness of not more than 10 mm,0.04878048780487805,0.7687311172485352,medium,1,0
+hijab,bul,bul_Cyrl,хиджаб,The hijab,0.7142857142857143,0.8507139682769775,high,0,0
+niqab,bul,bul_Cyrl,Никаб,It's all right.,0.2,0.8598482608795166,high,1,0
+burqa,bul,bul_Cyrl,Бурка,"Other, not elsewhere specified or included",0.0425531914893617,0.8472517728805542,high,1,0
+sari,bul,bul_Cyrl,Сари,Sary,0.75,0.7865002751350403,medium,0,0
+kimono,bul,bul_Cyrl,Кимоно,"Other, of a thickness of not more than 10 mm",0.16,0.8602296710014343,high,1,0
+hanbok,bul,bul_Cyrl,хенбок,of a kind used for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs or preparations of foodstuffs or preparations for the manufacture of foodstuffs,0.007042253521126761,0.8291904926300049,high,1,0
+turban,bul,bul_Cyrl,турбан,Machinery and apparatus for the manufacture of foodstuffs,0.09523809523809523,0.8635153770446777,high,1,0
+abaya,bul,bul_Cyrl,Абая,Abaya,1.0,0.6479779481887817,medium,0,0
+thobe,bul,bul_Cyrl,Тръмп,I'm going to tell you something.,0.10810810810810811,0.7283861637115479,medium,1,0
+dupatta,bul,bul_Cyrl,Дюпатта,Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product,0.05,0.7342782616615295,medium,1,0
+lehenga,bul,bul_Cyrl,лехенга,"Other, not elsewhere specified or included",0.12244897959183673,0.7544275522232056,medium,1,0
+kurta,bul,bul_Cyrl,Курта,Coat of arms,0.11764705882352941,0.8150883913040161,high,1,0
+dhoti,bul,bul_Cyrl,Дхоти,Ghosts,0.5454545454545454,0.8134332895278931,high,1,0
+qipao,bul,bul_Cyrl,Ципао,of a kind used for the manufacture of foodstuffs or preparations for the manufacture of foodstuffs for human consumption,0.064,0.8043792247772217,high,1,0
+uniform,bul,bul_Cyrl,униформа,Uniforms,0.9333333333333333,0.8396958708763123,high,0,0
+formal,bul,bul_Cyrl,формално,formally,0.8571428571428571,0.8316750526428223,high,0,0
+casual,bul,bul_Cyrl,случайни,of a kind used for the manufacture of foodstuffs,0.1111111111111111,0.7249658703804016,medium,1,0
+modest,bul,bul_Cyrl,скромен,Modest,1.0,0.8213202357292175,high,0,0
+ornate,bul,bul_Cyrl,оформени,Manufacture from materials of any heading,0.1702127659574468,0.45595017075538635,low,1,0
+jewelry,bul,bul_Cyrl,бижута,jewelry,1.0,0.8547249436378479,high,0,0
+necklace,bul,bul_Cyrl,огърлица,of a thickness of not more than 10 mm,0.13333333333333333,0.8457159996032715,high,1,0
+earring,bul,bul_Cyrl,ушници,"Other, of a thickness of not more than 10 mm",0.1568627450980392,0.7584238052368164,medium,1,0
+bracelet,bul,bul_Cyrl,гривна,Wristbands and bracelets,0.5,0.7910947799682617,medium,1,0
+ring,bul,bul_Cyrl,пръстен,a ring,0.8,0.8310749530792236,high,0,0
+headscarf,bul,bul_Cyrl,превръзка за глава,Head restraint,0.5217391304347826,0.8636791110038757,high,1,0
+tattoo,bul,bul_Cyrl,татуировка,Tattoo,1.0,0.866191029548645,high,0,0
+piercing,bul,bul_Cyrl,пирсинг,Flat-rolled products of iron or non-alloy steel,0.10909090909090909,0.8149892091751099,high,1,0
+mask,bul,bul_Cyrl,маска,For use in the manufacture of foodstuffs,0.13636363636363635,0.8265418410301208,high,1,0
+gown,bul,bul_Cyrl,рокля,Dress,0.0,0.7997517585754395,medium,1,1
+tuxedo,bul,bul_Cyrl,Смокинг,Smoking,0.15384615384615385,0.35487979650497437,low,1,0
+wedding dress,bul,bul_Cyrl,сватбена рокля,Wedding dress,1.0,0.8670260906219482,high,0,0
+sash,bul,bul_Cyrl,съвпадение,of which:,0.15384615384615385,0.4468012750148773,low,1,0
+sandals,bul,bul_Cyrl,сандали,Sandals and other footwear,0.42424242424242425,0.8544327020645142,high,1,0
+slippers,bul,bul_Cyrl,обувки,Footwear,0.25,0.8156458139419556,high,1,0
+bangle,bul,bul_Cyrl,бланц,of a thickness of not more than 10 mm,0.09302325581395349,0.5667162537574768,low,1,0
+anklet,bul,bul_Cyrl,брадичка,of a thickness of not more than 10 mm,0.09302325581395349,0.39498284459114075,low,1,0
+kaftan,bul,bul_Cyrl,кафтан,of a thickness of not more than 10 mm,0.23255813953488372,0.8533616065979004,high,1,0
+poncho,bul,bul_Cyrl,Пончо,Pony,0.6,0.8586162328720093,high,0,0
+sombrero,bul,bul_Cyrl,сомбреро,of a thickness of not more than 10 mm,0.2222222222222222,0.8610411882400513,high,1,0
+kippah,bul,bul_Cyrl,Кипа,"Other, of a kind used for the manufacture of foodstuffs",0.09836065573770492,0.6832770705223083,medium,1,0
+yarmulke,bul,bul_Cyrl,Ярмулк,This item is intended to record the information provided for in this Annex.,0.07228915662650602,0.8052544593811035,high,1,0
+mourning dress,bul,bul_Cyrl,Плащна рокля,Dress of a kind used in the manufacture of clothing,0.15384615384615385,0.6374934315681458,medium,1,0
+ceremonial mask,bul,bul_Cyrl,церемониална маска,Ceremonial mask,1.0,0.8688269257545471,high,0,0
+formal dress,bul,bul_Cyrl,формално облекло,Formal clothing,0.5185185185185185,0.863396167755127,high,1,0
+formal clothing,bul,bul_Cyrl,формални дрехи,Formal clothing,1.0,0.8762701749801636,high,1,1
+formal garment,bul,bul_Cyrl,формални дрехи,Formal clothing,0.5517241379310345,0.869830846786499,high,1,1
+formal veil,bul,bul_Cyrl,формална завеса,Of a thickness of not more than 10 mm,0.16666666666666666,0.8623456358909607,high,1,0
+formal hijab,bul,bul_Cyrl,формален хиджаб,Formal hijab,1.0,0.8675167560577393,high,0,0
+formal niqab,bul,bul_Cyrl,формален никаб,Of a thickness of not more than 10 mm,0.16326530612244897,0.8639010190963745,high,1,0
+formal burqa,bul,bul_Cyrl,формална бурка,Of a thickness of not more than 10 mm,0.16326530612244897,0.8598828315734863,high,1,0
+formal sari,bul,bul_Cyrl,формален сари,Formal sari,1.0,0.6043250560760498,medium,0,0
+formal kimono,bul,bul_Cyrl,формално кимоно,Formal kimono,1.0,0.8629740476608276,high,0,0
+formal hanbok,bul,bul_Cyrl,официален ханбок,Official knot,0.46153846153846156,0.8445104360580444,high,1,0
+formal turban,bul,bul_Cyrl,формален турбан,Formal turbine,0.8888888888888888,0.8533865213394165,high,0,0
+formal abaya,bul,bul_Cyrl,Официална абая,Official newspaper,0.3333333333333333,0.7513060569763184,medium,1,0
+formal thobe,bul,bul_Cyrl,Официален празник,It's an official holiday.,0.32432432432432434,0.5178183913230896,low,1,0
+formal dupatta,bul,bul_Cyrl,формални дупата,Of a thickness of not more than 10 mm,0.1568627450980392,0.3557726740837097,low,1,0
+formal lehenga,bul,bul_Cyrl,формална лехенга,Of a thickness of not more than 10 mm,0.1568627450980392,0.5670925378799438,low,1,0
+formal kurta,bul,bul_Cyrl,формална курта,Of a thickness of not more than 10 mm,0.16326530612244897,0.6053339242935181,medium,1,0
+formal dhoti,bul,bul_Cyrl,Дхоти официално,Dhoti officially,0.35714285714285715,0.730999231338501,medium,1,0
+formal qipao,bul,bul_Cyrl,Формален ципао,Of a thickness of not more than 10 mm,0.16326530612244897,0.4532284140586853,low,1,0
+formal uniform,bul,bul_Cyrl,формална униформа,Formal uniforms,0.9655172413793104,0.8722497224807739,high,0,0
+formal formal,bul,bul_Cyrl,официално официално,officially officially,0.4117647058823529,0.4560233950614929,low,1,0
+formal casual,bul,bul_Cyrl,формално случайно,formally accidental,0.625,0.5957229137420654,low,1,0
+formal modest,bul,bul_Cyrl,формално скромно,Formally modest,0.9285714285714286,0.7674750089645386,medium,0,0
+formal ornate,bul,bul_Cyrl,формално орнаментирани,Formally decorated,0.7741935483870968,0.6754779815673828,medium,0,0
+formal jewelry,bul,bul_Cyrl,формални бижута,Formal jewellery,0.9333333333333333,0.856861412525177,high,0,0
+formal necklace,bul,bul_Cyrl,официален огърлица,Official collar,0.4666666666666667,0.751458466053009,medium,1,0
+formal earring,bul,bul_Cyrl,формални ъгълници,Formal angles,0.7407407407407407,0.3542947471141815,low,1,0
+formal bracelet,bul,bul_Cyrl,официална гривна,Official bracelet,0.75,0.8600237369537354,high,0,0
+formal ring,bul,bul_Cyrl,официален пръстен,Official ring,0.6666666666666666,0.871740460395813,high,0,0
+formal headscarf,bul,bul_Cyrl,формален плащ,Formal coat,0.5925925925925926,0.8498799204826355,high,0,0
+formal tattoo,bul,bul_Cyrl,формална татуировка,a formal tattoo,0.9285714285714286,0.8719837069511414,high,0,0
+formal piercing,bul,bul_Cyrl,Формално пробиване,Formal breaking and entering,0.5116279069767442,0.5830544233322144,low,1,0
+formal mask,bul,bul_Cyrl,формална маска,Formal masks,0.9565217391304348,0.8496485948562622,high,0,0
+formal gown,bul,bul_Cyrl,Формална рокля,Formal dress,0.6086956521739131,0.874136745929718,high,0,0
+formal tuxedo,bul,bul_Cyrl,формален смокинг,a formal tuxedo,0.9285714285714286,0.80643630027771,high,0,0
+formal wedding dress,bul,bul_Cyrl,официална сватбена рокля,official wedding dress,0.8095238095238095,0.8662058711051941,high,0,0
+formal sash,bul,bul_Cyrl,Формална лента,Formal tape,0.7272727272727273,0.5533424615859985,low,1,0
+formal sandals,bul,bul_Cyrl,формални сандали,Of a thickness of not more than 10 mm,0.23529411764705882,0.8658751249313354,high,1,0
+formal slippers,bul,bul_Cyrl,формални обувки,Formal footwear,0.6,0.8287392258644104,high,0,0
+formal bangle,bul,bul_Cyrl,Формална ръкавица,Formal gloves,0.7692307692307693,0.8309396505355835,high,0,0
+formal anklet,bul,bul_Cyrl,формален глезец,Formal ankle,0.96,0.500633180141449,low,1,0
+formal kaftan,bul,bul_Cyrl,официален кафтан,Official brothel,0.3448275862068966,0.8678582906723022,high,1,0
+formal poncho,bul,bul_Cyrl,Формален пончо,Formal doughnuts,0.6206896551724138,0.8442063331604004,high,0,0
+formal sombrero,bul,bul_Cyrl,Формален сомбреро,Of a thickness of not more than 10 mm,0.19230769230769232,0.6711584329605103,medium,1,0
+formal kippah,bul,bul_Cyrl,формална кипа,Of a thickness of not more than 10 mm,0.16,0.7333943843841553,medium,1,0
+formal yarmulke,bul,bul_Cyrl,Формална ярмарка,Formal trade fair,0.5625,0.43898484110832214,low,1,0
+formal mourning dress,bul,bul_Cyrl,формално платно за траур,Formal mourning cloth,0.7619047619047619,0.6009527444839478,medium,0,0
+formal ceremonial mask,bul,bul_Cyrl,формална церемониална маска,a formal ceremonial mask,0.9565217391304348,0.8629765510559082,high,0,0
+casual dress,bul,bul_Cyrl,обикновена рокля,Ordinary dress,0.5384615384615384,0.85017991065979,high,1,0
+casual clothing,bul,bul_Cyrl,дрехи за обикновено облекло,"Woven fabrics of synthetic staple fibres, containing predominantly, but < 85% synthetic staple fibres by weight, mixed principally or solely with man-made fibres",0.11363636363636363,0.7241337299346924,medium,1,1
+casual garment,bul,bul_Cyrl,дрехи за обикновено облекло,"Woven fabrics of synthetic staple fibres, containing predominantly, but < 85% synthetic staple fibres by weight, mixed principally or solely with man-made fibres",0.11428571428571428,0.6875335574150085,medium,1,1
+casual veil,bul,bul_Cyrl,случайна завеса,of a width of not more than 30 mm,0.13636363636363635,0.8078485727310181,high,1,0
+casual hijab,bul,bul_Cyrl,случаен хиджаб,a casual hijab,0.9230769230769231,0.781974196434021,medium,0,0
+casual niqab,bul,bul_Cyrl,казуален никаб,Casual niqab,1.0,0.8110961318016052,high,0,0
+white,bul,bul_Cyrl,бял,white,1.0,0.8367321491241455,high,0,0
+red,bul,bul_Cyrl,червено,Red,1.0,0.8635141849517822,high,0,0
+black,bul,bul_Cyrl,черно,black,1.0,0.8426998853683472,high,0,0
+blue,bul,bul_Cyrl,синьо,blue,1.0,0.8465924859046936,high,0,0
+green,bul,bul_Cyrl,зелено,Green,1.0,0.829159140586853,high,0,0
+yellow,bul,bul_Cyrl,жълт,yellow,1.0,0.8406413197517395,high,0,0
+purple,bul,bul_Cyrl,фиолето,Purple,1.0,0.46363532543182373,low,1,0
+orange,bul,bul_Cyrl,оранжево,orange,1.0,0.8598897457122803,high,0,0
+gold,bul,bul_Cyrl,злато,gold,1.0,0.8563143014907837,high,0,0
+silver,bul,bul_Cyrl,сребро,of a width of not more than 600 mm,0.1,0.8430236577987671,high,1,0
+dragon,bul,bul_Cyrl,дракон,Dragon,1.0,0.8579350113868713,high,0,0
+phoenix,bul,bul_Cyrl,Феникс,It's all over the place.,0.12903225806451613,0.8540951013565063,high,1,0
+lotus,bul,bul_Cyrl,лотос,the lotus,0.7142857142857143,0.8334196209907532,high,0,0
+bamboo,bul,bul_Cyrl,бамбук,"Other, not elsewhere specified or included",0.08333333333333333,0.8555930852890015,high,1,0
+olive,bul,bul_Cyrl,зехтин,Olive oil,0.7142857142857143,0.803088366985321,high,0,0
+maple,bul,bul_Cyrl,ябълка,the apples,0.5333333333333333,0.8530935049057007,high,1,0
+totem,bul,bul_Cyrl,тотем,the totem,0.7142857142857143,0.8503289222717285,high,0,0
+emblem,bul,bul_Cyrl,емблема,the emblem,0.75,0.8631607294082642,high,0,0
+anthem,bul,bul_Cyrl,химн,the national anthem,0.48,0.8338315486907959,high,1,1
+flag,bul,bul_Cyrl,флаг,the flag,0.6666666666666666,0.840054452419281,high,0,0
+icon,bul,bul_Cyrl,икона,the icon,0.6666666666666666,0.8271949291229248,high,0,0
+script,bul,bul_Cyrl,Сценарий,What's going on?,0.18181818181818182,0.8534880876541138,high,1,0
+calligraphy,bul,bul_Cyrl,каллиграфия,Manufacture from materials of any heading,0.19230769230769232,0.8692749738693237,high,1,0
+lantern,bul,bul_Cyrl,фенер,a headlamp,0.23529411764705882,0.835813045501709,high,1,0
+opera,bul,bul_Cyrl,опера,Opera,1.0,0.8559212684631348,high,0,0
+dance,bul,bul_Cyrl,танцуване,Dancing,0.6666666666666666,0.8622736930847168,high,0,0
+music,bul,bul_Cyrl,музика,music,1.0,0.8675161600112915,high,0,0
+folklore,bul,bul_Cyrl,фолклор,Folklore,1.0,0.8526537418365479,high,0,0
+myth,bul,bul_Cyrl,Мит,Myth,1.0,0.8151684403419495,high,0,0
+legend,bul,bul_Cyrl,Легенда,It's a legend.,0.6,0.8049105405807495,high,0,0
+oral tradition,bul,bul_Cyrl,устна традиция,Oral tradition,1.0,0.8820623755455017,high,0,0
+epic,bul,bul_Cyrl,Епично,It's epic.,0.5714285714285714,0.6065341234207153,medium,0,0
+fable,bul,bul_Cyrl,скандал,The scandal,0.25,0.5078206658363342,low,1,0
+choir,bul,bul_Cyrl,хор,Choir,1.0,0.8544681072235107,high,0,0
+orchestra,bul,bul_Cyrl,оркестър,Orchestra,1.0,0.8505815863609314,high,0,0
+drumming,bul,bul_Cyrl,свирене на барабани,playing drums,0.38095238095238093,0.852415919303894,high,1,0
+tango,bul,bul_Cyrl,Танго,Tango,1.0,0.8626089096069336,high,0,0
+flamenco,bul,bul_Cyrl,фламенко,"Flavonoids and their salts, whether or not containing added sugar or other sweetening matter",0.1,0.8701262474060059,high,1,0
+bharatanatyam,bul,bul_Cyrl,Бхаратанатам,Bharatanatham,0.9230769230769231,0.8176695108413696,high,0,0
+kabuki,bul,bul_Cyrl,кабуки,"Other, of a thickness of not more than 10 mm",0.08,0.8465104103088379,high,1,0
+lion dance,bul,bul_Cyrl,танц на лъва,Dance of the lion,0.37037037037037035,0.8667012453079224,high,1,0
+dragon dance,bul,bul_Cyrl,Танцът на дракона,The Dance of the Dragon,0.34285714285714286,0.8740230798721313,high,1,0
+totem pole,bul,bul_Cyrl,Тотем полюс,The rotating pole,0.5925925925925926,0.7424912452697754,medium,0,0
+prayer beads,bul,bul_Cyrl,Молитвенни бусици,Prayer drums,0.75,0.8663115501403809,high,0,0
+chopsticks,bul,bul_Cyrl,пилешки пръчки,Fresh or chilled chickens,0.34285714285714286,0.5111749768257141,low,1,0
+tea ceremony,bul,bul_Cyrl,Церемония за чая,The Tea Ceremony,0.8571428571428571,0.8273859024047852,high,0,0
+martial arts,bul,bul_Cyrl,бойни изкуства,Martial arts,1.0,0.877599835395813,high,0,0
+cultural white,bul,bul_Cyrl,културно бяло,cultural white,1.0,0.7830962538719177,medium,0,0
+cultural red,bul,bul_Cyrl,културен червен,Cultured red,0.8333333333333334,0.6992337703704834,medium,0,0
+cultural black,bul,bul_Cyrl,Културно черно,Culturally black,0.9333333333333333,0.7807155847549438,medium,0,0
+cultural blue,bul,bul_Cyrl,културен синьо,Cultured blue,0.8461538461538461,0.746857225894928,medium,0,0
+cultural green,bul,bul_Cyrl,културен зелен,Cultured green,0.8571428571428571,0.6696420907974243,medium,0,0
+cultural yellow,bul,bul_Cyrl,културен жълт,Cultured yellow,0.8666666666666667,0.6502454876899719,medium,0,0
+cultural purple,bul,bul_Cyrl,културен фиолето,Cultured purple,0.8666666666666667,0.7182511687278748,medium,0,0
+cultural orange,bul,bul_Cyrl,културен портокал,Cultured orange,0.8666666666666667,0.8402112722396851,high,0,0
+cultural gold,bul,bul_Cyrl,културен злато,Cultured gold,0.8461538461538461,0.7269548177719116,medium,0,0
+cultural silver,bul,bul_Cyrl,културен сребро,Cultured silver,0.8666666666666667,0.5908336639404297,low,1,0
+cultural dragon,bul,bul_Cyrl,културен дракон,Cultured dragon,0.8666666666666667,0.8529413938522339,high,0,0
+cultural phoenix,bul,bul_Cyrl,културен феникс,"Other, of a kind used for the manufacture of foodstuffs or preparations of foodstuffs",0.15841584158415842,0.858856201171875,high,1,0
+cultural lotus,bul,bul_Cyrl,културен лотос,Cultured lotus,0.8571428571428571,0.8466821312904358,high,0,0
+cultural bamboo,bul,bul_Cyrl,културен бамбук,Cultured bamboo,0.8666666666666667,0.8611645102500916,high,0,0
+cultural olive,bul,bul_Cyrl,културен маслин,Cultured olives,0.8275862068965517,0.8235653042793274,high,0,0
+cultural maple,bul,bul_Cyrl,културен кленов,"Other, of a kind used for the manufacture of foodstuffs or preparations of foodstuffs",0.12121212121212122,0.673491358757019,medium,1,0
+cultural totem,bul,bul_Cyrl,културен тотем,"Other, not elsewhere specified or included",0.10714285714285714,0.8492744565010071,high,1,1
+cultural emblem,bul,bul_Cyrl,културен емблема,the cultural emblem,0.8823529411764706,0.8426257371902466,high,0,0
+cultural anthem,bul,bul_Cyrl,културен химн,cultural anthem,1.0,0.8646664023399353,high,0,0
+cultural flag,bul,bul_Cyrl,културен флаг,the cultural flag,0.8666666666666667,0.8656649589538574,high,0,0
+cultural icon,bul,bul_Cyrl,културна икона,cultural icon,1.0,0.8715739846229553,high,0,0
+cultural script,bul,bul_Cyrl,културен текст,cultural text,0.7142857142857143,0.8099529147148132,high,0,0
+cultural calligraphy,bul,bul_Cyrl,културна каллиграфия,cultural calligraphy,1.0,0.8737343549728394,high,0,0
+cultural lantern,bul,bul_Cyrl,културен фенер,a culture lamp,0.6,0.8453438878059387,high,0,0
+cultural incense,bul,bul_Cyrl,културен парфюм,Cultured perfume,0.5625,0.7349936366081238,medium,0,0
+cultural opera,bul,bul_Cyrl,културна опера,cultural opera,1.0,0.8626378178596497,high,0,0
+cultural dance,bul,bul_Cyrl,културен танц,cultural dance,1.0,0.8561356067657471,high,0,0
+cultural music,bul,bul_Cyrl,културна музика,cultural music,1.0,0.8738138675689697,high,0,0
+cultural folklore,bul,bul_Cyrl,културен фолклор,cultural folklore,1.0,0.8681892156600952,high,0,0
+cultural myth,bul,bul_Cyrl,културен мит,cultural myth,1.0,0.8637276291847229,high,0,0
+cultural legend,bul,bul_Cyrl,културна легенда,A cultural legend,0.9375,0.8643049001693726,high,0,0
+cultural oral tradition,bul,bul_Cyrl,Культурна устна традиция,Cultural oral tradition,1.0,0.8728318810462952,high,0,0
+cultural epic,bul,bul_Cyrl,културна епоса,The cultural epic,0.8666666666666667,0.7339579463005066,medium,0,0
+cultural fable,bul,bul_Cyrl,Культурна легенда,It's a cultural legend.,0.5945945945945946,0.8582353591918945,high,0,0
+cultural choir,bul,bul_Cyrl,културен хор,cultural choir,1.0,0.866451621055603,high,0,0
+cultural orchestra,bul,bul_Cyrl,културен оркестър,cultural orchestra,1.0,0.8606617450714111,high,0,0
+cultural drumming,bul,bul_Cyrl,културен барабан,"of a thickness of not more than 10 mm,",0.2545454545454545,0.6521655917167664,medium,1,0
+cultural chanting,bul,bul_Cyrl,културен тант,"Other, of a kind used for the manufacture of foodstuffs",0.16666666666666666,0.8152130246162415,high,1,0
+cultural tango,bul,bul_Cyrl,културен танго,"Other, not elsewhere specified or included",0.07142857142857142,0.8660122156143188,high,1,0
+cultural flamenco,bul,bul_Cyrl,културен фламенко,"Flat-rolled products of iron or non-alloy steel, of a width of <= 600 mm",0.0898876404494382,0.8751039505004883,high,1,0
+cultural bharatanatyam,bul,bul_Cyrl,културен Бхаратанатам,cultural Bharatanatham,0.9545454545454546,0.680645227432251,medium,0,0
+cultural kabuki,bul,bul_Cyrl,културен кабуки,Cultured cabbage,0.5806451612903226,0.6908532381057739,medium,0,0
+cultural lion dance,bul,bul_Cyrl,културен танц на лъва,Cultural dance of the lion,0.6222222222222222,0.8430750966072083,high,0,0
+cultural dragon dance,bul,bul_Cyrl,културен танц на дракона,Cultural dance of the dragon,0.6122448979591837,0.8573375344276428,high,0,0
+cultural totem pole,bul,bul_Cyrl,културен тотем,"Other, not elsewhere specified or included",0.26229508196721313,0.6832475662231445,medium,1,1
+cultural prayer beads,bul,bul_Cyrl,Культурни молитви,Cultural Prayers,0.8648648648648649,0.5205508470535278,low,1,0
+cultural rosary,bul,bul_Cyrl,културен розарий,Cultured rosary,0.8666666666666667,0.832648754119873,high,0,0
+cultural chopsticks,bul,bul_Cyrl,Культурни пръчки за хранене,Cultured food rods,0.4864864864864865,0.6535019874572754,medium,1,0
+cultural tea ceremony,bul,bul_Cyrl,културен чай,Cultured tea,0.6060606060606061,0.803892195224762,high,0,0
+cultural martial arts,bul,bul_Cyrl,културни бойни изкуства,cultural martial arts,1.0,0.870518684387207,high,0,0
+democracy,bul,bul_Cyrl,демокрация,Democracy,1.0,0.8649120330810547,high,0,0
+monarchy,bul,bul_Cyrl,монархия,the monarchy,0.8,0.872882604598999,high,0,0
+republic,bul,bul_Cyrl,република,the Republic,0.8,0.8450671434402466,high,0,0
+federal,bul,bul_Cyrl,федерална,Federal government,0.56,0.7552704215049744,medium,0,0
+unitary,bul,bul_Cyrl,единичен,of which:,0.125,0.7546485662460327,medium,1,0
+parliament,bul,bul_Cyrl,Европейски парламент,The European Parliament,0.6060606060606061,0.7584880590438843,medium,0,0
+senate,bul,bul_Cyrl,Сенат,Senate,1.0,0.8590950965881348,high,0,0
+constitution,bul,bul_Cyrl,Конституция,The Constitution,0.8571428571428571,0.8656622767448425,high,0,0
+bureaucracy,bul,bul_Cyrl,Бюрокрация,Bureaucracy,1.0,0.8794360756874084,high,0,0
+meritocracy,bul,bul_Cyrl,Меритократия,Meritocracy,1.0,0.8648187518119812,high,0,0
+oligarchy,bul,bul_Cyrl,олигархия,Oligarchy,1.0,0.865571141242981,high,0,0
+aristocracy,bul,bul_Cyrl,аристокрация,aristocracy,1.0,0.847974419593811,high,0,0
+tribunal,bul,bul_Cyrl,съдебен съд,Court of Justice,0.16666666666666666,0.8327068090438843,high,1,0
+mediation,bul,bul_Cyrl,медиация,mediation,1.0,0.8713480830192566,high,0,0
+civil law,bul,bul_Cyrl,гражданско право,Civil law,1.0,0.8779289126396179,high,0,0
+common law,bul,bul_Cyrl,Общо право,Common law,1.0,0.8675811290740967,high,0,0
+customary law,bul,bul_Cyrl,обичайното право,Common law,0.6086956521739131,0.870282769203186,high,0,0
+council,bul,bul_Cyrl,Съвет,Council,1.0,0.8397200107574463,high,0,0
+chieftain,bul,bul_Cyrl,началник,Chief of Staff,0.6086956521739131,0.7701293230056763,medium,0,0
+citizen,bul,bul_Cyrl,гражданин,citizen,1.0,0.8516602516174316,high,0,0
+state,bul,bul_Cyrl,държавата,the State,0.7142857142857143,0.8333436846733093,high,0,0
+nation,bul,bul_Cyrl,нация,nation,1.0,0.8452070951461792,high,0,0
+border,bul,bul_Cyrl,границата,the border,0.75,0.8422254323959351,high,0,0
+governance,bul,bul_Cyrl,управление,management,0.3,0.864408016204834,high,1,0
+policy,bul,bul_Cyrl,Политика,Policy,1.0,0.8460678458213806,high,0,0
+regulation,bul,bul_Cyrl,Регламент,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.13333333333333333,0.8288182616233826,high,1,0
+empire,bul,bul_Cyrl,Империя,The Empire,0.75,0.8357992172241211,high,0,0
+colonial,bul,bul_Cyrl,колониален,Colonial,1.0,0.7264442443847656,medium,0,0
+decolonization,bul,bul_Cyrl,деколонизация,decolonization,1.0,0.8685038685798645,high,0,0
+judiciary,bul,bul_Cyrl,съдебната система,the judicial system,0.5714285714285714,0.886972963809967,high,0,0
+legislature,bul,bul_Cyrl,законодателен орган,Legislative authority,0.625,0.8445446491241455,high,0,0
+executive,bul,bul_Cyrl,изпълнителен директор,Executive Director,0.6666666666666666,0.8530516028404236,high,0,0
+ministry,bul,bul_Cyrl,службата,the service,0.10526315789473684,0.6275700926780701,medium,1,0
+administration,bul,bul_Cyrl,администрация,the administration,0.875,0.8479809761047363,high,0,0
+charter,bul,bul_Cyrl,харта,Paper and paperboard,0.14814814814814814,0.6928805112838745,medium,1,0
+ordinance,bul,bul_Cyrl,наредба,Order,0.5714285714285714,0.8314588069915771,high,0,0
+treaty,bul,bul_Cyrl,Договор,Contract,0.5714285714285714,0.8505136966705322,high,0,0
+diplomacy,bul,bul_Cyrl,Дипломатия,The diplomatic service,0.5161290322580645,0.8771287202835083,high,1,0
+taxation,bul,bul_Cyrl,данъчно облагане,taxation,1.0,0.8690741658210754,high,0,0
+public office,bul,bul_Cyrl,публична служба,public service,0.7407407407407407,0.8501313328742981,high,0,0
+village council,bul,bul_Cyrl,селенски съвет,village council,1.0,0.8704199194908142,high,0,0
+city council,bul,bul_Cyrl,градски съвет,city council,1.0,0.8770571947097778,high,0,0
+mayor,bul,bul_Cyrl,кмет,Mayor,1.0,0.852554440498352,high,0,0
+governor,bul,bul_Cyrl,Губернатор,Governor,1.0,0.8490819931030273,high,0,0
+public democracy,bul,bul_Cyrl,публична демокрация,public democracy,1.0,0.8789489269256592,high,0,0
+public monarchy,bul,bul_Cyrl,публична монархия,public monarchy,1.0,0.8765794038772583,high,0,0
+public republic,bul,bul_Cyrl,публична република,public republic,1.0,0.8724392652511597,high,0,0
+public federal,bul,bul_Cyrl,публични федерални,publicly owned federal,0.7777777777777778,0.5865535140037537,low,1,0
+public unitary,bul,bul_Cyrl,публична единица,public unit,0.88,0.7516998052597046,medium,0,0
+public parliament,bul,bul_Cyrl,публичен парламент,public parliament,1.0,0.8684347867965698,high,0,0
+public senate,bul,bul_Cyrl,публичен сенат,the public senate,0.8666666666666667,0.8559436202049255,high,0,0
+public constitution,bul,bul_Cyrl,публична конституция,public constitution,1.0,0.8673323392868042,high,0,0
+public bureaucracy,bul,bul_Cyrl,публична бюрокрация,public bureaucracy,1.0,0.8732094168663025,high,0,0
+public meritocracy,bul,bul_Cyrl,публична меритократия,public meritocracy,1.0,0.86734938621521,high,0,0
+public oligarchy,bul,bul_Cyrl,публична олигархия,public oligarchy,1.0,0.8711337447166443,high,0,0
+public aristocracy,bul,bul_Cyrl,публична аристокрация,public aristocracy,1.0,0.8562047481536865,high,0,0
+public tribunal,bul,bul_Cyrl,публичен съд,public court,0.5925925925925926,0.8718932867050171,high,0,0
+public mediation,bul,bul_Cyrl,публично посредничество,public mediation,1.0,0.8711307048797607,high,0,0
+public civil law,bul,bul_Cyrl,публично гражданско право,public civil law,1.0,0.8764135241508484,high,0,0
+public common law,bul,bul_Cyrl,общественото общо право,public common law,1.0,0.865123987197876,high,0,0
+public customary law,bul,bul_Cyrl,публично обичайно право,public ordinary law,0.7692307692307693,0.8694217801094055,high,0,0
+public council,bul,bul_Cyrl,обществен съвет,public council,1.0,0.8626892566680908,high,0,0
+public chieftain,bul,bul_Cyrl,държавен началник,Head of State,0.27586206896551724,0.7610357999801636,medium,1,0
+public citizen,bul,bul_Cyrl,публичен гражданин,a public citizen,0.9333333333333333,0.8609466552734375,high,0,0
+public state,bul,bul_Cyrl,публична държава,publicly owned country,0.47058823529411764,0.8683433532714844,high,1,0
+public nation,bul,bul_Cyrl,публична нация,public nation,1.0,0.8599728345870972,high,0,0
+public border,bul,bul_Cyrl,публична граница,public border,1.0,0.8630185127258301,high,0,0
+public governance,bul,bul_Cyrl,публично управление,public administration,0.47368421052631576,0.8567556142807007,high,1,0
+public policy,bul,bul_Cyrl,обществена политика,public policy,1.0,0.8705646991729736,high,0,0
+public regulation,bul,bul_Cyrl,публично регулиране,public regulation,1.0,0.8641149997711182,high,0,0
+public empire,bul,bul_Cyrl,публична империя,public empire,1.0,0.8582922220230103,high,0,0
+public colonial,bul,bul_Cyrl,публичен колониален,publicly owned colony,0.6666666666666666,0.5616085529327393,low,1,0
+public decolonization,bul,bul_Cyrl,публична деколонизация,public decolonization,1.0,0.8564858436584473,high,0,0
+public judiciary,bul,bul_Cyrl,публична съдебна власт,public jurisdiction,0.7428571428571429,0.8799082040786743,high,0,0
+public legislature,bul,bul_Cyrl,публичен законодателен орган,public legislature,1.0,0.8531215190887451,high,0,0
+public executive,bul,bul_Cyrl,държавен изпълнителен орган,State executing authority,0.3902439024390244,0.8459099531173706,high,1,0
+public ministry,bul,bul_Cyrl,общественото служение,public service,0.5517241379310345,0.8636232614517212,high,0,0
+public administration,bul,bul_Cyrl,публична администрация,public administration,1.0,0.881006121635437,high,0,0
+public charter,bul,bul_Cyrl,публична харта,public charter,1.0,0.8425686955451965,high,0,0
+public ordinance,bul,bul_Cyrl,публична наредба,public order,0.7857142857142857,0.8547707796096802,high,0,0
+public treaty,bul,bul_Cyrl,публичен договор,public contract,0.7857142857142857,0.8635597229003906,high,0,0
+public diplomacy,bul,bul_Cyrl,публична дипломация,public diplomacy,1.0,0.872700572013855,high,0,0
+public taxation,bul,bul_Cyrl,публично данъчно облагане,public taxation,1.0,0.8767598271369934,high,0,0
+public public office,bul,bul_Cyrl,публично публично управление,publicly owned public administration,0.5357142857142857,0.6515799164772034,medium,1,0
+public village council,bul,bul_Cyrl,Обществен селенски съвет,Public village council,1.0,0.846889853477478,high,0,0
+public city council,bul,bul_Cyrl,Обществен градски съвет,Municipal Council,0.6666666666666666,0.857917070388794,high,0,0
+public mayor,bul,bul_Cyrl,Обществен кмет,Mayor of the Municipality,0.2702702702702703,0.8235908150672913,high,1,0
+public governor,bul,bul_Cyrl,държавен губернатор,State governor,0.6206896551724138,0.8645073175430298,high,0,0
+state democracy,bul,bul_Cyrl,държавна демокрация,State democracy,1.0,0.8805142641067505,high,0,0
+state monarchy,bul,bul_Cyrl,държавна монархия,State monarchy,1.0,0.8783473968505859,high,0,0
+state republic,bul,bul_Cyrl,държавна република,a state republic,0.9333333333333333,0.865434467792511,high,0,0
+state federal,bul,bul_Cyrl,федерална държава,Federal State,0.5384615384615384,0.7640261650085449,medium,1,0
+state unitary,bul,bul_Cyrl,държавен унитарен орган,State unitary authority,0.7222222222222222,0.7367489337921143,medium,0,0
+state parliament,bul,bul_Cyrl,държавен парламент,Parliament of the State,0.5128205128205128,0.866405189037323,high,1,0
+state senate,bul,bul_Cyrl,щатски сенат,State Senate,1.0,0.8669712543487549,high,0,0
+state constitution,bul,bul_Cyrl,конституция на държавата,Constitution of the State,0.5581395348837209,0.8798606991767883,high,0,0
+state bureaucracy,bul,bul_Cyrl,държавна бюрокрация,State bureaucracy,1.0,0.877372145652771,high,0,0
+state meritocracy,bul,bul_Cyrl,държавна меритократия,State meritocracy,1.0,0.8813361525535583,high,0,0
+state oligarchy,bul,bul_Cyrl,държавна олигархия,State oligarchy,1.0,0.8725835680961609,high,0,0
+state aristocracy,bul,bul_Cyrl,държавна аристокрация,State aristocracy,1.0,0.8634416460990906,high,0,0
+identity,bul,bul_Cyrl,Идентичност,Identification of the person,0.3888888888888889,0.8607261180877686,high,1,0
+ethnicity,bul,bul_Cyrl,етническа принадлежност,ethnicity,1.0,0.8757634162902832,high,0,0
+diaspora,bul,bul_Cyrl,Диаспора,The Diaspora,0.8,0.8727011680603027,high,0,0
+migration,bul,bul_Cyrl,миграция,migration,1.0,0.8792074918746948,high,0,0
+immigrant,bul,bul_Cyrl,имигрант,immigrant,1.0,0.8750525712966919,high,0,0
+refugee,bul,bul_Cyrl,бежанци,Refugees,0.9333333333333333,0.8646318912506104,high,0,0
+minority,bul,bul_Cyrl,малцинство,minority,1.0,0.8575903177261353,high,0,0
+majority,bul,bul_Cyrl,мнозинство,the majority,0.8,0.8410624265670776,high,0,0
+assimilation,bul,bul_Cyrl,асимилиране,to assimilate,0.72,0.863800585269928,high,0,0
+integration,bul,bul_Cyrl,Интеграция,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.10596026490066225,0.8622825741767883,high,1,0
+segregation,bul,bul_Cyrl,сегрегация,segregation,1.0,0.8646218776702881,high,0,0
+pluralism,bul,bul_Cyrl,плюрализъм,Pluralism,1.0,0.8820003867149353,high,0,0
+multiculturalism,bul,bul_Cyrl,мултикултурализъм,Multiculturalism,1.0,0.8902522325515747,high,0,0
+indigenous,bul,bul_Cyrl,местно население,local population,0.15384615384615385,0.7726702690124512,medium,1,0
+native,bul,bul_Cyrl,местни,local,0.18181818181818182,0.8244109153747559,high,1,0
+foreign,bul,bul_Cyrl,чуждестранни,Foreign nationals,0.5833333333333334,0.7974178791046143,medium,0,0
+local,bul,bul_Cyrl,местно,locally,0.8333333333333334,0.808766782283783,high,0,0
+global,bul,bul_Cyrl,в световен мащаб,globally,0.8571428571428571,0.7225350141525269,medium,0,0
+community,bul,bul_Cyrl,общност,Community,1.0,0.8413740396499634,high,0,0
+belonging,bul,bul_Cyrl,принадлежност,of which:,0.2222222222222222,0.8310324549674988,high,1,0
+language,bul,bul_Cyrl,език,language,1.0,0.8601148724555969,high,0,0
+dialect,bul,bul_Cyrl,Диалект,Dialogues,0.625,0.8473873138427734,high,0,0
+heritage,bul,bul_Cyrl,наследство,Inheritance,0.7368421052631579,0.8425543308258057,high,1,1
+xenophobia,bul,bul_Cyrl,ксенофобия,Xenophobia,1.0,0.8790404200553894,high,0,0
+stereotype,bul,bul_Cyrl,стереотип,Stereotypes,0.9523809523809523,0.8632782697677612,high,0,0
+prejudice,bul,bul_Cyrl,предразсъдъци,Prejudice,1.0,0.8705106973648071,high,0,0
+citizenship,bul,bul_Cyrl,гражданство,Citizenship,1.0,0.8706501722335815,high,0,0
+acculturation,bul,bul_Cyrl,аккултуриране,cultivation,0.75,0.8705336451530457,high,0,0
+hybridity,bul,bul_Cyrl,хибридност,Hybridity,1.0,0.8757705092430115,high,0,0
+homeland,bul,bul_Cyrl,Родина,Motherland,0.6666666666666666,0.8704537153244019,high,0,0
+exile,bul,bul_Cyrl,изгнание,Exile,1.0,0.8525424599647522,high,0,0
+settler,bul,bul_Cyrl,селищ,Rural area,0.11764705882352941,0.5158366560935974,low,1,0
+cosmopolitan,bul,bul_Cyrl,космополитен,Cosmopolitan,1.0,0.8543647527694702,high,0,0
+transnational,bul,bul_Cyrl,транснационални,transnational,1.0,0.7902141213417053,medium,0,0
+identity politics,bul,bul_Cyrl,Политика на идентичността,Identity policy,0.875,0.8698221445083618,high,0,0
+mother tongue,bul,bul_Cyrl,език на майката,mother tongue,1.0,0.8434595465660095,high,0,0
+second language,bul,bul_Cyrl,втори език,Second language,1.0,0.8649048805236816,high,0,0
+local identity,bul,bul_Cyrl,местна идентичност,local identity,1.0,0.8857855796813965,high,0,0
+local ethnicity,bul,bul_Cyrl,местна етническа принадлежност,Local ethnicity,1.0,0.8720953464508057,high,0,0
+local diaspora,bul,bul_Cyrl,местна диаспора,the local diaspora,0.875,0.8722267150878906,high,0,0
+local migration,bul,bul_Cyrl,местна миграция,local migration,1.0,0.8714447617530823,high,0,0
+local immigrant,bul,bul_Cyrl,местни имигранти,Indigenous immigrants,0.6111111111111112,0.8665341138839722,high,0,0
+local refugee,bul,bul_Cyrl,местни бежанци,Local refugees,0.9629629629629629,0.8672413229942322,high,0,0
+local minority,bul,bul_Cyrl,местно малцинство,Local minority,1.0,0.8576802611351013,high,0,0
+local majority,bul,bul_Cyrl,местно мнозинство,Local majority,1.0,0.8621187806129456,high,0,0
+local assimilation,bul,bul_Cyrl,местно асимилиране,local assimilation,1.0,0.8628943562507629,high,0,0
+local integration,bul,bul_Cyrl,местна интеграция,local integration,1.0,0.8831332325935364,high,0,0
+local segregation,bul,bul_Cyrl,местна сегрегация,local segregation,1.0,0.8782652020454407,high,0,0
+local pluralism,bul,bul_Cyrl,локален плурализъм,local pluralism,1.0,0.8854724764823914,high,0,0
+local multiculturalism,bul,bul_Cyrl,местен мултикултурализъм,Local multiculturalism,1.0,0.8856173753738403,high,0,0
+local indigenous,bul,bul_Cyrl,местни местни жители,local local inhabitants,0.5641025641025641,0.7516595125198364,medium,0,0
+local native,bul,bul_Cyrl,местна родина,native country,0.46153846153846156,0.6705732345581055,medium,1,1
+local foreign,bul,bul_Cyrl,местни чуждестранни,Local foreigners,0.896551724137931,0.7602250576019287,medium,0,0
+local local,bul,bul_Cyrl,местно местно,locally locally,0.8461538461538461,0.5907928943634033,low,1,0
+local global,bul,bul_Cyrl,местно глобално,locally globally,0.8571428571428571,0.8390069603919983,high,0,0
+local community,bul,bul_Cyrl,местна общност,local community,1.0,0.8833965063095093,high,0,0
+local belonging,bul,bul_Cyrl,местно принадлежност,Locally owned,0.5,0.6813889741897583,medium,1,0
+local language,bul,bul_Cyrl,местен език,local language,1.0,0.8578299880027771,high,1,1
+local dialect,bul,bul_Cyrl,местен диалект,local dialect,1.0,0.8608673810958862,high,0,0
+local heritage,bul,bul_Cyrl,местно наследство,local heritage,1.0,0.8654565811157227,high,0,0
+local xenophobia,bul,bul_Cyrl,местна ксенофобия,local xenophobia,1.0,0.8799653053283691,high,0,0
+local stereotype,bul,bul_Cyrl,местен стереотип,Local stereotype,1.0,0.868992805480957,high,0,0
+local prejudice,bul,bul_Cyrl,местни предразсъдъци,local prejudices,0.967741935483871,0.8836639523506165,high,0,0
+local solidarity,bul,bul_Cyrl,местна солидарност,local solidarity,1.0,0.8787724375724792,high,0,0
+local citizenship,bul,bul_Cyrl,местно гражданство,local citizenship,1.0,0.8713781833648682,high,0,0
+local acculturation,bul,bul_Cyrl,местна аккультурация,local farming,0.625,0.8749115467071533,high,0,0
+local hybridity,bul,bul_Cyrl,местна хибридност,local hybridity,1.0,0.8727966547012329,high,0,0
+local homeland,bul,bul_Cyrl,местна родина,native country,0.14285714285714285,0.827885627746582,high,1,1
+local exile,bul,bul_Cyrl,местно изгнание,Local exile,1.0,0.8412382006645203,high,0,0
+local settler,bul,bul_Cyrl,местни заселници,local settlers,0.9629629629629629,0.8582075238227844,high,0,0
+local cosmopolitan,bul,bul_Cyrl,местно космополитен,Local cosmopolitan,1.0,0.7329341173171997,medium,0,0
+local transnational,bul,bul_Cyrl,Местни транснационални,Local transnational,1.0,0.7700641751289368,medium,0,0
+local identity politics,bul,bul_Cyrl,Политика на местната идентичност,Local identity policy,0.9090909090909091,0.8723559975624084,high,0,0
+local mother tongue,bul,bul_Cyrl,местен език,local language,0.6060606060606061,0.8097270727157593,high,1,1
+local second language,bul,bul_Cyrl,местен втори език,native second language,0.7906976744186046,0.8542747497558594,high,0,0
+global identity,bul,bul_Cyrl,глобална идентичност,global identity,1.0,0.8908081650733948,high,0,0
+global ethnicity,bul,bul_Cyrl,глобална етническа принадлежност,Global ethnicity,1.0,0.8665909171104431,high,0,0
+global diaspora,bul,bul_Cyrl,глобална диаспора,the global diaspora,0.8823529411764706,0.8721265196800232,high,0,0
+global migration,bul,bul_Cyrl,глобална миграция,Global migration,1.0,0.8859699964523315,high,0,0
+global immigrant,bul,bul_Cyrl,глобален имигрант,Global immigrant,1.0,0.8788194060325623,high,0,0
+global refugee,bul,bul_Cyrl,световни бежанци,Worldwide refugees,0.5625,0.8704429864883423,high,0,0
+global minority,bul,bul_Cyrl,глобално малцинство,a global minority,0.9375,0.8641873598098755,high,0,0
+global majority,bul,bul_Cyrl,глобално мнозинство,the global majority,0.8823529411764706,0.8694862127304077,high,0,0
+global assimilation,bul,bul_Cyrl,глобално асимилиране,Global assimilation,1.0,0.8782314658164978,high,0,0
+global integration,bul,bul_Cyrl,глобална интеграция,The Commission shall adopt delegated acts in accordance with the opinion of the European Parliament and of the Council.,0.16058394160583941,0.8837104439735413,high,1,0
+global segregation,bul,bul_Cyrl,глобална сегрегация,global segregation,1.0,0.8810743093490601,high,0,0
+global pluralism,bul,bul_Cyrl,глобален плурализъм,Global pluralism,1.0,0.8824002742767334,high,0,0
+global multiculturalism,bul,bul_Cyrl,глобален мултикултурализъм,Global multiculturalism,1.0,0.8765013217926025,high,0,0
+global indigenous,bul,bul_Cyrl,глобални местни жители,global indigenous peoples,0.8095238095238095,0.8424645662307739,high,0,0
+global native,bul,bul_Cyrl,Глобална родина,A global homeland,0.5333333333333333,0.7392793297767639,medium,1,0
+global foreign,bul,bul_Cyrl,глобални чуждестранни,Global foreign,1.0,0.6225592494010925,medium,0,0
+global local,bul,bul_Cyrl,глобално местно,globally locally,0.8571428571428571,0.8237265944480896,high,0,0
+global global,bul,bul_Cyrl,глобално,globally,0.6666666666666666,0.48255035281181335,low,1,0
+global community,bul,bul_Cyrl,глобална общност,the global community,0.8888888888888888,0.8821166157722473,high,0,0
+global belonging,bul,bul_Cyrl,глобално принадлежност,Global belonging,1.0,0.7054312229156494,medium,0,0
+global language,bul,bul_Cyrl,глобален език,a global language,0.9375,0.8826065063476562,high,0,0
+global dialect,bul,bul_Cyrl,глобален диалект,a global dialect,0.9333333333333333,0.8689643144607544,high,0,0
+global heritage,bul,bul_Cyrl,световно наследство,World heritage,0.6896551724137931,0.8778215646743774,high,0,0
+global xenophobia,bul,bul_Cyrl,глобална ксенофобия,Global xenophobia,1.0,0.8905282020568848,high,0,0
+greeting,bul,bul_Cyrl,Поздравление,Congratulations to you.,0.3225806451612903,0.8392792344093323,high,1,0
+handshake,bul,bul_Cyrl,ръкостискане,Handshake,1.0,0.8587801456451416,high,0,0
+bow,bul,bul_Cyrl,наклоняване,inclination,0.14285714285714285,0.6503245830535889,medium,1,0
+hug,bul,bul_Cyrl,прегръдка,A hug,0.75,0.8568851351737976,high,0,0
+kiss,bul,bul_Cyrl,Целувка.,It's a kiss.,0.5,0.849950909614563,high,1,0
+gift giving,bul,bul_Cyrl,Даване на подаръци,Giving gifts,0.5217391304347826,0.8776267766952515,high,1,0
+hosting,bul,bul_Cyrl,хостинг,hosting,1.0,0.838639497756958,high,0,0
+shared meal,bul,bul_Cyrl,споделено хранене,shared nutrition,0.5185185185185185,0.8658351898193359,high,1,0
+tea time,bul,bul_Cyrl,Часът на чая,Tea time,1.0,0.8657172322273254,high,0,0
+funeral,bul,bul_Cyrl,погребение,Funeral,1.0,0.8439283967018127,high,1,1
+mourning,bul,bul_Cyrl,скръб,Grief,0.3076923076923077,0.839962899684906,high,1,0
+burial,bul,bul_Cyrl,погребение,Funeral,0.6153846153846154,0.8602691292762756,high,1,1
+cremation,bul,bul_Cyrl,кремация,Incineration,0.6666666666666666,0.8650545477867126,high,0,0
+birth,bul,bul_Cyrl,раждането,the birth,0.7142857142857143,0.8592205047607422,high,0,0
+naming ceremony,bul,bul_Cyrl,Церемония за определяне на имената,The naming ceremony,0.8823529411764706,0.7012810707092285,medium,0,0
+coming of age,bul,bul_Cyrl,Постигане на възраст,Coming of age,1.0,0.5992092490196228,low,1,0
+rite of passage,bul,bul_Cyrl,ритуал на преминаване,Ritual of passage,0.875,0.8335942625999451,high,0,0
+ceremony,bul,bul_Cyrl,церемония,Ceremony,1.0,0.8447768688201904,high,0,0
+weekday,bul,bul_Cyrl,ден на седмицата,Day of the week,0.36363636363636365,0.8308748006820679,high,1,0
+weekend,bul,bul_Cyrl,уикенд,The weekend.,0.7368421052631579,0.8432484865188599,high,0,0
+workday,bul,bul_Cyrl,работен ден,working day,0.7777777777777778,0.851922869682312,high,0,0
+rest day,bul,bul_Cyrl,ден на почивка,day of rest,0.42105263157894735,0.8603992462158203,high,1,0
+queue,bul,bul_Cyrl,опаковка,Packaging,0.0,0.3991664946079254,low,1,0
+punctuality,bul,bul_Cyrl,Пунктуалност,Punctuality,1.0,0.870030403137207,high,0,0
+lateness,bul,bul_Cyrl,закъснение,Delay,0.3076923076923077,0.8446944952011108,high,1,0
+privacy,bul,bul_Cyrl,личен живот,personal life,0.3,0.7984826564788818,medium,1,0
+public space,bul,bul_Cyrl,обществено пространство,public space,1.0,0.8673791885375977,high,0,0
+neighbor,bul,bul_Cyrl,съсед,Neighbor,1.0,0.815249502658844,high,0,0
+household visit,bul,bul_Cyrl,посещение на домакинството,visiting the household,0.4864864864864865,0.8611063957214355,high,1,0
+guest,bul,bul_Cyrl,гост,guest,1.0,0.754773736000061,medium,0,0
+host,bul,bul_Cyrl,домакин,host,1.0,0.8517076969146729,high,0,0
+table manners,bul,bul_Cyrl,Мъжества за масата,Men at the table,0.3448275862068966,0.46757930517196655,low,1,0
+home cooking,bul,bul_Cyrl,домашно готвене,Homemade cooking,0.8571428571428571,0.86619633436203,high,0,0
+festival meal,bul,bul_Cyrl,Вечеря на фестивала,Dinner at the festival,0.45714285714285713,0.8613172769546509,high,1,0
+fast day,bul,bul_Cyrl,бърз ден.,It's a fast day.,0.6666666666666666,0.7247629761695862,medium,0,0
+memorial day,bul,bul_Cyrl,Ден на паметта,Day of Remembrance,0.3333333333333333,0.8690970540046692,high,1,0
+ancestor day,bul,bul_Cyrl,ден на предците,The Day of the Forefathers,0.2631578947368421,0.8587408065795898,high,1,0
+seasonal ritual,bul,bul_Cyrl,сезонен ритуал,seasonal ritual,1.0,0.8633124232292175,high,0,0
+daily greeting,bul,bul_Cyrl,ежедневни поздрави,Every day greetings.,0.7058823529411765,0.8495522141456604,high,0,0
+daily handshake,bul,bul_Cyrl,ежедневно ръкостискане,Handshake every day,0.5294117647058824,0.8516737818717957,high,1,0
+daily bow,bul,bul_Cyrl,ежедневна кланя,daily slaughter,0.5,0.7781327366828918,medium,1,0
+daily hug,bul,bul_Cyrl,ежедневна прегръдка,daily embrace,0.5454545454545454,0.8444565534591675,high,1,0
+daily kiss,bul,bul_Cyrl,ежедневен целувка,A daily kiss,0.9090909090909091,0.6499159336090088,medium,0,0
+daily gift giving,bul,bul_Cyrl,Даване на подаръци всеки ден,Giving gifts every day,0.3076923076923077,0.8731249570846558,high,1,0
+daily hosting,bul,bul_Cyrl,дневен хостинг,day-to-day hosting,0.7096774193548387,0.8076960444450378,high,0,0
+daily hospitality,bul,bul_Cyrl,ежедневна гостоприемност,daily hospitality,1.0,0.8449993133544922,high,0,0
+daily shared meal,bul,bul_Cyrl,дневен общ обяд,daily general lunch,0.5,0.851883053779602,high,1,0
+daily banquet,bul,bul_Cyrl,ежедневен банкет,a daily banquet,0.9285714285714286,0.8593559265136719,high,0,0
+daily tea time,bul,bul_Cyrl,дневен час за чай,daytime tea time,0.8,0.8521502614021301,high,0,0
+daily funeral,bul,bul_Cyrl,ежедневни погребения,daily funerals,0.9629629629629629,0.8360012173652649,high,0,0
+daily mourning,bul,bul_Cyrl,ежедневен траур,daily mourning,1.0,0.8528175354003906,high,0,0
+daily burial,bul,bul_Cyrl,ежедневно погребение,daily funeral,0.8,0.8142508268356323,high,0,0
+daily cremation,bul,bul_Cyrl,ежедневна кремация,daily cremation,1.0,0.8618335723876953,high,0,0
+daily birth,bul,bul_Cyrl,ежедневни раждания,daily births,0.9565217391304348,0.7404219508171082,medium,0,0
+daily naming ceremony,bul,bul_Cyrl,ежедневна церемония за присвояване на имената,daily naming ceremony,1.0,0.8222364187240601,high,0,0
+daily coming of age,bul,bul_Cyrl,ежедневна възрастна възраст,daily adult age,0.5882352941176471,0.4319849908351898,low,1,0
+daily rite of passage,bul,bul_Cyrl,ежедневен ритуал на преминаване,daily rite of passage,1.0,0.8100273609161377,high,0,0
+daily ceremony,bul,bul_Cyrl,ежедневна церемония,a daily ceremony,0.9333333333333333,0.8561087846755981,high,0,0
+daily weekday,bul,bul_Cyrl,дневен работен ден,day of work,0.25,0.7286254167556763,medium,1,1
+daily weekend,bul,bul_Cyrl,всеки ден през уикенда,Every day on the weekend.,0.5789473684210527,0.771743893623352,medium,0,0
+daily workday,bul,bul_Cyrl,дневен работен ден,day of work,0.6666666666666666,0.8393943309783936,high,1,1
+daily rest day,bul,bul_Cyrl,дневен ден на почивка,day of rest,0.64,0.8537889719009399,high,0,0
+daily queue,bul,bul_Cyrl,дневна опашка,daily tail,0.5714285714285714,0.8279644250869751,high,0,0
+daily punctuality,bul,bul_Cyrl,ежедневна точност,daily accuracy,0.5806451612903226,0.8351615071296692,high,0,0
+daily lateness,bul,bul_Cyrl,ежедневна закъснение,daily delay,0.64,0.7447691559791565,medium,0,0
+daily privacy,bul,bul_Cyrl,ежедневна неприкосновеност на личния живот,daily integrity of personal life,0.4,0.8354814648628235,high,1,0
+daily public space,bul,bul_Cyrl,ежедневно обществено пространство,daily public space,1.0,0.7570765018463135,medium,0,0
+daily neighbor,bul,bul_Cyrl,всекидневен съсед,Everyday neighbour,0.75,0.7798547744750977,medium,0,0
+daily household visit,bul,bul_Cyrl,ежедневни посещения на домакинствата,daily visits to households,0.6808510638297872,0.8660029768943787,high,0,0
+daily guest,bul,bul_Cyrl,ежедневен гост,a daily guest,0.9166666666666666,0.835418701171875,high,0,0
+daily host,bul,bul_Cyrl,ежедневен домакин,daily host,1.0,0.7949392795562744,medium,0,0
+daily table manners,bul,bul_Cyrl,ежедневни манери за трапезария,daily manners for the dining room,0.5,0.5396077036857605,low,1,0
+daily home cooking,bul,bul_Cyrl,ежедневно домашно готвене,daily home cooking,1.0,0.8466873168945312,high,0,0
+daily festival meal,bul,bul_Cyrl,ежедневен празненски обяд,a daily holiday lunch,0.45,0.848749041557312,high,1,0
+daily fast day,bul,bul_Cyrl,ежедневен пост ден,daily fasting day,0.9032258064516129,0.8166027069091797,high,0,0
+daily memorial day,bul,bul_Cyrl,ежедневен ден на паметта,Day of Remembrance,0.5,0.8355626463890076,high,1,0
+daily ancestor day,bul,bul_Cyrl,дневен ден на предците,The Day of the Forefathers,0.22727272727272727,0.6522077322006226,medium,1,0
+daily seasonal ritual,bul,bul_Cyrl,ежедневен сезонен ритуал,daily seasonal ritual,1.0,0.8624487519264221,high,0,0
+household greeting,bul,bul_Cyrl,Поздравление от домакинство,Congratulations from the household,0.34615384615384615,0.8261891603469849,high,1,0
+household handshake,bul,bul_Cyrl,домакински ръкостискане,household handshake,1.0,0.7735872864723206,medium,0,0
+household bow,bul,bul_Cyrl,домакинска дупка,Household holes,0.7857142857142857,0.3719322681427002,low,1,0
+household hug,bul,bul_Cyrl,домакинска прегръдка,household embrace,0.6666666666666666,0.8548792600631714,high,0,0
+household kiss,bul,bul_Cyrl,домакински целувка,A domestic kiss,0.4827586206896552,0.6436309814453125,medium,1,0
+household gift giving,bul,bul_Cyrl,Подаръци за домакинство,Gifts for the Household,0.4090909090909091,0.8428270220756531,high,1,0
+household hosting,bul,bul_Cyrl,домакинство,Household,0.6923076923076923,0.7098256945610046,medium,1,1
+household hospitality,bul,bul_Cyrl,домакински гостоприемство,household hospitality,1.0,0.70432448387146,medium,0,0
+household shared meal,bul,bul_Cyrl,домакински общи ястия,household dishes,0.7027027027027027,0.7931673526763916,medium,0,0
+household banquet,bul,bul_Cyrl,домакински банкет,Family banquet,0.5806451612903226,0.8606624603271484,high,0,0
+household tea time,bul,bul_Cyrl,време за домакински чай,Time for homemade tea,0.41025641025641024,0.8630479574203491,high,1,0
+household funeral,bul,bul_Cyrl,домакински погребение,family funeral,0.5806451612903226,0.5670943856239319,low,1,0
+household mourning,bul,bul_Cyrl,домакински траур,Domestic mourning,0.6285714285714286,0.8636089563369751,high,0,0
+household burial,bul,bul_Cyrl,погребение в домакинството,Funeral in the household,0.45,0.8414086103439331,high,1,0
+household cremation,bul,bul_Cyrl,кремация на домакинствата,cremation of households,0.42857142857142855,0.6096550822257996,medium,1,0
+household birth,bul,bul_Cyrl,рождение в домакинство,birth in a household,0.5142857142857142,0.8427774906158447,high,1,0
+household naming ceremony,bul,bul_Cyrl,церемония за наименование на домакинството,ceremony for the naming of the household,0.27692307692307694,0.6556854248046875,medium,1,0
+household coming of age,bul,bul_Cyrl,Възраст на домакинството,Age of the household,0.4186046511627907,0.4757806658744812,low,1,0
+household rite of passage,bul,bul_Cyrl,домакински ритуал за преминаване,household rite of passage,1.0,0.6916684508323669,medium,0,0
+household ceremony,bul,bul_Cyrl,церемония в домакинството,ceremony in the household,0.4186046511627907,0.8438318371772766,high,1,0
+public,bul,bul_Cyrl,обществеността,the public,0.75,0.8318184018135071,high,0,0
+fast,bul,bul_Cyrl,бързо,Hurry up.,0.0,0.7967907190322876,medium,1,0
+grand,bul,bul_Cyrl,Гранд,The Grand,0.7142857142857143,0.73325514793396,medium,0,0
+gift,bul,bul_Cyrl,Подарък,It's a gift.,0.5,0.8664419651031494,high,1,0
+meal,bul,bul_Cyrl,храна,food,0.0,0.8410942554473877,high,1,0
+custom,bul,bul_Cyrl,по обичая,as is customary.,0.5454545454545454,0.7750009298324585,medium,1,0

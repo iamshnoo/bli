@@ -1,0 +1,8 @@
+{
+  "en_50m": "/scratch/amukher6/bli/models/hf/en_50m",
+  "en_100m": "/scratch/amukher6/bli/models/hf/en_100m",
+  "en_zh_a": "/scratch/amukher6/bli/models/hf/en_zh_a",
+  "en_zh_b": "/scratch/amukher6/bli/models/hf/en_zh_b",
+  "en_fr_a": "/scratch/amukher6/bli/models/hf/en_fr_a",
+  "en_fr_b": "/scratch/amukher6/bli/models/hf/en_fr_b"
+}

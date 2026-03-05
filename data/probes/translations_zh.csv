@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,zh,zho_Hans,个人主义,Individualism,1.0,0.8565899133682251,high,0,0
+collectivism,zh,zho_Hans,集体主义,Collectivism,1.0,0.8540671467781067,high,0,0
+hierarchy,zh,zho_Hans,层次,Levels,0.13333333333333333,0.7999738454818726,medium,1,0
+equality,zh,zho_Hans,平等,Equality,1.0,0.8403816223144531,high,0,0
+authority,zh,zho_Hans,权威,Authorities,0.8,0.8119621276855469,high,0,0
+autonomy,zh,zho_Hans,自主权,Self-determination,0.3076923076923077,0.8417540192604065,high,1,0
+obedience,zh,zho_Hans,服从,Obedience,1.0,0.7797654867172241,medium,0,0
+duty,zh,zho_Hans,关税,Tariffs,0.18181818181818182,0.6800925731658936,medium,1,0
+freedom,zh,zho_Hans,自由,Freedom,1.0,0.844698429107666,high,0,0
+honor,zh,zho_Hans,荣誉,The Honor,0.7142857142857143,0.7847858667373657,medium,0,0
+shame,zh,zho_Hans,羞耻,Shame and shame,0.5,0.8313394784927368,high,1,0
+virtue,zh,zho_Hans,良性,Goodness,0.14285714285714285,0.6831320524215698,medium,1,0
+vice,zh,zho_Hans,恶性,Violence,0.6666666666666666,0.6972647905349731,medium,0,0
+respect,zh,zho_Hans,尊重,Respect,1.0,0.8286209106445312,high,1,1
+modesty,zh,zho_Hans,谦逊,Humility,0.4,0.825597882270813,high,1,0
+purity,zh,zho_Hans,纯度,Purity,1.0,0.8362053036689758,high,0,0
+pollution,zh,zho_Hans,污染,Pollution,1.0,0.8332614898681641,high,0,0
+face,zh,zho_Hans,面部,The face,0.6666666666666666,0.7889808416366577,medium,0,0
+reputation,zh,zho_Hans,声誉,Reputation,1.0,0.8200740218162537,high,0,0
+hospitality,zh,zho_Hans,接待人,Welcome to the world,0.1935483870967742,0.7113221883773804,medium,1,0
+charity,zh,zho_Hans,慈善事业,Philanthropy,0.42105263157894735,0.8121621012687683,high,1,0
+cooperation,zh,zho_Hans,合作,Cooperation,1.0,0.8040478229522705,high,0,0
+competition,zh,zho_Hans,竞争,Competition,1.0,0.8302016258239746,high,0,0
+fairness,zh,zho_Hans,公平性,Fairness,1.0,0.8461943864822388,high,0,0
+justice,zh,zho_Hans,正义,Justice,1.0,0.8053126335144043,high,0,0
+taboo,zh,zho_Hans,禁忌,The Taboo,0.7142857142857143,0.8403446674346924,high,0,0
+tradition,zh,zho_Hans,传统,Tradition,1.0,0.8477656245231628,high,0,0
+modernity,zh,zho_Hans,现代化,Modernization,0.7272727272727273,0.8269057273864746,high,0,0
+sacred,zh,zho_Hans,圣洁,It is sacred.,0.631578947368421,0.805614709854126,high,0,0
+secular,zh,zho_Hans,世俗主义,Secularism,0.8235294117647058,0.7560677528381348,medium,0,0
+conformity,zh,zho_Hans,符合性,Compatibility,0.5217391304347826,0.8253844976425171,high,1,0
+dissent,zh,zho_Hans,异议,Opposition,0.23529411764705882,0.7891600131988525,medium,1,0
+restraint,zh,zho_Hans,限制性,Restrictions,0.6666666666666666,0.7605554461479187,medium,0,0
+indulgence,zh,zho_Hans,宽容,Tolerance,0.5263157894736842,0.843472957611084,high,1,0
+solidarity,zh,zho_Hans,团结,Unity,0.4,0.8468323945999146,high,1,0
+merit,zh,zho_Hans,功劳,The Merit,0.7142857142857143,0.8099318146705627,high,0,0
+trust,zh,zho_Hans,信任,Confidence,0.0,0.8515223860740662,high,1,0
+loyalty,zh,zho_Hans,忠诚,Loyalty,1.0,0.8521912097930908,high,0,0
+integrity,zh,zho_Hans,诚信,How to Be Honest,0.16,0.8419840335845947,high,1,0
+discretion,zh,zho_Hans,裁量权,Discrimination,0.75,0.7903735637664795,medium,0,0
+humility,zh,zho_Hans,谦卑,Humility,1.0,0.8279362320899963,high,0,0
+discipline,zh,zho_Hans,纪律,Discipline,1.0,0.8432558178901672,high,0,0
+self control,zh,zho_Hans,自主控制,Self-control,0.9166666666666666,0.8438087105751038,high,0,0
+deference,zh,zho_Hans,尊重,Respect,0.375,0.7936931252479553,medium,1,1
+civic individualism,zh,zho_Hans,公民个人主义,Citizen individualism,0.85,0.8578702211380005,high,0,0
+civic collectivism,zh,zho_Hans,公民集体主义,Citizen collectivism,0.8421052631578947,0.8529699444770813,high,0,0
+civic hierarchy,zh,zho_Hans,公民层次,Citizenship level,0.375,0.7016210556030273,medium,1,0
+civic equality,zh,zho_Hans,公民平等,Civil equality,0.9285714285714286,0.8629943132400513,high,0,0
+civic authority,zh,zho_Hans,公民权威,Citizen authority,0.8125,0.8420423865318298,high,0,0
+civic autonomy,zh,zho_Hans,公民自治,Citizen autonomy,0.8,0.8479244112968445,high,0,0
+civic obedience,zh,zho_Hans,公民的服从,Obedience of the Citizen,0.46153846153846156,0.8182717561721802,high,1,0
+civic duty,zh,zho_Hans,公民义务,Responsibilities of citizens,0.15789473684210525,0.8591764569282532,high,1,0
+civic freedom,zh,zho_Hans,公民自由,Citizens' freedoms,0.7096774193548387,0.870340883731842,high,0,0
+civic honor,zh,zho_Hans,公民荣誉,Citizenship honours,0.6,0.8286869525909424,high,0,0
+civic shame,zh,zho_Hans,公民耻辱,Civil disgrace,0.48,0.8210845589637756,high,1,0
+civic virtue,zh,zho_Hans,公民美德,Citizen virtue,0.7692307692307693,0.8442851901054382,high,0,0
+civic vice,zh,zho_Hans,公民罪恶,Civic Crimes,0.7272727272727273,0.7901328802108765,medium,0,0
+civic respect,zh,zho_Hans,公民尊重,Respect for Citizens,0.42424242424242425,0.8532403111457825,high,1,1
+civic modesty,zh,zho_Hans,公民谦逊,Citizen humility,0.4827586206896552,0.7946089506149292,medium,1,0
+civic purity,zh,zho_Hans,公民的纯洁,The Purity of Citizens,0.4117647058823529,0.8028796315193176,high,1,0
+civic pollution,zh,zho_Hans,公民污染,Civil pollution,0.9333333333333333,0.8224837779998779,high,0,0
+civic face,zh,zho_Hans,公民的面孔,Faces of Citizens,0.2962962962962963,0.7417337894439697,medium,1,0
+civic reputation,zh,zho_Hans,公民声誉,Citizen's reputation,0.7777777777777778,0.8333902955055237,high,0,0
+civic hospitality,zh,zho_Hans,公民的欢迎,Greetings from Citizens,0.2,0.7531774044036865,medium,1,0
+civic charity,zh,zho_Hans,公民慈善事业,Citizen charity,0.7857142857142857,0.780281126499176,medium,0,0
+civic cooperation,zh,zho_Hans,公民合作,Citizenship cooperation,0.75,0.8513355255126953,high,0,0
+civic competition,zh,zho_Hans,公民竞争,Citizenship competition,0.75,0.8290148973464966,high,0,0
+civic fairness,zh,zho_Hans,公民公平,Citizens' equity,0.3333333333333333,0.8506850004196167,high,1,0
+civic justice,zh,zho_Hans,公民正义,Civil Justice,0.9230769230769231,0.8486261963844299,high,0,0
+civic taboo,zh,zho_Hans,公民禁忌,Citizenship Taboo,0.6428571428571429,0.8517194390296936,high,0,0
+civic tradition,zh,zho_Hans,公民传统,Citizen traditions,0.7878787878787878,0.8528566360473633,high,0,0
+civic modernity,zh,zho_Hans,公民现代化,Citizenship modernization,0.6,0.8330557346343994,high,0,0
+civic sacred,zh,zho_Hans,公民圣洁,Citizen Sanctity,0.5,0.5832558274269104,low,1,0
+civic secular,zh,zho_Hans,公民世俗,Civil Secularism,0.8275862068965517,0.6250373125076294,medium,0,0
+civic conformity,zh,zho_Hans,公民合规性,Citizenship compliance,0.3684210526315789,0.8100669384002686,high,1,0
+civic dissent,zh,zho_Hans,公民异议,Citizen objections,0.3870967741935484,0.8551449179649353,high,1,0
+civic restraint,zh,zho_Hans,公民的自制,Citizens' self-determination,0.37209302325581395,0.8410061597824097,high,1,0
+civic indulgence,zh,zho_Hans,公民宽容,Citizen tolerance,0.5454545454545454,0.8225775361061096,high,1,0
+civic solidarity,zh,zho_Hans,公民团结,Citizen unity,0.4827586206896552,0.8598777055740356,high,1,0
+civic merit,zh,zho_Hans,公民资格,Citizenship,0.45454545454545453,0.8282418251037598,high,1,0
+civic trust,zh,zho_Hans,公民信任,Citizens' trust,0.6923076923076923,0.8614668250083923,high,0,0
+civic loyalty,zh,zho_Hans,公民忠诚,Citizen loyalty,0.7857142857142857,0.8605786561965942,high,0,0
+civic integrity,zh,zho_Hans,公民的完整性,Integrity of Citizens,0.5,0.7386094927787781,medium,1,0
+civic discretion,zh,zho_Hans,公民的自由裁量,Citizens' free will,0.4,0.8266448974609375,high,1,0
+civic humility,zh,zho_Hans,公民的谦卑,Humble Citizenship,0.375,0.8423293232917786,high,1,0
+civic discipline,zh,zho_Hans,公民纪律,Civil Discipline,0.9375,0.8614456653594971,high,0,0
+civic self control,zh,zho_Hans,公民自我控制,Citizen self-control,0.7894736842105263,0.8356561064720154,high,0,0
+civic deference,zh,zho_Hans,公民尊重,Respect for Citizens,0.2857142857142857,0.7706559896469116,medium,1,1
+moral individualism,zh,zho_Hans,个性主义,Individualism,0.8125,0.5892928838729858,low,1,0
+moral collectivism,zh,zho_Hans,伦理集体主义,Ethical collectivism,0.7894736842105263,0.8505319952964783,high,0,0
+moral hierarchy,zh,zho_Hans,道德层次,Moral Levels,0.5185185185185185,0.8189731240272522,high,1,0
+moral equality,zh,zho_Hans,伦理平等,Ethical equality,0.7333333333333333,0.8539663553237915,high,0,0
+moral authority,zh,zho_Hans,道德权威,Moral authority,1.0,0.8425573110580444,high,0,0
+moral autonomy,zh,zho_Hans,道德自主性,Moral autonomy,1.0,0.8380460739135742,high,0,0
+moral obedience,zh,zho_Hans,道德顺服,Moral obedience,1.0,0.7772045135498047,medium,0,0
+moral duty,zh,zho_Hans,道德义务,Moral obligations,0.5185185185185185,0.8535571694374084,high,1,0
+moral freedom,zh,zho_Hans,道德自由,Moral freedom,1.0,0.8608287572860718,high,0,0
+moral honor,zh,zho_Hans,道德尊严,Moral Dignity,0.5833333333333334,0.8183301687240601,high,0,0
+moral shame,zh,zho_Hans,道德耻辱,Moral disgrace,0.72,0.8211559653282166,high,0,0
+moral virtue,zh,zho_Hans,道德美德,Moral virtue,1.0,0.8415254354476929,high,0,0
+family,zh,zho_Hans,家庭,Family,1.0,0.8410741090774536,high,1,1
+kinship,zh,zho_Hans,亲戚关系,Relative relations,0.24,0.8154881596565247,high,1,0
+mother,zh,zho_Hans,母亲,Mother,1.0,0.8073517084121704,high,1,1
+father,zh,zho_Hans,父亲,Father,1.0,0.8197393417358398,high,0,0
+parent,zh,zho_Hans,父母,Parents,0.9230769230769231,0.7992815971374512,medium,0,0
+child,zh,zho_Hans,儿童,Children,0.7692307692307693,0.8317044377326965,high,0,0
+daughter,zh,zho_Hans,女儿,My daughter.,0.8,0.8472869396209717,high,0,0
+son,zh,zho_Hans,儿子,My son,0.6666666666666666,0.8602752685546875,high,0,0
+uncle,zh,zho_Hans,叔叔,My uncle.,0.7142857142857143,0.8369669914245605,high,0,0
+aunt,zh,zho_Hans,,What is it?,0.26666666666666666,0.4679747521877289,low,1,1
+cousin,zh,zho_Hans,亲戚,Relatives,0.13333333333333333,0.83507239818573,high,1,0
+grandmother,zh,zho_Hans,祖母,My grandmother,0.88,0.8290172219276428,high,0,0
+grandfather,zh,zho_Hans,祖父,My grandfather,0.88,0.8307058811187744,high,0,0
+nephew,zh,zho_Hans,子,My son.,0.15384615384615385,0.7810772061347961,medium,1,1
+niece,zh,zho_Hans,孙女,My granddaughter,0.19047619047619047,0.8569554090499878,high,1,0
+ancestor,zh,zho_Hans,祖先,Ancestors,0.9411764705882353,0.829041600227356,high,0,0
+lineage,zh,zho_Hans,血统,Bloodline,0.5,0.818291187286377,high,1,0
+clan,zh,zho_Hans,族群,Ethnic groups,0.11764705882352941,0.7700762748718262,medium,1,0
+household,zh,zho_Hans,家庭,Family,0.13333333333333333,0.8226690292358398,high,1,1
+joint family,zh,zho_Hans,联合家庭,Unified Family,0.6153846153846154,0.755003035068512,medium,0,0
+nuclear family,zh,zho_Hans,核家族,Nuclear family,1.0,0.8524194359779358,high,0,0
+marriage,zh,zho_Hans,婚姻,Marriage,1.0,0.8397420644760132,high,0,0
+wedding,zh,zho_Hans,婚礼,Wedding,1.0,0.8207985162734985,high,0,0
+bride,zh,zho_Hans,新娘,The bride,0.7142857142857143,0.8279343843460083,high,0,0
+groom,zh,zho_Hans,新郎,The Bridegroom,0.5263157894736842,0.7903908491134644,medium,1,0
+engagement,zh,zho_Hans,参与,Participation,0.08695652173913043,0.7554823756217957,medium,1,0
+dowry,zh,zho_Hans,礼物,Gifts,0.0,0.764594316482544,medium,1,1
+bridewealth,zh,zho_Hans,新娘财富,The Bride's Wealth,0.7586206896551724,0.7230215072631836,medium,0,0
+inheritance,zh,zho_Hans,遗产,Legacy,0.35294117647058826,0.8036300539970398,high,1,1
+widow,zh,zho_Hans,寡妇,Widows,0.9090909090909091,0.839873731136322,high,1,1
+widower,zh,zho_Hans,寡妇,Widows,0.7692307692307693,0.8332788944244385,high,1,1
+courtship,zh,zho_Hans,爱情,What is love?,0.09090909090909091,0.8048873543739319,high,1,0
+matchmaker,zh,zho_Hans,结婚者,Married,0.35294117647058826,0.36605706810951233,low,1,0
+surname,zh,zho_Hans,姓名,Name of the person,0.32,0.8171536922454834,high,1,1
+patronymic,zh,zho_Hans,姓名,Name of the person,0.2857142857142857,0.5657912492752075,low,1,1
+matronymic,zh,zho_Hans,字母字母,Letters and Letters,0.20689655172413793,0.383761465549469,low,1,0
+firstborn,zh,zho_Hans,首生,Firstborn,1.0,0.8201715350151062,high,0,0
+heir,zh,zho_Hans,继承人,Heir to the throne,0.36363636363636365,0.8167739510536194,high,1,0
+filial piety,zh,zho_Hans,儿女的虔诚,The piety of their children,0.3076923076923077,0.7790293097496033,medium,1,0
+caregiving,zh,zho_Hans,护理,Care,0.5714285714285714,0.8206559419631958,high,0,0
+motherhood,zh,zho_Hans,母亲,Mother,0.75,0.7704700827598572,medium,1,1
+fatherhood,zh,zho_Hans,父亲权,Fatherhood,1.0,0.751244068145752,medium,0,0
+in laws,zh,zho_Hans,在法律中,In law,0.9230769230769231,0.6550662517547607,medium,0,0
+brother in law,zh,zho_Hans,岳父,Father-in-law,0.6666666666666666,0.8332345485687256,high,0,0
+sister in law,zh,zho_Hans,姐姐,My sister.,0.5217391304347826,0.7328891754150391,medium,1,0
+ancestral home,zh,zho_Hans,祖先的家,The House of the Ancestors,0.35,0.8329140543937683,high,1,0
+household labor,zh,zho_Hans,家庭劳动,Family work,0.3076923076923077,0.846892774105072,high,1,0
+extended family,zh,zho_Hans,扩大家庭,Enlarging the Family,0.5714285714285714,0.7642760276794434,medium,1,1
+extended kinship,zh,zho_Hans,广泛的亲戚关系,Extensive kinship relationships,0.5957446808510638,0.8392338752746582,high,0,0
+extended mother,zh,zho_Hans,延长母,Extended mother,1.0,0.39540696144104004,low,1,0
+extended father,zh,zho_Hans,长老父亲,The Elderly Father,0.6666666666666666,0.6924878358840942,medium,0,0
+extended parent,zh,zho_Hans,长父母,Grandparents,0.5925925925925926,0.6307808756828308,medium,0,0
+extended child,zh,zho_Hans,长期儿童,Long-term children,0.5,0.47702789306640625,low,1,0
+extended daughter,zh,zho_Hans,长女儿,The eldest daughter,0.7222222222222222,0.7414185404777527,medium,0,0
+extended son,zh,zho_Hans,延长的儿子,The Son of the Extended,0.45714285714285713,0.4310011863708496,low,1,0
+extended uncle,zh,zho_Hans,长老叔叔,The old man's uncle.,0.47058823529411764,0.6648812294006348,medium,1,0
+extended aunt,zh,zho_Hans,长老阿,The Elderly,0.3333333333333333,0.3478303551673889,low,1,0
+extended cousin,zh,zho_Hans,长表亲,My first cousin,0.5333333333333333,0.6197670698165894,medium,1,0
+extended grandmother,zh,zho_Hans,长大的祖母,Growing up grandmother,0.6190476190476191,0.5275029540061951,low,1,0
+extended grandfather,zh,zho_Hans,长长的祖父,Grandfather and great-grandfather,0.41509433962264153,0.4397164285182953,low,1,0
+extended nephew,zh,zho_Hans,延长的子,The extended child,0.6060606060606061,0.39295586943626404,low,1,0
+extended niece,zh,zho_Hans,长女,The eldest daughter,0.18181818181818182,0.7585545182228088,medium,1,0
+extended ancestor,zh,zho_Hans,延长的祖先,Extended ancestors,0.9714285714285714,0.49503466486930847,low,1,0
+extended lineage,zh,zho_Hans,延长的血统,Extended lineage,1.0,0.6154578924179077,medium,0,0
+extended clan,zh,zho_Hans,扩大族群,Expanded ethnic groups,0.45714285714285713,0.5170319080352783,low,1,0
+extended household,zh,zho_Hans,扩大家庭,Enlarging the Family,0.2631578947368421,0.7238878607749939,medium,1,1
+extended joint family,zh,zho_Hans,扩展的联合家庭,Extended Joint Family,1.0,0.7933616638183594,medium,0,0
+extended nuclear family,zh,zho_Hans,扩展核家族,Expansion of the nuclear family,0.7037037037037037,0.7657662630081177,medium,0,0
+extended marriage,zh,zho_Hans,延长婚姻,Extending Marriage,0.8571428571428571,0.778939425945282,medium,0,0
+extended wedding,zh,zho_Hans,延长婚礼,Prolonging the Wedding,0.47368421052631576,0.7383415699005127,medium,1,0
+extended bride,zh,zho_Hans,延长的新娘,The extended bride,0.875,0.46971020102500916,low,1,0
+extended groom,zh,zho_Hans,长婚夫,The Old Bridegroom,0.5,0.5576450824737549,low,1,0
+extended engagement,zh,zho_Hans,延长参与,Extended involvement,0.7692307692307693,0.690228283405304,medium,0,0
+extended dowry,zh,zho_Hans,延长的礼物,The Gift of Extending,0.34285714285714286,0.5455867648124695,low,1,0
+extended bridewealth,zh,zho_Hans,扩展的新娘财富,Expanded bride wealth,0.8780487804878049,0.6527572870254517,medium,0,0
+extended inheritance,zh,zho_Hans,延长遗产,Extending the legacy,0.6,0.6810425519943237,medium,0,0
+extended widow,zh,zho_Hans,延长的寡妇,Extended Widows,0.9655172413793104,0.44901570677757263,low,1,0
+extended widower,zh,zho_Hans,长期寡妇,Long-term widows,0.5,0.7821145057678223,medium,1,0
+extended courtship,zh,zho_Hans,长期的约会,Long-term dating,0.17647058823529413,0.7104151844978333,medium,1,0
+extended matchmaker,zh,zho_Hans,延长的结婚者,Extended Marriages,0.7027027027027027,0.3562563955783844,low,1,0
+extended surname,zh,zho_Hans,扩大姓氏,Extended surname,1.0,0.5753461122512817,low,1,0
+extended patronymic,zh,zho_Hans,扩大姓名,Extended name,0.6875,0.48528924584388733,low,1,0
+extended matronymic,zh,zho_Hans,延长的母语,Extended mother tongue,0.6829268292682927,0.4050309360027313,low,1,0
+extended firstborn,zh,zho_Hans,延长的首生,Extended First Life,0.7567567567567568,0.5051403045654297,low,1,0
+extended heir,zh,zho_Hans,长期继承人,The long-term heir,0.5161290322580645,0.7604294419288635,medium,1,0
+extended filial piety,zh,zho_Hans,扩大儿女的虔诚,How to Grow Your Children's Devotion,0.21052631578947367,0.5874936580657959,low,1,0
+extended caregiving,zh,zho_Hans,延长护理,Extended care,0.8125,0.8025453686714172,high,0,0
+extended motherhood,zh,zho_Hans,长期的母亲,Long-term mother,0.5142857142857142,0.49407216906547546,low,1,0
+extended fatherhood,zh,zho_Hans,长期父亲,Long-term father,0.5142857142857142,0.5977441072463989,low,1,0
+extended in laws,zh,zho_Hans,在法律上扩展,Legally expanded,0.375,0.5931959748268127,low,1,0
+extended brother in law,zh,zho_Hans,长老的岳父,An elderly father-in-law,0.5531914893617021,0.6907249689102173,medium,0,0
+extended sister in law,zh,zho_Hans,长老的姐姐,The older sister,0.5263157894736842,0.6412105560302734,medium,1,0
+extended ancestral home,zh,zho_Hans,延伸的祖先之家,The extended ancestral home,0.92,0.7298458814620972,medium,0,0
+extended household labor,zh,zho_Hans,扩大家庭劳动力,Expansion of the family workforce,0.3157894736842105,0.7777730822563171,medium,1,0
+nuclear kinship,zh,zho_Hans,核的亲戚关系,Relation to the Nuclear,0.3684210526315789,0.6909480690956116,medium,1,0
+nuclear mother,zh,zho_Hans,核母,Nuclear mother,1.0,0.7745480537414551,medium,1,1
+nuclear father,zh,zho_Hans,核之父,The Father of Nuclear,0.4,0.8263726234436035,high,1,0
+nuclear parent,zh,zho_Hans,核母,Nuclear mother,0.6428571428571429,0.7488222122192383,medium,1,1
+nuclear child,zh,zho_Hans,核子,Nuclear power,0.6153846153846154,0.5143032073974609,low,1,0
+nuclear daughter,zh,zho_Hans,核子女,Nuclear Children,0.625,0.7914574146270752,medium,0,0
+religion,zh,zho_Hans,宗教,Religious,0.8235294117647058,0.8538252115249634,high,0,0
+ritual,zh,zho_Hans,仪式,The ceremony,0.1111111111111111,0.8318790197372437,high,1,1
+prayer,zh,zho_Hans,祷告,Prayers,0.9230769230769231,0.842147171497345,high,0,0
+temple,zh,zho_Hans,寺,The Temple,0.75,0.8189949989318848,high,0,0
+church,zh,zho_Hans,教堂,The Church,0.75,0.8369705677032471,high,0,0
+mosque,zh,zho_Hans,清真寺,The mosque,0.75,0.8607112169265747,high,0,0
+synagogue,zh,zho_Hans,犹太教堂,The synagogue,0.8181818181818182,0.8369745016098022,high,0,0
+shrine,zh,zho_Hans,圣地,The Holy Land,0.21052631578947367,0.8253723382949829,high,1,0
+pilgrimage,zh,zho_Hans,巡礼活动,Pilgrimage,1.0,0.8274229764938354,high,0,0
+scripture,zh,zho_Hans,经文,Scripture,1.0,0.8082724809646606,high,0,0
+monk,zh,zho_Hans,修道士,Monks,0.8888888888888888,0.851436197757721,high,0,0
+priest,zh,zho_Hans,牧师,The Priest,0.75,0.8562682867050171,high,0,0
+imam,zh,zho_Hans,伊斯兰教,What is Islam?,0.3333333333333333,0.523320198059082,low,1,0
+nun,zh,zho_Hans,修女,Sisters,0.0,0.7278478145599365,medium,1,0
+saint,zh,zho_Hans,圣人,The Saints,0.6666666666666666,0.8169440031051636,high,0,0
+martyr,zh,zho_Hans,殉道者,Martyrs,0.9230769230769231,0.8342796564102173,high,0,0
+prophet,zh,zho_Hans,预言者,The Prophets,0.7368421052631579,0.8361847400665283,high,0,0
+zakat,zh,zho_Hans,子,My son.,0.0,0.40571287274360657,low,1,1
+tithe,zh,zho_Hans,十分之一,One-tenth,0.42857142857142855,0.758506178855896,medium,1,0
+karma,zh,zho_Hans,卡尔玛,Carma,0.8,0.7558398246765137,medium,0,0
+altar,zh,zho_Hans,祭坛,The Altar,0.7142857142857143,0.8294735550880432,high,0,0
+incense,zh,zho_Hans,香水,Parfums,0.14285714285714285,0.7030071020126343,medium,1,0
+rosary,zh,zho_Hans,圣诞章,The Christmas Chapel,0.23076923076923078,0.7385189533233643,medium,1,0
+blessing,zh,zho_Hans,祝福,Blessings,0.9411764705882353,0.8069007396697998,high,0,0
+curse,zh,zho_Hans,诅咒,The curse.,0.6666666666666666,0.7882154583930969,medium,0,0
+sabbath,zh,zho_Hans,安息日,The Sabbath,0.7777777777777778,0.8401581048965454,high,0,0
+halal,zh,zho_Hans,哈拉尔,Haral,0.8,0.8341003060340881,high,0,0
+kosher,zh,zho_Hans,克什尔,Cashel,0.5,0.6557430028915405,medium,1,0
+fasting,zh,zho_Hans,禁食,Fasting,1.0,0.815936267375946,high,0,0
+sacrifice,zh,zho_Hans,牺牲,Sacrifices,0.9473684210526315,0.8053227663040161,high,0,0
+monastery,zh,zho_Hans,修道院,Monastery,1.0,0.8559719324111938,high,1,1
+convent,zh,zho_Hans,修道院,Monastery,0.375,0.8433419466018677,high,1,1
+abbey,zh,zho_Hans,修道院,Monastery,0.42857142857142855,0.8371067643165588,high,1,1
+minaret,zh,zho_Hans,尖塔,The Minarets,0.7368421052631579,0.846747100353241,high,0,0
+pagoda,zh,zho_Hans,修道院,Monastery,0.13333333333333333,0.8459639549255371,high,1,1
+stupa,zh,zho_Hans,草,Grass,0.2,0.41101980209350586,low,1,1
+ancestral altar,zh,zho_Hans,祖先祭坛,Altar of the Ancestors,0.3783783783783784,0.8440024256706238,high,1,0
+funeral rite,zh,zho_Hans,葬礼仪式,Funeral service,0.8148148148148148,0.837224006652832,high,0,0
+mourning rite,zh,zho_Hans,哀悼仪式,Mourning Ceremony,0.7333333333333333,0.8326627612113953,high,0,0
+memorial service,zh,zho_Hans,纪念仪式,Ceremony of Remembrance,0.358974358974359,0.8358242511749268,high,1,0
+ancestor worship,zh,zho_Hans,祖先的崇拜,Worship of the Ancestors,0.45,0.8572649955749512,high,1,0
+tabernacle,zh,zho_Hans,帐幕,The tent,0.3333333333333333,0.7480987310409546,medium,1,0
+prayer mat,zh,zho_Hans,祈祷,Prayers,0.7058823529411765,0.535545825958252,low,1,0
+chanting,zh,zho_Hans,唱歌,Singing,0.4,0.7835982441902161,medium,1,0
+hymn,zh,zho_Hans,诗歌,Poetry,0.2,0.8184524178504944,high,1,1
+sermon,zh,zho_Hans,讲座,Lecture,0.3076923076923077,0.7481999397277832,medium,1,0
+liturgy,zh,zho_Hans,礼仪,Discipline,0.23529411764705882,0.8405970931053162,high,1,0
+sacred religion,zh,zho_Hans,神圣的宗教,The Sacred Religion,0.8823529411764706,0.8547534942626953,high,0,0
+sacred ritual,zh,zho_Hans,圣仪式,The Sacred Ritual,0.8666666666666667,0.8448790311813354,high,0,0
+sacred prayer,zh,zho_Hans,神圣的祷告,The Holy Prayer,0.5714285714285714,0.8484605550765991,high,0,0
+sacred temple,zh,zho_Hans,圣殿,The Temple,0.6956521739130435,0.8311123847961426,high,1,1
+sacred church,zh,zho_Hans,圣教堂,The Holy Church,0.5714285714285714,0.8431872129440308,high,0,0
+sacred mosque,zh,zho_Hans,神圣的清真寺,The Holy Mosque,0.5714285714285714,0.8552391529083252,high,0,0
+sacred synagogue,zh,zho_Hans,神圣的犹太教堂,The Holy Synagogue,0.6470588235294118,0.8501931428909302,high,0,0
+sacred shrine,zh,zho_Hans,圣殿,The Temple,0.2608695652173913,0.8085656762123108,high,1,1
+sacred pilgrimage,zh,zho_Hans,神圣的朝圣,The Holy Pilgrimage,0.6666666666666666,0.828377366065979,high,0,0
+sacred scripture,zh,zho_Hans,圣经,The Bible,0.32,0.8429348468780518,high,1,0
+sacred monk,zh,zho_Hans,神圣的僧侣,Sacred Monks,0.9565217391304348,0.8293744921684265,high,0,0
+sacred priest,zh,zho_Hans,神圣的祭司,The Holy Priests,0.5517241379310345,0.8407183885574341,high,0,0
+sacred imam,zh,zho_Hans,神圣的伊玛目,The Holy Imam,0.5,0.8515744209289551,high,1,0
+sacred nun,zh,zho_Hans,神圣的修女,Holy Sisters,0.18181818181818182,0.8430309891700745,high,1,0
+sacred saint,zh,zho_Hans,神圣的圣人,The Holy Saints,0.5185185185185185,0.7772353887557983,medium,1,0
+sacred martyr,zh,zho_Hans,圣烈士,The Martyrs,0.6666666666666666,0.8277842998504639,high,0,0
+sacred prophet,zh,zho_Hans,神圣的先知,The Holy Prophets,0.5806451612903226,0.8323690295219421,high,0,0
+sacred zakat,zh,zho_Hans,神圣的礼物,Godly Gifts,0.08695652173913043,0.7939139008522034,medium,1,0
+sacred tithe,zh,zho_Hans,神圣的十分之一,A tenth of the sacred,0.36363636363636365,0.6782016754150391,medium,1,0
+sacred karma,zh,zho_Hans,神圣的卡尔玛,The Holy Karma,0.5384615384615384,0.7680774927139282,medium,1,0
+sacred altar,zh,zho_Hans,圣祭坛,The Holy Altar,0.5384615384615384,0.8400132656097412,high,1,0
+sacred incense,zh,zho_Hans,神圣的香物,Sacred Fragrances,0.7096774193548387,0.8400843143463135,high,0,0
+sacred rosary,zh,zho_Hans,圣 Rosary,The Holy Rosary,0.5714285714285714,0.46896693110466003,low,1,0
+sacred blessing,zh,zho_Hans,神圣的祝福,Godly Blessings,0.6666666666666666,0.8308976292610168,high,0,0
+sacred curse,zh,zho_Hans,神圣的诅咒,The Holy Curse,0.5384615384615384,0.8304635882377625,high,1,0
+sacred sabbath,zh,zho_Hans,神圣的安息日,The Holy Sabbath,0.6,0.8484162092208862,high,0,0
+sacred halal,zh,zho_Hans,神圣的哈拉尔,The Holy Haral,0.46153846153846156,0.8521637916564941,high,1,0
+sacred kosher,zh,zho_Hans,神圣的Kosher,The Holy Kosher,0.5714285714285714,0.7104474306106567,medium,0,0
+sacred fasting,zh,zho_Hans,神圣的禁食.,Holy fasting.,0.5925925925925926,0.837609589099884,high,0,0
+sacred sacrifice,zh,zho_Hans,神圣的祭物,Sacred Sacrifices,0.9696969696969697,0.8001900911331177,high,0,0
+sacred monastery,zh,zho_Hans,圣修道院,Holy Monastery,0.6666666666666666,0.822259247303009,high,1,1
+sacred convent,zh,zho_Hans,圣修道院,Holy Monastery,0.2857142857142857,0.8360430002212524,high,1,1
+sacred abbey,zh,zho_Hans,圣修道院,Holy Monastery,0.23076923076923078,0.8304044604301453,high,1,1
+sacred minaret,zh,zho_Hans,神圣的尖塔,The Holy Minarets,0.5806451612903226,0.8491353988647461,high,0,0
+sacred pagoda,zh,zho_Hans,神圣的修道院,The Holy Monastery,0.12903225806451613,0.846807062625885,high,1,0
+sacred stupa,zh,zho_Hans,神圣的石头,The Sacred Stone,0.6428571428571429,0.6123441457748413,medium,0,0
+sacred ancestral altar,zh,zho_Hans,神圣的祖先祭坛,The Altar of the Holy Ancestors,0.41509433962264153,0.8416790962219238,high,1,0
+sacred funeral rite,zh,zho_Hans,神圣的葬礼仪式,The Holy Funeral Ceremony,0.5454545454545454,0.8531147837638855,high,1,0
+sacred mourning rite,zh,zho_Hans,神圣的哀悼仪式,A sacred mourning ceremony,0.782608695652174,0.8402700424194336,high,0,0
+sacred memorial service,zh,zho_Hans,神圣的纪念服务,A sacred memorial service,0.9583333333333334,0.7644412517547607,medium,0,0
+sacred ancestor worship,zh,zho_Hans,神圣的祖先崇拜,Worship of the Sacred Ancestors,0.5925925925925926,0.8506911396980286,high,0,0
+sacred tabernacle,zh,zho_Hans,圣幕,The Sanctuary,0.26666666666666666,0.8068000674247742,high,1,0
+sacred prayer mat,zh,zho_Hans,神圣的祷告床,The Sacred Bed of Prayer,0.6341463414634146,0.8301376104354858,high,0,0
+sacred chanting,zh,zho_Hans,神圣的歌唱,The Sacred Singing,0.6060606060606061,0.8217167854309082,high,0,0
+sacred hymn,zh,zho_Hans,神圣的颂歌,A Sacred Song,0.6666666666666666,0.8425266742706299,high,0,0
+sacred sermon,zh,zho_Hans,神圣的讲话,God's Speech,0.32,0.8344423174858093,high,1,0
+sacred liturgy,zh,zho_Hans,圣礼仪,The Sacrament of Reconciliation,0.4,0.8405764102935791,high,1,0
+ritual religion,zh,zho_Hans,仪式宗教,Ritual religion,1.0,0.8499091863632202,high,0,0
+ritual ritual,zh,zho_Hans,仪式仪式,Ritual,0.631578947368421,0.5920321941375732,low,1,0
+ritual prayer,zh,zho_Hans,仪式祈祷,Ritual Prayer,1.0,0.832514762878418,high,0,0
+ritual temple,zh,zho_Hans,仪式寺,Ritual Temple,1.0,0.8170269131660461,high,0,0
+ritual church,zh,zho_Hans,仪式教堂,Ceremonial Church,0.7333333333333333,0.8207368850708008,high,0,0
+ritual mosque,zh,zho_Hans,仪式清真寺,Ceremonial mosque,0.7333333333333333,0.7671979069709778,medium,0,0
+rice,zh,zho_Hans,大米,Rice,1.0,0.84001624584198,high,0,0
+bread,zh,zho_Hans,面包,Bread,1.0,0.8275914192199707,high,1,1
+noodle,zh,zho_Hans,面包,Bread,0.18181818181818182,0.79390949010849,medium,1,1
+dumpling,zh,zho_Hans,饼,Bread,0.15384615384615385,0.6162020564079285,medium,1,1
+curry,zh,zho_Hans,咖哩,This is Carrie.,0.3,0.8377131223678589,high,1,0
+spice,zh,zho_Hans,香料,Spices,0.9090909090909091,0.8186419010162354,high,0,0
+tea,zh,zho_Hans,茶叶,Tea,1.0,0.8428207039833069,high,1,1
+coffee,zh,zho_Hans,咖啡,Coffee,1.0,0.850813627243042,high,1,1
+meat,zh,zho_Hans,肉类,Meat,1.0,0.829658567905426,high,0,0
+vegetarian,zh,zho_Hans,适合素食主义者,It is suitable for vegetarians.,0.4878048780487805,0.6673272252082825,medium,1,0
+vegan,zh,zho_Hans,素食主义者,Vegetarians,0.625,0.8571056127548218,high,0,0
+soup,zh,zho_Hans,,What is it?,0.13333333333333333,0.5161946415901184,low,1,1
+stew,zh,zho_Hans,子,My son.,0.18181818181818182,0.37134140729904175,low,1,1
+barbecue,zh,zho_Hans,烧烤,Barbecue,1.0,0.8186745643615723,high,0,0
+fermented,zh,zho_Hans,发酵,fermentation,0.6666666666666666,0.7664363384246826,medium,0,0
+pickled,zh,zho_Hans,粉,Powder,0.3076923076923077,0.5381962060928345,low,1,0
+banquet,zh,zho_Hans,宴会,The feast,0.25,0.8264129757881165,high,1,1
+feast,zh,zho_Hans,宴会,The feast,0.7142857142857143,0.8261125683784485,high,1,1
+street food,zh,zho_Hans,街头食物,Street food,1.0,0.8465417623519897,high,0,0
+dessert,zh,zho_Hans,甜点,Sweets,0.3076923076923077,0.8108765482902527,high,1,0
+sauce,zh,zho_Hans,汁,Juice,0.6,0.6951079964637756,medium,0,0
+grain,zh,zho_Hans,谷物,Cereals,0.3333333333333333,0.8544740080833435,high,1,0
+fruit,zh,zho_Hans,果实,Fruits,0.9090909090909091,0.8118283748626709,high,0,0
+vegetable,zh,zho_Hans,蔬菜,Vegetables,0.9473684210526315,0.7972196340560913,medium,0,0
+kebab,zh,zho_Hans,菜,Food,0.0,0.597137451171875,low,1,1
+shawarma,zh,zho_Hans,沙瓦尔玛,Shawalma,0.875,0.8221997022628784,high,0,0
+ramen,zh,zho_Hans,拉门,The Lamen,0.5714285714285714,0.5037780404090881,low,1,0
+sushi,zh,zho_Hans,寿司,Sushi,1.0,0.8581184148788452,high,0,0
+kimchi,zh,zho_Hans,吉米,"Jimmy, please.",0.2,0.5451200604438782,low,1,0
+pho,zh,zho_Hans,子,My son.,0.2,0.34175029397010803,low,1,1
+biryani,zh,zho_Hans,贝里亚尼,Berriani,0.6666666666666666,0.8430507183074951,high,0,0
+falafel,zh,zho_Hans,草,Grass,0.16666666666666666,0.46000564098358154,low,1,1
+pasta,zh,zho_Hans,意大利面,Italian dishes,0.21052631578947367,0.7986948490142822,medium,1,0
+cheese,zh,zho_Hans,奶酪,Cheese,1.0,0.8305655717849731,high,0,0
+wine,zh,zho_Hans,葡萄酒,Wine,1.0,0.8506472110748291,high,0,0
+beer,zh,zho_Hans,酒,Alcohol,0.0,0.8402667045593262,high,1,0
+chai,zh,zho_Hans,茶叶,Tea,0.2857142857142857,0.8393822908401489,high,1,1
+espresso,zh,zho_Hans,咖啡,Coffee,0.2857142857142857,0.7944757342338562,medium,1,1
+udon,zh,zho_Hans,乌顿,Uton,0.75,0.7891595959663391,medium,0,0
+soba,zh,zho_Hans,苏巴,Suba,0.75,0.8028020858764648,high,0,0
+congee,zh,zho_Hans,收费,Charges,0.46153846153846156,0.3358297049999237,low,1,0
+bibimbap,zh,zho_Hans,鱼,Fish,0.16666666666666666,0.4889827370643616,low,1,1
+hummus,zh,zho_Hans,子,My son.,0.3076923076923077,0.3847566545009613,low,1,1
+tabbouleh,zh,zho_Hans,塔布勒,What is it?,0.1,0.8102783560752869,high,1,0
+paella,zh,zho_Hans,菜,Food,0.0,0.4885268211364746,low,1,1
+risotto,zh,zho_Hans,里苏托,What is it?,0.3333333333333333,0.8552185297012329,high,1,0
+couscous,zh,zho_Hans,子,My son.,0.13333333333333333,0.4238145649433136,low,1,1
+injera,zh,zho_Hans,子,My son.,0.15384615384615385,0.39174166321754456,low,1,1
+tortilla,zh,zho_Hans,鱼,Fish,0.16666666666666666,0.4302050471305847,low,1,1
+tamale,zh,zho_Hans,塔马尔,Tamal,0.9090909090909091,0.7863553762435913,medium,0,0
+arepa,zh,zho_Hans,鱼,Fish,0.0,0.39542314410209656,low,1,1
+empanada,zh,zho_Hans,菜,Food,0.16666666666666666,0.5461540222167969,low,1,1
+mochi,zh,zho_Hans,摩奇,Moochy,0.7272727272727273,0.8233529329299927,high,0,0
+matcha,zh,zho_Hans,匹配,Matching,0.7142857142857143,0.39347919821739197,low,1,0
+jalebi,zh,zho_Hans,利比,What is it?,0.23529411764705882,0.470307856798172,low,1,0
+halwa,zh,zho_Hans,哈尔瓦,Harva,0.6,0.6145696043968201,medium,0,0
+flatbread,zh,zho_Hans,面包,Bread,0.7142857142857143,0.8061051368713379,high,1,1
+naan,zh,zho_Hans,纳恩,What is it?,0.13333333333333333,0.7888281345367432,medium,1,0
+roti,zh,zho_Hans,饼,Bread,0.2222222222222222,0.6020786762237549,medium,1,1
+chapati,zh,zho_Hans,查帕蒂,Chapatti,0.9333333333333333,0.8342503309249878,high,0,0
+paratha,zh,zho_Hans,帕拉塔,The Palata,0.5882352941176471,0.8151924014091492,high,0,0
+soy sauce,zh,zho_Hans,豆,Beans,0.14285714285714285,0.628638744354248,medium,1,0
+fish sauce,zh,zho_Hans,鱼,Fish,0.5714285714285714,0.4599241316318512,low,1,1
+ghee,zh,zho_Hans,子,My son.,0.0,0.36830854415893555,low,1,1
+paneer,zh,zho_Hans,面板,The panel,0.5333333333333333,0.5129554271697998,low,1,0
+pickles,zh,zho_Hans,菜,Food,0.0,0.7204720377922058,medium,1,1
+broth,zh,zho_Hans,,What is it?,0.125,0.42794743180274963,low,1,1
+porridge,zh,zho_Hans,,What is it?,0.10526315789473684,0.46216312050819397,low,1,1
+lentil,zh,zho_Hans,子,My son.,0.15384615384615385,0.36172860860824585,low,1,1
+chickpea,zh,zho_Hans,菜,Food,0.0,0.7425490617752075,medium,1,1
+cassava,zh,zho_Hans,菜,Food,0.0,0.6636718511581421,medium,1,1
+plantain,zh,zho_Hans,植物,Plants,0.7142857142857143,0.7979425191879272,medium,0,0
+okra,zh,zho_Hans,乌克兰,Ukraine,0.5454545454545454,0.4289916455745697,low,1,0
+eggplant,zh,zho_Hans,茄子,Tomatoes,0.125,0.7995549440383911,medium,1,0
+traditional rice,zh,zho_Hans,传统的,Traditionally,0.7586206896551724,0.42383238673210144,low,1,1
+traditional bread,zh,zho_Hans,传统的面包,Traditional bread,1.0,0.8415299654006958,high,1,1
+traditional noodle,zh,zho_Hans,传统的面包,Traditional bread,0.7428571428571429,0.8206079006195068,high,1,1
+traditional dumpling,zh,zho_Hans,传统的饼,Traditional Bread,0.7027027027027027,0.7431669235229492,medium,0,0
+traditional curry,zh,zho_Hans,传统的咖哩,Traditional curry,1.0,0.8446832895278931,high,0,0
+traditional spice,zh,zho_Hans,传统的香料,Traditional spices,0.9714285714285714,0.8220339417457581,high,0,0
+traditional tea,zh,zho_Hans,传统茶,Traditional tea,1.0,0.854153037071228,high,0,0
+traditional coffee,zh,zho_Hans,传统咖啡,Traditional coffee,1.0,0.858001708984375,high,0,0
+traditional meat,zh,zho_Hans,传统的肉类,Traditional meat,1.0,0.8287351131439209,high,0,0
+traditional vegetarian,zh,zho_Hans,传统素食主义者,Traditional vegetarians,0.9777777777777777,0.8665581941604614,high,0,0
+traditional vegan,zh,zho_Hans,传统的素食主义者,Traditional vegetarians,0.85,0.8605352640151978,high,0,0
+traditional soup,zh,zho_Hans,传统的,Traditionally,0.7586206896551724,0.4155188500881195,low,1,1
+traditional stew,zh,zho_Hans,传统的,Traditionally,0.7586206896551724,0.402538925409317,low,1,1
+traditional barbecue,zh,zho_Hans,传统烧烤,Traditional barbecue,1.0,0.8479737043380737,high,0,0
+traditional fermented,zh,zho_Hans,传统发酵,Traditional fermentation,0.8444444444444444,0.76304030418396,medium,0,0
+traditional pickled,zh,zho_Hans,传统的,Traditionally,0.75,0.36966586112976074,low,1,1
+traditional banquet,zh,zho_Hans,传统宴会,Traditional banquets,0.9743589743589743,0.8402657508850098,high,0,0
+traditional feast,zh,zho_Hans,传统的节日,Traditional holidays,0.7567567567567568,0.8061432838439941,high,0,0
+traditional street food,zh,zho_Hans,传统的街头食物,Traditional street food,1.0,0.8522176742553711,high,0,0
+traditional dessert,zh,zho_Hans,传统的甜点,Traditional desserts,0.9743589743589743,0.838298499584198,high,0,0
+traditional sauce,zh,zho_Hans,传统的汁,Traditional juice,0.8823529411764706,0.6591397523880005,medium,0,0
+traditional grain,zh,zho_Hans,传统的谷物,Traditional grains,0.9714285714285714,0.8385455012321472,high,0,0
+traditional fruit,zh,zho_Hans,传统水果,Traditional fruit,1.0,0.8325316905975342,high,0,0
+traditional vegetable,zh,zho_Hans,传统蔬菜,Traditional vegetables,0.9767441860465116,0.8271101713180542,high,0,0
+traditional kebab,zh,zho_Hans,传统的开巴,Traditional lipstick,0.7027027027027027,0.7997474074363708,medium,0,0
+traditional shawarma,zh,zho_Hans,传统的 shawarma,Traditional shawarma,1.0,0.7310515642166138,medium,0,0
+festival,zh,zho_Hans,节日,Festivals,0.9411764705882353,0.7998059391975403,medium,1,1
+holiday,zh,zho_Hans,假期,Holidays,0.9333333333333333,0.7928275465965271,medium,0,0
+new year,zh,zho_Hans,新的一年,The New Year,0.8,0.8334475755691528,high,0,0
+easter,zh,zho_Hans,复活节,Easter,1.0,0.7327005863189697,medium,1,1
+ramadan,zh,zho_Hans,斋月,The month of Ramadan,0.5185185185185185,0.8436613082885742,high,1,0
+eid,zh,zho_Hans,节日,Festivals,0.3333333333333333,0.5981316566467285,low,1,1
+diwali,zh,zho_Hans,迪瓦利,Diwali,1.0,0.8248589038848877,high,0,0
+vesak,zh,zho_Hans,维萨克,What's wrong with you?,0.07407407407407407,0.772327184677124,medium,1,0
+hanukkah,zh,zho_Hans,哈努卡,Hanukkah,1.0,0.8459584712982178,high,0,0
+passover,zh,zho_Hans,复活节,Easter,0.5714285714285714,0.45345571637153625,low,1,1
+nowruz,zh,zho_Hans,现在鲁兹,It's now Ruiz.,0.6,0.5348546504974365,low,1,0
+carnival,zh,zho_Hans,狂欢节,Carnival,1.0,0.8335090279579163,high,0,0
+thanksgiving,zh,zho_Hans,感恩节,Thanksgiving,1.0,0.8442901372909546,high,0,0
+harvest festival,zh,zho_Hans,收获节,The Harvest Festival,0.8888888888888888,0.8441548347473145,high,0,0
+obon,zh,zho_Hans,其他类型,Other types,0.13333333333333333,0.36470916867256165,low,1,0
+tet,zh,zho_Hans,其他,Other,0.5,0.39138898253440857,low,1,0
+songkran,zh,zho_Hans,曲克兰,Cookland,0.5,0.7601323127746582,medium,1,0
+dragon boat festival,zh,zho_Hans,龙船节,Dragon Boat Festival,1.0,0.8450521230697632,high,0,0
+mid autumn festival,zh,zho_Hans,中秋节,Mid-Autumn Festival,0.9473684210526315,0.7079483866691589,medium,0,0
+qingming,zh,zho_Hans,清明,It's clear.,0.10526315789473684,0.512857973575592,low,1,0
+yom kippur,zh,zho_Hans,约姆基普尔,What is the meaning of this article?,0.17391304347826086,0.7977019548416138,medium,1,0
+rosh hashanah,zh,zho_Hans,罗什哈萨纳,Rosh Hashanah,1.0,0.7989700436592102,medium,0,0
+purim,zh,zho_Hans,纯素,Purity,0.7272727272727273,0.5807183980941772,low,1,0
+sukkot,zh,zho_Hans,苏科特,Socote,0.5,0.8354461193084717,high,1,0
+advent,zh,zho_Hans,来世,The next life,0.3157894736842105,0.642874538898468,medium,1,0
+holi,zh,zho_Hans,圣诞节,Christmas is coming.,0.25,0.6223873496055603,medium,1,1
+navratri,zh,zho_Hans,圣诞节,Christmas is coming.,0.14285714285714285,0.7901883721351624,medium,1,1
+onam,zh,zho_Hans,一个月,A month,0.36363636363636365,0.4610813558101654,low,1,0
+pongal,zh,zho_Hans,格尔,It's all right.,0.19047619047619047,0.3951509892940521,low,1,0
+durga puja,zh,zho_Hans,杜尔加普贾,Durgapja,0.8888888888888888,0.7901568412780762,medium,0,0
+janmashtami,zh,zho_Hans,詹玛斯塔米,What is the meaning of this article?,0.2127659574468085,0.822385311126709,high,1,0
+good friday,zh,zho_Hans,好星期五,Good Friday.,0.9565217391304348,0.8358672857284546,high,0,0
+pentecost,zh,zho_Hans,五旬节,The Feast of Pentecost,0.5806451612903226,0.7942110300064087,medium,0,0
+epiphany,zh,zho_Hans,启示录,The book of Revelation,0.2,0.7926681041717529,medium,1,0
+all saints day,zh,zho_Hans,全圣人节,The Feast of All Saints,0.5405405405405406,0.7920532822608948,medium,1,0
+lunar new year,zh,zho_Hans,月亮新年,The Lunar New Year,0.875,0.8133957982063293,high,0,0
+thingyan,zh,zho_Hans,的东西,It's the same thing.,0.35714285714285715,0.5055462121963501,low,1,0
+day of the dead,zh,zho_Hans,死亡之日,The Day of Death,0.6451612903225806,0.791958749294281,medium,0,0
+mardi gras,zh,zho_Hans,马尔迪格拉,Mardi Gras,1.0,0.6988270282745361,medium,0,0
+saint day,zh,zho_Hans,圣日,The Holy Day,0.47619047619047616,0.7635174989700317,medium,1,0
+martinmas,zh,zho_Hans,圣诞节,Christmas is coming.,0.3448275862068966,0.7202649116516113,medium,1,1
+st patricks day,zh,zho_Hans,圣帕特里克斯日,St. Patrick's Day is celebrated,0.6521739130434783,0.8422154188156128,high,0,0
+independence day,zh,zho_Hans,独立日,Independence Day,1.0,0.846596360206604,high,0,0
+mawlid,zh,zho_Hans,毛利德,Mauld,0.7272727272727273,0.7542670965194702,medium,0,0
+ashura,zh,zho_Hans,亚苏拉,Asura,0.9090909090909091,0.7975630760192871,medium,0,0
+hajj,zh,zho_Hans,旅行,Travel,0.2,0.7156100273132324,medium,1,0
+umrah,zh,zho_Hans,乌马拉,O'Malley,0.3076923076923077,0.848842978477478,high,1,0
+setsubun,zh,zho_Hans,子子,My son.,0.26666666666666666,0.49784228205680847,low,1,0
+religious festival,zh,zho_Hans,宗教节日,Religious Holidays,0.6111111111111112,0.8426560163497925,high,1,1
+religious holiday,zh,zho_Hans,宗教节日,Religious Holidays,0.9714285714285714,0.8283360004425049,high,1,1
+religious new year,zh,zho_Hans,宗教新年,Religious New Year,1.0,0.8576352596282959,high,0,0
+religious easter,zh,zho_Hans,宗教复活节,Religious Easter,1.0,0.8415031433105469,high,0,0
+religious ramadan,zh,zho_Hans,宗教的斋月,Religious Ramadan,1.0,0.8564357161521912,high,0,0
+religious eid,zh,zho_Hans,宗教节日,Religious Holidays,0.7741935483870968,0.7071743011474609,medium,1,1
+religious diwali,zh,zho_Hans,宗教节日,Religious Holidays,0.7058823529411765,0.6710672378540039,medium,1,1
+religious vesak,zh,zho_Hans,宗教章,Religious Charters,0.7272727272727273,0.43702957034111023,low,1,0
+religious hanukkah,zh,zho_Hans,宗教的哈努卡,Hanukkah of Religion,0.42105263157894735,0.8431147336959839,high,1,0
+religious passover,zh,zho_Hans,宗教的逾越节,Religious Passover,1.0,0.7499176859855652,medium,0,0
+religious nowruz,zh,zho_Hans,宗教的诺鲁兹,Norruz of Religion,0.47058823529411764,0.6731743812561035,medium,1,0
+religious carnival,zh,zho_Hans,宗教狂欢节,Religious Carnival,1.0,0.847313642501831,high,0,0
+religious thanksgiving,zh,zho_Hans,宗教的感恩节,Religious Thanksgiving,1.0,0.8378782272338867,high,0,0
+religious harvest festival,zh,zho_Hans,宗教的收获节日,Feast of the Harvest of Religion,0.4827586206896552,0.8338708877563477,high,1,0
+religious obon,zh,zho_Hans,宗教信仰,Religious Beliefs,0.7096774193548387,0.6254096627235413,medium,0,0
+religious tet,zh,zho_Hans,宗教问题,Religious Issues,0.7586206896551724,0.6059318780899048,medium,0,0
+religious songkran,zh,zho_Hans,宗教歌曲,Religious Songs,0.8484848484848485,0.5882240533828735,low,1,0
+religious dragon boat festival,zh,zho_Hans,宗教龙船节,Religious Dragon Boat Festival,1.0,0.8552732467651367,high,0,0
+religious mid autumn festival,zh,zho_Hans,宗教中秋节,Religious Mid-Autumn Festival,0.9655172413793104,0.7927003502845764,medium,0,0
+religious qingming,zh,zho_Hans,宗教的清明,Religious Enlightenment,0.6829268292682927,0.5267518758773804,low,1,0
+religious yom kippur,zh,zho_Hans,宗教约姆基普尔,Religion in Yom Kippur,0.8571428571428571,0.8176684975624084,high,0,0
+religious rosh hashanah,zh,zho_Hans,宗教的罗什哈萨纳,Rosh Hashanah of Religion,0.5416666666666666,0.7026028633117676,medium,1,0
+religious purim,zh,zho_Hans,宗教的林,Religious Forests,0.6875,0.4235839247703552,low,1,0
+religious sukkot,zh,zho_Hans,宗教的苏科特,Socrates of Religion,0.3888888888888889,0.8190431594848633,high,1,0
+religious advent,zh,zho_Hans,宗教的到来,The Coming of Religion,0.42105263157894735,0.8243620991706848,high,1,0
+religious holi,zh,zho_Hans,宗教圣诞节,Religious Christmas,0.7272727272727273,0.7515796422958374,medium,1,1
+religious navratri,zh,zho_Hans,宗教节日,Religious Holidays,0.6111111111111112,0.7295761704444885,medium,1,1
+religious onam,zh,zho_Hans,宗教上的姆,Religious Em,0.8461538461538461,0.43014639616012573,low,1,0
+religious pongal,zh,zho_Hans,宗教加尔,Religious Gal,0.896551724137931,0.4554140865802765,low,1,0
+religious durga puja,zh,zho_Hans,宗教的杜尔加敬拜,Religious Durga worship,0.7906976744186046,0.7741848230361938,medium,0,0
+religious janmashtami,zh,zho_Hans,宗教的纳什塔米,Religious Nashtami,0.9230769230769231,0.7777755260467529,medium,0,0
+religious good friday,zh,zho_Hans,宗教上的好星期五,Good Friday in Religion,0.5,0.7666044235229492,medium,1,0
+religious pentecost,zh,zho_Hans,宗教的五旬节,Religious Feast of Pentecost,0.8085106382978723,0.7680612206459045,medium,0,0
+religious epiphany,zh,zho_Hans,宗教的启示,Religious Revelation,0.6842105263157895,0.826994776725769,high,0,0
+religious all saints day,zh,zho_Hans,所有圣徒的宗教日,Religious Day of All Saints,0.7843137254901961,0.7422558069229126,medium,0,0
+religious lunar new year,zh,zho_Hans,宗教的新月份年,Religious New Year,0.8571428571428571,0.5927600860595703,low,1,0
+religious thingyan,zh,zho_Hans,宗教事物,Religious matters,0.6285714285714286,0.6763147115707397,medium,0,0
+religious day of the dead,zh,zho_Hans,死亡的宗教日,Religious Day of the Dead,1.0,0.7288234233856201,medium,0,0
+religious mardi gras,zh,zho_Hans,宗教圣诞节,Religious Christmas,0.6666666666666666,0.7404156923294067,medium,1,1
+religious saint day,zh,zho_Hans,宗教圣人日,Religious Saints' Day,0.95,0.8169209957122803,high,0,0
+religious martinmas,zh,zho_Hans,宗教圣诞节,Religious Christmas,0.7894736842105263,0.8056698441505432,high,1,1
+religious st patricks day,zh,zho_Hans,宗教圣帕特里克日,Religious St. Patrick's Day,0.9615384615384616,0.8535239696502686,high,0,0
+religious independence day,zh,zho_Hans,宗教独立日,Religious Independence Day,1.0,0.8319668173789978,high,0,0
+religious mawlid,zh,zho_Hans,宗教上的毛利德,Religious Moorishness,0.6486486486486487,0.6342777013778687,medium,0,0
+religious ashura,zh,zho_Hans,宗教 ashura,Religious Ashura,1.0,0.5331325531005859,low,1,0
+religious hajj,zh,zho_Hans,宗教朝圣,Religious pilgrimage,0.6470588235294118,0.8470562696456909,high,0,0
+religious umrah,zh,zho_Hans,宗教拉,Religious attraction,0.6857142857142857,0.4387899339199066,low,1,0
+religious setsubun,zh,zho_Hans,宗教教义,Religious Teachings,0.5945945945945946,0.6271769404411316,medium,0,0
+seasonal festival,zh,zho_Hans,季节节,Seasons,0.5833333333333334,0.7834528088569641,medium,0,0
+seasonal holiday,zh,zho_Hans,季节假期,Seasonal Holidays,0.9696969696969697,0.7746756076812744,medium,0,0
+seasonal new year,zh,zho_Hans,季节性新年,Seasonal New Year,1.0,0.8008676171302795,high,0,0
+seasonal easter,zh,zho_Hans,季节节的复活节,Easter of the Season,0.34285714285714286,0.5735868215560913,low,1,0
+dress,zh,zho_Hans,服装,Clothes,0.3333333333333333,0.7908437252044678,medium,1,1
+clothing,zh,zho_Hans,服装,Clothes,0.6666666666666666,0.8258812427520752,high,1,1
+garment,zh,zho_Hans,服装,Clothes,0.14285714285714285,0.8083992004394531,high,1,1
+veil,zh,zho_Hans,面膜,The membrane,0.125,0.6503835916519165,medium,1,0
+hijab,zh,zho_Hans,隐身,Hide and seek,0.3333333333333333,0.7953328490257263,medium,1,0
+niqab,zh,zho_Hans,尼卡布,The Nicene Creed,0.19047619047619047,0.8567566871643066,high,1,0
+burqa,zh,zho_Hans,布尔卡,Burka,0.8,0.850844144821167,high,0,0
+sari,zh,zho_Hans,沙里,Sally.,0.4,0.8164705038070679,high,1,0
+kimono,zh,zho_Hans,基摩诺,This is Kimono.,0.5714285714285714,0.8400695323944092,high,0,0
+hanbok,zh,zho_Hans,汉堡,Burgers,0.15384615384615385,0.724182665348053,medium,1,0
+turban,zh,zho_Hans,轮,The Wheel,0.13333333333333333,0.3602712154388428,low,1,0
+abaya,zh,zho_Hans,亚博亚博亚博亚博亚博亚博亚博亚博,This is the first time I've ever seen a video of the same name.,0.08823529411764706,0.22828161716461182,low,1,0
+thobe,zh,zho_Hans,现在,Right now.,0.26666666666666666,0.3538897633552551,low,1,0
+dupatta,zh,zho_Hans,杜巴塔,It's a great place to visit.,0.17142857142857143,0.7851017117500305,medium,1,0
+lehenga,zh,zho_Hans,鱼,Fish,0.18181818181818182,0.37922778725624084,low,1,1
+kurta,zh,zho_Hans,库尔塔,Kurta,1.0,0.7898932695388794,medium,0,0
+dhoti,zh,zho_Hans,蒂,What's wrong with you?,0.2222222222222222,0.48406511545181274,low,1,0
+qipao,zh,zho_Hans,鱼,Fish,0.2222222222222222,0.34074997901916504,low,1,1
+uniform,zh,zho_Hans,制服,Uniforms,0.9333333333333333,0.8151506185531616,high,0,0
+formal,zh,zho_Hans,官方,Officially,0.375,0.6009458899497986,medium,1,0
+casual,zh,zho_Hans,随机,It's random.,0.1111111111111111,0.7699137330055237,medium,1,0
+modest,zh,zho_Hans,温和,Moderate,0.7142857142857143,0.7534095644950867,medium,0,0
+ornate,zh,zho_Hans,装饰品,Decorations,0.47058823529411764,0.6223418712615967,medium,1,0
+jewelry,zh,zho_Hans,珠宝,Jewelry,1.0,0.8486212491989136,high,0,0
+necklace,zh,zho_Hans,项链,Necklace,1.0,0.8203352689743042,high,0,0
+earring,zh,zho_Hans,耳环,Earrings,0.9333333333333333,0.7748215198516846,medium,0,0
+bracelet,zh,zho_Hans,腕,The wrist,0.23529411764705882,0.46720847487449646,low,1,0
+ring,zh,zho_Hans,戒指,The Ring,0.6666666666666666,0.8095474243164062,high,0,0
+headscarf,zh,zho_Hans,头巾,The towel,0.2222222222222222,0.8190151453018188,high,1,0
+tattoo,zh,zho_Hans,纹身,Tattoos,0.9230769230769231,0.8342447876930237,high,0,0
+piercing,zh,zho_Hans,穿孔,Through the Holes,0.08,0.6707122325897217,medium,1,0
+mask,zh,zho_Hans,面具,Masks,0.8888888888888888,0.8350399732589722,high,0,0
+gown,zh,zho_Hans,连衣,Clothes,0.18181818181818182,0.6775875687599182,medium,1,0
+tuxedo,zh,zho_Hans,摩克松,Moxon,0.36363636363636365,0.44225630164146423,low,1,0
+wedding dress,zh,zho_Hans,婚礼服,Wedding Dress,1.0,0.8374512195587158,high,0,0
+sash,zh,zho_Hans,子,My son.,0.18181818181818182,0.3461570143699646,low,1,1
+sandals,zh,zho_Hans,鞋子,Shoes,0.3333333333333333,0.7952040433883667,medium,1,1
+slippers,zh,zho_Hans,鞋子,Shoes,0.46153846153846156,0.7935689687728882,medium,1,1
+bangle,zh,zho_Hans,子,My son.,0.15384615384615385,0.30693188309669495,low,1,1
+anklet,zh,zho_Hans,脚,Feet,0.4,0.4885546863079071,low,1,0
+kaftan,zh,zho_Hans,卡夫坦,What's wrong with you?,0.21428571428571427,0.8482387065887451,high,1,0
+poncho,zh,zho_Hans,子,My son.,0.3076923076923077,0.3675515949726105,low,1,1
+sombrero,zh,zho_Hans,马,Horses,0.2857142857142857,0.3994685709476471,low,1,0
+kippah,zh,zho_Hans,鱼,Fish,0.4,0.3910823166370392,low,1,1
+yarmulke,zh,zho_Hans,子,My son.,0.13333333333333333,0.4040077030658722,low,1,1
+mourning dress,zh,zho_Hans,哀悼服,The Mourning Dress,0.875,0.8292204141616821,high,0,0
+ceremonial mask,zh,zho_Hans,仪式面具,Ceremonial Masks,0.967741935483871,0.8541438579559326,high,0,0
+formal dress,zh,zho_Hans,官方服装,Official clothing,0.27586206896551724,0.8490999937057495,high,1,1
+formal clothing,zh,zho_Hans,官方服装,Official clothing,0.75,0.8455755114555359,high,1,1
+formal garment,zh,zho_Hans,官方服装,Official clothing,0.3225806451612903,0.8372173309326172,high,1,1
+formal veil,zh,zho_Hans,官方面,Officials,0.3,0.5209331512451172,low,1,0
+formal hijab,zh,zho_Hans,官方的罩,Official cover,0.3076923076923077,0.5350823998451233,low,1,0
+formal niqab,zh,zho_Hans,官方的尼加布,Official Nicaraguan,0.45161290322580644,0.8244539499282837,high,1,0
+formal burqa,zh,zho_Hans,官方的布尔卡,The official bulk,0.41379310344827586,0.8302484154701233,high,1,0
+formal sari,zh,zho_Hans,正式的沙里,It's official.,0.24,0.8073505163192749,high,1,0
+formal kimono,zh,zho_Hans,官方的金,Official gold,0.38461538461538464,0.38025590777397156,low,1,0
+formal hanbok,zh,zho_Hans,正式的汉堡,The official hamburger,0.4,0.5324342250823975,low,1,0
+formal turban,zh,zho_Hans,官方罩,Official cover,0.37037037037037035,0.7005445957183838,medium,1,0
+formal abaya,zh,zho_Hans,正式的阿巴,The official ABBA,0.4827586206896552,0.5484285354614258,low,1,0
+formal thobe,zh,zho_Hans,官方网站,The official website,0.375,0.37518757581710815,low,1,0
+formal dupatta,zh,zho_Hans,正式的杜帕塔,The official DuPatta,0.6470588235294118,0.6603233814239502,medium,0,0
+formal lehenga,zh,zho_Hans,官方的乐汉加,The official language of Hong Kong,0.3333333333333333,0.48614418506622314,low,1,0
+formal kurta,zh,zho_Hans,正式的库尔塔,The official Kurta,0.6,0.5260633230209351,low,1,0
+formal dhoti,zh,zho_Hans,正式的多地,The official lot,0.42857142857142855,0.5375394225120544,low,1,0
+formal qipao,zh,zho_Hans,正式的,Officially,0.2727272727272727,0.43743395805358887,low,1,0
+formal uniform,zh,zho_Hans,官方制服,Official uniforms,0.7096774193548387,0.8526519536972046,high,0,0
+formal formal,zh,zho_Hans,官方官方,Official and official,0.4117647058823529,0.3787655532360077,low,1,0
+formal casual,zh,zho_Hans,正式休,Official break,0.37037037037037035,0.4638238549232483,low,1,0
+formal modest,zh,zho_Hans,简单的形式,Simplified form,0.2857142857142857,0.522847056388855,low,1,0
+formal ornate,zh,zho_Hans,正式装饰,Official decoration,0.5,0.5876931548118591,low,1,0
+formal jewelry,zh,zho_Hans,官方珠宝,Official jewelry,0.7333333333333333,0.8379741907119751,high,0,0
+formal necklace,zh,zho_Hans,官方项链,Official necklace,0.75,0.8325932025909424,high,0,0
+formal earring,zh,zho_Hans,官方耳环,Official earrings,0.7096774193548387,0.7886244058609009,medium,0,0
+formal bracelet,zh,zho_Hans,官方手环,The official ring,0.3125,0.8074221014976501,high,1,0
+formal ring,zh,zho_Hans,官方戒指,The official ring,0.5714285714285714,0.8248414993286133,high,0,0
+formal headscarf,zh,zho_Hans,官方的头巾,Official headscarf,0.7647058823529411,0.8130060434341431,high,0,0
+formal tattoo,zh,zho_Hans,官方纹身,The official tattoo,0.625,0.8261934518814087,high,0,0
+formal piercing,zh,zho_Hans,正式穿孔,Official piercing,0.75,0.7062161564826965,medium,0,0
+formal mask,zh,zho_Hans,官方面具,Official equipment,0.3448275862068966,0.843843936920166,high,1,0
+formal gown,zh,zho_Hans,礼服,Dress,0.125,0.8247790932655334,high,1,0
+formal tuxedo,zh,zho_Hans,正式的衣,Official clothing,0.3333333333333333,0.6598321199417114,medium,1,0
+formal wedding dress,zh,zho_Hans,正式婚礼服,Official wedding dress,0.8095238095238095,0.8559738397598267,high,0,0
+formal sash,zh,zho_Hans,正式的子,The official son,0.37037037037037035,0.3610667884349823,low,1,1
+formal sandals,zh,zho_Hans,官方凉鞋,Official sandals,0.7333333333333333,0.7960853576660156,medium,0,0
+formal slippers,zh,zho_Hans,官方拖鞋,Official sneakers,0.5,0.8023765683174133,high,1,0
+formal bangle,zh,zho_Hans,官方手,The official hand,0.4,0.341412216424942,low,1,0
+formal anklet,zh,zho_Hans,正式的脚,Official feet,0.46153846153846156,0.45467284321784973,low,1,0
+formal kaftan,zh,zho_Hans,正式的卡夫坦,The official Kaftan,0.625,0.8065807223320007,high,0,0
+formal poncho,zh,zho_Hans,正式的子,The official son,0.41379310344827586,0.3596285283565521,low,1,1
+formal sombrero,zh,zho_Hans,正式的衫,The official shirt,0.36363636363636365,0.4770759344100952,low,1,0
+formal kippah,zh,zho_Hans,官方的基帕,The official Kipa,0.5333333333333333,0.7639585137367249,medium,1,0
+formal yarmulke,zh,zho_Hans,正式的子,The official son,0.25806451612903225,0.35462942719459534,low,1,1
+formal mourning dress,zh,zho_Hans,正式的哀悼礼服,Official mourning dresses,0.782608695652174,0.8407870531082153,high,0,0
+formal ceremonial mask,zh,zho_Hans,正式仪式面具,Masks for official ceremonies,0.5882352941176471,0.8430414795875549,high,0,0
+casual dress,zh,zho_Hans,休服装,Disguise yourself,0.20689655172413793,0.49968141317367554,low,1,1
+casual clothing,zh,zho_Hans,休服装,Disguise yourself,0.1875,0.49431169033050537,low,1,1
+casual garment,zh,zho_Hans,休服装,Disguise yourself,0.1935483870967742,0.4843084216117859,low,1,1
+casual veil,zh,zho_Hans,休的面,Face off.,0.2,0.3919762969017029,low,1,0
+casual hijab,zh,zho_Hans,休的头巾,The rest of the headscarf,0.10810810810810811,0.41361960768699646,low,1,0
+casual niqab,zh,zho_Hans,休的尼加布,The Huguenots in Nicaragua,0.2631578947368421,0.3421187102794647,low,1,0
+white,zh,zho_Hans,白色,It's white.,0.625,0.8233981728553772,high,0,0
+red,zh,zho_Hans,红色,Red,1.0,0.7966870665550232,medium,0,0
+black,zh,zho_Hans,黑色,It's black.,0.625,0.8144668936729431,high,0,0
+blue,zh,zho_Hans,蓝色,It's blue.,0.5714285714285714,0.8097085356712341,high,0,0
+green,zh,zho_Hans,绿色,Green,1.0,0.7870005369186401,medium,0,0
+yellow,zh,zho_Hans,黄色,Yellow,1.0,0.8150094151496887,high,0,0
+purple,zh,zho_Hans,紫色,Purple,1.0,0.8478009700775146,high,0,0
+orange,zh,zho_Hans,色,Color,0.36363636363636365,0.47276410460472107,low,1,0
+gold,zh,zho_Hans,黄金,Gold,1.0,0.8405123353004456,high,0,0
+silver,zh,zho_Hans,银,Silver,1.0,0.8173803687095642,high,0,0
+dragon,zh,zho_Hans,龙,The Dragon,0.75,0.8237035274505615,high,0,0
+phoenix,zh,zho_Hans,菲尼克斯,The Phoenix,0.7777777777777778,0.8447192311286926,high,0,0
+lotus,zh,zho_Hans,莲花,Lotus,1.0,0.8064366579055786,high,0,0
+bamboo,zh,zho_Hans,竹子,The bamboo,0.75,0.8367981314659119,high,0,0
+olive,zh,zho_Hans,橄,What is it?,0.125,0.6734448075294495,medium,1,0
+maple,zh,zho_Hans,子,My son.,0.16666666666666666,0.3989863991737366,low,1,1
+totem,zh,zho_Hans,总体,Overall,0.3333333333333333,0.3488912284374237,low,1,0
+emblem,zh,zho_Hans,标志,Signs,0.0,0.8070391416549683,high,1,0
+anthem,zh,zho_Hans,诗歌,Poetry,0.16666666666666666,0.7927920818328857,medium,1,1
+flag,zh,zho_Hans,旗,The flag,0.6666666666666666,0.7661216259002686,medium,0,0
+icon,zh,zho_Hans,图标,Iconic,0.8,0.8138958215713501,high,0,0
+script,zh,zho_Hans,剧本,The script,0.75,0.8380696773529053,high,0,0
+calligraphy,zh,zho_Hans,书法,Writing,0.2222222222222222,0.8419342041015625,high,1,0
+lantern,zh,zho_Hans,灯具,Lighting,0.26666666666666666,0.793890118598938,medium,1,0
+opera,zh,zho_Hans,剧院,Theatre,0.3333333333333333,0.7763364911079407,medium,1,0
+dance,zh,zho_Hans,舞蹈,Dancing,0.6666666666666666,0.8235486745834351,high,0,0
+music,zh,zho_Hans,音乐,Music,1.0,0.8227033019065857,high,0,0
+folklore,zh,zho_Hans,人民故事,People's stories,0.4166666666666667,0.7804502248764038,medium,1,0
+myth,zh,zho_Hans,神话,Myth,1.0,0.8431991338729858,high,0,0
+legend,zh,zho_Hans,传奇,The legend,0.75,0.741921067237854,medium,0,0
+oral tradition,zh,zho_Hans,口头传统,Oral tradition,1.0,0.8523763418197632,high,0,0
+epic,zh,zho_Hans,史诗,The epic poem,0.47058823529411764,0.7779000401496887,medium,1,0
+fable,zh,zho_Hans,传说,The Legend,0.26666666666666666,0.821295976638794,high,1,0
+choir,zh,zho_Hans,合唱团,The Choir,0.7142857142857143,0.8383752703666687,high,0,0
+orchestra,zh,zho_Hans,乐团,Orchestra,1.0,0.8252156972885132,high,0,0
+drumming,zh,zho_Hans,鼓声,Drums,0.6153846153846154,0.8034030199050903,high,0,0
+tango,zh,zho_Hans,戈,Go!,0.5,0.37064358592033386,low,1,0
+flamenco,zh,zho_Hans,弗拉门戈,Flamengo,0.875,0.7243716716766357,medium,0,0
+bharatanatyam,zh,zho_Hans,印度语,Indian language,0.2857142857142857,0.3919559419155121,low,1,0
+kabuki,zh,zho_Hans,卡布基,Kabuki,1.0,0.847161054611206,high,0,0
+lion dance,zh,zho_Hans,狮子舞蹈,The Lion's Dance,0.7692307692307693,0.842754602432251,high,0,0
+dragon dance,zh,zho_Hans,龙舞,Dragon dancing,0.8461538461538461,0.8394354581832886,high,0,0
+totem pole,zh,zho_Hans,托特姆杆,The Totem pole,0.8333333333333334,0.8263767957687378,high,0,0
+prayer beads,zh,zho_Hans,祈祷珠,Prayers for the Pearl,0.5454545454545454,0.8221298456192017,high,1,0
+chopsticks,zh,zho_Hans,"子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子,子",sons and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and daughters and da,0.008658008658008658,0.2672751545906067,low,1,0
+tea ceremony,zh,zho_Hans,茶叶仪式,Tea ceremony,1.0,0.8350881934165955,high,0,0
+martial arts,zh,zho_Hans,武术,Martial arts,1.0,0.8483797311782837,high,0,0
+cultural white,zh,zho_Hans,文化白色,Culture is white,0.8,0.609968900680542,medium,0,0
+cultural red,zh,zho_Hans,文化红色,Cultural red,1.0,0.6151143312454224,medium,0,0
+cultural black,zh,zho_Hans,文化黑色,Black culture,0.4444444444444444,0.5738238096237183,low,1,0
+cultural blue,zh,zho_Hans,文化蓝色,Cultural Blue,1.0,0.6974226832389832,medium,0,0
+cultural green,zh,zho_Hans,文化绿色,Culture green,0.8888888888888888,0.6681410074234009,medium,0,0
+cultural yellow,zh,zho_Hans,文化黄色,Cultural yellow,1.0,0.6464934349060059,medium,0,0
+cultural purple,zh,zho_Hans,文化紫色,Purple culture,0.4827586206896552,0.7258262038230896,medium,1,0
+cultural orange,zh,zho_Hans,文化色,Colors of culture,0.4375,0.5498667359352112,low,1,0
+cultural gold,zh,zho_Hans,文化黄金,Cultural gold,1.0,0.8398027420043945,high,0,0
+cultural silver,zh,zho_Hans,文化银,Cultural silver,1.0,0.7915447950363159,medium,0,0
+cultural dragon,zh,zho_Hans,文化龙,The Dragon of Culture,0.4444444444444444,0.7829536199569702,medium,1,0
+cultural phoenix,zh,zho_Hans,文化城,City of Culture,0.45161290322580644,0.48471423983573914,low,1,0
+cultural lotus,zh,zho_Hans,文化莲花,Cultural lottery,0.8,0.7979927062988281,medium,0,0
+cultural bamboo,zh,zho_Hans,文化竹,Cultural bamboo,1.0,0.7903403639793396,medium,0,0
+cultural olive,zh,zho_Hans,文化橄,Cultural and cultural heritage,0.5454545454545454,0.5191767811775208,low,1,0
+cultural maple,zh,zho_Hans,文化果,Cultural Fruits,0.6206896551724138,0.6757317185401917,medium,0,0
+cultural totem,zh,zho_Hans,文化总体,Culture as a whole,0.5625,0.4478731155395508,low,1,0
+cultural emblem,zh,zho_Hans,文化标志,Cultural symbols,0.7741935483870968,0.8366693258285522,high,1,1
+cultural anthem,zh,zho_Hans,文化颂歌,Cultural songs,0.6896551724137931,0.8335322737693787,high,0,0
+cultural flag,zh,zho_Hans,文化旗,Cultural flags,0.9629629629629629,0.808157205581665,high,0,0
+cultural icon,zh,zho_Hans,文化标志,Cultural symbols,0.6896551724137931,0.8323273658752441,high,1,1
+cultural script,zh,zho_Hans,文化脚本,Cultural script,1.0,0.8111392259597778,high,0,0
+cultural calligraphy,zh,zho_Hans,文化书法,Cultural literature,0.6666666666666666,0.8346874713897705,high,0,0
+cultural lantern,zh,zho_Hans,文化灯塔,Cultural Lighthouse,0.6857142857142857,0.8188349008560181,high,0,0
+cultural incense,zh,zho_Hans,文化香料,Cultural spices,0.8387096774193549,0.7946293354034424,medium,0,0
+cultural opera,zh,zho_Hans,文化歌剧,Cultural opera,1.0,0.8098915815353394,high,0,0
+cultural dance,zh,zho_Hans,文化舞蹈,Cultural dance,1.0,0.8343185186386108,high,0,0
+cultural music,zh,zho_Hans,文化音乐,Cultural music,1.0,0.8427075743675232,high,0,0
+cultural folklore,zh,zho_Hans,文化民间,Cultural and civic,0.5142857142857142,0.5509127974510193,low,1,0
+cultural myth,zh,zho_Hans,文化神话,Cultural Myths,0.9629629629629629,0.8504388332366943,high,0,0
+cultural legend,zh,zho_Hans,文化传奇,Cultural legends,0.967741935483871,0.8084961175918579,high,0,0
+cultural oral tradition,zh,zho_Hans,文化口头传统,Cultural Oral Tradition,1.0,0.8484217524528503,high,0,0
+cultural epic,zh,zho_Hans,文化史诗,Cultural epics,0.9629629629629629,0.8084461688995361,high,0,0
+cultural fable,zh,zho_Hans,文化传说,Cultural legends,0.7333333333333333,0.8298537135124207,high,0,0
+cultural choir,zh,zho_Hans,文化合唱团,Cultural Choir,1.0,0.8192234039306641,high,0,0
+cultural orchestra,zh,zho_Hans,文化乐团,Cultural Orchestra,1.0,0.8133327960968018,high,0,0
+cultural drumming,zh,zho_Hans,文化鼓舞,Cultural Encouragement,0.6153846153846154,0.708381175994873,medium,0,0
+cultural chanting,zh,zho_Hans,文化歌唱,Cultural singing,0.7272727272727273,0.7846726775169373,medium,0,0
+cultural tango,zh,zho_Hans,文化戈,Culture Go,0.75,0.5738144516944885,low,1,0
+cultural flamenco,zh,zho_Hans,文化弗拉门戈,Culture of the Flamenco,0.75,0.7411706447601318,medium,0,0
+cultural bharatanatyam,zh,zho_Hans,文化节目,Cultural programming,0.5714285714285714,0.6291151642799377,medium,0,0
+cultural kabuki,zh,zho_Hans,文化卡布基,Culture of Kabuki,0.8125,0.7951018810272217,medium,0,0
+cultural lion dance,zh,zho_Hans,文化狮子舞蹈,Cultural Lion Dance,1.0,0.7824726700782776,medium,0,0
+cultural dragon dance,zh,zho_Hans,文化龙舞蹈,Cultural Dragon Dance,1.0,0.7867946624755859,medium,0,0
+cultural totem pole,zh,zho_Hans,文化杆,Cultural Pillars,0.6285714285714286,0.7213423252105713,medium,0,0
+cultural prayer beads,zh,zho_Hans,文化祈祷珠,Cultural Prayer Beads,1.0,0.7963385581970215,medium,0,0
+cultural rosary,zh,zho_Hans,文化念珠,Cultural medals,0.6666666666666666,0.8123286962509155,high,0,0
+cultural chopsticks,zh,zho_Hans,文化棒,Culture clubs,0.5625,0.7088817358016968,medium,0,0
+cultural tea ceremony,zh,zho_Hans,文化茶叶仪式,Cultural tea ceremony,1.0,0.7905385494232178,medium,0,0
+cultural martial arts,zh,zho_Hans,文化武术,Cultural and martial arts,0.9130434782608695,0.8252936005592346,high,0,0
+democracy,zh,zho_Hans,民主,Democracy,1.0,0.855189323425293,high,0,0
+monarchy,zh,zho_Hans,统治,Governance,0.4444444444444444,0.8334431648254395,high,1,0
+republic,zh,zho_Hans,共和国,The Republic,0.8,0.7689633369445801,medium,0,0
+federal,zh,zho_Hans,联邦政府,Federal government,0.56,0.7239471077919006,medium,0,0
+unitary,zh,zho_Hans,单位,Unit,0.7272727272727273,0.564161479473114,low,1,0
+parliament,zh,zho_Hans,议会,Parliament,1.0,0.8378225564956665,high,0,0
+senate,zh,zho_Hans,参议院,Senate,1.0,0.8247725367546082,high,0,0
+constitution,zh,zho_Hans,宪法,The Constitution,0.8571428571428571,0.8377705216407776,high,0,0
+bureaucracy,zh,zho_Hans,官僚主义,Bureaucracy,1.0,0.8551483154296875,high,0,0
+meritocracy,zh,zho_Hans,资质主义,Criticism,0.4,0.7810265421867371,medium,1,0
+oligarchy,zh,zho_Hans,寡头政权,Oligarchy,1.0,0.8572679758071899,high,0,0
+aristocracy,zh,zho_Hans,贵族阶级,The aristocracy,0.8461538461538461,0.8090440034866333,high,0,0
+tribunal,zh,zho_Hans,法庭,Court,0.15384615384615385,0.8028096556663513,high,1,0
+mediation,zh,zho_Hans,调解,Mediation,1.0,0.834265947341919,high,0,0
+civil law,zh,zho_Hans,公民法,Civil law,1.0,0.8640540242195129,high,0,0
+common law,zh,zho_Hans,公共法律,Public law,0.5,0.8407164812088013,high,1,0
+customary law,zh,zho_Hans,习俗法,Traditional Law,0.5,0.8579571843147278,high,1,0
+council,zh,zho_Hans,委员会,Committee,0.375,0.7570626139640808,medium,1,0
+chieftain,zh,zho_Hans,首领,Leaders,0.25,0.8331524729728699,high,1,0
+citizen,zh,zho_Hans,公民,Citizens,0.9333333333333333,0.8175203800201416,high,0,0
+state,zh,zho_Hans,国家,State of the Union,0.43478260869565216,0.755302906036377,medium,1,1
+nation,zh,zho_Hans,国家,State of the Union,0.4166666666666667,0.7884963154792786,medium,1,1
+border,zh,zho_Hans,边境,The border,0.75,0.8234224319458008,high,0,0
+governance,zh,zho_Hans,治理,Governance,1.0,0.8286840319633484,high,0,0
+policy,zh,zho_Hans,政策,Policy,1.0,0.794961154460907,medium,0,0
+regulation,zh,zho_Hans,监管,Regulations,0.9523809523809523,0.8092270493507385,high,0,0
+empire,zh,zho_Hans,帝国,The Empire,0.75,0.801067054271698,high,0,0
+colonial,zh,zho_Hans,殖民地,Colonies,0.75,0.8047670722007751,high,0,0
+decolonization,zh,zho_Hans,脱殖民化,Decolonization,1.0,0.8471847176551819,high,0,0
+judiciary,zh,zho_Hans,司法部门,Department of Justice,0.26666666666666666,0.8460158109664917,high,1,0
+legislature,zh,zho_Hans,立法机构,Legislative bodies,0.6206896551724138,0.8134579062461853,high,0,0
+executive,zh,zho_Hans,执行官,The executive,0.8181818181818182,0.7549722194671631,medium,0,0
+ministry,zh,zho_Hans,服务,Services,0.25,0.40898698568344116,low,1,0
+administration,zh,zho_Hans,管理,Management,0.3333333333333333,0.8122917413711548,high,1,0
+charter,zh,zho_Hans,宪章,The Charter,0.7777777777777778,0.7738745212554932,medium,0,0
+ordinance,zh,zho_Hans,条例,Regulations,0.2,0.7563343048095703,medium,1,0
+treaty,zh,zho_Hans,条约,Treaty,1.0,0.8095011711120605,high,0,0
+diplomacy,zh,zho_Hans,外交,Foreign Affairs,0.16666666666666666,0.8364382982254028,high,1,0
+taxation,zh,zho_Hans,税收,Taxes,0.46153846153846156,0.8419820070266724,high,1,0
+public office,zh,zho_Hans,公务员,Officials,0.45454545454545453,0.7722733020782471,medium,1,1
+village council,zh,zho_Hans,村议会,Village Council,1.0,0.8432401418685913,high,0,0
+city council,zh,zho_Hans,市议会,City Council,1.0,0.8404029011726379,high,0,0
+mayor,zh,zho_Hans,市长,The Mayor,0.7142857142857143,0.8135765790939331,high,0,0
+governor,zh,zho_Hans,州长,Governor,1.0,0.8250497579574585,high,0,0
+public democracy,zh,zho_Hans,公共民主,Public Democracy,1.0,0.8486752510070801,high,0,0
+public monarchy,zh,zho_Hans,公共君主制,Public monarchy,1.0,0.8589282035827637,high,0,0
+public republic,zh,zho_Hans,公共共和国,Public Republic,1.0,0.8341336250305176,high,0,0
+public federal,zh,zho_Hans,公共联邦,Public federation,0.8387096774193549,0.7959189414978027,medium,0,0
+public unitary,zh,zho_Hans,公共单位,Public units,0.8461538461538461,0.5572463274002075,low,1,0
+public parliament,zh,zho_Hans,公共议会,Public Assembly,0.5625,0.8262330293655396,high,0,0
+public senate,zh,zho_Hans,公众参议院,Senate of the People,0.36363636363636365,0.7497349977493286,medium,1,0
+public constitution,zh,zho_Hans,公共宪法,Public Constitution,1.0,0.8304914832115173,high,0,0
+public bureaucracy,zh,zho_Hans,公共官僚主义,Public bureaucracy,1.0,0.842347264289856,high,0,0
+public meritocracy,zh,zho_Hans,公共位,Public places,0.5806451612903226,0.39320042729377747,low,1,0
+public oligarchy,zh,zho_Hans,公共寡头制,Public oligarchy,1.0,0.8515164256095886,high,0,0
+public aristocracy,zh,zho_Hans,公众贵族,Public Nobility,0.6060606060606061,0.7992540597915649,medium,0,0
+public tribunal,zh,zho_Hans,公共法庭,Public court,0.5925925925925926,0.8270556926727295,high,0,0
+public mediation,zh,zho_Hans,公共调解,Public mediation,1.0,0.8416725397109985,high,0,0
+public civil law,zh,zho_Hans,公共民法,Public civil law,1.0,0.861746072769165,high,0,0
+public common law,zh,zho_Hans,公共公共法律,Public Public Law,0.7058823529411765,0.7036500573158264,medium,0,0
+public customary law,zh,zho_Hans,公共习俗法,Public customary law,1.0,0.8444399833679199,high,0,0
+public council,zh,zho_Hans,公共委员会,Public Committee,0.6666666666666666,0.8050612807273865,high,0,0
+public chieftain,zh,zho_Hans,公共领袖,Public leaders,0.6,0.811408281326294,high,0,0
+public citizen,zh,zho_Hans,公共公民,Public citizens,0.9655172413793104,0.812461793422699,high,0,0
+public state,zh,zho_Hans,公共国家,Public State,1.0,0.8392244577407837,high,1,1
+public nation,zh,zho_Hans,公共国家,Public State,0.72,0.8345085382461548,high,1,1
+public border,zh,zho_Hans,公共边境,Public borders,0.9629629629629629,0.8138561844825745,high,0,0
+public governance,zh,zho_Hans,公共治理,Public governance,1.0,0.8545936346054077,high,0,0
+public policy,zh,zho_Hans,公共政策,Public policy,1.0,0.8486887216567993,high,0,0
+public regulation,zh,zho_Hans,公共法规,Public regulations,0.9714285714285714,0.8172513842582703,high,0,0
+public empire,zh,zho_Hans,公共帝国,The public empire,0.8666666666666667,0.8311331868171692,high,0,0
+public colonial,zh,zho_Hans,公共殖民地,Public Colonies,0.8666666666666667,0.7453979253768921,medium,0,0
+public decolonization,zh,zho_Hans,公共的解殖民化,Public decolonization,1.0,0.7760171294212341,medium,0,0
+public judiciary,zh,zho_Hans,公共司法部门,Public Justice,0.7333333333333333,0.8496333956718445,high,0,0
+public legislature,zh,zho_Hans,公共立法机构,Public legislature,1.0,0.8197017908096313,high,0,0
+public executive,zh,zho_Hans,公共行政部门,Public administration,0.4864864864864865,0.8107632398605347,high,1,0
+public ministry,zh,zho_Hans,公众服务,Public services,0.6,0.7841618061065674,medium,0,0
+public administration,zh,zho_Hans,公共管理,Public administration,1.0,0.8584065437316895,high,0,0
+public charter,zh,zho_Hans,公共宪章,Public charter,1.0,0.8003219962120056,high,0,0
+public ordinance,zh,zho_Hans,公共法令,Public decree,0.6206896551724138,0.807063639163971,high,0,0
+public treaty,zh,zho_Hans,公共条约,Public Treaties,0.8571428571428571,0.8107430934906006,high,0,0
+public diplomacy,zh,zho_Hans,公共外交,Public diplomacy,1.0,0.849877655506134,high,0,0
+public taxation,zh,zho_Hans,公共税收,Public taxes,0.7407407407407407,0.8412802219390869,high,0,0
+public public office,zh,zho_Hans,公务员公务员,Civil servants Civil servants,0.16326530612244897,0.4954428970813751,low,1,0
+public village council,zh,zho_Hans,公众村议会,People's Village Council,0.782608695652174,0.775693416595459,medium,0,0
+public city council,zh,zho_Hans,公共市议会,Public City Council,1.0,0.8178341388702393,high,0,0
+public mayor,zh,zho_Hans,公共市长,Public mayors,0.96,0.7519527077674866,medium,0,0
+public governor,zh,zho_Hans,公务员,Officials,0.16666666666666666,0.5419094562530518,low,1,1
+state democracy,zh,zho_Hans,国家民主,National democracy,0.7272727272727273,0.843161940574646,high,0,0
+state monarchy,zh,zho_Hans,国家君主制,National monarchy,0.7096774193548387,0.8552559018135071,high,0,0
+state republic,zh,zho_Hans,国家共和国,National Republic,0.7096774193548387,0.776065468788147,medium,0,0
+state federal,zh,zho_Hans,国家联邦,National federation,0.5625,0.6948524117469788,medium,0,0
+state unitary,zh,zho_Hans,国家单位,National units,0.5185185185185185,0.6470270752906799,medium,1,0
+state parliament,zh,zho_Hans,国家议会,National Assembly,0.24242424242424243,0.8321244716644287,high,1,0
+state senate,zh,zho_Hans,国家参议院,State Senate,1.0,0.8345867991447449,high,0,0
+state constitution,zh,zho_Hans,国家宪法,National Constitution,0.7692307692307693,0.8566603064537048,high,0,0
+state bureaucracy,zh,zho_Hans,国家官僚主义,State bureaucracy,1.0,0.8465439081192017,high,0,0
+state meritocracy,zh,zho_Hans,国家权,Rights of the State,0.2777777777777778,0.4835338890552521,low,1,0
+state oligarchy,zh,zho_Hans,国家寡头制,State oligarchy,1.0,0.8577079176902771,high,0,0
+state aristocracy,zh,zho_Hans,国家贵族,National nobility,0.35294117647058826,0.8251700401306152,high,1,0
+identity,zh,zho_Hans,身份,Identity,1.0,0.7583609223365784,medium,0,0
+ethnicity,zh,zho_Hans,民族性,Ethnicity,1.0,0.8444012999534607,high,0,0
+diaspora,zh,zho_Hans,流亡者,The exiles,0.2222222222222222,0.8408573269844055,high,1,0
+migration,zh,zho_Hans,移民,Immigrants,0.631578947368421,0.8578659296035767,high,1,1
+immigrant,zh,zho_Hans,移民,Immigrants,0.9473684210526315,0.8272709846496582,high,1,1
+refugee,zh,zho_Hans,难民,Refugees,0.9333333333333333,0.8504233360290527,high,0,0
+minority,zh,zho_Hans,少数民族,Minorities,0.7777777777777778,0.7621632814407349,medium,0,0
+majority,zh,zho_Hans,多数,The majority,0.8,0.7902389764785767,medium,0,0
+assimilation,zh,zho_Hans,归化,Individualization,0.4827586206896552,0.80137699842453,high,1,0
+integration,zh,zho_Hans,集成,Integration,1.0,0.7236526608467102,medium,0,0
+segregation,zh,zho_Hans,隔离,Separated,0.5,0.8272640705108643,high,1,0
+pluralism,zh,zho_Hans,多元主义,Diversity,0.2222222222222222,0.8572095632553101,high,1,0
+multiculturalism,zh,zho_Hans,多元文化主义,Multiculturalism,1.0,0.8714885711669922,high,0,0
+indigenous,zh,zho_Hans,原住民,Indigenous people,0.7407407407407407,0.7773698568344116,medium,1,1
+native,zh,zho_Hans,原住民,Indigenous people,0.2608695652173913,0.7945951223373413,medium,1,1
+foreign,zh,zho_Hans,外国,Foreigners,0.8235294117647058,0.6873247623443604,medium,0,0
+local,zh,zho_Hans,地方,Location,0.6153846153846154,0.65064537525177,medium,0,0
+global,zh,zho_Hans,全球,Worldwide,0.13333333333333333,0.769158124923706,medium,1,1
+community,zh,zho_Hans,社区,Community,1.0,0.8240825533866882,high,0,0
+belonging,zh,zho_Hans,属于,It belongs to,0.5454545454545454,0.6475102305412292,medium,1,0
+language,zh,zho_Hans,语言,Language,1.0,0.8143740892410278,high,0,0
+dialect,zh,zho_Hans,方言,Dialogues,0.625,0.8083581328392029,high,0,0
+heritage,zh,zho_Hans,遗产,Legacy,0.2857142857142857,0.824528694152832,high,1,1
+xenophobia,zh,zho_Hans,仇外,Enemies of Foreigners,0.3225806451612903,0.8100447058677673,high,1,0
+stereotype,zh,zho_Hans,刻板印象,Stereotypes,0.9523809523809523,0.8360788822174072,high,0,0
+prejudice,zh,zho_Hans,偏见,Prejudice,1.0,0.852795422077179,high,0,0
+citizenship,zh,zho_Hans,公民身份,Citizenship,1.0,0.8402739763259888,high,0,0
+acculturation,zh,zho_Hans,培养,Growing up,0.08695652173913043,0.7195716500282288,medium,1,0
+hybridity,zh,zho_Hans,混合性,Mixed,0.2857142857142857,0.8450158834457397,high,1,0
+homeland,zh,zho_Hans,祖国,Motherland,0.6666666666666666,0.7847647666931152,medium,0,0
+exile,zh,zho_Hans,流亡,Exile,1.0,0.8302451372146606,high,0,0
+settler,zh,zho_Hans,定居者,Settlers,0.9333333333333333,0.8418155312538147,high,0,0
+cosmopolitan,zh,zho_Hans,全球化,Globalization,0.4,0.7617032527923584,medium,1,0
+transnational,zh,zho_Hans,跨国,Transnational,1.0,0.7844046354293823,medium,0,0
+identity politics,zh,zho_Hans,身份政治,Identity and Politics,0.8947368421052632,0.8277114629745483,high,0,0
+mother tongue,zh,zho_Hans,母语,Mother tongue,1.0,0.8115930557250977,high,0,0
+second language,zh,zho_Hans,第二语言,Second language,1.0,0.8359463214874268,high,0,0
+local identity,zh,zho_Hans,地方身份,Local identity,1.0,0.8136166334152222,high,0,0
+local ethnicity,zh,zho_Hans,当地民族,Indigenous peoples,0.12121212121212122,0.8024294376373291,high,1,0
+local diaspora,zh,zho_Hans,地方流亡者,Local refugees,0.5,0.8163102269172668,high,1,0
+local migration,zh,zho_Hans,地方迁徙,Local migration,1.0,0.8490027785301208,high,0,0
+local immigrant,zh,zho_Hans,当地移民,Local immigrants,0.967741935483871,0.8321682214736938,high,0,0
+local refugee,zh,zho_Hans,当地难民,Local refugees,0.9629629629629629,0.8299014568328857,high,0,0
+local minority,zh,zho_Hans,地方少数民族,Local minorities,0.8666666666666667,0.8093537092208862,high,0,0
+local majority,zh,zho_Hans,地方多数,Local majority,1.0,0.7613056302070618,medium,0,0
+local assimilation,zh,zho_Hans,地方同化,Local assimilation,1.0,0.805952250957489,high,0,0
+local integration,zh,zho_Hans,局部集成,Local integration,1.0,0.7926468849182129,medium,0,0
+local segregation,zh,zho_Hans,地方分离,Local Separation,0.8484848484848485,0.8319072723388672,high,0,0
+local pluralism,zh,zho_Hans,地方多元主义,Local pluralism,1.0,0.851290225982666,high,0,0
+local multiculturalism,zh,zho_Hans,地方多元文化主义,Local Multiculturalism,1.0,0.8439497351646423,high,0,0
+local indigenous,zh,zho_Hans,当地原住民,Indigenous peoples,0.5882352941176471,0.7715553045272827,medium,1,1
+local native,zh,zho_Hans,当地原住民,Indigenous peoples,0.13333333333333333,0.7793928980827332,medium,1,1
+local foreign,zh,zho_Hans,国内外,At home and abroad,0.25806451612903225,0.6798191070556641,medium,1,0
+local local,zh,zho_Hans,地方地方,Locally,0.6666666666666666,0.5629478693008423,low,1,0
+local global,zh,zho_Hans,地方全球,Local and Global,0.8571428571428571,0.6718905568122864,medium,0,0
+local community,zh,zho_Hans,地方社区,Local communities,0.875,0.8349014520645142,high,0,0
+local belonging,zh,zho_Hans,地方属性,Local characteristics,0.4444444444444444,0.7711963057518005,medium,1,0
+local language,zh,zho_Hans,当地语言,Local languages,0.9655172413793104,0.8319262862205505,high,0,0
+local dialect,zh,zho_Hans,地方方言,Local dialects,0.9629629629629629,0.8482968807220459,high,0,0
+local heritage,zh,zho_Hans,地方遗产,Local heritage,1.0,0.8412587642669678,high,0,0
+local xenophobia,zh,zho_Hans,当地仇外,Locally hostile,0.5806451612903226,0.7763568162918091,medium,0,0
+local stereotype,zh,zho_Hans,当地刻板印象,Local stereotypes,0.9696969696969697,0.8356740474700928,high,0,0
+local prejudice,zh,zho_Hans,地方偏见,Local prejudice,1.0,0.8612744212150574,high,0,0
+local solidarity,zh,zho_Hans,地方团结,Local Unity,0.6666666666666666,0.8474917411804199,high,0,0
+local citizenship,zh,zho_Hans,地方公民身份,Local citizenship,1.0,0.8228759765625,high,0,0
+local acculturation,zh,zho_Hans,地方的培养,Local cultivation,0.8333333333333334,0.7186989188194275,medium,0,0
+local hybridity,zh,zho_Hans,地方混合性,Local mixing,0.5925925925925926,0.8513540625572205,high,0,0
+local homeland,zh,zho_Hans,地方的祖国,Local homelands,0.9655172413793104,0.7304342985153198,medium,0,0
+local exile,zh,zho_Hans,地方流亡,Local exile,1.0,0.8326416015625,high,0,0
+local settler,zh,zho_Hans,当地定居者,Local settlers,0.9629629629629629,0.8414211869239807,high,0,0
+local cosmopolitan,zh,zho_Hans,地方世界,The Local World,0.48484848484848486,0.5210036635398865,low,1,0
+local transnational,zh,zho_Hans,地方跨国,Local and transnational,0.9047619047619048,0.685494601726532,medium,0,0
+local identity politics,zh,zho_Hans,地方身份政治,Local identity politics,1.0,0.80424964427948,high,0,0
+local mother tongue,zh,zho_Hans,当地母语,Local native language,0.65,0.8195966482162476,high,0,0
+local second language,zh,zho_Hans,地方第二语言,Local second language,1.0,0.8015195727348328,high,0,0
+global identity,zh,zho_Hans,全球身份,Global identity,1.0,0.7994744777679443,medium,0,0
+global ethnicity,zh,zho_Hans,全球种族,The Global Race,0.5161290322580645,0.7913894653320312,medium,1,0
+global diaspora,zh,zho_Hans,全球的流亡者,Expatriates from around the world,0.25,0.8242313861846924,high,1,0
+global migration,zh,zho_Hans,全球移民,Global migration,1.0,0.8531055450439453,high,1,1
+global immigrant,zh,zho_Hans,全球移民,Global migration,0.8125,0.8118336200714111,high,1,1
+global refugee,zh,zho_Hans,全球难民,Refugees from around the world,0.3181818181818182,0.8382024765014648,high,1,0
+global minority,zh,zho_Hans,全球少数民族,Minorities around the world,0.3333333333333333,0.7723667025566101,medium,1,0
+global majority,zh,zho_Hans,全球多数,Most of the world,0.25,0.8094805479049683,high,1,0
+global assimilation,zh,zho_Hans,全球化化,Globalization,0.75,0.8201505541801453,high,0,0
+global integration,zh,zho_Hans,全球一体化,Global integration,1.0,0.8548464179039001,high,0,0
+global segregation,zh,zho_Hans,全球分离,Global Separation,0.8571428571428571,0.811058521270752,high,0,0
+global pluralism,zh,zho_Hans,全球多元主义,Global pluralism,1.0,0.8398193120956421,high,0,0
+global multiculturalism,zh,zho_Hans,全球多元文化主义,Multiculturalism around the world,0.5714285714285714,0.8515039682388306,high,0,0
+global indigenous,zh,zho_Hans,全球原住民,Indigenous peoples around the world,0.38461538461538464,0.7762103080749512,medium,1,0
+global native,zh,zho_Hans,全球原生,The world's native,0.5161290322580645,0.8083057999610901,high,1,0
+global foreign,zh,zho_Hans,全球外来,Around the World,0.26666666666666666,0.5741563439369202,low,1,0
+global local,zh,zho_Hans,全球本地,Locally around the world,0.2777777777777778,0.683291494846344,medium,1,0
+global global,zh,zho_Hans,全球,Worldwide,0.09090909090909091,0.5196104645729065,low,1,1
+global community,zh,zho_Hans,全球社会,Global community,1.0,0.8442873358726501,high,0,0
+global belonging,zh,zho_Hans,全球属性,Global attributes,0.5454545454545454,0.6964306831359863,medium,1,0
+global language,zh,zho_Hans,全球语言,Global languages,0.967741935483871,0.8148295879364014,high,0,0
+global dialect,zh,zho_Hans,全球方言,Global Dialogues,0.8,0.8242469429969788,high,0,0
+global heritage,zh,zho_Hans,全球遗产,World heritage,0.6896551724137931,0.8373744487762451,high,0,0
+global xenophobia,zh,zho_Hans,全球仇外,Global hatred,0.5333333333333333,0.8327046036720276,high,1,0
+greeting,zh,zho_Hans,问候,Greetings,0.9411764705882353,0.7871479392051697,medium,0,0
+handshake,zh,zho_Hans,握手,Shake hands,0.5,0.8333958387374878,high,1,0
+bow,zh,zho_Hans,鞠躬,Bowing down,0.42857142857142855,0.8068492412567139,high,1,0
+hug,zh,zho_Hans,拥抱,Embrace,0.0,0.8040010929107666,high,1,0
+kiss,zh,zho_Hans,亲吻,Kisses and kisses.,0.36363636363636365,0.8340219259262085,high,1,0
+gift giving,zh,zho_Hans,赠送礼物,Giving gifts,0.5217391304347826,0.8341860771179199,high,1,0
+hosting,zh,zho_Hans,托管,Hosted,0.6153846153846154,0.8048425912857056,high,0,0
+shared meal,zh,zho_Hans,分享餐饮,Sharing meals,0.75,0.7143568992614746,medium,0,0
+tea time,zh,zho_Hans,茶叶时间,Tea time,1.0,0.7874177098274231,medium,0,0
+funeral,zh,zho_Hans,葬礼,Funeral,1.0,0.8262808322906494,high,0,0
+mourning,zh,zho_Hans,哀悼,The mourning,0.8,0.8012429475784302,high,0,0
+burial,zh,zho_Hans,埋葬,Buried,0.6666666666666666,0.8179020881652832,high,0,0
+cremation,zh,zho_Hans,焚烧,Incineration,0.6666666666666666,0.8087145686149597,high,0,0
+birth,zh,zho_Hans,生日,Birthday,0.7692307692307693,0.7414904236793518,medium,0,0
+naming ceremony,zh,zho_Hans,命名仪式,The naming ceremony,0.8823529411764706,0.8159990310668945,high,0,0
+coming of age,zh,zho_Hans,年龄达成,The age of majority,0.375,0.41482749581336975,low,1,0
+rite of passage,zh,zho_Hans,通过仪式,Through the ceremony,0.2857142857142857,0.6470208764076233,medium,1,0
+ceremony,zh,zho_Hans,仪式,The ceremony,0.8,0.7890220880508423,medium,1,1
+weekday,zh,zho_Hans,周日,Sunday,0.46153846153846156,0.8109199404716492,high,1,0
+weekend,zh,zho_Hans,周末,The weekend,0.7777777777777778,0.8095284104347229,high,0,0
+workday,zh,zho_Hans,工作日,Working day,0.7777777777777778,0.7925155758857727,medium,0,0
+rest day,zh,zho_Hans,休息日,Holidays,0.375,0.8142821192741394,high,1,0
+queue,zh,zho_Hans,排队,Line up,0.16666666666666666,0.764275074005127,medium,1,0
+punctuality,zh,zho_Hans,准时性,Timeliness,0.2857142857142857,0.8308451175689697,high,1,0
+lateness,zh,zho_Hans,延迟,Delayed,0.4,0.8044272065162659,high,1,0
+privacy,zh,zho_Hans,隐私,Privacy,1.0,0.8522444367408752,high,0,0
+public space,zh,zho_Hans,公共空间,Public spaces,0.96,0.8354501724243164,high,0,0
+neighbor,zh,zho_Hans,邻居,Neighbors,0.9411764705882353,0.8185915946960449,high,0,0
+household visit,zh,zho_Hans,家庭访问,Family visits,0.5,0.8234436511993408,high,1,0
+guest,zh,zho_Hans,客人,Guests,0.9090909090909091,0.7271896004676819,medium,0,0
+host,zh,zho_Hans,接待者,The receptionist,0.4,0.8280951380729675,high,1,0
+table manners,zh,zho_Hans,餐桌礼仪,Meal-table courtesy,0.5,0.835037887096405,high,1,0
+home cooking,zh,zho_Hans,在家做饭,Cooking at home,0.5185185185185185,0.8209944367408752,high,1,0
+festival meal,zh,zho_Hans,节日餐,Feast Meals,0.75,0.8139014840126038,high,0,0
+fast day,zh,zho_Hans,快速的一天,It was a fast-paced day.,0.5,0.6520714163780212,medium,1,0
+memorial day,zh,zho_Hans,纪念日,Day of Remembrance,0.3333333333333333,0.7281091213226318,medium,1,0
+ancestor day,zh,zho_Hans,祖先日,Father's Day,0.5833333333333334,0.8146699666976929,high,0,0
+seasonal ritual,zh,zho_Hans,季节式仪式,Seasonal ceremony,0.625,0.8405841588973999,high,0,0
+daily greeting,zh,zho_Hans,每天的问候,Greetings every day,0.48484848484848486,0.7936804294586182,medium,1,0
+daily handshake,zh,zho_Hans,每天握手,Shake hands every day,0.4444444444444444,0.791188657283783,medium,1,0
+daily bow,zh,zho_Hans,每天的弓,Every day's bow,0.5833333333333334,0.4761159121990204,low,1,0
+daily hug,zh,zho_Hans,每天拥抱,Embrace every day,0.23076923076923078,0.7406637668609619,medium,1,0
+daily kiss,zh,zho_Hans,每天的吻,A kiss every day,0.46153846153846156,0.7916430234909058,medium,1,0
+daily gift giving,zh,zho_Hans,每天赠送礼物,Giving gifts every day,0.3076923076923077,0.81117844581604,high,1,0
+daily hosting,zh,zho_Hans,每日接待,Acceptance every day,0.18181818181818182,0.591875433921814,low,1,0
+daily hospitality,zh,zho_Hans,每天的客人,Visitors every day,0.17142857142857143,0.4792170822620392,low,1,0
+daily shared meal,zh,zho_Hans,每日共享餐,Sharing a meal every day,0.43902439024390244,0.767949104309082,medium,1,0
+daily banquet,zh,zho_Hans,每天的宴会,The banquet every day,0.47058823529411764,0.7850762605667114,medium,1,0
+daily tea time,zh,zho_Hans,每日茶叶时间,Daily tea time,1.0,0.6816797852516174,medium,0,0
+daily funeral,zh,zho_Hans,每天的葬礼,Funerals every day,0.45161290322580644,0.7758793830871582,medium,1,0
+daily mourning,zh,zho_Hans,每天的哀悼,The Day of Mourning,0.7272727272727273,0.7900702953338623,medium,0,0
+daily burial,zh,zho_Hans,每天埋葬,Buried every day,0.35714285714285715,0.7022227048873901,medium,1,0
+daily cremation,zh,zho_Hans,每日焚烧,Burning every day,0.1875,0.724237859249115,medium,1,0
+daily birth,zh,zho_Hans,每日出生,Born every day,0.24,0.7313191890716553,medium,1,0
+daily naming ceremony,zh,zho_Hans,每天的命名仪式,Daily naming ceremony,1.0,0.7973059415817261,medium,0,0
+daily coming of age,zh,zho_Hans,每天成年,Growing up every day,0.358974358974359,0.5462347269058228,low,1,0
+daily rite of passage,zh,zho_Hans,每天的通行仪式,The daily procession,0.4878048780487805,0.7161411046981812,medium,1,0
+daily ceremony,zh,zho_Hans,每天的仪式,The Daily Ritual,0.4666666666666667,0.8071123361587524,high,1,0
+daily weekday,zh,zho_Hans,每天工作日,Day of work,0.25,0.6876080632209778,medium,1,0
+daily weekend,zh,zho_Hans,每日周末,Every weekend,0.6923076923076923,0.7269744873046875,medium,0,0
+daily workday,zh,zho_Hans,每日工作日,Day of work,0.6666666666666666,0.8109211921691895,high,0,0
+daily rest day,zh,zho_Hans,每日休息日,Every day is a holiday.,0.2702702702702703,0.8197664022445679,high,1,0
+daily queue,zh,zho_Hans,每日排队,Line up every day,0.21428571428571427,0.755001425743103,medium,1,0
+daily punctuality,zh,zho_Hans,每天的准时性,The timeliness of each day,0.13953488372093023,0.798209547996521,medium,1,0
+daily lateness,zh,zho_Hans,每日延迟,Day by day delays,0.45161290322580644,0.7602910399436951,medium,1,0
+daily privacy,zh,zho_Hans,日常隐私,Privacy on a daily basis,0.3783783783783784,0.8032540678977966,high,1,0
+daily public space,zh,zho_Hans,日常公共空间,Common public spaces,0.6842105263157895,0.7707094550132751,medium,0,0
+daily neighbor,zh,zho_Hans,日常的邻居,Everyday neighbors,0.75,0.7430418729782104,medium,0,0
+daily household visit,zh,zho_Hans,每天的家庭访问,Family visits every day,0.45454545454545453,0.7967578768730164,medium,1,0
+daily guest,zh,zho_Hans,每日客人,Daily guests,0.9565217391304348,0.6026073694229126,medium,0,0
+daily host,zh,zho_Hans,日常主机,Daily host,1.0,0.558100700378418,low,1,0
+daily table manners,zh,zho_Hans,每天的餐桌礼仪,The daily table manners,0.9047619047619048,0.8052554726600647,high,0,0
+daily home cooking,zh,zho_Hans,每天在家做饭,Cooking at home every day,0.32558139534883723,0.8155746459960938,high,1,0
+daily festival meal,zh,zho_Hans,每天的节日餐,Feast Meals Every Day,0.45,0.7714459300041199,medium,1,0
+daily fast day,zh,zho_Hans,每天的禁食日,Day of fasting every day,0.631578947368421,0.7631968259811401,medium,0,0
+daily memorial day,zh,zho_Hans,每日纪念日,Day of Remembrance,0.5,0.716377317905426,medium,1,0
+daily ancestor day,zh,zho_Hans,日常的祖先日,The Day of the Fathers,0.25,0.6767810583114624,medium,1,0
+daily seasonal ritual,zh,zho_Hans,每日季节仪式,Day-to-day seasonal rituals,0.7916666666666666,0.8127220273017883,high,0,0
+household greeting,zh,zho_Hans,家庭的问候,Greetings from the Family,0.37209302325581395,0.7817246317863464,medium,1,0
+household handshake,zh,zho_Hans,家庭握手,Family Handshake,0.6285714285714286,0.8136244416236877,high,0,0
+household bow,zh,zho_Hans,家庭,Family,0.10526315789473684,0.3781602084636688,low,1,1
+household hug,zh,zho_Hans,家庭拥抱,Family Embrace,0.07407407407407407,0.7687755823135376,medium,1,0
+household kiss,zh,zho_Hans,家庭亲吻,Family kiss,0.48,0.8187739253044128,high,1,0
+household gift giving,zh,zho_Hans,家庭赠送礼物,Gifts for Families,0.358974358974359,0.818466067314148,high,1,0
+household hosting,zh,zho_Hans,家庭住宿,Family Accommodation,0.32432432432432434,0.7401446104049683,medium,1,0
+household hospitality,zh,zho_Hans,家庭的热情,Family enthusiasm,0.21052631578947367,0.7711657881736755,medium,1,0
+household shared meal,zh,zho_Hans,家庭共享餐,Family Meals,0.36363636363636365,0.7967581748962402,medium,1,0
+household banquet,zh,zho_Hans,家庭宴会,Family feast,0.13793103448275862,0.8222036361694336,high,1,0
+household tea time,zh,zho_Hans,家庭茶叶时间,Family Tea Time,0.6060606060606061,0.6278940439224243,medium,0,0
+household funeral,zh,zho_Hans,家庭葬礼,Family Funeral,0.5806451612903226,0.8068132400512695,high,0,0
+household mourning,zh,zho_Hans,家庭哀悼,Family mourning,0.6060606060606061,0.8277378678321838,high,0,0
+household burial,zh,zho_Hans,家庭埋葬,Family Burial,0.5517241379310345,0.8003325462341309,high,0,0
+household cremation,zh,zho_Hans,家庭焚烧,Family burning,0.24242424242424243,0.8212844729423523,high,1,0
+household birth,zh,zho_Hans,家庭出生,The birth of a family,0.4444444444444444,0.7256171107292175,medium,1,0
+household naming ceremony,zh,zho_Hans,家庭命名仪式,Family naming ceremony,0.723404255319149,0.7809635400772095,medium,0,0
+household coming of age,zh,zho_Hans,家庭成年,Family Growth,0.2222222222222222,0.6754022836685181,medium,1,0
+household rite of passage,zh,zho_Hans,家庭通行仪式,Family Passing Ceremony,0.3333333333333333,0.6475247144699097,medium,1,0
+household ceremony,zh,zho_Hans,家庭仪式,Family Rituals,0.125,0.7948095798492432,medium,1,0
+public,zh,zho_Hans,公众,The public,0.75,0.7560772895812988,medium,0,0
+fast,zh,zho_Hans,快速,It's fast.,0.5714285714285714,0.7154886722564697,medium,0,0
+grand,zh,zho_Hans,巨大的,It's huge.,0.13333333333333333,0.47843387722969055,low,1,0
+gift,zh,zho_Hans,礼物,Gifts,0.8888888888888888,0.8201837539672852,high,1,1
+meal,zh,zho_Hans,食物,Food,0.0,0.7572247385978699,medium,1,0
+custom,zh,zho_Hans,定制,Customized,0.75,0.7246267795562744,medium,0,0

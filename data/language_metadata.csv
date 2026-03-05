@@ -1,0 +1,10 @@
+language,code,family,script,wals_distance_to_en,hofstede_idv_distance
+English,EN,Indo-European,Latin,0.0,0.0
+Chinese (Mandarin),ZH,Sino-Tibetan,Hanzi,1.0,71.0
+French,FR,Indo-European/Romance,Latin,0.3,20.0
+Persian (Farsi),FAS,Indo-European/Iranian,Arabic,0.7,50.0
+German,DEU,Indo-European/Germanic,Latin,0.2,24.0
+Dutch,NLD,Indo-European/Germanic,Latin,0.05,11.0
+Ukrainian,UKR,Indo-European/Slavic,Cyrillic,0.55,66.0
+Bulgarian,BUL,Indo-European/Slavic,Cyrillic,0.50,61.0
+Indonesian,IND,Austronesian,Latin,0.8,77.0

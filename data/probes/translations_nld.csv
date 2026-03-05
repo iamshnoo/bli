@@ -1,0 +1,1001 @@
+source_term_en,target_lang,target_lang_nllb,translated_term,back_translated_en,back_similarity,comet_kiwi_score,qe_tier,needs_manual_review,duplicate_translation
+individualism,nld,nld_Latn,individualisme,Individualism,1.0,0.8733891248703003,high,0,0
+collectivism,nld,nld_Latn,collectivisme,Collectivism,1.0,0.8651548624038696,high,0,0
+hierarchy,nld,nld_Latn,hiërarchie,the hierarchy,0.8181818181818182,0.8516774773597717,high,0,0
+equality,nld,nld_Latn,gelijkheid,Equality,1.0,0.859075665473938,high,0,0
+authority,nld,nld_Latn,autoriteit,Authority,1.0,0.8169552683830261,high,0,0
+autonomy,nld,nld_Latn,Autonomie,Self-government,0.08695652173913043,0.8612529039382935,high,1,0
+obedience,nld,nld_Latn,gehoorzaamheid,Obedience,1.0,0.8612582683563232,high,0,0
+duty,nld,nld_Latn,belasting,taxation,0.16666666666666666,0.7628160715103149,medium,1,0
+freedom,nld,nld_Latn,vrijheid,Freedom of movement,0.5384615384615384,0.865750789642334,high,1,0
+honor,nld,nld_Latn,eer,honour,0.9090909090909091,0.5464709997177124,low,1,0
+shame,nld,nld_Latn,schande,Shame on you.,0.5555555555555556,0.8240026831626892,high,0,0
+virtue,nld,nld_Latn,deugd,Virtue,1.0,0.6293589472770691,medium,0,0
+vice,nld,nld_Latn,vicieus,Vicious,0.5454545454545454,0.5355398654937744,low,1,0
+respect,nld,nld_Latn,Respect,Respect,1.0,0.6536740064620972,medium,0,0
+modesty,nld,nld_Latn,bescheidenheid,Modesty,1.0,0.8361266851425171,high,0,0
+purity,nld,nld_Latn,zuiverheid,Purity,1.0,0.8649165630340576,high,0,0
+pollution,nld,nld_Latn,Vervuiling,Pollution,1.0,0.8255771398544312,high,0,0
+face,nld,nld_Latn,Gezicht,Faces,0.8888888888888888,0.7165313959121704,medium,0,0
+reputation,nld,nld_Latn,Reputatie,Reputation,1.0,0.8530808687210083,high,0,0
+hospitality,nld,nld_Latn,gastvrijheid,Hospitality,1.0,0.8707351088523865,high,0,0
+charity,nld,nld_Latn,liefdadigheidsorganisaties,charitable organisations,0.3870967741935484,0.8512515425682068,high,1,0
+cooperation,nld,nld_Latn,Samenwerking,Cooperation,1.0,0.843076229095459,high,0,0
+competition,nld,nld_Latn,Concurrentie,Competition,1.0,0.7878556251525879,medium,0,0
+fairness,nld,nld_Latn,rechtvaardigheid,Justice,0.26666666666666666,0.8669300675392151,high,1,0
+justice,nld,nld_Latn,Gerechtigheid,Justice,1.0,0.853202223777771,high,0,0
+taboo,nld,nld_Latn,taboe,Taboo,1.0,0.8055420517921448,high,0,0
+tradition,nld,nld_Latn,traditie,Tradition,1.0,0.8624895215034485,high,0,0
+modernity,nld,nld_Latn,moderniteit,modernity,1.0,0.8624758720397949,high,0,0
+sacred,nld,nld_Latn,heilig,Sacred,1.0,0.8089675903320312,high,0,0
+secular,nld,nld_Latn,seculiere,Secular,1.0,0.6930340528488159,medium,0,0
+conformity,nld,nld_Latn,Conformiteit,Conformity,1.0,0.8331973552703857,high,0,0
+dissent,nld,nld_Latn,tegenstanders,Opponents,0.375,0.3506629467010498,low,1,0
+restraint,nld,nld_Latn,beperking,Restriction,0.7,0.704253077507019,medium,0,0
+indulgence,nld,nld_Latn,overgave,Surrender,0.3157894736842105,0.39705681800842285,low,1,0
+solidarity,nld,nld_Latn,Solidariteit,Solidarity,1.0,0.8542356491088867,high,0,0
+merit,nld,nld_Latn,Verdienste,Earnings,0.46153846153846156,0.8036647439002991,high,1,0
+trust,nld,nld_Latn,vertrouwen,Confidence,0.0,0.8356382250785828,high,1,0
+loyalty,nld,nld_Latn,loyaliteit,Loyalty,1.0,0.8718091249465942,high,0,0
+integrity,nld,nld_Latn,integriteit,Integrity,1.0,0.8546501398086548,high,0,0
+discretion,nld,nld_Latn,discretionaire bevoegdheid,discretionary power,0.6896551724137931,0.8553470969200134,high,0,0
+humility,nld,nld_Latn,nederigheid,Humility,1.0,0.8611334562301636,high,0,0
+discipline,nld,nld_Latn,gediscipline,Discipline,1.0,0.46839210391044617,low,1,0
+self control,nld,nld_Latn,zelfbeheersing,Self-control,0.9166666666666666,0.8613849878311157,high,0,0
+deference,nld,nld_Latn,Deferentie,Difference,0.8421052631578947,0.8079544305801392,high,0,0
+civic individualism,nld,nld_Latn,burgerlijke individualisme,Citizen individualism,0.85,0.8790297508239746,high,0,0
+civic collectivism,nld,nld_Latn,burgerlijk collectivisme,Civil collectivism,0.9444444444444444,0.8668649196624756,high,0,0
+civic hierarchy,nld,nld_Latn,burgerlijke hiërarchie,civil hierarchy,0.9333333333333333,0.8712153434753418,high,0,0
+civic equality,nld,nld_Latn,burgerlijke gelijkheid,civil equality,0.9285714285714286,0.8781845569610596,high,0,0
+civic authority,nld,nld_Latn,burgerlijke autoriteit,civil authority,0.9333333333333333,0.873845636844635,high,0,0
+civic autonomy,nld,nld_Latn,burgerlijke autonomie,Civil autonomy,0.9285714285714286,0.8741801977157593,high,0,0
+civic obedience,nld,nld_Latn,burgergehoorzaamheid,Citizen obedience,0.8125,0.8803960084915161,high,0,0
+civic duty,nld,nld_Latn,Burgerlijke plicht,Responsibility as a citizen,0.16216216216216217,0.870530366897583,high,1,0
+civic freedom,nld,nld_Latn,burgerlijke vrijheid,Citizen's freedom,0.7333333333333333,0.8856853246688843,high,0,0
+civic honor,nld,nld_Latn,Burgerlijke eer,Civil honour,0.8695652173913043,0.8638176321983337,high,0,0
+civic shame,nld,nld_Latn,burgerlijke schaamte,Civil disgrace,0.48,0.8640012741088867,high,1,0
+civic virtue,nld,nld_Latn,burgerlijke deugd,Civic virtue,1.0,0.8667604923248291,high,0,0
+civic vice,nld,nld_Latn,Burgerlijke vice,Civil service,0.782608695652174,0.7960492372512817,medium,0,0
+civic respect,nld,nld_Latn,Burgerlijk respect,Respect for citizenship,0.3888888888888889,0.8788734674453735,high,1,0
+civic modesty,nld,nld_Latn,burgerlijke bescheidenheid,civic modesty,1.0,0.863773763179779,high,0,0
+civic purity,nld,nld_Latn,Burgerlijke zuiverheid,Civil purity,0.9166666666666666,0.8494452238082886,high,0,0
+civic pollution,nld,nld_Latn,Burgerlijke vervuiling,Civil pollution,0.9333333333333333,0.8628523945808411,high,0,0
+civic face,nld,nld_Latn,burgerlijk gezicht,a civilian face,0.72,0.8624307513237,high,0,0
+civic reputation,nld,nld_Latn,burgerreputatie,Citizen reputation,0.8235294117647058,0.8746858835220337,high,0,0
+civic hospitality,nld,nld_Latn,burgerlijke gastvrijheid,civil hospitality,0.9411764705882353,0.8754186630249023,high,0,0
+civic charity,nld,nld_Latn,burgerlijke liefdadigheid,Civil charity,0.9230769230769231,0.8643309473991394,high,0,0
+civic cooperation,nld,nld_Latn,burgerlijke samenwerking,civil cooperation,0.9411764705882353,0.8760221004486084,high,0,0
+civic competition,nld,nld_Latn,burgerconcurrentie,Citizens' competition,0.7894736842105263,0.8284018039703369,high,0,0
+civic fairness,nld,nld_Latn,burgerlijke rechtvaardigheid,Civil justice,0.4444444444444444,0.8772433400154114,high,1,1
+civic justice,nld,nld_Latn,burgerlijke rechtvaardigheid,Civil justice,0.9230769230769231,0.8856712579727173,high,1,1
+civic taboo,nld,nld_Latn,Burgerlijke taboe,Civic taboo,1.0,0.8597065806388855,high,0,0
+civic tradition,nld,nld_Latn,Burgerlijke traditie,Civic tradition,1.0,0.8799963593482971,high,0,0
+civic modernity,nld,nld_Latn,Burgerlijke moderniteit,Civic modernity,1.0,0.8746188879013062,high,0,0
+civic sacred,nld,nld_Latn,burgerlijk heilig,Civilian sacred,0.8148148148148148,0.6759040355682373,medium,0,0
+civic secular,nld,nld_Latn,burgerlijke seculiere,Secular civil society,0.4117647058823529,0.7019675970077515,medium,1,0
+civic conformity,nld,nld_Latn,burgerconformiteit,Citizen conformity,0.8235294117647058,0.8838094472885132,high,0,0
+civic dissent,nld,nld_Latn,burgerlijke dissidentie,civil dissent,0.9230769230769231,0.8838014006614685,high,0,0
+civic restraint,nld,nld_Latn,burgerbeheersing,Civil governance,0.3870967741935484,0.8489584922790527,high,1,0
+civic indulgence,nld,nld_Latn,burgerlijke genegenheid,civic affection,0.5161290322580645,0.8293333053588867,high,1,0
+civic solidarity,nld,nld_Latn,burgerlijke solidariteit,civil solidarity,0.9375,0.8846684694290161,high,0,0
+civic merit,nld,nld_Latn,burgerlijke verdienste,civil service,0.6666666666666666,0.8638390302658081,high,0,0
+civic trust,nld,nld_Latn,Burgerlijk vertrouwen,Civil trust,0.9090909090909091,0.8813046813011169,high,0,0
+civic loyalty,nld,nld_Latn,Burgerlijke loyaliteit,Citizen loyalty,0.7857142857142857,0.8842642307281494,high,0,0
+civic integrity,nld,nld_Latn,Burgerlijke integriteit,Civil integrity,0.9333333333333333,0.8697391748428345,high,0,0
+civic discretion,nld,nld_Latn,burgerlijke beoordelingsbevoegdheid,civil appraisal authority,0.43902439024390244,0.8456014394760132,high,1,0
+civic humility,nld,nld_Latn,burgerlijke nederigheid,civic humility,1.0,0.8701163530349731,high,0,0
+civic discipline,nld,nld_Latn,burgerlijke discipline,civil discipline,0.9375,0.8788142800331116,high,0,0
+civic self control,nld,nld_Latn,burgerlijke zelfcontrole,Civil self-control,0.8888888888888888,0.8786303997039795,high,0,0
+civic deference,nld,nld_Latn,Burgerlijke eerbiediging,Respect for citizenship,0.2631578947368421,0.7444671392440796,medium,1,0
+moral individualism,nld,nld_Latn,morele individualisme,Moral individualism,1.0,0.639359176158905,medium,0,0
+moral collectivism,nld,nld_Latn,morele collectivisme,Moral collectivism,1.0,0.5615523457527161,low,1,0
+moral hierarchy,nld,nld_Latn,morele hiërarchie,Moral hierarchy,1.0,0.8523479104042053,high,0,0
+moral equality,nld,nld_Latn,morele gelijkheid,Moral equality,1.0,0.8622786998748779,high,0,0
+moral authority,nld,nld_Latn,morele autoriteit,Moral authority,1.0,0.8727058172225952,high,0,0
+moral autonomy,nld,nld_Latn,morele autonomie,Moral autonomy,1.0,0.8120404481887817,high,0,0
+moral obedience,nld,nld_Latn,morele gehoorzaamheid,Moral obedience,1.0,0.8770456314086914,high,0,0
+moral duty,nld,nld_Latn,morele plicht,Moral duty,1.0,0.8692482709884644,high,0,0
+moral freedom,nld,nld_Latn,morele vrijheid,Moral freedom,1.0,0.8771910667419434,high,0,0
+moral honor,nld,nld_Latn,morele eer,Moral honor,1.0,0.5744182467460632,low,1,0
+moral shame,nld,nld_Latn,morele schaamte,Moral shame,1.0,0.7653601169586182,medium,0,0
+moral virtue,nld,nld_Latn,morele deugd,Moral virtue,1.0,0.5421990156173706,low,1,0
+family,nld,nld_Latn,Huishouden,Households,0.125,0.8417266607284546,high,1,1
+kinship,nld,nld_Latn,verwantschap,Relation,0.26666666666666666,0.8508234620094299,high,1,0
+mother,nld,nld_Latn,moeder,Mother,1.0,0.8162441253662109,high,0,0
+father,nld,nld_Latn,vader,Father,1.0,0.8150492906570435,high,0,0
+parent,nld,nld_Latn,ouder,older,0.18181818181818182,0.8419687747955322,high,1,0
+child,nld,nld_Latn,kind,child,1.0,0.37696778774261475,low,1,0
+daughter,nld,nld_Latn,dochter,daughter,1.0,0.8571168780326843,high,0,0
+son,nld,nld_Latn,zoon,son,1.0,0.8407039642333984,high,0,0
+uncle,nld,nld_Latn,oom,Uncle,1.0,0.3800891637802124,low,1,0
+aunt,nld,nld_Latn,Tante .,"Aunt , please .",0.42105263157894735,0.8273962140083313,high,1,0
+cousin,nld,nld_Latn,Cousine,Cousin,1.0,0.8268160820007324,high,0,0
+grandmother,nld,nld_Latn,grootmoeder,Grandmother,1.0,0.8329170942306519,high,0,0
+grandfather,nld,nld_Latn,grootvader,Grandfather,1.0,0.8517202734947205,high,1,1
+nephew,nld,nld_Latn,neef,Cousin,0.16666666666666666,0.8422698974609375,high,1,0
+niece,nld,nld_Latn,Neven,Cousins,0.16666666666666666,0.6808416843414307,medium,1,0
+ancestor,nld,nld_Latn,voorouder,the ancestor,0.8,0.8379294276237488,high,0,0
+lineage,nld,nld_Latn,afstammelingen,offspring,0.375,0.618249237537384,medium,1,0
+clan,nld,nld_Latn,Clan,Clan,1.0,0.812250018119812,high,0,0
+household,nld,nld_Latn,huishouden,Households,0.9473684210526315,0.8447016477584839,high,1,1
+joint family,nld,nld_Latn,gezamenlijke familie,Joint family,1.0,0.8611814379692078,high,0,0
+nuclear family,nld,nld_Latn,kernfamilie,Nuclear family,1.0,0.852827250957489,high,0,0
+marriage,nld,nld_Latn,huwelijk,Marriage,1.0,0.8602274060249329,high,0,0
+wedding,nld,nld_Latn,bruiloft,Wedding,1.0,0.8134384751319885,high,0,0
+bride,nld,nld_Latn,bruid,Bride,1.0,0.3625594675540924,low,1,0
+groom,nld,nld_Latn,bruidegom,Bridegroom,0.6666666666666666,0.8053523302078247,high,0,0
+engagement,nld,nld_Latn,betrokkenheid,involvement,0.5714285714285714,0.8505130410194397,high,0,0
+dowry,nld,nld_Latn,heffingen,levies,0.0,0.554253876209259,low,1,0
+bridewealth,nld,nld_Latn,bruid rijkdom,Bride's wealth,0.88,0.5235573649406433,low,1,0
+inheritance,nld,nld_Latn,erfgoed,heritage,0.7368421052631579,0.823318600654602,high,1,1
+widow,nld,nld_Latn,weduwe,widow,1.0,0.848101019859314,high,1,1
+widower,nld,nld_Latn,weduwe,widow,0.8333333333333334,0.846335768699646,high,1,1
+courtship,nld,nld_Latn,Vriendschap,Friendship,0.5263157894736842,0.8284181356430054,high,1,0
+matchmaker,nld,nld_Latn,verbintenismaker,Bettor,0.25,0.35631391406059265,low,1,0
+surname,nld,nld_Latn,naamsnaam,Name and surname,0.6086956521739131,0.8169297575950623,high,0,0
+patronymic,nld,nld_Latn,patronymisch,"For the purposes of this Regulation, the following definitions shall apply:",0.1411764705882353,0.7392020225524902,medium,1,0
+matronymic,nld,nld_Latn,matronymisch,of a width of not more than 30 mm,0.18604651162790697,0.5315980911254883,low,1,0
+firstborn,nld,nld_Latn,eerstgeborene,Firstborn,1.0,0.8517605662345886,high,0,0
+heir,nld,nld_Latn,erfgenaam,heir,1.0,0.8444494009017944,high,0,0
+filial piety,nld,nld_Latn,zoonlijke vroomheid,Sonly piety,0.6086956521739131,0.8193626403808594,high,0,0
+caregiving,nld,nld_Latn,verzorging,health care,0.38095238095238093,0.8182350397109985,high,1,0
+motherhood,nld,nld_Latn,moederschap,Maternity,0.42105263157894735,0.8698047399520874,high,1,0
+fatherhood,nld,nld_Latn,vaderschap,fatherhood,1.0,0.8689504861831665,high,0,0
+in laws,nld,nld_Latn,in wetten,in laws,1.0,0.4758874177932739,low,1,0
+brother in law,nld,nld_Latn,schoonbroer,Brother-in-law,0.8571428571428571,0.8375562429428101,high,0,0
+sister in law,nld,nld_Latn,schoonzuster,Sister-in-law,0.8461538461538461,0.8239365816116333,high,0,0
+ancestral home,nld,nld_Latn,vooroudershuis,ancestral home,1.0,0.8566867113113403,high,0,0
+household labor,nld,nld_Latn,huishoudelijk werk,Household work,0.8275862068965517,0.8619352579116821,high,0,0
+extended family,nld,nld_Latn,uitgebreid gezin,extended family,1.0,0.825811505317688,high,0,0
+extended kinship,nld,nld_Latn,uitgebreide verwantschap,extended kinship,1.0,0.8444283604621887,high,0,0
+extended mother,nld,nld_Latn,verlengde moeder,Extended mother,1.0,0.7162416577339172,medium,0,0
+extended father,nld,nld_Latn,ouder vader,Elderly father,0.6896551724137931,0.7268919944763184,medium,0,0
+extended parent,nld,nld_Latn,uitgebreide ouder,extended parent,1.0,0.6422427892684937,medium,0,0
+extended child,nld,nld_Latn,uitgebreid kind,Extended child,1.0,0.5182011723518372,low,1,0
+extended daughter,nld,nld_Latn,uitgebreide dochter,Extended daughter,1.0,0.6899205446243286,medium,0,0
+extended son,nld,nld_Latn,uitgebreide zoon,extended son,1.0,0.6299819350242615,medium,0,0
+extended uncle,nld,nld_Latn,verlengde oom,extended uncle,1.0,0.5174458026885986,low,1,0
+extended aunt,nld,nld_Latn,verlengde tante,extended aunt,1.0,0.521211564540863,low,1,0
+extended cousin,nld,nld_Latn,verlengde neef,Extended cousin,1.0,0.599311113357544,low,1,1
+extended grandmother,nld,nld_Latn,verlengde grootmoeder,extended grandmother,1.0,0.7950624227523804,medium,0,0
+extended grandfather,nld,nld_Latn,grootvader,Grandfather,0.7096774193548387,0.781977653503418,medium,1,1
+extended nephew,nld,nld_Latn,verlengde neef,Extended cousin,0.6666666666666666,0.6331529021263123,medium,1,1
+extended niece,nld,nld_Latn,verlengde nicht,Extended cousin,0.6896551724137931,0.300965815782547,low,1,0
+extended ancestor,nld,nld_Latn,uitgebreide voorouder,extended ancestor,1.0,0.714828372001648,medium,0,0
+extended lineage,nld,nld_Latn,uitgebreide afstamming,Extended lineage,1.0,0.7759531736373901,medium,0,0
+extended clan,nld,nld_Latn,uitgebreide clan,extended clan,1.0,0.728451132774353,medium,0,0
+extended household,nld,nld_Latn,uitgebreid huishouden,Extended households,0.972972972972973,0.8339263200759888,high,0,0
+extended joint family,nld,nld_Latn,uitgebreid gezamenlijk gezin,extended joint family,1.0,0.8006938695907593,high,0,0
+extended nuclear family,nld,nld_Latn,uitgebreide kernfamilie,Extended nuclear family,1.0,0.8229066133499146,high,0,0
+extended marriage,nld,nld_Latn,verlengd huwelijk,Extended marriage,1.0,0.832791805267334,high,0,0
+extended wedding,nld,nld_Latn,verlengde bruiloft,extended wedding,1.0,0.8042904138565063,high,1,1
+extended bride,nld,nld_Latn,verlengde bruid,Extended bride,1.0,0.4430667459964752,low,1,0
+extended groom,nld,nld_Latn,verlengde bruidegom,extended groom,1.0,0.4574926793575287,low,1,0
+extended engagement,nld,nld_Latn,verlengde betrokkenheid,Extended involvement,0.7692307692307693,0.8317844867706299,high,0,0
+extended dowry,nld,nld_Latn,verlengde bruiloft,extended wedding,0.6666666666666666,0.6712420582771301,medium,1,1
+extended bridewealth,nld,nld_Latn,uitgebreid bruidrijk,extended bridehood,0.7894736842105263,0.4902811348438263,low,1,0
+extended inheritance,nld,nld_Latn,uitgebreide erfenis,Extended heritage,0.8648648648648649,0.8200593590736389,high,0,0
+extended widow,nld,nld_Latn,uitgebreide weduwe,Expanded widow,0.8571428571428571,0.6748881340026855,medium,0,0
+extended widower,nld,nld_Latn,verlengde weduwe,Extended widow,0.9333333333333333,0.6140910387039185,medium,0,0
+extended courtship,nld,nld_Latn,verlengde hofverhouding,extended courtship,1.0,0.6410577893257141,medium,0,0
+extended matchmaker,nld,nld_Latn,uitgebreide matchmaker,extended matchmaker,1.0,0.37645530700683594,low,1,0
+extended surname,nld,nld_Latn,verlengde achternaam,Extended surname,1.0,0.8420039415359497,high,0,0
+extended patronymic,nld,nld_Latn,uitgebreid patronymisch,Extended patronymic,1.0,0.6812596917152405,medium,0,0
+extended matronymic,nld,nld_Latn,uitgebreid matronymisch,Extended matronymic,1.0,0.5389754772186279,low,1,0
+extended firstborn,nld,nld_Latn,uitgebreide eerstgeborenen,Extended firstborn,1.0,0.5811470150947571,low,1,0
+extended heir,nld,nld_Latn,verlengde erfgenaam,Extended heir,1.0,0.7022379636764526,medium,0,0
+extended filial piety,nld,nld_Latn,uitgebreide zoonlijke vroomheid,extended filial piety,1.0,0.835193932056427,high,0,0
+extended caregiving,nld,nld_Latn,verlengde verzorging,Extended care,0.8125,0.8188254833221436,high,0,0
+extended motherhood,nld,nld_Latn,verlengde moederschap,Extended motherhood,1.0,0.8449732661247253,high,0,0
+extended fatherhood,nld,nld_Latn,verlengde vaderschap,Extended fatherhood,1.0,0.8390794992446899,high,0,0
+extended in laws,nld,nld_Latn,Uitgebreid in wetten,Expanded in laws,0.875,0.7014530897140503,medium,0,0
+extended brother in law,nld,nld_Latn,Verlengde schoonbroer,Extended brother-in-law,0.9130434782608695,0.6570249199867249,medium,0,0
+extended sister in law,nld,nld_Latn,verlengde schoonzuster,Extended sister-in-law,0.9090909090909091,0.6271380186080933,medium,0,0
+extended ancestral home,nld,nld_Latn,uitgebreid vooroudershuis,extended ancestral home,1.0,0.7672626376152039,medium,0,0
+extended household labor,nld,nld_Latn,uitgebreid huishoudelijk werk,Extensive household work,0.7916666666666666,0.8361893892288208,high,0,0
+nuclear kinship,nld,nld_Latn,nucleaire verwantschap,Nuclear kinship,1.0,0.804214596748352,high,0,0
+nuclear mother,nld,nld_Latn,kernmoeder,Nuclear mother,1.0,0.8139126300811768,high,0,0
+nuclear father,nld,nld_Latn,nucleaire vader,Nuclear father,1.0,0.529657781124115,low,1,0
+nuclear parent,nld,nld_Latn,nucleaire moeder,Nuclear mother,0.6428571428571429,0.5933728814125061,low,1,0
+nuclear child,nld,nld_Latn,kernkind,Nuclear child,1.0,0.4924466907978058,low,1,0
+nuclear daughter,nld,nld_Latn,nucleaire dochter,Nuclear subsidiary,0.6470588235294118,0.657707154750824,medium,0,0
+religion,nld,nld_Latn,religie,Religious,0.8235294117647058,0.8631349802017212,high,0,0
+ritual,nld,nld_Latn,ritueel,Ritual,1.0,0.8503480553627014,high,0,0
+prayer,nld,nld_Latn,gebed,Prayer,1.0,0.8345757722854614,high,0,0
+temple,nld,nld_Latn,tempel,Temple,1.0,0.8396182656288147,high,0,0
+church,nld,nld_Latn,kerk,Church,1.0,0.8351836204528809,high,0,0
+mosque,nld,nld_Latn,moskee,Mosque,1.0,0.7492892742156982,medium,0,0
+synagogue,nld,nld_Latn,synagoge,Synagogue,1.0,0.7829406261444092,medium,0,0
+shrine,nld,nld_Latn,heiligdom,Sanctuary,0.26666666666666666,0.8388556838035583,high,1,0
+pilgrimage,nld,nld_Latn,pelgrimstocht,Pilgrimage,1.0,0.8248587846755981,high,0,0
+scripture,nld,nld_Latn,schrift,Writing,0.375,0.7648240327835083,medium,1,0
+monk,nld,nld_Latn,monnik,Monk,1.0,0.8504887819290161,high,0,0
+priest,nld,nld_Latn,priester,Priest,1.0,0.7662408351898193,medium,0,0
+imam,nld,nld_Latn,Imam,The Imam,0.6666666666666666,0.8010189533233643,high,0,0
+nun,nld,nld_Latn,klooster,Monastery,0.16666666666666666,0.3589189648628235,low,1,1
+saint,nld,nld_Latn,de heilige,The Holy One,0.11764705882352941,0.7919937372207642,medium,1,0
+martyr,nld,nld_Latn,martelaar,Martyred,0.8571428571428571,0.8155735731124878,high,0,0
+prophet,nld,nld_Latn,profeet,The Prophet,0.7777777777777778,0.8119812607765198,high,0,0
+zakat,nld,nld_Latn,zakat,Zakat,1.0,0.8485167026519775,high,0,0
+tithe,nld,nld_Latn,de tiende,the tenth,0.42857142857142855,0.40083613991737366,low,1,0
+karma,nld,nld_Latn,karma,Karma,1.0,0.5997187495231628,low,1,0
+altar,nld,nld_Latn,altaar,Altar,1.0,0.8450371026992798,high,0,0
+incense,nld,nld_Latn,wierook,Containing by weight:,0.21428571428571427,0.7056742906570435,medium,1,0
+rosary,nld,nld_Latn,rozenkrans,Roses and rosebushes,0.38461538461538464,0.8457307815551758,high,1,0
+blessing,nld,nld_Latn,een zegen,A blessing,0.8888888888888888,0.8222553133964539,high,0,0
+curse,nld,nld_Latn,vervloeking,The curse.,0.6666666666666666,0.7863970994949341,medium,0,0
+sabbath,nld,nld_Latn,sabbat,Sabbath,1.0,0.8118478059768677,high,0,0
+halal,nld,nld_Latn,halal,HALAL,1.0,0.7490266561508179,medium,0,0
+kosher,nld,nld_Latn,kosher,Kosher,1.0,0.6207026839256287,medium,0,0
+fasting,nld,nld_Latn,vasten,Fasting,1.0,0.717434823513031,medium,0,0
+sacrifice,nld,nld_Latn,offerande,Sacrifice,1.0,0.685407280921936,medium,0,0
+monastery,nld,nld_Latn,klooster,Monastery,1.0,0.8569074869155884,high,1,1
+convent,nld,nld_Latn,klooster,Monastery,0.375,0.8426671624183655,high,1,1
+abbey,nld,nld_Latn,Abbey,Abbey,1.0,0.8024818897247314,high,0,0
+minaret,nld,nld_Latn,minaret,Minarets,0.9333333333333333,0.8426556587219238,high,0,0
+pagoda,nld,nld_Latn,Pagoda,Pagoda,1.0,0.8338760137557983,high,0,0
+stupa,nld,nld_Latn,stupa,the stupa,0.7142857142857143,0.494798868894577,low,1,0
+ancestral altar,nld,nld_Latn,voorouderlijk altaar,Ancestral altar,1.0,0.8470679521560669,high,0,0
+funeral rite,nld,nld_Latn,begrafenisritus,Funerary rites,0.8461538461538461,0.8580600023269653,high,0,0
+mourning rite,nld,nld_Latn,rouwritus,of a kind used for the manufacture of foodstuffs,0.16393442622950818,0.35737350583076477,low,1,0
+memorial service,nld,nld_Latn,herdenkingsdienst,Commemorative service,0.7567567567567568,0.8229513168334961,high,0,0
+ancestor worship,nld,nld_Latn,voorouders aanbidding,The worship of ancestors,0.45,0.8563275337219238,high,1,0
+tabernacle,nld,nld_Latn,tabernakel,Tabernacle,1.0,0.8355879187583923,high,0,0
+prayer mat,nld,nld_Latn,gebedsmat,Prayer mat,1.0,0.8581928014755249,high,0,0
+chanting,nld,nld_Latn,schreeuwen,Screaming,0.5882352941176471,0.7911646962165833,medium,0,0
+hymn,nld,nld_Latn,Hymne,Hymn,1.0,0.8236424326896667,high,1,1
+sermon,nld,nld_Latn,preek,Preaching,0.26666666666666666,0.6277320384979248,medium,1,0
+liturgy,nld,nld_Latn,liturgie,Liturgy,1.0,0.8523033857345581,high,0,0
+sacred religion,nld,nld_Latn,heilige religie,sacred religion,1.0,0.8446359038352966,high,0,0
+sacred ritual,nld,nld_Latn,heilige rituelen,sacred rituals,0.9629629629629629,0.8338565230369568,high,0,0
+sacred prayer,nld,nld_Latn,heilige gebed,Holy Prayer,0.5833333333333334,0.8173784017562866,high,0,0
+sacred temple,nld,nld_Latn,heilige tempel,holy temple,0.5833333333333334,0.8346281051635742,high,0,0
+sacred church,nld,nld_Latn,heilige kerk,Holy church,0.5833333333333334,0.8402738571166992,high,0,0
+sacred mosque,nld,nld_Latn,heilige moskee,Holy Mosque,0.5833333333333334,0.856214165687561,high,0,0
+sacred synagogue,nld,nld_Latn,heilige synagoge,holy synagogue,0.6666666666666666,0.846260666847229,high,0,0
+sacred shrine,nld,nld_Latn,heilige heiligdom,sacred sanctuary,0.6206896551724138,0.8118736743927002,high,0,0
+sacred pilgrimage,nld,nld_Latn,heilige pelgrimstocht,Holy Pilgrimage,0.6875,0.8196476697921753,high,0,0
+sacred scripture,nld,nld_Latn,heilige schrift,Sacred Scripture,1.0,0.8436623811721802,high,0,0
+sacred monk,nld,nld_Latn,heilige monnik,Holy monk,0.5,0.8424619436264038,high,1,0
+sacred priest,nld,nld_Latn,heilige priester,Holy Priest,0.5833333333333334,0.8247764110565186,high,0,0
+sacred imam,nld,nld_Latn,heilige imam,Holy Imam,0.5,0.8277887105941772,high,1,0
+sacred nun,nld,nld_Latn,heilige non,Holy nun,0.4444444444444444,0.48042020201683044,low,1,0
+sacred saint,nld,nld_Latn,heilige heilige,holy holy,0.09523809523809523,0.6024779677391052,medium,1,0
+sacred martyr,nld,nld_Latn,heilige martelaar,Holy martyr,0.5833333333333334,0.7984583377838135,medium,0,0
+sacred prophet,nld,nld_Latn,heilige profeet,holy prophet,0.6153846153846154,0.8386362791061401,high,0,0
+sacred zakat,nld,nld_Latn,heilige zakât,sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sacred sac,0.0603448275862069,0.8587181568145752,high,1,0
+sacred tithe,nld,nld_Latn,heilige tiende,holy tenth,0.36363636363636365,0.7844432592391968,medium,1,0
+sacred karma,nld,nld_Latn,heilig karma,Sacred karma,1.0,0.5899499654769897,low,1,0
+sacred altar,nld,nld_Latn,heilige altaar,sacred altar,1.0,0.8313535451889038,high,0,0
+sacred incense,nld,nld_Latn,heilige wierook,Sacred incense,1.0,0.7849438190460205,medium,0,0
+sacred rosary,nld,nld_Latn,heilige rozenkrans,Sacred Rosary,1.0,0.8295511603355408,high,0,0
+sacred blessing,nld,nld_Latn,heilige zegen,Holy blessing,0.6428571428571429,0.7879425287246704,medium,0,0
+sacred curse,nld,nld_Latn,heilige vloek,Holy curse,0.5454545454545454,0.8125858902931213,high,1,0
+sacred sabbath,nld,nld_Latn,heilige sabbat,Holy Sabbath,0.6153846153846154,0.8402835130691528,high,0,0
+sacred halal,nld,nld_Latn,heilige halal,holy halal,0.5454545454545454,0.7296135425567627,medium,1,0
+sacred kosher,nld,nld_Latn,heilige kosher,holy kosher,0.5833333333333334,0.684901773929596,medium,0,0
+sacred fasting,nld,nld_Latn,heilige vasten,Holy fasting,0.6153846153846154,0.7983999252319336,medium,0,0
+sacred sacrifice,nld,nld_Latn,heilige offer,Sacred Sacrifice,1.0,0.8154443502426147,high,0,0
+sacred monastery,nld,nld_Latn,heilige klooster,Holy monastery,0.6666666666666666,0.8153210282325745,high,1,1
+sacred convent,nld,nld_Latn,heilige klooster,Holy monastery,0.2857142857142857,0.8295364379882812,high,1,1
+sacred abbey,nld,nld_Latn,heilige abdij,Holy Abbey,0.5454545454545454,0.8110610842704773,high,1,0
+sacred minaret,nld,nld_Latn,heilige minaret,sacred minaret,1.0,0.854063093662262,high,0,0
+sacred pagoda,nld,nld_Latn,heilige pagode,sacred pagoda,1.0,0.8564941883087158,high,0,0
+sacred stupa,nld,nld_Latn,heilige stupa,sacred stupa,1.0,0.8429874181747437,high,0,0
+sacred ancestral altar,nld,nld_Latn,heilige voorouderlijke altaar,sacred ancestral altar,1.0,0.8272663354873657,high,0,0
+sacred funeral rite,nld,nld_Latn,heilige begrafenisritus,sacred funeral rites,0.9743589743589743,0.838445246219635,high,0,0
+sacred mourning rite,nld,nld_Latn,heilige rouwritus,Sacred Mourning,0.8571428571428571,0.7365309596061707,medium,0,0
+sacred memorial service,nld,nld_Latn,heilige herdenkingsdienst,sacred memorial service,1.0,0.80512535572052,high,0,0
+sacred ancestor worship,nld,nld_Latn,heilige voorouders aanbidding,Worship of Holy Ancestors,0.4583333333333333,0.851024866104126,high,1,0
+sacred tabernacle,nld,nld_Latn,heilige tabernakel,holy tabernacle,0.6875,0.8406515717506409,high,0,0
+sacred prayer mat,nld,nld_Latn,heilige gebedsmat,Sacred Prayer Mat,1.0,0.8340604305267334,high,0,0
+sacred chanting,nld,nld_Latn,Heilig gezang,Sacred Singing,0.6896551724137931,0.8313536047935486,high,0,0
+sacred hymn,nld,nld_Latn,heilige hymne,sacred hymn,1.0,0.8184846639633179,high,0,0
+sacred sermon,nld,nld_Latn,heilige preek,Holy preaching,0.2222222222222222,0.8366923332214355,high,1,0
+sacred liturgy,nld,nld_Latn,heilige liturgie,sacred liturgy,1.0,0.8447508215904236,high,0,0
+ritual religion,nld,nld_Latn,rituele religie,Ritual religion,1.0,0.7008296847343445,medium,0,0
+ritual ritual,nld,nld_Latn,ritueel ritueel,Ritual Ritual,1.0,0.6116518974304199,medium,0,0
+ritual prayer,nld,nld_Latn,ritueel gebed,Ritual prayer,1.0,0.8567832112312317,high,0,0
+ritual temple,nld,nld_Latn,ritueel tempel,Ritual temple,1.0,0.814696729183197,high,0,0
+ritual church,nld,nld_Latn,rituele kerk,Ritual church,1.0,0.8337017297744751,high,0,0
+ritual mosque,nld,nld_Latn,rituele moskee,Ritual mosque,1.0,0.6915267109870911,medium,0,0
+rice,nld,nld_Latn,rijst,Rice,1.0,0.8423731327056885,high,0,0
+bread,nld,nld_Latn,brood,Bread,1.0,0.7798643112182617,medium,0,0
+noodle,nld,nld_Latn,Noedels,Noodles,0.9230769230769231,0.7218285202980042,medium,0,0
+dumpling,nld,nld_Latn,kinkeltjes,of a width of not more than 30 mm,0.14634146341463414,0.5596029758453369,low,1,0
+curry,nld,nld_Latn,curry,Curry,1.0,0.6881774663925171,medium,0,0
+spice,nld,nld_Latn,specerijen,Spices,0.9090909090909091,0.7777711749076843,medium,0,0
+tea,nld,nld_Latn,thee,tea,1.0,0.42791688442230225,low,1,0
+coffee,nld,nld_Latn,koffie,Coffee,1.0,0.8603273034095764,high,0,0
+meat,nld,nld_Latn,vlees,Meat,1.0,0.83851557970047,high,0,0
+vegetarian,nld,nld_Latn,vegetariër,Vegetarian,1.0,0.8722624778747559,high,0,0
+vegan,nld,nld_Latn,veganistisch,Vegans and vegans,0.45454545454545453,0.8434157967567444,high,1,0
+soup,nld,nld_Latn,soep,Soup,1.0,0.7685127258300781,medium,0,0
+stew,nld,nld_Latn,gewassen,Crops,0.2222222222222222,0.5459099411964417,low,1,1
+barbecue,nld,nld_Latn,barbecue,Barbecue,1.0,0.7660028338432312,medium,0,0
+fermented,nld,nld_Latn,gefermenteerd,Fermented,1.0,0.8330396413803101,high,0,0
+pickled,nld,nld_Latn,gepoetst,Brushed,0.2857142857142857,0.7265476584434509,medium,1,0
+banquet,nld,nld_Latn,banket,banquet,1.0,0.8055168986320496,high,0,0
+feast,nld,nld_Latn,Feest,Party,0.4,0.45739856362342834,low,1,0
+street food,nld,nld_Latn,straatvoedsel,Street food,1.0,0.8748564720153809,high,0,0
+dessert,nld,nld_Latn,dessert,Desserts,0.9333333333333333,0.6924910545349121,medium,0,0
+sauce,nld,nld_Latn,saus,Sausage,0.6666666666666666,0.7608351111412048,medium,0,0
+grain,nld,nld_Latn,graan,Cereals,0.3333333333333333,0.8479079008102417,high,1,0
+fruit,nld,nld_Latn,vruchten,Fruits and nuts,0.5,0.8224746584892273,high,1,0
+vegetable,nld,nld_Latn,groenten,Fruits and vegetables,0.6,0.8242194056510925,high,0,0
+kebab,nld,nld_Latn,kebab,Other edible mushrooms,0.14814814814814814,0.7904033660888672,medium,1,0
+shawarma,nld,nld_Latn,shawarma,Swarm,0.7692307692307693,0.7599553465843201,medium,0,0
+ramen,nld,nld_Latn,Ramen,Manufacture from materials of any heading,0.17391304347826086,0.7520402669906616,medium,1,0
+sushi,nld,nld_Latn,sushi,Sushi,1.0,0.8490602374076843,high,0,0
+kimchi,nld,nld_Latn,Kimchi,Kimchi,1.0,0.786262571811676,medium,0,0
+pho,nld,nld_Latn,Foh,Foh .,0.25,0.5722085237503052,low,1,0
+biryani,nld,nld_Latn,Biryani,Biryani,1.0,0.8400407433509827,high,0,0
+falafel,nld,nld_Latn,falafel,Flavonoids and their derivatives,0.20512820512820512,0.8524880409240723,high,1,0
+pasta,nld,nld_Latn,pasta's,Pastas and other pastas,0.35714285714285715,0.39438098669052124,low,1,0
+cheese,nld,nld_Latn,kaas,Cheese,1.0,0.5986274480819702,low,1,0
+wine,nld,nld_Latn,wijn,Wine,1.0,0.8605189919471741,high,0,0
+beer,nld,nld_Latn,Bier,Beer,1.0,0.8515676259994507,high,0,0
+chai,nld,nld_Latn,CHAI,CHAI,1.0,0.7296203374862671,medium,0,0
+espresso,nld,nld_Latn,espresso,"Other, of a thickness of not more than 10 mm",0.23076923076923078,0.8321890830993652,high,1,0
+udon,nld,nld_Latn,Udon,Udon,1.0,0.7330915331840515,medium,0,0
+soba,nld,nld_Latn,Soba,Soba,1.0,0.7745790481567383,medium,0,0
+congee,nld,nld_Latn,congee,of a kind used in the manufacture of foodstuffs,0.07547169811320754,0.6122226715087891,medium,1,0
+bibimbap,nld,nld_Latn,bijbimbap,of a width of not more than 30 mm,0.14634146341463414,0.7632968425750732,medium,1,0
+hummus,nld,nld_Latn,hummus,Hummus,1.0,0.8018991947174072,high,0,0
+tabbouleh,nld,nld_Latn,tabouleh,Manufacture in which the value of all the materials used does not exceed 50% of the ex-works price of the product,0.09836065573770492,0.8131462931632996,high,1,0
+paella,nld,nld_Latn,Paella,Paella,1.0,0.8390180468559265,high,0,0
+risotto,nld,nld_Latn,risotto,Risotto,1.0,0.829171895980835,high,0,0
+couscous,nld,nld_Latn,couscous,Couscous,1.0,0.7624606490135193,medium,0,0
+injera,nld,nld_Latn,injera,injera,1.0,0.7264312505722046,medium,0,0
+tortilla,nld,nld_Latn,tortilla's,Other meat offal,0.25,0.42732447385787964,low,1,0
+tamale,nld,nld_Latn,Tameel,Tameel,0.6666666666666666,0.6406157612800598,medium,0,0
+arepa,nld,nld_Latn,gewassen,Crops,0.4,0.37425580620765686,low,1,1
+empanada,nld,nld_Latn,de empanada's,the empanadas,0.7619047619047619,0.37956297397613525,low,1,0
+mochi,nld,nld_Latn,mochi,mochi,1.0,0.7020443677902222,medium,0,0
+matcha,nld,nld_Latn,Matcha,Matcha,1.0,0.8240079879760742,high,0,0
+jalebi,nld,nld_Latn,jalebi,for the manufacture of foodstuffs and preparations,0.10714285714285714,0.5970843434333801,low,1,0
+halwa,nld,nld_Latn,halwa,half,0.6666666666666666,0.6186439990997314,medium,0,0
+flatbread,nld,nld_Latn,plaatbrood,Plated bread,0.7619047619047619,0.83868408203125,high,0,0
+naan,nld,nld_Latn,Naan,Nain,0.75,0.7765998840332031,medium,0,0
+roti,nld,nld_Latn,rootie,Red meat,0.3333333333333333,0.5547410249710083,low,1,0
+chapati,nld,nld_Latn,chapati,The following table summarizes the information:,0.18518518518518517,0.779541015625,medium,1,0
+paratha,nld,nld_Latn,Paratha,Paratha,1.0,0.6700663566589355,medium,0,0
+soy sauce,nld,nld_Latn,sojazout,Soybean salts,0.5454545454545454,0.6576237678527832,medium,1,0
+fish sauce,nld,nld_Latn,vissaus,Other,0.26666666666666666,0.746972918510437,medium,1,0
+ghee,nld,nld_Latn,Ghee,Ghee,1.0,0.8003828525543213,high,0,0
+paneer,nld,nld_Latn,aanhanger,Fans and supporters,0.32,0.40659022331237793,low,1,0
+pickles,nld,nld_Latn,verpakkingen,Packaging,0.375,0.42536410689353943,low,1,0
+broth,nld,nld_Latn,kalkoen,Cockroaches,0.375,0.7578465342521667,medium,1,0
+porridge,nld,nld_Latn,poesje,♪ Baby ♪,0.0,0.4476417601108551,low,1,0
+lentil,nld,nld_Latn,Lentijlen,Lentils,0.9230769230769231,0.5186160802841187,low,1,0
+chickpea,nld,nld_Latn,wijnwijn,Wines and wines,0.2608695652173913,0.5057783722877502,low,1,0
+cassava,nld,nld_Latn,cassava,Cassava,1.0,0.8024928569793701,high,0,0
+plantain,nld,nld_Latn,planten,of which:,0.11764705882352941,0.7439583539962769,medium,1,0
+okra,nld,nld_Latn,Oekra,Oekra,0.8888888888888888,0.7694425582885742,medium,0,0
+eggplant,nld,nld_Latn,aubergines,Fruits and vegetables,0.20689655172413793,0.7897838354110718,medium,1,0
+traditional rice,nld,nld_Latn,traditionele rijst,Traditional rice,1.0,0.8658170104026794,high,0,0
+traditional bread,nld,nld_Latn,Traditioneel brood,Traditional bread,1.0,0.8548299074172974,high,0,0
+traditional noodle,nld,nld_Latn,traditionele noedels,Traditional noodles,0.972972972972973,0.7490527629852295,medium,0,0
+traditional dumpling,nld,nld_Latn,traditionele donuts,Traditional doughnuts,0.7317073170731707,0.7059680223464966,medium,0,0
+traditional curry,nld,nld_Latn,traditionele curry,Traditional curry,1.0,0.7430107593536377,medium,0,0
+traditional spice,nld,nld_Latn,traditionele specerijen,Traditional spices,0.9714285714285714,0.8388504385948181,high,0,0
+traditional tea,nld,nld_Latn,traditionele thee,Traditional tea,1.0,0.8416800498962402,high,0,0
+traditional coffee,nld,nld_Latn,traditionele koffie,Traditional coffee,1.0,0.8723921775817871,high,0,0
+traditional meat,nld,nld_Latn,Traditioneel vlees,Traditional meat,1.0,0.8578096628189087,high,0,0
+traditional vegetarian,nld,nld_Latn,traditionele vegetariër,Traditional vegetarian,1.0,0.843728244304657,high,0,0
+traditional vegan,nld,nld_Latn,traditioneel veganistisch,Traditionally vegan,0.9444444444444444,0.8538955450057983,high,0,0
+traditional soup,nld,nld_Latn,traditionele soep,Traditional soup,1.0,0.8580101728439331,high,0,0
+traditional stew,nld,nld_Latn,traditionele stoof,Traditional stove,0.9090909090909091,0.35525307059288025,low,1,0
+traditional barbecue,nld,nld_Latn,traditionele barbecue,Traditional barbecue,1.0,0.8299317955970764,high,0,0
+traditional fermented,nld,nld_Latn,traditioneel gefermenteerd,Traditionally fermented,0.9545454545454546,0.8106070756912231,high,0,0
+traditional pickled,nld,nld_Latn,traditioneel gepoetst,Traditionally brushed,0.7,0.704559326171875,medium,0,0
+traditional banquet,nld,nld_Latn,Traditioneel banket,Traditional banquet,1.0,0.8566104769706726,high,0,0
+traditional feast,nld,nld_Latn,traditioneel feest,Traditional feast,1.0,0.8564119338989258,high,0,0
+traditional street food,nld,nld_Latn,Traditioneel straat eten,Traditional street food,1.0,0.8761152029037476,high,0,0
+traditional dessert,nld,nld_Latn,Traditioneel dessert,Traditional dessert,1.0,0.8279293179512024,high,0,0
+traditional sauce,nld,nld_Latn,traditionele saus,Traditional sauce,1.0,0.8409818410873413,high,0,0
+traditional grain,nld,nld_Latn,traditionele granen,Traditional cereals,0.7777777777777778,0.8364905714988708,high,0,0
+traditional fruit,nld,nld_Latn,traditionele vruchten,Traditional fruit,1.0,0.8642610907554626,high,0,0
+traditional vegetable,nld,nld_Latn,traditionele groenten,Traditional vegetables,0.9767441860465116,0.8584550619125366,high,0,0
+traditional kebab,nld,nld_Latn,traditionele kebab,Traditional kebab,1.0,0.8360174894332886,high,0,0
+traditional shawarma,nld,nld_Latn,traditioneel shawarma,Traditional shawarma,1.0,0.6706173419952393,medium,0,0
+festival,nld,nld_Latn,festival,Festival,1.0,0.7463002800941467,medium,0,0
+holiday,nld,nld_Latn,vakantie,Holidays,0.9333333333333333,0.8434169888496399,high,0,0
+new year,nld,nld_Latn,Nieuwjaar,New year,1.0,0.8761082291603088,high,0,0
+easter,nld,nld_Latn,Pasen,Passover,0.5714285714285714,0.3812698721885681,low,1,1
+ramadan,nld,nld_Latn,ramadan,the month of Ramadan,0.5185185185185185,0.8401938676834106,high,1,0
+eid,nld,nld_Latn,eid,oath,0.0,0.6619797945022583,medium,1,0
+diwali,nld,nld_Latn,Diwali,Diwali,1.0,0.7942797541618347,medium,0,0
+vesak,nld,nld_Latn,gewassen,Crops,0.2,0.46918997168540955,low,1,1
+hanukkah,nld,nld_Latn,Hanukkah,Hanukkah,1.0,0.8373600244522095,high,0,0
+passover,nld,nld_Latn,Pasen,Passover,1.0,0.6312825679779053,medium,1,1
+nowruz,nld,nld_Latn,Nowruz,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.0684931506849315,0.7245827913284302,medium,1,0
+carnival,nld,nld_Latn,carnaval,Carnival,1.0,0.825716495513916,high,0,0
+thanksgiving,nld,nld_Latn,dankzegging,Thankfulness,0.5,0.7525701522827148,medium,1,0
+harvest festival,nld,nld_Latn,festival van de oogst,Festival of the Harvest,0.41025641025641024,0.8592287302017212,high,1,0
+obon,nld,nld_Latn,Obon,Obon,1.0,0.6722073554992676,medium,0,0
+tet,nld,nld_Latn,Tet,Tet,1.0,0.3756626844406128,low,1,0
+songkran,nld,nld_Latn,songkran,Flat-rolled products of iron or non-alloy steel,0.18181818181818182,0.6940990686416626,medium,1,0
+dragon boat festival,nld,nld_Latn,Draakbootfeest,Dragon Boat Party,0.7027027027027027,0.877191424369812,high,0,0
+mid autumn festival,nld,nld_Latn,Midden-herfstfestival,Mid-Autumn Festival,0.9473684210526315,0.7621777057647705,medium,0,0
+qingming,nld,nld_Latn,Qingming,Qingming,1.0,0.7909876108169556,medium,0,0
+yom kippur,nld,nld_Latn,geïmplementeerd,Implemented,0.19047619047619047,0.36303046345710754,low,1,0
+rosh hashanah,nld,nld_Latn,rosh hashanah,Rosh hashanah,1.0,0.7636078596115112,medium,0,0
+purim,nld,nld_Latn,purim,Purim,1.0,0.4930345416069031,low,1,0
+sukkot,nld,nld_Latn,Sukkot,Sukkot,1.0,0.7383760213851929,medium,0,0
+advent,nld,nld_Latn,de komst,the arrival,0.23529411764705882,0.6454592943191528,medium,1,0
+holi,nld,nld_Latn,Holie,Oil,0.5714285714285714,0.6349783539772034,medium,0,0
+navratri,nld,nld_Latn,navratri,of a kind used for the manufacture of foodstuffs,0.14285714285714285,0.766136646270752,medium,1,0
+onam,nld,nld_Latn,onam,onam,1.0,0.5663965940475464,low,1,0
+pongal,nld,nld_Latn,Pongal,Pongal,1.0,0.620875358581543,medium,0,0
+durga puja,nld,nld_Latn,durga puja,Durga puja,1.0,0.7120574116706848,medium,0,0
+janmashtami,nld,nld_Latn,Jamashtami,Jamashtami,0.9523809523809523,0.7890797853469849,medium,0,0
+good friday,nld,nld_Latn,Goede vrijdag.,Good Friday. Good Friday.,0.6111111111111112,0.8681024312973022,high,0,0
+pentecost,nld,nld_Latn,Pinksteren,Fresh fruit and vegetables (excluding fruit and vegetables),0.17647058823529413,0.8170179128646851,high,1,0
+epiphany,nld,nld_Latn,openbaring,Revelation,0.3333333333333333,0.7270699143409729,medium,1,0
+all saints day,nld,nld_Latn,Alle heiligen dag,All Saints Day,1.0,0.7103234529495239,medium,0,0
+lunar new year,nld,nld_Latn,Lunar New Year,Lunar New Year,1.0,0.394029825925827,low,1,0
+thingyan,nld,nld_Latn,dingyan,Diningyan,0.7058823529411765,0.5172619819641113,low,1,0
+day of the dead,nld,nld_Latn,Dag van de doden,Day of the Dead,1.0,0.86327064037323,high,0,0
+mardi gras,nld,nld_Latn,mardi gras,Mardi grass,0.9523809523809523,0.8239923715591431,high,0,0
+saint day,nld,nld_Latn,heilige dag,Holy day,0.47058823529411764,0.8281742334365845,high,1,0
+martinmas,nld,nld_Latn,Vrouwen en meisjes,Women and girls,0.3333333333333333,0.36341267824172974,low,1,0
+st patricks day,nld,nld_Latn,St Patrick's Day,It is St. Patrick's Day.,0.7692307692307693,0.7772124409675598,medium,0,0
+independence day,nld,nld_Latn,Onafhankelijkheidsdag,Independence day,1.0,0.8665034770965576,high,0,0
+mawlid,nld,nld_Latn,Mawlyd,Mawlyd,0.8333333333333334,0.6337404251098633,medium,0,0
+ashura,nld,nld_Latn,Ashura,Ashura,1.0,0.8121255040168762,high,0,0
+hajj,nld,nld_Latn,Hajj,Hajj,1.0,0.7358120679855347,medium,0,0
+umrah,nld,nld_Latn,Umrah,Umrah,1.0,0.8080208897590637,high,0,0
+setsubun,nld,nld_Latn,metersubun,Measurement substrate,0.41379310344827586,0.6086587905883789,medium,1,0
+religious festival,nld,nld_Latn,religieus feest,Religious celebration,0.6666666666666666,0.8836305737495422,high,0,0
+religious holiday,nld,nld_Latn,religieuze feestdagen,religious holidays,0.9714285714285714,0.8713371157646179,high,0,0
+religious new year,nld,nld_Latn,religieus nieuwjaar,Religious New Year,1.0,0.8891526460647583,high,0,0
+religious easter,nld,nld_Latn,religieus Pasen,Religious Passover,0.8235294117647058,0.7872316241264343,medium,0,0
+religious ramadan,nld,nld_Latn,religieuze ramadan,religious Ramadan,1.0,0.8117538094520569,high,0,0
+religious eid,nld,nld_Latn,religieuze viering,religious celebration,0.7058823529411765,0.5373623371124268,low,1,0
+religious diwali,nld,nld_Latn,religieuze Diwali,religious Diwali,1.0,0.8238814473152161,high,0,0
+religious vesak,nld,nld_Latn,religieuze vesak,Religious sac,0.8571428571428571,0.7076542973518372,medium,0,0
+religious hanukkah,nld,nld_Latn,religieuze hanukkah,religious hanukkah,1.0,0.822857677936554,high,0,0
+religious passover,nld,nld_Latn,religieus pascha,religious pascha,0.7647058823529411,0.42780008912086487,low,1,0
+religious nowruz,nld,nld_Latn,religieuze Nowruz,religious Nowruz,1.0,0.7551565766334534,medium,0,0
+religious carnival,nld,nld_Latn,religieus carnaval,Religious carnival,1.0,0.8715716600418091,high,0,0
+religious thanksgiving,nld,nld_Latn,religieuze dankzegging,Religious thanksgiving,1.0,0.8154293298721313,high,0,0
+religious harvest festival,nld,nld_Latn,religieuze oogstfeest,religious harvest feast,0.8979591836734694,0.8786582946777344,high,0,0
+religious obon,nld,nld_Latn,religieuze overtuiging,religious belief,0.7333333333333333,0.6066843867301941,medium,0,0
+religious tet,nld,nld_Latn,religieuze tet,religious tet,1.0,0.5699763298034668,low,1,0
+religious songkran,nld,nld_Latn,religieuze songkran,Religious song cranes,0.8717948717948718,0.8442828059196472,high,0,0
+religious dragon boat festival,nld,nld_Latn,religieus draakbootfeest,Religious Dragon Boat Festival,1.0,0.8780456781387329,high,0,0
+religious mid autumn festival,nld,nld_Latn,religieus middenherfstfestival,Religious Mid-Autumn Festival,0.9655172413793104,0.8583391308784485,high,0,0
+religious qingming,nld,nld_Latn,religieuze qingming,religious qingming,1.0,0.511738121509552,low,1,0
+religious yom kippur,nld,nld_Latn,religieuze yom kippur,religious yom chippur,0.926829268292683,0.8322360515594482,high,0,0
+religious rosh hashanah,nld,nld_Latn,religieuze rosh hashanah,religious rosh hashanah,1.0,0.678080677986145,medium,0,0
+religious purim,nld,nld_Latn,religieuze purim,Religious Purim,1.0,0.8269686698913574,high,0,0
+religious sukkot,nld,nld_Latn,religieuze sukkot,Religious Sukkot,1.0,0.597023069858551,low,1,0
+religious advent,nld,nld_Latn,religieuze aankomst,religious arrival,0.7272727272727273,0.8003898859024048,high,0,0
+religious holi,nld,nld_Latn,religieuze holi,religious holi,1.0,0.697320282459259,medium,0,0
+religious navratri,nld,nld_Latn,religieuze navratri,Religious Navratri,1.0,0.697197675704956,medium,0,0
+religious onam,nld,nld_Latn,religieuze onam,religious onam,1.0,0.7623672485351562,medium,0,0
+religious pongal,nld,nld_Latn,religieuze pongal,religious pongal,1.0,0.5825173854827881,low,1,0
+religious durga puja,nld,nld_Latn,religieuze durga puja,religious durga puja,1.0,0.6129773259162903,medium,0,0
+religious janmashtami,nld,nld_Latn,religieuze janmashtami,religious janmashtami,1.0,0.7234824299812317,medium,0,0
+religious good friday,nld,nld_Latn,religieuze goede vrijdag,Religious Good Friday,1.0,0.8500776886940002,high,0,0
+religious pentecost,nld,nld_Latn,religieuze Pinksteren,Religious Pentecostals,0.926829268292683,0.8277825117111206,high,0,0
+religious epiphany,nld,nld_Latn,religieuze openbaring,Religious Revelation,0.6842105263157895,0.6040127277374268,medium,0,0
+religious all saints day,nld,nld_Latn,religieuze alle heiligen dag,Religious All Saints Day,1.0,0.5970638394355774,low,1,0
+religious lunar new year,nld,nld_Latn,religieus nieuwe maanjaar,Religious Lunar New Year,1.0,0.8756307363510132,high,0,0
+religious thingyan,nld,nld_Latn,religieuze dingen,Religious matters,0.6285714285714286,0.7420226335525513,medium,0,0
+religious day of the dead,nld,nld_Latn,religieuze dag van de doden,Religious Day of the Dead,1.0,0.8666356801986694,high,0,0
+religious mardi gras,nld,nld_Latn,religieuze mardi gras,religious mardi grass,0.975609756097561,0.7231886982917786,medium,0,0
+religious saint day,nld,nld_Latn,religieuze heilige dag,religious holy day,0.7567567567567568,0.8354184627532959,high,0,0
+religious martinmas,nld,nld_Latn,religieuze martinmas,religious martinmas,1.0,0.5218088626861572,low,1,0
+religious st patricks day,nld,nld_Latn,religieuze St Patrick's Day,Religious St. Patrick's Day,0.9615384615384616,0.6753596067428589,medium,0,0
+religious independence day,nld,nld_Latn,religieuze onafhankelijkheidsdag,Religious Independence Day,1.0,0.8635337352752686,high,0,0
+religious mawlid,nld,nld_Latn,religieuze mawlid,Religious minority,0.7058823529411765,0.7479816675186157,medium,0,0
+religious ashura,nld,nld_Latn,religieuze ashura,religious ashura,1.0,0.6722043752670288,medium,0,0
+religious hajj,nld,nld_Latn,religieuze hajj,religious hajj,1.0,0.7788608074188232,medium,0,0
+religious umrah,nld,nld_Latn,religieuze umrah,religious umrah,1.0,0.8450249433517456,high,0,0
+religious setsubun,nld,nld_Latn,religieuze setsubun,religious setsubun,1.0,0.736972451210022,medium,0,0
+seasonal festival,nld,nld_Latn,seizoensfeest,Party of the season,0.3333333333333333,0.8578358888626099,high,1,0
+seasonal holiday,nld,nld_Latn,seizoensvakantie,seasonal holidays,0.9696969696969697,0.8570519685745239,high,0,0
+seasonal new year,nld,nld_Latn,seizoensnieuwjaar,New year's season,0.47058823529411764,0.8343417048454285,high,1,0
+seasonal easter,nld,nld_Latn,Pasen van het seizoen,Passover of the season,0.32432432432432434,0.7613301873207092,medium,1,0
+dress,nld,nld_Latn,kleding,Other articles of clothing,0.1935483870967742,0.7803587913513184,medium,1,1
+clothing,nld,nld_Latn,kleding,Other articles of clothing,0.47058823529411764,0.8203831911087036,high,1,1
+garment,nld,nld_Latn,kleding,Other articles of clothing,0.24242424242424243,0.8127001523971558,high,1,1
+veil,nld,nld_Latn,voorhangsel,"Other, not further worked than hot-rolled, impregnated, coated, covered or laminated with plastics",0.0784313725490196,0.7663898468017578,medium,1,0
+hijab,nld,nld_Latn,hijab,hijab,1.0,0.7931661605834961,medium,0,0
+niqab,nld,nld_Latn,niqab,Niqab,1.0,0.8420669436454773,high,0,0
+burqa,nld,nld_Latn,burqa,Burqa,1.0,0.7781198024749756,medium,0,0
+sari,nld,nld_Latn,Sarie,Sary,0.75,0.6208162307739258,medium,0,0
+kimono,nld,nld_Latn,Kimono's,Kimono's,0.8571428571428571,0.529249906539917,low,1,0
+hanbok,nld,nld_Latn,Hanbok,Hanbok,1.0,0.7911286354064941,medium,0,0
+turban,nld,nld_Latn,Turbaan,Turbanes,0.8571428571428571,0.8437408208847046,high,0,0
+abaya,nld,nld_Latn,Abaya,Abaya,1.0,0.8031669855117798,high,0,0
+thobe,nld,nld_Latn,- Hoofdstuk,- Headpiece .,0.2222222222222222,0.3718116879463196,low,1,0
+dupatta,nld,nld_Latn,dupatta,Manufacture from materials of any heading,0.16666666666666666,0.6450144052505493,medium,1,0
+lehenga,nld,nld_Latn,lehenga,with the following characteristics:,0.23809523809523808,0.7734125852584839,medium,1,0
+kurta,nld,nld_Latn,gewassen,Crops,0.2,0.3941231667995453,low,1,1
+dhoti,nld,nld_Latn,dhoti,Dhoti,1.0,0.6507517099380493,medium,0,0
+qipao,nld,nld_Latn,Qipiao,Qipiao,0.9090909090909091,0.7017209529876709,medium,0,0
+uniform,nld,nld_Latn,uniform,Uniforms,0.9333333333333333,0.5696000456809998,low,1,0
+formal,nld,nld_Latn,formeel,Formally,0.8571428571428571,0.7955435514450073,medium,0,0
+casual,nld,nld_Latn,Casual,Casual,1.0,0.6123038530349731,medium,0,0
+modest,nld,nld_Latn,bescheiden,Moderate,0.7142857142857143,0.7390801906585693,medium,0,0
+ornate,nld,nld_Latn,Verkleurig,Colourful,0.26666666666666666,0.6849625706672668,medium,1,0
+jewelry,nld,nld_Latn,Juwelen,Jewelry,1.0,0.8491237163543701,high,0,0
+necklace,nld,nld_Latn,ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting. ketting.,Chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain chain,0.0,0.1958947479724884,low,1,0
+earring,nld,nld_Latn,oorbellen,Earrings,0.9333333333333333,0.8347340822219849,high,0,0
+bracelet,nld,nld_Latn,Armband,Wristbands and bracelets,0.5,0.6202226877212524,medium,1,0
+ring,nld,nld_Latn,ring,ring,1.0,0.45072826743125916,low,1,0
+headscarf,nld,nld_Latn,hoofddoek,Headgear,0.7058823529411765,0.859939694404602,high,0,0
+tattoo,nld,nld_Latn,tatoeage,Tattooing,0.8,0.8482914566993713,high,0,0
+piercing,nld,nld_Latn,piercing,Perforation,0.5263157894736842,0.6499172449111938,medium,1,0
+mask,nld,nld_Latn,masker,Masks,0.8888888888888888,0.8304849863052368,high,0,0
+gown,nld,nld_Latn,kleding,Other articles of clothing,0.06666666666666667,0.658426821231842,medium,1,1
+tuxedo,nld,nld_Latn,smoking,"Other articles of clothing, knitted or crocheted (excluding knitted or crocheted)",0.09195402298850575,0.386473685503006,low,1,0
+wedding dress,nld,nld_Latn,bruidsjurk,Bridal gown,0.16666666666666666,0.8626388907432556,high,1,0
+sash,nld,nld_Latn,scharnieren,"Manufacture from materials of any heading, except those of headings 0802 to 0802",0.09523809523809523,0.4944310188293457,low,1,0
+sandals,nld,nld_Latn,sandalen,Sandals and other footwear,0.42424242424242425,0.8399044275283813,high,1,0
+slippers,nld,nld_Latn,schoenen,Footwear,0.25,0.7524693012237549,medium,1,0
+bangle,nld,nld_Latn,knuffel,Cuddling,0.2857142857142857,0.7251431941986084,medium,1,1
+anklet,nld,nld_Latn,kniebeen,Knees and knees,0.38095238095238093,0.3762163817882538,low,1,0
+kaftan,nld,nld_Latn,kaftan,of a thickness of not more than 10 mm,0.23255813953488372,0.7837982177734375,medium,1,0
+poncho,nld,nld_Latn,Poncho's,Ponchos,0.9230769230769231,0.6017152667045593,medium,0,0
+sombrero,nld,nld_Latn,sombrero,of a thickness of not more than 10 mm,0.2222222222222222,0.8139010667800903,high,1,0
+kippah,nld,nld_Latn,kippa's,Chickens and chickens,0.14814814814814814,0.5108795762062073,low,1,0
+yarmulke,nld,nld_Latn,garnalen,Shrimps,0.26666666666666666,0.7107422351837158,medium,1,0
+mourning dress,nld,nld_Latn,rouwjurk,Clothes for mourning,0.47058823529411764,0.6753185987472534,medium,1,0
+ceremonial mask,nld,nld_Latn,ceremoniële masker,Ceremonial mask,1.0,0.8481743335723877,high,0,0
+formal dress,nld,nld_Latn,formele jurk,Formal dress,1.0,0.8472162485122681,high,0,0
+formal clothing,nld,nld_Latn,formele kleding,Formal clothing,1.0,0.8641341924667358,high,0,0
+formal garment,nld,nld_Latn,officiële kleding,Official clothing,0.3225806451612903,0.8567728400230408,high,1,0
+formal veil,nld,nld_Latn,formele sluier,Of a thickness of not more than 10 mm,0.16666666666666666,0.490992933511734,low,1,0
+formal hijab,nld,nld_Latn,formeel hijab,Formal hijab,1.0,0.8493229150772095,high,0,0
+formal niqab,nld,nld_Latn,formeel niqab,formal niqab,1.0,0.7483178377151489,medium,0,0
+formal burqa,nld,nld_Latn,formele burka,Formal burka,0.9166666666666666,0.8348191976547241,high,0,0
+formal sari,nld,nld_Latn,formele sari,Formal sari,1.0,0.7902799844741821,medium,0,0
+formal kimono,nld,nld_Latn,formeel kimono,formal kimono,1.0,0.7874162793159485,medium,0,0
+formal hanbok,nld,nld_Latn,formeel hanbok,formally hanbok,0.9285714285714286,0.822543740272522,high,0,0
+formal turban,nld,nld_Latn,formele turbaan,Formal turbine,0.8888888888888888,0.8226461410522461,high,0,0
+formal abaya,nld,nld_Latn,formele abaya,formal abaya,1.0,0.7979578971862793,medium,0,0
+formal thobe,nld,nld_Latn,formeel thobe,formally thobe,0.9230769230769231,0.4780970513820648,low,1,0
+formal dupatta,nld,nld_Latn,formele dupatta,Formal dupatta,1.0,0.4048294126987457,low,1,0
+formal lehenga,nld,nld_Latn,formele lehenga,Of a kind used in the manufacture of foodstuffs,0.06557377049180328,0.5254843235015869,low,1,0
+formal kurta,nld,nld_Latn,formele kurta,Formal courts,0.8,0.44024690985679626,low,1,0
+formal dhoti,nld,nld_Latn,formele dhoti,official dhoti,0.6923076923076923,0.6192084550857544,medium,0,0
+formal qipao,nld,nld_Latn,formele qipao,Formal qipao,1.0,0.47075334191322327,low,1,0
+formal uniform,nld,nld_Latn,formeel uniform,Formal uniforms,0.9655172413793104,0.5182661414146423,low,1,0
+formal formal,nld,nld_Latn,formeel formeel,Formally formally,0.8666666666666667,0.4512109160423279,low,1,0
+formal casual,nld,nld_Latn,formeel casual,Formally casual,0.9285714285714286,0.4911504089832306,low,1,0
+formal modest,nld,nld_Latn,formeel bescheiden,Formally modest,0.9285714285714286,0.7533746361732483,medium,0,0
+formal ornate,nld,nld_Latn,formeel versierd,Formally decorated,0.7741935483870968,0.7559899091720581,medium,0,0
+formal jewelry,nld,nld_Latn,formele sieraden,Formal jewellery,0.9333333333333333,0.8284470438957214,high,0,0
+formal necklace,nld,nld_Latn,formele ketting,Formal chain,0.5925925925925926,0.32132279872894287,low,1,0
+formal earring,nld,nld_Latn,formele oorbellen,Formal earrings,0.9655172413793104,0.8380267024040222,high,0,0
+formal bracelet,nld,nld_Latn,officiële armband,Official bracelet,0.75,0.843286395072937,high,0,0
+formal ring,nld,nld_Latn,formele ring,Formal ring,1.0,0.5369903445243835,low,1,0
+formal headscarf,nld,nld_Latn,formele hoofddoek,Formal headgear,0.8387096774193549,0.8517792224884033,high,0,0
+formal tattoo,nld,nld_Latn,formele tatoeage,Formal tattooing,0.896551724137931,0.8001521825790405,high,0,0
+formal piercing,nld,nld_Latn,formele piercing,Formal piercing,1.0,0.5763569474220276,low,1,0
+formal mask,nld,nld_Latn,formeel masker,Formal masks,0.9565217391304348,0.8404320478439331,high,0,0
+formal gown,nld,nld_Latn,officiële jurk,Official dress,0.32,0.8685792088508606,high,1,0
+formal tuxedo,nld,nld_Latn,formele smoking,Formal tuxedo,1.0,0.2944355607032776,low,1,0
+formal wedding dress,nld,nld_Latn,formele bruidsjurk,Formal wedding dress,1.0,0.8684674501419067,high,0,0
+formal sash,nld,nld_Latn,formele band,Formal bond,0.6363636363636364,0.4610596001148224,low,1,0
+formal sandals,nld,nld_Latn,officiële sandalen,Official sandals,0.7333333333333333,0.8572171330451965,high,0,0
+formal slippers,nld,nld_Latn,formele slippers,Formal slippers,1.0,0.4117356836795807,low,1,0
+formal bangle,nld,nld_Latn,formele knoppen,Formal buttons,0.6666666666666666,0.6675611138343811,medium,0,0
+formal anklet,nld,nld_Latn,formele enkel,Of a kind used in the manufacture of foodstuffs,0.1,0.4009058177471161,low,1,0
+formal kaftan,nld,nld_Latn,formeel kaftan,formal caftan,0.9230769230769231,0.7755073308944702,medium,0,0
+formal poncho,nld,nld_Latn,formeel poncho,formal poncho,1.0,0.7149115204811096,medium,0,0
+formal sombrero,nld,nld_Latn,formele sombrero,Formal sombrero,1.0,0.4751572906970978,low,1,0
+formal kippah,nld,nld_Latn,formele kippah,Formal kippah,1.0,0.7597554922103882,medium,0,0
+formal yarmulke,nld,nld_Latn,formele yarmulke,Formal yarmulke,1.0,0.6609014272689819,medium,0,0
+formal mourning dress,nld,nld_Latn,formele rouwjurk,Formal mourning dress,1.0,0.5826286673545837,low,1,0
+formal ceremonial mask,nld,nld_Latn,formeel ceremoniële masker,Formal ceremonial mask,1.0,0.6605769395828247,medium,0,0
+casual dress,nld,nld_Latn,Casual kleding,Casual clothing,0.5185185185185185,0.7376492619514465,medium,1,1
+casual clothing,nld,nld_Latn,casual kleding,Casual clothing,1.0,0.819643497467041,high,1,1
+casual garment,nld,nld_Latn,gewone kleding,Ordinary clothing,0.1935483870967742,0.8451261520385742,high,1,0
+casual veil,nld,nld_Latn,gelijke sluier,of a thickness of not more than 10 mm,0.125,0.43269744515419006,low,1,0
+casual hijab,nld,nld_Latn,Casual hijab,Casual hijab,1.0,0.7164885997772217,medium,0,0
+casual niqab,nld,nld_Latn,Casual niqab,Casual niqab,1.0,0.5768497586250305,low,1,0
+white,nld,nld_Latn,wit,white,1.0,0.4478471279144287,low,1,0
+red,nld,nld_Latn,rood,Red,1.0,0.6577373147010803,medium,0,0
+black,nld,nld_Latn,zwart,black,1.0,0.8232483863830566,high,0,0
+blue,nld,nld_Latn,blauw,blue,1.0,0.8340847492218018,high,0,0
+green,nld,nld_Latn,groen,Green,1.0,0.8279186487197876,high,0,0
+yellow,nld,nld_Latn,geel,yellow,1.0,0.5042963624000549,low,1,0
+purple,nld,nld_Latn,roze,Roses,0.36363636363636365,0.8473759889602661,high,1,0
+orange,nld,nld_Latn,oranje,orange,1.0,0.8252726197242737,high,0,0
+gold,nld,nld_Latn,goud,gold,1.0,0.8521379232406616,high,0,0
+silver,nld,nld_Latn,zilver,Other articles of iron or steel,0.10810810810810811,0.8567624092102051,high,1,0
+dragon,nld,nld_Latn,draak,Dragon,1.0,0.8486318588256836,high,0,0
+phoenix,nld,nld_Latn,Fenix,Fenix,0.6666666666666666,0.7780691385269165,medium,0,0
+lotus,nld,nld_Latn,lotus,Lotus,1.0,0.8112611770629883,high,0,0
+bamboo,nld,nld_Latn,bamboe,Bamboo or bamboo,0.5454545454545454,0.8468902111053467,high,1,0
+olive,nld,nld_Latn,olijven,Olive oil,0.7142857142857143,0.8456244468688965,high,0,0
+maple,nld,nld_Latn,kreeft,crab,0.2222222222222222,0.6071823835372925,medium,1,0
+totem,nld,nld_Latn,totem,of a kind used for the manufacture of foodstuffs,0.11320754716981132,0.7994966506958008,medium,1,0
+emblem,nld,nld_Latn,embleem,emblem,1.0,0.7827997803688049,medium,0,0
+anthem,nld,nld_Latn,Hymne,Hymn,0.2,0.844869077205658,high,1,1
+flag,nld,nld_Latn,vlag,flag,1.0,0.8465396165847778,high,0,0
+icon,nld,nld_Latn,Icon,Icon,1.0,0.7857217788696289,medium,0,0
+script,nld,nld_Latn,schrijfwijze,How to write,0.3333333333333333,0.818544864654541,high,1,0
+calligraphy,nld,nld_Latn,calligrafie,Calligraphy,1.0,0.852016806602478,high,0,0
+lantern,nld,nld_Latn,lampen,Lamps and lamps,0.2727272727272727,0.7308558225631714,medium,1,0
+opera,nld,nld_Latn,opera,Opera,1.0,0.7458502650260925,medium,0,0
+dance,nld,nld_Latn,dans,Dancing,0.6666666666666666,0.8284977078437805,high,0,0
+music,nld,nld_Latn,muziek,Music,1.0,0.8470180034637451,high,0,0
+folklore,nld,nld_Latn,folklore,Folklore,1.0,0.7851024270057678,medium,0,0
+myth,nld,nld_Latn,Mythe,Myth,1.0,0.831714391708374,high,0,0
+legend,nld,nld_Latn,Legende,The legend,0.75,0.8219190239906311,high,0,0
+oral tradition,nld,nld_Latn,mondelinge traditie,Oral tradition,1.0,0.7221789360046387,medium,0,0
+epic,nld,nld_Latn,episch,epic,1.0,0.791090726852417,medium,0,0
+fable,nld,nld_Latn,verhaallijn,of a kind used in the manufacture of foodstuffs for human consumption,0.08108108108108109,0.8475510478019714,high,1,0
+choir,nld,nld_Latn,gezelschap,company,0.3333333333333333,0.7939016819000244,medium,1,0
+orchestra,nld,nld_Latn,orkest,Orchestra,1.0,0.5715512633323669,low,1,0
+drumming,nld,nld_Latn,trommels,Drums and percussion instruments,0.3,0.5731680989265442,low,1,0
+tango,nld,nld_Latn,Tango,The Tango,0.7142857142857143,0.8292121887207031,high,0,0
+flamenco,nld,nld_Latn,Flamenco,Flamenco,1.0,0.8581327199935913,high,0,0
+bharatanatyam,nld,nld_Latn,Bharatanatyam,Bharatanatyam,1.0,0.7884352207183838,medium,0,0
+kabuki,nld,nld_Latn,kabuki,of a thickness of not more than 10 mm,0.09302325581395349,0.8549501895904541,high,1,0
+lion dance,nld,nld_Latn,leeuwendans,Dancing with lions,0.2857142857142857,0.8664090633392334,high,1,0
+dragon dance,nld,nld_Latn,draken dans,Dragons dance,0.96,0.8395690321922302,high,0,0
+totem pole,nld,nld_Latn,totemstafel,Table of totems,0.4,0.7761356830596924,medium,1,0
+prayer beads,nld,nld_Latn,gebedsperlen,Prayer beads,1.0,0.841334879398346,high,0,0
+chopsticks,nld,nld_Latn,"kledingstukken, kledingstukken, kledingstukken, kledingstukken, kledingstukken, kledingstukken, kledingstukken, kledingstukken, kledingstukken en kledingstukken","Woven fabrics containing predominantly, but < 85% artificial staple fibres by weight, mixed principally or solely with man-made fibres, mixed principally or solely with man-made fibres",0.08247422680412371,0.31322869658470154,low,1,0
+tea ceremony,nld,nld_Latn,theeceremonie,tea ceremony,1.0,0.3762555420398712,low,1,0
+martial arts,nld,nld_Latn,gevechtskunsten,Martial arts,1.0,0.8184241652488708,high,0,0
+cultural white,nld,nld_Latn,culturele witte,cultural whites,0.9655172413793104,0.7657620310783386,medium,0,0
+cultural red,nld,nld_Latn,cultureel rood,cultural red,1.0,0.6767722368240356,medium,0,0
+cultural black,nld,nld_Latn,cultureel zwart,culturally black,0.9333333333333333,0.73592209815979,medium,0,0
+cultural blue,nld,nld_Latn,culturele blauw,cultural blue,1.0,0.7120569348335266,medium,0,0
+cultural green,nld,nld_Latn,cultureel groen,Cultural greenery,0.9032258064516129,0.8206257820129395,high,0,0
+cultural yellow,nld,nld_Latn,cultureel geel,Cultural yellow,1.0,0.5887807607650757,low,1,0
+cultural purple,nld,nld_Latn,culturele paars,Cultural purple,1.0,0.38855457305908203,low,1,0
+cultural orange,nld,nld_Latn,cultureel sinaasappel,Cultured orange,0.8666666666666667,0.5052536129951477,low,1,0
+cultural gold,nld,nld_Latn,culturele goud,cultural gold,1.0,0.6762072443962097,medium,0,0
+cultural silver,nld,nld_Latn,culturele zilver,Cultural silver,1.0,0.7165554165840149,medium,0,0
+cultural dragon,nld,nld_Latn,culturele draak,cultural dragon,1.0,0.6946293711662292,medium,0,0
+cultural phoenix,nld,nld_Latn,culturele feniks,cultural phoenix,1.0,0.8163636326789856,high,0,0
+cultural lotus,nld,nld_Latn,cultureel lotus,Cultured lotus,0.8571428571428571,0.47806423902511597,low,1,0
+cultural bamboo,nld,nld_Latn,culturele bamboe,Cultured bamboo,0.8666666666666667,0.6968363523483276,medium,0,0
+cultural olive,nld,nld_Latn,culturele olijven,Cultured olives,0.8275862068965517,0.8582496643066406,high,0,0
+cultural maple,nld,nld_Latn,cultureel kaaier,Cultured cage,0.5925925925925926,0.7824671268463135,medium,0,0
+cultural totem,nld,nld_Latn,cultuur totem,culture of totem,0.8,0.7057123184204102,medium,0,0
+cultural emblem,nld,nld_Latn,cultureel embleem,cultural emblem,1.0,0.5965205430984497,low,1,0
+cultural anthem,nld,nld_Latn,culturele hymne,cultural anthem,1.0,0.8511326313018799,high,0,0
+cultural flag,nld,nld_Latn,culturele vlag,cultural flag,1.0,0.8664283752441406,high,0,0
+cultural icon,nld,nld_Latn,culturele icoon,cultural icon,1.0,0.8298627138137817,high,0,0
+cultural script,nld,nld_Latn,cultureel script,cultural script,1.0,0.4769376218318939,low,1,0
+cultural calligraphy,nld,nld_Latn,culturele calligrafie,cultural calligraphy,1.0,0.8623657822608948,high,0,0
+cultural lantern,nld,nld_Latn,culturele lantern,Cultural lanterns,0.9696969696969697,0.45135608315467834,low,1,0
+cultural incense,nld,nld_Latn,culturele wierook,Cultured incense,0.875,0.5949746370315552,low,1,0
+cultural opera,nld,nld_Latn,culturele opera,cultural opera,1.0,0.5098217129707336,low,1,0
+cultural dance,nld,nld_Latn,culturele dans,cultural dance,1.0,0.6298047304153442,medium,0,0
+cultural music,nld,nld_Latn,culturele muziek,cultural music,1.0,0.8797295093536377,high,0,0
+cultural folklore,nld,nld_Latn,culturele folklore,cultural folklore,1.0,0.6290522813796997,medium,0,0
+cultural myth,nld,nld_Latn,cultureel mythe,cultural myth,1.0,0.6100523471832275,medium,0,0
+cultural legend,nld,nld_Latn,culturele legende,cultural legend,1.0,0.849638819694519,high,0,0
+cultural oral tradition,nld,nld_Latn,culturele mondelinge traditie,cultural oral tradition,1.0,0.6787897944450378,medium,0,0
+cultural epic,nld,nld_Latn,cultureel episch,Cultural epic,1.0,0.47120288014411926,low,1,0
+cultural fable,nld,nld_Latn,cultuurfabel,cultural mythology,0.625,0.8372586965560913,high,0,0
+cultural choir,nld,nld_Latn,culturele koor,cultural choir,1.0,0.784092903137207,medium,0,0
+cultural orchestra,nld,nld_Latn,culturele orkest,cultural orchestra,1.0,0.5417300462722778,low,1,0
+cultural drumming,nld,nld_Latn,cultureel drummen,cultural drums,0.8387096774193549,0.5792971849441528,low,1,0
+cultural chanting,nld,nld_Latn,culturele chants,cultural chants,0.875,0.5155691504478455,low,1,0
+cultural tango,nld,nld_Latn,culturele tango,cultural tango,1.0,0.5493231415748596,low,1,0
+cultural flamenco,nld,nld_Latn,culturele flamenco,cultural flamenco,1.0,0.5616790056228638,low,1,0
+cultural bharatanatyam,nld,nld_Latn,culturele bharatanatyam,cultural bharatanatyam,1.0,0.5519375801086426,low,1,0
+cultural kabuki,nld,nld_Latn,culturele kabuki,the cultural kabuki,0.8823529411764706,0.8159149289131165,high,0,0
+cultural lion dance,nld,nld_Latn,cultureel leeuwendans,cultural lion dance,1.0,0.8219085931777954,high,0,0
+cultural dragon dance,nld,nld_Latn,culturele draakendans,Cultural dragon dance,1.0,0.806089460849762,high,0,0
+cultural totem pole,nld,nld_Latn,culturele totempole,cultural uptake,0.6470588235294118,0.3782530128955841,low,1,0
+cultural prayer beads,nld,nld_Latn,culturele gebedsperlen,Cultural prayers,0.8648648648648649,0.8403282761573792,high,0,0
+cultural rosary,nld,nld_Latn,culturele rozenkrans,cultural rosary,1.0,0.8132047653198242,high,0,0
+cultural chopsticks,nld,nld_Latn,cultuurstokken,Cultured sticks,0.7647058823529411,0.5196707248687744,low,1,0
+cultural tea ceremony,nld,nld_Latn,culturele theeceremonie,cultural tea ceremony,1.0,0.7280417084693909,medium,0,0
+cultural martial arts,nld,nld_Latn,culturele vechtkunsten,Cultural martial arts,1.0,0.8484519720077515,high,0,0
+democracy,nld,nld_Latn,democratie,Democracy,1.0,0.8648648262023926,high,0,0
+monarchy,nld,nld_Latn,monarchie,Monarchy,1.0,0.860309362411499,high,0,0
+republic,nld,nld_Latn,de republiek,the Republic,0.8,0.5428794026374817,low,1,0
+federal,nld,nld_Latn,federaal,Federal,1.0,0.7340793609619141,medium,0,0
+unitary,nld,nld_Latn,eenheid,Unity,0.8333333333333334,0.7334529757499695,medium,0,0
+parliament,nld,nld_Latn,Parlement,Parliament,1.0,0.8529499173164368,high,0,0
+senate,nld,nld_Latn,Senaat,Council of Ministers,0.23076923076923078,0.8619849681854248,high,1,0
+constitution,nld,nld_Latn,Grondwet,The Constitution,0.8571428571428571,0.8564255237579346,high,0,0
+bureaucracy,nld,nld_Latn,bureaucratie,bureaucracy,1.0,0.8329871892929077,high,0,0
+meritocracy,nld,nld_Latn,Meritocratie,Meritocracy,1.0,0.8349435925483704,high,0,0
+oligarchy,nld,nld_Latn,Oligarchie,Oligarchy,1.0,0.8387525677680969,high,0,0
+aristocracy,nld,nld_Latn,aristocratie,aristocracy,1.0,0.824395477771759,high,0,0
+tribunal,nld,nld_Latn,Tribunaal,Court of Justice,0.16666666666666666,0.8364874720573425,high,1,0
+mediation,nld,nld_Latn,bemiddeling,mediation,1.0,0.8628429174423218,high,0,0
+civil law,nld,nld_Latn,burgerlijk recht,Civil law,1.0,0.876101016998291,high,0,0
+common law,nld,nld_Latn,Gemeenschappelijk recht,Common law,1.0,0.8548798561096191,high,0,0
+customary law,nld,nld_Latn,gebruiksrecht,Right of use,0.16,0.6426622867584229,medium,1,0
+council,nld,nld_Latn,Raad van ministers,Council of Ministers,0.5185185185185185,0.6494290232658386,medium,1,0
+chieftain,nld,nld_Latn,Hoofd,Head,0.46153846153846156,0.7541421055793762,medium,1,0
+citizen,nld,nld_Latn,burger,citizen,1.0,0.3882655203342438,low,1,0
+state,nld,nld_Latn,staat,State of the Union,0.43478260869565216,0.7791880369186401,medium,1,0
+nation,nld,nld_Latn,natie,nation,1.0,0.832552969455719,high,0,0
+border,nld,nld_Latn,grens,boundary,0.42857142857142855,0.837325930595398,high,1,0
+governance,nld,nld_Latn,bestuur,Governance,1.0,0.8515232801437378,high,0,0
+policy,nld,nld_Latn,Politiek,Political policy,0.5454545454545454,0.8289790153503418,high,1,0
+regulation,nld,nld_Latn,Verordening (EG) nr.,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.13333333333333333,0.6206669807434082,medium,1,1
+empire,nld,nld_Latn,rijk,Wealthy,0.15384615384615385,0.7492196559906006,medium,1,0
+colonial,nld,nld_Latn,koloniale,Colonial,1.0,0.6888208389282227,medium,0,0
+decolonization,nld,nld_Latn,ontkolonisatie,decolonization,1.0,0.8728422522544861,high,0,0
+judiciary,nld,nld_Latn,rechterlijke macht,Judicial power,0.6956521739130435,0.8473092913627625,high,0,0
+legislature,nld,nld_Latn,wetgever,Member of the Legislative Council,0.4090909090909091,0.8078635931015015,high,1,0
+executive,nld,nld_Latn,Uitvoerend bestuur,Executive Board,0.75,0.6742299795150757,medium,0,0
+ministry,nld,nld_Latn,dienstverlening,the provision of services,0.18181818181818182,0.7008545994758606,medium,1,0
+administration,nld,nld_Latn,administratie,the administration,0.875,0.8408817052841187,high,0,0
+charter,nld,nld_Latn,handvest,Charter,1.0,0.31287139654159546,low,1,0
+ordinance,nld,nld_Latn,Verordening (EG) nr.,This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.,0.09395973154362416,0.5859456062316895,low,1,1
+treaty,nld,nld_Latn,verdrag,the Treaty,0.75,0.8493359088897705,high,0,0
+diplomacy,nld,nld_Latn,diplomatie,Diplomacy,1.0,0.8551698327064514,high,0,0
+taxation,nld,nld_Latn,belastingen,Taxes,0.46153846153846156,0.8568653464317322,high,1,0
+public office,nld,nld_Latn,openbare ambt,public office,1.0,0.8372541069984436,high,0,0
+village council,nld,nld_Latn,gemeenteraad,Municipal Council,0.625,0.8493978977203369,high,1,1
+city council,nld,nld_Latn,gemeenteraad,Municipal Council,0.6896551724137931,0.8474243879318237,high,1,1
+mayor,nld,nld_Latn,burgemeester,Mayor,1.0,0.847980260848999,high,0,0
+governor,nld,nld_Latn,Gouverneur,Governor,1.0,0.8488732576370239,high,0,0
+public democracy,nld,nld_Latn,openbare democratie,Public democracy,1.0,0.8773242235183716,high,0,0
+public monarchy,nld,nld_Latn,publieke monarchie,public monarchy,1.0,0.865277111530304,high,0,0
+public republic,nld,nld_Latn,openbare republiek,Republic of the People's Republic of China,0.5263157894736842,0.8645681738853455,high,1,0
+public federal,nld,nld_Latn,publieke federale,Federal public sector,0.5142857142857142,0.5156218409538269,low,1,0
+public unitary,nld,nld_Latn,openbare eenheid,public unit,0.88,0.7049973011016846,medium,0,0
+public parliament,nld,nld_Latn,het openbaar parlement,the public parliament,0.8947368421052632,0.8636440634727478,high,0,0
+public senate,nld,nld_Latn,openbare senaat,Public Senate,1.0,0.8463284969329834,high,0,0
+public constitution,nld,nld_Latn,openbare grondwet,public constitution,1.0,0.8731205463409424,high,0,0
+public bureaucracy,nld,nld_Latn,openbare bureaucratie,Public bureaucracy,1.0,0.8571284413337708,high,0,0
+public meritocracy,nld,nld_Latn,publieke meritocratie,public meritocracy,1.0,0.8763320446014404,high,0,0
+public oligarchy,nld,nld_Latn,publieke oligarchie,public oligarchy,1.0,0.876514732837677,high,0,0
+public aristocracy,nld,nld_Latn,publieke aristocratie,public aristocracy,1.0,0.8629227876663208,high,0,0
+public tribunal,nld,nld_Latn,openbare rechtbank,Public court,0.5925925925925926,0.8337851166725159,high,0,0
+public mediation,nld,nld_Latn,openbare bemiddeling,public mediation,1.0,0.8622903823852539,high,0,0
+public civil law,nld,nld_Latn,publieke burgerlijk recht,Public civil law,1.0,0.8622016310691833,high,0,0
+public common law,nld,nld_Latn,openbaar gemeenschappelijk recht,Public common law,1.0,0.8574433922767639,high,0,0
+public customary law,nld,nld_Latn,openbare gewoonterecht,Public customary law,1.0,0.8670406341552734,high,0,0
+public council,nld,nld_Latn,overheidsraad,Council of State,0.4666666666666667,0.8485692739486694,high,1,0
+public chieftain,nld,nld_Latn,staatshoofd,Head of State,0.27586206896551724,0.8050905466079712,high,1,0
+public citizen,nld,nld_Latn,openbare burger,public citizen,1.0,0.8572795987129211,high,0,0
+public state,nld,nld_Latn,publieke staat,State of the Union,0.3333333333333333,0.8691976070404053,high,1,0
+public nation,nld,nld_Latn,publieke natie,public nation,1.0,0.8655250668525696,high,0,0
+public border,nld,nld_Latn,openbare grens,public border,1.0,0.85042405128479,high,0,0
+public governance,nld,nld_Latn,overheidsbeheersing,State control,0.06666666666666667,0.870082676410675,high,1,0
+public policy,nld,nld_Latn,overheidsbeleid,Public policy,1.0,0.8708852529525757,high,0,0
+public regulation,nld,nld_Latn,openbare regelgeving,public regulation,1.0,0.8465315103530884,high,0,0
+public empire,nld,nld_Latn,publieke rijk,public realm,0.72,0.8298236131668091,high,0,0
+public colonial,nld,nld_Latn,publieke koloniale,publicly owned colony,0.6666666666666666,0.5091000199317932,low,1,0
+public decolonization,nld,nld_Latn,publieke dekolonisatie,decolonization by the public,0.5714285714285714,0.876563310623169,high,0,0
+public judiciary,nld,nld_Latn,openbare rechterlijke macht,public jurisdiction,0.7428571428571429,0.8637290596961975,high,0,0
+public legislature,nld,nld_Latn,openbare wetgever,public legislature,1.0,0.825532853603363,high,0,0
+public executive,nld,nld_Latn,overheidsfunctionaris,Government official,0.17142857142857143,0.8716470003128052,high,1,0
+public ministry,nld,nld_Latn,openbare bediening,public service,0.5517241379310345,0.8526880741119385,high,0,0
+public administration,nld,nld_Latn,overheidsdienst,public service,0.45714285714285713,0.8604950904846191,high,1,0
+public charter,nld,nld_Latn,openbare charter,public charter,1.0,0.6589202880859375,medium,0,0
+public ordinance,nld,nld_Latn,openbare verordening,Public regulation,0.5454545454545454,0.8375445604324341,high,1,0
+public treaty,nld,nld_Latn,openbare verdrag,public contract,0.7857142857142857,0.8439784049987793,high,0,0
+public diplomacy,nld,nld_Latn,overheidsdiplomatie,Public diplomacy,1.0,0.8804122805595398,high,0,0
+public taxation,nld,nld_Latn,overheidsbelasting,State tax,0.3333333333333333,0.866234302520752,high,1,0
+public public office,nld,nld_Latn,openbare ambtenaren,Officials of the public sector,0.44,0.7104487419128418,medium,1,0
+public village council,nld,nld_Latn,publieke gemeenteraad,Municipal council,0.6666666666666666,0.8691571354866028,high,0,0
+public city council,nld,nld_Latn,openbare gemeenteraad,Municipal council,0.6666666666666666,0.8391460180282593,high,0,0
+public mayor,nld,nld_Latn,openbare burgemeester,Mayor of the Municipality,0.2702702702702703,0.8132188320159912,high,1,0
+public governor,nld,nld_Latn,openbare gouverneur,public governor,1.0,0.8441265225410461,high,0,0
+state democracy,nld,nld_Latn,Staatsdemocratie,State democracy,1.0,0.8472274541854858,high,0,0
+state monarchy,nld,nld_Latn,staatsmonarchie,State monarchy,1.0,0.8438119888305664,high,0,0
+state republic,nld,nld_Latn,staatsrepubliek,Republic of the Union,0.45714285714285713,0.8313969969749451,high,1,0
+state federal,nld,nld_Latn,federale staat,Federal State,0.5384615384615384,0.7711856365203857,medium,1,0
+state unitary,nld,nld_Latn,eenheidsstaat,Unity of the State,0.3225806451612903,0.7382400631904602,medium,1,0
+state parliament,nld,nld_Latn,staatsparlement,Parliament of the European Union,0.4166666666666667,0.842924952507019,high,1,0
+state senate,nld,nld_Latn,staatssecretariaat,Secretariat of State,0.3125,0.6368232369422913,medium,1,0
+state constitution,nld,nld_Latn,grondwet van de staat,Constitution of the State,0.5581395348837209,0.8590021133422852,high,0,0
+state bureaucracy,nld,nld_Latn,Staatsbureaucratie,State bureaucracy,1.0,0.860246479511261,high,0,0
+state meritocracy,nld,nld_Latn,staatsmeritocratie,State meritocracy,1.0,0.7890955209732056,medium,0,0
+state oligarchy,nld,nld_Latn,staatsoligarchie,State oligarchy,1.0,0.8601900339126587,high,0,0
+state aristocracy,nld,nld_Latn,staatsaristocratie,State aristocracy,1.0,0.8551031947135925,high,0,0
+identity,nld,nld_Latn,identiteit,Identification of the applicant,0.358974358974359,0.8420601487159729,high,1,0
+ethnicity,nld,nld_Latn,etnische nationaliteit,ethnicity,1.0,0.8315469622612,high,0,0
+diaspora,nld,nld_Latn,Diaspora,The Diaspora,0.8,0.7677727937698364,medium,0,0
+migration,nld,nld_Latn,migratie,migration,1.0,0.8711081147193909,high,0,0
+immigrant,nld,nld_Latn,immigrante,immigrants,0.9473684210526315,0.8231030702590942,high,0,0
+refugee,nld,nld_Latn,vluchteling,Refugees,0.9333333333333333,0.8642617464065552,high,0,0
+minority,nld,nld_Latn,minderheid,minority,1.0,0.84576416015625,high,0,0
+majority,nld,nld_Latn,meerderheid,majority,1.0,0.8377172350883484,high,0,0
+assimilation,nld,nld_Latn,assimilatie,Assimilation,1.0,0.8335780501365662,high,0,0
+integration,nld,nld_Latn,integratie,Integration of the European Union,0.5,0.8035101890563965,high,1,0
+segregation,nld,nld_Latn,uitzondering,Exemption,0.6,0.6315046548843384,medium,0,0
+pluralism,nld,nld_Latn,pluralisme,Pluralism,1.0,0.8694004416465759,high,0,0
+multiculturalism,nld,nld_Latn,multiculturalisme,Multiculturalism,1.0,0.8785015344619751,high,0,0
+indigenous,nld,nld_Latn,inheemse,Indigenous,1.0,0.7680057883262634,medium,1,1
+native,nld,nld_Latn,inheemse,Indigenous,0.375,0.7395778894424438,medium,1,1
+foreign,nld,nld_Latn,buitenland,Foreign countries,0.5833333333333334,0.7985681295394897,medium,0,0
+local,nld,nld_Latn,plaatselijke,local,1.0,0.7567465305328369,medium,0,0
+global,nld,nld_Latn,wereldwijd,Worldwide,0.13333333333333333,0.8204619884490967,high,1,1
+community,nld,nld_Latn,gemeenschap,Community,1.0,0.8144875168800354,high,0,0
+belonging,nld,nld_Latn,toebehoren,of which:,0.2222222222222222,0.7688007354736328,medium,1,0
+language,nld,nld_Latn,taal,Language,1.0,0.8217098712921143,high,0,0
+dialect,nld,nld_Latn,dialect,dialect,1.0,0.6648867130279541,medium,0,0
+heritage,nld,nld_Latn,erfgoed,heritage,1.0,0.8573594093322754,high,1,1
+xenophobia,nld,nld_Latn,vreemdelingenhaat,Hate of foreigners,0.14285714285714285,0.8745788931846619,high,1,0
+stereotype,nld,nld_Latn,stereotype,Stereotypes,0.9523809523809523,0.7557864189147949,medium,0,0
+prejudice,nld,nld_Latn,Vooroordelen,Prejudice,1.0,0.8636195063591003,high,0,0
+citizenship,nld,nld_Latn,burgerschap,Citizenship,1.0,0.8799268007278442,high,0,0
+acculturation,nld,nld_Latn,acculturatie,Acculturation,1.0,0.8187211751937866,high,0,0
+hybridity,nld,nld_Latn,hybride,Hybrids,0.75,0.6097437143325806,medium,0,0
+homeland,nld,nld_Latn,vaderland,Country of origin,0.16,0.7835916876792908,medium,1,0
+exile,nld,nld_Latn,verbanning,Expulsion,0.42857142857142855,0.33102282881736755,low,1,0
+settler,nld,nld_Latn,verhuizer,Movers,0.3076923076923077,0.7541012167930603,medium,1,0
+cosmopolitan,nld,nld_Latn,cosmopolitisch,Cosmopolitan,1.0,0.8279569149017334,high,0,0
+transnational,nld,nld_Latn,transnationale,Transnational,1.0,0.689124584197998,medium,0,0
+identity politics,nld,nld_Latn,identiteitspolitiek,Identity policy,0.875,0.8712049126625061,high,0,0
+mother tongue,nld,nld_Latn,moedertaal,mother tongue,1.0,0.8478754162788391,high,0,0
+second language,nld,nld_Latn,tweede taal,Second language,1.0,0.8730642795562744,high,0,0
+local identity,nld,nld_Latn,lokale identiteit,local identity,1.0,0.8865049481391907,high,0,0
+local ethnicity,nld,nld_Latn,plaatselijke etnische afkomst,local ethnic origin,0.7647058823529411,0.8546911478042603,high,0,0
+local diaspora,nld,nld_Latn,lokale diaspora,Local Diaspora,1.0,0.851516842842102,high,0,0
+local migration,nld,nld_Latn,lokale migratie,Local migration,1.0,0.8785513043403625,high,0,0
+local immigrant,nld,nld_Latn,lokale immigrant,Local immigrant,1.0,0.6427749991416931,medium,0,0
+local refugee,nld,nld_Latn,lokale vluchteling,Local refugee,1.0,0.8478289842605591,high,0,0
+local minority,nld,nld_Latn,lokale minderheid,Local minority,1.0,0.8663184642791748,high,0,0
+local majority,nld,nld_Latn,lokale meerderheid,Local majority,1.0,0.8664706349372864,high,0,0
+local assimilation,nld,nld_Latn,lokale assimilatie,Local assimilation,1.0,0.8519091606140137,high,0,0
+local integration,nld,nld_Latn,Plaatselijke integratie,Local integration,1.0,0.8813686370849609,high,0,0
+local segregation,nld,nld_Latn,Plaatselijke segregatie,Local segregation,1.0,0.8713418245315552,high,0,0
+local pluralism,nld,nld_Latn,Plaatselijk pluralisme,Local pluralism,1.0,0.8747895359992981,high,0,0
+local multiculturalism,nld,nld_Latn,lokale multiculturalisme,Local multiculturalism,1.0,0.8741551637649536,high,0,0
+local indigenous,nld,nld_Latn,Plaatselijke inheemse bevolking,Local indigenous people,0.8205128205128205,0.8316916823387146,high,0,0
+local native,nld,nld_Latn,plaatselijke inwoner,local resident,0.6153846153846154,0.8540204763412476,high,0,0
+local foreign,nld,nld_Latn,lokale buitenlandse,Local foreign,1.0,0.697751522064209,medium,0,0
+local local,nld,nld_Latn,plaatselijke plaatselijke,local local local,0.7857142857142857,0.4596886932849884,low,1,0
+local global,nld,nld_Latn,lokale wereldwijde,Local worldwide,0.5185185185185185,0.7246403694152832,medium,1,0
+local community,nld,nld_Latn,lokale gemeenschap,Local community,1.0,0.8559780120849609,high,0,0
+local belonging,nld,nld_Latn,lokaal toebehoren,Locally owned,0.5,0.7688182592391968,medium,1,0
+local language,nld,nld_Latn,Plaatselijke taal,Local language,1.0,0.8777865171432495,high,0,0
+local dialect,nld,nld_Latn,plaatselijk dialect,local dialect,1.0,0.8602405190467834,high,0,0
+local heritage,nld,nld_Latn,Plaatselijk erfgoed,Local heritage,1.0,0.8828025460243225,high,0,0
+local xenophobia,nld,nld_Latn,lokale vreemdelingenhaat,Local hatred of foreigners,0.38095238095238093,0.880600094795227,high,1,0
+local stereotype,nld,nld_Latn,lokale stereotype,Local stereotypes,0.9696969696969697,0.7903604507446289,medium,0,0
+local prejudice,nld,nld_Latn,Plaatselijke vooroordelen,Local prejudices,0.967741935483871,0.8851528763771057,high,0,0
+local solidarity,nld,nld_Latn,lokale solidariteit,Local solidarity,1.0,0.8709715604782104,high,0,0
+local citizenship,nld,nld_Latn,lokale nationaliteit,local nationality,0.47058823529411764,0.8813412189483643,high,1,0
+local acculturation,nld,nld_Latn,lokale acculturatie,local acculturation,1.0,0.8613854646682739,high,0,0
+local hybridity,nld,nld_Latn,lokale hybriditeit,local hybridity,1.0,0.8678686022758484,high,0,0
+local homeland,nld,nld_Latn,Plaatselijke thuisland,Local home country,0.6875,0.8251044750213623,high,0,0
+local exile,nld,nld_Latn,lokale ballingschap,Local exile,1.0,0.8440518975257874,high,0,0
+local settler,nld,nld_Latn,plaatselijke nederzetting,local settlement,0.8275862068965517,0.7904549241065979,medium,0,0
+local cosmopolitan,nld,nld_Latn,Lokaal kosmopolitisch,Local cosmopolitan,1.0,0.7455951571464539,medium,0,0
+local transnational,nld,nld_Latn,Plaatselijke transnationale,Local transnational,1.0,0.7266055345535278,medium,0,0
+local identity politics,nld,nld_Latn,lokale identiteitspolitiek,Local identity policy,0.9090909090909091,0.8720791339874268,high,0,0
+local mother tongue,nld,nld_Latn,lokale moedertaal,Local native language,0.65,0.8512247800827026,high,0,0
+local second language,nld,nld_Latn,lokale tweede taal,Local second language,1.0,0.8658661246299744,high,0,0
+global identity,nld,nld_Latn,wereldwijde identiteit,Global identity,1.0,0.8815944194793701,high,0,0
+global ethnicity,nld,nld_Latn,wereldwijde etniciteit,Global ethnicity,1.0,0.8781628012657166,high,0,0
+global diaspora,nld,nld_Latn,wereldwijde diaspora,worldwide diaspora,0.6060606060606061,0.8770748376846313,high,0,0
+global migration,nld,nld_Latn,wereldwijde migratie,Global migration,1.0,0.881118655204773,high,0,0
+global immigrant,nld,nld_Latn,wereldwijde immigrant,Global immigrant,1.0,0.8438594341278076,high,0,0
+global refugee,nld,nld_Latn,wereldwijde vluchteling,Worldwide refugee,0.5806451612903226,0.8519871234893799,high,0,0
+global minority,nld,nld_Latn,wereldwijde minderheid,Global minority,1.0,0.8641790747642517,high,0,0
+global majority,nld,nld_Latn,wereldwijde meerderheid,the global majority,0.8823529411764706,0.8650466203689575,high,0,0
+global assimilation,nld,nld_Latn,wereldwijde assimilatie,Global assimilation,1.0,0.867977499961853,high,0,0
+global integration,nld,nld_Latn,wereldwijde integratie,Global integration,1.0,0.8642802238464355,high,0,0
+global segregation,nld,nld_Latn,wereldwijde segregatie,Global segregation,1.0,0.876954197883606,high,0,0
+global pluralism,nld,nld_Latn,Globale pluralisme,Global pluralism,1.0,0.8201702833175659,high,0,0
+global multiculturalism,nld,nld_Latn,wereldwijde multiculturalisme,Global multiculturalism,1.0,0.8839734792709351,high,0,0
+global indigenous,nld,nld_Latn,wereldwijde inheemse,worldwide indigenous,0.6486486486486487,0.7847062349319458,medium,1,1
+global native,nld,nld_Latn,wereldwijde inheemse,worldwide indigenous,0.12121212121212122,0.8120676875114441,high,1,1
+global foreign,nld,nld_Latn,wereldwijde buitenlandse,Worldwide foreign,0.5806451612903226,0.5716604590415955,low,1,0
+global local,nld,nld_Latn,wereldwijde lokale,worldwide local,0.5185185185185185,0.6582819223403931,medium,1,0
+global global,nld,nld_Latn,wereldwijd,Worldwide,0.09090909090909091,0.5612332224845886,low,1,1
+global community,nld,nld_Latn,wereldwijde gemeenschap,the global community,0.8888888888888888,0.8701446056365967,high,0,0
+global belonging,nld,nld_Latn,globaal toebehoren,globally relevant,0.6060606060606061,0.8198808431625366,high,0,0
+global language,nld,nld_Latn,wereldtaal,world language,0.6896551724137931,0.8561192750930786,high,0,0
+global dialect,nld,nld_Latn,wereldwijde dialecten,Worldwide dialects,0.5625,0.8558856844902039,high,0,0
+global heritage,nld,nld_Latn,wereldwijd erfgoed,World heritage,0.6896551724137931,0.8738836050033569,high,0,0
+global xenophobia,nld,nld_Latn,wereldwijde vreemdelingenhaat,Global hatred of foreigners,0.4090909090909091,0.881650984287262,high,1,0
+greeting,nld,nld_Latn,groeten,Greetings,0.9411764705882353,0.7517348527908325,medium,0,0
+handshake,nld,nld_Latn,handdruk,Handshake,1.0,0.5198054313659668,low,1,0
+bow,nld,nld_Latn,boog,bow,1.0,0.39960411190986633,low,1,0
+hug,nld,nld_Latn,knuffel,Cuddling,0.36363636363636365,0.8345720767974854,high,1,1
+kiss,nld,nld_Latn,een kus,A kiss,0.8,0.8169536590576172,high,0,0
+gift giving,nld,nld_Latn,geschenken geven,Giving gifts,0.5217391304347826,0.8599591255187988,high,1,0
+hosting,nld,nld_Latn,huisvesting,Housing,0.8571428571428571,0.37930867075920105,low,1,0
+shared meal,nld,nld_Latn,gedeelde maaltijd,shared meal,1.0,0.8572726845741272,high,0,0
+tea time,nld,nld_Latn,Tijd voor thee,Time for tea,0.4,0.8681843280792236,high,1,0
+funeral,nld,nld_Latn,begrafenis,Funeral services,0.6086956521739131,0.8486381769180298,high,1,1
+mourning,nld,nld_Latn,rouw,mourning,1.0,0.7600209712982178,medium,0,0
+burial,nld,nld_Latn,begrafenis,Funeral services,0.36363636363636365,0.8556118607521057,high,1,1
+cremation,nld,nld_Latn,crematie,Cremation,1.0,0.8569289445877075,high,0,0
+birth,nld,nld_Latn,Geboorte,Date of birth,0.5555555555555556,0.8273632526397705,high,0,0
+naming ceremony,nld,nld_Latn,benoemingsceremonie,Ceremony of appointment,0.42105263157894735,0.5178347826004028,low,1,0
+coming of age,nld,nld_Latn,Volwassenheid,Maturity,0.19047619047619047,0.822588324546814,high,1,0
+rite of passage,nld,nld_Latn,ritus van doorgang,Ritual of passage,0.875,0.819850742816925,high,0,0
+ceremony,nld,nld_Latn,ceremonie,Ceremony,1.0,0.6290358304977417,medium,0,0
+weekday,nld,nld_Latn,Werkdag,Working day,0.5555555555555556,0.8175567984580994,high,1,1
+weekend,nld,nld_Latn,weekend,The weekend,0.7777777777777778,0.5830614566802979,low,1,0
+workday,nld,nld_Latn,werkdag,working day,0.7777777777777778,0.8171433210372925,high,1,1
+rest day,nld,nld_Latn,rustdag,Day of rest,0.42105263157894735,0.848852276802063,high,1,0
+queue,nld,nld_Latn,wachtrij,Line of duty,0.11764705882352941,0.8053298592567444,high,1,0
+punctuality,nld,nld_Latn,Punctualiteit,Punctuality,1.0,0.860811710357666,high,0,0
+lateness,nld,nld_Latn,Vertraging,Deferred payment,0.25,0.38165387511253357,low,1,0
+privacy,nld,nld_Latn,privacy,Privacy,1.0,0.5041367411613464,low,1,0
+public space,nld,nld_Latn,openbare ruimte,public space,1.0,0.8659365177154541,high,0,0
+neighbor,nld,nld_Latn,buurman,Neighbor,1.0,0.8038522601127625,high,0,0
+household visit,nld,nld_Latn,Huishoudelijk bezoek,Household visits,0.967741935483871,0.8519458770751953,high,0,0
+guest,nld,nld_Latn,gasten,Guests,0.9090909090909091,0.5624992251396179,low,1,0
+host,nld,nld_Latn,gastheer,Host,1.0,0.8204864859580994,high,0,0
+table manners,nld,nld_Latn,tafelmanieren,Table manners,1.0,0.7992697358131409,medium,0,0
+home cooking,nld,nld_Latn,huishoudelijk koken,Household cooking,0.7586206896551724,0.876106321811676,high,0,0
+festival meal,nld,nld_Latn,feestmaaltijd,feast meal,0.782608695652174,0.8586942553520203,high,0,0
+fast day,nld,nld_Latn,een snelle dag,It's a fast day.,0.6666666666666666,0.7936462163925171,medium,0,0
+memorial day,nld,nld_Latn,herdenkingsdag,commemorative day,0.6896551724137931,0.8635638356208801,high,0,0
+ancestor day,nld,nld_Latn,vooroudersdag,Ancestral day,0.88,0.8283980488777161,high,0,0
+seasonal ritual,nld,nld_Latn,seizoensrituaal,seasonal ritual,1.0,0.8691444396972656,high,0,0
+daily greeting,nld,nld_Latn,dagelijkse groeten,Daily greetings,0.9655172413793104,0.8227433562278748,high,0,0
+daily handshake,nld,nld_Latn,dagelijkse handdruk,daily handshake,1.0,0.8346863985061646,high,0,0
+daily bow,nld,nld_Latn,dagelijkse boog,day-to-day arc,0.34782608695652173,0.6822749972343445,medium,1,0
+daily hug,nld,nld_Latn,dagelijkse knuffel,daily cuddling,0.6956521739130435,0.8283869028091431,high,0,0
+daily kiss,nld,nld_Latn,dagelijkse kus,Everyday kiss,0.6956521739130435,0.8458831906318665,high,0,0
+daily gift giving,nld,nld_Latn,dagelijks geven van cadeautjes,Giving gifts every day,0.3076923076923077,0.858000636100769,high,1,0
+daily hosting,nld,nld_Latn,dagelijkse hosting,day-to-day hosting,0.7096774193548387,0.8364999890327454,high,0,0
+daily hospitality,nld,nld_Latn,dagelijkse gastvrijheid,daily hospitality,1.0,0.8629422187805176,high,0,0
+daily shared meal,nld,nld_Latn,dagelijkse gedeelde maaltijd,daily shared meals,0.9714285714285714,0.8555673360824585,high,0,0
+daily banquet,nld,nld_Latn,dagelijkse banketten,daily banquets,0.9629629629629629,0.833482027053833,high,0,0
+daily tea time,nld,nld_Latn,dagelijkse theetijd,daily tea time,1.0,0.8525342345237732,high,0,0
+daily funeral,nld,nld_Latn,dagelijkse begrafenis,daily funeral,1.0,0.8055288791656494,high,1,1
+daily mourning,nld,nld_Latn,dagelijkse rouw,daily mourning,1.0,0.8400951623916626,high,0,0
+daily burial,nld,nld_Latn,dagelijkse begrafenis,daily funeral,0.8,0.8114624619483948,high,1,1
+daily cremation,nld,nld_Latn,dagelijkse crematie,daily cremation,1.0,0.8604792356491089,high,0,0
+daily birth,nld,nld_Latn,dagelijkse geboorte,daily birth,1.0,0.803328812122345,high,0,0
+daily naming ceremony,nld,nld_Latn,dagelijkse benoemingsceremonie,daily appointment ceremony,0.7659574468085106,0.8571294546127319,high,0,0
+daily coming of age,nld,nld_Latn,dagelijkse volwassenheid,daily maturity,0.48484848484848486,0.8052926659584045,high,1,0
+daily rite of passage,nld,nld_Latn,dagelijkse ritus van passage,daily rite of passage,1.0,0.8095273375511169,high,0,0
+daily ceremony,nld,nld_Latn,dagelijkse ceremonie,daily ceremony,1.0,0.8608526587486267,high,0,0
+daily weekday,nld,nld_Latn,dagelijkse werkdag,daily working day,0.7333333333333333,0.7335704565048218,medium,1,1
+daily weekend,nld,nld_Latn,dagelijks weekend,weekdays,0.47619047619047616,0.7326515913009644,medium,1,0
+daily workday,nld,nld_Latn,dagelijkse werkdag,daily working day,0.8666666666666667,0.836084246635437,high,1,1
+daily rest day,nld,nld_Latn,dagelijkse rustdag,Day of rest,0.64,0.8563969731330872,high,0,0
+daily queue,nld,nld_Latn,dagelijkse wachtrij,Daily waiting lists,0.4,0.830498456954956,high,1,0
+daily punctuality,nld,nld_Latn,dagelijkse punctualiteit,daily punctuality,1.0,0.8663182258605957,high,0,0
+daily lateness,nld,nld_Latn,dagelijkse vertraging,daily delay,0.64,0.7909579277038574,medium,0,0
+daily privacy,nld,nld_Latn,dagelijkse privacy,daily privacy,1.0,0.848808228969574,high,0,0
+daily public space,nld,nld_Latn,dagelijkse openbare ruimte,day-to-day public space,0.7804878048780488,0.7816396951675415,medium,0,0
+daily neighbor,nld,nld_Latn,dagelijkse buurman,everyday neighbor,0.7741935483870968,0.8125431537628174,high,0,0
+daily household visit,nld,nld_Latn,dagelijkse huishoudelijke bezoeken,daily household visits,0.9767441860465116,0.8440232276916504,high,0,0
+daily guest,nld,nld_Latn,dagelijkse gast,daily guest,1.0,0.8327029943466187,high,0,0
+daily host,nld,nld_Latn,dagelijkse gastheer,daily host,1.0,0.7811679840087891,medium,0,0
+daily table manners,nld,nld_Latn,dagelijkse tafelmanieren,daily table manners,1.0,0.8352762460708618,high,0,0
+daily home cooking,nld,nld_Latn,dagelijks thuis koken,Cooking at home every day,0.32558139534883723,0.8655505776405334,high,1,0
+daily festival meal,nld,nld_Latn,dagelijkse feestmaaltijd,daily feast meal,0.8571428571428571,0.8476996421813965,high,0,0
+daily fast day,nld,nld_Latn,dagelijkse vastendag,Day of fasting,0.5714285714285714,0.838266134262085,high,0,0
+daily memorial day,nld,nld_Latn,dagelijkse herdenkingsdag,Day of commemoration,0.5263157894736842,0.8534643650054932,high,1,0
+daily ancestor day,nld,nld_Latn,dagelijkse vooroudersdag,daily ancestral day,0.918918918918919,0.7312554121017456,medium,0,0
+daily seasonal ritual,nld,nld_Latn,dagelijks seizoensrituaal,Daily seasonal ritual,1.0,0.8623002767562866,high,0,0
+household greeting,nld,nld_Latn,huishoudelijke groeten,Household greetings,0.972972972972973,0.8149061799049377,high,0,0
+household handshake,nld,nld_Latn,huishoudelijke handdruk,Household handshake,1.0,0.774403989315033,medium,0,0
+household bow,nld,nld_Latn,huishoudelijke boog,Household bow,1.0,0.5959186553955078,low,1,0
+household hug,nld,nld_Latn,huishoudelijke knuffel,Household cuddling,0.7741935483870968,0.8072500228881836,high,0,0
+household kiss,nld,nld_Latn,huishoudelijke kus,A domestic kiss,0.4827586206896552,0.7836863994598389,medium,1,0
+household gift giving,nld,nld_Latn,Huishoudelijke cadeautjes geven,Giving Domestic Gifts,0.2857142857142857,0.8573760986328125,high,1,0
+household hosting,nld,nld_Latn,huishoudelijk huisvesting,Household housing,0.9411764705882353,0.7016222476959229,medium,0,0
+household hospitality,nld,nld_Latn,huishoudelijke gastvrijheid,Household hospitality,1.0,0.857660174369812,high,0,0
+household shared meal,nld,nld_Latn,gezinsgemeenschappelijke maaltijd,Family meal,0.375,0.8478545546531677,high,1,0
+household banquet,nld,nld_Latn,huishoudelijk banket,household banquet,1.0,0.8254138827323914,high,0,0
+household tea time,nld,nld_Latn,huishoudelijke theetijd,Household tea time,1.0,0.8418538570404053,high,0,0
+household funeral,nld,nld_Latn,huishoudelijke begrafenis,Household funeral,1.0,0.8333153128623962,high,1,1
+household mourning,nld,nld_Latn,huishoudelijke rouw,Domestic mourning,0.6285714285714286,0.8445869088172913,high,0,0
+household burial,nld,nld_Latn,huishoudelijke begrafenis,Household funeral,0.8484848484848485,0.8492220640182495,high,1,1
+household cremation,nld,nld_Latn,huishoudelijke crematie,household cremation,1.0,0.8605241775512695,high,0,0
+household birth,nld,nld_Latn,huishoudelijke geboorte,Domestic birth,0.5517241379310345,0.8206915855407715,high,0,0
+household naming ceremony,nld,nld_Latn,huishoudelijke benoemingsceremonie,Household appointment ceremony,0.8,0.8002974987030029,high,0,0
+household coming of age,nld,nld_Latn,huishoudelijke volwassenheid,household maturity,0.5853658536585366,0.6633114218711853,medium,0,0
+household rite of passage,nld,nld_Latn,huishoudelijke ritus van passage,Household rite of passage,1.0,0.6445125341415405,medium,0,0
+household ceremony,nld,nld_Latn,huishoudelijke ceremonie,Household ceremony,1.0,0.8308780193328857,high,0,0
+public,nld,nld_Latn,het publiek,The public,0.75,0.8331593871116638,high,0,0
+fast,nld,nld_Latn,snel,Quickly,0.0,0.7427218556404114,medium,1,0
+grand,nld,nld_Latn,Grote,Large,0.2,0.42964574694633484,low,1,0
+gift,nld,nld_Latn,geschenk,The gift,0.6666666666666666,0.8352935314178467,high,0,0
+meal,nld,nld_Latn,maaltijd,Meals,0.8888888888888888,0.8397705554962158,high,0,0
+custom,nld,nld_Latn,aangepaste,adjusted,0.42857142857142855,0.5079660415649414,low,1,0
