@@ -11,6 +11,7 @@ __pycache__/
 .venv/
 venv/
 .cache/
+/.tinytex/
 
 # Heavy/generated training artifacts
 /logs/
