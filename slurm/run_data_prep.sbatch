@@ -4,18 +4,20 @@
 #SBATCH --mem=96G
 #SBATCH --partition=normal
 #SBATCH --time=2-00:00:00
-#SBATCH --output=/scratch/amukher6/bli/logs/slurm_logs/pipeline_prep-%j.out
-#SBATCH --error=/scratch/amukher6/bli/logs/slurm_logs/pipeline_prep-%j.err
+#SBATCH --output=/scratch/%u/bli/logs/slurm_logs/pipeline_prep-%j.out
+#SBATCH --error=/scratch/%u/bli/logs/slurm_logs/pipeline_prep-%j.err
 
 set -euo pipefail
 
-source /home/amukher6/nanotron-env/bin/activate
-cd /scratch/amukher6/bli
+BLI_ROOT="${BLI_ROOT:-/scratch/$USER/bli}"
+NANOTRON_ENV="${NANOTRON_ENV:-$HOME/nanotron-env}"
+source "${NANOTRON_ENV}/bin/activate"
+cd "${BLI_ROOT}"
 
 set +x
-set -a; source /scratch/amukher6/bli/.env; set +a
+set -a; source "${BLI_ROOT}/.env"; set +a
 export HUGGING_FACE_HUB_TOKEN="${HF_TOKEN:-${HUGGING_FACE_HUB_TOKEN:-}}"
-export HF_HOME=/scratch/amukher6/cache/hf_cache
+export HF_HOME="${HF_HOME:-/scratch/$USER/cache/hf_cache}"
 set -x
 
 python src/pipeline/prepare_babylm_data.py \

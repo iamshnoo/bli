@@ -1,60 +1,97 @@
 # BLI
 
-Reproducible pipeline for BLI-style alignment analysis across multilingual BabyLM runs, from dataset preparation through training, model conversion, probing/analysis, artifact generation, and paper PDF build.
+Reproducible pipeline for multilingual BabyLM pretraining analysis: dataset prep, tokenization, train/convert, probing, metrics, plots, and paper PDF.
 
-## What Is In This Repo
+## Repository
 
-Pushed content (recommended):
-- `src/` pipeline, training, probes, and analysis code
-- `slurm/` Slurm entry scripts
-- `config/` model/stage config JSONs
-- `data/probes/` probe inventories and multilingual probe translation CSVs
-- `data/language_metadata.csv`
-- `README.md`
+- Project: `https://github.com/$HF_USER/bli`
+- Pretraining library: `https://github.com/$HF_USER/nanotron`
 
-Large artifacts that should **not** be pushed:
-- `latex/`
-- `AGENT.md`, `CLAUDE_PLAN.md`
-- `logs/` (training checkpoints and job logs)
-- `models/` (HF exported model weights)
-- `data/raw/`, `data/processed/` (downloaded/tokenized corpora)
-- `outputs/**/representations/*.npy` and other bulky intermediates
+## Repo Layout
 
-## External Dependencies
+- `src/`: pipeline, training utilities, probes, and analysis code
+- `slurm/`: cluster entry scripts (data prep, probe translation/QE, DAG submit)
+- `config/`: model registries and stage JSONs
+- `data/probes/`: probe inventory and multilingual translation CSV outputs
+- `latex/`: paper source (`main.tex`, `references.bib`, `tables/`, `figures/`, `scripts/`)
 
-### 1) Pretraining library (Nanotron)
-This project expects your Nanotron fork:
-- Repo: `https://github.com/iamshnoo/nanotron`
-- Used local checkout in this run: `/scratch/amukher6/pretrain/nanotron`
-- Observed commit: `737ccd8854dd32ed99f9ad9189b09a3aa1b62b20`
+## Prerequisites (Cluster Setup)
 
-### 2) Python environment
-Use one environment for CPU + GPU jobs (example):
+Set variables once:
+
 ```bash
+export HF_USER=<your-hf-username>
+export BLI_ROOT=/scratch/$USER/bli
+export LANGSENSE_ROOT=/scratch/$USER/langsense
+export NANOTRON_ROOT=$LANGSENSE_ROOT/nanotron
+export NANOTRON_ENV=$HOME/nanotron-env
+```
+
+Environment bootstrap (CPU + GPU tasks use the same env):
+
+```bash
+echo "export HF_HOME=/scratch/$USER/cache/hf_cache" >> ~/.bashrc
+cat ~/.bashrc
+
+ml load gnu12/12.3.0
+ml load python/3.11.7-cx
+ml load cuda/12.4.0
+ml load git
+
 python -m venv ~/nanotron-env
 source ~/nanotron-env/bin/activate
 pip install --upgrade pip
+pip install torch --index-url https://download.pytorch.org/whl/cu124
 
-# Install nanotron (editable)
-pip install -e /path/to/nanotron
+mkdir -p "$LANGSENSE_ROOT"/{models,datasets,src}
+mkdir -p "$LANGSENSE_ROOT"/logs/{data_processing,slurm_logs,checkpoints,configs,slurm_scripts}
 
-# BLI extras
-pip install datasets transformers pandas numpy scipy matplotlib seaborn scikit-learn tqdm pillow wordfreq sentencepiece
+cd "$LANGSENSE_ROOT"
+git clone https://github.com/$HF_USER/nanotron.git
+cd nanotron
+pip install -e .
+pip install datasets==3.6.0 transformers numba wandb ninja triton datatrove==0.3.0
+
+wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.3/flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+pip install flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+rm flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+
+pip install psutil pybind11
+pip install trl bitsandbytes peft liger-kernel rich
 pip install "unbabel-comet>=2.0.0"
+
+echo "export VIRTUAL_ENV=$HOME/nanotron-env" >> ~/.bashrc
+echo "export VIRTUAL_ENV" >> ~/.bashrc
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
+
+hf auth login
+wandb login
 ```
 
-### 3) LaTeX toolchain
-- `pdflatex` + `bibtex` (TinyTeX/TeXLive is fine)
+Flash-attention `.so` workaround note:
+- Follow: `https://github.com/Dao-AILab/flash-attention/issues/1708#issuecomment-3283420504`
 
-### 4) Hugging Face auth
-BabyLM-community datasets are gated. Before running data prep:
+## TinyTeX / LaTeX Toolchain
+
+Install TinyTeX (local to your user):
+
 ```bash
-export HF_TOKEN=...
-export HUGGING_FACE_HUB_TOKEN=$HF_TOKEN
-export HF_HOME=/scratch/amukher6/cache/hf_cache  # optional but recommended
+curl -fsSL https://yihui.org/tinytex/install-bin-unix.sh | sh
+export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
+
+tlmgr install latexmk collection-latexrecommended collection-fontsrecommended \
+  collection-latexextra natbib url hyperref booktabs multirow siunitx xcolor
 ```
 
-## Hugging Face Dataset IDs Used
+Paper source tracked in `latex/` for Overleaf sync:
+- `latex/main.tex`
+- `latex/references.bib`
+- `latex/tables/*.tex`
+- `latex/figures/*` (generated/copied figure assets)
+- `latex/scripts/generate_artifacts.py`
+- `latex/scripts/sync_report.sh`
+
+## Hugging Face Datasets Used
 
 - `BabyLM-community/babylm-eng`
 - `BabyLM-community/babylm-zho`
@@ -67,44 +104,25 @@ export HF_HOME=/scratch/amukher6/cache/hf_cache  # optional but recommended
 - `BabyLM-community/babylm-deu`
 
 English controls:
-- `eng_shared` and `eng_disjoint` are deterministic splits from `babylm-eng` created in `src/pipeline/prepare_babylm_data.py`.
+- `eng_shared` and `eng_disjoint` are deterministic partitions from `BabyLM-community/babylm-eng`.
 
-## End-to-End Reproduction
+## End-to-End Run
 
-### Option A: Full Slurm pipeline (recommended)
 ```bash
-cd /scratch/amukher6/bli
+cd "$BLI_ROOT"
 bash src/pipeline/submit_full_rebuild.sh
 ```
 
 This submits:
-1. `slurm/run_data_prep.sbatch` (CPU, `normal`)
-   - builds EN shared/disjoint partitions
-   - tokenizes all 9 BabyLM datasets
-   - writes stage configs
-   - validates overlap controls
-   - rebuilds probe sets (`3000` anchors, `1000` cultural probes, `50` semantic axes, `100` negative controls)
-2. `slurm/run_probe_translation_qe.sbatch` (GPU, `contrib-gpuq`)
-   - translates probes to `zh, fr, fas, nld, ukr, bul, ind, deu`
-   - computes COMETKiwi QE with `Unbabel/wmt22-cometkiwi-da`
-3. `slurm/run_submit_dag.sbatch` (CPU, `normal`)
-   - submits training jobs via Nanotron launcher
-   - submits checkpoint-to-HF conversion jobs
-   - submits BLI analysis jobs
-   - submits postprocess job (language-ratio summary, artifact generation, figure combine, PDF build)
+1. `slurm/run_data_prep.sbatch` (CPU, `normal`): partition EN, tokenize datasets, rebuild probes.
+2. `slurm/run_probe_translation_qe.sbatch` (GPU): translate probes + COMETKiwi QE (`Unbabel/wmt22-cometkiwi-da`).
+3. `slurm/run_submit_dag.sbatch` (CPU): launch train -> convert -> analysis -> postprocess chain.
 
-### Option B: Post-pretraining refresh only
-If models are already trained/converted and you only changed probes/analysis/paper:
+## Manual Step Order
+
+1. Data prep + tokenization + probe inventory:
 ```bash
-cd /scratch/amukher6/bli
-bash src/pipeline/submit_post_pretrain_refresh.sh
-```
-
-## Manual Step-by-Step Commands
-
-### 1) Data prep + probe inventory
-```bash
-cd /scratch/amukher6/bli
+cd "$BLI_ROOT"
 python src/pipeline/prepare_babylm_data.py \
   --tokenizer meta-llama/Llama-3.2-1B \
   --n-tasks 16 \
@@ -114,11 +132,11 @@ python src/pipeline/prepare_babylm_data.py \
   --probe-negative-target 100
 ```
 
-### 2) Multilingual probe translation + QE
+2. Multilingual probe translation + QE:
 ```bash
 python src/probes/build_multilingual_probes.py \
-  --probe-set /scratch/amukher6/bli/data/probes/probe_sets.json \
-  --output-dir /scratch/amukher6/bli/data/probes \
+  --probe-set data/probes/probe_sets.json \
+  --output-dir data/probes \
   --model facebook/nllb-200-distilled-600M \
   --comet-model Unbabel/wmt22-cometkiwi-da \
   --batch-size 32 \
@@ -126,43 +144,47 @@ python src/probes/build_multilingual_probes.py \
   --device cuda
 ```
 
-### 3) Training -> conversion -> analysis DAG submission
+3. Submit training/conversion/analysis DAG:
 ```bash
 python src/pipeline/submit_train_convert_analysis.py
 ```
 
-### 4) Artifact generation + PDF
+4. Build paper artifacts + PDF:
 ```bash
 python src/pipeline/build_language_ratio_summary.py \
-  --revision-root /scratch/amukher6/bli/outputs/revision \
-  --multilingual-root /scratch/amukher6/bli/outputs/multilingual_expansion \
-  --output /scratch/amukher6/bli/outputs/multilingual_expansion/language_ratio_summary.csv
+  --revision-root outputs/revision \
+  --multilingual-root outputs/multilingual_expansion \
+  --output outputs/multilingual_expansion/language_ratio_summary.csv
 
 python latex/scripts/generate_artifacts.py \
-  --output-root /scratch/amukher6/bli/outputs/revision \
-  --multilingual-output-root /scratch/amukher6/bli/outputs/multilingual_expansion \
-  --latex-root /scratch/amukher6/bli/latex
+  --output-root outputs/revision \
+  --multilingual-output-root outputs/multilingual_expansion \
+  --latex-root latex
 
 python src/pipeline/combine_multilingual_figures.py \
-  --left /scratch/amukher6/bli/latex/figures/main_multilingual_regression.png \
-  --right /scratch/amukher6/bli/latex/figures/appendix_multilingual_overview.png \
-  --output /scratch/amukher6/bli/latex/figures/combined_multilingual_fig5_fig11.png
+  --left latex/figures/main_multilingual_regression.png \
+  --right latex/figures/appendix_multilingual_overview.png \
+  --output latex/figures/combined_multilingual_fig5_fig11.png
 
 bash latex/scripts/sync_report.sh
 ```
 
-## Main Outputs
+## Key Outputs
 
-- Final paper PDF: `latex/main.pdf`
-- Core analysis: `outputs/revision/en_ablation/`
-- Multilingual expansion: `outputs/multilingual_expansion/`
-- Overlap validation report: `outputs/validation/exposure_overlap_report.json`
-- Probe inventory: `data/probes/probe_sets.json`
-- Probe translations + QE: `data/probes/translations_*.csv`, `data/probes/translation_summary.json`
+- `latex/main.pdf`
+- `outputs/revision/en_ablation/`
+- `outputs/revision/zh_shared_language/`
+- `outputs/revision/fr_shared_language/`
+- `outputs/multilingual_expansion/`
+- `outputs/validation/exposure_overlap_report.json`
+- `data/probes/probe_sets.json`
+- `data/probes/translations_*.csv`
+- `data/probes/translation_summary.json`
 
 ## Monitoring
+
 ```bash
 squeue -u $USER
 sacct -u $USER --starttime today --format=JobID,JobName,State,Elapsed,ExitCode
-ls -lt /scratch/amukher6/bli/logs/slurm_logs
+ls -lt "$BLI_ROOT"/logs/slurm_logs
 ```

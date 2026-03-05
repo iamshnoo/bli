@@ -17,7 +17,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Layer-wise axis divergence analysis")
     p.add_argument("--models-json", type=Path, required=True, help="JSON mapping model_name -> HF path")
-    p.add_argument("--probe-set", type=Path, default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"))
+    p.add_argument("--probe-set", type=Path, default=Path("data/probes/probe_sets.json"))
     p.add_argument("--output-csv", type=Path, required=True)
     p.add_argument("--batch-size", type=int, default=32)
     p.add_argument("--device", choices=["auto", "cuda", "cpu"], default="auto")

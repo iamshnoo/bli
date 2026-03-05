@@ -6,7 +6,8 @@ import os
 import sys
 from pathlib import Path
 
-NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", "/scratch/amukher6/pretrain/nanotron"))
+DEFAULT_NANOTRON_ROOT = f"/scratch/{os.environ.get('USER', 'USER')}/langsense/nanotron"
+NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", DEFAULT_NANOTRON_ROOT))
 if str(NANOTRON_ROOT) not in sys.path:
     sys.path.insert(0, str(NANOTRON_ROOT))
 

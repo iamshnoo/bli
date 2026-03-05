@@ -21,12 +21,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--probe-set",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"),
+        default=Path("data/probes/probe_sets.json"),
     )
     p.add_argument(
         "--out-csv",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/revision/en_ablation/bli_perhead_analysis.csv"),
+        default=Path("outputs/revision/en_ablation/bli_perhead_analysis.csv"),
     )
     p.add_argument("--layers", type=str, default="4,5,6", help="Comma-separated layer indices")
     p.add_argument("--batch-size", type=int, default=64)

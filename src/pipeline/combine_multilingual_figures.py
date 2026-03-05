@@ -9,12 +9,12 @@ from PIL import Image
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Combine two multilingual figures side-by-side")
-    p.add_argument("--left", type=Path, default=Path("/scratch/amukher6/bli/latex/figures/main_multilingual_regression.png"))
-    p.add_argument("--right", type=Path, default=Path("/scratch/amukher6/bli/latex/figures/appendix_multilingual_overview.png"))
+    p.add_argument("--left", type=Path, default=Path("latex/figures/main_multilingual_regression.png"))
+    p.add_argument("--right", type=Path, default=Path("latex/figures/appendix_multilingual_overview.png"))
     p.add_argument(
         "--output",
         type=Path,
-        default=Path("/scratch/amukher6/bli/latex/figures/combined_multilingual_fig5_fig11.png"),
+        default=Path("latex/figures/combined_multilingual_fig5_fig11.png"),
     )
     p.add_argument("--pad", type=int, default=24)
     return p.parse_args()

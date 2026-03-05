@@ -19,7 +19,6 @@ venv/
 /data/raw/
 /data/processed/
 /outputs/
-/latex/
 /AGENT.md
 /CLAUDE_PLAN.md
 
@@ -35,8 +34,13 @@ venv/
 # LaTeX build scratch
 latex/.build/
 latex/.build2/
+latex/.build*/
 latex/*.aux
 latex/*.bbl
 latex/*.blg
 latex/*.log
 latex/*.out
+latex/*.pdf
+latex/*.synctex.gz
+latex/*.fdb_latexmk
+latex/*.fls

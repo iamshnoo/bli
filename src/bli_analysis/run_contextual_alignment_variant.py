@@ -17,17 +17,17 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--probe-set",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"),
+        default=Path("data/probes/probe_sets.json"),
     )
     p.add_argument(
         "--rep-dir",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/revision/en_ablation/representations"),
+        default=Path("outputs/revision/en_ablation/representations"),
     )
     p.add_argument(
         "--out-csv",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/revision/en_ablation/bli_contextual_alignment_variant.csv"),
+        default=Path("outputs/revision/en_ablation/bli_contextual_alignment_variant.csv"),
     )
     p.add_argument("--topk", type=int, default=25)
     return p.parse_args()

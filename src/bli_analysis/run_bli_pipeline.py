@@ -18,9 +18,9 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 DEFAULT_MODELS = {
-    "eng_only": "/scratch/amukher6/bli/models/hf/babylm_160m_eng_only_3g40_hf",
-    "eng_zho": "/scratch/amukher6/bli/models/hf/babylm_160m_eng_zho_3g40_hf",
-    "eng_fra": "/scratch/amukher6/bli/models/hf/babylm_160m_eng_fra_3g40_hf",
+    "eng_only": "models/hf/babylm_160m_eng_only_3g40_hf",
+    "eng_zho": "models/hf/babylm_160m_eng_zho_3g40_hf",
+    "eng_fra": "models/hf/babylm_160m_eng_fra_3g40_hf",
 }
 
 DEFAULT_PROMPTS = [
@@ -312,12 +312,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--probe-set",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"),
+        default=Path("data/probes/probe_sets.json"),
     )
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/bli"),
+        default=Path("outputs/bli"),
     )
     parser.add_argument("--topk", type=int, default=25)
     parser.add_argument("--batch-size", type=int, default=64)

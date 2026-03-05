@@ -1,6 +1,6 @@
 {
-  "deu_50m": "/scratch/amukher6/bli/models/hf/deu_50m",
-  "deu_100m": "/scratch/amukher6/bli/models/hf/deu_100m",
-  "en_deu_a": "/scratch/amukher6/bli/models/hf/en_deu_a",
-  "en_deu_b": "/scratch/amukher6/bli/models/hf/en_deu_b"
+  "deu_50m": "models/hf/deu_50m",
+  "deu_100m": "models/hf/deu_100m",
+  "en_deu_a": "models/hf/en_deu_a",
+  "en_deu_b": "models/hf/en_deu_b"
 }

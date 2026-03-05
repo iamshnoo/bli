@@ -31,12 +31,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--probe-set",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"),
+        default=Path("data/probes/probe_sets.json"),
     )
     p.add_argument(
         "--output-dir",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes"),
+        default=Path("data/probes"),
     )
     p.add_argument("--model", type=str, default="facebook/nllb-200-distilled-600M")
     p.add_argument("--batch-size", type=int, default=32)

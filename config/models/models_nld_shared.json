@@ -1,6 +1,6 @@
 {
-  "nld_50m": "/scratch/amukher6/bli/models/hf/nld_50m",
-  "nld_100m": "/scratch/amukher6/bli/models/hf/nld_100m",
-  "en_nld_a": "/scratch/amukher6/bli/models/hf/en_nld_a",
-  "en_nld_b": "/scratch/amukher6/bli/models/hf/en_nld_b"
+  "nld_50m": "models/hf/nld_50m",
+  "nld_100m": "models/hf/nld_100m",
+  "en_nld_a": "models/hf/en_nld_a",
+  "en_nld_b": "models/hf/en_nld_b"
 }

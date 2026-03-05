@@ -14,8 +14,15 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Iterable, List
 
-ROOT = Path("/scratch/amukher6/bli")
-NANOTRON_ROOT = Path("/scratch/amukher6/pretrain/nanotron")
+USER_NAME = os.environ.get("USER", "USER")
+DEFAULT_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{USER_NAME}/langsense/nanotron")
+
+ROOT = Path(os.environ.get("BLI_ROOT", str(DEFAULT_ROOT)))
+NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", str(DEFAULT_NANOTRON_ROOT)))
+NANOTRON_ENV = Path(os.environ.get("NANOTRON_ENV", str(Path.home() / "nanotron-env")))
+HF_HOME_ROOT = Path(os.environ.get("HF_HOME", f"/scratch/{USER_NAME}/cache/hf_cache"))
+ENV_FILE = ROOT / ".env"
 
 LOG_ROOT = ROOT / "logs"
 SLURM_LOG_ROOT = LOG_ROOT / "slurm_logs"
@@ -27,7 +34,10 @@ OUTPUT_REV = ROOT / "outputs/revision"
 OUTPUT_MULTI = ROOT / "outputs/multilingual_expansion"
 
 TOKENIZER = "meta-llama/Llama-3.2-1B"
-HF_EXTRA_ENV = "set -a; source /scratch/amukher6/bli/.env; set +a; export HUGGING_FACE_HUB_TOKEN=$HF_TOKEN; export HF_HOME=/scratch/amukher6/cache/hf_cache"
+HF_EXTRA_ENV = (
+    f"set -a; source {shlex.quote(str(ENV_FILE))}; set +a; "
+    f"export HUGGING_FACE_HUB_TOKEN=$HF_TOKEN; export HF_HOME={shlex.quote(str(HF_HOME_ROOT))}"
+)
 
 LANG_DATASET_CODE = {
     "zh": "zho",
@@ -82,8 +92,8 @@ def run_cmd(cmd: List[str], cwd: Path | None = None, dry_run: bool = False) -> s
             if is_launcher_submit:
                 # Avoid HF API throttling during config generation;
                 # launcher can load tokenizer metadata from local cache.
-                env.setdefault("HF_HOME", "/scratch/amukher6/cache/hf_cache")
-                env.setdefault("HUGGINGFACE_HUB_CACHE", "/scratch/amukher6/cache/hf_cache/hub")
+                env.setdefault("HF_HOME", str(HF_HOME_ROOT))
+                env.setdefault("HUGGINGFACE_HUB_CACHE", str(HF_HOME_ROOT / "hub"))
                 env["HF_HUB_OFFLINE"] = "1"
                 env["TRANSFORMERS_OFFLINE"] = "1"
 
@@ -467,13 +477,16 @@ def submit_conversion_jobs(train_jobs: Dict[str, dict], dry_run: bool) -> Dict[s
 #SBATCH --error={log_dir}/%x-%j.err
 set -euo pipefail
 
-source /home/amukher6/nanotron-env/bin/activate
-cd /scratch/amukher6/pretrain/nanotron
+BLI_ROOT={shlex.quote(str(ROOT))}
+NANOTRON_ROOT={shlex.quote(str(NANOTRON_ROOT))}
+NANOTRON_ENV={shlex.quote(str(NANOTRON_ENV))}
+source "${{NANOTRON_ENV}}/bin/activate"
+cd "${{NANOTRON_ROOT}}"
 
 set +x
-set -a; source /scratch/amukher6/bli/.env; set +a
+set -a; source "${{BLI_ROOT}}/.env"; set +a
 export HUGGING_FACE_HUB_TOKEN="${{HF_TOKEN:-${{HUGGING_FACE_HUB_TOKEN:-}}}}"
-export HF_HOME=/scratch/amukher6/cache/hf_cache
+export HF_HOME={shlex.quote(str(HF_HOME_ROOT))}
 set -x
 
         if [ -f {out_dir}/config.json ]; then
@@ -481,7 +494,7 @@ set -x
   exit 0
 fi
 
-CKPT_ROOT=/scratch/amukher6/bli/logs/checkpoints/{run_name}
+CKPT_ROOT=${{BLI_ROOT}}/logs/checkpoints/{run_name}
 EXPECTED_STEP={expected_step}
 
 if [ -d "$CKPT_ROOT/$EXPECTED_STEP" ]; then
@@ -493,7 +506,7 @@ else
   exit 1
 fi
 
-python /scratch/amukher6/bli/src/training/convert_checkpoint_to_hf.py \\
+python "${{BLI_ROOT}}/src/training/convert_checkpoint_to_hf.py" \\
   --checkpoint-path "$CKPT_PATH" \\
   --save-path {out_dir} \\
   --tokenizer-name {tokenizer_ref}
@@ -520,7 +533,7 @@ def write_models_json_files() -> Dict[str, Path]:
     CONFIG_MODEL_ROOT.mkdir(parents=True, exist_ok=True)
 
     def model_path(name: str) -> str:
-        return str(HF_MODEL_ROOT / name)
+        return str(Path("models/hf") / name)
 
     files: Dict[str, Path] = {}
 
@@ -586,13 +599,15 @@ def analysis_job_header(name: str, log_dir: Path, time_limit: str = "1-12:00:00"
 #SBATCH --error={log_dir}/%x-%j.err
 set -euo pipefail
 
-source /home/amukher6/nanotron-env/bin/activate
-cd /scratch/amukher6/bli
+BLI_ROOT={shlex.quote(str(ROOT))}
+NANOTRON_ENV={shlex.quote(str(NANOTRON_ENV))}
+source "${{NANOTRON_ENV}}/bin/activate"
+cd "${{BLI_ROOT}}"
 
 set +x
-set -a; source /scratch/amukher6/bli/.env; set +a
+set -a; source "${{BLI_ROOT}}/.env"; set +a
 export HUGGING_FACE_HUB_TOKEN="${{HF_TOKEN:-${{HUGGING_FACE_HUB_TOKEN:-}}}}"
-export HF_HOME=/scratch/amukher6/cache/hf_cache
+export HF_HOME={shlex.quote(str(HF_HOME_ROOT))}
 set -x
 """
 
@@ -832,23 +847,25 @@ def submit_postprocess_job(analysis_ids: Dict[str, str], dry_run: bool) -> str:
 #SBATCH --error={log_dir}/%x-%j.err
 set -euo pipefail
 
-source /home/amukher6/nanotron-env/bin/activate
-cd /scratch/amukher6/bli
+BLI_ROOT={shlex.quote(str(ROOT))}
+NANOTRON_ENV={shlex.quote(str(NANOTRON_ENV))}
+source "${{NANOTRON_ENV}}/bin/activate"
+cd "${{BLI_ROOT}}"
 
 python src/pipeline/build_language_ratio_summary.py \\
-  --revision-root /scratch/amukher6/bli/outputs/revision \\
-  --multilingual-root /scratch/amukher6/bli/outputs/multilingual_expansion \\
-  --output /scratch/amukher6/bli/outputs/multilingual_expansion/language_ratio_summary.csv
+  --revision-root "${{BLI_ROOT}}/outputs/revision" \\
+  --multilingual-root "${{BLI_ROOT}}/outputs/multilingual_expansion" \\
+  --output "${{BLI_ROOT}}/outputs/multilingual_expansion/language_ratio_summary.csv"
 
 python latex/scripts/generate_artifacts.py \\
-  --output-root /scratch/amukher6/bli/outputs/revision \\
-  --multilingual-output-root /scratch/amukher6/bli/outputs/multilingual_expansion \\
-  --latex-root /scratch/amukher6/bli/latex
+  --output-root "${{BLI_ROOT}}/outputs/revision" \\
+  --multilingual-output-root "${{BLI_ROOT}}/outputs/multilingual_expansion" \\
+  --latex-root "${{BLI_ROOT}}/latex"
 
 python src/pipeline/combine_multilingual_figures.py \\
-  --left /scratch/amukher6/bli/latex/figures/main_multilingual_regression.png \\
-  --right /scratch/amukher6/bli/latex/figures/appendix_multilingual_overview.png \\
-  --output /scratch/amukher6/bli/latex/figures/combined_multilingual_fig5_fig11.png
+  --left "${{BLI_ROOT}}/latex/figures/main_multilingual_regression.png" \\
+  --right "${{BLI_ROOT}}/latex/figures/appendix_multilingual_overview.png" \\
+  --output "${{BLI_ROOT}}/latex/figures/combined_multilingual_fig5_fig11.png"
 
 bash latex/scripts/sync_report.sh
 """

@@ -95,16 +95,16 @@ LANG_SPECS = [
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Build language_ratio_summary.csv for multilingual main-text artifacts")
-    p.add_argument("--revision-root", type=Path, default=Path("/scratch/amukher6/bli/outputs/revision"))
+    p.add_argument("--revision-root", type=Path, default=Path("outputs/revision"))
     p.add_argument(
         "--multilingual-root",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/multilingual_expansion"),
+        default=Path("outputs/multilingual_expansion"),
     )
     p.add_argument(
         "--output",
         type=Path,
-        default=Path("/scratch/amukher6/bli/outputs/multilingual_expansion/language_ratio_summary.csv"),
+        default=Path("outputs/multilingual_expansion/language_ratio_summary.csv"),
     )
     return p.parse_args()
 

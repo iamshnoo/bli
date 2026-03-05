@@ -16,7 +16,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--word-csv", type=Path, required=True)
     p.add_argument("--axis-csv", type=Path, required=True)
     p.add_argument("--repr-dir", type=Path, required=True)
-    p.add_argument("--probe-set", type=Path, default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"))
+    p.add_argument("--probe-set", type=Path, default=Path("data/probes/probe_sets.json"))
     p.add_argument("--n-bootstrap", type=int, default=2000)
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--out-csv", type=Path, required=True)

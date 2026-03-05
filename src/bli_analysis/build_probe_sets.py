@@ -560,7 +560,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("/scratch/amukher6/bli/data/probes/probe_sets.json"),
+        default=Path("data/probes/probe_sets.json"),
     )
     parser.add_argument("--anchor-target", type=int, default=3000)
     parser.add_argument("--cultural-target", type=int, default=1000)

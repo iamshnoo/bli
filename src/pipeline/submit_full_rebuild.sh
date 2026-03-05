@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-cd /scratch/amukher6/bli
+BLI_ROOT="${BLI_ROOT:-/scratch/$USER/bli}"
+cd "${BLI_ROOT}"
 mkdir -p logs/slurm_logs
 
 prep_job=$(sbatch slurm/run_data_prep.sbatch | awk '{print $4}')

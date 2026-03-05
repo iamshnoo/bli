@@ -11,8 +11,13 @@ from typing import Dict, List
 
 from datasets import Dataset, load_dataset
 
-ROOT = Path("/scratch/amukher6/bli")
-NANOTRON_PREPROCESS = Path("/scratch/amukher6/pretrain/nanotron/tools/preprocess_data.py")
+DEFAULT_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{os.environ.get('USER', 'USER')}/langsense/nanotron")
+
+ROOT = Path(os.environ.get("BLI_ROOT", str(DEFAULT_ROOT)))
+NANOTRON_PREPROCESS = Path(
+    os.environ.get("NANOTRON_PREPROCESS", str(Path(os.environ.get("NANOTRON_ROOT", str(DEFAULT_NANOTRON_ROOT))) / "tools/preprocess_data.py"))
+)
 
 DATASET_IDS = {
     "eng": "BabyLM-community/babylm-eng",
@@ -77,6 +82,13 @@ def has_ds_files(path: Path) -> bool:
 
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
+
+
+def to_repo_relative(path: Path) -> Path:
+    try:
+        return path.relative_to(ROOT)
+    except ValueError:
+        return path
 
 
 def partition_english(split_column: str) -> Dict[str, int]:
@@ -209,7 +221,7 @@ def build_alternating_stages(en_dataset: Path, l2_dataset: Path, total_steps: in
                 "name": f"{role} stage {stage_idx + 1}",
                 "start_training_step": start,
                 "sequence_length": 512,
-                "dataset": str(dataset),
+                "dataset": str(to_repo_relative(dataset)),
                 "dataset_weights": [1],
             }
         )
@@ -252,6 +264,8 @@ def compute_expected_stage_counts(stages: List[dict], en_dataset: Path, l2_datas
     l2_steps = 0
     for s, dur in zip(stages, durations):
         ds = Path(s["dataset"])
+        if not ds.is_absolute():
+            ds = ROOT / ds
         if ds == en_dataset:
             en_steps += dur
         elif ds == l2_dataset:

@@ -1,6 +1,6 @@
 {
-  "fas_50m": "/scratch/amukher6/bli/models/hf/fas_50m",
-  "fas_100m": "/scratch/amukher6/bli/models/hf/fas_100m",
-  "en_fas_a": "/scratch/amukher6/bli/models/hf/en_fas_a",
-  "en_fas_b": "/scratch/amukher6/bli/models/hf/en_fas_b"
+  "fas_50m": "models/hf/fas_50m",
+  "fas_100m": "models/hf/fas_100m",
+  "en_fas_a": "models/hf/en_fas_a",
+  "en_fas_b": "models/hf/en_fas_b"
 }
