@@ -1,5 +1,12 @@
 {
-  "eng_only": "models/hf/en_100m",
-  "eng_zho": "models/hf/en_zh_a",
-  "eng_fra": "models/hf/en_fr_a"
+  "en_50m": "models/hf/en_50m",
+  "en_100m": "models/hf/en_100m",
+  "en_zh_a": "models/hf/en_zh_a",
+  "en_fr_a": "models/hf/en_fr_a",
+  "en_fas_a": "models/hf/en_fas_a",
+  "en_nld_a": "models/hf/en_nld_a",
+  "en_ukr_a": "models/hf/en_ukr_a",
+  "en_bul_a": "models/hf/en_bul_a",
+  "en_ind_a": "models/hf/en_ind_a",
+  "en_deu_a": "models/hf/en_deu_a"
 }

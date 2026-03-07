@@ -2,106 +2,152 @@
 \pdfminorversion=7
 \documentclass[11pt]{article}
 \usepackage[review]{acl}
+% \usepackage{acl}
 \usepackage{times}
 \usepackage{latexsym}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage[nopatch=footnote]{microtype}
 \usepackage{inconsolata}
 \usepackage{graphicx}
+\usepackage{longtable}
 \usepackage{float}
-\usepackage[skins]{tcolorbox}
+\usepackage[most]{tcolorbox}
+\usepackage{subcaption}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{pifont}
 \usepackage{xcolor}
-
-\clubpenalty=10000
-\widowpenalty=10000
-\displaywidowpenalty=10000
+\usepackage[normalem]{ulem}
+\usepackage{placeins}
+\usepackage{tikz}
+\usetikzlibrary{shapes, backgrounds}
 \hbadness=10000
 \vbadness=10000
-\hfuzz=1000pt
-\vfuzz=1000pt
-\emergencystretch=3em
-\sloppy
 
-% Tighten float spacing globally
-\setlength{\floatsep}{4pt plus 1pt minus 1pt}
-\setlength{\textfloatsep}{6pt plus 2pt minus 2pt}
-\setlength{\intextsep}{4pt plus 1pt minus 1pt}
-\setlength{\abovecaptionskip}{3pt}
-\setlength{\belowcaptionskip}{0pt}
+\newcommand{\ensuretext}[1]{#1}
+\newcommand{\nertcomment}[4]{\ensuretext{\textcolor{#3}{[\ensuretext{\textcolor{#3}{\ensuremath{^{\textsc{#1}}_{\textsc{#2}}}}} #4]}}}
+\newcommand{\an}[1]{\nertcomment{A}{A}{magenta}{#1}}
+\newcommand{\zz}[1]{\nertcomment{Z}{Z}{blue}{#1}}
+\newcommand{\am}[1]{\nertcomment{A}{M}{teal}{#1}}
 
-\newenvironment{squishlistnum}{
-\begin{enumerate}[leftmargin=1.2em,itemsep=1pt,parsep=0pt,topsep=2pt,partopsep=0pt]
-}{\end{enumerate}}
+\newcommand{\squishlist}{
+    \begin{list}{$\bullet$}
+    { \setlength{\itemsep}{0pt}
+        \setlength{\parsep}{1pt}
+        \setlength{\topsep}{1pt}
+        \setlength{\partopsep}{0pt}
+        \setlength{\leftmargin}{1em} %1.5em
+        \setlength{\labelwidth}{1em}
+        \setlength{\labelsep}{0.5em} } }
+\newcommand{\squishend}{
+    \end{list}  }
 
-\newenvironment{squishlist}{
-\begin{itemize}[leftmargin=1.2em,itemsep=1pt,parsep=0pt,topsep=2pt,partopsep=0pt]
-}{\end{itemize}}
-
+% Define the insight box without header
 \newtcolorbox{insightbox}{
   enhanced,
-  colback=teal!20,
-  colframe=teal!90!black,
-  boxrule=0pt,
-  leftrule=5pt,
-  rightrule=0pt,
-  toprule=0pt,
-  bottomrule=0pt,
-  sharp corners,
-  fontupper=\small,
-  before skip=4pt,
-  after skip=4pt,
-  top=2pt,
-  bottom=2pt,
+  colback=teal!20,          % light green background
+  colframe=teal!90!black,  % left border color
+  boxrule=0pt,              % no outer border line
+  leftrule=5pt,             % thick left line
+  rightrule=0pt,            % no right line
+  toprule=0pt,             % no top line
+  bottomrule=0pt,          % no bottom line
+  sharp corners,           % no rounded corners
+  fontupper=\small,        % text size
+  before skip=5pt,
+  after skip=5pt,
+  top=3pt,
+  bottom=3pt,
 }
 
-\newtcbox{\engzhboxstyle}{on line,nobeforeafter,boxrule=0.45pt,colback=orange!18,colframe=orange!60!black,arc=2pt,left=3pt,right=3pt,top=1pt,bottom=1pt}
-\newtcbox{\engfrboxstyle}{on line,nobeforeafter,boxrule=0.45pt,colback=cyan!18,colframe=cyan!55!black,arc=2pt,left=3pt,right=3pt,top=1pt,bottom=1pt}
-\newtcbox{\engonlyboxstyle}{on line,nobeforeafter,boxrule=0.45pt,colback=gray!15,colframe=gray!55!black,arc=2pt,left=3pt,right=3pt,top=1pt,bottom=1pt}
+\newcommand{\tabstrut}{\rule{0pt}{2.8ex}}
 
-\newcommand{\ENZH}{\engzhboxstyle{\textsc{EN+ZH}}}
-\newcommand{\ENFR}{\engfrboxstyle{\textsc{EN+FR}}}
-\newcommand{\ENONLY}{\engonlyboxstyle{\textsc{EN}}}
+\newtcbox{\engzhboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=orange!18,colframe=orange!60!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\engfrboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=cyan!18,colframe=cyan!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\engonlyboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=gray!15,colframe=gray!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
 
-\makeatletter
-\AtBeginDocument{
-  \setlength{\linenumbersep}{0.55cm}
-  \def\makeLineNumberRunning{%
-    \if@firstcolumn
-      \makeLineNumberLeft
-    \else
-      \makeLineNumberRight
-    \fi}
-  \let\makeLineNumberOdd\makeLineNumberRunning
-  \let\makeLineNumberEven\makeLineNumberRunning
-}
-\makeatother
+\newtcbox{\enboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=gray!15,colframe=gray!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\zhboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=orange!18,colframe=orange!60!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\frboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=cyan!18,colframe=cyan!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\fasboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=violet!16,colframe=violet!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\nldboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=teal!16,colframe=teal!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\ukrboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=yellow!18,colframe=yellow!50!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\bulboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=green!18,colframe=green!45!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\indboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=red!14,colframe=red!50!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+\newtcbox{\deuboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.35pt,colback=brown!14,colframe=brown!55!black,arc=1.5pt,left=1.2pt,right=1.2pt,top=0.4pt,bottom=0.4pt}
+
+\newtcbox{\domvaluesstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=blue!10,colframe=blue!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domkinstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=green!10,colframe=green!45!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domreligstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=purple!10,colframe=purple!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domfoodstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=orange!12,colframe=orange!60!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domfeststyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=magenta!10,colframe=magenta!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domclothstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=cyan!10,colframe=cyan!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domsymbolstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=red!10,colframe=red!50!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domgovstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=gray!12,colframe=gray!60!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domidentstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=teal!10,colframe=teal!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+\newtcbox{\domdailystyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=yellow!12,colframe=yellow!55!black,arc=1.5pt,left=1.1pt,right=1.1pt,top=0.3pt,bottom=0.3pt}
+% ACL-safe "flag" badges (country-code style, no Unicode emoji dependency)
+\newtcbox{\flagboxstyle}{on line,nobeforeafter,boxsep=0pt,boxrule=0.30pt,colback=white,colframe=black!50,arc=1.2pt,left=0.9pt,right=0.9pt,top=0.2pt,bottom=0.2pt}
+
+\newcommand{\ENZH}{\textsc{EN+ZH}}
+\newcommand{\ENFR}{\textsc{EN+FR}}
+\newcommand{\ENONLY}{\textsc{EN}}
+\newcommand{\ENtag}{\textsc{EN}}
+\newcommand{\ZHtag}{\textsc{ZH}}
+\newcommand{\FRtag}{\textsc{FR}}
+\newcommand{\FAStag}{\textsc{FAS}}
+\newcommand{\NLDtag}{\textsc{NLD}}
+\newcommand{\UKRtag}{\textsc{UKR}}
+\newcommand{\BULtag}{\textsc{BUL}}
+\newcommand{\INDtag}{\textsc{IND}}
+\newcommand{\DEUtag}{\textsc{DEU}}
+\newcommand{\RegimeOne}{Exposure-controlled (C1)}
+\newcommand{\RegimeTwo}{Compute-controlled (C2)}
+\newcommand{\SetupAName}{Shared-partition (C3)}
+\newcommand{\SetupBName}{Disjoint-partition (C4)}
+\newcommand{\DomValues}{Values/Norms}
+\newcommand{\DomKinship}{Family/Kinship}
+\newcommand{\DomReligion}{Religion/Ritual}
+\newcommand{\DomFood}{Food/Cuisine}
+\newcommand{\DomFestivals}{Festivals/Holidays}
+\newcommand{\DomClothing}{Clothing/Appearance}
+\newcommand{\DomSymbols}{Symbols/Colors}
+\newcommand{\DomGovernance}{Governance/Law}
+\newcommand{\DomIdentity}{Social Identity}
+\newcommand{\DomDaily}{Daily Customs}
 
 \title{Persistent Language-Conditioned Geometry in Shared-Language Subspaces of Bilingual Language Models}
-\author{Anonymous Authors}
+\author{
+  Anjishnu Mukherjee\textsuperscript{1} \
+  \textbf{Ziwei Zhu}\textsuperscript{\textbf{1}} \
+  \textbf{Antonios Anastasopoulos}\textsuperscript{\textbf{1,2}} \\
+  \textsuperscript{1}George Mason University,
+  \textsuperscript{2}Archimedes AI Research Unit, Athena RC, Greece\\
+  \texttt{\{amukher6,zzhu20,antonis\}@gmu.edu}
+}
 
 \begin{document}
-\nolinenumbers
 \maketitle
-
 \begin{abstract}
-\resetlinenumber[1]\linenumbers
-We test whether bilingual pretraining leaves persistent language-conditioned geometry in a shared language after standard bilingual lexicon induction (BLI) alignment. Across matched $160$M-parameter controls with fixed architecture, optimizer, and token geometry, we separate language-exposure matching from compute matching, enforce overlap and no-overlap English partitions, and evaluate only on held-out cultural probes. We find that residual mismatch remains non-zero under every control. Critically, contextual axis divergence is $16\times$ to $26\times$ higher than embedding-space axis divergence across our core comparison pairs, an order-of-magnitude gap that cannot be attributed to alignment failure or shared training documents. Layerwise probing shows divergence rises sharply through middle layers (around 4--6), then compresses at later layers while remaining far above embedding-space levels. The same representation-dependent pattern holds across an eight-language non-English target group. These findings show that embedding-only agreement diagnostics systematically underestimate directional language imprint in bilingual models, and that orthogonal alignment is insufficient to neutralize shared-language subspaces at the contextual level.\footnote{Code, checkpoints, and analysis artifacts: \url{https://github.com/iamshnoo/bli}.}
+We test whether bilingual pretraining leaves persistent language-conditioned geometry in a shared language after standard bilingual lexicon induction (BLI) alignment. Across matched $160$M-parameter controls with fixed architecture, optimizer, and token geometry, we separate language-exposure matching from compute matching, enforce overlap and no-overlap English partitions, and evaluate only on held-out cultural probes. We find that residual mismatch remains non-zero under every control. Critically, contextual axis divergence is consistently much larger than embedding-space axis divergence across EN+L2 comparisons for all eight L2 targets, and the same representation-dependent pattern holds across the full non-English set. This gap cannot be attributed to alignment failure or shared training documents. Layer-wise probing shows divergence rises sharply through middle layers (around 4-6), then compresses at later layers while remaining far above embedding-space levels. These findings show that embedding-only agreement diagnostics systematically underestimate directional language imprint in bilingual models, and that orthogonal alignment is insufficient to neutralize shared-language subspaces at the contextual level.\footnote{Code available here: \url{https://github.com/iamshnoo/bli}.}
 \end{abstract}
-\linenumbers
 
 \section{Introduction}
+\label{sec:introduction}
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/figure1_mainidea.before_examples.png}
-\vspace{-4pt}
-\caption{\small Study design. EN vs.\ bilingual EN+L2 aligned via neutral-anchor Procrustes; 1000 held-out cultural probes measure residual mismatch in both embedding and contextual representations. Contextual divergence persists at 16--26$\times$ embedding divergence across all tested pairs.}
+\includegraphics[width=\columnwidth]{figures/fig1-study-design.pdf}
+\caption{Study design. EN vs.\ bilingual EN+L2 aligned via neutral-anchor Procrustes; 1000 held-out cultural probes measure residual mismatch in both embedding and contextual representations. Contextual divergence remains markedly above embedding-space divergence across tested pairs.}
 \label{fig:idea-overview}
 \end{figure}
 
@@ -111,375 +157,309 @@ The core challenge is that existing evaluations conflate at least three factors.
 
 Prior work on cross-lingual subspace structure \citep{pires2019multilingual,libovicky2020language,chi2020finding} and on BLI alignment limits \citep{vulic2020we,sogaard2018limitations} has documented that languages occupy partially distinct regions even in shared multilingual representations, but has not jointly controlled for all three confounds above, and has not quantified the representation-family gap in this setting. Work on training data overlap \citep{dodge2021documenting,lee2022deduplicating} establishes that shared corpora inflate downstream agreement, but does not isolate this effect in controlled pretraining comparisons.
 
-We address these gaps with a factorial design that holds architecture and optimization fixed. We separate EN-exposure matching from compute matching, construct deterministic full-overlap and zero-overlap EN partitions, and evaluate two representation families under the same alignment method and probe protocol. Rather than aligning separately trained monolingual spaces (the standard BLI setup), we apply BLI evaluation \emph{within} a shared language across bilingual versus monolingual models. This inverted framing cleanly targets language-conditioned imprint rather than vocabulary mismatch.
+We address these gaps with a factorial design that holds architecture and optimization fixed. We run one EN-vs-bilingual comparison that matches English exposure and another that matches total optimization steps. We also compare shared versus disjoint English document partitions while keeping the rest of training fixed. Under each setting, we evaluate both embedding and contextual representations with the same alignment and probe protocol. Rather than aligning separately trained monolingual spaces (the standard BLI setup), we apply BLI evaluation \emph{within} a shared language across bilingual versus monolingual models. This inverted framing cleanly targets language-conditioned imprint rather than vocabulary mismatch.
 
-We design four experiments to test these claims and rule out alternative explanations:
-\begin{squishlistnum}
-\item In \textbf{Experiment~1}, we test whether residual mismatch persists after neutral-anchor Procrustes alignment under strict exposure and compute controls, finding non-zero disagreement across all three metrics and all pairs.
+We report four analyses to test these claims and rule out alternative explanations. All four use the same eight-language multilingual run matrix:
+\squishlist
+\item In \textbf{Experiment~1}, we test whether residual mismatch \footnote{We define \textit{residual mismatch} as non-zero disagreement on held-out probes after neutral-anchor alignment.} persists after neutral-anchor Procrustes alignment under strict exposure and compute controls, finding non-zero disagreement across all three metrics and all pairs.
 \item In \textbf{Experiment~2}, we ablate whether shared English training documents explain the mismatch, finding a real but word-sparse overlap effect that does not account for the dominant signal.
-\item In \textbf{Experiment~3}, we replicate the pattern across a unified non-English target group (ZH, FR, FAS, NLD, UKR, BUL, IND, DEU), showing that the representation-dependent ordering transfers beyond any single language family.
-\item In \textbf{Experiment~4}, we quantify representation dependence, finding contextual axis divergence $16\times$--$26\times$ larger than embedding-space divergence with non-overlapping bootstrap CIs, and localize the amplification across transformer depth via layerwise probing.
-\end{squishlistnum}
+\item In \textbf{Experiment~3}, we quantify representation dependence and localize amplification across transformer depth via layer-wise probing, using the same multilingual settings as Experiments~1--2.
+\item In \textbf{Experiment~4}, we compare orthogonal and affine alignment variants to test whether the contextual mismatch signal is robust to alignment-method choice.
+\squishend
 
 \section{Related Work}
-
+\label{sec:related-work}
 \paragraph{Bilingual lexicon induction.} Prior BLI work aligns monolingual spaces using orthogonal mappings and evaluates translation quality or neighbor consistency \citep{schonemann1966generalized,smith2017offline,conneau2018word,artetxe2018robust}. Later analyses show that geometric assumptions can fail under domain or frequency mismatch and that conclusions depend on evaluation criteria \citep{sogaard2018limitations,vulic2020we,patra2019bilingual}. A recurring finding is that orthogonal mapping quality degrades when embedding spaces are non-isometric, a failure mode attributed to typological and corpus-level divergences rather than method failure alone \citep{vulic2020we}. Our setting inverts standard BLI usage: rather than aligning separately trained monolingual spaces to measure translation quality, we align within a shared language across matched pretraining runs to measure language-conditioned residual geometry.
 
 \paragraph{Multilingual representation structure.} Multilingual pretraining studies report both shared and language-specific internal structure \citep{pires2019multilingual,conneau2020unsupervised,libovicky2020language,chi2020finding}. Early work finds that mBERT generalizes cross-lingually without explicit alignment \citep{pires2019multilingual}, while subsequent analyses show that language-specific components persist even after joint multilingual training \citep{libovicky2020language}. Universal grammatical relations emerge across languages in middle layers, yet language-specific subspaces remain active throughout the network \citep{chi2020finding}. Dufter and Sch\"{u}tze \citep{dufter2020identifying} identify shared vocabulary overlap as a primary driver of cross-lingual generalization, and recent work shows that large autoregressive models process non-English inputs through an English-dominant latent representation \citep{wendler2024llamas}, pointing to a deeper entanglement between primary and secondary language geometry than surface-level alignment would suggest.
 
 \paragraph{Training data overlap.} Data-overlap work shows that shared documents inflate apparent cross-model agreement \citep{dodge2021documenting,lee2022deduplicating,muller2021unseen}. Large web corpora contain near-duplicate content that propagates into downstream model similarity in ways difficult to control post hoc \citep{dodge2021documenting}. Deduplication measurably changes memorization and generalization behavior \citep{lee2022deduplicating}, and vocabulary overlap between languages explains part of zero-shot cross-lingual transfer \citep{muller2021unseen}. We address this confound with deterministic document partitions that either share or fully exclude English training documents across compared runs.
 
-\paragraph{Semantic axis probing and cultural dimensions.} Semantic-axis probing uses difference-of-means directions to measure how representations distribute along culturally interpretable dimensions \citep{bolukbasi2016man,caliskan2017semantics,garg2018word}. Projecting word vectors onto these directions reveals occupational and attitudinal stereotypes in embedding spaces, and the signal shifts systematically across historical corpora \citep{garg2018word}. More recent work applies structured probing to large pretrained models to measure stereotype consistency \citep{nadeem2021stereoset}, to audit semantic geometry at scale \citep{liang2023holistic}, and to detect cross-cultural value differences in multilingual models using probes derived from the World Values Survey and Hofstede's dimensions \citep{arora2023probing}. Cross-cultural NLP has emerged as a distinct subfield \citep{hershcovich2022challenges}, with benchmarks such as CrowS-Pairs \citep{nangia2020crows} targeting social biases in masked language models. The cultural dimensions we probe are grounded in Hofstede's six national-culture dimensions \citep{hofstede2001culture}, Schwartz's cultural value orientations \citep{schwartz2006theory}, the Inglehart--Welzel cultural map \citep{inglehart2005modernization}, and the GLOBE societal-culture scales \citep{house2004culture}. A key property of axis-projection diagnostics is their sensitivity to directional geometry that neighborhood-based metrics miss: two models with similar nearest-neighbor graphs can still differ substantially in axis-projection patterns. We adapt this technique to compare pairs of models rather than to measure individual model bias.
+\paragraph{Semantic axis probing and cultural dimensions.} Semantic-axis probing uses difference-of-means directions to measure how representations distribute along culturally interpretable dimensions \citep{bolukbasi2016man,caliskan2017semantics,garg2018word}. Projecting word vectors onto these directions reveals occupational and attitudinal stereotypes in embedding spaces, and the signal shifts systematically across historical corpora \citep{garg2018word}. More recent work applies structured probing to large pretrained models to measure stereotype consistency \citep{nadeem2021stereoset}, to audit semantic geometry at scale \citep{liang2023holistic}, and to detect cross-cultural value differences in multilingual models using probes derived from the World Values Survey and Hofstede's dimensions \citep{arora2023probing}. Cross-cultural NLP has emerged as a distinct subfield \citep{hershcovich2022challenges}, with benchmarks such as CrowS-Pairs \citep{nangia2020crows} targeting social biases in masked language models. The cultural dimensions we probe are grounded in Hofstede's six national-culture dimensions \citep{hofstede2001culture}, Schwartz's cultural value orientations \citep{schwartz2006theory}, the Inglehart-Welzel cultural map \citep{inglehart2005modernization}, and the GLOBE societal-culture scales \citep{house2004culture}. A key property of axis-projection diagnostics is their sensitivity to directional geometry that neighborhood-based metrics miss: two models with similar nearest-neighbor graphs can still differ substantially in axis-projection patterns. We adapt this technique to compare pairs of models rather than to measure individual model bias.
 
 \section{Experimental Design}
+\label{sec:study-design}
 
-The design compares matched runs under one alignment method and one probe protocol. We define \textit{residual mismatch} as non-zero disagreement on held-out probes after neutral-anchor alignment.
+Our experiments compare matched runs under one alignment method and one probe protocol.
 
-\subsection{Training Controls and Run Matrix}
+\subsection{Training details}
+\label{sec:training}
 
-All runs use the same $160$M architecture with $32{,}768$ tokens/step (batch size $8$, accumulation $8$, single GPU, sequence length $512$). Thus $1500$ steps correspond to $\approx 50$M tokens and $3000$ steps to $\approx 100$M tokens. Control regime 1 (exposure matched) compares \ENONLY{} short (1500 steps) against bilingual 3000-step runs that alternate EN and L2 in equal blocks, yielding exactly 1500 EN steps plus 1500 L2 steps. Control regime 2 (compute matched) compares \ENONLY{} long (3000 steps) against the same bilingual 3000-step runs. Overlap setup A uses shared EN partitions between \ENONLY{} and bilingual runs. Setup B uses disjoint EN partitions. Replication runs include all eight non-English targets (ZH, FR, FAS, NLD, UKR, BUL, IND, DEU) at both 50M and 100M regimes.
+\paragraph{Data}
+The data we use for pretraining is from the BabyBabelLM benchmark \citep{jumelet2025babybabellm}. We study eight non-English target languages: Chinese (\texttt{zho}, \ZHtag), French (\texttt{fra}, \FRtag), Persian (\texttt{fas}, \FAStag), Dutch (\texttt{nld}, \NLDtag), Ukrainian (\texttt{ukr}, \UKRtag), Bulgarian (\texttt{bul}, \BULtag), Indonesian (\texttt{ind}, \INDtag), and German (\texttt{deu}, \DEUtag). These are all of the Tier $1$ languages from the benchmark with roughly $100$ million English-equivalent tokens.
 
-\begin{table}[t]
+\paragraph{Hyperparameters}
+All pretrained models use the same $160$M-parameter \textsc{LLaMA-3.2-1B} architecture and a fixed throughput of $32{,}768$ tokens per optimization step (batch size $8$, gradient accumulation $8$, sequence length $512$) on a single A$100$ GPU. Under this setup, $1500$ steps correspond to approximately $50$M tokens, while $3000$ steps correspond to approximately $100$M tokens.
+
+We evaluate two control conditions that isolate language exposure from total compute:
+\squishlist
+    \item \textbf{\RegimeOne.} \ENONLY{} short runs ($1500$ steps) are compared against bilingual $3000$-step runs that alternate English and L$2$ in equal blocks, yielding exactly $1500$ English steps and $1500$ L$2$ steps.
+    \item \textbf{\RegimeTwo.} \ENONLY{} long runs ($3000$ steps) are compared against the same bilingual $3000$-step runs, matching the total number of optimization steps.
+\squishend
+
+For overlap ablations, we keep architecture, optimizer, token budget, and bilingual schedule fixed but vary the English data used:
+\squishlist
+    \item \textbf{\SetupAName.} The same English data is used by \ENONLY{} and bilingual models.
+    \item \textbf{\SetupBName.} Completely disjoint English data is used by \ENONLY{} and bilingual models.
+\squishend
+
+\begin{table*}[t]
 \centering
 \scriptsize
 \setlength{\tabcolsep}{3pt}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{@{}p{0.25\columnwidth}p{0.30\columnwidth}p{0.20\columnwidth}p{0.18\columnwidth}@{}}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.27\textwidth}>{\raggedright\arraybackslash}p{0.31\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}@{}}
 \toprule
-Control & Runs Compared & Matched & Differs \\
+Control Family & Runs Compared & Controlled Factors & Varied Factor \\
 \midrule
 \multicolumn{4}{@{}l}{\textbf{Exposure controls}} \\
 \cmidrule(lr){1-4}
-EN-exposure matched & \textsc{EN} short vs \textsc{EN+ZH}/\textsc{EN+FR} & EN tokens & L2 present vs absent \\
-Compute matched & \textsc{EN} long vs \textsc{EN+ZH}/\textsc{EN+FR} & Total steps (3k) & EN token count \\
+\RegimeOne & \ENtag{} short vs \textsc{EN+L2} (all 8 L2) & English token exposure; training recipe & L2 presence/absence \\
+\RegimeTwo & \ENtag{} long vs \textsc{EN+L2} (all 8 L2) & Total optimization steps; training recipe & English token exposure \\
 \cmidrule(lr){1-4}
 \multicolumn{4}{@{}l}{\textbf{Overlap controls}} \\
 \cmidrule(lr){1-4}
-Setup A (overlap) & \textsc{EN+ZH}-A, \textsc{EN+FR}-A & EN exposure & EN docs overlap \\
-Setup B (no overlap) & \textsc{EN+ZH}-B, \textsc{EN+FR}-B & EN exposure & EN docs disjoint \\
-\cmidrule(lr){1-4}
-\multicolumn{4}{@{}l}{\textbf{Shared-language replication}} \\
-\cmidrule(lr){1-4}
-Non-English group & L2-only short/long vs \textsc{EN+L2} (8 languages) & Method + metrics & Target language \\
-Grouped reporting & Main table (8 langs) + detailed per-language appendix & Evaluation protocol & Language identity \\
+\SetupAName & \textsc{EN+L2} pairs with shared EN partition & English exposure; bilingual schedule; training recipe & EN document overlap \\
+\SetupBName & \textsc{EN+L2} pairs with disjoint EN partition & English exposure; bilingual schedule; training recipe & EN document overlap \\
 \bottomrule
-\end{tabular}
-}
-\vspace{-2pt}
-\caption{\small Run matrix and control logic.}
+\end{tabularx}
+\caption{EN-centered control matrix over all eight EN+L2 families used in Experiments~1--4.}
 \label{tab:run-matrix}
-\end{table}
-\vspace{-2pt}
+\end{table*}
 
-\subsection{Probe Roles and Construction}
+\subsection{Probes}
+\label{sec:probes}
 
 Probe roles are separated by design. Neutral anchors are used only for estimating the Procrustes map, while culturally loaded probes and semantic axes are strictly held out for evaluation. This separation prevents the alignment objective from directly fitting the evaluated cultural vocabulary.
 
-\paragraph{Semantic axes (50 pairs).} Our 50 semantic axes operationalize dimensions from four established cross-cultural psychology frameworks: Hofstede's six national-culture dimensions \citep{hofstede2001culture}, Schwartz's cultural value orientations \citep{schwartz2006theory}, the Inglehart--Welzel Traditional--Secular and Survival--Self-Expression dimensions \citep{inglehart2005modernization}, and the GLOBE societal-culture scales \citep{house2004culture}. Axes are grouped into ten literature-grounded categories (values/norms, family/kinship, religion/ritual, food/cuisine, festivals/holidays, clothing/appearance, symbols/colors, governance/law, social identity, and daily customs), then sampled within category to avoid ad hoc axis choice and to improve domain coverage. The full axis-to-framework mapping with citations is in Appendix~\ref{tab:appendix-axis-grounding}. All 50 axes were fixed before model training, alignment, and any result inspection.
+\paragraph{Neutral anchors ($3000$ words).} We sample $3000$ neutral anchors from high-frequency English words (top $50$k by corpus frequency), applying stop-word filtering, ASCII-only constraints, length bounds ($3$-$14$ characters), and ensure no overlap with cultural probes or axis endpoints so that the Procrustes rotation estimated on them does not directly fit the evaluated cultural vocabulary. Frequency-based anchor selection follows standard BLI practice \citep{conneau2018word,vulic2020we}.
 
-\paragraph{Cultural probes (1000 terms).} We define a culturally loaded evaluation lexicon of 1000 terms with balanced category coverage across ten literature-grounded domains: values/norms, family/kinship, religion/ritual, food/cuisine, festivals/holidays, clothing/appearance, symbols/colors, governance/law, social identity, and daily customs. The category ontology is anchored in HRAF-style ethnographic domains and overlaps with WVS/Schwartz value blocks \citep{inglehart2005modernization,schwartz2006theory}. We construct probes by category-first sampling (not ad hoc free-form accumulation), then preserve fixed inventories for all experiments and all languages.
+\paragraph{Cultural probes ($1000$ terms).} We define a culturally loaded evaluation lexicon by sampling $1000$ terms with balanced category coverage across ten domains grounded in existing literature: \DomValues, \DomKinship, \DomReligion, \DomFood, \DomFestivals, \DomClothing, \DomSymbols, \DomGovernance, \DomIdentity, and \DomDaily. The category ontology is anchored in Human Relations Area Files (HRAF)-style ethnographic domains and overlaps with World Values Survey (WVS) and Schwartz value blocks \citep{inglehart2005modernization,schwartz2006theory}.
 
-\paragraph{Negative controls (100 words).} We define a 100-word negative-control set drawn from lexical domains with documented cross-linguistic stability: body-part terms, basic physical/mathematical vocabulary, and natural-kind terms. These overlap substantially with the Swadesh core-vocabulary paradigm \citep{swadesh1955towards}. If cultural-probe divergence were an artifact of frequency or alignment noise rather than cultural content, negative controls should show comparable divergence.
+\paragraph{Semantic axes ($50$ pairs).} Our $50$ semantic axes operationalize dimensions from four established cross-cultural psychology frameworks: Hofstede's six national-culture dimensions \citep{hofstede2001culture}, Schwartz's cultural value orientations \citep{schwartz2006theory}, the Inglehart-Welzel Traditional-Secular and Survival-Self-Expression dimensions \citep{inglehart2005modernization}, and the GLOBE societal-culture scales \citep{house2004culture}. Axes are grouped into the same ten domains above and then sampled within category to avoid ad hoc axis choices and improve domain coverage. The full axis-to-framework mapping with citations is in Appendix~\ref{tab:appendix-axis-grounding}. All axes and probes were fixed before model training, alignment, and evaluations.
 
-\paragraph{Neutral anchors (3000 words).} We sample 3000 neutral anchors from high-frequency English words (top 50k by corpus frequency), applying stop-word filtering, ASCII-only constraints, length bounds (3--14 characters), and reserved-word exclusion (no overlap with cultural probes or axis endpoints). Frequency-based anchor selection follows standard BLI practice \citep{conneau2018word,vulic2020we}; the key design requirement is that anchors carry minimal cultural loading so that the Procrustes rotation estimated on them does not directly fit the evaluated cultural vocabulary.
+\paragraph{Negative controls ($100$ words).} We define a $100$-word negative-control set drawn from lexical domains with documented cross-linguistic stability: body-part terms, basic physical/mathematical vocabulary, and natural-kind terms. These overlap substantially with the Swadesh core-vocabulary paradigm \citep{swadesh1955towards}. If cultural-probe divergence were an artifact of frequency or alignment noise rather than cultural content, negative controls should show comparable divergence.
 
-For non-English replication, we translate probes with NLLB, compute automated QE with COMETKiwi (\texttt{Unbabel/wmt22-cometkiwi-da}), retain back-translation diagnostics for compatibility, and finalize with manual audit flags. The versioned axis manifest is in Appendix~\ref{tab:appendix-axes} and the full axis-to-framework grounding table is in Appendix~\ref{tab:appendix-axis-grounding}.
+For the non-English languages, we translate probes with NLLB\footnote{Huggingface model id: facebook/nllb-200-distilled-600M}. We then compute automated quality estimation (QE) scores with COMETKiwi\footnote{Huggingface model id: Unbabel/wmt22-cometkiwi-da}, where QE means predicting translation quality without requiring human reference translations. We also run back-translation (translate the target-language output back into English) and compare it to the original probe term. Finally, we manually review low-quality or ambiguous cases and mark them for correction or exclusion.
 
-\subsection{Alignment and Metrics}
+\subsection{Alignment Metrics}
+\label{sec:metrics}
 
-Given model-pair vectors $X^a, X^b$ and neutral-anchor indices $\mathcal{N}$, we estimate orthogonal Procrustes:
+For each model pair $(A,B)$, we represent the selected feature family (embedding matrix or pre-LM-head contextual state) as matrices $X^a, X^b \in \mathbb{R}^{V\times d}$, where $V$ is vocabulary size and $d$ is representation dimension. Let $\mathcal{N}$ be the index set of neutral-anchor words. Then $X^a_{\mathcal N}$ and $X^b_{\mathcal N}$ denote the submatrices restricted to anchor rows. We estimate an orthogonal map $W\in\mathbb{R}^{d\times d}$ with $W^\top W=I$ via:
 \[
 W^\star=\arg\min_{W^\top W=I}\|X^a_{\mathcal N}W-X^b_{\mathcal N}\|_F.
 \]
-Residual mismatch is measured on held-out cultural probes $\mathcal C$ via three metrics:
-\begin{squishlist}
-\item \textbf{Neighborhood disagreement}: $D_{NN}(w)=1-{|\mathcal N_k^a(w)\cap\mathcal N_k^b(w)|}/{|\mathcal N_k^a(w)\cup\mathcal N_k^b(w)|}$, range $[0,1]$.
-\item \textbf{Structural disagreement}: $D_{Struct}=\|S_a-S_b\|_F/|\mathcal C|$, where $S_a,S_b$ are cosine-similarity matrices over probes.
-\item \textbf{Axis projection disagreement}: $D_{Axis,i}=|\mathcal C|^{-1}\sum_{w\in\mathcal C}|\langle x_w^a,\hat u_i^a\rangle-\langle x_w^b,\hat u_i^b\rangle|$, with axis direction from endpoint words.
-\end{squishlist}
-We also record signed projection differences for interpretability. Unlike $D_{NN}$, axis divergence is not intrinsically bounded; embedding-space baselines are approximately $0.12$--$0.18$ and contextual values approximately $2.5$--$3.7$, so we report ratios alongside absolute values.
+Here $\|\cdot\|_F$ is the Frobenius norm. Residual mismatch is measured on held-out cultural probes $\mathcal C$ (size $|\mathcal C|$) via three metrics:
 
-
-\section{Experiments and Results}
-
-We report four experiments that jointly test persistence, overlap effects, transfer across target languages, and representation dependence.
-
-\subsection{Experiment 1: Residual Mismatch Under Exposure and Compute Controls}
-
-This experiment tests whether neutral-anchor alignment collapses disagreement under strict controls.
-
-\textbf{Setup.} We evaluate four core pairs formed by crossing two \ENONLY{} baselines (EN-50M: 1500-step exposure-matched; EN-100M: 3000-step compute-matched) with two language families (\ENZH{} and \ENFR{}), all under overlap setup A. For each pair, we estimate orthogonal Procrustes on 500 neutral anchors and evaluate on 1000 held-out cultural probes across three metrics. Both embedding matrix and pre-LM-head contextual representations are evaluated under the same alignment.
-
-\textbf{Hypotheses.} \textbf{(H1.1)} If alignment is sufficient, all three disagreements should be approximately zero. \textbf{(H1.2)} If residual mismatch is systematic, all pairs should retain non-zero disagreement. \textbf{(H1.3)} Contextual axes should show lower agreement than embedding axes.
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp1_ci_summary.tex}}
-\vspace{-2pt}
-\caption{\small Exp.\ 1 metrics with 95\% bootstrap CIs (2000 resamples). All CIs exclude zero mismatch.}
-\label{tab:exp1-results}
-\end{table}
-\vspace{-4pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp1_negative_controls.tex}}
-\vspace{-2pt}
-\caption{\small Negative controls show substantially lower divergence than cultural probes, especially for contextual $D_{Axis}$.}
-\label{tab:exp1-negctrl}
-\end{table}
-\vspace{-4pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp1_procrustes.tex}}
-\vspace{-2pt}
-\caption{\small Comparable Procrustes residuals across pairs rule out alignment failure as an explanation.}
-\label{tab:exp1-procrustes}
-\end{table}
-\vspace{-2pt}
-
-\textbf{Results.} Figure~\ref{fig:exp1-controls} and Table~\ref{tab:exp1-results} reject \textbf{(H1.1)} and support \textbf{(H1.2)}: bootstrap CIs for all metrics and all pairs exclude zero, confirming that residual mismatch is not a sampling artifact. Neighborhood agreement ($A_{NN}$) is low in both representation families. Structural agreement ($A_{Struct}$) is moderate and consistent, suggesting broad pairwise similarity is preserved by Procrustes while fine-grained neighborhood structure is not. The directional signal is strongest: contextual $D_{Axis}$ is $16\times$--$26\times$ larger than embedding $D_{Axis}$ across all four core pairs (Table~\ref{tab:exp4-ratio}), with non-overlapping CIs, supporting \textbf{(H1.3)}. Table~\ref{tab:exp1-procrustes} shows Procrustes residuals are comparable across core pairs, ruling out one-pair alignment failure. Table~\ref{tab:exp1-negctrl} shows negative controls have lower contextual axis divergence than culturally loaded probes, confirming the signal is concentrated in cultural vocabulary; a per-word hotspot table is in Appendix~\ref{tab:appendix-hotspots}.
+\squishlist
+\item \textbf{Neighborhood disagreement}
+\[
+D_{NN}(w)=1-\frac{\left|\mathcal N_k^a(w)\cap\mathcal N_k^b(w)\right|}{\left|\mathcal N_k^a(w)\cup\mathcal N_k^b(w)\right|},
+\]
+for each probe word $w\in\mathcal C$, where $\mathcal N_k^a(w)$ and $\mathcal N_k^b(w)$ are the $k$-nearest-neighbor sets of $w$ in models $A$ and $B$, respectively. Values are in $[0,1]$.
+\item \textbf{Structural disagreement}
+\[
+D_{Struct}=\frac{\left\|S_a-S_b\right\|_F}{|\mathcal C|},
+\]
+where $S_a,S_b\in\mathbb{R}^{|\mathcal C|\times|\mathcal C|}$ are cosine-similarity matrices over probe words in $\mathcal C$ for models $A$ and $B$: each entry $(i,j)$ is the cosine similarity between probe word $i$ and probe word $j$.
+\item \textbf{Axis projection disagreement}
+\[
+D_{Axis,i}=\frac{1}{|\mathcal C|}
+\sum_{w\in\mathcal C}
+\left|\left\langle x_w^a,\hat u_i^a\right\rangle-\left\langle x_w^b,\hat u_i^b\right\rangle\right|,
+\]
+for axis $i$, where $x_w^a$ and $x_w^b$ are the vectors of probe word $w$ in models $A$ and $B$. Axis directions ($\hat u_i^a, \hat u_i^b$) are unit vectors from axis endpoint words in each model. The notation $\langle\cdot,\cdot\rangle$ denotes the Euclidean inner product.
+\squishend
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/exp1_controls.png}
-\vspace{-2pt}
-\caption{\small Exp.\ 1 agreement profile across exposure/compute controls. Contextual axis agreement shows the steepest drop across all conditions.}
+\includegraphics[width=\textwidth]{figures/fig2-exp1-divergence.pdf}
+\caption{Exp.\ 1 paired divergence view across EN-centered controls. For each pair and metric, lines connect embedding (circle) to contextual (square); the contextual shift is consistently largest for $D_{Axis}$.}
 \label{fig:exp1-controls}
 \end{figure*}
-\vspace{2pt}
+
+We also record signed projection differences for interpretability. Unlike $D_{NN}$, axis divergence is not intrinsically bounded; embedding-space baselines are approximately $0.12$-$0.18$ and contextual values approximately $2.5$-$3.7$, so we report ratios alongside absolute values.
+
+\section{Experiments and Results}
+\label{sec:experiments}
+
+We report four experiments that test persistence, overlap effects, representation dependence, and alignment-method robustness.
+
+\subsection{Experiment 1: Residual Mismatch Under Exposure and Compute Controls}
+\label{sec:exp1}
+This experiment tests whether neutral-anchor alignment collapses disagreement under strict controls.
+
+\textbf{Setup.} We evaluate sixteen EN-centered pairs formed by crossing two \ENONLY{} baselines (EN-50M under \RegimeOne; EN-100M under \RegimeTwo) with all eight bilingual families (EN+L2), all under \SetupAName. For each pair, we estimate orthogonal Procrustes on 500 neutral anchors and evaluate on 1000 held-out cultural probes across three metrics. Both embedding matrix and pre-LM-head contextual representations are evaluated under the same alignment.
+
+\textbf{Hypotheses.} \textbf{(H1.1)} If alignment is sufficient, all three disagreements should be approximately zero. \textbf{(H1.2)} If residual mismatch is systematic, all pairs should retain non-zero disagreement. \textbf{(H1.3)} Contextual axes should show lower agreement than embedding axes.
+
+\textbf{Results.} Figure~\ref{fig:exp1-controls} rejects \textbf{(H1.1)} and supports \textbf{(H1.2)}: mismatch remains non-zero across all EN-centered pairs under strict controls, and contextual divergence is consistently larger than embedding divergence, supporting \textbf{(H1.3)}. Appendix Tables~\ref{tab:exp1-results}, \ref{tab:exp1-results-ctx}, \ref{tab:exp1-procrustes}, and \ref{tab:exp1-negctrl} provide the bootstrap confidence intervals, Procrustes residual checks, and negative-control comparisons that rule out pair-specific alignment failure as the primary explanation.
 
 \begin{insightbox}
 \textbf{Takeaway 1:} Orthogonal alignment improves shared structure but does not remove residual language-conditioned mismatch.
 \end{insightbox}
 
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig3-exp2-overlap.pdf}
+\caption{Overlap deltas (C3$-$C4). Shared EN documents increase agreement but effects are small.}
+\label{fig:exp2-overlap}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/fig4-multilingual-validation.pdf}
+\caption{Multilingual validation across eight target languages. Bars show contextual-to-embedding axis-divergence ratios at 50M and 100M; the red line shows contextual overlap gain (C4$-$C3).}
+\label{fig:multilingual-combined}
+\end{figure*}
 
 \subsection{Experiment 2: English Overlap Ablations}
-
+\label{sec:exp2}
 This experiment isolates the effect of shared EN documents by holding language exposure and alignment fixed while varying document overlap.
 
-\textbf{Setup.} For each bilingual model (\ENZH{} and \ENFR{}), we compare setup A (shared EN document partition) against setup B (disjoint EN document partition), keeping bilingual EN exposure, architecture, and alignment identical. We report per-metric agreement deltas ($\Delta = A - B$) and per-word Wilcoxon signed-rank tests over 1000 cultural probes.
+\textbf{Setup.} For each bilingual family (EN+L2 across all eight L2 targets), we compare \SetupAName against \SetupBName, keeping bilingual EN exposure, architecture, and alignment identical. We report per-metric agreement deltas ($\Delta = C3 - C4$) and per-word Wilcoxon signed-rank tests over 1000 cultural probes.
 
-\textbf{Hypotheses.} \textbf{(H2.1)} Overlap setup A should increase agreement relative to no-overlap setup B. \textbf{(H2.2)} Setup B should still retain non-zero disagreement.
+\textbf{Hypotheses.} \textbf{(H2.1)} \SetupAName should increase agreement relative to \SetupBName. \textbf{(H2.2)} \SetupBName should still retain non-zero disagreement.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/exp2_overlap.png}
-\vspace{-6pt}
-\caption{\small Overlap deltas (A$-$B). Shared EN documents increase agreement but effects are small.}
-\label{fig:exp2-overlap}
-\end{figure}
-\vspace{-4pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp2_overlap.tex}}
-\vspace{-2pt}
-\caption{\small Overlap ablation deltas per metric.}
-\label{tab:exp2-overlap}
-\end{table}
-\vspace{-4pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp2_wilcoxon.tex}}
-\vspace{-2pt}
-\caption{\small Wilcoxon tests confirm overlap effect is real but word-sparse: median delta is zero in all cases.}
-\label{tab:exp2-wilcoxon}
-\end{table}
-\vspace{-4pt}
-
-\textbf{Results.} Table~\ref{tab:exp2-overlap} shows overlap deltas are positive in most embedding-matrix conditions but small in absolute magnitude. Table~\ref{tab:exp2-wilcoxon} shows Wilcoxon tests are significant ($p < 0.05$) in embedding space for both ZH and FR under both baselines, but the median delta is zero in all cases, indicating the effect is driven by a small fraction of words. In contextual space, effects are weaker and inconsistent. Quality-tier stratification (Appendix~\ref{tab:appendix-exp2-quality}) confirms the same conclusion. Crucially, setup B retains non-zero residual mismatch across all conditions, supporting \textbf{(H2.2)} and ruling out document overlap as the primary driver.
+\textbf{Results.} Figure~\ref{fig:exp2-overlap} shows small C3$-$C4 deltas concentrated near zero, with mixed signs across language families. Wilcoxon tests (Appendix Table~\ref{tab:exp2-wilcoxon}) detect effects in many settings, but medians remain near zero in almost all cases, indicating that overlap is real but sparse at the word level. Quality-tier stratification (Appendix Table~\ref{tab:appendix-exp2-quality}) gives the same pattern. \SetupBName still shows non-zero mismatch, supporting \textbf{(H2.2)} and addressing the overlap-confound concern.
 
 \begin{insightbox}
 \textbf{Takeaway 2:} Shared documents produce a real but small and word-sparse overlap effect. The dominant source of residual mismatch is language co-training, not shared corpora.
 \end{insightbox}
 
+\subsection{Experiment 3: Representation Dependence}
+\label{sec:exp3}
+This experiment quantifies representation dependence under a single alignment protocol.
 
-\subsection{Experiment 3: Shared-Language Replication Across Non-English Targets}
+\textbf{Setup.} Using the same Procrustes alignment from Experiment~1, we extract two representation families under identical alignment: (1) embedding matrix (static token vectors) and (2) pre-LM-head contextual states (final hidden states after all transformer layers). We compute $D_{Axis}$ over the multilingual model set used in Experiments~1--2, including all sixteen EN-centered pairs and the non-English target-language pairs for all eight targets (\ZHtag, \FRtag, \FAStag, \NLDtag, \UKRtag, \BULtag, \INDtag, \DEUtag) at both 50M and 100M. For layer-wise localization, we extract hidden states from all 12 transformer layers and compute $D_{Axis}$ per layer.
 
-This experiment asks whether the same pattern appears when English is not the target language.
-
-\textbf{Setup.} We evaluate non-English monolingual vs.\ bilingual pairs for eight target languages (ZH, FR, FAS, NLD, UKR, BUL, IND, DEU) at both 50M and 100M regimes and under both setup A and setup B, using translated probe sets and unified QC. All alignment and evaluation procedures mirror Experiment~1.
-
-\textbf{Hypotheses.} \textbf{(H3.1)} Residual mismatch persists across the non-English target group. \textbf{(H3.2)} Contextual axes remain the strongest disagreement signal across languages.
+\textbf{Hypotheses.} \textbf{(H3.1)} Contextual axis divergence exceeds embedding axis divergence across all language settings. \textbf{(H3.2)} The same amplification persists under both controls and across layer depth.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/exp3_shared.png}
-\vspace{-2pt}
-\caption{\small Non-English replication snapshot (ZH/FR panels). Contextual axis agreement remains consistently below embedding level.}
-\label{fig:exp3-shared}
+\includegraphics[width=\columnwidth]{figures/fig5-signed-axis-shifts.pdf}
+\caption{Signed axis shifts in contextual space (illustrative ZH/FR slice). Quadrants separate shared tilts from language-specific opposite-direction shifts.}
+\label{fig:exp4-signed}
 \end{figure}
-\vspace{1pt}
 
-\begin{table}[t]
+\begin{figure}[t]
 \centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp3_shared.tex}}
-\vspace{-2pt}
-\caption{\small Shared-language results across 50M/100M and overlap setups.}
-\label{tab:exp3-shared}
-\end{table}
-\vspace{-4pt}
+\includegraphics[width=\columnwidth]{figures/fig6-contextual-vs-embedding-ratio.pdf}
+\caption{Contextual/embedding axis-divergence ratios across EN-centered pairs with 95\% bootstrap CIs. All ratios are well above one, showing robust contextual amplification.}
+\label{fig:exp4-ratio}
+\end{figure}
 
-\begin{table}[t]
+\begin{figure}[t]
 \centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/main_multilingual_ratios.tex}}
-\vspace{-2pt}
-\caption{\small Contextual/embedding ratio across 8 language pairs: 8.7$\times$ (UKR) to 33.2$\times$ (FAS).}
-\label{tab:main-multilingual-ratios}
-\end{table}
-\vspace{-4pt}
+\includegraphics[width=\columnwidth]{figures/fig7-layerwise-axis-divergence.pdf}
+\caption{Layer-wise axis divergence (log scale). Peaks at mid-layers 4-6; remains elevated at final layer.}
+\label{fig:exp4-layerwise}
+\end{figure}
 
-\textbf{Results.} Table~\ref{tab:exp3-shared}, Figure~\ref{fig:exp3-shared}, and Table~\ref{tab:main-multilingual-ratios} show that residual mismatch is non-zero across the full non-English target group, supporting \textbf{(H3.1)}. The representation ordering from Experiment~1 transfers intact: $D_{Axis}$ in contextual space consistently exceeds embedding $D_{Axis}$ across languages, supporting \textbf{(H3.2)}. Across all eight language pairs, contextual/embedding ratios range from 8.7$\times$ (UKR) to 33.2$\times$ (FAS). Hofstede IDV distance does not show a statistically significant monotonic association with mean ratio (Spearman $\rho=-0.51$, $p=0.192$, $n=8$). Figure~\ref{fig:multilingual-combined} visualizes this relationship alongside overlap-gain effects.
+\textbf{Results.} Figure~\ref{fig:exp4-ratio} shows strong contextual-to-embedding amplification across all sixteen EN-centered pairs, and Figure~\ref{fig:multilingual-combined} shows the same ordering across all eight non-English language pairs, supporting \textbf{(H3.1)}. Figure~\ref{fig:exp4-signed} and Appendix Table~\ref{tab:exp4-signed} show directional shifts that are not explained by magnitude-only effects. Figure~\ref{fig:exp4-layerwise} shows where amplification accumulates across depth; Appendix Table~\ref{tab:exp4-layerwise} quantifies peak and final-layer values, supporting \textbf{(H3.2)}. Appendix Table~\ref{tab:progress-sensitivity} shows the 50M$\rightarrow$100M sensitivity profile for EN-centered C3 pairs, which we report as an available checkpoint-level proxy rather than a full convergence study. Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:exp4-ratio-ci}, and \ref{tab:main-multilingual-ratios} report detailed ratios and confidence intervals. We move the small-$n$ typology regression to Appendix Table~\ref{tab:appendix-multilingual-regression} and Figure~\ref{fig:appendix-multilingual-regression-scatter}.
+
+\begin{insightbox}
+\textbf{Takeaway 3:} Representation choice changes measured mismatch by an order of magnitude across language settings: 16.1 to 24.2 times in EN-centered controls and 17.1 to 35.9 times in non-English target-language pairs. Divergence rises through middle layers, peaks, then compresses while remaining elevated at final layers.
+\end{insightbox}
+
+\subsection{Experiment 4: Alignment-Method Robustness}
+\label{sec:exp4}
+This experiment tests whether the main contextual mismatch signal is an artifact of one alignment objective.
+
+\textbf{Setup.} We evaluate the same EN-centered C3 pairs from Experiment~1 under three alignment variants: orthogonal alignment with embedding anchors, orthogonal alignment with contextual anchors, and affine alignment with embedding anchors. For each variant, we evaluate both representation families on held-out cultural probes.
+
+\textbf{Hypotheses.} \textbf{(H4.1)} If the observed contextual mismatch is mainly a method artifact, at least one alignment variant should collapse the contextual axis gap. \textbf{(H4.2)} If the signal is representation-intrinsic, the gap should persist across variants.
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/combined_multilingual_fig5_fig11.png}
-\vspace{-4pt}
-\caption{\small Multilingual validation. \textbf{(A)} Hofstede IDV distance vs.\ contextual/embedding ratio ($\rho{=}{-}0.51$, $p{=}0.19$, $n{=}8$); error bars span 50M/100M bootstrap CIs. \textbf{(B)} Six-language 50M/100M ratios with overlap-gain (red line); contextual amplification dominates over overlap effects.}
-\label{fig:multilingual-combined}
+\includegraphics[width=0.95\textwidth]{figures/fig8-alignment-method-comparison.pdf}
+\caption{Alignment-method robustness across EN-centered C3 pairs. Contextual axis divergence remains above embedding divergence across orthogonal and affine variants.}
+\label{fig:exp5-alignment}
 \end{figure*}
-\vspace{2pt}
+
+\textbf{Results.} Figure~\ref{fig:exp5-alignment} supports \textbf{(H4.2)}: contextual axis divergence remains substantially above embedding divergence under all tested alignment variants. Changing anchor family and allowing affine transforms alters anchor residual fit but does not remove the directional mismatch pattern on held-out probes. Appendix Table~\ref{tab:exp5-alignment} provides per-metric summaries by alignment variant. Two additional robustness checks are consistent with this interpretation: Appendix Table~\ref{tab:same-language-controls} reports same-language controls available in our artifact set (checkpoint-mismatch controls, not seed-matched null pairs), and Appendix Table~\ref{tab:framework-holdout} reports axis-grounding holdout results where held-out axis sets continue to show elevated contextual mismatch.
 
 \begin{insightbox}
-\textbf{Takeaway 3:} Residual language-conditioned geometry generalizes across eight language pairs. The representation-dependent pattern is a robust property of bilingual pretraining, not an English-specific artifact.
+\textbf{Takeaway 4:} The contextual mismatch signal is robust to alignment objective choice; better anchor fit does not imply neutralized contextual geometry.
 \end{insightbox}
 
+\paragraph{Category stratification.} Appendix~\ref{fig:appendix-category-heatmap} reports category-stratified contextual axis divergence. The signal is concentrated in food, color symbolism, and social-structure categories. Color symbolism axes (e.g., \texttt{white}$\rightarrow$\texttt{red}) show the largest per-axis divergence across EN-centered pairs, consistent with well-documented cross-linguistic variation in color semantics. Food and kinship terms show moderate but consistent elevation, while physical and mathematical terms, which substantially overlap with the negative-control set, show divergence near the negative-control baseline, confirming that the elevated signal in cultural categories is not an artifact of probe token frequency.
 
-\subsection{Experiment 4: Representation Dependence and Ratio Analysis}
+\FloatBarrier
 
-This experiment quantifies how strongly conclusions depend on representation family when data and alignment protocol are fixed.
+\section{Discussion}
+\label{sec:discussion}
 
-\textbf{Setup.} Using the same Procrustes alignment from Experiment~1, we extract representations from two families under identical alignment: (1)~embedding matrix (static token vectors) and (2)~pre-LM-head contextual states (final hidden states after all transformer layers). We compute $D_{Axis}$ in both families for each of the four EN-centered pairs and report their ratio. For layerwise analysis, we extract hidden states at all 12 transformer layers and compute $D_{Axis}$ per layer.
+The control stack isolates complementary failure modes. Exposure and compute controls show persistence under matched training budgets, overlap controls show that shared English documents are not the dominant driver, and alignment-method variants show that contextual mismatch is not removed by changing the alignment objective.
 
-\textbf{Hypotheses.} \textbf{(H4.1)} Contextual axis divergence exceeds embedding axis divergence by a large factor. \textbf{(H4.2)} This ratio pattern is consistent across matched controls.
+For multilingual auditing, the practical implication is procedural: evaluate contextual representations directly, not only embedding matrices; use held-out culturally loaded probes; and report alignment-method sensitivity and overlap ablations as part of the same audit protocol.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/exp4_ratio.png}
-\vspace{-6pt}
-\caption{\small Contextual/embedding axis divergence ratios ($16\times$--$26\times$ gap across all pairs).}
-\label{fig:exp4-ratio}
-\end{figure}
-\vspace{-2pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp4_ratio.tex}}
-\vspace{-2pt}
-\caption{\small Axis divergence in both representation families and their ratio.}
-\label{tab:exp4-ratio}
-\end{table}
-\vspace{-2pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp4_ratio_ci.tex}}
-\vspace{-2pt}
-\caption{\small Ratio 95\% bootstrap CIs. All lower bounds exceed $14\times$, confirming the gap is not a point-estimate artifact.}
-\label{tab:exp4-ratio-ci}
-\end{table}
-\vspace{-4pt}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/exp4_layerwise.png}
-\vspace{-6pt}
-\caption{\small Layerwise axis divergence (log scale). Peaks at mid-layers 4--6; remains elevated at final layer.}
-\label{fig:exp4-layerwise}
-\end{figure}
-\vspace{-2pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp4_layerwise.tex}}
-\vspace{-2pt}
-\caption{\small Per-layer divergence: peak layer and final-layer values confirm persistence over late-layer compression.}
-\label{tab:exp4-layerwise}
-\end{table}
-\vspace{-4pt}
-
-\textbf{Results.} Table~\ref{tab:exp4-ratio} shows ratios of $16\times$--$26\times$ across the four core pairs, and Table~\ref{tab:exp4-ratio-ci} confirms the $95\%$ bootstrap CI lower bound exceeds $14\times$ in every case, supporting \textbf{(H4.1)}. The ratios are consistent across exposure-matched and compute-matched controls, supporting \textbf{(H4.2)}: the amplification is not an artifact of one control regime. EN+FR pairs show slightly larger ratios than EN+ZH pairs, suggesting the degree of amplification may depend on typological distance or script properties, though with two language pairs we cannot disentangle these factors. Figure~\ref{fig:exp4-signed} and Table~\ref{tab:exp4-signed} add directional evidence: many axes share tilt direction across EN+ZH and EN+FR, but non-trivial opposite-quadrant mass remains, showing language-specific directional geometry beyond magnitude-only effects. Figure~\ref{fig:exp4-layerwise} and Table~\ref{tab:exp4-layerwise} localize the amplification: divergence rises steeply through middle layers, peaks around layer 4--6, then compresses while remaining substantially above embedding-space levels at the final layer. This layerwise pattern is consistent with a depth-distributed accumulation account in which secondary-language features are progressively encoded through middle layers and partially suppressed by the LM head projection, but not eliminated. The sustained elevation at the final layer is particularly consequential: pre-LM-head contextual states are the representations from which downstream tasks are most commonly decoded, meaning the embedding-level agreement observed after Procrustes alignment substantially underestimates the mismatch that downstream applications will encounter.
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/exp4_signed_axes.png}
-\vspace{-6pt}
-\caption{\small Signed axis shifts (EN+ZH vs.\ EN and EN+FR vs.\ EN, contextual space). Quadrants separate shared tilts from language-specific opposite-direction shifts.}
-\label{fig:exp4-signed}
-\end{figure}
-\vspace{-2pt}
-
-\begin{table}[t]
-\centering
-\scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp4_signed_quadrants.tex}}
-\vspace{-2pt}
-\caption{\small Quadrant counts for Figure~\ref{fig:exp4-signed}: opposite-tilt quadrants indicate language-specific directional effects.}
-\label{tab:exp4-signed}
-\end{table}
-\vspace{-4pt}
-
-\begin{insightbox}
-\textbf{Takeaway 4:} Representation choice changes measured mismatch by an order of magnitude ($16\times$--$26\times$). Divergence rises through middle layers, peaks, then compresses while remaining elevated at final layers.
-\end{insightbox}
-
-\paragraph{Category stratification.} Appendix~\ref{fig:appendix-category-heatmap} reports category-stratified contextual axis divergence. The signal is concentrated in food, color symbolism, and social-structure categories. Color symbolism axes (e.g., \texttt{white}$\rightarrow$\texttt{red}) show the largest per-axis divergence across all four core pairs, consistent with well-documented cross-linguistic variation in color semantics. Food and kinship terms show moderate but consistent elevation, while physical and mathematical terms—which substantially overlap with the negative-control set—show divergence near the negative-control baseline, confirming that the elevated signal in cultural categories is not an artifact of probe token frequency.
-
+The new robustness checks narrow but do not eliminate open questions. Same-language seed-matched controls are still needed for a definitive seed-null baseline, and our current training-progress sensitivity is limited to available 50M/100M checkpoints (Appendix Table~\ref{tab:progress-sensitivity}).
 
 \section{Conclusion}
+\label{sec:conclusion}
 
-Under strict exposure and overlap controls, bilingual pretraining leaves measurable residual language-conditioned geometry in shared-language subspaces after orthogonal alignment. The strongest and most stable signal is a $16\times$--$26\times$ amplification of directional axis divergence in contextual representations relative to embedding-space representations, a gap with non-overlapping bootstrap confidence intervals that cannot be attributed to alignment failure, shared training documents, or exposure differences. Layerwise probing shows divergence rises through middle layers (around 4--6), peaks, then compresses while remaining elevated at final layers, and category stratification shows concentration in culturally interpretable probe domains. Both patterns replicate across the full non-English target group.
-\section{Limitations}
+Under strict exposure and overlap controls, bilingual pretraining leaves measurable residual language-conditioned geometry in shared-language subspaces after orthogonal alignment. The strongest and most stable signal is large amplification of directional axis divergence in contextual representations relative to embedding-space representations, a gap that cannot be attributed to alignment failure, shared training documents, or exposure differences. Layer-wise probing shows divergence rises through middle layers (around 4-6), peaks, then compresses while remaining elevated at final layers, and category stratification shows concentration in culturally interpretable probe domains. Both patterns hold across the full non-English target group.
 
-Extending the controlled factorial design to models beyond 160M parameters, to encoder-only architectures, or to instruction-tuned variants falls outside the compute budget of the current study, and whether the $16\times$--$26\times$ contextual-to-embedding ratio holds at larger scales is an open empirical question we intend to revisit. Evaluating alignment methods beyond orthogonal Procrustes, such as affine transformations or contextual-space objectives \citep{artetxe2019richly}, requires separate infrastructure per method and is a natural direction for follow-on work rather than a core variable here. Our 50 semantic axes are grounded in four cross-cultural frameworks (Hofstede, Schwartz, Inglehart--Welzel, GLOBE; see Appendix~\ref{tab:appendix-axis-grounding}), and our 1000 cultural probes are grouped by literature-grounded categories; however, category-level lexical balance and translation quality are still imperfect for lower-resource languages. Probe coverage is further bounded by the domain of concepts for which reliable multilingual equivalents are obtainable via NLLB and manual audit; political, legal, and economic semantic axes remain under-covered relative to values, ritual, and food domains. Causal attribution of the observed geometry to specific training dynamics (e.g., via activation patching or causal mediation analysis) would require intervention infrastructure that is outside the measurement framework of this evaluation study, though the layerwise patterns we report are consistent with depth-distributed accumulation of language-conditioned information.
+\section*{Limitations}
+\label{sec:limitations}
 
-\section{Ethical Considerations}
+Extending the controlled factorial design to models beyond 160M parameters, to encoder-only architectures, or to instruction-tuned variants falls outside the compute budget of the current study, and whether the contextual-to-embedding ratio ranges observed here (about 16 to 24 times in EN-centered controls; about 17 to 36 times in non-English target-language settings) hold at larger scales is an open empirical question we intend to revisit. Our current same-language controls are limited to available checkpoints and do not replace a full seed-matched EN-only null study. Evaluating alignment methods beyond orthogonal Procrustes, such as affine transformations or contextual-space objectives \citep{artetxe2019richly}, requires separate infrastructure per method and is a natural direction for follow-on work rather than a core variable here. Our 50 semantic axes are grounded in four cross-cultural frameworks (Hofstede, Schwartz, Inglehart-Welzel, GLOBE; see Appendix~\ref{tab:appendix-axis-grounding}), and our 1000 cultural probes are grouped by literature-grounded categories; however, category-level lexical balance and translation quality are still imperfect for lower-resource languages. Probe coverage is further bounded by the domain of concepts for which reliable multilingual equivalents are obtainable via NLLB and manual audit; political, legal, and economic semantic axes remain under-covered relative to values, ritual, and food domains. Causal attribution of the observed geometry to specific training dynamics (e.g., via activation patching or causal mediation analysis) would require intervention infrastructure that is outside the measurement framework of this evaluation study, though the layer-wise patterns we report are consistent with depth-distributed accumulation of language-conditioned information.
 
-This work studies structural properties of bilingual language model representations and has no direct application to individual users or downstream production systems. Its primary broader impact is methodological: by demonstrating that embedding-space BLI diagnostics underestimate contextual-level language imprint by an order of magnitude, the framework introduced here (held-out cultural probes, neutral-anchor alignment separation, and layerwise analysis) can improve the rigor of fairness and safety audits in multilingual NLP systems. Models that appear cross-lingually neutral at the embedding level may carry culturally conditioned directional signals at contextual depth; surfacing this gap is a step toward more transparent evaluation practices. No personally identifiable or sensitive individual data were used. All probe translation was performed with automatic quality control and manual review at an aggregate vocabulary level, with full audit logs included in the released code and data artifacts.
+\section*{Ethical Considerations}
+\label{sec:ethical}
 
-\bibliography{references}
+This work studies structural properties of bilingual language model representations and has no direct application to individual users or downstream production systems. Its primary broader impact is methodological: by demonstrating that embedding-space BLI diagnostics underestimate contextual-level language imprint by an order of magnitude, the framework introduced here (held-out cultural probes, neutral-anchor alignment separation, and layer-wise analysis) can improve the rigor of fairness and safety audits in multilingual NLP systems. Models that appear cross-lingually neutral at the embedding level may carry culturally conditioned directional signals at contextual depth; surfacing this gap is a step toward more transparent evaluation practices. No personally identifiable or sensitive individual data were used. All probe translation was performed with automatic quality control and manual review at an aggregate vocabulary level, with full audit logs included in the released code and data artifacts.
 
-\clearpage
+% \section*{Acknowledgments}
+% \label{sec:ack}
+% We are thankful to the reviewers who provided feedback in earlier versions of this work. This work was partially supported by \ldots. We acknowledge the support by resources provided by the Office of Research Computing at George Mason University (https://orc.gmu.edu) and funded in part by grants from the National Science Foundation (Award Number 2018631). Any opinions, findings, and conclusions or recommendations expressed in this material are solely those of the authors.
+\FloatBarrier
+\bibliography{anthology,custom}
+
 \appendix
-\section{Appendix}
+\clearpage
+\FloatBarrier
+\section*{Appendix}
+\label{sec:appendix}
+
 This appendix provides full inventories, robustness checks, and extended diagnostics referenced in the main text.
 
-\subsection{Semantic Axis Inventory (50 Axes)}
-\begin{table*}[t]
+\renewcommand{\thesection}{A.\arabic{section}}
+\section{Probe Details}
+\label{sec:probe-details}
+
+\paragraph{Semantic Axes}
+
+\begin{table*}[p]
 \centering
-\scriptsize
-\resizebox{0.95\textwidth}{!}{\input{tables/appendix_axes.tex}}
+\tiny
+\resizebox{0.95\textwidth}{!}{\input{tables/tab1-appendix-axes.tex}}
 \caption{Complete list of 50 semantic axes used in all experiments. Axes are fixed before analysis and reused across all language settings.}
 \label{tab:appendix-axes}
 \end{table*}
 
-\subsection{Axis-to-Framework Grounding}
-\begin{table*}[t]
+\begin{table*}[p]
 \centering
-\scriptsize
-\resizebox{0.95\textwidth}{!}{\input{tables/appendix_axis_grounding.tex}}
-\caption{Mapping of 50 semantic axes to literature-grounded categories and framework dimensions. Category labels and framework basis are taken from the probe-set metadata used by the pipeline.}
+\tiny
+\resizebox{0.95\textwidth}{!}{\input{tables/tab2-appendix-axis-grounding-part1.tex}}
+\caption{Mapping of 50 semantic axes to literature-grounded categories and framework dimensions (Part I: axes 1--25).}
 \label{tab:appendix-axis-grounding}
 \end{table*}
 
-\subsection{Probe Translation and Audit QC Summary}
+\begin{table*}[p]
+\centering
+\tiny
+\resizebox{0.95\textwidth}{!}{\input{tables/tab3-appendix-axis-grounding-part2.tex}}
+\caption{Mapping of 50 semantic axes to literature-grounded categories and framework dimensions (Part II: axes 26--50).}
+\label{tab:appendix-axis-grounding-2}
+\end{table*}
+
+\paragraph{Probe Translation and Audit QC Summary}
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_probe_qc.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab4-appendix-probe-qc.tex}}
 \caption{Probe translation QC summary for all non-English languages. QE uses COMETKiwi when available (high $\geq$ 0.80, medium [0.60, 0.80), low $<$ 0.60); table also reports manual-review flags and duplicate-target checks.}
 \label{tab:appendix-probe-qc}
 \end{table}
@@ -487,49 +467,169 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_exp2_quality_tiers.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab5-appendix-exp2-quality-tiers.tex}}
 \caption{Quality-tier stratification for Experiment~2 overlap tests (COMETKiwi tiers when available; back-translation tiers otherwise).}
 \label{tab:appendix-exp2-quality}
 \end{table}
 
-\subsection{Axis Magnitude Interpretation}
+\paragraph{Axis Magnitude Interpretation}
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_daxis_interpretation.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab6-appendix-daxis-interpretation.tex}}
 \caption{Compact interpretation table for axis magnitudes by pair: embedding and contextual $D_{Axis}$ with contextual-to-embedding ratio.}
 \label{tab:appendix-daxis}
 \end{table}
 
-\subsection{Contextual-Anchor Alignment Variant}
+\renewcommand{\thesection}{A.\arabic{section}}
+\section{Additional Results}
+\label{sec:extra-results}
+
+\paragraph{Main-Text Detailed Tables}
+\begin{table}[t]
+\centering
+\tiny
+\input{tables/tab7-exp1-ci-summary-embedding.tex}
+\caption{Exp.\ 1 metrics with 95\% bootstrap CIs (2000 resamples), embedding representation. All CIs exclude zero mismatch.}
+\label{tab:exp1-results}
+\end{table}
+
+\begin{table}[t]
+\centering
+\tiny
+\input{tables/tab8-exp1-ci-summary-contextual.tex}
+\caption{Exp.\ 1 metrics with 95\% bootstrap CIs (2000 resamples), contextual representation. All CIs exclude zero mismatch.}
+\label{tab:exp1-results-ctx}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab9-exp1-negative-controls.tex}}
+\caption{Negative controls show substantially lower divergence than cultural probes, especially for contextual $D_{Axis}$.}
+\label{tab:exp1-negctrl}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab10-exp1-procrustes.tex}}
+\caption{Comparable Procrustes residuals across pairs rule out alignment failure as an explanation.}
+\label{tab:exp1-procrustes}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab11-exp2-overlap.tex}}
+\caption{Overlap ablation deltas per metric.}
+\label{tab:exp2-overlap}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab12-exp2-wilcoxon.tex}}
+\caption{Wilcoxon tests confirm overlap effect is real but word-sparse: medians are near-zero in almost all settings.}
+\label{tab:exp2-wilcoxon}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab13-exp3-ratio.tex}}
+\caption{Axis divergence in both representation families and their ratio.}
+\label{tab:exp4-ratio}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab14-exp3-ratio-ci.tex}}
+\caption{Ratio 95\% bootstrap CIs for EN-centered pairs, confirming robust contextual amplification.}
+\label{tab:exp4-ratio-ci}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab15-main-multilingual-ratios.tex}}
+\caption{Contextual/embedding ratio across 8 non-English language pairs: from 17.1 times (ZH, 50M) to 35.9 times (FR, 100M).}
+\label{tab:main-multilingual-ratios}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab16-exp3-layerwise.tex}}
+\caption{Per-layer divergence: peak layer and final-layer values confirm persistence over late-layer compression.}
+\label{tab:exp4-layerwise}
+\end{table}
+
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab17-exp4-alignment-methods.tex}}
+\caption{Alignment-method robustness summary for EN-centered C3 pairs.}
+\label{tab:exp5-alignment}
+\end{table}
+
+\paragraph{Same-Language Controls}
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab25-same-language-controls.tex}}
+\caption{Same-language controls available in the current artifact set (not seed-matched null pairs).}
+\label{tab:same-language-controls}
+\end{table}
+
+\paragraph{Axis-Grounding Holdout Robustness}
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab26-framework-holdout.tex}}
+\caption{Category/framework holdout check: matched-axis and held-out-axis contextual mismatch remain elevated.}
+\label{tab:framework-holdout}
+\end{table}
+
+\paragraph{Training-Progress Sensitivity}
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab27-progress-sensitivity.tex}}
+\caption{Sensitivity from 50M to 100M checkpoints in EN-centered C3 pairs.}
+\label{tab:progress-sensitivity}
+\end{table}
+
+\paragraph{Contextual-Anchor Alignment Variant}
 \begin{table*}[t]
 \centering
 \scriptsize
-\resizebox{0.95\textwidth}{!}{\input{tables/appendix_contextual_alignment_variant.tex}}
-\caption{Contextual-space alignment variant for core EN-centered pairs. The contextual axis gap remains large under both embedding- and contextual-anchor alignment.}
+\resizebox{0.95\textwidth}{!}{\input{tables/tab18-appendix-contextual-alignment-variant.tex}}
+\caption{Contextual-space alignment variant for EN-centered pairs. The contextual axis gap remains large under both embedding- and contextual-anchor alignment.}
 \label{tab:appendix-contextual-align}
 \end{table*}
 
-\subsection{Per-Head Proxy Analysis}
+\paragraph{Per-Head Proxy Analysis}
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/appendix_perhead_heatmap.png}
-\caption{Per-head proxy analysis on middle layers (4--6). Each cell reports mean $D_{Axis}$ for a head-width channel slice; divergence is heterogeneously distributed across heads.}
+\includegraphics[width=0.95\textwidth]{figures/fig9-appendix-perhead-heatmap.pdf}
+\caption{Per-head proxy analysis on middle layers (4-6). Each cell reports mean $D_{Axis}$ for a head-width channel slice; divergence is heterogeneously distributed across heads.}
 \label{fig:appendix-perhead}
 \end{figure*}
 
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_perhead_top.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab19-appendix-perhead-top.tex}}
 \caption{Top per-head proxy cells by mean axis divergence.}
 \label{tab:appendix-perhead-top}
 \end{table}
 
-\subsection{Additional Stratified and Word-Level Diagnostics}
+\paragraph{Additional Stratified and Word-Level Diagnostics}
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/category_heatmap.png}
+\includegraphics[width=0.95\textwidth]{figures/fig10-appendix-category-heatmap.pdf}
 \caption{Category-stratified contextual axis divergence across model pairs.}
 \label{fig:appendix-category-heatmap}
 \end{figure*}
@@ -537,15 +637,15 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/exp1_hotspots.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab20-exp1-hotspots.tex}}
 \caption{Per-word contextual neighbor-divergence hot spots.}
 \label{tab:appendix-hotspots}
 \end{table}
 
-\subsection{Non-English Language Snapshot}
+\paragraph{Non-English Language Snapshot}
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/appendix_multilingual_overview.png}
+\includegraphics[width=0.95\textwidth]{figures/fig11-appendix-multilingual-overview.pdf}
 \caption{Additional non-English language summary (FAS, NLD, UKR, BUL, IND, DEU). Left: contextual-to-embedding $D_{Axis}$ amplification ratios at $50$M and $100$M. Right: overlap-gain on axis divergence; contextual amplification dominates.}
 \label{fig:appendix-multilingual-overview}
 \end{figure*}
@@ -553,35 +653,40 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \begin{table*}[t]
 \centering
 \scriptsize
-\resizebox{0.95\textwidth}{!}{\input{tables/appendix_multilingual_summary.tex}}
-\caption{Compact additional-language summary. Ratio@50M and Ratio@100M report contextual-to-embedding amplification for setup A. Gain columns report no-overlap minus overlap deltas averaged across baselines.}
+\resizebox{0.95\textwidth}{!}{\input{tables/tab21-appendix-multilingual-summary.tex}}
+\caption{Compact additional-language summary. Ratio@50M and Ratio@100M report contextual-to-embedding amplification for \SetupAName{}. Gain columns report \SetupBName{} minus \SetupAName{} deltas averaged across baselines.}
 \label{tab:appendix-multilingual-summary}
 \end{table*}
 
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_multilingual_ratio_ci.tex}}
-\caption{Bootstrap 95\% CIs for contextual-to-embedding ratios in the additional-language slice, setup A at both baselines.}
+\resizebox{\columnwidth}{!}{\input{tables/tab22-appendix-multilingual-ratio-ci.tex}}
+\caption{Bootstrap 95\% CIs for contextual-to-embedding ratios in the additional-language slice under \SetupAName{} at both baselines.}
 \label{tab:appendix-multilingual-ratio-ci}
 \end{table}
 
 \begin{table}[t]
 \centering
 \scriptsize
-\resizebox{\columnwidth}{!}{\input{tables/appendix_multilingual_regression.tex}}
+\resizebox{\columnwidth}{!}{\input{tables/tab23-appendix-multilingual-regression.tex}}
 \caption{Exploratory cross-language trend analysis. Pooled OLS uses ratio observations from both baselines; script-match and family-match are coarse binary proxies.}
 \label{tab:appendix-multilingual-regression}
 \end{table}
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/appendix_multilingual_regression_scatter.png}
+\includegraphics[width=\columnwidth]{figures/fig12-appendix-multilingual-regression-scatter.pdf}
 \caption{Exploratory scatter: coarse distance proxy versus mean contextual-amplification ratio across additional non-English languages.}
 \label{fig:appendix-multilingual-regression-scatter}
 \end{figure}
 
-\subsection{Planned Multi-Language Expansion Protocol}
-Planned extensions will use a fixed language registry (language code, script family, typological metadata, cultural-distance metadata), fixed training geometry, fixed neutral-anchor alignment protocol, and fixed probe-construction/audit pipeline. This preserves comparability when extending beyond the current non-English target group.
+\begin{table}[t]
+\centering
+\scriptsize
+\resizebox{\columnwidth}{!}{\input{tables/tab24-exp3-signed-quadrants.tex}}
+\caption{Quadrant counts for Figure~\ref{fig:exp4-signed}: opposite-tilt quadrants indicate language-specific directional effects.}
+\label{tab:exp4-signed}
+\end{table}
 
 \end{document}

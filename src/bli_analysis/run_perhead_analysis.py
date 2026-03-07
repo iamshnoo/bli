@@ -173,15 +173,16 @@ def main() -> None:
     cultural_idx = np.array([w2i[w] for w in probes["cultural_probe_words"] if w in w2i], dtype=np.int64)
     axis_idx = [(w2i[a], w2i[b]) for a, b in probes["semantic_axes"] if a in w2i and b in w2i]
 
-    # Core pairs only for compact appendix analysis.
-    core_names = ["en_50m", "en_100m", "en_zh_a", "en_fr_a"]
-    model_paths = {k: v for k, v in models.items() if k in core_names}
-    pairs = [
-        ("en_50m", "en_zh_a"),
-        ("en_50m", "en_fr_a"),
-        ("en_100m", "en_zh_a"),
-        ("en_100m", "en_fr_a"),
-    ]
+    baselines = [m for m in ["en_50m", "en_100m"] if m in models]
+    targets = sorted(
+        m for m in models if m.startswith("en_") and m.endswith("_a") and m not in {"en_50m", "en_100m"}
+    )
+    pairs = [(base, tgt) for base in baselines for tgt in targets]
+    if not pairs:
+        raise ValueError("No EN-centered A-setup pairs found in --models-json")
+
+    selected_names = sorted(set([m for pair in pairs for m in pair]))
+    model_paths = {k: v for k, v in models.items() if k in selected_names}
 
     per_model_layers: dict[str, dict[int, np.ndarray]] = {}
     n_heads = None

@@ -19,6 +19,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--models-json", type=Path, required=True, help="JSON mapping model_name -> HF path")
     p.add_argument("--probe-set", type=Path, default=Path("data/probes/probe_sets.json"))
     p.add_argument("--output-csv", type=Path, required=True)
+    p.add_argument(
+        "--pair",
+        action="append",
+        default=[],
+        help='Optional explicit pair spec in "model_a,model_b" format. Repeat for multiple pairs.',
+    )
     p.add_argument("--batch-size", type=int, default=32)
     p.add_argument("--device", choices=["auto", "cuda", "cpu"], default="auto")
     return p.parse_args()
@@ -137,6 +143,28 @@ def axis_metric(Xa: np.ndarray, Xb: np.ndarray, nidx: np.ndarray, cidx: np.ndarr
     return float(np.mean(vals)) if vals else float("nan")
 
 
+def resolve_pairs(pair_args: list[str], model_keys: list[str]) -> list[tuple[str, str]]:
+    if not pair_args:
+        return list(itertools.combinations(model_keys, 2))
+
+    out: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    known = set(model_keys)
+    for spec in pair_args:
+        if "," not in spec:
+            raise ValueError(f"Invalid --pair '{spec}'. Expected 'model_a,model_b'")
+        left, right = [x.strip() for x in spec.split(",", 1)]
+        if left == right:
+            raise ValueError(f"Invalid --pair '{spec}': model names must differ")
+        if left not in known or right not in known:
+            raise ValueError(f"Invalid --pair '{spec}': unknown model name (available: {model_keys})")
+        pair = (left, right)
+        if pair not in seen:
+            seen.add(pair)
+            out.append(pair)
+    return out
+
+
 def main() -> None:
     args = parse_args()
     device = resolve_device(args.device)
@@ -167,8 +195,10 @@ def main() -> None:
         if device.type == "cuda":
             torch.cuda.empty_cache()
 
+    pairs = resolve_pairs(args.pair, list(models.keys()))
+
     rows = []
-    for a, b in itertools.combinations(models.keys(), 2):
+    for a, b in pairs:
         n_layers = min(len(reprs[a]), len(reprs[b]))
         for li in range(n_layers):
             d = axis_metric(reprs[a][li], reprs[b][li], nidx, cidx, aidx)

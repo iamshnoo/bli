@@ -50,7 +50,8 @@ LANG_DATASET_CODE = {
     "deu": "deu",
 }
 
-MULTI_LANGS = ["fas", "nld", "ukr", "bul", "ind", "deu"]
+CORE_LANGS = list(LANG_DATASET_CODE.keys())
+MULTI_LANGS = [l for l in CORE_LANGS if l not in {"zh", "fr"}]
 
 
 def resolve_tokenizer_reference() -> str:
@@ -540,37 +541,24 @@ def write_models_json_files() -> Dict[str, Path]:
     en_ablation = {
         "en_50m": model_path("en_50m"),
         "en_100m": model_path("en_100m"),
-        "en_zh_a": model_path("en_zh_a"),
-        "en_zh_b": model_path("en_zh_b"),
-        "en_fr_a": model_path("en_fr_a"),
-        "en_fr_b": model_path("en_fr_b"),
     }
-    zh_shared = {
-        "zh_50m": model_path("zh_50m"),
-        "zh_100m": model_path("zh_100m"),
-        "en_zh_a": model_path("en_zh_a"),
-        "en_zh_b": model_path("en_zh_b"),
-    }
-    fr_shared = {
-        "fr_50m": model_path("fr_50m"),
-        "fr_100m": model_path("fr_100m"),
-        "en_fr_a": model_path("en_fr_a"),
-        "en_fr_b": model_path("en_fr_b"),
-    }
+    for lang in CORE_LANGS:
+        en_ablation[f"en_{lang}_a"] = model_path(f"en_{lang}_a")
+        en_ablation[f"en_{lang}_b"] = model_path(f"en_{lang}_b")
+
     layerwise = {
-        "eng_only": model_path("en_100m"),
-        "eng_zho": model_path("en_zh_a"),
-        "eng_fra": model_path("en_fr_a"),
+        "en_50m": model_path("en_50m"),
+        "en_100m": model_path("en_100m"),
     }
+    for lang in CORE_LANGS:
+        layerwise[f"en_{lang}_a"] = model_path(f"en_{lang}_a")
 
     mapping = {
         "models_en_ablation.json": en_ablation,
-        "models_zh_shared.json": zh_shared,
-        "models_fr_shared.json": fr_shared,
         "models_layerwise.json": layerwise,
     }
 
-    for lang in MULTI_LANGS:
+    for lang in CORE_LANGS:
         mapping[f"models_{lang}_shared.json"] = {
             f"{lang}_50m": model_path(f"{lang}_50m"),
             f"{lang}_100m": model_path(f"{lang}_100m"),
@@ -618,20 +606,54 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
     log_dir.mkdir(parents=True, exist_ok=True)
     active_jobs = active_jobs_by_name()
 
-    en_deps = dependency_ids([conv_ids[x] for x in ["en_50m", "en_100m", "en_zh_a", "en_zh_b", "en_fr_a", "en_fr_b"]])
+    en_model_keys = ["en_50m", "en_100m"]
+    for lang in CORE_LANGS:
+        en_model_keys.extend([f"en_{lang}_a", f"en_{lang}_b"])
+    en_deps = dependency_ids([conv_ids[x] for x in en_model_keys])
+
+    en_pair_specs = []
+    for base in ["en_50m", "en_100m"]:
+        for lang in CORE_LANGS:
+            for setup in ["a", "b"]:
+                en_pair_specs.append(f"{base},en_{lang}_{setup}")
+
+    layer_pair_specs = []
+    for base in ["en_50m", "en_100m"]:
+        for lang in CORE_LANGS:
+            layer_pair_specs.append(f"{base},en_{lang}_a")
+
+    en_run_cmd = [
+        "python",
+        str(ROOT / "src/bli_analysis/run_bli_pipeline.py"),
+        "--models-json",
+        str(model_jsons["models_en_ablation.json"]),
+        "--output-dir",
+        str(OUTPUT_REV / "en_ablation"),
+        "--device",
+        "cuda",
+        "--batch-size",
+        "64",
+    ]
+    for pair in en_pair_specs:
+        en_run_cmd += ["--pair", pair]
+
+    layer_cmd = [
+        "python",
+        str(ROOT / "src/bli_analysis/run_layerwise_analysis.py"),
+        "--models-json",
+        str(model_jsons["models_layerwise.json"]),
+        "--output-csv",
+        str(OUTPUT_REV / "en_ablation/bli_layerwise_divergence.csv"),
+        "--batch-size",
+        "32",
+        "--device",
+        "cuda",
+    ]
+    for pair in layer_pair_specs:
+        layer_cmd += ["--pair", pair]
+
     en_cmds = [
-        shell_join([
-            "python",
-            str(ROOT / "src/bli_analysis/run_bli_pipeline.py"),
-            "--models-json",
-            str(model_jsons["models_en_ablation.json"]),
-            "--output-dir",
-            str(OUTPUT_REV / "en_ablation"),
-            "--device",
-            "cuda",
-            "--batch-size",
-            "64",
-        ]),
+        shell_join(en_run_cmd),
         shell_join([
             "python",
             str(ROOT / "src/bli_analysis/compute_bootstrap_ci.py"),
@@ -651,10 +673,8 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
             str(ROOT / "src/bli_analysis/run_statistical_tests.py"),
             "--word-csv",
             str(OUTPUT_REV / "en_ablation/bli_word_neighbor_divergence.csv"),
-            "--quality-zh-csv",
-            str(ROOT / "data/probes/translations_zh.csv"),
-            "--quality-fr-csv",
-            str(ROOT / "data/probes/translations_fr.csv"),
+            "--translations-dir",
+            str(ROOT / "data/probes"),
             "--out-csv",
             str(OUTPUT_REV / "en_ablation/bli_wilcoxon_overlap.csv"),
         ]),
@@ -702,18 +722,7 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
             "--device",
             "cuda",
         ]),
-        shell_join([
-            "python",
-            str(ROOT / "src/bli_analysis/run_layerwise_analysis.py"),
-            "--models-json",
-            str(model_jsons["models_layerwise.json"]),
-            "--output-csv",
-            str(OUTPUT_REV / "en_ablation/bli_layerwise_divergence.csv"),
-            "--batch-size",
-            "32",
-            "--device",
-            "cuda",
-        ]),
+        shell_join(layer_cmd),
     ]
     en_script = analysis_job_header("bli2_en_analysis", log_dir, time_limit="2-00:00:00") + "\n".join(en_cmds) + "\n"
     active = active_jobs.get("bli2_en_analysis")
@@ -722,63 +731,11 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
     else:
         analysis_ids["en_ablation"] = submit_sbatch(en_script, dry_run=dry_run, dependency_ids=en_deps or None)
 
-    shared_jobs = [
-        ("zh_shared", ["zh_50m", "zh_100m", "en_zh_a", "en_zh_b"], model_jsons["models_zh_shared.json"], OUTPUT_REV / "zh_shared_language", "zh"),
-        ("fr_shared", ["fr_50m", "fr_100m", "en_fr_a", "en_fr_b"], model_jsons["models_fr_shared.json"], OUTPUT_REV / "fr_shared_language", "fr"),
-    ]
-
-    for job_key, model_keys, models_json, out_dir, prefix in shared_jobs:
-        deps = dependency_ids([conv_ids[k] for k in model_keys])
-        pairs = [
-            f"{prefix}_50m,en_{prefix}_a",
-            f"{prefix}_50m,en_{prefix}_b",
-            f"{prefix}_100m,en_{prefix}_a",
-            f"{prefix}_100m,en_{prefix}_b",
-        ]
-        run_cmd_parts = [
-            "python",
-            str(ROOT / "src/bli_analysis/run_bli_pipeline.py"),
-            "--models-json",
-            str(models_json),
-            "--output-dir",
-            str(out_dir),
-            "--device",
-            "cuda",
-            "--batch-size",
-            "64",
-        ]
-        for pair in pairs:
-            run_cmd_parts += ["--pair", pair]
-
-        cmds = [
-            shell_join(run_cmd_parts),
-            shell_join([
-                "python",
-                str(ROOT / "src/bli_analysis/compute_bootstrap_ci.py"),
-                "--summary-csv",
-                str(out_dir / "bli_summary_metrics.csv"),
-                "--word-csv",
-                str(out_dir / "bli_word_neighbor_divergence.csv"),
-                "--axis-csv",
-                str(out_dir / "bli_axis_divergence.csv"),
-                "--repr-dir",
-                str(out_dir / "representations"),
-                "--out-csv",
-                str(out_dir / "bli_bootstrap_ci.csv"),
-            ]),
-        ]
-
-        script = analysis_job_header(f"bli2_{job_key}", log_dir, time_limit="1-00:00:00") + "\n".join(cmds) + "\n"
-        active = active_jobs.get(f"bli2_{job_key}")
-        if active and active.get("state") == "RUNNING":
-            analysis_ids[job_key] = active["job_id"]
-        else:
-            analysis_ids[job_key] = submit_sbatch(script, dry_run=dry_run, dependency_ids=deps or None)
-
-    for lang in MULTI_LANGS:
+    for lang in CORE_LANGS:
         deps = dependency_ids([conv_ids[f"{lang}_50m"], conv_ids[f"{lang}_100m"], conv_ids[f"en_{lang}_a"], conv_ids[f"en_{lang}_b"]])
         models_json = model_jsons[f"models_{lang}_shared.json"]
-        out_dir = OUTPUT_MULTI / f"{lang}_shared_language"
+        out_root = OUTPUT_REV if lang in {"zh", "fr"} else OUTPUT_MULTI
+        out_dir = out_root / f"{lang}_shared_language"
         pairs = [
             f"{lang}_50m,en_{lang}_a",
             f"{lang}_50m,en_{lang}_b",
@@ -819,12 +776,13 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
             ]),
         ]
 
-        script = analysis_job_header(f"bli2_{lang}_shared", log_dir, time_limit="1-00:00:00") + "\n".join(cmds) + "\n"
-        active = active_jobs.get(f"bli2_{lang}_shared")
+        job_key = f"{lang}_shared"
+        script = analysis_job_header(f"bli2_{job_key}", log_dir, time_limit="1-00:00:00") + "\n".join(cmds) + "\n"
+        active = active_jobs.get(f"bli2_{job_key}")
         if active and active.get("state") == "RUNNING":
-            analysis_ids[f"{lang}_shared"] = active["job_id"]
+            analysis_ids[job_key] = active["job_id"]
         else:
-            analysis_ids[f"{lang}_shared"] = submit_sbatch(script, dry_run=dry_run, dependency_ids=deps or None)
+            analysis_ids[job_key] = submit_sbatch(script, dry_run=dry_run, dependency_ids=deps or None)
 
     return analysis_ids
 

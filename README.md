@@ -2,11 +2,6 @@
 
 Reproducible pipeline for multilingual BabyLM pretraining analysis: dataset prep, tokenization, train/convert, probing, metrics, plots, and paper PDF.
 
-## Repository
-
-- Project: `https://github.com/$HF_USER/bli`
-- Pretraining library: `https://github.com/$HF_USER/nanotron`
-
 ## Repo Layout
 
 - `src/`: pipeline, training utilities, probes, and analysis code
@@ -22,8 +17,7 @@ Set variables once:
 ```bash
 export HF_USER=<your-hf-username>
 export BLI_ROOT=/scratch/$USER/bli
-export LANGSENSE_ROOT=/scratch/$USER/langsense
-export NANOTRON_ROOT=$LANGSENSE_ROOT/nanotron
+export NANOTRON_ROOT=/scratch/$USER/nanotron
 export NANOTRON_ENV=$HOME/nanotron-env
 ```
 
@@ -43,12 +37,10 @@ source ~/nanotron-env/bin/activate
 pip install --upgrade pip
 pip install torch --index-url https://download.pytorch.org/whl/cu124
 
-mkdir -p "$LANGSENSE_ROOT"/{models,datasets,src}
-mkdir -p "$LANGSENSE_ROOT"/logs/{data_processing,slurm_logs,checkpoints,configs,slurm_scripts}
-
-cd "$LANGSENSE_ROOT"
-git clone https://github.com/$HF_USER/nanotron.git
-cd nanotron
+if [ ! -d "$NANOTRON_ROOT/.git" ]; then
+  git clone https://github.com/$HF_USER/nanotron.git "$NANOTRON_ROOT"
+fi
+cd "$NANOTRON_ROOT"
 pip install -e .
 pip install datasets==3.6.0 transformers numba wandb ninja triton datatrove==0.3.0
 

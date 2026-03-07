@@ -12,7 +12,7 @@ from scipy.linalg import orthogonal_procrustes
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
-        description="Compare contextual-space metrics under embedding-anchor vs contextual-anchor alignment."
+        description="Run EN-centered alignment-method comparison (orthogonal vs affine)."
     )
     p.add_argument(
         "--probe-set",
@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--out-csv",
         type=Path,
-        default=Path("outputs/revision/en_ablation/bli_contextual_alignment_variant.csv"),
+        default=Path("outputs/revision/en_ablation/bli_alignment_method_comparison.csv"),
     )
     p.add_argument("--topk", type=int, default=25)
     return p.parse_args()
@@ -57,26 +57,26 @@ def jaccard_divergence(a: set[int], b: set[int]) -> float:
     return 1.0 - (len(a & b) / u)
 
 
+def fit_affine(src: np.ndarray, dst: np.ndarray) -> np.ndarray:
+    # Solve [src, 1] @ M ~= dst where M has shape (d+1, d).
+    src_aug = np.hstack([src, np.ones((src.shape[0], 1), dtype=src.dtype)])
+    M, *_ = np.linalg.lstsq(src_aug, dst, rcond=None)
+    return M
+
+
+def apply_affine(mat: np.ndarray, M: np.ndarray) -> np.ndarray:
+    mat_aug = np.hstack([mat, np.ones((mat.shape[0], 1), dtype=mat.dtype)])
+    return mat_aug @ M
+
+
 def compute_metrics(
-    eval_a: np.ndarray,
+    aligned_a: np.ndarray,
     eval_b: np.ndarray,
-    align_a: np.ndarray,
-    align_b: np.ndarray,
-    neutral_idx: list[int],
     cultural_idx: list[int],
     axis_idx: list[tuple[int, int]],
     topk: int,
 ) -> dict[str, float]:
-    wa = align_a[neutral_idx]
-    wb = align_b[neutral_idx]
-    w, _ = orthogonal_procrustes(wa, wb)
-
-    a_aligned = eval_a @ w
-    resid = wa @ w - wb
-    resid_fro = float(np.linalg.norm(resid, ord="fro"))
-    resid_per = float(resid_fro / max(1, len(neutral_idx)))
-
-    na = l2_normalize(a_aligned)
+    na = l2_normalize(aligned_a)
     nb = l2_normalize(eval_b)
     dnn = []
     for idx in cultural_idx:
@@ -85,14 +85,14 @@ def compute_metrics(
         dnn.append(jaccard_divergence(set(n1.tolist()), set(n2.tolist())))
     dnn = float(np.mean(dnn)) if dnn else float("nan")
 
-    sa = cosine_similarity_matrix(a_aligned[cultural_idx])
+    sa = cosine_similarity_matrix(aligned_a[cultural_idx])
     sb = cosine_similarity_matrix(eval_b[cultural_idx])
     dstruct = float(np.linalg.norm(sa - sb, ord="fro") / max(1, len(cultural_idx)))
 
     axis_abs = []
     axis_signed = []
     for i, j in axis_idx:
-        va = a_aligned[j] - a_aligned[i]
+        va = aligned_a[j] - aligned_a[i]
         vb = eval_b[j] - eval_b[i]
         nva = np.linalg.norm(va)
         nvb = np.linalg.norm(vb)
@@ -100,7 +100,7 @@ def compute_metrics(
             continue
         va = va / nva
         vb = vb / nvb
-        pa = a_aligned[cultural_idx] @ va
+        pa = aligned_a[cultural_idx] @ va
         pb = eval_b[cultural_idx] @ vb
         d = pa - pb
         axis_abs.append(float(np.mean(np.abs(d))))
@@ -111,8 +111,6 @@ def compute_metrics(
         "frobenius_cultural_similarity": dstruct,
         "axis_abs_projection_diff_mean": float(np.mean(axis_abs)) if axis_abs else float("nan"),
         "axis_signed_projection_diff_mean": float(np.mean(axis_signed)) if axis_signed else float("nan"),
-        "procrustes_anchor_residual_fro": resid_fro,
-        "procrustes_anchor_residual_per_anchor": resid_per,
     }
 
 
@@ -139,58 +137,92 @@ def main() -> None:
     )
     pairs = [(base, tgt) for base in baselines for tgt in targets]
     if not pairs:
-        raise ValueError(f"No EN-centered A-setup pairs found in {args.rep_dir}")
+        raise ValueError(f"No EN-centered C3 pairs found in {args.rep_dir}")
 
-    rows: list[dict] = []
+    rows: list[dict[str, float | str]] = []
     for ma, mb in pairs:
         emb_a = np.load(args.rep_dir / f"{ma}__embedding_matrix.npy")
         emb_b = np.load(args.rep_dir / f"{mb}__embedding_matrix.npy")
         ctx_a = np.load(args.rep_dir / f"{ma}__pre_lmhead_contextual.npy")
         ctx_b = np.load(args.rep_dir / f"{mb}__pre_lmhead_contextual.npy")
 
-        # Variant 1: align contextual evaluation using embedding anchors.
-        m1 = compute_metrics(
-            eval_a=ctx_a,
-            eval_b=ctx_b,
-            align_a=emb_a,
-            align_b=emb_b,
-            neutral_idx=neutral_idx,
-            cultural_idx=cultural_idx,
-            axis_idx=axis_idx,
-            topk=args.topk,
-        )
-        rows.append(
+        align_variants: list[dict[str, str | np.ndarray | float]] = []
+
+        # Variant 1: orthogonal + embedding anchors.
+        w_emb, _ = orthogonal_procrustes(emb_a[neutral_idx], emb_b[neutral_idx])
+        emb_resid = emb_a[neutral_idx] @ w_emb - emb_b[neutral_idx]
+        align_variants.append(
             {
-                "model_a": ma,
-                "model_b": mb,
-                "eval_repr": "pre_lmhead_contextual",
+                "alignment_method": "orthogonal",
                 "alignment_source": "embedding_matrix",
-                **m1,
+                "transform": w_emb,
+                "affine": False,
+                "anchor_residual_fro": float(np.linalg.norm(emb_resid, ord="fro")),
+                "anchor_residual_per_anchor": float(np.linalg.norm(emb_resid, ord="fro") / max(1, len(neutral_idx))),
             }
         )
 
-        # Variant 2: align contextual evaluation using contextual anchors.
-        m2 = compute_metrics(
-            eval_a=ctx_a,
-            eval_b=ctx_b,
-            align_a=ctx_a,
-            align_b=ctx_b,
-            neutral_idx=neutral_idx,
-            cultural_idx=cultural_idx,
-            axis_idx=axis_idx,
-            topk=args.topk,
-        )
-        rows.append(
+        # Variant 2: orthogonal + contextual anchors.
+        w_ctx, _ = orthogonal_procrustes(ctx_a[neutral_idx], ctx_b[neutral_idx])
+        ctx_resid = ctx_a[neutral_idx] @ w_ctx - ctx_b[neutral_idx]
+        align_variants.append(
             {
-                "model_a": ma,
-                "model_b": mb,
-                "eval_repr": "pre_lmhead_contextual",
+                "alignment_method": "orthogonal",
                 "alignment_source": "pre_lmhead_contextual",
-                **m2,
+                "transform": w_ctx,
+                "affine": False,
+                "anchor_residual_fro": float(np.linalg.norm(ctx_resid, ord="fro")),
+                "anchor_residual_per_anchor": float(np.linalg.norm(ctx_resid, ord="fro") / max(1, len(neutral_idx))),
             }
         )
 
-    out = pd.DataFrame(rows)
+        # Variant 3: affine + embedding anchors.
+        m_aff = fit_affine(emb_a[neutral_idx], emb_b[neutral_idx])
+        emb_aff_resid = apply_affine(emb_a[neutral_idx], m_aff) - emb_b[neutral_idx]
+        align_variants.append(
+            {
+                "alignment_method": "affine",
+                "alignment_source": "embedding_matrix",
+                "transform": m_aff,
+                "affine": True,
+                "anchor_residual_fro": float(np.linalg.norm(emb_aff_resid, ord="fro")),
+                "anchor_residual_per_anchor": float(np.linalg.norm(emb_aff_resid, ord="fro") / max(1, len(neutral_idx))),
+            }
+        )
+
+        eval_reprs = [
+            ("embedding_matrix", emb_a, emb_b),
+            ("pre_lmhead_contextual", ctx_a, ctx_b),
+        ]
+        for eval_repr, eval_a, eval_b in eval_reprs:
+            for av in align_variants:
+                if bool(av["affine"]):
+                    aligned = apply_affine(eval_a, av["transform"])  # type: ignore[arg-type]
+                else:
+                    aligned = eval_a @ av["transform"]  # type: ignore[operator]
+                metrics = compute_metrics(
+                    aligned_a=aligned,
+                    eval_b=eval_b,
+                    cultural_idx=cultural_idx,
+                    axis_idx=axis_idx,
+                    topk=args.topk,
+                )
+                rows.append(
+                    {
+                        "model_a": ma,
+                        "model_b": mb,
+                        "eval_repr": eval_repr,
+                        "alignment_method": str(av["alignment_method"]),
+                        "alignment_source": str(av["alignment_source"]),
+                        "anchor_residual_fro": float(av["anchor_residual_fro"]),
+                        "anchor_residual_per_anchor": float(av["anchor_residual_per_anchor"]),
+                        **metrics,
+                    }
+                )
+
+    out = pd.DataFrame(rows).sort_values(
+        ["eval_repr", "alignment_method", "alignment_source", "model_a", "model_b"]
+    )
     args.out_csv.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(args.out_csv, index=False)
     print(f"Wrote: {args.out_csv}")

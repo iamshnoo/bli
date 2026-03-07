@@ -35,7 +35,7 @@
 \ifacl@linenumbers
   % Add draft line numbering via the lineno package
   % https://texblog.org/2012/02/08/adding-line-numbers-to-documents/
-  \usepackage[left,mathlines]{lineno}
+  \usepackage[switch,mathlines]{lineno}
 
   % Line numbers in gray Helvetica 8pt
   \font\aclhv = phvb at 8pt
@@ -52,7 +52,7 @@
     \loop\ifnum\cv@tmpc<#1\relax0\advance\cv@tmpc1\relax\fi \ifnum\cv@tmpc<#1 \repeat
     \cv@tmpc@=#2\relax\ifnum\cv@tmpc@<0\cv@tmpc@=-\cv@tmpc@\fi \relax\the\cv@tmpc@}%
   \renewcommand\thelinenumber{\fillzeros[3]{\arabic{linenumber}}}
-  \AtBeginDocument{\nolinenumbers}
+  \AtBeginDocument{\linenumbers}
 
   \setlength{\linenumbersep}{1.6cm}
 

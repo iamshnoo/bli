@@ -101,12 +101,20 @@ def main() -> None:
     negative_idx = [w2i[w] for w in negative_words if w in w2i]
     axis_idx = [(w2i[a], w2i[b]) for a, b in semantic_axes if a in w2i and b in w2i]
 
-    core_pairs = [
-        ("en_50m", "en_zh_a"),
-        ("en_50m", "en_fr_a"),
-        ("en_100m", "en_zh_a"),
-        ("en_100m", "en_fr_a"),
-    ]
+    available = set()
+    for p in args.rep_dir.glob("*__embedding_matrix.npy"):
+        name = p.name.replace("__embedding_matrix.npy", "")
+        if (args.rep_dir / f"{name}__pre_lmhead_contextual.npy").exists():
+            available.add(name)
+
+    baselines = [m for m in ["en_50m", "en_100m"] if m in available]
+    targets = sorted(
+        m for m in available if m.startswith("en_") and m.endswith("_a") and m not in {"en_50m", "en_100m"}
+    )
+    core_pairs = [(base, tgt) for base in baselines for tgt in targets]
+    if not core_pairs:
+        raise ValueError(f"No EN-centered A-setup pairs found in {args.rep_dir}")
+
     repr_types = ["embedding_matrix", "pre_lmhead_contextual"]
 
     rows: list[dict] = []
@@ -136,4 +144,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

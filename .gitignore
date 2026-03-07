@@ -21,6 +21,7 @@ venv/
 /outputs/
 /AGENT.md
 /CLAUDE_PLAN.md
+/.agents/
 
 # Common large binary artifacts
 *.pt
