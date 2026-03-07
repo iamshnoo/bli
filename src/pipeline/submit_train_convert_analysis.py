@@ -897,11 +897,6 @@ python latex/scripts/generate_artifacts.py \\
   --multilingual-output-root "${{BLI_ROOT}}/outputs/multilingual_expansion" \\
   --latex-root "${{BLI_ROOT}}/latex"
 
-python src/pipeline/combine_multilingual_figures.py \\
-  --left "${{BLI_ROOT}}/latex/figures/main_multilingual_regression.png" \\
-  --right "${{BLI_ROOT}}/latex/figures/appendix_multilingual_overview.png" \\
-  --output "${{BLI_ROOT}}/latex/figures/combined_multilingual_fig5_fig11.png"
-
 bash latex/scripts/sync_report.sh
 """
 

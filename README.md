@@ -153,11 +153,6 @@ python latex/scripts/generate_artifacts.py \
   --multilingual-output-root outputs/multilingual_expansion \
   --latex-root latex
 
-python src/pipeline/combine_multilingual_figures.py \
-  --left latex/figures/main_multilingual_regression.png \
-  --right latex/figures/appendix_multilingual_overview.png \
-  --output latex/figures/combined_multilingual_fig5_fig11.png
-
 bash latex/scripts/sync_report.sh
 ```
 

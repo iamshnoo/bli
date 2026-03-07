@@ -356,7 +356,14 @@ This experiment quantifies representation dependence under a single alignment pr
 \label{fig:exp4-layerwise}
 \end{figure}
 
-\textbf{Results.} Figure~\ref{fig:exp4-ratio} shows strong contextual-to-embedding amplification across all sixteen EN-centered pairs, and Figure~\ref{fig:multilingual-combined} shows the same ordering across all eight non-English language pairs, supporting \textbf{(H3.1)}. Figure~\ref{fig:exp4-signed} and Appendix Table~\ref{tab:exp4-signed} show directional shifts that are not explained by magnitude-only effects. Figure~\ref{fig:exp4-layerwise} shows where amplification accumulates across depth; Appendix Table~\ref{tab:exp4-layerwise} quantifies peak and final-layer values, supporting \textbf{(H3.2)}. Appendix Table~\ref{tab:progress-sensitivity} shows the 50M$\rightarrow$100M sensitivity profile for EN-centered C3 pairs, which we report as an available checkpoint-level proxy rather than a full convergence study. Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:exp4-ratio-ci}, and \ref{tab:main-multilingual-ratios} report detailed ratios and confidence intervals. We move the small-$n$ typology regression to Appendix Table~\ref{tab:appendix-multilingual-regression} and Figure~\ref{fig:appendix-multilingual-regression-scatter}.
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{figures/fig12-typology-regression-scatter.pdf}
+\caption{Exploratory trend check ($n{=}8$): coarse distance proxy versus mean contextual-amplification ratio. No clear monotonic relation appears.}
+\label{fig:typology-regression-scatter}
+\end{figure}
+
+\textbf{Results.} Figure~\ref{fig:exp4-ratio} shows strong contextual-to-embedding amplification across all sixteen EN-centered pairs, and Figure~\ref{fig:multilingual-combined} shows the same ordering across all eight non-English language pairs, supporting \textbf{(H3.1)}. Figure~\ref{fig:exp4-signed} and Appendix Table~\ref{tab:exp4-signed} show directional shifts that are not explained by magnitude-only effects. Figure~\ref{fig:exp4-layerwise} shows where amplification accumulates across depth; Appendix Table~\ref{tab:exp4-layerwise} quantifies peak and final-layer values, supporting \textbf{(H3.2)}. Appendix Table~\ref{tab:progress-sensitivity} shows the 50M$\rightarrow$100M sensitivity profile for EN-centered C3 pairs, which we report as an available checkpoint-level proxy rather than a full convergence study. Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:exp4-ratio-ci}, and \ref{tab:main-multilingual-ratios} report detailed ratios and confidence intervals. Figure~\ref{fig:typology-regression-scatter} with Appendix Table~\ref{tab:appendix-multilingual-regression} shows no significant monotonic cross-language trend, so we treat typology as exploratory rather than explanatory.
 
 \begin{insightbox}
 \textbf{Takeaway 3:} Representation choice changes measured mismatch by an order of magnitude across language settings: 16.1 to 24.2 times in EN-centered controls and 17.1 to 35.9 times in non-English target-language pairs. Divergence rises through middle layers, peaks, then compresses while remaining elevated at final layers.
@@ -404,7 +411,7 @@ Under strict exposure and overlap controls, bilingual pretraining leaves measura
 \section*{Limitations}
 \label{sec:limitations}
 
-Extending the controlled factorial design to models beyond 160M parameters, to encoder-only architectures, or to instruction-tuned variants falls outside the compute budget of the current study, and whether the contextual-to-embedding ratio ranges observed here (about 16 to 24 times in EN-centered controls; about 17 to 36 times in non-English target-language settings) hold at larger scales is an open empirical question we intend to revisit. We add EN-only seed-matched null controls, but the seed count is still limited and the same null protocol should be repeated at larger scale. Evaluating alignment methods beyond orthogonal Procrustes, such as affine transformations or contextual-space objectives \citep{artetxe2019richly}, requires separate infrastructure per method and is a natural direction for follow-on work rather than a core variable here. Our 50 semantic axes are grounded in four cross-cultural frameworks (Hofstede, Schwartz, Inglehart-Welzel, GLOBE; see Appendix~\ref{tab:appendix-axis-grounding}), and our 1000 cultural probes are grouped by literature-grounded categories; however, category-level lexical balance and translation quality are still imperfect for lower-resource languages. Probe coverage is further bounded by the domain of concepts for which reliable multilingual equivalents are obtainable via NLLB and manual audit; political, legal, and economic semantic axes remain under-covered relative to values, ritual, and food domains. Causal attribution of the observed geometry to specific training dynamics (e.g., via activation patching or causal mediation analysis) would require intervention infrastructure that is outside the measurement framework of this evaluation study, though the layer-wise patterns we report are consistent with depth-distributed accumulation of language-conditioned information.
+Extending the controlled factorial design to models beyond 160M parameters, to encoder-only architectures, or to instruction-tuned variants is constrained primarily by matched-data availability rather than raw compute. The BabyBabelLM setup provides controlled EN/L2 matched partitions only for the eight Tier-1 target languages at roughly 100M English-equivalent tokens, and this matched-data requirement is central to our factorial controls. Within that regime, scaling past 160M under the same controls produced weaker model quality, so larger-parameter comparisons are outside the current data-constrained scope. Whether the contextual-to-embedding ratio ranges observed here (about 16 to 24 times in EN-centered controls; about 17 to 36 times in non-English target-language settings) hold at larger scales is an open empirical question we intend to revisit. We add EN-only seed-matched null controls, but the seed count is still limited and the same null protocol should be repeated at larger scale. Evaluating alignment methods beyond orthogonal Procrustes, such as affine transformations or contextual-space objectives \citep{artetxe2019richly}, requires separate infrastructure per method and is a natural direction for follow-on work rather than a core variable here. Our 50 semantic axes are grounded in four cross-cultural frameworks (Hofstede, Schwartz, Inglehart-Welzel, GLOBE; see Appendix~\ref{tab:appendix-axis-grounding}), and our 1000 cultural probes are grouped by literature-grounded categories; however, category-level lexical balance and translation quality are still imperfect for lower-resource languages. Probe coverage is further bounded by the domain of concepts for which reliable multilingual equivalents are obtainable via NLLB and manual audit; political, legal, and economic semantic axes remain under-covered relative to values, ritual, and food domains. Causal attribution of the observed geometry to specific training dynamics (e.g., via activation patching or causal mediation analysis) would require intervention infrastructure that is outside the measurement framework of this evaluation study, though the layer-wise patterns we report are consistent with depth-distributed accumulation of language-conditioned information.
 
 \section*{Ethical Considerations}
 \label{sec:ethical}
@@ -428,8 +435,10 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \renewcommand{\thesection}{A.\arabic{section}}
 \section{Probe Details}
 \label{sec:probe-details}
+This section documents the probe construction and translation audit artifacts that define the evaluation substrate used in all experiments. The tables below provide complete inventories so readers can reproduce probe selection, grounding, and QC filtering choices.
 
 \paragraph{Semantic Axes}
+These tables enumerate the full axis inventory and grounding metadata used to build directional diagnostics.
 
 \begin{table*}[p]
 \centering
@@ -456,6 +465,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table*}
 
 \paragraph{Probe Translation and Audit QC Summary}
+The following artifacts summarize translation quality estimation and manual-audit outcomes that determine which translated probes are retained.
 \begin{table}[t]
 \centering
 \scriptsize
@@ -473,6 +483,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Axis Magnitude Interpretation}
+This compact table provides per-pair magnitude context for embedding and contextual axis divergence, including their ratio.
 \begin{table}[t]
 \centering
 \scriptsize
@@ -484,8 +495,10 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \renewcommand{\thesection}{A.\arabic{section}}
 \section{Additional Results}
 \label{sec:extra-results}
+This section collects detailed quantitative outputs and robustness diagnostics that support main-text claims while keeping the core narrative figure-first.
 
 \paragraph{Main-Text Detailed Tables}
+These tables provide the full numeric values corresponding to main-text summaries for Experiments 1--4.
 \begin{table}[t]
 \centering
 \tiny
@@ -575,6 +588,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Same-Language Controls}
+This control block reports EN-only seed-matched null comparisons to bound mismatch expected from training stochasticity alone.
 \begin{table}[t]
 \centering
 \scriptsize
@@ -584,6 +598,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Axis-Grounding Holdout Robustness}
+This table tests whether the contextual signal persists when evaluation uses held-out framework groupings rather than matched axis groupings.
 \begin{table}[t]
 \centering
 \scriptsize
@@ -593,6 +608,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Training-Progress Sensitivity}
+This table reports the 50M to 100M checkpoint sensitivity profile for EN-centered C3 pairs.
 \begin{table}[t]
 \centering
 \scriptsize
@@ -602,6 +618,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Contextual-Anchor Alignment Variant}
+This artifact isolates whether contextual mismatch depends on using embedding anchors versus contextual anchors during alignment.
 \begin{table*}[t]
 \centering
 \scriptsize
@@ -611,6 +628,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table*}
 
 \paragraph{Per-Head Proxy Analysis}
+These artifacts localize where contextual axis divergence concentrates within middle-layer attention heads.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig9-appendix-perhead-heatmap.pdf}
@@ -627,6 +645,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Additional Stratified and Word-Level Diagnostics}
+These diagnostics break down mismatch by probe category and by high-divergence lexical items.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig10-appendix-category-heatmap.pdf}
@@ -643,6 +662,7 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \end{table}
 
 \paragraph{Non-English Language Snapshot}
+This block extends the multilingual view to additional non-English pairs and reports ratio confidence intervals plus exploratory regression summaries.
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.95\textwidth]{figures/fig11-appendix-multilingual-overview.pdf}
@@ -673,13 +693,6 @@ This appendix provides full inventories, robustness checks, and extended diagnos
 \caption{Exploratory cross-language trend analysis. Pooled OLS uses ratio observations from both baselines; script-match and family-match are coarse binary proxies.}
 \label{tab:appendix-multilingual-regression}
 \end{table}
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/fig12-appendix-multilingual-regression-scatter.pdf}
-\caption{Exploratory scatter: coarse distance proxy versus mean contextual-amplification ratio across additional non-English languages.}
-\label{fig:appendix-multilingual-regression-scatter}
-\end{figure}
 
 \begin{table}[t]
 \centering

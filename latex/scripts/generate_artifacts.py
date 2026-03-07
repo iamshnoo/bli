@@ -71,7 +71,7 @@ FIGURE_NAME_MAP = {
     "appendix_perhead_heatmap.png": "fig9-appendix-perhead-heatmap.pdf",
     "category_heatmap.png": "fig10-appendix-category-heatmap.pdf",
     "appendix_multilingual_overview.png": "fig11-appendix-multilingual-overview.pdf",
-    "appendix_multilingual_regression_scatter.png": "fig12-appendix-multilingual-regression-scatter.pdf",
+    "appendix_multilingual_regression_scatter.png": "fig12-typology-regression-scatter.pdf",
 }
 
 TABLE_NAME_MAP = {
@@ -844,7 +844,7 @@ def build_appendix_daxis_interpretation(en: pd.DataFrame, latex_root: Path) -> N
     ]
     for _, r in piv.iterrows():
         lines.append(
-            f"{r['pair']} & {_fmt(r['embedding_matrix'])} & {_fmt(r['pre_lmhead_contextual'])} & {r['ratio']:.1f} times \\\\"
+            f"{r['pair']} & {_fmt(r['embedding_matrix'])} & {_fmt(r['pre_lmhead_contextual'])} & {r['ratio']:.1f} \\\\"
         )
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "appendix_daxis_interpretation.tex")
@@ -991,18 +991,17 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
             linewidth=0.5,
             zorder=3,
         )
-        ax.text(r["ratio"] + 0.25, r["y"], f"{r['ratio']:.1f} times", va="center", ha="left", fontsize=8.5)
 
     ax.set_yticks(plot_df["y"].to_numpy())
     ax.set_yticklabels(ylabels.tolist(), fontsize=8.7)
     ax.invert_yaxis()
-    ax.set_xlabel(r"Contextual / Embedding axis divergence ratio (higher means larger contextual amplification)")
+    ax.set_xlabel(r"Contextual / Embedding axis-divergence ratio (higher = larger contextual mismatch)")
     ax.set_ylabel("Pair")
     ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
     xmin = max(0.0, float(np.nanmin(plot_df["ci_low"].fillna(plot_df["ratio"]))) - 1.0)
-    xmax = float(np.nanmax(plot_df["ci_high"].fillna(plot_df["ratio"]))) + 2.2
+    xmax = float(np.nanmax(plot_df["ci_high"].fillna(plot_df["ratio"]))) + 0.8
     ax.set_xlim(xmin, xmax)
     handles = [
         plt.Line2D([0], [0], marker="o", color=baseline_style["EN-50M"]["color"], markeredgecolor="black", linestyle="none", label="EN-50M"),
@@ -1029,7 +1028,7 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
         r"\midrule",
     ]
     for _, r in rdf.iterrows():
-        lines.append(f"{r['pair']} & {_fmt(r['embedding_axis'])} & {_fmt(r['contextual_axis'])} & {r['ratio']:.1f} times \\\\")
+        lines.append(f"{r['pair']} & {_fmt(r['embedding_axis'])} & {_fmt(r['contextual_axis'])} & {r['ratio']:.1f} \\\\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "exp4_ratio.tex")
 
@@ -1053,7 +1052,7 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
             for _, rr in csub.iterrows():
                 pretty_pair = en_pair_label(rr["model_a"], rr["model_b"])
                 ls.append(
-                    f"{pretty_pair} & {rr['mean']:.1f} times & {rr['ci_low']:.1f} times & {rr['ci_high']:.1f} times \\\\")
+                    f"{pretty_pair} & {rr['mean']:.1f} & {rr['ci_low']:.1f} & {rr['ci_high']:.1f} \\\\")
             ls += [r"\bottomrule", r"\end{tabular}"]
             write_table(ls, latex_root / "tables" / "exp4_ratio_ci.tex")
 
@@ -1400,7 +1399,7 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
             col_rename[c] = str(c)
     pvt = pvt.rename(columns=col_rename)
 
-    fig, ax = plt.subplots(figsize=(11, 4.8))
+    fig, ax = plt.subplots(figsize=(11.4, 4.8))
     vmin = float(np.nanmin(pvt.values))
     vmax = float(np.nanmax(pvt.values))
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
@@ -1411,16 +1410,16 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
         annot=False,
         linewidths=0.8,
         linecolor="black",
-        cbar_kws={"label": r"Mean $D_{Axis}$ (↑ worse)", "shrink": 0.8},
+        cbar_kws={"label": r"Mean $D_{Axis}$ (higher = worse mismatch)", "shrink": 0.8},
         ax=ax,
     )
-    _annotate_heatmap_adaptive(ax, pvt.values, "YlOrBr", norm, fontsize=8)
     ax.collections[0].colorbar.ax.locator = MaxNLocator(4)
     ax.collections[0].colorbar.update_ticks()
     ax.set_xlabel("Model pair", fontsize=11)
     ax.set_ylabel("Probe category", fontsize=11)
-    ax.tick_params(axis="x", labelsize=9)
+    ax.tick_params(axis="x", labelsize=8.2)
     ax.tick_params(axis="y", labelsize=9, rotation=0)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha="right")
     ax.collections[0].colorbar.ax.tick_params(labelsize=9)
     fig.tight_layout()
     fig.savefig(latex_root / "figures" / "category_heatmap.png", dpi=450, bbox_inches="tight")
@@ -1566,18 +1565,23 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
         cmap="YlOrBr",
         norm=norm,
         annot=False,
-        linewidths=0.8,
+        linewidths=0.35,
         linecolor="black",
-        cbar_kws={"label": r"Mean $D_{Axis}$ (↑ worse)", "shrink": 0.85},
+        cbar_kws={"label": r"Mean $D_{Axis}$ (higher = worse mismatch)", "shrink": 0.85},
         ax=ax,
     )
-    _annotate_heatmap_adaptive(ax, pivot.values, "YlOrBr", norm, fontsize=6)
     ax.collections[0].colorbar.ax.locator = MaxNLocator(4)
     ax.collections[0].colorbar.update_ticks()
     ax.set_xlabel("Attention head index")
     ax.set_ylabel("Pair / Layer")
     ax.tick_params(axis="x", labelsize=8)
-    ax.tick_params(axis="y", labelsize=8)
+    ytick_labels = [tick.get_text() for tick in ax.get_yticklabels()]
+    if len(ytick_labels) > 32:
+        show_every = 2
+        ax.set_yticks(np.arange(0.5, len(ytick_labels), show_every))
+        ax.set_yticklabels(ytick_labels[::show_every], fontsize=7.5)
+    else:
+        ax.tick_params(axis="y", labelsize=8)
     fig.tight_layout()
     fig.savefig(latex_root / "figures" / "appendix_perhead_heatmap.png", dpi=450, bbox_inches="tight")
     plt.close(fig)
@@ -1682,7 +1686,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
     ]
     for _, r in out.iterrows():
         lines.append(
-            f"{r['language']} & {r['ratio_50m']:.1f} times & {r['ratio_100m']:.1f} times & "
+            f"{r['language']} & {r['ratio_50m']:.1f} & {r['ratio_100m']:.1f} & "
             f"{_fmt(r['overlap_gain_dnn_emb'])} & {_fmt(r['overlap_gain_dnn_ctx'])} & "
             f"{_fmt(r['overlap_gain_daxis_emb'])} & {_fmt(r['overlap_gain_daxis_ctx'])} \\\\"
         )
@@ -1716,7 +1720,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ]
         for _, r in ci_df.iterrows():
             ci_lines.append(
-                f"{r['language']} & {r['baseline']} & {r['mean']:.1f} times & {r['ci_low']:.1f} times & {r['ci_high']:.1f} times \\\\"
+                f"{r['language']} & {r['baseline']} & {r['mean']:.1f} & {r['ci_low']:.1f} & {r['ci_high']:.1f} \\\\"
             )
         ci_lines += [r"\bottomrule", r"\end{tabular}"]
         write_table(ci_lines, latex_root / "tables" / "appendix_multilingual_ratio_ci.tex")
@@ -2024,7 +2028,7 @@ def build_same_language_controls_table(ctrl_df: pd.DataFrame | None, latex_root:
     for _, r in piv.sort_values("language").iterrows():
         pair_lbl = f"{r['model_a']} vs {r['model_b']}".replace("_", r"\_")
         lines.append(
-            f"{r['language']}: {pair_lbl} & {_fmt(r['Embedding'])} & {_fmt(r['Contextual'])} & {r['ratio_ctx_over_emb']:.1f} times \\\\"
+            f"{r['language']}: {pair_lbl} & {_fmt(r['Embedding'])} & {_fmt(r['Contextual'])} & {r['ratio_ctx_over_emb']:.1f} \\\\"
         )
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "same_language_controls.tex")
@@ -2218,7 +2222,7 @@ def build_main_multilingual_regression_figure_and_table(multilingual_root: Path,
         family_short = row["family"].replace("Indo-Eur ", "").replace("Sino-Tibetan", "Sino-Tib.")
         lines.append(
             f"{row['language']:12} & {family_short:18} & {row['hofstede_dist']:5.0f} & "
-            f"{row['ratio_50m']:6.2f} times & {row['ratio_100m']:6.2f} times \\\\"
+            f"{row['ratio_50m']:6.2f} & {row['ratio_100m']:6.2f} \\\\"
         )
 
     lines += [r"\bottomrule", r"\end{tabular}"]
