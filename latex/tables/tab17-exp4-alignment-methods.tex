@@ -1,0 +1,29 @@
+\begin{tabular}{@{}llllrr@{}}
+\toprule
+Representation & Alignment method & Metric & Mean & Std. dev. & Anchor residual/anchor \\
+\midrule
+Embedding & Orthogonal (Embedding anchors) & $D_{NN}$ & 0.642 & 0.019 & 0.041 \\
+ &  & $D_{Struct}$ & 0.123 & 0.015 & 0.041 \\
+ &  & $D_{Axis}$ & 0.145 & 0.014 & 0.041 \\
+\cmidrule(lr){1-6}
+Embedding & Orthogonal (Contextual anchors) & $D_{NN}$ & 0.642 & 0.019 & 0.194 \\
+ &  & $D_{Struct}$ & 0.123 & 0.015 & 0.194 \\
+ &  & $D_{Axis}$ & 0.145 & 0.014 & 0.194 \\
+\cmidrule(lr){1-6}
+Embedding & Affine (Embedding anchors) & $D_{NN}$ & 0.710 & 0.026 & 0.030 \\
+ &  & $D_{Struct}$ & 0.163 & 0.024 & 0.030 \\
+ &  & $D_{Axis}$ & 0.152 & 0.013 & 0.030 \\
+\cmidrule(lr){1-6}
+Contextual & Orthogonal (Embedding anchors) & $D_{NN}$ & 0.786 & 0.016 & 0.041 \\
+ &  & $D_{Struct}$ & 0.147 & 0.037 & 0.041 \\
+ &  & $D_{Axis}$ & 2.996 & 0.585 & 0.041 \\
+\cmidrule(lr){1-6}
+Contextual & Orthogonal (Contextual anchors) & $D_{NN}$ & 0.786 & 0.016 & 0.194 \\
+ &  & $D_{Struct}$ & 0.147 & 0.037 & 0.194 \\
+ &  & $D_{Axis}$ & 2.996 & 0.585 & 0.194 \\
+\cmidrule(lr){1-6}
+Contextual & Affine (Embedding anchors) & $D_{NN}$ & 0.798 & 0.016 & 0.030 \\
+ &  & $D_{Struct}$ & 0.157 & 0.042 & 0.030 \\
+ &  & $D_{Axis}$ & 3.190 & 0.585 & 0.030 \\
+\bottomrule
+\end{tabular}
