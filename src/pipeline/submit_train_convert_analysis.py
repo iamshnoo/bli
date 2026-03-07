@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import itertools
 import json
 import os
 import re
@@ -52,6 +53,7 @@ LANG_DATASET_CODE = {
 
 CORE_LANGS = list(LANG_DATASET_CODE.keys())
 MULTI_LANGS = [l for l in CORE_LANGS if l not in {"zh", "fr"}]
+SEED_NULL_SEEDS = [101, 202, 303]
 
 
 def resolve_tokenizer_reference() -> str:
@@ -303,6 +305,29 @@ def mono_train_specs() -> List[dict]:
         },
     ]
 
+    # True seed-matched EN-only null controls (same data + budget, different seeds only).
+    for idx, seed in enumerate(SEED_NULL_SEEDS, start=1):
+        specs.append(
+            {
+                "short_name": f"en_50m_s{idx}",
+                "run_name": f"babylm_160m_en_50m_s{idx}",
+                "dataset": ROOT / "data/processed/partitions/eng_shared/train",
+                "steps": 1500,
+                "warmup": 150,
+                "seed": seed,
+            }
+        )
+        specs.append(
+            {
+                "short_name": f"en_100m_s{idx}",
+                "run_name": f"babylm_160m_en_100m_s{idx}",
+                "dataset": ROOT / "data/processed/babylm-eng/train",
+                "steps": 3000,
+                "warmup": 300,
+                "seed": seed,
+            }
+        )
+
     for short, iso3 in LANG_DATASET_CODE.items():
         for tokens, steps, warmup in [("50m", 1500, 150), ("100m", 3000, 300)]:
             specs.append(
@@ -417,6 +442,8 @@ def submit_training_jobs(dry_run: bool) -> Dict[str, dict]:
             "0.033",
             "--warmup-steps",
             str(spec["warmup"]),
+            "--seed",
+            str(spec.get("seed", 42)),
             "--seq",
             "512",
             "--steps",
@@ -556,7 +583,11 @@ def write_models_json_files() -> Dict[str, Path]:
     mapping = {
         "models_en_ablation.json": en_ablation,
         "models_layerwise.json": layerwise,
+        "models_seed_null.json": {
+            f"en_50m_s{i}": model_path(f"en_50m_s{i}") for i in range(1, 4)
+        }
     }
+    mapping["models_seed_null.json"].update({f"en_100m_s{i}": model_path(f"en_100m_s{i}") for i in range(1, 4)})
 
     for lang in CORE_LANGS:
         mapping[f"models_{lang}_shared.json"] = {
@@ -730,6 +761,52 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
         analysis_ids["en_ablation"] = active["job_id"]
     else:
         analysis_ids["en_ablation"] = submit_sbatch(en_script, dry_run=dry_run, dependency_ids=en_deps or None)
+
+    # Dedicated seed-null analysis: compute representations and same-language controls
+    seed_model_keys = [f"en_50m_s{i}" for i in range(1, 4)] + [f"en_100m_s{i}" for i in range(1, 4)]
+    seed_deps = dependency_ids([conv_ids.get(x) for x in seed_model_keys])
+    seed_pairs = []
+    for prefix in ["en_50m_s", "en_100m_s"]:
+        names = [f"{prefix}{i}" for i in range(1, 4)]
+        for a, b in itertools.combinations(names, 2):
+            seed_pairs.append(f"{a},{b}")
+
+    seed_run_cmd = [
+        "python",
+        str(ROOT / "src/bli_analysis/run_bli_pipeline.py"),
+        "--models-json",
+        str(model_jsons["models_seed_null.json"]),
+        "--output-dir",
+        str(OUTPUT_REV / "en_seed_null"),
+        "--device",
+        "cuda",
+        "--batch-size",
+        "64",
+    ]
+    for pair in seed_pairs:
+        seed_run_cmd += ["--pair", pair]
+
+    seed_cmds = [
+        shell_join(seed_run_cmd),
+        shell_join(
+            [
+                "python",
+                str(ROOT / "src/bli_analysis/run_same_language_controls.py"),
+                "--probe-set",
+                str(ROOT / "data/probes/probe_sets.json"),
+                "--rep-dir",
+                str(OUTPUT_REV / "en_seed_null/representations"),
+                "--out-csv",
+                str(OUTPUT_REV / "en_ablation/bli_same_language_controls.csv"),
+            ]
+        ),
+    ]
+    seed_script = analysis_job_header("bli2_seed_null", log_dir, time_limit="1-00:00:00") + "\n".join(seed_cmds) + "\n"
+    active = active_jobs.get("bli2_seed_null")
+    if active and active.get("state") == "RUNNING":
+        analysis_ids["seed_null"] = active["job_id"]
+    else:
+        analysis_ids["seed_null"] = submit_sbatch(seed_script, dry_run=dry_run, dependency_ids=seed_deps or None)
 
     for lang in CORE_LANGS:
         deps = dependency_ids([conv_ids[f"{lang}_50m"], conv_ids[f"{lang}_100m"], conv_ids[f"en_{lang}_a"], conv_ids[f"en_{lang}_b"]])

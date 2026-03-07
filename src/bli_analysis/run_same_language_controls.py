@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
+from itertools import combinations
 from pathlib import Path
 
 import numpy as np
@@ -11,15 +13,19 @@ from scipy.linalg import orthogonal_procrustes
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Compute same-language control metrics from cached representations.")
+    p = argparse.ArgumentParser(description="Compute seed-matched same-language control metrics from cached representations.")
     p.add_argument("--probe-set", type=Path, default=Path("data/probes/probe_sets.json"))
-    p.add_argument("--revision-root", type=Path, default=Path("outputs/revision"))
+    p.add_argument(
+        "--rep-dir",
+        type=Path,
+        default=Path("outputs/revision/en_seed_null/representations"),
+        help="Directory containing cached representation .npy files from run_bli_pipeline.",
+    )
     p.add_argument(
         "--out-csv",
         type=Path,
         default=Path("outputs/revision/en_ablation/bli_same_language_controls.csv"),
     )
-    p.add_argument("--topk", type=int, default=25)
     return p.parse_args()
 
 
@@ -66,17 +72,64 @@ def main() -> None:
     cultural_idx = [w2i[w] for w in probe["cultural_probe_words"] if w in w2i]
     axis_idx = [(w2i[a], w2i[b]) for a, b in probe["semantic_axes"] if a in w2i and b in w2i]
 
-    control_specs = [
-        ("EN", args.revision_root / "en_ablation" / "representations", "en_50m", "en_100m"),
-        ("ZH", args.revision_root / "zh_shared_language" / "representations", "zh_50m", "zh_100m"),
-        ("FR", args.revision_root / "fr_shared_language" / "representations", "fr_50m", "fr_100m"),
+    rep_dir = args.rep_dir
+    if not rep_dir.exists():
+        raise FileNotFoundError(f"Representation directory not found: {rep_dir}")
+
+    def _discover_models(eval_repr: str) -> list[str]:
+        out = []
+        suffix = f"__{eval_repr}.npy"
+        for p in rep_dir.glob(f"*{suffix}"):
+            name = p.name[: -len(suffix)]
+            out.append(name)
+        return sorted(set(out))
+
+    # Preferred true seed-matched null groups.
+    groups: list[tuple[str, str]] = [
+        ("EN-50M", r"^en_50m_s\d+$"),
+        ("EN-100M", r"^en_100m_s\d+$"),
     ]
 
     rows: list[dict[str, float | str]] = []
-    for lang, rep_dir, model_a, model_b in control_specs:
+    for group_label, pattern in groups:
+        compiled = re.compile(pattern)
+        available_emb = _discover_models("embedding_matrix")
+        members = sorted([m for m in available_emb if compiled.match(m)])
+        if len(members) < 2:
+            continue
+
+        for model_a, model_b in combinations(members, 2):
+            for eval_repr in ["embedding_matrix", "pre_lmhead_contextual"]:
+                pa = rep_dir / f"{model_a}__{eval_repr}.npy"
+                pb = rep_dir / f"{model_b}__{eval_repr}.npy"
+                if not pa.exists() or not pb.exists():
+                    continue
+                mat_a = np.load(pa)
+                mat_b = np.load(pb)
+                metrics = compute_metrics(
+                    mat_a=mat_a,
+                    mat_b=mat_b,
+                    neutral_idx=neutral_idx,
+                    cultural_idx=cultural_idx,
+                    axis_idx=axis_idx,
+                )
+                rows.append(
+                    {
+                        "language": group_label,
+                        "model_a": model_a,
+                        "model_b": model_b,
+                        "eval_repr": eval_repr,
+                        **metrics,
+                    }
+                )
+
+    # Fallback for older caches: single EN checkpoint mismatch pair if present.
+    if not rows:
+        model_a = "en_50m"
+        model_b = "en_100m"
         for eval_repr in ["embedding_matrix", "pre_lmhead_contextual"]:
-            pa = rep_dir / f"{model_a}__{eval_repr}.npy"
-            pb = rep_dir / f"{model_b}__{eval_repr}.npy"
+            pa = rep_dir / f"en_50m__{eval_repr}.npy"
+            pb = rep_dir / f"en_100m__{eval_repr}.npy"
             if not pa.exists() or not pb.exists():
                 continue
             mat_a = np.load(pa)
@@ -90,7 +143,7 @@ def main() -> None:
             )
             rows.append(
                 {
-                    "language": lang,
+                    "language": "EN-CHECKPOINT-MISMATCH",
                     "model_a": model_a,
                     "model_b": model_b,
                     "eval_repr": eval_repr,
@@ -98,7 +151,9 @@ def main() -> None:
                 }
             )
 
-    out = pd.DataFrame(rows).sort_values(["language", "eval_repr"])
+    out = pd.DataFrame(rows)
+    if not out.empty:
+        out = out.sort_values(["language", "model_a", "model_b", "eval_repr"])
     args.out_csv.parent.mkdir(parents=True, exist_ok=True)
     out.to_csv(args.out_csv, index=False)
     print(f"Wrote: {args.out_csv}")
