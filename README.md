@@ -75,13 +75,24 @@ tlmgr install latexmk collection-latexrecommended collection-fontsrecommended \
   collection-latexextra natbib url hyperref booktabs multirow siunitx xcolor
 ```
 
-Paper source tracked in `latex/` for Overleaf sync:
+Paper source in `latex/`:
 - `latex/main.tex`
-- `latex/references.bib`
-- `latex/tables/*.tex`
-- `latex/figures/*` (generated/copied figure assets)
+- `latex/anthology.bib`
+- `latex/custom.bib`
 - `latex/scripts/generate_artifacts.py`
 - `latex/scripts/sync_report.sh`
+
+Generated artifacts (currently excluded from git):
+- `latex/tables/*.tex`
+- `latex/figures/*`
+
+To regenerate them locally from analysis outputs:
+```bash
+python latex/scripts/generate_artifacts.py \
+  --output-root outputs/revision \
+  --multilingual-output-root outputs/multilingual_expansion \
+  --latex-root latex
+```
 
 ## Hugging Face Datasets Used
 

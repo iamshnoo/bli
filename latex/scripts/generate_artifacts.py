@@ -7,6 +7,7 @@ import shutil
 from pathlib import Path
 
 import matplotlib.pyplot as plt
+import matplotlib.patheffects as pe
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -71,6 +72,28 @@ LANG_COLORS: dict[str, str] = {
     "DEU": "#6D4C41",  # brown
 }
 
+LANG_HATCHES: dict[str, str] = {
+    "ZH": "///",
+    "FR": "\\\\\\",
+    "FAS": "xx",
+    "NLD": "..",
+    "UKR": "++",
+    "BUL": "oo",
+    "IND": "**",
+    "DEU": "--",
+}
+
+
+def blend_hex(hex_color: str, target_rgb: tuple[float, float, float], frac: float) -> tuple[float, float, float]:
+    c = np.array(colors.to_rgb(hex_color), dtype=float)
+    t = np.array(target_rgb, dtype=float)
+    return tuple(((1.0 - frac) * c + frac * t).tolist())
+
+
+def pastel_lang_color(lang_code: str, lighten: float = 0.35) -> tuple[float, float, float]:
+    base = LANG_COLORS.get(str(lang_code).upper(), "#4C78A8")
+    return blend_hex(base, (1.0, 1.0, 1.0), lighten)
+
 # Domain colors for the cultural category strip.
 DOMAIN_COLORS: dict[str, str] = {
     "values_norms":        "#4e79a7",
@@ -86,20 +109,26 @@ DOMAIN_COLORS: dict[str, str] = {
 }
 
 FIGURE_NAME_MAP = {
-    "figure1_mainidea.before_examples.png": "fig1-study-design.pdf",
-    "exp1_controls.png": "fig2-exp1-divergence.pdf",
-    "exp2_overlap.png": "fig3-exp2-overlap.pdf",
-    "combined_multilingual_fig5_fig11.png": "fig4-multilingual-validation.pdf",
-    "exp4_signed_axes.png": "fig5-signed-axis-shifts.pdf",
-    "exp4_ratio.png": "fig6-contextual-vs-embedding-ratio.pdf",
-    "exp4_layerwise.png": "fig7-layerwise-axis-divergence.pdf",
-    "exp5_alignment_methods.png": "fig8-alignment-method-comparison.pdf",
-    "appendix_perhead_heatmap.png": "fig9-appendix-perhead-heatmap.pdf",
-    "category_heatmap.png": "fig10-appendix-category-heatmap.pdf",
-    "appendix_multilingual_overview.png": "fig11-appendix-multilingual-overview.pdf",
-    "appendix_multilingual_regression_scatter.png": "fig12-typology-regression-scatter.pdf",
-    "appendix_l2_signed_hotspots_panel1.png": "fig13-appendix-l2-signed-hotspots-panel1.pdf",
-    "appendix_l2_signed_hotspots_panel2.png": "fig14-appendix-l2-signed-hotspots-panel2.pdf",
+    "exp1_controls.pdf": "fig2-exp1-divergence.pdf",
+    "exp1_controls_100m.pdf": "fig15-appendix-exp1-divergence-100m.pdf",
+    "exp2_overlap.pdf": "fig3-exp2-overlap.pdf",
+    "exp2_overlap_100m.pdf": "fig16-appendix-exp2-overlap-100m.pdf",
+    "combined_multilingual_fig5_fig11.pdf": "fig4-multilingual-validation.pdf",
+    "combined_multilingual_fig5_fig11_100m.pdf": "fig17-appendix-multilingual-validation-100m.pdf",
+    "exp4_signed_axes.pdf": "fig5-signed-axis-shifts.pdf",
+    "exp4_signed_axes_100m.pdf": "fig21-appendix-signed-axis-shifts-100m.pdf",
+    "exp4_ratio.pdf": "fig6-contextual-vs-embedding-ratio.pdf",
+    "exp4_ratio_100m.pdf": "fig18-appendix-contextual-vs-embedding-100m.pdf",
+    "exp4_layerwise.pdf": "fig7-layerwise-axis-divergence.pdf",
+    "exp4_layerwise_100m.pdf": "fig19-appendix-layerwise-axis-divergence-100m.pdf",
+    "exp5_alignment_methods.pdf": "fig8-alignment-method-comparison.pdf",
+    "exp5_alignment_methods_100m.pdf": "fig20-appendix-alignment-method-comparison-100m.pdf",
+    "appendix_perhead_heatmap.pdf": "fig9-appendix-perhead-heatmap.pdf",
+    "category_heatmap.pdf": "fig10-appendix-category-heatmap.pdf",
+    "appendix_multilingual_overview.pdf": "fig11-appendix-multilingual-overview.pdf",
+    "appendix_multilingual_regression_scatter.pdf": "fig12-typology-regression-scatter.pdf",
+    "appendix_l2_signed_hotspots_panel1.pdf": "fig13-appendix-l2-signed-hotspots-panel1.pdf",
+    "appendix_l2_signed_hotspots_panel2.pdf": "fig14-appendix-l2-signed-hotspots-panel2.pdf",
 }
 
 TABLE_NAME_MAP = {
@@ -132,9 +161,8 @@ TABLE_NAME_MAP = {
     "progress_sensitivity.tex": "tab27-progress-sensitivity.tex",
 }
 
-# Keep the manually designed study graphic source; all other legacy-named assets are
-# intermediate outputs and are pruned after publishing numbered assets.
-LEGACY_FIGURE_SOURCES_TO_KEEP = {"figure1_mainidea.before_examples.png"}
+# No legacy figure sources are retained in publishing.
+LEGACY_FIGURE_SOURCES_TO_KEEP: set[str] = set()
 
 # Legacy artifacts produced by older paths that are not part of numbered publishing.
 LEGACY_EXTRA_FIGURES = {
@@ -366,95 +394,145 @@ def build_exp1_tables_fig(
     write_table(lines, latex_root / "tables" / "exp1_results.tex")
 
     # Simplified main figure: contextual-only EN-50M/C3 D_Axis by language.
-    ctx50_rows = []
-    for fam in families:
-        sub = en[
-            (en["repr_type"] == "pre_lmhead_contextual")
-            & (en["model_a"] == "en_50m")
-            & (en["model_b"] == f"en_{fam}_a")
-        ]
-        if sub.empty:
-            continue
-        r = sub.iloc[0]
-        ctx50_rows.append(
-            {
-                "lang": fam.upper(),
-                "daxis": float(r["axis_abs_projection_diff_mean"]),
-            }
-        )
-    pdf = pd.DataFrame(ctx50_rows)
-    if pdf.empty:
-        return
-    ref = seed_null_metric_stats(
-        same_lang_df,
-        "EN-50M",
-        eval_repr="pre_lmhead_contextual",
-        metric_col="axis_abs_projection_diff_mean",
-    )
-    if ref is not None:
-        pdf = pd.concat(
-            [
-                pd.DataFrame(
-                    [
-                        {
-                            "lang": "EN-NULL",
-                            "daxis": 0.0,
-                            "ref_low": ref["low"] - ref["mean"],
-                            "ref_high": ref["high"] - ref["mean"],
-                            "is_ref": True,
-                        }
-                    ]
-                ),
-                pdf.assign(ref_low=np.nan, ref_high=np.nan, is_ref=False),
-            ],
-            ignore_index=True,
-        )
-    else:
-        pdf = pdf.assign(ref_low=np.nan, ref_high=np.nan, is_ref=False)
-    lang_order = [x.upper() for x in CORE_LANGS]
-    pdf["lang_order"] = pdf["lang"].map(lambda x: lang_order.index(x) if x in lang_order else 999)
-    pdf.loc[pdf["lang"] == "EN-NULL", "lang_order"] = -1
-    pdf = pdf.sort_values("lang_order").reset_index(drop=True)
+    ci_lookup: dict[str, tuple[float, float]] = {}
+    if ci is not None and not ci.empty:
+        csub_axis = ci[
+            (ci["repr_type"] == "pre_lmhead_contextual")
+            & (ci["model_a"] == "en_50m")
+            & (ci["metric"] == "axis_abs_projection_diff_mean")
+        ].copy()
+        for _, rr in csub_axis.iterrows():
+            parsed = parse_en_target(str(rr["model_b"]))
+            if parsed is None or parsed[1] != "a":
+                continue
+            lang = parsed[0].upper()
+            ci_lookup[lang] = (float(rr["ci_low"]), float(rr["ci_high"]))
 
-    fig, ax = plt.subplots(figsize=(7.2, 3.9))
-    x = np.arange(len(pdf))
-    colors = ["#b0b0b0" if bool(r["is_ref"]) else "#1f77b4" for _, r in pdf.iterrows()]
-    bars = ax.bar(
-        x,
-        pdf["daxis"].to_numpy(),
-        color=colors,
-        edgecolor="black",
-        linewidth=0.7,
-        alpha=0.95,
-    )
-    for b, (_, r) in zip(bars, pdf.iterrows()):
-        b.set_hatch(".." if bool(r["is_ref"]) else "//")
-    # Draw EN-null seed range as uncertainty whisker on the gray reference bar.
-    ref_row = pdf[pdf["is_ref"]].head(1)
-    if not ref_row.empty:
-        rr = ref_row.iloc[0]
-        rx = int(ref_row.index[0])
-        ax.errorbar(
-            [rx],
-            [rr["daxis"]],
-            yerr=[[rr["daxis"] - rr["ref_low"]], [rr["ref_high"] - rr["daxis"]]],
-            fmt="none",
-            ecolor="#4d4d4d",
-            elinewidth=1.2,
-            capsize=4,
-            capthick=1.2,
-            zorder=4,
+    def _plot_ctx_slice(model_a: str, seed_lbl: str, out_name: str) -> None:
+        rows_local = []
+        ci_slice = {}
+        if ci is not None and not ci.empty:
+            csub_axis_local = ci[
+                (ci["repr_type"] == "pre_lmhead_contextual")
+                & (ci["model_a"] == model_a)
+                & (ci["metric"] == "axis_abs_projection_diff_mean")
+            ].copy()
+            for _, rr in csub_axis_local.iterrows():
+                parsed = parse_en_target(str(rr["model_b"]))
+                if parsed is None or parsed[1] != "a":
+                    continue
+                ci_slice[parsed[0].upper()] = (float(rr["ci_low"]), float(rr["ci_high"]))
+        for fam in families:
+            sub = en[
+                (en["repr_type"] == "pre_lmhead_contextual")
+                & (en["model_a"] == model_a)
+                & (en["model_b"] == f"en_{fam}_a")
+            ]
+            if sub.empty:
+                continue
+            r = sub.iloc[0]
+            rows_local.append(
+                {
+                    "lang": fam.upper(),
+                    "daxis": float(r["axis_abs_projection_diff_mean"]),
+                    "low": ci_slice.get(fam.upper(), (np.nan, np.nan))[0],
+                    "high": ci_slice.get(fam.upper(), (np.nan, np.nan))[1],
+                }
+            )
+        pdf = pd.DataFrame(rows_local)
+        if pdf.empty:
+            return
+        ref = seed_null_metric_stats(
+            same_lang_df,
+            seed_lbl,
+            eval_repr="pre_lmhead_contextual",
+            metric_col="axis_abs_projection_diff_mean",
         )
-    ax.set_xticks(x)
-    ax.set_xticklabels(pdf["lang"].tolist(), fontsize=9)
-    ax.set_xlabel("Language")
-    ax.set_ylabel(r"Centered contextual $D_{Axis}$ (value $-$ EN-null mean)")
-    ax.grid(axis="y", linestyle="--", linewidth=0.5, alpha=0.35)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    fig.tight_layout()
-    fig.savefig(latex_root / "figures" / "exp1_controls.png", dpi=450, bbox_inches="tight")
-    plt.close(fig)
+        if ref is not None:
+            pdf = pd.concat(
+                [
+                    pd.DataFrame(
+                        [
+                            {
+                                "lang": "EN-NULL",
+                                "daxis": 0.0,
+                                "low": ref["low"] - ref["mean"],
+                                "high": ref["high"] - ref["mean"],
+                                "is_ref": True,
+                            }
+                        ]
+                    ),
+                    pdf.assign(is_ref=False),
+                ],
+                ignore_index=True,
+            )
+        else:
+            pdf = pdf.assign(is_ref=False)
+        lang_order = [x.upper() for x in CORE_LANGS]
+        pdf["lang_order"] = pdf["lang"].map(lambda x: lang_order.index(x) if x in lang_order else 999)
+        pdf.loc[pdf["lang"] == "EN-NULL", "lang_order"] = -1
+        pdf = pdf.sort_values("lang_order").reset_index(drop=True)
+
+        fig, ax = plt.subplots(figsize=(7.25, 3.95))
+        x = np.arange(len(pdf))
+        bars = ax.bar(
+            x,
+            pdf["daxis"].to_numpy(),
+            edgecolor="#222222",
+            linewidth=0.95,
+            alpha=0.98,
+            zorder=2,
+        )
+        for b, (_, r) in zip(bars, pdf.iterrows()):
+            lg = str(r["lang"]).upper()
+            if bool(r["is_ref"]):
+                b.set_facecolor("#c7c7c7")
+                b.set_hatch("////")
+            else:
+                b.set_facecolor(pastel_lang_color(lg))
+                b.set_hatch(LANG_HATCHES.get(lg, "//"))
+            b.set_path_effects(
+                [
+                    pe.SimplePatchShadow(offset=(1.0, -1.0), shadow_rgbFace=(0, 0, 0), alpha=0.10),
+                    pe.Normal(),
+                ]
+            )
+
+        for i, rr in pdf.iterrows():
+            if not np.isfinite(float(rr["low"])) or not np.isfinite(float(rr["high"])):
+                continue
+            lo = float(rr["low"])
+            hi = float(rr["high"])
+            center = float(rr["daxis"])
+            lower = max(0.0, center - lo)
+            upper = max(0.0, hi - center)
+            ecolor = "#4d4d4d" if bool(rr["is_ref"]) else "#2f3b4a"
+            ax.errorbar(
+                [i],
+                [center],
+                yerr=[[lower], [upper]],
+                fmt="none",
+                ecolor=ecolor,
+                elinewidth=1.0,
+                capsize=3.5,
+                capthick=1.0,
+                zorder=4,
+            )
+        ax.set_xticks(x)
+        ax.set_xticklabels(pdf["lang"].tolist(), fontsize=8.8, fontweight="bold")
+        ax.set_xlabel("Language")
+        ax.set_ylabel(r"Centered contextual $\Delta D_{Axis}$")
+        ax.grid(axis="y", linestyle="--", linewidth=0.52, alpha=0.32)
+        ax.set_axisbelow(True)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        fig.tight_layout(pad=0.35)
+        fig.subplots_adjust(left=0.14)
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+        plt.close(fig)
+
+    _plot_ctx_slice("en_50m", "EN-50M", "exp1_controls.pdf")
+    _plot_ctx_slice("en_100m", "EN-100M", "exp1_controls_100m.pdf")
 
     if ci is not None and not ci.empty:
         # compact CI table for exp1 pairs only
@@ -685,120 +763,98 @@ def build_exp2_table_fig(
 
     # Simplified main figure: contextual-only EN-50M, shared (C3) vs disjoint (C4),
     # centered against EN-null so language offsets are immediately visible.
-    overlap_rows = []
-    for fam_key, fam_name in families:
-        a = en[
-            (en["repr_type"] == "pre_lmhead_contextual")
-            & (en["model_a"] == "en_50m")
-            & (en["model_b"] == f"{fam_key}_a")
+    def _plot_overlap_slice(model_a: str, seed_lbl: str, out_name: str) -> None:
+        overlap_rows = []
+        for fam_key, fam_name in families:
+            a = en[
+                (en["repr_type"] == "pre_lmhead_contextual")
+                & (en["model_a"] == model_a)
+                & (en["model_b"] == f"{fam_key}_a")
+            ]
+            b = en[
+                (en["repr_type"] == "pre_lmhead_contextual")
+                & (en["model_a"] == model_a)
+                & (en["model_b"] == f"{fam_key}_b")
+            ]
+            if a.empty or b.empty:
+                continue
+            ra, rb = a.iloc[0], b.iloc[0]
+            overlap_rows.append(
+                {
+                    "lang": fam_name.replace("EN+", ""),
+                    "daxis_c3": float(ra["axis_abs_projection_diff_mean"]),
+                    "daxis_c4": float(rb["axis_abs_projection_diff_mean"]),
+                }
+            )
+        odf = pd.DataFrame(overlap_rows)
+        if odf.empty:
+            return
+        lang_order = [f"EN+{x.upper()}".replace("EN+", "") for x in CORE_LANGS]
+        odf["lang_order"] = odf["lang"].map(lambda x: lang_order.index(x) if x in lang_order else 999)
+        odf = odf.sort_values("lang_order").reset_index(drop=True)
+
+        ref = seed_null_metric_stats(
+            same_lang_df,
+            seed_lbl,
+            eval_repr="pre_lmhead_contextual",
+            metric_col="axis_abs_projection_diff_mean",
+        )
+        ref_low, ref_high = (np.nan, np.nan)
+        if ref is not None:
+            ref_low = ref["low"] - ref["mean"]
+            ref_high = ref["high"] - ref["mean"]
+
+        fig, ax = plt.subplots(figsize=(6.95, 4.25))
+        y = np.arange(len(odf))
+        for i, rr in odf.iterrows():
+            ax.plot(
+                [rr["daxis_c3"], rr["daxis_c4"]],
+                [i, i],
+                color="#a8b0bc",
+                linewidth=1.45,
+                alpha=0.95,
+                zorder=1,
+            )
+            lang = str(rr["lang"]).upper()
+            c = pastel_lang_color(lang)
+            ec = blend_hex(LANG_COLORS.get(lang, "#4C78A8"), (0, 0, 0), 0.30)
+            ax.scatter([rr["daxis_c3"]], [i], s=44, marker="o", color=c, edgecolors=ec, linewidths=0.8, zorder=3)
+            ax.scatter([rr["daxis_c4"]], [i], s=46, marker="s", facecolors="white", edgecolors=ec, linewidths=1.0, zorder=4)
+        if ref is not None:
+            ax.axvspan(ref_low, ref_high, color="#bdbdbd", alpha=0.24, zorder=0)
+            ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.1, zorder=0)
+        ax.set_yticks(y)
+        ax.set_yticklabels(odf["lang"].tolist(), fontsize=9, fontweight="bold")
+        ax.set_ylabel("Language")
+        ax.invert_yaxis()
+        ax.set_xlabel(r"Centered contextual $\Delta D_{Axis}$ (value $-$ EN-null mean)")
+        ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+
+        handles = [
+            plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="#c7d8ea", markeredgecolor="#394a5a", label="C3 (Shared)", markersize=6),
+            plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="white", markeredgecolor="#394a5a", label="C4 (Disjoint)", markersize=6),
         ]
-        b = en[
-            (en["repr_type"] == "pre_lmhead_contextual")
-            & (en["model_a"] == "en_50m")
-            & (en["model_b"] == f"{fam_key}_b")
-        ]
-        if a.empty or b.empty:
-            continue
-        ra, rb = a.iloc[0], b.iloc[0]
-        overlap_rows.append(
-            {
-                "lang": fam_name.replace("EN+", ""),
-                "dnn_c3": float(ra["jaccard_at_k_mean"]),
-                "dnn_c4": float(rb["jaccard_at_k_mean"]),
-                "dstruct_c3": float(ra["frobenius_cultural_similarity"]),
-                "dstruct_c4": float(rb["frobenius_cultural_similarity"]),
-                "daxis_c3": float(ra["axis_abs_projection_diff_mean"]),
-                "daxis_c4": float(rb["axis_abs_projection_diff_mean"]),
-            }
+        if ref is not None:
+            handles.append(
+                plt.Line2D([0], [0], color="#6b6b6b", linestyle="--", lw=1.2, label="EN-null mean/range")
+            )
+        fig.legend(
+            handles=handles,
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.02),
+            ncol=3 if ref is not None else 2,
+            frameon=True,
+            edgecolor="gray",
+            fontsize=8.8,
         )
-    odf = pd.DataFrame(overlap_rows)
-    if odf.empty:
-        return
-    lang_order = [f"EN+{x.upper()}".replace("EN+", "") for x in CORE_LANGS]
-    odf["lang_order"] = odf["lang"].map(lambda x: lang_order.index(x) if x in lang_order else 999)
-    odf = odf.sort_values("lang_order").reset_index(drop=True)
+        fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.93))
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+        plt.close(fig)
 
-    ref = seed_null_metric_stats(
-        same_lang_df,
-        "EN-50M",
-        eval_repr="pre_lmhead_contextual",
-        metric_col="axis_abs_projection_diff_mean",
-    )
-    odf["daxis_c3_plot"] = odf["daxis_c3"]
-    odf["daxis_c4_plot"] = odf["daxis_c4"]
-    if ref is not None:
-        ref_low = ref["low"] - ref["mean"]
-        ref_high = ref["high"] - ref["mean"]
-    else:
-        ref_low = np.nan
-        ref_high = np.nan
-
-    fig, ax = plt.subplots(figsize=(6.9, 4.2))
-    y = np.arange(len(odf))
-    for i, rr in odf.iterrows():
-        ax.plot(
-            [rr["daxis_c3_plot"], rr["daxis_c4_plot"]],
-            [i, i],
-            color="#9aa0a6",
-            linewidth=1.4,
-            alpha=0.95,
-            zorder=1,
-        )
-    ax.scatter(
-        odf["daxis_c3_plot"].to_numpy(),
-        y,
-        s=40,
-        marker="o",
-        color="#1f77b4",
-        edgecolors="black",
-        linewidths=0.5,
-        label="C3 (Shared)",
-        zorder=3,
-    )
-    ax.scatter(
-        odf["daxis_c4_plot"].to_numpy(),
-        y,
-        s=42,
-        marker="s",
-        color="#ff7f0e",
-        edgecolors="black",
-        linewidths=0.5,
-        label="C4 (Disjoint)",
-        zorder=4,
-    )
-    if ref is not None:
-        ax.axvspan(ref_low, ref_high, color="#bdbdbd", alpha=0.25, zorder=0)
-        ax.axvline(0.0, color="#6b6b6b", linestyle="--", linewidth=1.1, zorder=0)
-    ax.set_yticks(y)
-    ax.set_yticklabels(odf["lang"].tolist(), fontsize=9)
-    ax.set_ylabel("Language")
-    ax.invert_yaxis()
-    ax.set_xlabel(r"$\Delta D_{Axis}$ relative to EN-null mean (EN-50M, contextual)")
-    ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-
-    handles = [
-        plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="#1f77b4", markeredgecolor="black", label="C3 (Shared)", markersize=6),
-        plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#ff7f0e", markeredgecolor="black", label="C4 (Disjoint)", markersize=6),
-    ]
-    if ref is not None:
-        handles.append(
-            plt.Line2D([0], [0], color="#6b6b6b", linestyle="--", lw=1.2, label="EN-null mean/range")
-        )
-    fig.legend(
-        handles=handles,
-        loc="upper center",
-        bbox_to_anchor=(0.5, 1.02),
-        ncol=3 if ref is not None else 2,
-        frameon=True,
-        edgecolor="gray",
-        fontsize=8.8,
-    )
-    fig.suptitle("Contextual overlap ablation (EN-50M; centered on EN-null)", y=0.99, fontsize=11)
-    fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.91))
-    fig.savefig(latex_root / "figures" / "exp2_overlap.png", dpi=450, bbox_inches="tight")
-    plt.close(fig)
+    _plot_overlap_slice("en_50m", "EN-50M", "exp2_overlap.pdf")
+    _plot_overlap_slice("en_100m", "EN-100M", "exp2_overlap_100m.pdf")
 
     if stats_df is not None and not stats_df.empty:
         base_label_map = {"en_50m": "EN-50M", "en_100m": "EN-100M"}
@@ -997,80 +1053,91 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
     if rdf.empty:
         return
 
-    # Simplified main figure: EN-50M slice only, contextual vs embedding by language,
-    # with explicit per-language ratio labels for interpretability.
-    plot_df = rdf[rdf["pair"].str.startswith("EN-50M")].copy()
-    if not plot_df.empty:
+    def _plot_repr_gap_slice(base_lbl: str, out_name: str) -> None:
+        plot_df = rdf[rdf["pair"].str.startswith(base_lbl)].copy()
+        if plot_df.empty:
+            return
         plot_df["lang"] = plot_df["pair"].map(lambda x: x.split(" vs ")[1].replace("EN+", ""))
         lang_rank = {lang.upper(): i for i, lang in enumerate([l.upper() for l in CORE_LANGS])}
         plot_df["lang_rank"] = plot_df["lang"].map(lambda x: lang_rank.get(str(x).upper(), 999))
         plot_df = plot_df.sort_values("lang_rank").reset_index(drop=True)
+        plot_df["delta_ctx_minus_emb"] = plot_df["contextual_axis"] - plot_df["embedding_axis"]
+        plot_df["emb_offset"] = -0.5 * plot_df["delta_ctx_minus_emb"]
+        plot_df["ctx_offset"] = +0.5 * plot_df["delta_ctx_minus_emb"]
         y = np.arange(len(plot_df))
 
-        fig, ax = plt.subplots(figsize=(6.8, 4.8))
+        fig, ax = plt.subplots(figsize=(6.85, 4.85))
+        ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.15, zorder=0)
         for i, rr in plot_df.iterrows():
+            lang = str(rr["lang"]).upper()
+            c = pastel_lang_color(lang)
+            ec = blend_hex(LANG_COLORS.get(lang, "#4C78A8"), (0, 0, 0), 0.35)
             ax.plot(
-                [rr["embedding_axis"], rr["contextual_axis"]],
+                [rr["emb_offset"], rr["ctx_offset"]],
                 [i, i],
-                color="#9aa0a6",
-                linewidth=1.5,
-                alpha=0.9,
+                color="#a7b2be",
+                linewidth=1.4,
+                alpha=0.95,
                 zorder=1,
             )
-        ax.scatter(
-            plot_df["embedding_axis"].to_numpy(),
-            y,
-            s=44,
-            marker="o",
-            facecolors="white",
-            edgecolors="#222222",
-            linewidths=0.8,
-            label="Embedding",
-            zorder=3,
-        )
-        ax.scatter(
-            plot_df["contextual_axis"].to_numpy(),
-            y,
-            s=48,
-            marker="s",
-            color="#111111",
-            edgecolors="white",
-            linewidths=0.6,
-            label="Contextual",
-            zorder=4,
-        )
-        xmax = float(plot_df["contextual_axis"].max())
-        xoff = 0.04 * max(1.0, xmax)
-        for i, rr in plot_df.iterrows():
+            ax.scatter(
+                [rr["emb_offset"]],
+                [i],
+                s=44,
+                marker="o",
+                facecolors="white",
+                edgecolors=ec,
+                linewidths=1.0,
+                zorder=3,
+            )
+            ax.scatter(
+                [rr["ctx_offset"]],
+                [i],
+                s=50,
+                marker="s",
+                facecolors=c,
+                edgecolors=ec,
+                linewidths=0.9,
+                zorder=4,
+            )
             ax.text(
-                rr["contextual_axis"] + xoff,
+                rr["ctx_offset"] + 0.02 * max(0.3, float(plot_df["ctx_offset"].abs().max())),
                 i,
-                f"x{rr['ratio']:.1f}",
+                f"{rr['delta_ctx_minus_emb']:.2f}",
                 va="center",
                 ha="left",
-                fontsize=8.2,
-                color="#333333",
+                fontsize=8.0,
+                color="#3a3a3a",
             )
+        lim = float(np.max(np.abs(np.r_[plot_df["emb_offset"].to_numpy(), plot_df["ctx_offset"].to_numpy()])))
+        lim = max(lim * 1.24, 0.35)
+        ax.set_xlim(-lim, lim * 1.20)
         ax.set_yticks(y)
-        ax.set_yticklabels(plot_df["lang"].str.upper().tolist(), fontsize=9)
+        ax.set_yticklabels(plot_df["lang"].str.upper().tolist(), fontsize=9, fontweight="bold")
         ax.invert_yaxis()
-        ax.set_xlabel(r"Centered $D_{Axis}$ (value $-$ EN-null mean; EN-50M vs EN+L2, C3)")
+        ax.set_xlabel(f"Within-language midpoint at 0 ({base_lbl}, C3); right label = contextual minus embedding")
         ax.set_ylabel("Language")
-        ax.set_xlim(0.0, xmax + 6 * xoff)
-        ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
+        ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.33)
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
         ax.legend(
+            handles=[
+                plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Embedding offset", markersize=6),
+                plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Contextual offset", markersize=6),
+            ],
             loc="upper center",
-            bbox_to_anchor=(0.5, 1.16),
+            bbox_to_anchor=(0.5, 1.15),
             ncol=2,
             frameon=True,
             edgecolor="gray",
-            fontsize=8.5,
+            fontsize=8.3,
         )
         fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.92))
-        fig.savefig(latex_root / "figures" / "exp4_ratio.png", dpi=450, bbox_inches="tight")
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
+
+    _plot_repr_gap_slice("EN-50M", "exp4_ratio.pdf")
+    _plot_repr_gap_slice("EN-100M", "exp4_ratio_100m.pdf")
 
     lines = [
         r"\begin{tabular}{@{}lrrr@{}}",
@@ -1142,9 +1209,15 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
         "Affine\n(Embedding anchors)",
     ]
 
-    # Main figure: contextual eval only (EN-50M), orthogonal vs affine objective.
-    sub = d[(d["repr"] == "Contextual") & (d["model_a"] == "en_50m")].copy()
-    if not sub.empty:
+    def _plot_alignment_slice(model_a: str, out_name: str) -> None:
+        sub = d[(d["repr"] == "Contextual") & (d["model_a"] == model_a)].copy()
+        if sub.empty:
+            fig, ax = plt.subplots(figsize=(6.8, 4.4))
+            ax.text(0.5, 0.5, "Alignment comparison data unavailable", ha="center", va="center")
+            ax.axis("off")
+            fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+            plt.close(fig)
+            return
         sub["lang"] = sub["model_b"].astype(str).map(lambda x: parse_en_target(x)[0].upper() if parse_en_target(x) else x)
         sub = sub[
             (
@@ -1156,85 +1229,91 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
                 & (sub["alignment_source"].astype(str) == "embedding_matrix")
             )
         ].copy()
-        if not sub.empty:
-            sub["method_short"] = sub["alignment_method"].astype(str).str.lower().map(
-                {"orthogonal": "Orthogonal", "affine": "Affine"}
-            )
-            piv = sub.pivot_table(
-                index="lang",
-                columns="method_short",
-                values="axis_abs_projection_diff_mean",
-                aggfunc="mean",
-            ).reset_index()
-            if {"Orthogonal", "Affine"}.issubset(set(piv.columns)):
-                lang_rank = {lang.upper(): i for i, lang in enumerate([l.upper() for l in CORE_LANGS])}
-                piv["lang_rank"] = piv["lang"].map(lambda x: lang_rank.get(str(x).upper(), 999))
-                piv = piv.sort_values("lang_rank").reset_index(drop=True)
-                y = np.arange(len(piv))
-
-                fig, ax = plt.subplots(figsize=(6.8, 4.4))
-                for i, rr in piv.iterrows():
-                    ax.plot(
-                        [rr["Orthogonal"], rr["Affine"]],
-                        [i, i],
-                        color="#9aa0a6",
-                        linewidth=1.4,
-                        alpha=0.9,
-                        zorder=1,
-                    )
-                ax.scatter(
-                    piv["Orthogonal"].to_numpy(),
-                    y,
-                    s=42,
-                    marker="o",
-                    facecolors="white",
-                    edgecolors="#222222",
-                    linewidths=0.9,
-                    label="Orthogonal (contextual eval)",
-                    zorder=3,
-                )
-                ax.scatter(
-                    piv["Affine"].to_numpy(),
-                    y,
-                    s=46,
-                    marker="s",
-                    color="#111111",
-                    edgecolors="white",
-                    linewidths=0.5,
-                    label="Affine (contextual eval)",
-                    zorder=4,
-                )
-                ax.set_yticks(y)
-                ax.set_yticklabels(piv["lang"].astype(str).str.upper().tolist(), fontsize=9)
-                ax.invert_yaxis()
-                ax.set_xlabel(r"Centered contextual $D_{Axis}$ (value $-$ EN-null mean; EN-50M, C3)")
-                ax.set_ylabel("Language")
-                ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
-                ax.spines["top"].set_visible(False)
-                ax.spines["right"].set_visible(False)
-                ax.legend(
-                    loc="upper center",
-                    bbox_to_anchor=(0.5, 1.15),
-                    ncol=1,
-                    frameon=True,
-                    edgecolor="gray",
-                    fontsize=8.5,
-                )
-                fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.92))
-            else:
-                fig, ax = plt.subplots(figsize=(6.8, 4.4))
-                ax.text(0.5, 0.5, "Orthogonal/Affine contextual rows unavailable", ha="center", va="center")
-                ax.axis("off")
-        else:
+        if sub.empty:
             fig, ax = plt.subplots(figsize=(6.8, 4.4))
             ax.text(0.5, 0.5, "Orthogonal/Affine contextual rows unavailable", ha="center", va="center")
             ax.axis("off")
-    else:
-        fig, ax = plt.subplots(figsize=(6.8, 4.4))
-        ax.text(0.5, 0.5, "Alignment comparison data unavailable", ha="center", va="center")
-        ax.axis("off")
-    fig.savefig(latex_root / "figures" / "exp5_alignment_methods.png", dpi=450, bbox_inches="tight")
-    plt.close(fig)
+            fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+            plt.close(fig)
+            return
+        sub["method_short"] = sub["alignment_method"].astype(str).str.lower().map(
+            {"orthogonal": "Orthogonal", "affine": "Affine"}
+        )
+        piv = sub.pivot_table(
+            index="lang",
+            columns="method_short",
+            values="axis_abs_projection_diff_mean",
+            aggfunc="mean",
+        ).reset_index()
+        if not {"Orthogonal", "Affine"}.issubset(set(piv.columns)):
+            fig, ax = plt.subplots(figsize=(6.8, 4.4))
+            ax.text(0.5, 0.5, "Orthogonal/Affine contextual rows unavailable", ha="center", va="center")
+            ax.axis("off")
+            fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+            plt.close(fig)
+            return
+        lang_rank = {lang.upper(): i for i, lang in enumerate([l.upper() for l in CORE_LANGS])}
+        piv["lang_rank"] = piv["lang"].map(lambda x: lang_rank.get(str(x).upper(), 999))
+        piv = piv.sort_values("lang_rank").reset_index(drop=True)
+        piv["delta_affine_minus_orth"] = piv["Affine"] - piv["Orthogonal"]
+        piv["orth_offset"] = -0.5 * piv["delta_affine_minus_orth"]
+        piv["aff_offset"] = +0.5 * piv["delta_affine_minus_orth"]
+        y = np.arange(len(piv))
+
+        fig, ax = plt.subplots(figsize=(6.85, 4.45))
+        ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.15, zorder=0)
+        for i, rr in piv.iterrows():
+            lang = str(rr["lang"]).upper()
+            c = pastel_lang_color(lang)
+            ec = blend_hex(LANG_COLORS.get(lang, "#4C78A8"), (0, 0, 0), 0.35)
+            ax.plot(
+                [rr["orth_offset"], rr["aff_offset"]],
+                [i, i],
+                color="#a7b2be",
+                linewidth=1.4,
+                alpha=0.95,
+                zorder=1,
+            )
+            ax.scatter([rr["orth_offset"]], [i], s=42, marker="o", facecolors="white", edgecolors=ec, linewidths=1.0, zorder=3)
+            ax.scatter([rr["aff_offset"]], [i], s=46, marker="s", facecolors=c, edgecolors=ec, linewidths=0.9, zorder=4)
+            ax.text(
+                rr["aff_offset"] + 0.02 * max(0.2, float(piv["aff_offset"].abs().max())),
+                i,
+                f"{rr['delta_affine_minus_orth']:.2f}",
+                va="center",
+                ha="left",
+                fontsize=8.0,
+                color="#3a3a3a",
+            )
+        lim = float(np.max(np.abs(np.r_[piv["orth_offset"].to_numpy(), piv["aff_offset"].to_numpy()])))
+        lim = max(lim * 1.24, 0.22)
+        ax.set_xlim(-lim, lim * 1.20)
+        ax.set_yticks(y)
+        ax.set_yticklabels(piv["lang"].astype(str).str.upper().tolist(), fontsize=9, fontweight="bold")
+        ax.invert_yaxis()
+        ax.set_xlabel(f"Within-language method midpoint at 0 ({model_a.replace('en_', 'EN-').upper()}, contextual, C3)")
+        ax.set_ylabel("Language")
+        ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.legend(
+            handles=[
+                plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Orthogonal offset", markersize=6),
+                plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Affine offset", markersize=6),
+            ],
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.15),
+            ncol=2,
+            frameon=True,
+            edgecolor="gray",
+            fontsize=8.3,
+        )
+        fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.92))
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+        plt.close(fig)
+
+    _plot_alignment_slice("en_50m", "exp5_alignment_methods.pdf")
+    _plot_alignment_slice("en_100m", "exp5_alignment_methods_100m.pdf")
 
     # Appendix table with compact numeric summary.
     metrics = [
@@ -1452,7 +1531,7 @@ def build_exp4_signed_axis_scatter(
                                 row_h = 0.34
                                 fig_h = max(5.2, n_rows * row_h + 1.8)
                                 fig, ax = plt.subplots(figsize=(7.1, fig_h))
-                                fig.subplots_adjust(left=0.44, right=0.96, bottom=0.14, top=0.97)
+                                fig.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.90)
 
                                 xpad = vmax * 0.14
                                 ax.axvspan(-eps_icon, eps_icon, color="#f2f2f2", alpha=0.8, zorder=0)
@@ -1493,9 +1572,9 @@ def build_exp4_signed_axis_scatter(
                                 ax.set_yticks(range(n_rows))
                                 ax.set_yticklabels(h.index, fontsize=6.8, fontfamily="monospace")
                                 ax.set_xlabel(
-                                    "Signed shift (EN-50M minus EN+L2): left = EN+L2 higher, right = EN-50M higher",
-                                    fontsize=8.3,
-                                    labelpad=5,
+                                    "Signed shift $\\Delta$ (EN-50M minus EN+L2)\nLeft: EN+L2 higher    Right: EN-50M higher",
+                                    fontsize=8.0,
+                                    labelpad=4,
                                 )
                                 ax.set_xticks([-vmax, -vmax / 2, 0.0, vmax / 2, vmax])
                                 ax.set_xticklabels(
@@ -1518,17 +1597,19 @@ def build_exp4_signed_axis_scatter(
                                 ]
                                 ax.legend(
                                     handles=leg_handles,
-                                    loc="lower center",
-                                    bbox_to_anchor=(0.5, -0.12),
-                                    ncol=len(langs_ordered),
-                                    fontsize=7.4,
-                                    frameon=False,
+                                    loc="upper center",
+                                    bbox_to_anchor=(0.5, 1.02),
+                                    ncol=4,
+                                    fontsize=7.1,
+                                    frameon=True,
+                                    edgecolor="#9a9a9a",
+                                    framealpha=0.95,
                                     handletextpad=0.3,
                                     columnspacing=0.65,
                                 )
 
                                 fig.savefig(
-                                    latex_root / "figures" / "exp4_signed_axes.png",
+                                    latex_root / "figures" / "exp4_signed_axes.pdf",
                                     dpi=450,
                                     bbox_inches="tight",
                                     pad_inches=0.05,
@@ -1549,6 +1630,144 @@ def build_exp4_signed_axis_scatter(
                                     latex_root / "tables" / "fig5_probe_axis_signed_full.csv",
                                     index=False,
                                 )
+
+                                # 100M companion for Figure 5: recompute signed-shift values
+                                # using EN-100M, then plot the same selected probe-axis rows.
+                                a100_path = repr_dir / "en_100m__pre_lmhead_contextual.npy"
+                                if a100_path.exists():
+                                    Xa100 = _row_norm(np.load(a100_path))
+                                    records100: list[dict[str, object]] = []
+                                    for lang in CORE_LANGS:
+                                        b_path = repr_dir / f"en_{lang}_a__pre_lmhead_contextual.npy"
+                                        if not b_path.exists():
+                                            continue
+                                        Xb = _row_norm(np.load(b_path))
+                                        M = Xa100[neutral_idx].T @ Xb[neutral_idx]
+                                        U, _, Vt = np.linalg.svd(M, full_matrices=False)
+                                        W = U @ Vt
+                                        Xa100_aligned = Xa100 @ W
+                                        for a_word, b_word, axis_cat in axis_meta:
+                                            i, j = w2i[a_word], w2i[b_word]
+                                            va = Xa100_aligned[j] - Xa100_aligned[i]
+                                            vb = Xb[j] - Xb[i]
+                                            na = np.linalg.norm(va)
+                                            nb = np.linalg.norm(vb)
+                                            if na < 1e-12 or nb < 1e-12:
+                                                continue
+                                            va = va / na
+                                            vb = vb / nb
+                                            pa = Xa100_aligned[cultural_idx] @ va
+                                            pb = Xb[cultural_idx] @ vb
+                                            signed = pa - pb
+                                            for pw, sv in zip(cultural_words, signed):
+                                                probe_cat = probe_to_cat.get(pw, "")
+                                                if axis_cat and probe_cat:
+                                                    allowed = compat.get(probe_cat, {probe_cat})
+                                                    if axis_cat not in allowed:
+                                                        continue
+                                                records100.append(
+                                                    {
+                                                        "lang": lang.upper(),
+                                                        "axis": f"{a_word}->{b_word}",
+                                                        "probe": pw,
+                                                        "signed": float(sv),
+                                                        "probe_axis": f"{pw} | {a_word}->{b_word}",
+                                                    }
+                                                )
+                                    if records100:
+                                        mat100 = (
+                                            pd.DataFrame(records100)
+                                            .pivot_table(index="probe_axis", columns="lang", values="signed", aggfunc="mean")
+                                        )
+                                        cols100 = [c.upper() for c in CORE_LANGS if c.upper() in mat100.columns]
+                                        mat100 = mat100[cols100]
+                                        keep100 = [k for k in orig_labels if k in mat100.index]
+                                        if keep100:
+                                            h100 = mat100.loc[keep100].copy()
+                                            h100.index = [_short_label(x) for x in keep100]
+                                            q100 = np.nanpercentile(np.abs(h100.to_numpy()), 95)
+                                            vmax100 = float(max(0.25, q100))
+                                            langs100 = list(h100.columns)
+                                            n_rows100 = len(h100)
+                                            fig_h100 = max(5.2, n_rows100 * 0.34 + 1.8)
+                                            fig100, ax100 = plt.subplots(figsize=(7.1, fig_h100))
+                                            fig100.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.90)
+                                            xpad100 = vmax100 * 0.14
+                                            ax100.axvspan(-eps_icon, eps_icon, color="#f2f2f2", alpha=0.8, zorder=0)
+                                            ax100.axvline(0.0, color="#444444", lw=1.0, ls="--", zorder=2, alpha=0.75)
+                                            for i_row in range(n_rows100):
+                                                row_vals = h100.iloc[i_row]
+                                                vals = row_vals.dropna().astype(float)
+                                                if vals.empty:
+                                                    continue
+                                                vmin_i = float(vals.min())
+                                                vmax_i = float(vals.max())
+                                                ax100.plot(
+                                                    [vmin_i, vmax_i],
+                                                    [i_row, i_row],
+                                                    color="#aeb9c9",
+                                                    lw=6.2,
+                                                    alpha=0.55,
+                                                    solid_capstyle="round",
+                                                    zorder=1,
+                                                )
+                                                for lg, val in zip(langs100, row_vals):
+                                                    if pd.isna(val):
+                                                        continue
+                                                    c = LANG_COLORS.get(lg, "#888888")
+                                                    ax100.scatter(
+                                                        [float(val)],
+                                                        [i_row],
+                                                        color=c,
+                                                        s=30,
+                                                        zorder=3,
+                                                        edgecolors="white",
+                                                        linewidths=0.45,
+                                                    )
+                                                ax100.axhline(i_row, color="#eceff3", lw=0.55, zorder=0)
+                                            ax100.set_xlim(-vmax100 - xpad100, vmax100 + xpad100 * 0.45)
+                                            ax100.set_ylim(-0.6, n_rows100 - 0.35)
+                                            ax100.invert_yaxis()
+                                            ax100.set_yticks(range(n_rows100))
+                                            ax100.set_yticklabels(h100.index, fontsize=6.8, fontfamily="monospace")
+                                            ax100.set_xlabel(
+                                                "Signed shift $\\Delta$ (EN-100M minus EN+L2)\nLeft: EN+L2 higher    Right: EN-100M higher",
+                                                fontsize=8.0,
+                                                labelpad=4,
+                                            )
+                                            ax100.set_xticks([-vmax100, -vmax100 / 2, 0.0, vmax100 / 2, vmax100])
+                                            ax100.set_xticklabels(
+                                                [f"{-vmax100:.2f}", f"{-vmax100/2:.2f}", "0", f"{vmax100/2:.2f}", f"{vmax100:.2f}"],
+                                                fontsize=7.6,
+                                            )
+                                            ax100.spines["top"].set_visible(False)
+                                            ax100.spines["right"].set_visible(False)
+                                            ax100.spines["left"].set_visible(False)
+                                            ax100.tick_params(axis="y", length=0, pad=3)
+                                            ax100.tick_params(axis="x", labelsize=7.6)
+                                            leg_handles100 = [
+                                                plt.scatter([], [], color=LANG_COLORS.get(lg, "#888"), s=30, label=lg, edgecolors="white", linewidths=0.4)
+                                                for lg in langs100
+                                            ]
+                                            ax100.legend(
+                                                handles=leg_handles100,
+                                                loc="upper center",
+                                                bbox_to_anchor=(0.5, 1.02),
+                                                ncol=4,
+                                                fontsize=7.1,
+                                                frameon=True,
+                                                edgecolor="#9a9a9a",
+                                                framealpha=0.95,
+                                                handletextpad=0.3,
+                                                columnspacing=0.65,
+                                            )
+                                            fig100.savefig(
+                                                latex_root / "figures" / "exp4_signed_axes_100m.pdf",
+                                                dpi=450,
+                                                bbox_inches="tight",
+                                                pad_inches=0.05,
+                                            )
+                                            plt.close(fig100)
                                 built_main = True
 
     if not built_main:
@@ -1574,7 +1793,7 @@ def build_exp4_signed_axis_scatter(
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
         fig.tight_layout()
-        fig.savefig(latex_root / "figures" / "exp4_signed_axes.png", dpi=450, bbox_inches="tight", pad_inches=0.05)
+        fig.savefig(latex_root / "figures" / "exp4_signed_axes.pdf", dpi=450, bbox_inches="tight", pad_inches=0.05)
         plt.close(fig)
 
     # Keep the previous quadrant summary table in appendix using ZH/FR illustration.
@@ -1956,8 +2175,8 @@ def build_appendix_l2_signed_hotspots(
         fig.savefig(latex_root / "figures" / out_png, dpi=450, bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
 
-    _draw_panel(["ZH", "FR", "FAS", "NLD"], "appendix_l2_signed_hotspots_panel1.png")
-    _draw_panel(["UKR", "BUL", "IND", "DEU"], "appendix_l2_signed_hotspots_panel2.png")
+    _draw_panel(["ZH", "FR", "FAS", "NLD"], "appendix_l2_signed_hotspots_panel1.pdf")
+    _draw_panel(["UKR", "BUL", "IND", "DEU"], "appendix_l2_signed_hotspots_panel2.pdf")
 
 
 def build_axis_inventory_table(probe_set: dict, latex_root: Path) -> None:
@@ -2118,7 +2337,7 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
     ax.set_xticklabels(ax.get_xticklabels(), rotation=30, ha="right")
     ax.collections[0].colorbar.ax.tick_params(labelsize=9)
     fig.tight_layout()
-    fig.savefig(latex_root / "figures" / "category_heatmap.png", dpi=450, bbox_inches="tight")
+    fig.savefig(latex_root / "figures" / "category_heatmap.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -2133,61 +2352,83 @@ def build_layerwise_artifacts(layerwise_df: pd.DataFrame | None, latex_root: Pat
     if not pairs:
         return
 
-    # Figure: draw all pairs and add bold baseline means for readability.
-    fig, ax = plt.subplots(figsize=(7.5, 3.8))
-    colors_map = {"EN-50M": "#e76f51", "EN-100M": "#2a9d8f"}
-    baseline_series = []
-    for pair in pairs:
-        sub = df[df["pair"] == pair]
-        if sub.empty:
-            continue
-        base = "EN-50M" if pair.startswith("EN-50M") else "EN-100M"
-        baseline_series.append((base, sub))
-        ax.plot(
-            sub["layer"].to_numpy(),
-            sub["axis_abs_projection_diff_mean"].to_numpy(),
-            color=colors_map[base],
-            alpha=0.25,
-            linewidth=1.1,
-        )
-
-    for base in ["EN-50M", "EN-100M"]:
+    def _plot_layerwise_slice(model_a: str, out_name: str) -> None:
+        dbase = df[df["model_a"] == model_a].copy()
+        dbase = dbase[
+            dbase["model_b"].astype(str).map(
+                lambda mb: parse_en_target(mb) is not None and parse_en_target(mb)[1] == "a"
+            )
+        ].copy()
+        if dbase.empty:
+            return
+        fig, ax = plt.subplots(figsize=(7.55, 3.9))
         vals = []
-        layers = None
-        for b, sub in baseline_series:
-            if b != base:
+        layers_ref = None
+        for lang in CORE_LANGS:
+            sub = dbase[dbase["model_b"] == f"en_{lang}_a"].sort_values("layer")
+            if sub.empty:
                 continue
-            if layers is None:
-                layers = sub["layer"].to_numpy()
-            vals.append(sub["axis_abs_projection_diff_mean"].to_numpy())
-        if not vals:
-            continue
-        arr = np.vstack(vals)
-        ax.plot(
-            layers,
-            arr.mean(axis=0),
-            color=colors_map[base],
-            linewidth=2.4,
-            label=f"{base} mean across L2",
+            yv = sub["axis_abs_projection_diff_mean"].to_numpy(dtype=float)
+            lv = sub["layer"].to_numpy(dtype=float)
+            vals.append(yv)
+            if layers_ref is None:
+                layers_ref = lv
+            c = pastel_lang_color(lang.upper(), lighten=0.28)
+            ec = blend_hex(LANG_COLORS.get(lang.upper(), "#4C78A8"), (0, 0, 0), 0.25)
+            ax.plot(
+                lv,
+                yv,
+                color=c,
+                alpha=0.50,
+                linewidth=1.25,
+                marker="o",
+                markersize=2.6,
+                markerfacecolor=c,
+                markeredgecolor=ec,
+                markeredgewidth=0.4,
+                zorder=1,
+            )
+        if vals and layers_ref is not None:
+            arr = np.vstack(vals)
+            y_mean = arr.mean(axis=0)
+            ax.plot(
+                layers_ref,
+                y_mean,
+                color="#1f1f1f",
+                linewidth=2.35,
+                marker="o",
+                markersize=3.6,
+                markerfacecolor="white",
+                markeredgecolor="#1f1f1f",
+                markeredgewidth=0.9,
+                label=f"{model_a.replace('en_', 'EN-').upper()} mean across L2",
+                zorder=3,
+            )
+        ax.set_yscale("log")
+        ax.set_xlabel("Transformer layer")
+        ax.set_ylabel(r"Contextual $D_{Axis}$ (log)")
+        ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.38)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.legend(
+            handles=[
+                plt.Line2D([0], [0], color="#7f8ea1", lw=1.4, marker="o", markersize=3, label="Per-language curves"),
+                plt.Line2D([0], [0], color="#1f1f1f", lw=2.2, marker="o", markersize=4, markerfacecolor="white", label="Mean across languages"),
+            ],
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.20),
+            ncol=2,
+            frameon=True,
+            edgecolor="gray",
+            fontsize=8.6,
         )
+        fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.90))
+        fig.subplots_adjust(left=0.14)
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+        plt.close(fig)
 
-    ax.set_yscale("log")
-    ax.set_xlabel("Transformer layer")
-    ax.set_ylabel(r"Mean $D_{Axis}$ (log scale; higher means worse mismatch)")
-    ax.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.4)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.legend(
-        loc="upper center",
-        bbox_to_anchor=(0.5, 1.22),
-        ncol=2,
-        frameon=True,
-        edgecolor="gray",
-        fontsize=8.8,
-    )
-    fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.9))
-    fig.savefig(latex_root / "figures" / "exp4_layerwise.png", dpi=450, bbox_inches="tight")
-    plt.close(fig)
+    _plot_layerwise_slice("en_50m", "exp4_layerwise.pdf")
+    _plot_layerwise_slice("en_100m", "exp4_layerwise_100m.pdf")
 
     # Table: peak and last-layer summaries.
     lines = [
@@ -2279,7 +2520,7 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
     else:
         ax.tick_params(axis="y", labelsize=8)
     fig.tight_layout()
-    fig.savefig(latex_root / "figures" / "appendix_perhead_heatmap.png", dpi=450, bbox_inches="tight")
+    fig.savefig(latex_root / "figures" / "appendix_perhead_heatmap.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
 
     top = (
@@ -2484,7 +2725,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
     axes[1].spines["top"].set_visible(False)
     axes[1].spines["right"].set_visible(False)
     axes[1].legend(loc="upper right", frameon=True, edgecolor="gray")
-    fig.savefig(latex_root / "figures" / "appendix_multilingual_overview.png", dpi=450, bbox_inches="tight")
+    fig.savefig(latex_root / "figures" / "appendix_multilingual_overview.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
 
     # Exploratory regression block for cross-language trend discussion.
@@ -2562,7 +2803,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ax.grid(True, linestyle="--", linewidth=0.5, alpha=0.35)
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
-        fig.savefig(latex_root / "figures" / "appendix_multilingual_regression_scatter.png", dpi=450, bbox_inches="tight")
+        fig.savefig(latex_root / "figures" / "appendix_multilingual_regression_scatter.pdf", dpi=450, bbox_inches="tight")
         plt.close(fig)
 
         lines = [
@@ -2626,135 +2867,103 @@ def build_main_multilingual_validation_figure(
             return float("nan")
         return float(a["axis_abs_projection_diff_mean"].iloc[0])
 
-    df["ctx_50m"] = df["lang_code"].astype(str).map(lambda x: _ctx_axis(str(x), "50m"))
-    df["ctx_100m"] = df["lang_code"].astype(str).map(lambda x: _ctx_axis(str(x), "100m"))
-    p = df.dropna(subset=["ctx_50m", "ctx_100m"]).copy()
-    if p.empty:
-        return
-    p = p.sort_values("lang_code").reset_index(drop=True)
-    # Add EN seed-null reference row as the first category if available.
-    ref50 = seed_null_metric_stats(
-        same_lang_df,
-        "EN-50M",
-        eval_repr="pre_lmhead_contextual",
-        metric_col="axis_abs_projection_diff_mean",
-    )
-    ref100 = seed_null_metric_stats(
-        same_lang_df,
-        "EN-100M",
-        eval_repr="pre_lmhead_contextual",
-        metric_col="axis_abs_projection_diff_mean",
-    )
-    if ref50 is not None and ref100 is not None:
-        p = pd.concat(
-            [
-                pd.DataFrame(
-                    [
-                        {
-                            "lang_code": "en-null",
-                            "ctx_50m": ref50["mean"],
-                            "ctx_100m": ref100["mean"],
-                            "is_ref": True,
-                        }
-                    ]
-                ),
-                p.assign(is_ref=False),
-            ],
-            ignore_index=True,
-        )
-    else:
-        p = p.assign(is_ref=False)
-    y = np.arange(len(p))
-    fig, ax = plt.subplots(figsize=(7.2, 4.2))
-    for i, rr in p.iterrows():
-        line_color = "#6b6b6b" if bool(rr.get("is_ref", False)) else "#9aa0a6"
-        line_width = 2.0 if bool(rr.get("is_ref", False)) else 1.4
-        ax.plot([rr["ctx_50m"], rr["ctx_100m"]], [i, i], color=line_color, linewidth=line_width, alpha=0.9, zorder=1)
-
-    non_ref = p[~p["is_ref"]]
-    y_non_ref = np.arange(len(non_ref)) + (1 if p["is_ref"].any() else 0)
-    ax.scatter(
-        non_ref["ctx_50m"].to_numpy(),
-        y_non_ref,
-        s=44,
-        marker="o",
-        color="#1f77b4",
-        edgecolors="black",
-        linewidths=0.5,
-        label="50M",
-        zorder=3,
-    )
-    ax.scatter(
-        non_ref["ctx_100m"].to_numpy(),
-        y_non_ref,
-        s=46,
-        marker="s",
-        color="#ff7f0e",
-        edgecolors="black",
-        linewidths=0.5,
-        label="100M",
-        zorder=4,
-    )
-    # Add checkpoint delta labels for readability.
-    for i, rr in non_ref.reset_index(drop=True).iterrows():
-        yy = i + (1 if p["is_ref"].any() else 0)
-        dlt = float(rr["ctx_100m"] - rr["ctx_50m"])
-        ax.text(
-            float(rr["ctx_100m"]) + 0.02,
-            yy,
-            f"{dlt:+.2f}",
-            va="center",
-            ha="left",
-            fontsize=7.8,
-            color="#333333",
-        )
-    if p["is_ref"].any():
-        rr = p.iloc[0]
-        ax.scatter(
-            [rr["ctx_50m"]],
-            [0],
-            s=46,
-            marker="o",
-            color="#7f7f7f",
-            edgecolors="black",
-            linewidths=0.5,
-            label="EN-null 50M",
-            zorder=5,
-        )
-        ax.scatter(
-            [rr["ctx_100m"]],
-            [0],
-            s=48,
-            marker="s",
-            color="#4d4d4d",
-            edgecolors="black",
-            linewidths=0.5,
-            label="EN-null 100M",
-            zorder=5,
+    def _plot_multilingual_slice(baseline: str, out_name: str) -> None:
+        col = f"ctx_{baseline}"
+        df[col] = df["lang_code"].astype(str).map(lambda x: _ctx_axis(str(x), baseline))
+        p = df.dropna(subset=[col]).copy()
+        if p.empty:
+            return
+        rank = {lg: i for i, lg in enumerate(CORE_LANGS)}
+        p["lang_rank"] = p["lang_code"].astype(str).map(lambda x: rank.get(x, 999))
+        p = p.sort_values("lang_rank").reset_index(drop=True)
+        ref = seed_null_metric_stats(
+            same_lang_df,
+            f"EN-{baseline.upper()}",
+            eval_repr="pre_lmhead_contextual",
+            metric_col="axis_abs_projection_diff_mean",
         )
 
-    ax.set_yticks(y)
-    ax.set_yticklabels(
-        p["lang_code"].astype(str).str.upper().str.replace("EN-NULL", "EN-NULL (SEED)").tolist(),
-        fontsize=8.8,
-    )
-    ax.invert_yaxis()
-    ax.set_xlabel(r"Contextual $D_{Axis}$ (shared-partition C3; lower is better)")
-    ax.set_ylabel("Language")
-    ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.35)
-    ax.spines["top"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.legend(
-        loc="upper center",
-        bbox_to_anchor=(0.5, 1.16),
-        ncol=4 if p["is_ref"].any() else 2,
-        frameon=True,
-        edgecolor="gray",
-        fontsize=8.8,
-    )
-    fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.92))
-    fig.savefig(latex_root / "figures" / "combined_multilingual_fig5_fig11.png", dpi=450, bbox_inches="tight")
-    plt.close(fig)
+        x = np.arange(len(p))
+        fig, ax = plt.subplots(figsize=(7.35, 4.25))
+        vals = p[col].to_numpy(dtype=float)
+        bars = ax.bar(
+            x,
+            vals,
+            width=0.66,
+            edgecolor="#2d2d2d",
+            linewidth=0.95,
+            alpha=0.98,
+            zorder=2,
+        )
+        for rect, lang in zip(bars, p["lang_code"].astype(str).str.upper().tolist()):
+            rect.set_facecolor(pastel_lang_color(lang))
+            rect.set_hatch(LANG_HATCHES.get(lang, "//"))
+            rect.set_path_effects(
+                [
+                    pe.SimplePatchShadow(offset=(1.1, -1.1), shadow_rgbFace=(0, 0, 0), alpha=0.10),
+                    pe.Normal(),
+                ]
+            )
+            x0 = rect.get_x() + 0.10 * rect.get_width()
+            x1 = rect.get_x() + 0.90 * rect.get_width()
+            yv = rect.get_height()
+            ax.plot([x0, x1], [yv, yv], color="white", alpha=0.52, linewidth=1.0, zorder=3)
+
+        if ref is not None:
+            ax.axhspan(ref["low"], ref["high"], color="#9e9e9e", alpha=0.16, zorder=0)
+            ax.axhline(ref["mean"], color="#616161", linestyle=(0, (4, 2)), linewidth=1.25, zorder=1)
+        for rect, value in zip(bars, vals):
+            ax.text(
+                rect.get_x() + rect.get_width() / 2.0,
+                float(value) + 0.05,
+                f"{float(value):.2f}",
+                ha="center",
+                va="bottom",
+                fontsize=7.7,
+                color="#222222",
+            )
+
+        ax.set_xticks(x)
+        ax.set_xticklabels(p["lang_code"].astype(str).str.upper().tolist(), fontsize=9.2, fontweight="bold")
+        ax.set_ylabel(r"Contextual $D_{Axis}$", fontsize=11.5)
+        ax.set_xlabel(f"Target language (L2 monolingual {baseline.upper()} vs EN+L2, C3)", fontsize=10.2)
+        ax.grid(axis="y", linestyle="--", linewidth=0.55, alpha=0.32)
+        ax.set_axisbelow(True)
+        ymax = max(vals.max() * 1.16, vals.max() + 0.35)
+        ax.set_ylim(bottom=0.0, top=ymax)
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        handles = [
+            plt.Rectangle(
+                (0, 0),
+                1,
+                1,
+                facecolor="#d7e5f3",
+                edgecolor="#2d2d2d",
+                hatch="//",
+                label=f"L2 bars ({baseline.upper()}, color/hatch by language)",
+            )
+        ]
+        if ref is not None:
+            handles.append(
+                plt.Line2D([0], [0], color="#6b6b6b", linestyle="--", lw=1.2, label="EN-NULL mean/range")
+            )
+        ax.legend(
+            handles=handles,
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.15),
+            ncol=2 if ref is not None else 1,
+            frameon=True,
+            edgecolor="#8a8a8a",
+            framealpha=0.96,
+            fontsize=8.6,
+        )
+        fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.92))
+        fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
+        plt.close(fig)
+
+    _plot_multilingual_slice("50m", "combined_multilingual_fig5_fig11.pdf")
+    _plot_multilingual_slice("100m", "combined_multilingual_fig5_fig11_100m.pdf")
 
 
 def build_same_language_controls_table(ctrl_df: pd.DataFrame | None, latex_root: Path) -> None:

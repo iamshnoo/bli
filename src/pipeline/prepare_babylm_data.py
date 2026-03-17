@@ -12,7 +12,7 @@ from typing import Dict, List
 from datasets import Dataset, load_dataset
 
 DEFAULT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{os.environ.get('USER', 'USER')}/langsense/nanotron")
+DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{os.environ.get('USER', 'USER')}/pretrain/nanotron")
 
 ROOT = Path(os.environ.get("BLI_ROOT", str(DEFAULT_ROOT)))
 NANOTRON_PREPROCESS = Path(

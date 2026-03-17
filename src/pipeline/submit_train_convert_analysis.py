@@ -17,7 +17,7 @@ from typing import Dict, Iterable, List
 
 USER_NAME = os.environ.get("USER", "USER")
 DEFAULT_ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{USER_NAME}/langsense/nanotron")
+DEFAULT_NANOTRON_ROOT = Path(f"/scratch/{USER_NAME}/pretrain/nanotron")
 
 ROOT = Path(os.environ.get("BLI_ROOT", str(DEFAULT_ROOT)))
 NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", str(DEFAULT_NANOTRON_ROOT)))
