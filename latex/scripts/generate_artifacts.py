@@ -115,9 +115,9 @@ FIGURE_NAME_MAP = {
     "exp2_overlap_100m.pdf": "fig16-appendix-exp2-overlap-100m.pdf",
     "combined_multilingual_fig5_fig11.pdf": "fig4-multilingual-validation.pdf",
     "combined_multilingual_fig5_fig11_100m.pdf": "fig17-appendix-multilingual-validation-100m.pdf",
-    "exp4_signed_axes.pdf": "fig5-signed-axis-shifts.pdf",
+    "exp4_signed_axes.pdf": "fig6-signed-axis-shifts.pdf",
     "exp4_signed_axes_100m.pdf": "fig21-appendix-signed-axis-shifts-100m.pdf",
-    "exp4_ratio.pdf": "fig6-contextual-vs-embedding-ratio.pdf",
+    "exp4_ratio.pdf": "fig5-contextual-vs-embedding-ratio.pdf",
     "exp4_ratio_100m.pdf": "fig18-appendix-contextual-vs-embedding-100m.pdf",
     "exp4_layerwise.pdf": "fig7-layerwise-axis-divergence.pdf",
     "exp4_layerwise_100m.pdf": "fig19-appendix-layerwise-axis-divergence-100m.pdf",
@@ -1115,7 +1115,11 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
         ax.set_yticks(y)
         ax.set_yticklabels(plot_df["lang"].str.upper().tolist(), fontsize=9, fontweight="bold")
         ax.invert_yaxis()
-        ax.set_xlabel(f"Within-language midpoint at 0 ({base_lbl}, C3); right label = contextual minus embedding")
+        ax.set_xlabel(
+            f"Within-language midpoint at 0 ({base_lbl}, C3)\n"
+            "Right-side labels report contextual minus embedding",
+            labelpad=4,
+        )
         ax.set_ylabel("Language")
         ax.grid(axis="x", linestyle="--", linewidth=0.5, alpha=0.33)
         ax.spines["top"].set_visible(False)
@@ -1531,7 +1535,8 @@ def build_exp4_signed_axis_scatter(
                                 row_h = 0.34
                                 fig_h = max(5.2, n_rows * row_h + 1.8)
                                 fig, ax = plt.subplots(figsize=(7.1, fig_h))
-                                fig.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.90)
+                                # Reserve extra headroom so the legend stays above the first data row.
+                                fig.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.89)
 
                                 xpad = vmax * 0.14
                                 ax.axvspan(-eps_icon, eps_icon, color="#f2f2f2", alpha=0.8, zorder=0)
@@ -1597,9 +1602,9 @@ def build_exp4_signed_axis_scatter(
                                 ]
                                 ax.legend(
                                     handles=leg_handles,
-                                    loc="upper center",
-                                    bbox_to_anchor=(0.5, 1.02),
-                                    ncol=4,
+                                    loc="lower center",
+                                    bbox_to_anchor=(0.5, 1.01),
+                                    ncol=max(1, len(langs_ordered)),
                                     fontsize=7.1,
                                     frameon=True,
                                     edgecolor="#9a9a9a",
@@ -1691,7 +1696,8 @@ def build_exp4_signed_axis_scatter(
                                             n_rows100 = len(h100)
                                             fig_h100 = max(5.2, n_rows100 * 0.34 + 1.8)
                                             fig100, ax100 = plt.subplots(figsize=(7.1, fig_h100))
-                                            fig100.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.90)
+                                            # Match main panel: keep legend above rows without overlap.
+                                            fig100.subplots_adjust(left=0.44, right=0.96, bottom=0.12, top=0.89)
                                             xpad100 = vmax100 * 0.14
                                             ax100.axvspan(-eps_icon, eps_icon, color="#f2f2f2", alpha=0.8, zorder=0)
                                             ax100.axvline(0.0, color="#444444", lw=1.0, ls="--", zorder=2, alpha=0.75)
@@ -1751,9 +1757,9 @@ def build_exp4_signed_axis_scatter(
                                             ]
                                             ax100.legend(
                                                 handles=leg_handles100,
-                                                loc="upper center",
-                                                bbox_to_anchor=(0.5, 1.02),
-                                                ncol=4,
+                                                loc="lower center",
+                                                bbox_to_anchor=(0.5, 1.01),
+                                                ncol=max(1, len(langs100)),
                                                 fontsize=7.1,
                                                 frameon=True,
                                                 edgecolor="#9a9a9a",
