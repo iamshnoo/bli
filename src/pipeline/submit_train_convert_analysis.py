@@ -887,6 +887,14 @@ NANOTRON_ENV={shlex.quote(str(NANOTRON_ENV))}
 source "${{NANOTRON_ENV}}/bin/activate"
 cd "${{BLI_ROOT}}"
 
+python src/bli_analysis/center_en_subspace_metrics.py \\
+  --seed-summary-csv "${{BLI_ROOT}}/outputs/revision/en_seed_null/bli_summary_metrics.csv" \\
+  --en-ablation-dir "${{BLI_ROOT}}/outputs/revision/en_ablation"
+
+python src/bli_analysis/run_progress_sensitivity.py \\
+  --summary-csv "${{BLI_ROOT}}/outputs/revision/en_ablation/bli_summary_metrics.csv" \\
+  --out-csv "${{BLI_ROOT}}/outputs/revision/en_ablation/bli_progress_sensitivity.csv"
+
 python src/pipeline/build_language_ratio_summary.py \\
   --revision-root "${{BLI_ROOT}}/outputs/revision" \\
   --multilingual-root "${{BLI_ROOT}}/outputs/multilingual_expansion" \\

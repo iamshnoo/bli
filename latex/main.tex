@@ -38,6 +38,7 @@
 \newcommand{\an}[1]{\nertcomment{A}{A}{magenta}{#1}}
 \newcommand{\zz}[1]{\nertcomment{Z}{Z}{blue}{#1}}
 \newcommand{\am}[1]{\nertcomment{A}{M}{teal}{#1}}
+\newcommand{\anc}[2]{\textcolor{magenta}{\sout{#1}}\nertcomment{A}{A}{magenta}{#2}}
 
 \newcommand{\squishlist}{
     \begin{list}{$\bullet$}
@@ -138,7 +139,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We test whether bilingual pretraining leaves persistent language-conditioned geometry in a shared language after standard bilingual lexicon induction (BLI) alignment. Across matched $160$M-parameter controls with fixed architecture, optimizer, and token geometry, we separate language-exposure matching from compute matching, enforce overlap and no-overlap English partitions, and evaluate only on held-out cultural probes. We find that residual mismatch remains non-zero under every control. Critically, contextual axis divergence is consistently much larger than embedding-space axis divergence across EN+L2 comparisons for all eight L2 targets, and the same representation-dependent pattern holds across the full non-English set. This gap is not explained by the tested controls, including alignment-residual checks and shared-document overlap tests. Layer-wise probing shows divergence rises sharply through middle layers (around 4-6), then compresses at later layers while remaining far above embedding-space levels. These findings show that embedding-only agreement diagnostics systematically underestimate directional mismatch in this bilingual comparison setting, and that orthogonal alignment alone does not neutralize shared-language subspaces at the contextual level.\footnote{Code available here: \url{https://github.com/iamshnoo/bli}.}
+We test whether bilingual pretraining leaves persistent language-conditioned geometry in a shared language \an{representation space} \anc{after standard bilingual lexicon induction (BLI) alignment}{}.  Across matched $160$M-parameter controls with fixed architecture, optimizer, and token geometry, we separate language-exposure matching from compute matching, enforce overlap and no-overlap English partitions, and evaluate only on held-out cultural probes. We find that residual mismatch remains non-zero under every control. Critically, contextual axis divergence is consistently much larger than embedding-space axis divergence across EN+L2 comparisons for all eight L2 targets, and the same representation-dependent pattern holds across the full non-English set. This gap is not explained by the tested controls, including alignment-residual checks and shared-document overlap tests. Layer-wise probing shows divergence rises sharply through middle layers (around 4-6), then compresses at later layers while remaining far above embedding-space levels. These findings show that embedding-only agreement diagnostics systematically underestimate directional mismatch in this bilingual comparison setting, and that orthogonal alignment alone does not neutralize shared-language subspaces at the contextual level.\footnote{Code available here: \url{https://anonymous.4open.science/r/bli}.}
 \end{abstract}
 
 \section{Introduction}
@@ -146,7 +147,7 @@ We test whether bilingual pretraining leaves persistent language-conditioned geo
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig1-study-design.pdf}
+\includegraphics[width=\columnwidth]{figures/fig1.pdf}
 \caption{Study design. EN vs.\ bilingual EN+L2 aligned via neutral-anchor Procrustes; 1000 held-out cultural probes measure residual mismatch in both embedding and contextual representations. Contextual divergence remains markedly above embedding-space divergence across tested pairs.}
 \label{fig:idea-overview}
 \end{figure}
@@ -251,6 +252,12 @@ W^\star=\arg\min_{W^\top W=I}\|X^a_{\mathcal N}W-X^b_{\mathcal N}\|_F.
 \]
 Here $\|\cdot\|_F$ is the Frobenius norm. Residual mismatch is measured on held-out cultural probes $\mathcal C$ (size $|\mathcal C|$) via three metrics:
 
+For the affine robustness variant used in Experiment~4, we replace the orthogonality constraint with:
+\[
+(W^\star,b^\star)=\arg\min_{W,b}\|X^a_{\mathcal N}W+\mathbf{1}b^\top-X^b_{\mathcal N}\|_F,
+\]
+where $b\in\mathbb{R}^{d}$ is a translation vector and $\mathbf{1}$ is an all-ones column vector with $|\mathcal N|$ rows. We then evaluate the same held-out metrics below.
+
 \squishlist
 \item \textbf{Neighborhood disagreement}
 \[
@@ -271,14 +278,16 @@ D_{Axis,i}=\frac{1}{|\mathcal C|}
 for axis $i$, where $x_w^a$ and $x_w^b$ are the vectors of probe word $w$ in models $A$ and $B$. Axis directions ($\hat u_i^a, \hat u_i^b$) are unit vectors from axis endpoint words in each model. The notation $\langle\cdot,\cdot\rangle$ denotes the Euclidean inner product.
 \squishend
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig2-exp1-divergence.pdf}
-\caption{Exp.\ 1 paired divergence view across EN-centered controls. For each pair and metric, lines connect embedding (circle) to contextual (square); the contextual shift is consistently largest for $D_{Axis}$.}
+\includegraphics[width=\columnwidth]{figures/fig2-exp1-divergence.pdf}
+\caption{Exp.\ 1 simplified view (contextual, EN-50M, C3 only) with EN-null-centered values. Bars show $\Delta D_{Axis}$ by language; the gray EN-null bar is fixed at zero, with min--max whisker from the three EN-only seeds.}
 \label{fig:exp1-controls}
-\end{figure*}
+\end{figure}
 
-We also record signed projection differences for interpretability. Unlike $D_{NN}$, axis divergence is not intrinsically bounded; embedding-space baselines are approximately $0.12$-$0.18$ and contextual values approximately $2.5$-$3.7$, so we report ratios alongside absolute values.
+We also record signed projection differences for interpretability. Unlike $D_{NN}$, axis divergence is not intrinsically bounded; embedding-space baselines are approximately $0.12$-$0.18$ and contextual values approximately $2.5$-$3.7$. We therefore present absolute values in the main text and keep ratio summaries as appendix normalization checks.
+
+For EN-subspace analyses, we center the three core metrics by EN-only seed-null baselines: for checkpoint $c\in\{50\text{M},100\text{M}\}$, representation family $r$, and metric $m$, we report $\Delta m = m - \bar m_{\text{EN-null}}(c,r,m)$, where $\bar m_{\text{EN-null}}$ is the mean over the three EN-seed pairings. Positive values indicate above-null mismatch and negative values indicate below-null mismatch.
 
 \section{Experiments and Results}
 \label{sec:experiments}
@@ -293,25 +302,25 @@ This experiment tests whether neutral-anchor alignment collapses disagreement un
 
 \textbf{Hypotheses.} \textbf{(H1.1)} If alignment is sufficient, all three disagreements should be approximately zero. \textbf{(H1.2)} If residual mismatch is systematic, all pairs should retain non-zero disagreement. \textbf{(H1.3)} Contextual axes should show lower agreement than embedding axes.
 
-\textbf{Results.} Figure~\ref{fig:exp1-controls} rejects \textbf{(H1.1)} and supports \textbf{(H1.2)}: mismatch remains non-zero across all EN-centered pairs under strict controls, and contextual divergence is consistently larger than embedding divergence, supporting \textbf{(H1.3)}. Appendix Tables~\ref{tab:exp1-results}, \ref{tab:exp1-results-ctx}, \ref{tab:exp1-procrustes}, and \ref{tab:exp1-negctrl} provide the bootstrap confidence intervals, Procrustes residual checks, and negative-control comparisons that make pair-specific alignment failure a less likely explanation. In the aggregate negative-control summary, disagreement is comparable to or higher than the cultural-probe summary (Appendix Table~\ref{tab:exp1-negctrl}), so this block weakens cultural-specific interpretation and is treated as a lexical-stability bound.
+\textbf{Results.} Figure~\ref{fig:exp1-controls} shows the contextual EN-50M focal slice directly in EN-null-centered units: $\Delta D_{Axis}$ remains non-zero across languages, with most language pairs above the zero-centered null reference. The full 16-pair embedding/contextual and 50M/100M comparisons are reported in Appendix Tables~\ref{tab:exp1-results}, \ref{tab:exp1-results-ctx}, \ref{tab:exp1-procrustes}, and \ref{tab:exp1-negctrl}; those tables maintain the same qualitative conclusion and support \textbf{(H1.3)}. In the aggregate negative-control summary, disagreement is comparable to or higher than the cultural-probe summary (Appendix Table~\ref{tab:exp1-negctrl}), so this block weakens cultural-specific interpretation and is treated as a lexical-stability bound.
 
 \begin{insightbox}
 \textbf{Takeaway 1:} Orthogonal alignment improves shared structure but does not remove persistent residual mismatch.
 \end{insightbox}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{figures/fig3-exp2-overlap.pdf}
-\caption{Overlap deltas (C3$-$C4). Shared EN documents increase agreement but effects are small.}
+\includegraphics[width=\columnwidth]{figures/fig3-exp2-overlap.pdf}
+\caption{Exp.\ 2 simplified view (contextual, EN-50M, $D_{Axis}$ only) in EN-null-centered units. Each row is a language; C3/C4 points show $\Delta D_{Axis}$ (vertical dashed line at zero), with gray shading for the centered EN-null min--max range.}
 \label{fig:exp2-overlap}
-\end{figure*}
+\end{figure}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/fig4-multilingual-validation.pdf}
-\caption{Multilingual validation across eight target languages. Bars show contextual-to-embedding axis-divergence ratios at 50M and 100M; the red line shows contextual overlap gain (C4$-$C3).}
+\includegraphics[width=\columnwidth]{figures/fig4-multilingual-validation.pdf}
+\caption{Multilingual checkpoint view (contextual, C3). Per-language dumbbells connect 50M and 100M contextual $D_{Axis}$, with right-side labels showing checkpoint deltas; the EN-null seed row is shown in gray.}
 \label{fig:multilingual-combined}
-\end{figure*}
+\end{figure}
 
 \subsection{Experiment 2: English Overlap Ablations}
 \label{sec:exp2}
@@ -321,7 +330,7 @@ This experiment isolates the effect of shared EN documents by holding language e
 
 \textbf{Hypotheses.} \textbf{(H2.1)} \SetupAName should increase agreement relative to \SetupBName. \textbf{(H2.2)} \SetupBName should still retain non-zero disagreement.
 
-\textbf{Results.} Figure~\ref{fig:exp2-overlap} shows small C3$-$C4 deltas concentrated near zero, with mixed signs across language families. Wilcoxon tests (Appendix Table~\ref{tab:exp2-wilcoxon}) detect effects in many settings, but medians remain near zero in almost all cases, indicating that overlap is real but sparse at the word level. Quality-tier stratification (Appendix Table~\ref{tab:appendix-exp2-quality}) gives the same pattern. \SetupBName still shows non-zero mismatch, supporting \textbf{(H2.2)} and addressing the overlap-confound concern.
+\textbf{Results.} Figure~\ref{fig:exp2-overlap} shows the contextual EN-50M $D_{Axis}$ focal slice centered on the EN-null reference: most C3/C4 language points lie near each other and near the null band, indicating a small overlap effect in this slice. Wilcoxon tests and full baseline/representation deltas (Appendix Table~\ref{tab:exp2-wilcoxon} and Table~\ref{tab:exp2-overlap}) detect effects in many settings but with near-zero medians in most cases. Quality-tier stratification (Appendix Table~\ref{tab:appendix-exp2-quality}) gives the same pattern. \SetupBName still shows non-zero mismatch, supporting \textbf{(H2.2)}.
 
 \begin{insightbox}
 \textbf{Takeaway 2:} Shared documents produce a real but small and word-sparse overlap effect. Under these controls, language co-training is a more plausible contributor than shared corpora.
@@ -338,14 +347,14 @@ This experiment quantifies representation dependence under a single alignment pr
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig5-signed-axis-shifts.pdf}
-\caption{Signed axis shifts in contextual space (illustrative ZH/FR slice). Quadrants separate shared tilts from language-specific opposite-direction shifts.}
+\caption{Sign-flip hotspots (contextual, C3, EN-50M), shown as \emph{range ribbons plus language beads}. Each row is a probe-axis pair. The gray ribbon spans the min-to-max signed shift across languages; colored beads are individual languages. The dashed vertical line is zero (left: EN+L2 higher, right: EN-50M higher). Rows whose ribbon crosses zero indicate cross-language polarity reversal.}
 \label{fig:exp4-signed}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig6-contextual-vs-embedding-ratio.pdf}
-\caption{Contextual/embedding axis-divergence ratios across EN-centered pairs with 95\% bootstrap CIs. All ratios are well above one, showing robust contextual amplification.}
+\caption{Representation-family contrast (EN-50M, C3) in EN-null-centered units. For each language, embedding and contextual $\Delta D_{Axis}$ are shown as paired points; right-side labels report contextual-to-embedding ratios.}
 \label{fig:exp4-ratio}
 \end{figure}
 
@@ -356,28 +365,28 @@ This experiment quantifies representation dependence under a single alignment pr
 \label{fig:exp4-layerwise}
 \end{figure}
 
-\textbf{Results.} Figure~\ref{fig:exp4-ratio} shows strong contextual-to-embedding amplification across all sixteen EN-centered pairs, and Figure~\ref{fig:multilingual-combined} shows the same ordering across all eight non-English language pairs, supporting \textbf{(H3.1)}. Figure~\ref{fig:exp4-signed} and Appendix Table~\ref{tab:exp4-signed} show directional shifts that are not explained by magnitude-only effects. Figure~\ref{fig:exp4-layerwise} shows where amplification accumulates across depth; Appendix Table~\ref{tab:exp4-layerwise} quantifies peak and final-layer values, supporting \textbf{(H3.2)}. Appendix Table~\ref{tab:progress-sensitivity} shows the 50M$\rightarrow$100M sensitivity profile for EN-centered C3 pairs, which we report as an available checkpoint-level proxy rather than a full convergence study. Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:exp4-ratio-ci}, and \ref{tab:main-multilingual-ratios} report detailed ratios and confidence intervals. Appendix Figure~\ref{fig:typology-regression-scatter} with Appendix Table~\ref{tab:appendix-multilingual-regression} shows no significant monotonic cross-language trend, so we treat typology as exploratory rather than explanatory.
+\textbf{Results.} Figure~\ref{fig:exp4-ratio} shows the EN-50M C3 slice directly: contextual $D_{Axis}$ is consistently above embedding $D_{Axis}$ for every language, supporting \textbf{(H3.1)} in the focal main-text view. Figure~\ref{fig:multilingual-combined} shows contextual $D_{Axis}$ for all eight non-English languages at 50M and 100M under C3. Figure~\ref{fig:exp4-signed} and Appendix Table~\ref{tab:exp4-signed} show language-specific signed-direction behavior at probe-axis resolution via cross-language sign-flip hotspots, rather than only aggregate magnitudes. Figure~\ref{fig:exp4-layerwise} shows where amplification accumulates across depth; Appendix Table~\ref{tab:exp4-layerwise} quantifies peak and final-layer values, supporting \textbf{(H3.2)}. Appendix Table~\ref{tab:progress-sensitivity} shows the 50M$\rightarrow$100M sensitivity profile for EN-centered C3 pairs, which we report as an available checkpoint-level proxy rather than a full convergence study. Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:exp4-ratio-ci}, and \ref{tab:main-multilingual-ratios} provide the full ratio summaries and confidence intervals. Appendix Figure~\ref{fig:typology-regression-scatter} with Appendix Table~\ref{tab:appendix-multilingual-regression} shows no significant monotonic cross-language trend, so we treat typology as exploratory rather than explanatory.
 
 \begin{insightbox}
-\textbf{Takeaway 3:} Representation choice changes measured mismatch by an order of magnitude across language settings: 16.1 to 24.2 times in EN-centered controls and 17.1 to 35.9 times in non-English target-language pairs. Divergence rises through middle layers, peaks, then compresses while remaining elevated at final layers.
+\textbf{Takeaway 3:} Representation choice dominates measured mismatch: in the EN-centered slice, contextual $D_{Axis}$ remains in the low-single-digit range while embedding $D_{Axis}$ stays around tenths. Divergence rises through middle layers, peaks, then compresses while remaining elevated at final layers; full ratio summaries are reported in the appendix.
 \end{insightbox}
 
 \subsection{Experiment 4: Alignment-Method Robustness}
 \label{sec:exp4}
 This experiment tests whether the main contextual mismatch signal is an artifact of one alignment objective.
 
-\textbf{Setup.} We evaluate the same EN-centered C3 pairs from Experiment~1 under two effective alignment-objective families: orthogonal and affine. Implementation-wise, we include three variants: orthogonal alignment with embedding anchors, orthogonal alignment with contextual anchors (sanity check), and affine alignment with embedding anchors. For each variant, we evaluate both representation families on held-out cultural probes.
+\textbf{Setup.} We evaluate the same EN-centered C3 pairs from Experiment~1 under two effective alignment-objective families: orthogonal and affine. The main-text figure compares contextual-evaluation outputs under orthogonal versus affine alignment (both using embedding-anchor estimation for method comparability). We still compute orthogonal contextual-anchor alignment as a sanity-check variant and report the full three-variant matrix in Appendix/Table outputs.
 
 \textbf{Hypotheses.} \textbf{(H4.1)} If the observed contextual mismatch is mainly a method artifact, at least one alignment variant should collapse the contextual axis gap. \textbf{(H4.2)} If the signal is representation-intrinsic, the gap should persist across variants.
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/fig8-alignment-method-comparison.pdf}
-\caption{Alignment-method robustness across EN-centered C3 pairs. Contextual axis divergence remains above embedding divergence across orthogonal and affine variants.}
+\includegraphics[width=\columnwidth]{figures/fig8-alignment-method-comparison.pdf}
+\caption{Alignment-method robustness (contextual, EN-50M) in EN-null-centered units. Each language compares orthogonal versus affine contextual $\Delta D_{Axis}$ under the same embedding-anchor estimation source.}
 \label{fig:exp5-alignment}
-\end{figure*}
+\end{figure}
 
-\textbf{Results.} Figure~\ref{fig:exp5-alignment} supports \textbf{(H4.2)}: contextual axis divergence remains substantially above embedding divergence under all tested alignment variants. Changing anchor family and allowing affine transforms does not remove the directional mismatch pattern on held-out probes. Appendix Table~\ref{tab:exp5-alignment} provides per-metric summaries by alignment variant. The two orthogonal-anchor variants are numerically almost identical on downstream metrics (differences below $10^{-6}$), so we treat contextual-anchor orthogonal alignment as a stability check and the main method contrast as orthogonal versus affine. Two additional robustness checks are consistent with this interpretation: Appendix Table~\ref{tab:same-language-controls} reports EN-only seed-matched null controls (same data, same budget, different seeds), and Appendix Table~\ref{tab:framework-holdout} reports axis-grounding holdout results where held-out axis sets continue to show elevated contextual mismatch. EN-only seed controls show contextual $D_{Axis}$ 2.115--3.154 (mean 2.610) and ratio 18.5--20.9, while EN-centered bilingual pairs show contextual $D_{Axis}$ 2.277--3.937 (mean 2.996) and ratio 16.1--24.2 (Figure~\ref{fig:exp4-ratio}; Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:same-language-controls}). Because ratio ranges overlap, we treat ratios as descriptive only and rely on absolute contextual mismatch plus controls for interpretation.
+\textbf{Results.} Figure~\ref{fig:exp5-alignment} supports \textbf{(H4.2)} in the contextual EN-50M slice: switching from orthogonal to affine objective changes values modestly but does not collapse contextual $D_{Axis}$ across languages. Appendix Table~\ref{tab:exp5-alignment} provides full per-metric summaries across representation families and both baselines, including the contextual-anchor orthogonal sanity variant. Two additional robustness checks are consistent with this interpretation: Appendix Table~\ref{tab:same-language-controls} reports EN-only seed-matched null controls (same data, same budget, different seeds), and Appendix Table~\ref{tab:framework-holdout} reports axis-grounding holdout results where held-out axis sets continue to show elevated contextual mismatch. EN-only seed controls show contextual $D_{Axis}$ 2.115--3.154 (mean 2.610) and ratio 18.5--20.9, while EN-centered bilingual pairs show contextual $D_{Axis}$ 2.277--3.937 (mean 2.996) and ratio 16.1--24.2 (Figure~\ref{fig:exp4-ratio}; Appendix Tables~\ref{tab:exp4-ratio}, \ref{tab:same-language-controls}). Because ratio ranges overlap, we treat ratios as descriptive only and rely on absolute contextual mismatch plus controls for interpretation.
 
 \begin{insightbox}
 \textbf{Takeaway 4:} The contextual mismatch signal is robust to alignment objective choice; better anchor fit does not imply neutralized contextual geometry.
@@ -644,6 +653,20 @@ These diagnostics break down mismatch by probe category and by high-divergence l
 \includegraphics[width=0.95\textwidth]{figures/fig10-appendix-category-heatmap.pdf}
 \caption{Category-stratified contextual axis divergence across model pairs.}
 \label{fig:appendix-category-heatmap}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.97\textwidth]{figures/fig13-appendix-l2-signed-hotspots-panel1.pdf}
+\caption{Per-language signed hotspots in target-language shared subspaces (contextual, C3, L2-50M baseline), Panel I: ZH, FR, FAS, NLD. Each subplot shows top probe-axis rows by absolute signed shift; left indicates EN+L2 higher and right indicates L2-50M higher.}
+\label{fig:appendix-l2-signed-hotspots-1}
+\end{figure*}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.97\textwidth]{figures/fig14-appendix-l2-signed-hotspots-panel2.pdf}
+\caption{Per-language signed hotspots in target-language shared subspaces (contextual, C3, L2-50M baseline), Panel II: UKR, BUL, IND, DEU.}
+\label{fig:appendix-l2-signed-hotspots-2}
 \end{figure*}
 
 \begin{table}[t]
