@@ -129,6 +129,7 @@ FIGURE_NAME_MAP = {
     "appendix_multilingual_regression_scatter.pdf": "fig12-typology-regression-scatter.pdf",
     "appendix_l2_signed_hotspots_panel1.pdf": "fig13-appendix-l2-signed-hotspots-panel1.pdf",
     "appendix_l2_signed_hotspots_panel2.pdf": "fig14-appendix-l2-signed-hotspots-panel2.pdf",
+    "appendix_dense_progress_trajectory.pdf": "fig22-appendix-dense-progress-trajectory.pdf",
 }
 
 TABLE_NAME_MAP = {
@@ -3056,6 +3057,34 @@ def build_progress_sensitivity_table(progress_df: pd.DataFrame | None, latex_roo
         ]
         write_table(lines, latex_root / "tables" / "progress_sensitivity.tex")
         return
+    if {"step", "language", "repr_type", "axis_abs_projection_diff_mean"}.issubset(progress_df.columns):
+        p = progress_df.copy()
+        pivot = (
+            p.pivot_table(
+                index="step",
+                columns=["language", "repr_type"],
+                values="axis_abs_projection_diff_mean",
+                aggfunc="mean",
+            )
+            .sort_index()
+        )
+        lines = [
+            r"\begin{tabular}{@{}rrrrr@{}}",
+            r"\toprule",
+            r"Step & FR Emb. & FR Ctx. & ZH Emb. & ZH Ctx. \\",
+            r"\midrule",
+        ]
+        for step in pivot.index:
+            fr_emb = pivot.get(("FR", "embedding_matrix"), pd.Series(dtype=float)).get(step, np.nan)
+            fr_ctx = pivot.get(("FR", "pre_lmhead_contextual"), pd.Series(dtype=float)).get(step, np.nan)
+            zh_emb = pivot.get(("ZH", "embedding_matrix"), pd.Series(dtype=float)).get(step, np.nan)
+            zh_ctx = pivot.get(("ZH", "pre_lmhead_contextual"), pd.Series(dtype=float)).get(step, np.nan)
+            lines.append(
+                f"{int(step)} & {_fmt(fr_emb)} & {_fmt(fr_ctx)} & {_fmt(zh_emb)} & {_fmt(zh_ctx)} \\\\"
+            )
+        lines += [r"\bottomrule", r"\end{tabular}"]
+        write_table(lines, latex_root / "tables" / "progress_sensitivity.tex")
+        return
     p = progress_df.copy()
     repr_map = {
         "embedding_matrix": "Embedding",
@@ -3087,6 +3116,64 @@ def build_progress_sensitivity_table(progress_df: pd.DataFrame | None, latex_roo
         lines.pop()
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "progress_sensitivity.tex")
+
+
+def build_dense_progress_trajectory_figure(progress_df: pd.DataFrame | None, latex_root: Path) -> None:
+    if progress_df is None or progress_df.empty:
+        return
+    need = {"step", "language", "repr_type", "axis_abs_projection_diff_mean"}
+    if not need.issubset(progress_df.columns):
+        return
+
+    df = progress_df.copy()
+    df = df[df["language"].isin(["FR", "ZH"])].copy()
+    if df.empty:
+        return
+
+    fig, axes = plt.subplots(1, 2, figsize=(7.2, 2.9), sharey=True)
+    order = ["FR", "ZH"]
+    markers = {"embedding_matrix": "o", "pre_lmhead_contextual": "s"}
+    linestyles = {"embedding_matrix": "--", "pre_lmhead_contextual": "-"}
+    labels = {"embedding_matrix": "Embedding", "pre_lmhead_contextual": "Contextual"}
+
+    for ax, lang in zip(axes, order):
+        sub = df[df["language"] == lang].copy()
+        for repr_type in ["embedding_matrix", "pre_lmhead_contextual"]:
+            rsub = sub[sub["repr_type"] == repr_type].sort_values("step")
+            if rsub.empty:
+                continue
+            color = pastel_lang_color(lang, lighten=0.52 if repr_type == "embedding_matrix" else 0.18)
+            ax.plot(
+                rsub["step"],
+                rsub["axis_abs_projection_diff_mean"],
+                marker=markers[repr_type],
+                linestyle=linestyles[repr_type],
+                linewidth=1.8,
+                markersize=4.5,
+                color=color,
+                markeredgecolor="black",
+                markeredgewidth=0.35,
+                label=labels[repr_type],
+            )
+        ax.set_title(f"EN vs EN+{lang}", fontsize=11)
+        ax.set_xlabel("Training step")
+        ax.set_xticks([500, 1000, 1500, 2000, 2500, 3000])
+        ax.grid(True, axis="y", alpha=0.25)
+        ax.grid(False, axis="x")
+
+    axes[0].set_ylabel(r"$D_{Axis}$")
+    handles, legend_labels = axes[0].get_legend_handles_labels()
+    fig.legend(
+        handles,
+        legend_labels,
+        loc="upper center",
+        bbox_to_anchor=(0.5, 1.08),
+        ncol=2,
+        frameon=False,
+    )
+    fig.subplots_adjust(top=0.78, wspace=0.12, bottom=0.23, left=0.11, right=0.99)
+    fig.savefig(latex_root / "figures" / "appendix_dense_progress_trajectory.pdf", dpi=450, bbox_inches="tight")
+    plt.close(fig)
 
 
 def build_main_multilingual_regression_figure_and_table(multilingual_root: Path, latex_root: Path) -> None:
@@ -3234,6 +3321,8 @@ def main() -> None:
     framework_df = pd.read_csv(framework_path) if framework_path.exists() else None
     progress_path = args.output_root / "en_ablation" / "bli_progress_sensitivity.csv"
     progress_df = pd.read_csv(progress_path) if progress_path.exists() else None
+    dense_progress_path = args.output_root / "en_ablation" / "bli_dense_progress_trajectory.csv"
+    dense_progress_df = pd.read_csv(dense_progress_path) if dense_progress_path.exists() else None
 
     strat_path = args.output_root / "en_ablation" / "bli_stratified_metrics.csv"
     strat_df = pd.read_csv(strat_path) if strat_path.exists() else None
@@ -3292,7 +3381,8 @@ def main() -> None:
     build_main_multilingual_regression_figure_and_table(args.multilingual_output_root, args.latex_root)
     build_same_language_controls_table(same_lang_df, args.latex_root)
     build_framework_holdout_table(framework_df, args.latex_root)
-    build_progress_sensitivity_table(progress_df, args.latex_root)
+    build_progress_sensitivity_table(dense_progress_df if dense_progress_df is not None else progress_df, args.latex_root)
+    build_dense_progress_trajectory_figure(dense_progress_df, args.latex_root)
     publish_numbered_assets(args.latex_root)
 
     write_report_meta(args.output_root)
