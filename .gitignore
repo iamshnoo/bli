@@ -32,23 +32,5 @@ venv/
 *.arrow
 *.ds
 
-# LaTeX build scratch
-latex/.build/
-latex/.build2/
-latex/.build*/
-latex/figures/
-latex/tables/
-latex/*.aux
-latex/*.bbl
-latex/*.blg
-latex/*.log
-latex/*.out
-latex/*.pdf
-latex/*.synctex.gz
-latex/*.fdb_latexmk
-latex/*.fls
-
-# Anonymous submission safety
-latex/main.tex
-latex/custom.bib
-latex/anthology.bib
+# Local manuscript workspace
+/latex/
