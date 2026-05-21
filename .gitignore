@@ -8,22 +8,30 @@ __pycache__/
 
 # Local env/cache
 .env
+.env.*
+!.env.example
 .venv/
 venv/
 .cache/
 /.tinytex/
+/tmp/
 
 # Heavy/generated training artifacts
 /logs/
 /models/
 /data/raw/
 /data/processed/
+/output/
 /outputs/
 /AGENT.md
 /CLAUDE_PLAN.md
 /.agents/
 
 # Common large binary artifacts
+*.key
+*.pem
+*.p12
+*.pfx
 *.pt
 *.bin
 *.safetensors

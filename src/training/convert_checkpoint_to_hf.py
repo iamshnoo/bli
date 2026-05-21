@@ -6,10 +6,36 @@ import os
 import sys
 from pathlib import Path
 
-DEFAULT_NANOTRON_ROOT = f"/scratch/{os.environ.get('USER', 'USER')}/pretrain/nanotron"
-NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", DEFAULT_NANOTRON_ROOT))
-if str(NANOTRON_ROOT) not in sys.path:
-    sys.path.insert(0, str(NANOTRON_ROOT))
+
+def _candidate_roots() -> list[Path]:
+    user = os.environ.get("USER", "USER")
+    explicit = os.environ.get("NANOTRON_ROOT")
+    candidates = []
+    if explicit:
+        candidates.append(Path(explicit))
+    candidates.extend(
+        [
+            Path(f"/scratch/{user}/pretrain/nanotron_full"),
+            Path(f"/scratch/{user}/pretrain/nanotron"),
+        ]
+    )
+    return candidates
+
+
+def _usable_nanotron_root() -> Path:
+    for root in _candidate_roots():
+        if (root / "src" / "nanotron" / "config" / "lighteval_config.py").exists():
+            return root
+    raise FileNotFoundError(
+        "Could not find a usable Nanotron checkout with src/nanotron/config/lighteval_config.py. "
+        "Set NANOTRON_ROOT to a complete checkout."
+    )
+
+
+NANOTRON_ROOT = _usable_nanotron_root()
+for candidate in [NANOTRON_ROOT, NANOTRON_ROOT / "src"]:
+    if str(candidate) not in sys.path:
+        sys.path.insert(0, str(candidate))
 
 # Nanotron conversion expects distributed env vars even for world-size 1.
 os.environ.setdefault("WORLD_SIZE", "1")

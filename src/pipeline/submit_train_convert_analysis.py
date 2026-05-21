@@ -683,6 +683,31 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
     for pair in layer_pair_specs:
         layer_cmd += ["--pair", pair]
 
+    norm_control_cmd = [
+        "python",
+        str(ROOT / "src/bli_analysis/run_norm_controlled_axis.py"),
+        "--probe-set",
+        str(ROOT / "data/probes/probe_sets.json"),
+        "--rep-dir",
+        str(OUTPUT_REV / "en_ablation/representations"),
+        "--models-json",
+        str(model_jsons["models_en_ablation.json"]),
+        "--layer-models-json",
+        str(model_jsons["models_layerwise.json"]),
+        "--out-csv",
+        str(OUTPUT_REV / "en_ablation/bli_norm_controlled_axis.csv"),
+        "--layer-out-csv",
+        str(OUTPUT_REV / "en_ablation/bli_norm_controlled_layerwise.csv"),
+        "--layer-cache-dir",
+        str(OUTPUT_REV / "en_ablation/layerwise_representations"),
+        "--batch-size",
+        "64",
+        "--device",
+        "cuda",
+    ]
+    for pair in layer_pair_specs:
+        norm_control_cmd += ["--pair", pair, "--layer-pair", pair]
+
     en_cmds = [
         shell_join(en_run_cmd),
         shell_join([
@@ -754,6 +779,7 @@ def submit_analysis_jobs(conv_ids: Dict[str, str | None], model_jsons: Dict[str,
             "cuda",
         ]),
         shell_join(layer_cmd),
+        shell_join(norm_control_cmd),
     ]
     en_script = analysis_job_header("bli2_en_analysis", log_dir, time_limit="2-00:00:00") + "\n".join(en_cmds) + "\n"
     active = active_jobs.get("bli2_en_analysis")

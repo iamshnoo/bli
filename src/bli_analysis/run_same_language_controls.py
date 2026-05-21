@@ -18,8 +18,9 @@ def parse_args() -> argparse.Namespace:
     p.add_argument(
         "--rep-dir",
         type=Path,
-        default=Path("outputs/revision/en_seed_null/representations"),
-        help="Directory containing cached representation .npy files from run_bli_pipeline.",
+        action="append",
+        default=[],
+        help="Directory containing cached representation .npy files from run_bli_pipeline. Repeat to search multiple caches.",
     )
     p.add_argument(
         "--out-csv",
@@ -72,22 +73,36 @@ def main() -> None:
     cultural_idx = [w2i[w] for w in probe["cultural_probe_words"] if w in w2i]
     axis_idx = [(w2i[a], w2i[b]) for a, b in probe["semantic_axes"] if a in w2i and b in w2i]
 
-    rep_dir = args.rep_dir
-    if not rep_dir.exists():
-        raise FileNotFoundError(f"Representation directory not found: {rep_dir}")
+    rep_dirs = args.rep_dir or [
+        Path("outputs/revision/en_seed_null/representations"),
+        Path("outputs/revision/en_ablation/representations"),
+    ]
+    rep_dirs = [p for p in rep_dirs if p.exists()]
+    if not rep_dirs:
+        raise FileNotFoundError("No representation directories found for same-language controls.")
 
     def _discover_models(eval_repr: str) -> list[str]:
         out = []
         suffix = f"__{eval_repr}.npy"
-        for p in rep_dir.glob(f"*{suffix}"):
-            name = p.name[: -len(suffix)]
-            out.append(name)
+        for rep_dir in rep_dirs:
+            for p in rep_dir.glob(f"*{suffix}"):
+                name = p.name[: -len(suffix)]
+                out.append(name)
         return sorted(set(out))
+
+    def _load_rep(model_name: str, eval_repr: str) -> np.ndarray | None:
+        fname = f"{model_name}__{eval_repr}.npy"
+        for rep_dir in rep_dirs:
+            path = rep_dir / fname
+            if path.exists():
+                return np.load(path)
+        return None
 
     # Preferred true seed-matched null groups.
     groups: list[tuple[str, str]] = [
-        ("EN-50M", r"^en_50m_s\d+$"),
-        ("EN-100M", r"^en_100m_s\d+$"),
+        # Include the original base run alongside the three explicit seed replicas.
+        ("EN-50M", r"^en_50m(?:_s\d+)?$"),
+        ("EN-100M", r"^en_100m(?:_s\d+)?$"),
     ]
 
     rows: list[dict[str, float | str]] = []
@@ -100,12 +115,10 @@ def main() -> None:
 
         for model_a, model_b in combinations(members, 2):
             for eval_repr in ["embedding_matrix", "pre_lmhead_contextual"]:
-                pa = rep_dir / f"{model_a}__{eval_repr}.npy"
-                pb = rep_dir / f"{model_b}__{eval_repr}.npy"
-                if not pa.exists() or not pb.exists():
+                mat_a = _load_rep(model_a, eval_repr)
+                mat_b = _load_rep(model_b, eval_repr)
+                if mat_a is None or mat_b is None:
                     continue
-                mat_a = np.load(pa)
-                mat_b = np.load(pb)
                 metrics = compute_metrics(
                     mat_a=mat_a,
                     mat_b=mat_b,
@@ -128,12 +141,10 @@ def main() -> None:
         model_a = "en_50m"
         model_b = "en_100m"
         for eval_repr in ["embedding_matrix", "pre_lmhead_contextual"]:
-            pa = rep_dir / f"en_50m__{eval_repr}.npy"
-            pb = rep_dir / f"en_100m__{eval_repr}.npy"
-            if not pa.exists() or not pb.exists():
+            mat_a = _load_rep(model_a, eval_repr)
+            mat_b = _load_rep(model_b, eval_repr)
+            if mat_a is None or mat_b is None:
                 continue
-            mat_a = np.load(pa)
-            mat_b = np.load(pb)
             metrics = compute_metrics(
                 mat_a=mat_a,
                 mat_b=mat_b,
