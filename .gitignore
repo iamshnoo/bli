@@ -42,5 +42,10 @@ venv/
 *.arrow
 *.ds
 
-# Local manuscript workspace
-/latex/
+# Local manuscript workspace: ignore generated manuscript artifacts, keep helper code
+/latex/*
+!/latex/scripts/
+!/latex/scripts/**
+/latex/scripts/__pycache__/
+/latex/scripts/**/*.pyc
+/latex/scripts/**/*.pyo
