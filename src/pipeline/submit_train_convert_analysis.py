@@ -24,6 +24,7 @@ NANOTRON_ROOT = Path(os.environ.get("NANOTRON_ROOT", str(DEFAULT_NANOTRON_ROOT))
 NANOTRON_ENV = Path(os.environ.get("NANOTRON_ENV", str(Path.home() / "nanotron-env")))
 HF_HOME_ROOT = Path(os.environ.get("HF_HOME", f"/scratch/{USER_NAME}/cache/hf_cache"))
 ENV_FILE = ROOT / ".env"
+ENABLE_WANDB = os.environ.get("BLI_ENABLE_WANDB", "0").strip().lower() in {"1", "true", "yes", "on"}
 
 LOG_ROOT = ROOT / "logs"
 SLURM_LOG_ROOT = LOG_ROOT / "slurm_logs"
@@ -408,7 +409,6 @@ def submit_training_jobs(dry_run: bool) -> Dict[str, dict]:
             "81920M",
             "--time_limit",
             "3-00:00:00",
-            "--enable-wandb",
             "--no-sanity",
             "--dp",
             "1",
@@ -462,6 +462,8 @@ def submit_training_jobs(dry_run: bool) -> Dict[str, dict]:
             "--extra_env",
             HF_EXTRA_ENV,
         ]
+        if ENABLE_WANDB:
+            cmd.append("--enable-wandb")
 
         if "dataset" in spec:
             cmd += ["--dataset", str(spec["dataset"])]

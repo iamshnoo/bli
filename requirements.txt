@@ -1,0 +1,31 @@
+# Install a CUDA-compatible torch wheel first when running on GPUs, for example:
+# pip install torch --index-url https://download.pytorch.org/whl/cu124
+
+accelerate>=0.33
+bitsandbytes>=0.43
+datatrove==0.3.0
+datasets==3.6.0
+liger-kernel>=0.5
+matplotlib>=3.8
+ninja>=1.11
+numba>=0.59
+numpy>=1.26
+pandas>=2.2
+peft>=0.11
+Pillow>=10.0
+protobuf>=4.25
+psutil>=5.9
+pybind11>=2.12
+safetensors>=0.4
+scikit-learn>=1.4
+scipy>=1.11
+seaborn>=0.13
+sentencepiece>=0.2
+torch>=2.6
+tqdm>=4.66
+transformers>=4.51
+triton>=3.2
+trl>=0.9
+unbabel-comet>=2.0.0
+wandb>=0.16
+wordfreq>=3.1

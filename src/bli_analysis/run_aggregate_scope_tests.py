@@ -122,7 +122,7 @@ def main() -> None:
             'statistic': float(n10),
             'p_value_greater': float(exact.pvalue) if exact is not None else float('nan'),
         })
-        # Theory vs random specificity in the behavioral readout.
+        # Theory vs random specificity in the forced-choice likelihood analysis.
         theory = sub[sub['condition'] == 'theory'][['language', 'probe', 'baseline', 'sign_agree_contextual']].rename(columns={'sign_agree_contextual': 'theory_ctx'})
         rand = sub[sub['condition'] == 'random'][['language', 'probe', 'baseline', 'sign_agree_contextual']].rename(columns={'sign_agree_contextual': 'random_ctx'})
         merged = theory.merge(rand, on=['language', 'probe', 'baseline'], how='inner')

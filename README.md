@@ -1,100 +1,55 @@
 # BLI
 
-Reproducible pipeline for multilingual BabyLM pretraining analysis: dataset prep, tokenization, train/convert, probing, metrics, plots, and paper PDF.
+Anonymous reproducibility snapshot for multilingual BabyLM pretraining analysis.
+The repository contains the code, configs, and small probe inputs needed to
+prepare data, train/convert checkpoints, run BLI analyses, and reproduce the
+tracked add-on evaluations.
 
-## Repo Layout
+## Layout
 
-- `src/`: pipeline, training utilities, probes, and analysis code
-- `slurm/`: cluster entry scripts (data prep, probe translation/QE, DAG submit)
-- `config/`: model registries and stage JSONs
-- `data/probes/`: probe inventory and multilingual translation CSV outputs
-- `latex/`: paper source (`main.tex`, `references.bib`, `tables/`, `figures/`, `scripts/`)
+- `src/`: pipeline, training utilities, probe builders, and analysis code.
+- `slurm/`: Slurm entrypoints for data prep, probe translation/QE, DAG submit,
+  output-likelihood analysis, and WorldValuesBench evaluation.
+- `config/` and `configs/`: model registries and stage JSONs.
+- `data/probes/`: probe inventory, multilingual translations, and small
+  association-case CSVs.
+- `requirements.txt`: Python package manifest for the analysis environment.
+- `REPRODUCIBILITY.md`: full setup, data, and rerun notes.
 
-## Prerequisites (Cluster Setup)
+Large or identifying local state is ignored: `.env`, `external/`, `data/raw/`,
+`models/`, `logs/`, `outputs/`, `output/`, and `latex/`.
 
-Set variables once:
+## Quick Setup
+
+Use Python 3.11. Install a CUDA-compatible PyTorch wheel first on GPU systems,
+then install the tracked dependencies:
 
 ```bash
-export HF_USER=<your-hf-username>
-export BLI_ROOT=/scratch/$USER/bli
-export NANOTRON_ROOT=/scratch/$USER/nanotron
-export NANOTRON_ENV=$HOME/nanotron-env
-```
-
-Environment bootstrap (CPU + GPU tasks use the same env):
-
-```bash
-echo "export HF_HOME=/scratch/$USER/cache/hf_cache" >> ~/.bashrc
-cat ~/.bashrc
-
-ml load gnu12/12.3.0
-ml load python/3.11.7-cx
-ml load cuda/12.4.0
-ml load git
-
-python -m venv ~/nanotron-env
-source ~/nanotron-env/bin/activate
+python -m venv "$HOME/nanotron-env"
+source "$HOME/nanotron-env/bin/activate"
 pip install --upgrade pip
 pip install torch --index-url https://download.pytorch.org/whl/cu124
-
-if [ ! -d "$NANOTRON_ROOT/.git" ]; then
-  git clone https://github.com/$HF_USER/nanotron.git "$NANOTRON_ROOT"
-fi
-cd "$NANOTRON_ROOT"
-pip install -e .
-pip install datasets==3.6.0 transformers numba wandb ninja triton datatrove==0.3.0
-
-wget https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.3/flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
-pip install flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
-rm flash_attn-2.7.3+cu12torch2.6cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
-
-pip install psutil pybind11
-pip install trl bitsandbytes peft liger-kernel rich
-pip install "unbabel-comet>=2.0.0"
-
-echo "export VIRTUAL_ENV=$HOME/nanotron-env" >> ~/.bashrc
-echo "export VIRTUAL_ENV" >> ~/.bashrc
-echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
-
-hf auth login
-wandb login
+pip install -r requirements.txt
 ```
 
-Flash-attention `.so` workaround note:
-- Follow: `https://github.com/Dao-AILab/flash-attention/issues/1708#issuecomment-3283420504`
-
-## TinyTeX / LaTeX Toolchain
-
-Install TinyTeX (local to your user):
+Copy `.env.example` to `.env` or export the same variables in your shell:
 
 ```bash
-curl -fsSL https://yihui.org/tinytex/install-bin-unix.sh | sh
-export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
-
-tlmgr install latexmk collection-latexrecommended collection-fontsrecommended \
-  collection-latexextra natbib url hyperref booktabs multirow siunitx xcolor
+export BLI_ROOT=/path/to/bli
+export NANOTRON_ROOT=/path/to/nanotron
+export NANOTRON_ENV=$HOME/nanotron-env
+export HF_HOME=/path/to/hf_cache
+export HF_TOKEN=<huggingface-token-for-gated-datasets>
+export BLI_ENABLE_WANDB=0
 ```
 
-Paper source in `latex/`:
-- `latex/main.tex`
-- `latex/anthology.bib`
-- `latex/custom.bib`
-- `latex/scripts/generate_artifacts.py`
-- `latex/scripts/sync_report.sh`
+Install Nanotron separately in `NANOTRON_ROOT`; the conversion and Slurm launcher
+code imports it from that checkout. Flash-attention is optional and should be
+installed with a wheel matching the local CUDA/PyTorch stack when needed.
 
-Generated artifacts (currently excluded from git):
-- `latex/tables/*.tex`
-- `latex/figures/*`
+## Datasets
 
-To regenerate them locally from analysis outputs:
-```bash
-python latex/scripts/generate_artifacts.py \
-  --output-root outputs/revision \
-  --multilingual-output-root outputs/multilingual_expansion \
-  --latex-root latex
-```
-
-## Hugging Face Datasets Used
+Hugging Face datasets used by the pipeline:
 
 - `BabyLM-community/babylm-eng`
 - `BabyLM-community/babylm-zho`
@@ -106,8 +61,8 @@ python latex/scripts/generate_artifacts.py \
 - `BabyLM-community/babylm-ind`
 - `BabyLM-community/babylm-deu`
 
-English controls:
-- `eng_shared` and `eng_disjoint` are deterministic partitions from `BabyLM-community/babylm-eng`.
+English controls `eng_shared` and `eng_disjoint` are deterministic partitions
+from `BabyLM-community/babylm-eng`.
 
 ## End-to-End Run
 
@@ -117,15 +72,14 @@ bash src/pipeline/submit_full_rebuild.sh
 ```
 
 This submits:
-1. `slurm/run_data_prep.sbatch` (CPU, `normal`): partition EN, tokenize datasets, rebuild probes.
-2. `slurm/run_probe_translation_qe.sbatch` (GPU): translate probes + COMETKiwi QE (`Unbabel/wmt22-cometkiwi-da`).
-3. `slurm/run_submit_dag.sbatch` (CPU): launch train -> convert -> analysis -> postprocess chain.
 
-## Manual Step Order
+1. `slurm/run_data_prep.sbatch`: partition English, tokenize datasets, rebuild probes.
+2. `slurm/run_probe_translation_qe.sbatch`: translate probes and run COMETKiwi QE.
+3. `slurm/run_submit_dag.sbatch`: launch train -> convert -> analysis -> postprocess jobs.
 
-1. Data prep + tokenization + probe inventory:
+## Manual Run Order
+
 ```bash
-cd "$BLI_ROOT"
 python src/pipeline/prepare_babylm_data.py \
   --tokenizer meta-llama/Llama-3.2-1B \
   --n-tasks 16 \
@@ -133,10 +87,7 @@ python src/pipeline/prepare_babylm_data.py \
   --probe-cultural-target 1000 \
   --probe-axis-target 50 \
   --probe-negative-target 100
-```
 
-2. Multilingual probe translation + QE:
-```bash
 python src/probes/build_multilingual_probes.py \
   --probe-set data/probes/probe_sets.json \
   --output-dir data/probes \
@@ -145,31 +96,33 @@ python src/probes/build_multilingual_probes.py \
   --batch-size 32 \
   --comet-batch-size 64 \
   --device cuda
-```
 
-3. Submit training/conversion/analysis DAG:
-```bash
 python src/pipeline/submit_train_convert_analysis.py
 ```
 
-4. Build paper artifacts + PDF:
+## Add-On Analyses
+
+Regenerate the expanded output-likelihood case set:
+
 ```bash
-python src/pipeline/build_language_ratio_summary.py \
-  --revision-root outputs/revision \
-  --multilingual-root outputs/multilingual_expansion \
-  --output outputs/multilingual_expansion/language_ratio_summary.csv
-
-python latex/scripts/generate_artifacts.py \
-  --output-root outputs/revision \
-  --multilingual-output-root outputs/multilingual_expansion \
-  --latex-root latex
-
-bash latex/scripts/sync_report.sh
+python src/bli_analysis/build_output_likelihood_association_cases_expanded.py
 ```
 
-## Key Outputs
+Run output-likelihood association:
 
-- `latex/main.pdf`
+```bash
+sbatch slurm/run_output_likelihood_association.sbatch
+```
+
+Run WorldValuesBench evaluation after placing the benchmark checkout under
+`$BLI_ROOT/external/WorldValuesBench` or setting `WORLDVALUESBENCH_ROOT`:
+
+```bash
+sbatch slurm/run_worldvaluebench_bli.sbatch
+```
+
+## Key Generated Outputs
+
 - `outputs/revision/en_ablation/`
 - `outputs/revision/zh_shared_language/`
 - `outputs/revision/fr_shared_language/`
@@ -179,10 +132,12 @@ bash latex/scripts/sync_report.sh
 - `data/probes/translations_*.csv`
 - `data/probes/translation_summary.json`
 
+Generated outputs and checkpoints are intentionally ignored by git.
+
 ## Monitoring
 
 ```bash
-squeue -u $USER
-sacct -u $USER --starttime today --format=JobID,JobName,State,Elapsed,ExitCode
+squeue -u "$USER"
+sacct -u "$USER" --starttime today --format=JobID,JobName,State,Elapsed,ExitCode
 ls -lt "$BLI_ROOT"/logs/slurm_logs
 ```
