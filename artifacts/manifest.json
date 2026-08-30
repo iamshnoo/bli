@@ -6,146 +6,146 @@
     {
       "path": "artifacts/figures/fig1.pdf",
       "source": "latex/emnlp/anon/figures/fig1.pdf",
-      "bytes": 1337480,
-      "sha256": "86743146af4e177ebf2de7e412d0e3fbd99e97da92b94c597c3d729e00221aeb"
+      "bytes": 1337492,
+      "sha256": "5fd2e027c0217a1680515d5c13d075278ee18c6fd56b975318ac96adc60be1c6"
     },
     {
       "path": "artifacts/figures/fig10-appendix-category-heatmap.pdf",
       "source": "latex/emnlp/anon/figures/fig10-appendix-category-heatmap.pdf",
-      "bytes": 35109,
-      "sha256": "ce06cbf950aa4ad88c14ddc57615104852d301d2196befacca61bdcd2c6c76b8"
+      "bytes": 32665,
+      "sha256": "37e52669437027270bb693a18fc0dd8a101d27dc935259fc3b4d67015260d5e8"
     },
     {
       "path": "artifacts/figures/fig11-appendix-multilingual-overview.pdf",
       "source": "latex/emnlp/anon/figures/fig11-appendix-multilingual-overview.pdf",
-      "bytes": 46444,
-      "sha256": "17a3478885068e677be4c23dd877c52cac107ea1a911edd23cd2f1233e39bf28"
+      "bytes": 46448,
+      "sha256": "47504f1d29cbab07b959759468f30f1ea7c53a47ae95a8a932a46d5a6809e29e"
     },
     {
       "path": "artifacts/figures/fig12-typology-regression-scatter.pdf",
       "source": "latex/emnlp/anon/figures/fig12-typology-regression-scatter.pdf",
-      "bytes": 25294,
-      "sha256": "473437de440df35a6111f5084688fb9531b9ee806bd4bf0fdb52d4f712cef996"
+      "bytes": 25285,
+      "sha256": "66e7a7cebefeddc006a3c8f096c6c46766c0d418a59146cda419dc685194a351"
     },
     {
       "path": "artifacts/figures/fig13-appendix-l2-signed-hotspots-panel1.pdf",
       "source": "latex/emnlp/anon/figures/fig13-appendix-l2-signed-hotspots-panel1.pdf",
-      "bytes": 24970,
-      "sha256": "c4aafd8a86c100df13098e5bc92689ce5b300db9c19e253068a921c4373246d5"
+      "bytes": 25080,
+      "sha256": "c3a49dea37b0f75caf1a76671f6936da409316ff42ec15c69d172e66a7b31bc1"
     },
     {
       "path": "artifacts/figures/fig14-appendix-l2-signed-hotspots-panel2.pdf",
       "source": "latex/emnlp/anon/figures/fig14-appendix-l2-signed-hotspots-panel2.pdf",
-      "bytes": 25154,
-      "sha256": "8db18a20beb3270a18d460fba6fc1b3dc4af318666e37c5a714814c05eaf8cd0"
+      "bytes": 25298,
+      "sha256": "d7a5745ad62c7c43fa79034a8c0eed2400eccef0ff5e8aedc3dbbb895a5ba257"
     },
     {
       "path": "artifacts/figures/fig15-appendix-exp1-divergence-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig15-appendix-exp1-divergence-100m.pdf",
-      "bytes": 72236,
-      "sha256": "2dafa902d73061dbdb59fe4c9cb5d8980cb6243fd4e630e05223658d3af1e568"
+      "bytes": 21135,
+      "sha256": "5f8a22174ac4ff4dab9398323ea007f80c3357cde305caa42c49c526cc044903"
     },
     {
       "path": "artifacts/figures/fig16-appendix-exp2-overlap-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig16-appendix-exp2-overlap-100m.pdf",
-      "bytes": 26597,
-      "sha256": "26b066fb2b7f59e23ca8db7454448e217361b317923c043eb3208804911c35dc"
+      "bytes": 21787,
+      "sha256": "fa4eecb20f4f31e8cab92e7c3b08a98d7c8e5931731db81e56de7fc3601b4a96"
     },
     {
       "path": "artifacts/figures/fig17-appendix-multilingual-validation-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig17-appendix-multilingual-validation-100m.pdf",
-      "bytes": 25843,
-      "sha256": "ae8fa0418ab15b38cb89b838a3515354e9cf6870496a6388d64bb296d9391afa"
+      "bytes": 25949,
+      "sha256": "55955ffd130cf8a8cae053330d058f9a26e892f9837639f979f57c996368368c"
     },
     {
       "path": "artifacts/figures/fig18-appendix-contextual-vs-embedding-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig18-appendix-contextual-vs-embedding-100m.pdf",
-      "bytes": 26659,
-      "sha256": "22ac80bebce198d27855cbeb1fed45227f0396b266cb94a922258e88276b8d99"
+      "bytes": 21756,
+      "sha256": "219e9ce868fb906b6b58be6fd40ba40867ff97e46b62c18221d4982bf140b843"
     },
     {
       "path": "artifacts/figures/fig19-appendix-layerwise-axis-divergence-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig19-appendix-layerwise-axis-divergence-100m.pdf",
-      "bytes": 22178,
-      "sha256": "6750da778a91d1517770cc4c274d6e4b5c91aa02cf42f6e237c4fa0524a112d2"
+      "bytes": 22435,
+      "sha256": "de268e31b1acbe1f61c89ef84a1d2a40a9ab84a1fae18d689e9f74dd71809b13"
     },
     {
       "path": "artifacts/figures/fig2-exp1-divergence.pdf",
       "source": "latex/emnlp/anon/figures/fig2-exp1-divergence.pdf",
-      "bytes": 28793,
-      "sha256": "a81824a342068d5d43e7a67120c894e7b13a17b0b131eaef388e3951a5ca9fee"
+      "bytes": 25568,
+      "sha256": "daa00a03ff9ee5db01fff9d5777292153043a2015195e817875b87d878e5f401"
     },
     {
       "path": "artifacts/figures/fig20-appendix-alignment-method-comparison-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig20-appendix-alignment-method-comparison-100m.pdf",
-      "bytes": 27475,
-      "sha256": "99064c37d00ba3ed9a8874e5487896a533e1caf281f2fa866f8eb86b421a9292"
+      "bytes": 27363,
+      "sha256": "4d41f85a3dc257a9cccd2f9509406c7413597b31c67faa0e5e78adbe98d98051"
     },
     {
       "path": "artifacts/figures/fig21-appendix-signed-axis-shifts-100m.pdf",
       "source": "latex/emnlp/anon/figures/fig21-appendix-signed-axis-shifts-100m.pdf",
-      "bytes": 31373,
-      "sha256": "51dd972709f3d06b0cec135c2a122023c19fbc9cbbbd06c8ecf009790ad84546"
+      "bytes": 24727,
+      "sha256": "f19a009bdd3dc5f054602a466835bd55a158fcd7c0d3c20be66a3a7329c3b8f9"
     },
     {
       "path": "artifacts/figures/fig22-appendix-dense-progress-trajectory.pdf",
       "source": "latex/emnlp/anon/figures/fig22-appendix-dense-progress-trajectory.pdf",
-      "bytes": 24923,
-      "sha256": "dcebaf457c13c45fb9028795ecc9827f3b7c948ab961f2e3065835ecaf637d17"
+      "bytes": 24900,
+      "sha256": "dcf1f86cea8b5c75a4d55bc478fc7135f41758ea8580f69c4b34d550c53811d3"
     },
     {
       "path": "artifacts/figures/fig23-appendix-norm-controlled-layerwise.pdf",
       "source": "latex/emnlp/anon/figures/fig23-appendix-norm-controlled-layerwise.pdf",
-      "bytes": 28080,
-      "sha256": "21bb51e85c2fd813c09ba1453328ee973aca17aaef9d2a577b02f39bce16b17a"
+      "bytes": 28005,
+      "sha256": "6d7074d13c38a204ca41a36b943a6e019fb0effa0754878acda4c823df414eae"
     },
     {
       "path": "artifacts/figures/fig3-exp2-overlap.pdf",
       "source": "latex/emnlp/anon/figures/fig3-exp2-overlap.pdf",
-      "bytes": 24185,
-      "sha256": "a10b0217066fa5fdb49ebcc0f3966092a08bb77a67f4c926346bf64ae627cdeb"
+      "bytes": 20907,
+      "sha256": "feb659580b3345c19364abbd43c2389e486b1ed0dfd027a2a7d23c665f20bafc"
     },
     {
       "path": "artifacts/figures/fig4-multilingual-validation.pdf",
       "source": "latex/emnlp/anon/figures/fig4-multilingual-validation.pdf",
-      "bytes": 26177,
-      "sha256": "b7fa9681f0709efe21614cab507617f8130fbc2f5439118268cfd7772b800095"
+      "bytes": 26278,
+      "sha256": "d632a716ea8c8029380f3ff0797266f074727ac037ed31da9d997ab98093567d"
     },
     {
       "path": "artifacts/figures/fig5-contextual-vs-embedding-ratio.pdf",
       "source": "latex/emnlp/anon/figures/fig5-contextual-vs-embedding-ratio.pdf",
-      "bytes": 26403,
-      "sha256": "8f7efd4fd34a2c2702805faaa42b6ec3024f046e862f1a7f0a8518f157c2f5e1"
+      "bytes": 21590,
+      "sha256": "ece44c5c0ce6abbda8f11d38b10a398e7db8141604a84e557e33c3613789da11"
     },
     {
       "path": "artifacts/figures/fig6-signed-axis-shifts.pdf",
       "source": "latex/emnlp/anon/figures/fig6-signed-axis-shifts.pdf",
-      "bytes": 31836,
-      "sha256": "90ab092e9d7d3b9b8def21b605796a7db4632bc4237f41ec87b2bbc047be5dc8"
+      "bytes": 24829,
+      "sha256": "ec56ca1fe2bf8146c783b9f22f8af494dc8b2686c39edc595e2e948e994226a7"
     },
     {
       "path": "artifacts/figures/fig7-layerwise-axis-divergence.pdf",
       "source": "latex/emnlp/anon/figures/fig7-layerwise-axis-divergence.pdf",
-      "bytes": 22182,
-      "sha256": "f03b7164fb4c6febcc2cfc786efe5cf9fd2d5ced829952e5026b4e267cb5468e"
+      "bytes": 22467,
+      "sha256": "bc754eaa2b1ae1f24285c3fba406b6ed516476fbe5777e03d4f85e33f558f318"
     },
     {
       "path": "artifacts/figures/fig8-alignment-method-comparison.pdf",
       "source": "latex/emnlp/anon/figures/fig8-alignment-method-comparison.pdf",
-      "bytes": 27623,
-      "sha256": "1545a48b877c5788082888047645b6799bc1894397a6f758af36540c5a7699aa"
+      "bytes": 27352,
+      "sha256": "99de150176e1971554a071e2727d7863cba4c9842929100284b689484f018794"
     },
     {
       "path": "artifacts/figures/fig8-dense-progress-summary.pdf",
       "source": "latex/emnlp/anon/figures/fig8-dense-progress-summary.pdf",
-      "bytes": 18403,
-      "sha256": "2858db5a91da9c69a1556d04e5829781d4fcf79a63186fd61343368b94210b91"
+      "bytes": 18368,
+      "sha256": "9901d730a722db18f0cc38476cab5c6e3c08edb40193b4a9a4ef8bf32ad5b055"
     },
     {
       "path": "artifacts/figures/fig9-appendix-perhead-heatmap.pdf",
       "source": "latex/emnlp/anon/figures/fig9-appendix-perhead-heatmap.pdf",
-      "bytes": 37784,
-      "sha256": "934f27f68262dd44cd245887c961cba809b15482acce65e9cd726b0a89cf03ed"
+      "bytes": 26317,
+      "sha256": "d85e0ed67772743b0b866ed52ba42236fe7e699b5373c72bd188764a3deab0b4"
     },
     {
       "path": "artifacts/results/en_ablation/bli_alignment_method_comparison.csv",

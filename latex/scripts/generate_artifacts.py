@@ -260,7 +260,7 @@ def build_control_matrix_figure(en: pd.DataFrame, latex_root: Path) -> None:
         r"All values are median contextual $\Delta D_{Axis}$ across eight EN vs EN+L2 families after English-anchor alignment.",
         ha="left",
         va="top",
-        fontsize=7.6,
+        fontsize=10.0,
         color=MUTED,
     )
 
@@ -333,7 +333,7 @@ def build_control_matrix_figure(en: pd.DataFrame, latex_root: Path) -> None:
             transform=ax.transAxes,
             ha="center",
             va="center",
-            fontsize=6.9,
+            fontsize=10.0,
             fontweight="bold",
             color=INK,
         )
@@ -379,7 +379,7 @@ def build_control_matrix_figure(en: pd.DataFrame, latex_root: Path) -> None:
                 transform=ax.transAxes,
                 ha=aligns[cidx],
                 va="center",
-                fontsize=6.55 if cidx != 4 else 6.25,
+                fontsize=10.0,
                 color=colors_txt[cidx],
                 fontweight=weights[cidx],
                 linespacing=1.03,
@@ -851,11 +851,11 @@ def build_exp1_tables_fig(
                 f"{value:.2f}",
                 ha="center",
                 va="bottom",
-                fontsize=7.4,
+                fontsize=10.0,
                 color="#222222",
             )
         ax.set_xticks(x)
-        ax.set_xticklabels(pdf["lang"].tolist(), fontsize=8.8, fontweight="bold")
+        ax.set_xticklabels(pdf["lang"].tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="x")
         ax.set_xlabel("Language")
         ax.set_ylabel(r"EN-null-centered contextual $D_{Axis}$")
@@ -866,7 +866,7 @@ def build_exp1_tables_fig(
             transform=ax.transAxes,
             ha="left",
             va="top",
-            fontsize=8.0,
+            fontsize=10.0,
             color="#4f5965",
             bbox=dict(boxstyle="round,pad=0.20", facecolor="white", edgecolor="#c5ccd5", linewidth=0.6),
         )
@@ -885,7 +885,7 @@ def build_exp1_tables_fig(
                 frameon=True,
                 edgecolor="#8a8a8a",
                 framealpha=0.96,
-                fontsize=8.0,
+                fontsize=10.0,
             )
         fig.tight_layout(pad=0.35)
         fig.subplots_adjust(left=0.14)
@@ -957,7 +957,7 @@ def build_exp1_tables_fig(
                 f"{yi:.2f}",
                 ha="center",
                 va="bottom",
-                fontsize=6.4,
+                fontsize=10.0,
                 color=INK,
                 fontweight="bold",
                 bbox=dict(boxstyle="round,pad=0.08", facecolor=PAPER_BG, edgecolor="none", alpha=0.88),
@@ -968,10 +968,10 @@ def build_exp1_tables_fig(
         ax.set_ylim(ymin - 0.06, max(0.62, ymax * 1.22))
         ax.set_xlim(-0.34, len(CONTROL_SETTINGS) - 1 + 0.34)
         ax.set_xticks(x)
-        ax.set_xticklabels(["EN\nshared", "EN\ndisjoint", "Compute\nshared", "Compute\ndisjoint"], fontsize=6.2, color=INK)
-        ax.set_ylabel(r"Contextual $\Delta D_{Axis}$", fontsize=7.2, color=INK)
+        ax.set_xticklabels(["EN\nshared", "EN\ndisjoint", "Compute\nshared", "Compute\ndisjoint"], fontsize=10.0, color=INK)
+        ax.set_ylabel(r"Contextual $\Delta D_{Axis}$", fontsize=10.0, color=INK)
         ax.set_xlabel("")
-        ax.tick_params(axis="y", labelsize=6.4)
+        ax.tick_params(axis="y", labelsize=10.0)
         ax.legend(
             loc="upper center",
             bbox_to_anchor=(0.5, 0.99),
@@ -979,7 +979,7 @@ def build_exp1_tables_fig(
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=6.2,
+            fontsize=10.0,
             handlelength=1.8,
         )
         fig.tight_layout(pad=0.45)
@@ -1014,9 +1014,9 @@ def build_exp1_tables_fig(
                 pretty_pair = en_pair_label(ma, mb)
                 for _, rr in pair_df.iterrows():
                     metric_short = {
-                        "jaccard_at_k_mean": r"$D_{NN}$",
-                        "frobenius_cultural_similarity": r"$D_{Struct}$",
-                        "axis_abs_projection_diff_mean": r"$D_{Axis}$",
+                        "jaccard_at_k_mean": r"$\Delta D_{NN}$",
+                        "frobenius_cultural_similarity": r"$\Delta D_{Struct}$",
+                        "axis_abs_projection_diff_mean": r"$\Delta D_{Axis}$",
                     }[rr["metric"]]
                     lines.append(
                         f"{pretty_rt} & {pretty_pair} & {metric_short} & {_fmt(rr['mean'])} [{_fmt(rr['ci_low'])}, {_fmt(rr['ci_high'])}] \\\\")
@@ -1051,9 +1051,9 @@ def build_exp1_tables_fig(
                 first_metric = True
                 for _, rr in pair_df.iterrows():
                     metric_short = {
-                        "jaccard_at_k_mean": r"$D_{NN}$",
-                        "frobenius_cultural_similarity": r"$D_{Struct}$",
-                        "axis_abs_projection_diff_mean": r"$D_{Axis}$",
+                        "jaccard_at_k_mean": r"$\Delta D_{NN}$",
+                        "frobenius_cultural_similarity": r"$\Delta D_{Struct}$",
+                        "axis_abs_projection_diff_mean": r"$\Delta D_{Axis}$",
                     }[rr["metric"]]
                     left_pair = pair_lbl if first_metric else ""
                     ls.append(
@@ -1114,7 +1114,7 @@ def build_exp1_negative_controls_table(neg_df: pd.DataFrame | None, latex_root: 
     lines = [
         r"\begin{tabular}{@{}llrrr@{}}",
         r"\toprule",
-        r"Representation & Group & $D_{NN}$ & $D_{Struct}$ & $D_{Axis}$ \\",
+        r"Representation & Group & $\Delta D_{NN}$ & $\Delta D_{Struct}$ & $\Delta D_{Axis}$ \\",
         r"\midrule",
     ]
     for rt in ["embedding_matrix", "pre_lmhead_contextual"]:
@@ -1285,14 +1285,14 @@ def build_exp2_table_fig(
                 f"{delta:+.2f}",
                 va="center",
                 ha="left",
-                fontsize=7.6,
+                fontsize=10.0,
                 color="#333333",
             )
         if ref is not None:
             ax.axvspan(ref_low, ref_high, color=OVERLAP_REF_BG, alpha=0.52, zorder=0)
             ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.1, zorder=0)
         ax.set_yticks(y)
-        ax.set_yticklabels(odf["lang"].tolist(), fontsize=9, fontweight="bold")
+        ax.set_yticklabels(odf["lang"].tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="y")
         ax.set_ylabel("Language")
         ax.invert_yaxis()
@@ -1319,7 +1319,7 @@ def build_exp2_table_fig(
             ncol=3 if ref is not None else 2,
             frameon=True,
             edgecolor="gray",
-            fontsize=8.8,
+            fontsize=10.0,
         )
         fig.tight_layout(rect=(0.0, 0.0, 1.0, 0.93))
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
@@ -1401,9 +1401,9 @@ def build_exp2_table_fig(
         ax.set_ylim(-0.55, 3.92)
         ax.invert_yaxis()
         ax.set_yticks(range(len(row_order)))
-        ax.set_yticklabels([lbl for _, _, lbl in row_order], fontsize=6.3, color=INK)
-        ax.set_xlabel(r"Disjoint minus shared $\Delta D_{Axis}$", fontsize=7.0, color=INK)
-        ax.tick_params(axis="x", labelsize=6.2)
+        ax.set_yticklabels([lbl for _, _, lbl in row_order], fontsize=10.0, color=INK)
+        ax.set_xlabel(r"Disjoint minus shared $\Delta D_{Axis}$", fontsize=10.0, color=INK)
+        ax.tick_params(axis="x", labelsize=10.0)
         ax.legend(
             handles=[
                 plt.Line2D(
@@ -1424,7 +1424,7 @@ def build_exp2_table_fig(
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=5.6,
+            fontsize=10.0,
             borderpad=0.24,
             handlelength=1.25,
             labelspacing=0.28,
@@ -1521,7 +1521,7 @@ def build_appendix_daxis_interpretation(en: pd.DataFrame, latex_root: Path) -> N
     lines = [
         r"\begin{tabular}{@{}lrrr@{}}",
         r"\toprule",
-        r"Pair & Embedding $D_{Axis}$ & Contextual $D_{Axis}$ & Ctx.-Emb. \\",
+        r"Pair & Emb. & Ctx. & Difference \\",
         r"\midrule",
     ]
     for _, r in piv.iterrows():
@@ -1687,23 +1687,23 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
                 f"+{rr['delta_ctx_minus_emb']:.2f}",
                 va="center",
                 ha="left",
-                fontsize=6.0,
+                fontsize=10.0,
                 color="#3a3a3a",
             )
         xmax = float(max(plot_df["contextual_axis"].max(), plot_df["embedding_axis"].max()))
         xmin = float(min(0.0, plot_df["embedding_axis"].min()))
         ax.set_xlim(xmin - 0.05 * max(0.5, xmax), xmax * 1.20)
         ax.set_yticks(y)
-        ax.set_yticklabels(plot_df["lang"].str.upper().tolist(), fontsize=6.5, fontweight="bold")
+        ax.set_yticklabels(plot_df["lang"].str.upper().tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
         ax.set_xlabel(
             f"EN-null-centered $D_{{Axis}}$ ({base_lbl}, shared docs)",
             labelpad=4,
-            fontsize=6.8,
+            fontsize=10.0,
         )
-        ax.set_ylabel("Language", fontsize=7.0)
-        ax.tick_params(axis="x", labelsize=6.2)
+        ax.set_ylabel("Language", fontsize=10.0)
+        ax.tick_params(axis="x", labelsize=10.0)
         ax.legend(
             handles=[
                 plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Token embedding", markersize=6),
@@ -1716,7 +1716,7 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=6.0,
+            fontsize=10.0,
         )
         fig.tight_layout(pad=0.35)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
@@ -1728,7 +1728,7 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
     lines = [
         r"\begin{tabular}{@{}lrrr@{}}",
         r"\toprule",
-        r"Pair & $D_A$ (Embedding) & $D_A$ (Contextual) & Ctx.-Emb. \\",
+        r"Pair & $\Delta D_A$ (Embedding) & $\Delta D_A$ (Contextual) & Ctx.-Emb. \\",
         r"\midrule",
     ]
     for _, r in rdf.iterrows():
@@ -1859,22 +1859,22 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
                 f"{rr['delta_affine_minus_orth']:+.2f}",
                 va="center",
                 ha="left",
-                fontsize=6.0,
+                fontsize=10.0,
                 color="#3a3a3a",
             )
         xmax = float(np.max(np.r_[piv["Orthogonal"].to_numpy(), piv["Affine"].to_numpy()]))
         xmin = float(min(0.0, np.min(np.r_[piv["Orthogonal"].to_numpy(), piv["Affine"].to_numpy()])))
         ax.set_xlim(xmin - 0.05 * max(0.3, xmax), xmax * 1.18)
         ax.set_yticks(y)
-        ax.set_yticklabels(piv["lang"].astype(str).str.upper().tolist(), fontsize=6.5, fontweight="bold")
+        ax.set_yticklabels(piv["lang"].astype(str).str.upper().tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
         ax.set_xlabel(
-            f"Contextual $D_{{Axis}}$ by alignment ({model_a.replace('en_', 'EN-').upper()}, shared docs)",
-            fontsize=6.8,
+            f"Contextual $\Delta D_{{Axis}}$ by alignment ({model_a.replace('en_', 'EN-').upper()}, shared docs)",
+            fontsize=10.0,
         )
-        ax.set_ylabel("Language", fontsize=7.0)
-        ax.tick_params(axis="x", labelsize=6.2)
+        ax.set_ylabel("Language", fontsize=10.0)
+        ax.tick_params(axis="x", labelsize=10.0)
         ax.legend(
             handles=[
                 plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Orthogonal", markersize=6),
@@ -1887,7 +1887,7 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=6.0,
+            fontsize=10.0,
         )
         fig.tight_layout(pad=0.35)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
@@ -1898,9 +1898,9 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
 
     # Appendix table with compact numeric summary.
     metrics = [
-        ("jaccard_at_k_mean", r"$D_{NN}$"),
-        ("frobenius_cultural_similarity", r"$D_{Struct}$"),
-        ("axis_abs_projection_diff_mean", r"$D_{Axis}$"),
+        ("jaccard_at_k_mean", r"$\Delta D_{NN}$"),
+        ("frobenius_cultural_similarity", r"$\Delta D_{Struct}$"),
+        ("axis_abs_projection_diff_mean", r"$\Delta D_{Axis}$"),
     ]
     lines = [
         r"\begin{tabular}{@{}llllrr@{}}",
@@ -2136,7 +2136,7 @@ def build_exp4_signed_axis_scatter(
                                     transform=ax.get_xaxis_transform(),
                                     ha="left",
                                     va="bottom",
-                                    fontsize=7.5,
+                                    fontsize=10.0,
                                     color=MUTED,
                                 )
                                 ax.text(
@@ -2146,7 +2146,7 @@ def build_exp4_signed_axis_scatter(
                                     transform=ax.get_xaxis_transform(),
                                     ha="right",
                                     va="bottom",
-                                    fontsize=7.5,
+                                    fontsize=10.0,
                                     color=MUTED,
                                 )
                                 ax.text(
@@ -2156,7 +2156,7 @@ def build_exp4_signed_axis_scatter(
                                     transform=ax.get_xaxis_transform(),
                                     ha="center",
                                     va="bottom",
-                                    fontsize=6.7,
+                                    fontsize=10.0,
                                     color=MUTED,
                                 )
                                 lang_offsets = {
@@ -2207,7 +2207,7 @@ def build_exp4_signed_axis_scatter(
                                         f"{neg} / {pos} / {zero}",
                                         ha="center",
                                         va="center",
-                                        fontsize=7.0,
+                                        fontsize=10.0,
                                         color=INK,
                                         bbox=dict(
                                             boxstyle="round,pad=0.18,rounding_size=0.06",
@@ -2222,17 +2222,17 @@ def build_exp4_signed_axis_scatter(
                                 ax.set_ylim(-0.58, n_rows - 0.35)
                                 ax.invert_yaxis()
                                 ax.set_yticks(range(n_rows))
-                                ax.set_yticklabels(h.index, fontsize=8.0, color=INK)
+                                ax.set_yticklabels(h.index, fontsize=10.0, color=INK)
                                 for tick in ax.get_yticklabels():
                                     tick.set_linespacing(0.88)
                                 ax.tick_params(axis="y", length=0, pad=3)
                                 ax.set_xticks([-vmax, -vmax / 2.0, 0.0, vmax / 2.0, vmax])
                                 ax.set_xticklabels(
                                     [f"{-vmax:.2f}", f"{-vmax/2:.2f}", "0", f"{vmax/2:.2f}", f"{vmax:.2f}"],
-                                    fontsize=7.3,
+                                    fontsize=10.0,
                                     color=INK,
                                 )
-                                ax.set_xlabel(r"Signed contextual shift $\Delta s$ (EN-only minus EN+L2)", fontsize=8.0, color=INK, labelpad=4)
+                                ax.set_xlabel(r"Signed contextual shift $\Delta s$ (EN-only minus EN+L2)", fontsize=10.0, color=INK, labelpad=4)
                                 leg_handles = [
                                     plt.Line2D(
                                         [0],
@@ -2255,7 +2255,7 @@ def build_exp4_signed_axis_scatter(
                                     facecolor="white",
                                     edgecolor="#c5ccd7",
                                     framealpha=0.96,
-                                    fontsize=7.0,
+                                    fontsize=10.0,
                                     handletextpad=0.20,
                                     columnspacing=0.58,
                                 )
@@ -2362,7 +2362,7 @@ def build_exp4_signed_axis_scatter(
                                                 transform=ax100.get_xaxis_transform(),
                                                 ha="left",
                                                 va="bottom",
-                                                fontsize=7.2,
+                                                fontsize=10.0,
                                                 color=MUTED,
                                             )
                                             ax100.text(
@@ -2372,7 +2372,7 @@ def build_exp4_signed_axis_scatter(
                                                 transform=ax100.get_xaxis_transform(),
                                                 ha="right",
                                                 va="bottom",
-                                                fontsize=7.2,
+                                                fontsize=10.0,
                                                 color=MUTED,
                                             )
                                             for i_row in range(n_rows100):
@@ -2412,23 +2412,23 @@ def build_exp4_signed_axis_scatter(
                                             ax100.set_ylim(-0.6, n_rows100 - 0.35)
                                             ax100.invert_yaxis()
                                             ax100.set_yticks(range(n_rows100))
-                                            ax100.set_yticklabels(h100.index, fontsize=7.6, color=INK)
+                                            ax100.set_yticklabels(h100.index, fontsize=10.0, color=INK)
                                             for tick in ax100.get_yticklabels():
                                                 tick.set_linespacing(0.90)
                                             ax100.set_xlabel(
                                                 "Signed contextual shift $\\Delta s$ (EN-100M minus EN+L2)",
-                                                fontsize=8.0,
+                                                fontsize=10.0,
                                                 color=INK,
                                                 labelpad=4,
                                             )
                                             ax100.set_xticks([-vmax100, -vmax100 / 2, 0.0, vmax100 / 2, vmax100])
                                             ax100.set_xticklabels(
                                                 [f"{-vmax100:.2f}", f"{-vmax100/2:.2f}", "0", f"{vmax100/2:.2f}", f"{vmax100:.2f}"],
-                                                fontsize=7.3,
+                                                fontsize=10.0,
                                                 color=INK,
                                             )
                                             ax100.tick_params(axis="y", length=0, pad=3)
-                                            ax100.tick_params(axis="x", labelsize=7.3)
+                                            ax100.tick_params(axis="x", labelsize=10.0)
                                             leg_handles100 = [
                                                 plt.Line2D(
                                                     [0],
@@ -2447,7 +2447,7 @@ def build_exp4_signed_axis_scatter(
                                                 loc="lower center",
                                                 bbox_to_anchor=(0.5, 1.07),
                                                 ncol=min(8, max(1, len(langs100))),
-                                                fontsize=7.0,
+                                                fontsize=10.0,
                                                 frameon=True,
                                                 facecolor="white",
                                                 edgecolor="#c5ccd7",
@@ -2826,12 +2826,12 @@ def build_appendix_l2_signed_hotspots(
     xlim = vmax * 1.12
 
     def _draw_panel(lang_list: list[str], out_png: str) -> None:
-        fig, axes = plt.subplots(2, 2, figsize=(12.4, 10.2), sharex=True)
+        fig, axes = plt.subplots(2, 2, figsize=(8.4, 7.6), sharex=True)
         axes = axes.flatten()
         for ax, lg in zip(axes, lang_list):
             sub = per_lang.get(lg, pd.DataFrame(columns=["signed"]))
             if sub.empty:
-                ax.text(0.5, 0.5, f"{lg}: no rows", ha="center", va="center", fontsize=9)
+                ax.text(0.5, 0.5, f"{lg}: no rows", ha="center", va="center", fontsize=10.0)
                 ax.axis("off")
                 continue
             sub = sub.sort_values("signed").copy()
@@ -2865,7 +2865,7 @@ def build_appendix_l2_signed_hotspots(
         for ax in axes[len(lang_list):]:
             ax.axis("off")
         fig.supxlabel("Signed shift (L2-50M minus EN+L2): left = EN+L2 higher, right = L2-50M higher", fontsize=12)
-        fig.tight_layout(rect=(0.02, 0.03, 0.995, 0.995))
+        fig.subplots_adjust(left=0.24, right=0.99, bottom=0.08, top=0.96, wspace=0.60, hspace=0.34)
         fig.savefig(latex_root / "figures" / out_png, dpi=450, bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
 
@@ -2907,9 +2907,9 @@ def build_axis_grounding_table(probe_set: dict, latex_root: Path) -> None:
 
     def _rows(rows: list[dict]) -> list[str]:
         lines = [
-            r"\begin{tabular}{@{}rlllll@{}}",
+            r"\begin{tabular}{@{}>{\raggedleft\arraybackslash}p{0.04\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.15\textwidth}>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.28\textwidth}@{}}",
             r"\toprule",
-            r"\# & Endpoint 1 & Endpoint 2 & Category & Framework basis & Citation(s) \\",
+            r"\# & Endpoint 1 & Endpoint 2 & Category & Citation(s) \\",
             r"\midrule",
         ]
         for row in rows:
@@ -2919,10 +2919,9 @@ def build_axis_grounding_table(probe_set: dict, latex_root: Path) -> None:
             cat = str(row.get("category", ""))
             cat_info = cat_meta.get(cat, {})
             cat_label = str(cat_info.get("display_name", cat))
-            framework = str(cat_info.get("framework_basis", ""))
             cites = row.get("citations", [])
             cite_txt = f"\\cite{{{','.join(cites)}}}" if cites else "NA"
-            lines.append(f"{idx} & {left} & {right} & {cat_label} & {framework} & {cite_txt} \\\\")
+            lines.append(f"{idx} & {left} & {right} & {cat_label} & {cite_txt} \\\\")
         lines += [r"\bottomrule", r"\end{tabular}"]
         return lines
 
@@ -3051,7 +3050,7 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
         row_color_lookup[pretty] = DOMAIN_COLORS.get(raw_label, INK)
     pvt.index = display_index
 
-    fig, ax = plt.subplots(figsize=(12.6, 5.8), facecolor=PAPER_BG)
+    fig, ax = plt.subplots(figsize=(8.4, 5.8), facecolor=PAPER_BG)
     vmin = float(np.nanmin(pvt.values))
     vmax = float(np.nanmax(pvt.values))
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
@@ -3175,14 +3174,14 @@ def build_layerwise_artifacts(layerwise_df: pd.DataFrame | None, latex_root: Pat
                 xy=(layers_ref[peak_idx], y_mean[peak_idx]),
                 xytext=(layers_ref[peak_idx] + 0.7, y_mean[peak_idx] + 0.08),
                 arrowprops=dict(arrowstyle="->", color=INK, linewidth=0.8),
-                fontsize=6.2,
+                fontsize=10.0,
                 color=INK,
                 bbox=dict(boxstyle="round,pad=0.18", facecolor="white", edgecolor="#c7c7c7", linewidth=0.6),
             )
         ax.axhline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=0.9, alpha=0.65, zorder=0)
-        ax.set_xlabel("Transformer layer", fontsize=7.0)
-        ax.set_ylabel(r"Normalized contextual $D_{Axis}$", fontsize=7.0)
-        ax.tick_params(labelsize=6.2)
+        ax.set_xlabel("Transformer layer", fontsize=10.0)
+        ax.set_ylabel(r"Normalized contextual $D_{Axis}$", fontsize=10.0)
+        ax.tick_params(labelsize=10.0)
         fig.tight_layout(pad=0.35)
         fig.subplots_adjust(left=0.16)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
@@ -3341,11 +3340,11 @@ def build_norm_control_artifacts(
                 markeredgewidth=0.7,
                 label=style["label"],
             )
-        ax.set_title(title, fontsize=7.4, fontweight="bold", color=INK, pad=3)
-        ax.set_ylabel(ylabel, fontsize=6.8)
-        ax.tick_params(labelsize=6.2)
-        ax.legend(frameon=False, fontsize=6.4, loc="upper left", ncol=2, handlelength=1.8, columnspacing=0.8)
-    axes[-1].set_xlabel("Transformer layer", fontsize=7.0)
+        ax.set_title(title, fontsize=10.0, fontweight="bold", color=INK, pad=3)
+        ax.set_ylabel(ylabel, fontsize=10.0)
+        ax.tick_params(labelsize=10.0)
+        ax.legend(frameon=False, fontsize=10.0, loc="upper left", ncol=2, handlelength=1.8, columnspacing=0.8)
+    axes[-1].set_xlabel("Transformer layer", fontsize=10.0)
     fig.tight_layout(pad=0.35)
     fig.subplots_adjust(hspace=0.34, left=0.18)
     fig.savefig(latex_root / "figures" / "norm_controlled_layerwise.pdf", dpi=450, bbox_inches="tight")
@@ -3367,7 +3366,7 @@ def build_contextual_alignment_variant_artifacts(ctx_align_df: pd.DataFrame | No
     lines = [
         r"\begin{tabular}{@{}llrrrr@{}}",
         r"\toprule",
-        r"Pair & Alignment source & $D_{NN}$ & $D_{Struct}$ & $D_{Axis}$ & Residual/anchor \\",
+        r"Pair & Alignment source & $\Delta D_{NN}$ & $\Delta D_{Struct}$ & $\Delta D_{Axis}$ & Residual/anchor \\",
         r"\midrule",
     ]
     for pair in d["pair"].drop_duplicates().tolist():
@@ -3392,7 +3391,7 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
     d["pair"] = d.apply(lambda r: en_pair_label(str(r["model_a"]), str(r["model_b"]), include_setup=True), axis=1)
     pivot = d.pivot_table(index=["pair", "layer"], columns="head", values="axis_abs_projection_diff_mean", aggfunc="mean")
 
-    fig, ax = plt.subplots(figsize=(12, 5.8))
+    fig, ax = plt.subplots(figsize=(8.4, 5.8))
     vmin = float(np.nanmin(pivot.values))
     vmax = float(np.nanmax(pivot.values))
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
@@ -3517,7 +3516,9 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
     lines = [
         r"\begin{tabular}{@{}lrrrrrr@{}}",
         r"\toprule",
-        r"Lang & Ratio@50M & Ratio@100M & Gain $D_{NN}$ (Embedding) & Gain $D_{NN}$ (Contextual) & Gain $D_{Axis}$ (Embedding) & Gain $D_{Axis}$ (Contextual) \\",
+        r" & \multicolumn{2}{c}{Ctx./emb. ratio} & \multicolumn{2}{c}{Overlap gain $D_{NN}$} & \multicolumn{2}{c}{Overlap gain $D_{Axis}$} \\",
+        r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}",
+        r"Lang & 50M & 100M & Emb. & Ctx. & Emb. & Ctx. \\",
         r"\midrule",
     ]
     for _, r in out.iterrows():
@@ -3561,7 +3562,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ci_lines += [r"\bottomrule", r"\end{tabular}"]
         write_table(ci_lines, latex_root / "tables" / "appendix_multilingual_ratio_ci.tex")
 
-    fig, axes = plt.subplots(1, 2, figsize=(11.4, 3.8), gridspec_kw={"wspace": 0.34}, facecolor=PAPER_BG)
+    fig, axes = plt.subplots(1, 2, figsize=(8.4, 3.8), gridspec_kw={"wspace": 0.34}, facecolor=PAPER_BG)
     x = np.arange(len(out))
     width = 0.36
     b1 = axes[0].bar(
@@ -3706,7 +3707,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
                 (rr["distance_proxy"], rr["ratio_mean"]),
                 textcoords="offset points",
                 xytext=(4, 4),
-                fontsize=9,
+                fontsize=10.0,
             )
         xfit = reg["distance_proxy"].to_numpy(dtype=np.float64)
         yfit = reg["ratio_mean"].to_numpy(dtype=np.float64)
@@ -3817,17 +3818,17 @@ def build_main_multilingual_validation_figure(
                 f"+{float(rr[ctx_col] - rr[emb_col]):.2f}",
                 ha="left",
                 va="center",
-                fontsize=6.0,
+                fontsize=10.0,
                 color="#333333",
             )
 
         ax.set_yticks(y)
-        ax.set_yticklabels(p["lang_code"].astype(str).str.upper().tolist(), fontsize=6.5, fontweight="bold")
+        ax.set_yticklabels(p["lang_code"].astype(str).str.upper().tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
-        ax.set_ylabel("Language", fontsize=7.0)
-        ax.set_xlabel(f"L2-centered $D_{{Axis}}$ ({baseline.upper()} mono. vs EN+L2, shared docs)", fontsize=6.8)
-        ax.tick_params(axis="x", labelsize=6.2)
+        ax.set_ylabel("Language", fontsize=10.0)
+        ax.set_xlabel(f"$D_{{Axis}}$ in {baseline.upper()} space (mono. vs EN+L2, shared docs)", fontsize=10.0)
+        ax.tick_params(axis="x", labelsize=10.0)
         xmax = max(float(np.nanmax(ctx_vals)), float(np.nanmax(emb_vals)))
         ax.set_xlim(0.0, xmax * 1.22)
         handles = [
@@ -3847,7 +3848,7 @@ def build_main_multilingual_validation_figure(
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=6.0,
+            fontsize=10.0,
             columnspacing=0.80,
             handletextpad=0.35,
         )
@@ -4052,10 +4053,10 @@ def build_dense_progress_trajectory_figure(progress_df: pd.DataFrame | None, lat
                 markeredgewidth=0.35,
                 label=labels[repr_type],
             )
-        ax.set_title(f"EN vs EN+{lang}", fontsize=8.4, color=LANG_COLORS.get(lang, INK), pad=4)
+        ax.set_title(f"EN vs EN+{lang}", fontsize=10.0, color=LANG_COLORS.get(lang, INK), pad=4)
         ax.set_xticks([500, 1500, 3000])
-        ax.set_xticklabels(["500", "1500", "3000"], fontsize=6.4, color=INK)
-        ax.tick_params(axis="y", labelsize=6.5)
+        ax.set_xticklabels(["500", "1500", "3000"], fontsize=10.0, color=INK)
+        ax.tick_params(axis="y", labelsize=10.0)
         ax.grid(True, axis="y", alpha=0.25)
         ax.grid(False, axis="x")
 
@@ -4069,10 +4070,10 @@ def build_dense_progress_trajectory_figure(progress_df: pd.DataFrame | None, lat
         bbox_to_anchor=(0.5, 0.985),
         ncol=2,
         frameon=False,
-        fontsize=7.2,
+        fontsize=10.0,
     )
-    fig.supxlabel("Training step", fontsize=8.0, color=INK, y=0.035)
-    fig.supylabel(r"$D_{Axis}$", fontsize=8.0, color=INK, x=0.018)
+    fig.supxlabel("Training step", fontsize=10.0, color=INK, y=0.035)
+    fig.supylabel(r"$D_{Axis}$", fontsize=10.0, color=INK, x=0.018)
     fig.subplots_adjust(top=0.86, wspace=0.24, hspace=0.34, bottom=0.13, left=0.085, right=0.99)
     fig.savefig(latex_root / "figures" / "appendix_dense_progress_trajectory.pdf", dpi=450, bbox_inches="tight", pad_inches=0.06)
     plt.close(fig)
@@ -4165,11 +4166,11 @@ def build_dense_progress_summary_figure(progress_df: pd.DataFrame | None, latex_
         )
     ax.set_xlim(450, 3050)
     ax.set_xticks([500, 1500, 3000])
-    ax.set_xticklabels(["500", "1500", "3000"], fontsize=7.0)
-    ax.tick_params(axis="y", labelsize=7.0)
-    ax.set_xlabel("Training step", fontsize=7.8, color=INK, labelpad=2)
-    ax.set_ylabel(r"Raw $D_{Axis}$", fontsize=7.8, color=INK, labelpad=2)
-    ax.legend(loc="upper left", fontsize=7.0, frameon=True, facecolor="white", edgecolor="#cbd1d6", framealpha=0.92)
+    ax.set_xticklabels(["500", "1500", "3000"], fontsize=10.0)
+    ax.tick_params(axis="y", labelsize=10.0)
+    ax.set_xlabel("Training step", fontsize=10.0, color=INK, labelpad=2)
+    ax.set_ylabel(r"Raw $D_{Axis}$", fontsize=10.0, color=INK, labelpad=2)
+    ax.legend(loc="upper left", fontsize=10.0, frameon=True, facecolor="white", edgecolor="#cbd1d6", framealpha=0.92)
     ax.text(
         0.98,
         0.08,
@@ -4177,7 +4178,7 @@ def build_dense_progress_summary_figure(progress_df: pd.DataFrame | None, latex_
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=6.8,
+        fontsize=10.0,
         color=MUTED,
     )
     fig.subplots_adjust(left=0.15, right=0.985, top=0.98, bottom=0.22)
@@ -4380,7 +4381,7 @@ def build_main_multilingual_regression_figure_and_table(multilingual_root: Path,
     ax.set_ylabel("Contextual-to-Embedding Ratio", fontsize=12)
     ax.set_title("Typological Distance vs Representation-Dependence Gap", fontsize=12, fontweight="bold")
     ax.grid(True, alpha=0.3)
-    ax.legend(loc="upper left", fontsize=8, framealpha=0.95)
+    ax.legend(loc="upper left", fontsize=10.0, framealpha=0.95)
     ax.set_xlim(-5, 80)
 
     plt.tight_layout()
