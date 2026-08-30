@@ -1,0 +1,44 @@
+{
+  "models": {
+    "zh_50m": "models/hf/zh_50m",
+    "zh_100m": "models/hf/zh_100m",
+    "en_zh_a": "models/hf/en_zh_a",
+    "en_zh_b": "models/hf/en_zh_b"
+  },
+  "model_pairs": [
+    {
+      "model_a": "zh_50m",
+      "model_b": "en_zh_a"
+    },
+    {
+      "model_a": "zh_50m",
+      "model_b": "en_zh_b"
+    },
+    {
+      "model_a": "zh_100m",
+      "model_b": "en_zh_a"
+    },
+    {
+      "model_a": "zh_100m",
+      "model_b": "en_zh_b"
+    }
+  ],
+  "probe_set": "data/probes/probe_sets.json",
+  "word_count": 4135,
+  "neutral_anchor_count": 3000,
+  "cultural_probe_count": 1000,
+  "axis_count": 50,
+  "topk": 25,
+  "device": "cuda",
+  "prompts": [
+    "The word {word} appears in a neutral sentence.",
+    "In general usage, {word} is a term.",
+    "People may mention {word} in writing."
+  ],
+  "outputs": {
+    "summary_csv": "outputs/revision/zh_shared_language/bli_summary_metrics.csv",
+    "word_csv": "outputs/revision/zh_shared_language/bli_word_neighbor_divergence.csv",
+    "axis_csv": "outputs/revision/zh_shared_language/bli_axis_divergence.csv",
+    "pdf": "outputs/revision/zh_shared_language/bli_report.pdf"
+  }
+}

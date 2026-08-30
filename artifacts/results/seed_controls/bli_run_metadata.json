@@ -1,0 +1,54 @@
+{
+  "models": {
+    "en_50m_s1": "models/hf/en_50m_s1",
+    "en_50m_s2": "models/hf/en_50m_s2",
+    "en_50m_s3": "models/hf/en_50m_s3",
+    "en_100m_s1": "models/hf/en_100m_s1",
+    "en_100m_s2": "models/hf/en_100m_s2",
+    "en_100m_s3": "models/hf/en_100m_s3"
+  },
+  "model_pairs": [
+    {
+      "model_a": "en_50m_s1",
+      "model_b": "en_50m_s2"
+    },
+    {
+      "model_a": "en_50m_s1",
+      "model_b": "en_50m_s3"
+    },
+    {
+      "model_a": "en_50m_s2",
+      "model_b": "en_50m_s3"
+    },
+    {
+      "model_a": "en_100m_s1",
+      "model_b": "en_100m_s2"
+    },
+    {
+      "model_a": "en_100m_s1",
+      "model_b": "en_100m_s3"
+    },
+    {
+      "model_a": "en_100m_s2",
+      "model_b": "en_100m_s3"
+    }
+  ],
+  "probe_set": "data/probes/probe_sets.json",
+  "word_count": 4135,
+  "neutral_anchor_count": 3000,
+  "cultural_probe_count": 1000,
+  "axis_count": 50,
+  "topk": 25,
+  "device": "cuda",
+  "prompts": [
+    "The word {word} appears in a neutral sentence.",
+    "In general usage, {word} is a term.",
+    "People may mention {word} in writing."
+  ],
+  "outputs": {
+    "summary_csv": "outputs/revision/en_seed_null/bli_summary_metrics.csv",
+    "word_csv": "outputs/revision/en_seed_null/bli_word_neighbor_divergence.csv",
+    "axis_csv": "outputs/revision/en_seed_null/bli_axis_divergence.csv",
+    "pdf": "outputs/revision/en_seed_null/bli_report.pdf"
+  }
+}

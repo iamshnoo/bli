@@ -1,0 +1,170 @@
+{
+  "models": {
+    "en_50m": "models/hf/en_50m",
+    "en_100m": "models/hf/en_100m",
+    "en_zh_a": "models/hf/en_zh_a",
+    "en_zh_b": "models/hf/en_zh_b",
+    "en_fr_a": "models/hf/en_fr_a",
+    "en_fr_b": "models/hf/en_fr_b",
+    "en_fas_a": "models/hf/en_fas_a",
+    "en_fas_b": "models/hf/en_fas_b",
+    "en_nld_a": "models/hf/en_nld_a",
+    "en_nld_b": "models/hf/en_nld_b",
+    "en_ukr_a": "models/hf/en_ukr_a",
+    "en_ukr_b": "models/hf/en_ukr_b",
+    "en_bul_a": "models/hf/en_bul_a",
+    "en_bul_b": "models/hf/en_bul_b",
+    "en_ind_a": "models/hf/en_ind_a",
+    "en_ind_b": "models/hf/en_ind_b",
+    "en_deu_a": "models/hf/en_deu_a",
+    "en_deu_b": "models/hf/en_deu_b"
+  },
+  "model_pairs": [
+    {
+      "model_a": "en_50m",
+      "model_b": "en_zh_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_zh_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_fr_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_fr_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_fas_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_fas_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_nld_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_nld_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_ukr_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_ukr_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_bul_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_bul_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_ind_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_ind_b"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_deu_a"
+    },
+    {
+      "model_a": "en_50m",
+      "model_b": "en_deu_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_zh_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_zh_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_fr_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_fr_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_fas_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_fas_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_nld_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_nld_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_ukr_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_ukr_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_bul_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_bul_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_ind_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_ind_b"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_deu_a"
+    },
+    {
+      "model_a": "en_100m",
+      "model_b": "en_deu_b"
+    }
+  ],
+  "probe_set": "data/probes/probe_sets.json",
+  "word_count": 4135,
+  "neutral_anchor_count": 3000,
+  "cultural_probe_count": 1000,
+  "axis_count": 50,
+  "topk": 25,
+  "device": "cuda",
+  "prompts": [
+    "The word {word} appears in a neutral sentence.",
+    "In general usage, {word} is a term.",
+    "People may mention {word} in writing."
+  ],
+  "outputs": {
+    "summary_csv": "outputs/revision/en_ablation/bli_summary_metrics.csv",
+    "word_csv": "outputs/revision/en_ablation/bli_word_neighbor_divergence.csv",
+    "axis_csv": "outputs/revision/en_ablation/bli_axis_divergence.csv",
+    "pdf": "outputs/revision/en_ablation/bli_report.pdf"
+  }
+}

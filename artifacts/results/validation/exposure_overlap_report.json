@@ -1,0 +1,158 @@
+{
+  "partition_disjointness": {
+    "manifest": "data/raw/partitions/eng_partition_manifest.json",
+    "intersection_rows": 0,
+    "disjoint_ok": true
+  },
+  "en50m_reference": {
+    "dataset": "data/processed/partitions/eng_shared/train",
+    "steps": 1500,
+    "tokens_per_step": 32768,
+    "expected_tokens": 49152000,
+    "dataset_capacity_tokens": 76891648,
+    "capacity_ok": true
+  },
+  "setups": [
+    {
+      "setup_name": "eng_zho_a",
+      "stage_json": "configs/stages/stages_eng_zho_a.json",
+      "expected": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "doc_overlap_pct_vs_en50m": 100.0
+      },
+      "observed": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "en_dataset": "data/processed/partitions/eng_shared/train",
+        "l2_dataset": "data/processed/babylm-zho/train",
+        "doc_overlap_pct_vs_en50m": 100.0,
+        "token_overlap_pct_vs_en50m": 100.0
+      },
+      "capacity": {
+        "en_capacity_tokens": 76891648,
+        "l2_capacity_tokens": 159540736,
+        "en_has_capacity": true,
+        "l2_has_capacity": true
+      },
+      "checks": {
+        "en_steps_match": true,
+        "l2_steps_match": true,
+        "en_tokens_match": true,
+        "l2_tokens_match": true,
+        "overlap_match_expected": true,
+        "all_pass": true
+      }
+    },
+    {
+      "setup_name": "eng_zho_b",
+      "stage_json": "configs/stages/stages_eng_zho_b.json",
+      "expected": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "doc_overlap_pct_vs_en50m": 0.0
+      },
+      "observed": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "en_dataset": "data/processed/partitions/eng_disjoint/train",
+        "l2_dataset": "data/processed/babylm-zho/train",
+        "doc_overlap_pct_vs_en50m": 0.0,
+        "token_overlap_pct_vs_en50m": 0.0
+      },
+      "capacity": {
+        "en_capacity_tokens": 71653376,
+        "l2_capacity_tokens": 159540736,
+        "en_has_capacity": true,
+        "l2_has_capacity": true
+      },
+      "checks": {
+        "en_steps_match": true,
+        "l2_steps_match": true,
+        "en_tokens_match": true,
+        "l2_tokens_match": true,
+        "overlap_match_expected": true,
+        "all_pass": true
+      }
+    },
+    {
+      "setup_name": "eng_fra_a",
+      "stage_json": "configs/stages/stages_eng_fra_a.json",
+      "expected": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "doc_overlap_pct_vs_en50m": 100.0
+      },
+      "observed": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "en_dataset": "data/processed/partitions/eng_shared/train",
+        "l2_dataset": "data/processed/babylm-fra/train",
+        "doc_overlap_pct_vs_en50m": 100.0,
+        "token_overlap_pct_vs_en50m": 100.0
+      },
+      "capacity": {
+        "en_capacity_tokens": 76891648,
+        "l2_capacity_tokens": 187519488,
+        "en_has_capacity": true,
+        "l2_has_capacity": true
+      },
+      "checks": {
+        "en_steps_match": true,
+        "l2_steps_match": true,
+        "en_tokens_match": true,
+        "l2_tokens_match": true,
+        "overlap_match_expected": true,
+        "all_pass": true
+      }
+    },
+    {
+      "setup_name": "eng_fra_b",
+      "stage_json": "configs/stages/stages_eng_fra_b.json",
+      "expected": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "doc_overlap_pct_vs_en50m": 0.0
+      },
+      "observed": {
+        "en_steps": 1500,
+        "l2_steps": 1500,
+        "en_tokens": 49152000,
+        "l2_tokens": 49152000,
+        "en_dataset": "data/processed/partitions/eng_disjoint/train",
+        "l2_dataset": "data/processed/babylm-fra/train",
+        "doc_overlap_pct_vs_en50m": 0.0,
+        "token_overlap_pct_vs_en50m": 0.0
+      },
+      "capacity": {
+        "en_capacity_tokens": 71653376,
+        "l2_capacity_tokens": 187519488,
+        "en_has_capacity": true,
+        "l2_has_capacity": true
+      },
+      "checks": {
+        "en_steps_match": true,
+        "l2_steps_match": true,
+        "en_tokens_match": true,
+        "l2_tokens_match": true,
+        "overlap_match_expected": true,
+        "all_pass": true
+      }
+    }
+  ],
+  "all_pass": true
+}

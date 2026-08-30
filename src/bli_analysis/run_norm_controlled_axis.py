@@ -29,8 +29,8 @@ def parse_args() -> argparse.Namespace:
     )
     p.add_argument("--probe-set", type=Path, default=Path("data/probes/probe_sets.json"))
     p.add_argument("--rep-dir", type=Path, default=Path("outputs/revision/en_ablation/representations"))
-    p.add_argument("--models-json", type=Path, default=Path("config/models/models_en_ablation.json"))
-    p.add_argument("--layer-models-json", type=Path, default=Path("config/models/models_layerwise.json"))
+    p.add_argument("--models-json", type=Path, default=Path("configs/models/models_en_ablation.json"))
+    p.add_argument("--layer-models-json", type=Path, default=Path("configs/models/models_layerwise.json"))
     p.add_argument("--out-csv", type=Path, default=Path("outputs/revision/en_ablation/bli_norm_controlled_axis.csv"))
     p.add_argument(
         "--layer-out-csv",

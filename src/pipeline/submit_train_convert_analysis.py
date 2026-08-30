@@ -29,7 +29,7 @@ ENABLE_WANDB = os.environ.get("BLI_ENABLE_WANDB", "0").strip().lower() in {"1", 
 LOG_ROOT = ROOT / "logs"
 SLURM_LOG_ROOT = LOG_ROOT / "slurm_logs"
 SUBMISSION_ROOT = LOG_ROOT / "submissions"
-CONFIG_MODEL_ROOT = ROOT / "config/models"
+CONFIG_MODEL_ROOT = ROOT / "configs/models"
 HF_MODEL_ROOT = ROOT / "models/hf"
 
 OUTPUT_REV = ROOT / "outputs/revision"

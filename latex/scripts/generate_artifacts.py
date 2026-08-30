@@ -45,6 +45,10 @@ def parse_args() -> argparse.Namespace:
 def set_style() -> None:
     sns.set_theme(style="whitegrid")
     sns.set_context("paper", rc={"font.size": 12, "axes.titlesize": 12, "axes.labelsize": 12})
+    # Keep vector figure text searchable and avoid legacy Type 3 font outlines
+    # in the compiled proceedings PDF.
+    plt.rcParams["pdf.fonttype"] = 42
+    plt.rcParams["ps.fonttype"] = 42
     plt.rcParams["font.family"] = "serif"
     plt.rcParams["font.serif"] = ["Times New Roman", "Times", "Nimbus Roman No9 L", "DejaVu Serif"]
     plt.rcParams["axes.labelsize"] = 12
@@ -2848,19 +2852,19 @@ def build_appendix_l2_signed_hotspots(
             ax.scatter(vals, y, s=26, color=LANG_COLORS.get(lg, "#4c78a8"), edgecolors="white", linewidths=0.45, zorder=2)
 
             ax.set_yticks(y)
-            ax.set_yticklabels(labels_unique, fontsize=7.0, fontfamily="monospace")
-            ax.set_title(f"{lg} (L2-50M vs EN+L2)", fontsize=10, pad=4)
+            ax.set_yticklabels(labels_unique, fontsize=12.0, fontfamily="monospace")
+            ax.set_title(f"{lg} (L2-50M vs EN+L2)", fontsize=13, pad=4)
             ax.set_xlim(-xlim, xlim)
             ax.grid(axis="x", linestyle=(0, (3, 2)), linewidth=0.45, alpha=0.42)
             ax.spines["top"].set_visible(False)
             ax.spines["right"].set_visible(False)
             ax.spines["left"].set_visible(False)
             ax.tick_params(axis="y", length=0, pad=2)
-            ax.tick_params(axis="x", labelsize=8)
+            ax.tick_params(axis="x", labelsize=11)
 
         for ax in axes[len(lang_list):]:
             ax.axis("off")
-        fig.supxlabel("Signed shift (L2-50M minus EN+L2): left = EN+L2 higher, right = L2-50M higher", fontsize=9)
+        fig.supxlabel("Signed shift (L2-50M minus EN+L2): left = EN+L2 higher, right = L2-50M higher", fontsize=12)
         fig.tight_layout(rect=(0.02, 0.03, 0.995, 0.995))
         fig.savefig(latex_root / "figures" / out_png, dpi=450, bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
@@ -3065,8 +3069,8 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
     ax.collections[0].colorbar.update_ticks()
     ax.set_xlabel("Model pair", fontsize=11)
     ax.set_ylabel("Probe category", fontsize=11)
-    ax.tick_params(axis="x", labelsize=6.4, pad=2)
-    ax.tick_params(axis="y", labelsize=8.5, rotation=0)
+    ax.tick_params(axis="x", labelsize=11.2, pad=2)
+    ax.tick_params(axis="y", labelsize=11.2, rotation=0)
     ax.set_xticklabels(ax.get_xticklabels(), rotation=90, ha="center", va="top")
     for boundary in range(8, len(pvt.columns), 8):
         ax.axvline(boundary, color=INK, linewidth=1.2)
@@ -3077,11 +3081,11 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
         lang = tick.get_text().split("-")[-1]
         tick.set_color(LANG_COLORS.get(lang, INK))
         tick.set_fontweight("bold")
-    ax.collections[0].colorbar.ax.tick_params(labelsize=9)
-    ax.text(4, -0.70, "50M shared", ha="center", va="bottom", fontsize=8.5, color=INK)
-    ax.text(12, -0.70, "50M disjoint", ha="center", va="bottom", fontsize=8.5, color=INK)
-    ax.text(20, -0.70, "100M shared", ha="center", va="bottom", fontsize=8.5, color=INK)
-    ax.text(28, -0.70, "100M disjoint", ha="center", va="bottom", fontsize=8.5, color=INK)
+    ax.collections[0].colorbar.ax.tick_params(labelsize=11)
+    ax.text(4, -0.70, "50M shared", ha="center", va="bottom", fontsize=11.2, color=INK)
+    ax.text(12, -0.70, "50M disjoint", ha="center", va="bottom", fontsize=11.2, color=INK)
+    ax.text(20, -0.70, "100M shared", ha="center", va="bottom", fontsize=11.2, color=INK)
+    ax.text(28, -0.70, "100M disjoint", ha="center", va="bottom", fontsize=11.2, color=INK)
     fig.subplots_adjust(left=0.11, right=0.93, bottom=0.34, top=0.92)
     fig.savefig(latex_root / "figures" / "category_heatmap.pdf", dpi=450, bbox_inches="tight", pad_inches=0.05)
     plt.close(fig)
@@ -3406,14 +3410,14 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
     ax.collections[0].colorbar.update_ticks()
     ax.set_xlabel("Attention head index")
     ax.set_ylabel("Pair / Layer")
-    ax.tick_params(axis="x", labelsize=8)
+    ax.tick_params(axis="x", labelsize=11.5)
     ytick_labels = [tick.get_text() for tick in ax.get_yticklabels()]
     if len(ytick_labels) > 32:
         show_every = 2
         ax.set_yticks(np.arange(0.5, len(ytick_labels), show_every))
-        ax.set_yticklabels(ytick_labels[::show_every], fontsize=7.5)
+        ax.set_yticklabels(ytick_labels[::show_every], fontsize=11.5)
     else:
-        ax.tick_params(axis="y", labelsize=8)
+        ax.tick_params(axis="y", labelsize=11.5)
     fig.tight_layout()
     fig.savefig(latex_root / "figures" / "appendix_perhead_heatmap.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
@@ -3582,9 +3586,10 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         b.set_hatch("//")
     for b in b2:
         b.set_hatch("..")
-    axes[0].set_ylabel(r"Contextual / embedding $D_{Axis}$ ratio", fontsize=10)
+    axes[0].set_ylabel(r"Contextual / embedding $D_{Axis}$ ratio", fontsize=12)
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(out["language"].tolist())
+    axes[0].tick_params(axis="both", labelsize=11)
     axes[0].grid(axis="y", linestyle=(0, (3, 2)), linewidth=0.5, alpha=0.42)
     axes[0].spines["top"].set_visible(False)
     axes[0].spines["right"].set_visible(False)
@@ -3594,7 +3599,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ncol=2,
         frameon=True,
         edgecolor="#9a9a9a",
-        fontsize=9,
+        fontsize=11,
     )
 
     b3 = axes[1].bar(
@@ -3620,9 +3625,10 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
     for b in b4:
         b.set_hatch("//")
     axes[1].axhline(0.0, color="black", linewidth=0.9)
-    axes[1].set_ylabel(r"Overlap gain on $D_{Axis}$", fontsize=10)
+    axes[1].set_ylabel(r"Overlap gain on $D_{Axis}$", fontsize=12)
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(out["language"].tolist())
+    axes[1].tick_params(axis="both", labelsize=11)
     axes[1].grid(axis="y", linestyle=(0, (3, 2)), linewidth=0.5, alpha=0.42)
     axes[1].spines["top"].set_visible(False)
     axes[1].spines["right"].set_visible(False)
@@ -3632,7 +3638,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ncol=2,
         frameon=True,
         edgecolor="#9a9a9a",
-        fontsize=9,
+        fontsize=11,
     )
     fig.subplots_adjust(left=0.08, right=0.99, bottom=0.18, top=0.82, wspace=0.34)
     fig.savefig(latex_root / "figures" / "appendix_multilingual_overview.pdf", dpi=450, bbox_inches="tight", pad_inches=0.08)

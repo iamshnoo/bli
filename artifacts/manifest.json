@@ -1,0 +1,607 @@
+{
+  "schema_version": "1.0",
+  "description": "Compact result and figure snapshot used by the manuscript.",
+  "file_count": 100,
+  "files": [
+    {
+      "path": "artifacts/figures/fig1.pdf",
+      "source": "latex/emnlp/anon/figures/fig1.pdf",
+      "bytes": 1337480,
+      "sha256": "86743146af4e177ebf2de7e412d0e3fbd99e97da92b94c597c3d729e00221aeb"
+    },
+    {
+      "path": "artifacts/figures/fig10-appendix-category-heatmap.pdf",
+      "source": "latex/emnlp/anon/figures/fig10-appendix-category-heatmap.pdf",
+      "bytes": 35109,
+      "sha256": "ce06cbf950aa4ad88c14ddc57615104852d301d2196befacca61bdcd2c6c76b8"
+    },
+    {
+      "path": "artifacts/figures/fig11-appendix-multilingual-overview.pdf",
+      "source": "latex/emnlp/anon/figures/fig11-appendix-multilingual-overview.pdf",
+      "bytes": 46444,
+      "sha256": "17a3478885068e677be4c23dd877c52cac107ea1a911edd23cd2f1233e39bf28"
+    },
+    {
+      "path": "artifacts/figures/fig12-typology-regression-scatter.pdf",
+      "source": "latex/emnlp/anon/figures/fig12-typology-regression-scatter.pdf",
+      "bytes": 25294,
+      "sha256": "473437de440df35a6111f5084688fb9531b9ee806bd4bf0fdb52d4f712cef996"
+    },
+    {
+      "path": "artifacts/figures/fig13-appendix-l2-signed-hotspots-panel1.pdf",
+      "source": "latex/emnlp/anon/figures/fig13-appendix-l2-signed-hotspots-panel1.pdf",
+      "bytes": 24970,
+      "sha256": "c4aafd8a86c100df13098e5bc92689ce5b300db9c19e253068a921c4373246d5"
+    },
+    {
+      "path": "artifacts/figures/fig14-appendix-l2-signed-hotspots-panel2.pdf",
+      "source": "latex/emnlp/anon/figures/fig14-appendix-l2-signed-hotspots-panel2.pdf",
+      "bytes": 25154,
+      "sha256": "8db18a20beb3270a18d460fba6fc1b3dc4af318666e37c5a714814c05eaf8cd0"
+    },
+    {
+      "path": "artifacts/figures/fig15-appendix-exp1-divergence-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig15-appendix-exp1-divergence-100m.pdf",
+      "bytes": 72236,
+      "sha256": "2dafa902d73061dbdb59fe4c9cb5d8980cb6243fd4e630e05223658d3af1e568"
+    },
+    {
+      "path": "artifacts/figures/fig16-appendix-exp2-overlap-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig16-appendix-exp2-overlap-100m.pdf",
+      "bytes": 26597,
+      "sha256": "26b066fb2b7f59e23ca8db7454448e217361b317923c043eb3208804911c35dc"
+    },
+    {
+      "path": "artifacts/figures/fig17-appendix-multilingual-validation-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig17-appendix-multilingual-validation-100m.pdf",
+      "bytes": 25843,
+      "sha256": "ae8fa0418ab15b38cb89b838a3515354e9cf6870496a6388d64bb296d9391afa"
+    },
+    {
+      "path": "artifacts/figures/fig18-appendix-contextual-vs-embedding-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig18-appendix-contextual-vs-embedding-100m.pdf",
+      "bytes": 26659,
+      "sha256": "22ac80bebce198d27855cbeb1fed45227f0396b266cb94a922258e88276b8d99"
+    },
+    {
+      "path": "artifacts/figures/fig19-appendix-layerwise-axis-divergence-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig19-appendix-layerwise-axis-divergence-100m.pdf",
+      "bytes": 22178,
+      "sha256": "6750da778a91d1517770cc4c274d6e4b5c91aa02cf42f6e237c4fa0524a112d2"
+    },
+    {
+      "path": "artifacts/figures/fig2-exp1-divergence.pdf",
+      "source": "latex/emnlp/anon/figures/fig2-exp1-divergence.pdf",
+      "bytes": 28793,
+      "sha256": "a81824a342068d5d43e7a67120c894e7b13a17b0b131eaef388e3951a5ca9fee"
+    },
+    {
+      "path": "artifacts/figures/fig20-appendix-alignment-method-comparison-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig20-appendix-alignment-method-comparison-100m.pdf",
+      "bytes": 27475,
+      "sha256": "99064c37d00ba3ed9a8874e5487896a533e1caf281f2fa866f8eb86b421a9292"
+    },
+    {
+      "path": "artifacts/figures/fig21-appendix-signed-axis-shifts-100m.pdf",
+      "source": "latex/emnlp/anon/figures/fig21-appendix-signed-axis-shifts-100m.pdf",
+      "bytes": 31373,
+      "sha256": "51dd972709f3d06b0cec135c2a122023c19fbc9cbbbd06c8ecf009790ad84546"
+    },
+    {
+      "path": "artifacts/figures/fig22-appendix-dense-progress-trajectory.pdf",
+      "source": "latex/emnlp/anon/figures/fig22-appendix-dense-progress-trajectory.pdf",
+      "bytes": 24923,
+      "sha256": "dcebaf457c13c45fb9028795ecc9827f3b7c948ab961f2e3065835ecaf637d17"
+    },
+    {
+      "path": "artifacts/figures/fig23-appendix-norm-controlled-layerwise.pdf",
+      "source": "latex/emnlp/anon/figures/fig23-appendix-norm-controlled-layerwise.pdf",
+      "bytes": 28080,
+      "sha256": "21bb51e85c2fd813c09ba1453328ee973aca17aaef9d2a577b02f39bce16b17a"
+    },
+    {
+      "path": "artifacts/figures/fig3-exp2-overlap.pdf",
+      "source": "latex/emnlp/anon/figures/fig3-exp2-overlap.pdf",
+      "bytes": 24185,
+      "sha256": "a10b0217066fa5fdb49ebcc0f3966092a08bb77a67f4c926346bf64ae627cdeb"
+    },
+    {
+      "path": "artifacts/figures/fig4-multilingual-validation.pdf",
+      "source": "latex/emnlp/anon/figures/fig4-multilingual-validation.pdf",
+      "bytes": 26177,
+      "sha256": "b7fa9681f0709efe21614cab507617f8130fbc2f5439118268cfd7772b800095"
+    },
+    {
+      "path": "artifacts/figures/fig5-contextual-vs-embedding-ratio.pdf",
+      "source": "latex/emnlp/anon/figures/fig5-contextual-vs-embedding-ratio.pdf",
+      "bytes": 26403,
+      "sha256": "8f7efd4fd34a2c2702805faaa42b6ec3024f046e862f1a7f0a8518f157c2f5e1"
+    },
+    {
+      "path": "artifacts/figures/fig6-signed-axis-shifts.pdf",
+      "source": "latex/emnlp/anon/figures/fig6-signed-axis-shifts.pdf",
+      "bytes": 31836,
+      "sha256": "90ab092e9d7d3b9b8def21b605796a7db4632bc4237f41ec87b2bbc047be5dc8"
+    },
+    {
+      "path": "artifacts/figures/fig7-layerwise-axis-divergence.pdf",
+      "source": "latex/emnlp/anon/figures/fig7-layerwise-axis-divergence.pdf",
+      "bytes": 22182,
+      "sha256": "f03b7164fb4c6febcc2cfc786efe5cf9fd2d5ced829952e5026b4e267cb5468e"
+    },
+    {
+      "path": "artifacts/figures/fig8-alignment-method-comparison.pdf",
+      "source": "latex/emnlp/anon/figures/fig8-alignment-method-comparison.pdf",
+      "bytes": 27623,
+      "sha256": "1545a48b877c5788082888047645b6799bc1894397a6f758af36540c5a7699aa"
+    },
+    {
+      "path": "artifacts/figures/fig8-dense-progress-summary.pdf",
+      "source": "latex/emnlp/anon/figures/fig8-dense-progress-summary.pdf",
+      "bytes": 18403,
+      "sha256": "2858db5a91da9c69a1556d04e5829781d4fcf79a63186fd61343368b94210b91"
+    },
+    {
+      "path": "artifacts/figures/fig9-appendix-perhead-heatmap.pdf",
+      "source": "latex/emnlp/anon/figures/fig9-appendix-perhead-heatmap.pdf",
+      "bytes": 37784,
+      "sha256": "934f27f68262dd44cd245887c961cba809b15482acce65e9cd726b0a89cf03ed"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_alignment_method_comparison.csv",
+      "source": "outputs/revision/en_ablation/bli_alignment_method_comparison.csv",
+      "bytes": 17718,
+      "sha256": "c4057c590ee73438a8c9726ece187599f7bc56bf6c85a76268419694c550a451"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_anchor_sensitivity.csv",
+      "source": "outputs/revision/en_ablation/bli_anchor_sensitivity.csv",
+      "bytes": 79364,
+      "sha256": "7fb52fb305b50377ffa400f6f5ffe64d63c2ce89f92488e93ea1a90ae1890990"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_anchor_sensitivity_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_anchor_sensitivity_summary.csv",
+      "bytes": 1582,
+      "sha256": "f4415619a0a32ab1835ef726cffd2cadf70a10caeafacf5d5d7a6f118e8c3503"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_axis_divergence.csv",
+      "source": "outputs/revision/en_ablation/bli_axis_divergence.csv",
+      "bytes": 373040,
+      "sha256": "a7f61f60efba072d27a47753d6dab6b72e93973d19dbae770ccbe96d075e8e11"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_behavioral_bridge_hotspots_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_behavioral_bridge_hotspots_summary.csv",
+      "bytes": 745,
+      "sha256": "d434704e2f8d3557679f5cdba66c9ddea6658c18e3077b0fc91f09292d29fe05"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_behavioral_bridge_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_behavioral_bridge_summary.csv",
+      "bytes": 949,
+      "sha256": "15a9bebc99312abfa552a18ee745e67c70edf51ca74594d86d7165d00cb591d0"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_bootstrap_ci.csv",
+      "source": "outputs/revision/en_ablation/bli_bootstrap_ci.csv",
+      "bytes": 28155,
+      "sha256": "5d660771e79a93de667dc33d6b08708ce71da876484c81ecba591bca5e216075"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_causal_localization_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_causal_localization_summary.csv",
+      "bytes": 738,
+      "sha256": "c75ad6509cf73c3757b7e31dd84315ddbc9e4cff837334606abad03c3885165b"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_contextual_alignment_variant.csv",
+      "source": "outputs/revision/en_ablation/bli_contextual_alignment_variant.csv",
+      "bytes": 5835,
+      "sha256": "bd4994b08c0f3779b94f01685850e25812ef40def74561b3529ba2bef4ca585c"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_dense_progress_trajectory.csv",
+      "source": "outputs/revision/en_ablation/bli_dense_progress_trajectory.csv",
+      "bytes": 10279,
+      "sha256": "3da600b2f45d9ef7722f3f2115003239c44843a2b6d15baeda9807773c7eb696"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_framework_holdout_eval.csv",
+      "source": "outputs/revision/en_ablation/bli_framework_holdout_eval.csv",
+      "bytes": 41588,
+      "sha256": "17af4f7055a0a0fc4bef955eeddab9c64502beb0717e69939c3003c4e05a9882"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_layerwise_divergence.csv",
+      "source": "outputs/revision/en_ablation/bli_layerwise_divergence.csv",
+      "bytes": 7760,
+      "sha256": "9174fbb4c4bb8e119a3f7e34a43f58a382aa9c8736a3f2f45977d5d877d6db07"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_minimal_intervention_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_minimal_intervention_summary.csv",
+      "bytes": 154,
+      "sha256": "7fbb5dd14c7a90b7482a07091389c4d9b7dff073fb55e7da23d6552afe8792b2"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_negative_control_eval.csv",
+      "source": "outputs/revision/en_ablation/bli_negative_control_eval.csv",
+      "bytes": 8000,
+      "sha256": "d05cb79cfdfcc1b36c85659346519e008c17a3102025e60d82f857b0e4509eb9"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_norm_controlled_axis.csv",
+      "source": "outputs/revision/en_ablation/bli_norm_controlled_axis.csv",
+      "bytes": 10364,
+      "sha256": "c0b6d44c41166d25ebd0b75c7710911cac220f8340f4c8853cbb68c4f30aac83"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_norm_controlled_layerwise.csv",
+      "source": "outputs/revision/en_ablation/bli_norm_controlled_layerwise.csv",
+      "bytes": 64586,
+      "sha256": "34bd12a940f8556d3250986e930da1a9cb28abecd56848a3bf552aa7cec4306a"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_output_likelihood_association_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_output_likelihood_association_summary.csv",
+      "bytes": 1723,
+      "sha256": "78fe0124ccb9e4a296eba14832d6f6e9ad808c108ad26e608d04e43becc20b39"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_perhead_analysis.csv",
+      "source": "outputs/revision/en_ablation/bli_perhead_analysis.csv",
+      "bytes": 22242,
+      "sha256": "7d74214cfcaeeae27eea71f2322a7adca5b9a3c8df5c895e22d3664659aa9292"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_progress_sensitivity.csv",
+      "source": "outputs/revision/en_ablation/bli_progress_sensitivity.csv",
+      "bytes": 2443,
+      "sha256": "2070b76ac6ba93be767a55833f3a1eb131736971181b8a4f38a7c356d783d9c0"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_run_metadata.json",
+      "source": "outputs/revision/en_ablation/bli_run_metadata.json",
+      "bytes": 3549,
+      "sha256": "3bfd315c7140bb6cd47721e8fb763a8de8cce215ff8a129060c63aa089b0dfb5"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_same_language_controls.csv",
+      "source": "outputs/revision/en_ablation/bli_same_language_controls.csv",
+      "bytes": 2187,
+      "sha256": "e945a09d8e1be8b45eb3ba376aee6fdaccbcc2e4a2d658651bc9951b91a6efa8"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_same_language_controls_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_same_language_controls_summary.csv",
+      "bytes": 431,
+      "sha256": "fb6584dbab5a66eb1fc22cc38a6c7ec9d7d8fdcb6c02959cfe1cb90b4e249572"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_scope_tests.csv",
+      "source": "outputs/revision/en_ablation/bli_scope_tests.csv",
+      "bytes": 3072,
+      "sha256": "19dbd04449d416ea83a5c54b138987fbbf35ba4004dbc5ec06e19cd524d83de8"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_specificity_bridge_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_specificity_bridge_summary.csv",
+      "bytes": 892,
+      "sha256": "a1ec5dce74e90c78ede142291d6c91978d2bdf39d1cc39bc48da825028b23602"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_stratified_metrics.csv",
+      "source": "outputs/revision/en_ablation/bli_stratified_metrics.csv",
+      "bytes": 113823,
+      "sha256": "701c282449f95c775976e3cd218931708e22f13b4f6382bba6cc9c88ab76355c"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_summary_metrics.csv",
+      "source": "outputs/revision/en_ablation/bli_summary_metrics.csv",
+      "bytes": 13748,
+      "sha256": "62da7cf99736699caa32c68076f91333e4d3e3a20b04076da627c6ddc4a32088"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_tokenizer_audit.csv",
+      "source": "outputs/revision/en_ablation/bli_tokenizer_audit.csv",
+      "bytes": 19039,
+      "sha256": "aacd099e105bda47099a48d7b9ccf03e2b3e695f3468e3431806bc5580266f06"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_tokenizer_audit.json",
+      "source": "outputs/revision/en_ablation/bli_tokenizer_audit.json",
+      "bytes": 3065,
+      "sha256": "5698106da4266e0e1d457167e612ff242bcb489f905e4962e5b0d8228c05c2a9"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_tokenizer_audit_summary.csv",
+      "source": "outputs/revision/en_ablation/bli_tokenizer_audit_summary.csv",
+      "bytes": 134,
+      "sha256": "9efeedb9ed0e1da0992b4c60e78e1732fe7335dc95718aedc3b9c557a341f72b"
+    },
+    {
+      "path": "artifacts/results/en_ablation/bli_wilcoxon_overlap.csv",
+      "source": "outputs/revision/en_ablation/bli_wilcoxon_overlap.csv",
+      "bytes": 12655,
+      "sha256": "1ecea1f938e5193a0586974049fdd391a385eab52b78ed6cc89a761635e07736"
+    },
+    {
+      "path": "artifacts/results/en_ablation/k_sensitivity.csv",
+      "source": "outputs/revision/scope_expansion/k_sensitivity.csv",
+      "bytes": 1728,
+      "sha256": "168b9124b83156f349edc7f648fc0ca3d256ce4baffde59ce075d6c66065f260"
+    },
+    {
+      "path": "artifacts/results/multilingual/language_ratio_summary.csv",
+      "source": "outputs/multilingual_expansion/language_ratio_summary.csv",
+      "bytes": 1452,
+      "sha256": "be9ebce2783e149eb67d656427438acb10f19fc7a3c78092dc02122dbe75ad66"
+    },
+    {
+      "path": "artifacts/results/multilingual/multilingual_summary.csv",
+      "source": "outputs/multilingual_expansion/multilingual_summary.csv",
+      "bytes": 880,
+      "sha256": "17f09064597740455c15b75bd807ce9609253d88ed7b26ac79e0b35d858575af"
+    },
+    {
+      "path": "artifacts/results/seed_controls/bli_axis_divergence.csv",
+      "source": "outputs/revision/en_seed_null/bli_axis_divergence.csv",
+      "bytes": 72943,
+      "sha256": "184e7a9f6141f0c5b6840146fdeda40eb1a8d3ce556276bb8a5e74f73dfa2e9f"
+    },
+    {
+      "path": "artifacts/results/seed_controls/bli_run_metadata.json",
+      "source": "outputs/revision/en_seed_null/bli_run_metadata.json",
+      "bytes": 1383,
+      "sha256": "29b7e809458a0cfff2e713c3d00d984c983f29486586f2931c9c2ecf137be2d0"
+    },
+    {
+      "path": "artifacts/results/seed_controls/bli_summary_metrics.csv",
+      "source": "outputs/revision/en_seed_null/bli_summary_metrics.csv",
+      "bytes": 2863,
+      "sha256": "d06142d9b01764db2890ed707fa09080c9ce56abd1ab1100fecfaffdb8afb2dd"
+    },
+    {
+      "path": "artifacts/results/target_language/bul/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/bul_shared_language/bli_axis_divergence.csv",
+      "bytes": 47083,
+      "sha256": "970c58be3e08a7bbe8b26179571b706321e906a9ebfbe4279926876056575fd5"
+    },
+    {
+      "path": "artifacts/results/target_language/bul/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/bul_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3488,
+      "sha256": "d94a81173f9887393fd3cd9fc356547d0621d3cb0aa5a4c901a88880f48e114b"
+    },
+    {
+      "path": "artifacts/results/target_language/bul/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/bul_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "4c8b33d93468942139d9e1c60944d8075fbcedd9370c9b87bed9ccb49ad292e8"
+    },
+    {
+      "path": "artifacts/results/target_language/bul/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/bul_shared_language/bli_summary_metrics.csv",
+      "bytes": 1964,
+      "sha256": "c036fbf00d621721d62d00752014220c9544b6d09f2c37c8813d87b36a533a5b"
+    },
+    {
+      "path": "artifacts/results/target_language/deu/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/deu_shared_language/bli_axis_divergence.csv",
+      "bytes": 47241,
+      "sha256": "8353e6f79b579e001ca136315660a9ceafefaaaacf7afe998e84ee6745a6d970"
+    },
+    {
+      "path": "artifacts/results/target_language/deu/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/deu_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3497,
+      "sha256": "02186416fc6bab5e16ac208ea1ffb860f13c1bb08fa693e654c6569a9adfa9ed"
+    },
+    {
+      "path": "artifacts/results/target_language/deu/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/deu_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "1d73e144175f614a304b5da9e56c70244ff0805c350642230d41dff0b3b40bbe"
+    },
+    {
+      "path": "artifacts/results/target_language/deu/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/deu_shared_language/bli_summary_metrics.csv",
+      "bytes": 1972,
+      "sha256": "9013fe7dc76f1563f6ffa60575c300e83cc25fa9c6d033806865a9b4d1096338"
+    },
+    {
+      "path": "artifacts/results/target_language/fas/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/fas_shared_language/bli_axis_divergence.csv",
+      "bytes": 47162,
+      "sha256": "87f8453d9f47b4b9199289c917a4067c08a04a590ae412c665b285532a34dca0"
+    },
+    {
+      "path": "artifacts/results/target_language/fas/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/fas_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3497,
+      "sha256": "b07d161c061a3458e4d579ba0db68a597f6ede85a9b3f5249d0b35598b78ada8"
+    },
+    {
+      "path": "artifacts/results/target_language/fas/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/fas_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "959b762f863682571b3be3d57e5981e7462edd9bf9abbcc833c2c90a501cc45b"
+    },
+    {
+      "path": "artifacts/results/target_language/fas/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/fas_shared_language/bli_summary_metrics.csv",
+      "bytes": 1972,
+      "sha256": "71231b8ac1c9128048a69647cc623eae7d92db8686752714619cc2f28adb2b40"
+    },
+    {
+      "path": "artifacts/results/target_language/fr/bli_axis_divergence.csv",
+      "source": "outputs/revision/fr_shared_language/bli_axis_divergence.csv",
+      "bytes": 46346,
+      "sha256": "dcf9a5a1c252133d8f41da648ec24d6b4957542a34429ee3eb4711726868fdb5"
+    },
+    {
+      "path": "artifacts/results/target_language/fr/bli_bootstrap_ci.csv",
+      "source": "outputs/revision/fr_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3438,
+      "sha256": "72da1d2746022f2dfdc01df3b9191ba7a519a14f39e51bc4b34d2280d30a37a9"
+    },
+    {
+      "path": "artifacts/results/target_language/fr/bli_run_metadata.json",
+      "source": "outputs/revision/fr_shared_language/bli_run_metadata.json",
+      "bytes": 1135,
+      "sha256": "8eda5825a407ee4ec6ad1e3d1deb8724cb27e75a05669d68ff33557654da9eb4"
+    },
+    {
+      "path": "artifacts/results/target_language/fr/bli_summary_metrics.csv",
+      "source": "outputs/revision/fr_shared_language/bli_summary_metrics.csv",
+      "bytes": 1953,
+      "sha256": "2a0d78cce97e2176ae7bacc87d944565ef6549ef9eb232d67c2ebc1aa062fd0b"
+    },
+    {
+      "path": "artifacts/results/target_language/ind/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/ind_shared_language/bli_axis_divergence.csv",
+      "bytes": 47171,
+      "sha256": "7aad535ffebf33c50813b006c077b81bcd190e9de0d72756e093907fce3e0f17"
+    },
+    {
+      "path": "artifacts/results/target_language/ind/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/ind_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3491,
+      "sha256": "f8c69f03cf7f2629a4d3568cd7aa3b5ac573a61b4eb1b1f4885e166c4d6d2742"
+    },
+    {
+      "path": "artifacts/results/target_language/ind/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/ind_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "76d8855ee13a5b8b6a8f731c24d98e87aa3e9377f9168b32a3dd939bfc82dd09"
+    },
+    {
+      "path": "artifacts/results/target_language/ind/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/ind_shared_language/bli_summary_metrics.csv",
+      "bytes": 1981,
+      "sha256": "ac1e9808708907a3525d44bd5deba296438055e9bfeb24cd2730b79d74c5b645"
+    },
+    {
+      "path": "artifacts/results/target_language/nld/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/nld_shared_language/bli_axis_divergence.csv",
+      "bytes": 47204,
+      "sha256": "d81645bb20909b92b06c0c083d67aee3869fc80b2bed1e966aec0e36ef5037fa"
+    },
+    {
+      "path": "artifacts/results/target_language/nld/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/nld_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3501,
+      "sha256": "742de18148dad2f7c9380fcf8c16f18f512e8d01be5ef8896b1d25a57b39a59c"
+    },
+    {
+      "path": "artifacts/results/target_language/nld/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/nld_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "34cfde23376b1d07a378f08e190d80842861fb5743c2892d5682a0291ad1cb74"
+    },
+    {
+      "path": "artifacts/results/target_language/nld/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/nld_shared_language/bli_summary_metrics.csv",
+      "bytes": 1972,
+      "sha256": "34d9a1d4d0fe1715fcf76126b9c6f7cdeac3b11e411060c05f2aa18d042e1282"
+    },
+    {
+      "path": "artifacts/results/target_language/ukr/bli_axis_divergence.csv",
+      "source": "outputs/multilingual_expansion/ukr_shared_language/bli_axis_divergence.csv",
+      "bytes": 47147,
+      "sha256": "5a1b46e3863a4ca0fc55960d729834728b1d150aa9dd2e9ab015b251fcf894ac"
+    },
+    {
+      "path": "artifacts/results/target_language/ukr/bli_bootstrap_ci.csv",
+      "source": "outputs/multilingual_expansion/ukr_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3489,
+      "sha256": "9de6d0f05e4d1f2c3e2d1b90cfa9130da741b9cae868048c850471c4f529cf47"
+    },
+    {
+      "path": "artifacts/results/target_language/ukr/bli_run_metadata.json",
+      "source": "outputs/multilingual_expansion/ukr_shared_language/bli_run_metadata.json",
+      "bytes": 1211,
+      "sha256": "6c3878ad6d6c2fbfe36c054340f8793a635f829cc35956f1dcdcb44c53643c41"
+    },
+    {
+      "path": "artifacts/results/target_language/ukr/bli_summary_metrics.csv",
+      "source": "outputs/multilingual_expansion/ukr_shared_language/bli_summary_metrics.csv",
+      "bytes": 1971,
+      "sha256": "81ea0709145108fbf7b4223e96f81f108de1e56feaa69242e60b60919ed7ae6a"
+    },
+    {
+      "path": "artifacts/results/target_language/zh/bli_axis_divergence.csv",
+      "source": "outputs/revision/zh_shared_language/bli_axis_divergence.csv",
+      "bytes": 46434,
+      "sha256": "a87561ba6f6415135990a4cbcb130f2f5ed061a14f0c3d6edb712b504d828dc9"
+    },
+    {
+      "path": "artifacts/results/target_language/zh/bli_bootstrap_ci.csv",
+      "source": "outputs/revision/zh_shared_language/bli_bootstrap_ci.csv",
+      "bytes": 3434,
+      "sha256": "17959f313a394aa2d422ff9ba5e6b4b3be5481d63710aa2277716698cc5701e4"
+    },
+    {
+      "path": "artifacts/results/target_language/zh/bli_run_metadata.json",
+      "source": "outputs/revision/zh_shared_language/bli_run_metadata.json",
+      "bytes": 1135,
+      "sha256": "4283b9f938c950063c4a4d49a12970bc756004d04e206fd1773382409ba1e3d9"
+    },
+    {
+      "path": "artifacts/results/target_language/zh/bli_summary_metrics.csv",
+      "source": "outputs/revision/zh_shared_language/bli_summary_metrics.csv",
+      "bytes": 1954,
+      "sha256": "81b1fc6aa57922ebb81b740df201ea8d86c805bc343dae5fc00537faeb62c6c8"
+    },
+    {
+      "path": "artifacts/results/validation/exposure_overlap_report.json",
+      "source": "outputs/validation/exposure_overlap_report.json",
+      "bytes": 4590,
+      "sha256": "3243e0ecefcc4eef214bf61e2adb27f0d597d62d5550e59bf9dd79f36965be82"
+    },
+    {
+      "path": "artifacts/results/validation/mixed_language_audit_by_category.csv",
+      "source": "outputs/validation/mixed_language_audit/mixed_language_audit_by_category.csv",
+      "bytes": 3866,
+      "sha256": "67c62fe488e23cae291da7e03f3f8d39cae1efc22978d63f78c33b26a1d5ba55"
+    },
+    {
+      "path": "artifacts/results/validation/mixed_language_audit_by_source.csv",
+      "source": "outputs/validation/mixed_language_audit/mixed_language_audit_by_source.csv",
+      "bytes": 4405,
+      "sha256": "aa5383f778ffdadb91bdb9d241d114be456da83e9c038477299d0c0422f73ef8"
+    },
+    {
+      "path": "artifacts/results/validation/mixed_language_audit_config.json",
+      "source": "outputs/validation/mixed_language_audit/mixed_language_audit_config.json",
+      "bytes": 348,
+      "sha256": "bf77bd97430b572bc05c4b404e8218e59dd69356507855a6266f85250657baf5"
+    },
+    {
+      "path": "artifacts/results/validation/mixed_language_audit_summary.csv",
+      "source": "outputs/validation/mixed_language_audit/mixed_language_audit_summary.csv",
+      "bytes": 2550,
+      "sha256": "bdbbd8e06aa9d9befef83e4b3a1005762a2cdbb714070190e08a63ec5f1f1836"
+    },
+    {
+      "path": "artifacts/results/worldvaluesbench/worldvaluebench_model_summary.csv",
+      "source": "outputs/revision/en_ablation/worldvaluebench_bli/worldvaluebench_model_summary.csv",
+      "bytes": 7273,
+      "sha256": "8bcc45e4e47552690f7225cd3736decfefab1b86370a8830abf899ca0249a62a"
+    },
+    {
+      "path": "artifacts/results/worldvaluesbench/worldvaluebench_pair_summary.csv",
+      "source": "outputs/revision/en_ablation/worldvaluebench_bli/worldvaluebench_pair_summary.csv",
+      "bytes": 1916,
+      "sha256": "d8b595a476bad10f5a21b2ab82a7cb9a6169347094be91dfebb64207a34f929e"
+    },
+    {
+      "path": "artifacts/results/worldvaluesbench/worldvaluebench_residual_association.csv",
+      "source": "outputs/revision/en_ablation/worldvaluebench_bli/worldvaluebench_residual_association.csv",
+      "bytes": 764,
+      "sha256": "34e145e4036ffd849919203b41eba95afed19f3cfb406893ed116b9f58c41aef"
+    }
+  ]
+}

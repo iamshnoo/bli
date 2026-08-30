@@ -1,0 +1,7 @@
+artifact,unique_hashes
+tokenizer.json,1
+tokenizer_config.json,1
+special_tokens_map.json,1
+tokenizer.model,0
+vocab.json,0
+merges.txt,0

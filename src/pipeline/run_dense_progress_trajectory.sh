@@ -14,7 +14,7 @@ export NANOTRON_ROOT="${NANOTRON_ROOT:-/scratch/${USER}/pretrain/nanotron_full}"
 
 TOKENIZER_PATH="${TOKENIZER_PATH:-$ROOT_DIR/models/hf/en_100m}"
 PROGRESS_MODEL_ROOT="${PROGRESS_MODEL_ROOT:-$ROOT_DIR/models/hf/progress_dense_all}"
-MODELS_JSON="${MODELS_JSON:-$ROOT_DIR/configs/models_dense_progress_all.json}"
+MODELS_JSON="${MODELS_JSON:-$ROOT_DIR/configs/models/models_dense_progress_all.json}"
 RAW_OUTPUT_DIR="${RAW_OUTPUT_DIR:-$ROOT_DIR/outputs/revision/en_progress_trajectory_all}"
 RAW_SUMMARY_CSV="${RAW_SUMMARY_CSV:-$RAW_OUTPUT_DIR/bli_summary_metrics.csv}"
 DERIVED_CSV="${DERIVED_CSV:-$ROOT_DIR/outputs/revision/en_ablation/bli_dense_progress_trajectory.csv}"
@@ -60,8 +60,8 @@ for step in [500, 1000, 1500, 2000, 2500, 3000]:
     payload[f"en_{step}"] = str(root / f"en_{step}")
     for lang in langs:
         payload[f"en_{lang}_a_{step}"] = str(root / f"en_{lang}_a_{step}")
-Path("configs/models_dense_progress_all.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
-print("Wrote configs/models_dense_progress_all.json")
+Path("configs/models/models_dense_progress_all.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+print("Wrote configs/models/models_dense_progress_all.json")
 PY
 
 python src/bli_analysis/run_dense_progress_summary.py \

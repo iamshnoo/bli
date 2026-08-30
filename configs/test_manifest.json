@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "description": "Evaluation, validation, and robustness suites used by the paper and tracked extensions.",
+  "data_manifest": "configs/data_manifest.json",
+  "train_manifest": "configs/train_manifest.json",
+  "public_model_registry": "configs/models/models_hub.json",
+  "comparison_setups": [
+    {
+      "id": "C1",
+      "baseline": "en_50m",
+      "bilingual": "en_{language}_a",
+      "english_data": "shared",
+      "total_compute": "bilingual model has twice the training steps",
+      "isolates": "adding a second language while holding English documents fixed"
+    },
+    {
+      "id": "C2",
+      "baseline": "en_50m",
+      "bilingual": "en_{language}_b",
+      "english_data": "disjoint",
+      "total_compute": "bilingual model has twice the training steps",
+      "isolates": "adding a second language without shared English documents"
+    },
+    {
+      "id": "C3",
+      "baseline": "en_100m",
+      "bilingual": "en_{language}_a",
+      "english_data": "shared with the 50M English subset",
+      "total_compute": "matched",
+      "isolates": "language mixture at matched total compute"
+    },
+    {
+      "id": "C4",
+      "baseline": "en_100m",
+      "bilingual": "en_{language}_b",
+      "english_data": "disjoint from the 50M English subset",
+      "total_compute": "matched",
+      "isolates": "language mixture at matched total compute without shared English documents"
+    }
+  ],
+  "representations": {
+    "embedding_matrix": "input token embedding for each single-token English probe",
+    "pre_lmhead_contextual": "final-token hidden state before the language-model head for a fixed prompt",
+    "layerwise_contextual": "the same prompted state extracted after each transformer layer"
+  },
+  "alignment_strategies": [
+    {
+      "id": "orthogonal_embedding",
+      "map": "orthogonal Procrustes",
+      "fit_on": "3,000 neutral English embedding anchors",
+      "default": true
+    },
+    {
+      "id": "orthogonal_contextual",
+      "map": "orthogonal Procrustes",
+      "fit_on": "3,000 neutral English contextual anchors",
+      "default": false
+    },
+    {
+      "id": "affine_embedding",
+      "map": "affine least squares",
+      "fit_on": "3,000 neutral English embedding anchors",
+      "default": false
+    },
+    {
+      "id": "layerwise_orthogonal",
+      "map": "separate orthogonal Procrustes map per layer",
+      "fit_on": "3,000 neutral English contextual anchors per layer",
+      "default": false
+    }
+  ],
+  "evaluation_suite_count": 18,
+  "evaluation_suites": [
+    {
+      "id": "english_control_matrix",
+      "purpose": "Compare English representations after English-only or English-plus-second-language pretraining under matched-data and matched-compute controls.",
+      "entrypoint": "src/bli_analysis/run_bli_pipeline.py",
+      "inputs": [
+        "data/probes/probe_sets.json"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_summary_metrics.csv",
+        "outputs/revision/en_ablation/bli_word_neighbor_divergence.csv",
+        "outputs/revision/en_ablation/bli_axis_divergence.csv"
+      ],
+      "paper_role": "core",
+      "model_registry": "configs/models/models_en_ablation.json",
+      "public_model_registry": "configs/models/models_en_ablation_hub.json"
+    },
+    {
+      "id": "target_language_validation",
+      "purpose": "Repeat the comparison in each second-language model space using the same English concept inventory.",
+      "entrypoint": "src/bli_analysis/run_bli_pipeline.py",
+      "inputs": [
+        "data/probes/probe_sets.json"
+      ],
+      "outputs": [
+        "outputs/{revision_or_multilingual}/{language}_shared_language/bli_summary_metrics.csv",
+        "outputs/{revision_or_multilingual}/{language}_shared_language/bli_axis_divergence.csv"
+      ],
+      "paper_role": "core",
+      "model_registry": "configs/models/models_{language}_shared.json"
+    },
+    {
+      "id": "bootstrap_confidence_intervals",
+      "purpose": "Bootstrap word-, axis-, and similarity-based estimates.",
+      "entrypoint": "src/bli_analysis/compute_bootstrap_ci.py",
+      "inputs": [
+        "outputs/revision/en_ablation/bli_summary_metrics.csv",
+        "outputs/revision/en_ablation/bli_word_neighbor_divergence.csv",
+        "outputs/revision/en_ablation/bli_axis_divergence.csv",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_bootstrap_ci.csv"
+      ],
+      "paper_role": "statistical_validation"
+    },
+    {
+      "id": "document_overlap_tests",
+      "purpose": "Test shared-versus-disjoint English comparisons and translation-quality strata.",
+      "entrypoint": "src/bli_analysis/run_statistical_tests.py",
+      "inputs": [
+        "outputs/revision/en_ablation/bli_word_neighbor_divergence.csv",
+        "data/probes/translations_*.csv"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_wilcoxon_overlap.csv"
+      ],
+      "paper_role": "statistical_validation"
+    },
+    {
+      "id": "same_language_seed_controls",
+      "purpose": "Estimate variation between English-only runs that differ only in random seed.",
+      "entrypoint": "src/bli_analysis/run_same_language_controls.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_seed_null/representations",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_same_language_controls.csv",
+        "outputs/revision/en_ablation/bli_same_language_controls_summary.csv"
+      ],
+      "paper_role": "robustness",
+      "model_registry": "configs/models/models_seed_null.json",
+      "public_model_registry": "configs/models/models_seed_null_hub.json"
+    },
+    {
+      "id": "layerwise_analysis",
+      "purpose": "Trace semantic-axis differences through every transformer layer.",
+      "entrypoint": "src/bli_analysis/run_layerwise_analysis.py",
+      "inputs": [
+        "data/probes/probe_sets.json"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_layerwise_divergence.csv"
+      ],
+      "paper_role": "core",
+      "model_registry": "configs/models/models_layerwise.json",
+      "public_model_registry": "configs/models/models_layerwise_hub.json"
+    },
+    {
+      "id": "norm_controlled_axes",
+      "purpose": "Repeat signed-axis analysis after unit-normalizing representations and report layerwise controls.",
+      "entrypoint": "src/bli_analysis/run_norm_controlled_axis.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_norm_controlled_axis.csv",
+        "outputs/revision/en_ablation/bli_norm_controlled_layerwise.csv"
+      ],
+      "paper_role": "robustness",
+      "model_registry": "configs/models/models_en_ablation.json",
+      "public_model_registry": "configs/models/models_en_ablation_hub.json"
+    },
+    {
+      "id": "alignment_method_comparison",
+      "purpose": "Compare orthogonal and affine maps fit on embeddings or contextual states.",
+      "entrypoint": "src/bli_analysis/run_alignment_method_comparison.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_alignment_method_comparison.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "contextual_alignment_variant",
+      "purpose": "Fit the orthogonal map directly on contextual states.",
+      "entrypoint": "src/bli_analysis/run_contextual_alignment_variant.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_contextual_alignment_variant.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "anchor_sensitivity",
+      "purpose": "Refit alignment maps with repeated anchor subsets of 500, 1,000, 2,000, and 3,000 words.",
+      "entrypoint": "src/bli_analysis/run_anchor_sensitivity.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_anchor_sensitivity.csv",
+        "outputs/revision/en_ablation/bli_anchor_sensitivity_summary.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "knn_sensitivity",
+      "purpose": "Recompute nearest-neighbor disagreement for k in {5, 10, 25, 50, 100}.",
+      "entrypoint": "src/bli_analysis/run_k_sensitivity.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations",
+        "outputs/revision/en_seed_null/representations"
+      ],
+      "outputs": [
+        "outputs/revision/scope_expansion/k_sensitivity.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "framework_holdout",
+      "purpose": "Refit alignment while holding out each cultural framework category.",
+      "entrypoint": "src/bli_analysis/run_framework_holdout_eval.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_framework_holdout_eval.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "negative_controls",
+      "purpose": "Compare cultural concepts with concrete negative-control words.",
+      "entrypoint": "src/bli_analysis/run_negative_control_eval.py",
+      "inputs": [
+        "data/probes/probe_sets.json",
+        "outputs/revision/en_ablation/representations"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_negative_control_eval.csv"
+      ],
+      "paper_role": "robustness"
+    },
+    {
+      "id": "training_progress",
+      "purpose": "Measure differences over training checkpoints and test the final-step trend.",
+      "entrypoint": "src/pipeline/run_dense_progress_trajectory.sh",
+      "inputs": [
+        "data/probes/probe_sets.json"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_dense_progress_trajectory.csv",
+        "outputs/revision/en_ablation/bli_progress_sensitivity.csv"
+      ],
+      "paper_role": "robustness",
+      "model_registry": "configs/models/models_dense_progress_all.json"
+    },
+    {
+      "id": "tokenizer_audit",
+      "purpose": "Verify tokenizer identity and vocabulary consistency across model exports.",
+      "entrypoint": "src/bli_analysis/run_tokenizer_audit.py",
+      "inputs": [
+        "models/hf"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_tokenizer_audit.csv",
+        "outputs/revision/en_ablation/bli_tokenizer_audit.json"
+      ],
+      "paper_role": "validation"
+    },
+    {
+      "id": "mixed_language_corpus_audit",
+      "purpose": "Use chunk-level language identification to flag mixed-language or wrong-language documents in each training corpus.",
+      "entrypoint": "src/bli_analysis/run_mixed_language_audit.py",
+      "inputs": [
+        "BabyLM-community/babylm-* train splits",
+        "fastText lid.176.ftz"
+      ],
+      "outputs": [
+        "outputs/validation/mixed_language_audit/mixed_language_audit_summary.csv",
+        "outputs/validation/mixed_language_audit/mixed_language_audit_by_source.csv",
+        "outputs/validation/mixed_language_audit/mixed_language_audit_by_category.csv"
+      ],
+      "paper_role": "validation"
+    },
+    {
+      "id": "output_likelihood_association",
+      "purpose": "Test whether signed representation differences predict controlled output-likelihood preferences.",
+      "entrypoint": "slurm/run_output_likelihood_association.sbatch",
+      "inputs": [
+        "data/probes/output_likelihood_association_cases_expanded.csv"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/bli_output_likelihood_association.csv",
+        "outputs/revision/en_ablation/bli_output_likelihood_association_summary.csv"
+      ],
+      "paper_role": "scope_extension",
+      "model_registry": "configs/models/models_en_ablation.json",
+      "public_model_registry": "configs/models/models_en_ablation_hub.json"
+    },
+    {
+      "id": "worldvaluesbench",
+      "purpose": "Evaluate target-country WorldValuesBench items and compare behavioral residuals with representation differences.",
+      "entrypoint": "slurm/run_worldvaluebench_bli.sbatch",
+      "inputs": [
+        "external/WorldValuesBench",
+        "data/probes/probe_sets.json"
+      ],
+      "outputs": [
+        "outputs/revision/en_ablation/worldvaluebench_bli/worldvaluebench_model_summary.csv",
+        "outputs/revision/en_ablation/worldvaluebench_bli/worldvaluebench_residual_association.csv"
+      ],
+      "paper_role": "scope_extension",
+      "model_registry": "configs/models/models_en_ablation.json",
+      "public_model_registry": "configs/models/models_en_ablation_hub.json"
+    }
+  ],
+  "released_result_root": "artifacts/results",
+  "note": "Paths under outputs/ are generated locally; curated summary artifacts used by the manuscript are mirrored under artifacts/results/."
+}

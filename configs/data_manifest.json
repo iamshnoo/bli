@@ -1,0 +1,197 @@
+{
+  "schema_version": "1.0",
+  "description": "Lineage for pretraining corpora, probe inventories, translations, and evaluation inputs.",
+  "pretraining_datasets": [
+    {
+      "id": "babylm_eng",
+      "language": "English",
+      "analysis_code": "en",
+      "dataset_code": "eng",
+      "hf_dataset_id": "BabyLM-community/babylm-eng",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-eng/train"
+    },
+    {
+      "id": "babylm_zho",
+      "language": "Chinese (Mandarin)",
+      "analysis_code": "zh",
+      "dataset_code": "zho",
+      "hf_dataset_id": "BabyLM-community/babylm-zho",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-zho/train"
+    },
+    {
+      "id": "babylm_fra",
+      "language": "French",
+      "analysis_code": "fr",
+      "dataset_code": "fra",
+      "hf_dataset_id": "BabyLM-community/babylm-fra",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-fra/train"
+    },
+    {
+      "id": "babylm_fas",
+      "language": "Persian (Farsi)",
+      "analysis_code": "fas",
+      "dataset_code": "fas",
+      "hf_dataset_id": "BabyLM-community/babylm-fas",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-fas/train"
+    },
+    {
+      "id": "babylm_nld",
+      "language": "Dutch",
+      "analysis_code": "nld",
+      "dataset_code": "nld",
+      "hf_dataset_id": "BabyLM-community/babylm-nld",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-nld/train"
+    },
+    {
+      "id": "babylm_ukr",
+      "language": "Ukrainian",
+      "analysis_code": "ukr",
+      "dataset_code": "ukr",
+      "hf_dataset_id": "BabyLM-community/babylm-ukr",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-ukr/train"
+    },
+    {
+      "id": "babylm_bul",
+      "language": "Bulgarian",
+      "analysis_code": "bul",
+      "dataset_code": "bul",
+      "hf_dataset_id": "BabyLM-community/babylm-bul",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-bul/train"
+    },
+    {
+      "id": "babylm_ind",
+      "language": "Indonesian",
+      "analysis_code": "ind",
+      "dataset_code": "ind",
+      "hf_dataset_id": "BabyLM-community/babylm-ind",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-ind/train"
+    },
+    {
+      "id": "babylm_deu",
+      "language": "German",
+      "analysis_code": "deu",
+      "dataset_code": "deu",
+      "hf_dataset_id": "BabyLM-community/babylm-deu",
+      "split": "train",
+      "text_column": "text",
+      "tokenized_path": "data/processed/babylm-deu/train"
+    },
+    {
+      "id": "babylm_eng_shared",
+      "language": "English",
+      "parent_dataset": "babylm_eng",
+      "split_rule": "even MD5 parity of the string-valued doc-id field",
+      "raw_path": "data/raw/partitions/eng_shared",
+      "tokenized_path": "data/processed/partitions/eng_shared/train",
+      "role": "English data shared with the en_50m reference"
+    },
+    {
+      "id": "babylm_eng_disjoint",
+      "language": "English",
+      "parent_dataset": "babylm_eng",
+      "split_rule": "odd MD5 parity of the string-valued doc-id field",
+      "raw_path": "data/raw/partitions/eng_disjoint",
+      "tokenized_path": "data/processed/partitions/eng_disjoint/train",
+      "role": "English data disjoint from the en_50m reference"
+    }
+  ],
+  "probe_assets": {
+    "language_metadata": "data/language_metadata.csv",
+    "canonical_probe_set": "data/probes/probe_sets.json",
+    "evaluation_data_lineage": "data/probes/evaluation_data_lineage.csv",
+    "lineage_builder": "src/probes/build_eval_data_lineage.py",
+    "translation_files": "data/probes/translations_{zh,fr,fas,nld,ukr,bul,ind,deu}.csv",
+    "translation_summary": "data/probes/translation_summary.json",
+    "output_likelihood_cases": "data/probes/output_likelihood_association_cases_expanded.csv",
+    "inventory": {
+      "alignment_anchors_english": 3000,
+      "cultural_concepts_per_language": 1000,
+      "semantic_axes": 50,
+      "axis_endpoints_per_language": 100,
+      "negative_controls_english": 100,
+      "languages_with_concept_terms": 9
+    },
+    "axis_direction_note": "Endpoint 1 is coded -1 and endpoint 2 +1 only to orient signed differences. The signs are not value judgments.",
+    "term_usage_note": "All reported representation comparisons use the English concept and axis terms in every model. The eight translation files support translation-quality stratification; 35 axis endpoint terms outside the 1,000-concept inventory were not translated and are marked not_translated in the lineage CSV."
+  },
+  "translation_resources": {
+    "model_hf_id": "facebook/nllb-200-distilled-600M",
+    "quality_estimation_model_hf_id": "Unbabel/wmt22-cometkiwi-da",
+    "quality_fields": [
+      "back_translated_en",
+      "back_similarity",
+      "comet_kiwi_score",
+      "qe_tier",
+      "needs_manual_review",
+      "duplicate_translation"
+    ]
+  },
+  "tokenizer": {
+    "hf_id": "meta-llama/Llama-3.2-1B",
+    "role": "tokenizer and vocabulary only; model weights are initialized from scratch"
+  },
+  "model_assets": {
+    "public_huggingface_registry": "configs/models/models_hub.json",
+    "public_namespace": "iamshnoo",
+    "published_model_count": 40,
+    "local_export_root": "models/hf",
+    "local_only_models": []
+  },
+  "axis_and_category_sources": {
+    "hofstede2001culture": {
+      "title": "Culture's Consequences: Comparing Values, Behaviors, Institutions and Organizations Across Nations",
+      "year": 2001,
+      "url": "https://digitalcommons.usu.edu/unf_research/53/"
+    },
+    "schwartz2006theory": {
+      "title": "A theory of cultural value orientations: Explication and applications",
+      "year": 2006,
+      "url": "https://doi.org/10.1163/156913306778667357"
+    },
+    "inglehart2005modernization": {
+      "title": "Modernization, Cultural Change, and Democracy: The Human Development Sequence",
+      "year": 2005,
+      "url": "https://doi.org/10.1017/CBO9780511790881"
+    },
+    "house2004culture": {
+      "title": "Culture, Leadership, and Organizations: The GLOBE Study of 62 Societies",
+      "year": 2004,
+      "url": "https://www.sagepub.com/shop/buy-a-book/culture-leadership-and-organizations-1-226013"
+    },
+    "hershcovich2022challenges": {
+      "title": "Challenges and Strategies in Cross-Cultural NLP",
+      "year": 2022,
+      "url": "https://aclanthology.org/2022.acl-long.482/"
+    },
+    "arora2023probing": {
+      "title": "Probing Pre-Trained Language Models for Cross-Cultural Differences in Values",
+      "year": 2023,
+      "url": "https://aclanthology.org/2023.c3nlp-1.12/"
+    },
+    "berlin1969basic": {
+      "title": "Basic Color Terms: Their Universality and Evolution",
+      "year": 1969,
+      "url": "https://philpapers.org/rec/BERBCT"
+    }
+  },
+  "validation_outputs": {
+    "exposure_overlap": "artifacts/results/validation/exposure_overlap_report.json",
+    "mixed_language_audit": "artifacts/results/validation/mixed_language_audit_summary.csv"
+  }
+}

@@ -230,7 +230,7 @@ def build_alternating_stages(en_dataset: Path, l2_dataset: Path, total_steps: in
 
 
 def write_stage_configs() -> None:
-    stage_dir = ROOT / "config/stages"
+    stage_dir = ROOT / "configs/stages"
     ensure_dir(stage_dir)
 
     lang_paths = {
@@ -275,7 +275,7 @@ def compute_expected_stage_counts(stages: List[dict], en_dataset: Path, l2_datas
 
 
 def write_overlap_validation_report() -> None:
-    stage_dir = ROOT / "config/stages"
+    stage_dir = ROOT / "configs/stages"
     out_path = ROOT / "outputs/validation/exposure_overlap_report.json"
     ensure_dir(out_path.parent)
 
@@ -303,7 +303,7 @@ def write_overlap_validation_report() -> None:
 
             setup_payload = {
                 "setup_name": f"{family}_{setup}",
-                "stage_json": str(stage_json),
+                "stage_json": str(to_repo_relative(stage_json)),
                 "expected": {
                     "en_steps": 1500,
                     "l2_steps": 1500,
@@ -316,8 +316,8 @@ def write_overlap_validation_report() -> None:
                     "l2_steps": counts["l2_steps"],
                     "en_tokens": counts["en_steps"] * tokens_per_step,
                     "l2_tokens": counts["l2_steps"] * tokens_per_step,
-                    "en_dataset": str(en_dataset),
-                    "l2_dataset": str(l2_dataset),
+                    "en_dataset": str(to_repo_relative(en_dataset)),
+                    "l2_dataset": str(to_repo_relative(l2_dataset)),
                     "doc_overlap_pct_vs_en50m": overlap_observed,
                     "token_overlap_pct_vs_en50m": overlap_observed,
                 },
@@ -340,12 +340,12 @@ def write_overlap_validation_report() -> None:
 
     report = {
         "partition_disjointness": {
-            "manifest": str(ROOT / "data/raw/partitions/eng_partition_manifest.json"),
+            "manifest": str(to_repo_relative(ROOT / "data/raw/partitions/eng_partition_manifest.json")),
             "intersection_rows": 0,
             "disjoint_ok": True,
         },
         "en50m_reference": {
-            "dataset": str(EN_SHARED),
+            "dataset": str(to_repo_relative(EN_SHARED)),
             "steps": 1500,
             "tokens_per_step": tokens_per_step,
             "expected_tokens": expected_tokens_50m,

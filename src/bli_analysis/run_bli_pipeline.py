@@ -377,10 +377,22 @@ def resolve_pairs(pair_args: list[str], model_keys: list[str]) -> list[tuple[str
     return out
 
 
+def portable_path(path: Path) -> str:
+    """Prefer a repository-relative path in generated metadata."""
+    try:
+        return str(path.resolve().relative_to(Path.cwd().resolve()))
+    except ValueError:
+        return str(path)
+
+
 def main() -> None:
     args = parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
     models = resolve_models(args.models_json)
+    model_pairs = resolve_pairs(args.pair, list(models.keys()))
+    if args.pair:
+        selected_models = {name for pair in model_pairs for name in pair}
+        models = {name: path for name, path in models.items() if name in selected_models}
 
     with open(args.probe_set) as f:
         probes = json.load(f)
@@ -470,7 +482,6 @@ def main() -> None:
     word_div_tables: list[pd.DataFrame] = []
     axis_tables: list[pd.DataFrame] = []
 
-    model_pairs = resolve_pairs(args.pair, list(models.keys()))
     for repr_type, model_mats in repr_data.items():
         for m_a, m_b in model_pairs:
             print(f"\nRunning metrics: {repr_type} | {m_a} vs {m_b}")
@@ -522,7 +533,7 @@ def main() -> None:
     meta = {
         "models": models,
         "model_pairs": [{"model_a": a, "model_b": b} for a, b in model_pairs],
-        "probe_set": str(args.probe_set),
+        "probe_set": portable_path(args.probe_set),
         "word_count": len(words),
         "neutral_anchor_count": len(neutral_idx),
         "cultural_probe_count": len(cultural_idx),
@@ -531,10 +542,10 @@ def main() -> None:
         "device": str(device),
         "prompts": DEFAULT_PROMPTS,
         "outputs": {
-            "summary_csv": str(summary_csv),
-            "word_csv": str(word_csv),
-            "axis_csv": str(axis_csv),
-            "pdf": str(pdf_path),
+            "summary_csv": portable_path(summary_csv),
+            "word_csv": portable_path(word_csv),
+            "axis_csv": portable_path(axis_csv),
+            "pdf": portable_path(pdf_path),
         },
     }
     meta_out.write_text(json.dumps(meta, indent=2))

@@ -1,0 +1,11 @@
+{
+  "lid_model": "outputs/validation/lid.176.ftz",
+  "max_segments": 12,
+  "chunk_chars": 500,
+  "min_segment_chars": 30,
+  "min_alpha": 12,
+  "min_confidence": 0.5,
+  "mixed_min_frac": 0.2,
+  "mixed_min_segments": 3,
+  "note": "Heuristic chunk-level audit. Mixed-candidate docs require both target and non-target high-confidence segment labels."
+}

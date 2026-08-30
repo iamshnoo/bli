@@ -1,0 +1,44 @@
+{
+  "models": {
+    "nld_50m": "models/hf/nld_50m",
+    "nld_100m": "models/hf/nld_100m",
+    "en_nld_a": "models/hf/en_nld_a",
+    "en_nld_b": "models/hf/en_nld_b"
+  },
+  "model_pairs": [
+    {
+      "model_a": "nld_50m",
+      "model_b": "en_nld_a"
+    },
+    {
+      "model_a": "nld_50m",
+      "model_b": "en_nld_b"
+    },
+    {
+      "model_a": "nld_100m",
+      "model_b": "en_nld_a"
+    },
+    {
+      "model_a": "nld_100m",
+      "model_b": "en_nld_b"
+    }
+  ],
+  "probe_set": "data/probes/probe_sets.json",
+  "word_count": 4135,
+  "neutral_anchor_count": 3000,
+  "cultural_probe_count": 1000,
+  "axis_count": 50,
+  "topk": 25,
+  "device": "cuda",
+  "prompts": [
+    "The word {word} appears in a neutral sentence.",
+    "In general usage, {word} is a term.",
+    "People may mention {word} in writing."
+  ],
+  "outputs": {
+    "summary_csv": "outputs/multilingual_expansion/nld_shared_language/bli_summary_metrics.csv",
+    "word_csv": "outputs/multilingual_expansion/nld_shared_language/bli_word_neighbor_divergence.csv",
+    "axis_csv": "outputs/multilingual_expansion/nld_shared_language/bli_axis_divergence.csv",
+    "pdf": "outputs/multilingual_expansion/nld_shared_language/bli_report.pdf"
+  }
+}

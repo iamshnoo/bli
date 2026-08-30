@@ -37,6 +37,13 @@ def parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
+def portable_path(path: Path) -> str:
+    try:
+        return str(path.resolve().relative_to(Path.cwd().resolve()))
+    except ValueError:
+        return str(path)
+
+
 def main() -> None:
     args = parse_args()
     rows = []
@@ -87,7 +94,7 @@ def main() -> None:
     df.to_csv(args.out_csv, index=False)
 
     summary = {
-        'models_root': str(args.models_root),
+        'models_root': portable_path(args.models_root),
         'n_models': int(len(df)),
         'per_file_unique_hashes': {fname: len(digests) for fname, digests in file_hash_index.items()},
         'hash_groups': file_hash_index,

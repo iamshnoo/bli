@@ -1,0 +1,979 @@
+{
+  "schema_version": "1.0",
+  "description": "Complete manifest for the 40 models used in the controlled bilingual-pretraining study.",
+  "data_manifest": "configs/data_manifest.json",
+  "model_architecture": {
+    "family": "LlamaForCausalLM",
+    "nanotron_model_preset": "160m",
+    "reported_parameter_count": "approximately 310M parameters with the 128,256-token vocabulary",
+    "hidden_size": 768,
+    "intermediate_size": 3072,
+    "num_hidden_layers": 12,
+    "num_attention_heads": 12,
+    "num_key_value_heads": 12,
+    "head_dim": 64,
+    "max_position_embeddings": 512,
+    "vocab_size": 128256,
+    "activation": "SiLU",
+    "normalization": "RMSNorm",
+    "tie_word_embeddings": false,
+    "dtype": "bfloat16"
+  },
+  "optimization": {
+    "micro_batch_size": 8,
+    "gradient_accumulation_steps": 8,
+    "sequence_length": 512,
+    "tokens_per_step": 32768,
+    "learning_rate": 0.003,
+    "minimum_learning_rate": 0.0003,
+    "weight_decay": 0.033,
+    "gradient_clip": 0.1,
+    "checkpoint_interval_steps": 500,
+    "validation": "disabled during pretraining",
+    "parallelism": {
+      "data": 1,
+      "tensor": 1,
+      "pipeline": 1,
+      "context": 1,
+      "expert": 1
+    },
+    "hardware_per_run": "1 x NVIDIA A100 80GB"
+  },
+  "notes": [
+    "The tokenizer vocabulary comes from meta-llama/Llama-3.2-1B; no pretrained Llama weights are loaded.",
+    "All 40 models are public under iamshnoo on the Hugging Face Hub.",
+    "The 50M and 100M labels denote the intended token budgets; exact step-derived budgets are recorded per run."
+  ],
+  "run_count": 40,
+  "published_model_count": 40,
+  "runs": [
+    {
+      "run_id": "en_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_eng_shared"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_50m",
+      "published_model_hf_id": "iamshnoo/en_50m"
+    },
+    {
+      "run_id": "en_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_eng_full"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-eng/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_100m",
+      "published_model_hf_id": "iamshnoo/en_100m"
+    },
+    {
+      "run_id": "en_50m_s1",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_shared"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 101,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_50m_s1",
+      "published_model_hf_id": "iamshnoo/en_50m_s1"
+    },
+    {
+      "run_id": "en_100m_s1",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_full"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-eng/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 101,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_100m_s1",
+      "published_model_hf_id": "iamshnoo/en_100m_s1"
+    },
+    {
+      "run_id": "en_50m_s2",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_shared"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 202,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_50m_s2",
+      "published_model_hf_id": "iamshnoo/en_50m_s2"
+    },
+    {
+      "run_id": "en_100m_s2",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_full"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-eng/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 202,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_100m_s2",
+      "published_model_hf_id": "iamshnoo/en_100m_s2"
+    },
+    {
+      "run_id": "en_50m_s3",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_shared"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 303,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_50m_s3",
+      "published_model_hf_id": "iamshnoo/en_50m_s3"
+    },
+    {
+      "run_id": "en_100m_s3",
+      "training_type": "same_language_seed_control",
+      "dataset_refs": [
+        "babylm_eng_full"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-eng/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 303,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_100m_s3",
+      "published_model_hf_id": "iamshnoo/en_100m_s3"
+    },
+    {
+      "run_id": "zh_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_zho"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-zho/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/zh_50m",
+      "published_model_hf_id": "iamshnoo/zh_50m"
+    },
+    {
+      "run_id": "zh_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_zho"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-zho/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/zh_100m",
+      "published_model_hf_id": "iamshnoo/zh_100m"
+    },
+    {
+      "run_id": "en_zh_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_zho"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-zho/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_zh_a",
+      "published_model_hf_id": "iamshnoo/en_zh_a",
+      "stage_config": "configs/stages/stages_eng_zho_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_zh_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_zho"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-zho/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_zh_b",
+      "published_model_hf_id": "iamshnoo/en_zh_b",
+      "stage_config": "configs/stages/stages_eng_zho_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "fr_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_fra"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-fra/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/fr_50m",
+      "published_model_hf_id": "iamshnoo/fr_50m"
+    },
+    {
+      "run_id": "fr_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_fra"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-fra/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/fr_100m",
+      "published_model_hf_id": "iamshnoo/fr_100m"
+    },
+    {
+      "run_id": "en_fr_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_fra"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-fra/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_fr_a",
+      "published_model_hf_id": "iamshnoo/en_fr_a",
+      "stage_config": "configs/stages/stages_eng_fra_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_fr_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_fra"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-fra/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_fr_b",
+      "published_model_hf_id": "iamshnoo/en_fr_b",
+      "stage_config": "configs/stages/stages_eng_fra_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "fas_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_fas"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-fas/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/fas_50m",
+      "published_model_hf_id": "iamshnoo/fas_50m"
+    },
+    {
+      "run_id": "fas_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_fas"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-fas/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/fas_100m",
+      "published_model_hf_id": "iamshnoo/fas_100m"
+    },
+    {
+      "run_id": "en_fas_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_fas"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-fas/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_fas_a",
+      "published_model_hf_id": "iamshnoo/en_fas_a",
+      "stage_config": "configs/stages/stages_eng_fas_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_fas_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_fas"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-fas/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_fas_b",
+      "published_model_hf_id": "iamshnoo/en_fas_b",
+      "stage_config": "configs/stages/stages_eng_fas_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "nld_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_nld"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-nld/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/nld_50m",
+      "published_model_hf_id": "iamshnoo/nld_50m"
+    },
+    {
+      "run_id": "nld_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_nld"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-nld/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/nld_100m",
+      "published_model_hf_id": "iamshnoo/nld_100m"
+    },
+    {
+      "run_id": "en_nld_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_nld"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-nld/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_nld_a",
+      "published_model_hf_id": "iamshnoo/en_nld_a",
+      "stage_config": "configs/stages/stages_eng_nld_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_nld_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_nld"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-nld/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_nld_b",
+      "published_model_hf_id": "iamshnoo/en_nld_b",
+      "stage_config": "configs/stages/stages_eng_nld_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "ukr_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_ukr"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-ukr/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/ukr_50m",
+      "published_model_hf_id": "iamshnoo/ukr_50m"
+    },
+    {
+      "run_id": "ukr_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_ukr"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-ukr/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/ukr_100m",
+      "published_model_hf_id": "iamshnoo/ukr_100m"
+    },
+    {
+      "run_id": "en_ukr_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_ukr"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-ukr/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_ukr_a",
+      "published_model_hf_id": "iamshnoo/en_ukr_a",
+      "stage_config": "configs/stages/stages_eng_ukr_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_ukr_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_ukr"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-ukr/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_ukr_b",
+      "published_model_hf_id": "iamshnoo/en_ukr_b",
+      "stage_config": "configs/stages/stages_eng_ukr_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "bul_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_bul"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-bul/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/bul_50m",
+      "published_model_hf_id": "iamshnoo/bul_50m"
+    },
+    {
+      "run_id": "bul_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_bul"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-bul/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/bul_100m",
+      "published_model_hf_id": "iamshnoo/bul_100m"
+    },
+    {
+      "run_id": "en_bul_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_bul"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-bul/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_bul_a",
+      "published_model_hf_id": "iamshnoo/en_bul_a",
+      "stage_config": "configs/stages/stages_eng_bul_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_bul_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_bul"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-bul/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_bul_b",
+      "published_model_hf_id": "iamshnoo/en_bul_b",
+      "stage_config": "configs/stages/stages_eng_bul_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "ind_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_ind"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-ind/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/ind_50m",
+      "published_model_hf_id": "iamshnoo/ind_50m"
+    },
+    {
+      "run_id": "ind_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_ind"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-ind/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/ind_100m",
+      "published_model_hf_id": "iamshnoo/ind_100m"
+    },
+    {
+      "run_id": "en_ind_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_ind"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-ind/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_ind_a",
+      "published_model_hf_id": "iamshnoo/en_ind_a",
+      "stage_config": "configs/stages/stages_eng_ind_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_ind_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_ind"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-ind/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_ind_b",
+      "published_model_hf_id": "iamshnoo/en_ind_b",
+      "stage_config": "configs/stages/stages_eng_ind_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "deu_50m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_deu"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-deu/train"
+      ],
+      "steps": 1500,
+      "warmup_steps": 150,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 49152000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/deu_50m",
+      "published_model_hf_id": "iamshnoo/deu_50m"
+    },
+    {
+      "run_id": "deu_100m",
+      "training_type": "monolingual",
+      "dataset_refs": [
+        "babylm_deu"
+      ],
+      "dataset_paths": [
+        "data/processed/babylm-deu/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/deu_100m",
+      "published_model_hf_id": "iamshnoo/deu_100m"
+    },
+    {
+      "run_id": "en_deu_a",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_shared",
+        "babylm_deu"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_shared/train",
+        "data/processed/babylm-deu/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_deu_a",
+      "published_model_hf_id": "iamshnoo/en_deu_a",
+      "stage_config": "configs/stages/stages_eng_deu_a.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    },
+    {
+      "run_id": "en_deu_b",
+      "training_type": "bilingual_alternating",
+      "dataset_refs": [
+        "babylm_eng_disjoint",
+        "babylm_deu"
+      ],
+      "dataset_paths": [
+        "data/processed/partitions/eng_disjoint/train",
+        "data/processed/babylm-deu/train"
+      ],
+      "steps": 3000,
+      "warmup_steps": 300,
+      "tokens_per_step": 32768,
+      "approximate_training_tokens": 98304000,
+      "seed": 42,
+      "initialization": "from_scratch",
+      "tokenizer_hf_id": "meta-llama/Llama-3.2-1B",
+      "pretrained_weight_hf_id": null,
+      "huggingface_export_path": "models/hf/en_deu_b",
+      "published_model_hf_id": "iamshnoo/en_deu_b",
+      "stage_config": "configs/stages/stages_eng_deu_b.json",
+      "schedule": "50-step English/L2 blocks, alternating for 3,000 steps",
+      "steps_by_language": {
+        "English": 1500,
+        "second_language": 1500
+      }
+    }
+  ]
+}
