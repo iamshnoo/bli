@@ -125,7 +125,7 @@ ZERO_RANGE_LINE = "#a9afb4"
 RAIL_BG = "#d2d6da"
 RAIL_LINE = "#eceff1"
 COL_FIG_W = 3.42
-COL_FIG_H = 2.25
+COL_FIG_H = 2.72
 
 
 def style_paper_axis(ax, grid_axis: str | None = "y") -> None:
@@ -144,9 +144,9 @@ def style_paper_axis(ax, grid_axis: str | None = "y") -> None:
 CONTROL_SETTINGS = [
     {
         "code": "C1+C3",
-        "short": "Matched EN\nshared docs",
-        "title": "Matched English",
-        "doc": "shared English docs",
+        "short": "Same English exposure\nshared documents",
+        "title": "Same English exposure",
+        "doc": "shared English documents",
         "model_a": "en_50m",
         "setup": "a",
         "chips": ["same EN steps", "same docs"],
@@ -155,9 +155,9 @@ CONTROL_SETTINGS = [
     },
     {
         "code": "C1+C4",
-        "short": "Matched EN\ndisjoint docs",
-        "title": "Matched English",
-        "doc": "disjoint English docs",
+        "short": "Same English exposure\nseparate documents",
+        "title": "Same English exposure",
+        "doc": "separate English documents",
         "model_a": "en_50m",
         "setup": "b",
         "chips": ["same EN steps", "disjoint docs"],
@@ -166,27 +166,37 @@ CONTROL_SETTINGS = [
     },
     {
         "code": "C2+C3",
-        "short": "Matched compute\nshared docs",
-        "title": "Matched compute",
-        "doc": "shared English docs",
+        "short": "Same total training steps\nshared documents",
+        "title": "Same total training steps",
+        "doc": "shared English documents",
         "model_a": "en_100m",
         "setup": "a",
-        "chips": ["same updates", "same docs"],
+        "chips": ["same training steps", "same docs"],
         "color": "#6f7f92",
         "fill": SOFT_GRAY,
     },
     {
         "code": "C2+C4",
-        "short": "Matched compute\ndisjoint docs",
-        "title": "Matched compute",
-        "doc": "disjoint English docs",
+        "short": "Same total training steps\nseparate documents",
+        "title": "Same total training steps",
+        "doc": "separate English documents",
         "model_a": "en_100m",
         "setup": "b",
-        "chips": ["same updates", "disjoint docs"],
+        "chips": ["same training steps", "disjoint docs"],
         "color": "#566579",
         "fill": SOFT_GRAY,
     },
 ]
+
+EN_REFERENCE_LABEL = {
+    "en_50m": "same English exposure",
+    "en_100m": "same total training steps",
+}
+
+EN_REFERENCE_TITLE = {
+    "en_50m": "Same English exposure",
+    "en_100m": "Same total training steps",
+}
 
 
 def blend_hex(hex_color: str, target_rgb: tuple[float, float, float], frac: float) -> tuple[float, float, float]:
@@ -268,28 +278,28 @@ def build_control_matrix_figure(en: pd.DataFrame, latex_root: Path) -> None:
         {
             "name": "EN-matched\nshared-doc",
             "english": "matched\n1500 vs 1500\nEN steps",
-            "updates": "not matched\n1500 vs 3000\nupdates",
+            "updates": "not matched\n1500 vs 3000\ntraining steps",
             "docs": "shared",
             "test": "rules out\nless English\nevidence",
         },
         {
             "name": "EN-matched\ndisjoint-doc",
             "english": "matched\n1500 vs 1500\nEN steps",
-            "updates": "not matched\n1500 vs 3000\nupdates",
+            "updates": "not matched\n1500 vs 3000\ntraining steps",
             "docs": "disjoint",
             "test": "rules out\nless English +\nshared-doc overlap",
         },
         {
             "name": "Compute-matched\nshared-doc",
             "english": "not matched\n3000 vs 1500\nEN steps",
-            "updates": "matched\n3000 vs 3000\nupdates",
+            "updates": "matched\n3000 vs 3000\ntraining steps",
             "docs": "shared",
             "test": "tests equal\noptimization\nbudget",
         },
         {
             "name": "Compute-matched\ndisjoint-doc",
             "english": "not matched\n3000 vs 1500\nEN steps",
-            "updates": "matched\n3000 vs 3000\nupdates",
+            "updates": "matched\n3000 vs 3000\ntraining steps",
             "docs": "disjoint",
             "test": "tests equal\nbudget without\nshared documents",
         },
@@ -304,7 +314,7 @@ def build_control_matrix_figure(en: pd.DataFrame, latex_root: Path) -> None:
     headers = [
         "Comparison",
         "English evidence",
-        "Total updates",
+        "Total training steps",
         "English docs",
         "Interpretation",
         r"Median $\Delta D$",
@@ -440,6 +450,8 @@ FIGURE_NAME_MAP = {
     "appendix_l2_signed_hotspots_panel2.pdf": "fig14-appendix-l2-signed-hotspots-panel2.pdf",
     "appendix_dense_progress_trajectory.pdf": "fig22-appendix-dense-progress-trajectory.pdf",
     "norm_controlled_layerwise.pdf": "fig23-appendix-norm-controlled-layerwise.pdf",
+    "appendix_ci_guide.pdf": "fig24-appendix-ci-guide.pdf",
+    "appendix_quality_tier_pattern.pdf": "fig25-appendix-quality-tier-pattern.pdf",
 }
 
 TABLE_NAME_MAP = {
@@ -528,11 +540,14 @@ def en_pair_label(model_a: str, model_b: str, include_setup: bool = False) -> st
     parsed = parse_en_target(model_b)
     if parsed and model_a in {"en_50m", "en_100m"}:
         lang, setup = parsed
-        base = "EN-50M" if model_a == "en_50m" else "EN-100M"
-        label = f"{base} vs EN+{lang.upper()}"
+        base = EN_REFERENCE_LABEL[model_a]
+        label = f"EN vs EN+{lang.upper()}, {base}"
         if include_setup:
-            setup_label = {"a": "C3", "b": "C4"}.get(setup, setup.upper())
-            label += f" ({setup_label})"
+            setup_label = {
+                "a": "shared English documents",
+                "b": "separate English documents",
+            }.get(setup, setup.upper())
+            label += f", {setup_label}"
         return label
     return f"{model_a} vs {model_b}"
 
@@ -957,7 +972,7 @@ def build_exp1_tables_fig(
                 f"{yi:.2f}",
                 ha="center",
                 va="bottom",
-                fontsize=10.0,
+                fontsize=9.4,
                 color=INK,
                 fontweight="bold",
                 bbox=dict(boxstyle="round,pad=0.08", facecolor=PAPER_BG, edgecolor="none", alpha=0.88),
@@ -968,13 +983,28 @@ def build_exp1_tables_fig(
         ax.set_ylim(ymin - 0.06, max(0.62, ymax * 1.22))
         ax.set_xlim(-0.34, len(CONTROL_SETTINGS) - 1 + 0.34)
         ax.set_xticks(x)
-        ax.set_xticklabels(["EN\nshared", "EN\ndisjoint", "Compute\nshared", "Compute\ndisjoint"], fontsize=10.0, color=INK)
+        ax.set_xticklabels(
+            [
+                "Shared",
+                "Separate",
+                "Shared",
+                "Separate",
+            ],
+            fontsize=9.0,
+            color=INK,
+        )
+        ax.text(0.5, -0.30, "Same English\nexposure", transform=ax.get_xaxis_transform(),
+                ha="center", va="top", multialignment="center", linespacing=0.95,
+                fontsize=8.5, color=INK, fontweight="bold")
+        ax.text(2.5, -0.30, "Same total\ntraining steps", transform=ax.get_xaxis_transform(),
+                ha="center", va="top", multialignment="center", linespacing=0.95,
+                fontsize=8.5, color=INK, fontweight="bold")
         ax.set_ylabel(r"Contextual $\Delta D_{Axis}$", fontsize=10.0, color=INK)
         ax.set_xlabel("")
         ax.tick_params(axis="y", labelsize=10.0)
         ax.legend(
             loc="upper center",
-            bbox_to_anchor=(0.5, 0.99),
+            bbox_to_anchor=(0.5, 1.18),
             frameon=True,
             facecolor="white",
             edgecolor="#c5ccd7",
@@ -982,12 +1012,12 @@ def build_exp1_tables_fig(
             fontsize=10.0,
             handlelength=1.8,
         )
-        fig.tight_layout(pad=0.45)
+        fig.subplots_adjust(left=0.17, right=0.985, bottom=0.39, top=0.76)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
 
     _plot_control_trajectory("exp1_controls.pdf")
-    _plot_ctx_slice("en_100m", "EN-100M", "exp1_controls_100m.pdf")
+    _plot_ctx_slice("en_100m", "Same total training steps", "exp1_controls_100m.pdf")
 
     if ci is not None and not ci.empty:
         # compact CI table for exp1 pairs only
@@ -1123,7 +1153,10 @@ def build_exp1_negative_controls_table(neg_df: pd.DataFrame | None, latex_root: 
             continue
         # average across the four core pairs to keep compact
         g = srt.groupby("group_pretty", as_index=False)[["jaccard_at_k_mean", "frobenius_similarity", "axis_abs_projection_diff_mean"]].mean()
-        tag = REPR_LABEL.get(rt, rt)
+        tag = {
+            "embedding_matrix": "Token embedding",
+            "pre_lmhead_contextual": "Contextual state",
+        }.get(rt, rt)
         for i, (_, r) in enumerate(g.iterrows()):
             left = tag if i == 0 else ""
             lines.append(
@@ -1190,7 +1223,7 @@ def build_exp2_table_fig(
                     {
                         "repr": REPR_LABEL[repr_type],
                         "family": fam_name,
-                        "baseline": "EN-50M" if base == "en_50m" else "EN-100M",
+                        "baseline": "Same English exposure" if base == "en_50m" else "Same total training steps",
                         "delta_nn": ra["nn_agree"] - rb["nn_agree"],
                         "delta_struct": ra["struct_agree"] - rb["struct_agree"],
                         "delta_axis": ra["axis_agree"] - rb["axis_agree"],
@@ -1327,10 +1360,10 @@ def build_exp2_table_fig(
 
     def _plot_overlap_delta_swarm(out_name: str) -> None:
         cols = [
-            ("EN-50M", "Embedding", "en_50m", "embedding_matrix", 0.0),
-            ("EN-50M", "Contextual", "en_50m", "pre_lmhead_contextual", 1.0),
-            ("EN-100M", "Embedding", "en_100m", "embedding_matrix", 2.55),
-            ("EN-100M", "Contextual", "en_100m", "pre_lmhead_contextual", 3.55),
+            ("Same English exposure", "Embedding", "en_50m", "embedding_matrix", 0.0),
+            ("Same English exposure", "Contextual", "en_50m", "pre_lmhead_contextual", 1.0),
+            ("Same total training steps", "Embedding", "en_100m", "embedding_matrix", 2.55),
+            ("Same total training steps", "Contextual", "en_100m", "pre_lmhead_contextual", 3.55),
         ]
         rows_delta = []
         for lang in CORE_LANGS:
@@ -1360,18 +1393,21 @@ def build_exp2_table_fig(
         if ddf.empty:
             return
 
-        fig, ax = plt.subplots(figsize=(COL_FIG_W, COL_FIG_H), facecolor=PAPER_BG)
+        # Leave enough headroom for separate language and representation keys.
+        # The representation key makes the circle/square encoding explicit
+        # instead of requiring readers to infer it from the row labels.
+        fig, ax = plt.subplots(figsize=(COL_FIG_W, 2.90), facecolor=PAPER_BG)
         style_paper_axis(ax, grid_axis="x")
         row_order = [
-            ("EN-50M", "Embedding", "50M Emb."),
-            ("EN-50M", "Contextual", "50M Ctx."),
-            ("EN-100M", "Embedding", "100M Emb."),
-            ("EN-100M", "Contextual", "100M Ctx."),
+            ("Same English exposure", "Embedding", "Token embedding", 0.0),
+            ("Same English exposure", "Contextual", "Contextual state", 1.0),
+            ("Same total training steps", "Embedding", "Token embedding", 3.0),
+            ("Same total training steps", "Contextual", "Contextual state", 4.0),
         ]
-        ypos = {key: i for i, key in enumerate((b, r) for b, r, _ in row_order)}
+        ypos = {(b, r): pos for b, r, _, pos in row_order}
         ax.axvline(0.0, color="#5f6672", linewidth=1.0, linestyle=(0, (3, 2)), zorder=1)
-        ax.axhspan(-0.45, 1.45, color=SOFT_BLUE, alpha=0.66, zorder=0)
-        ax.axhspan(1.55, 3.45, color=SOFT_GRAY, alpha=0.82, zorder=0)
+        ax.axhspan(-0.65, 1.48, color=SOFT_BLUE, alpha=0.66, zorder=0)
+        ax.axhspan(2.35, 4.48, color=SOFT_GRAY, alpha=0.82, zorder=0)
         offsets = np.linspace(-0.34, 0.34, len(CORE_LANGS))
         offset_map = {lang.upper(): offsets[i] for i, lang in enumerate(CORE_LANGS)}
         for _, rr in ddf.iterrows():
@@ -1398,46 +1434,56 @@ def build_exp2_table_fig(
             ax.plot([medv, medv], [yrow + 0.39, yrow + 0.51], color=INK, linewidth=1.8, solid_capstyle="round", zorder=5)
         xabs = max(0.18, float(np.nanpercentile(np.abs(ddf["delta"].to_numpy(dtype=float)), 99)) * 1.18)
         ax.set_xlim(-xabs, xabs)
-        ax.set_ylim(-0.55, 3.92)
+        ax.set_ylim(-0.72, 4.55)
         ax.invert_yaxis()
-        ax.set_yticks(range(len(row_order)))
-        ax.set_yticklabels([lbl for _, _, lbl in row_order], fontsize=10.0, color=INK)
-        ax.set_xlabel(r"Disjoint minus shared $\Delta D_{Axis}$", fontsize=10.0, color=INK)
+        ax.set_yticks([pos for _, _, _, pos in row_order])
+        ax.set_yticklabels([lbl for _, _, lbl, _ in row_order], fontsize=10.2, color=INK)
+        ax.text(0.01, -0.60, "Same English exposure", transform=ax.get_yaxis_transform(),
+                ha="left", va="top", fontsize=10.2, color=INK, fontweight="bold")
+        ax.text(0.01, 2.42, "Same total training steps", transform=ax.get_yaxis_transform(),
+                ha="left", va="top", fontsize=10.2, color=INK, fontweight="bold")
+        ax.set_xlabel("Change with separate documents\n" + r"$\Delta D_{Axis}$", fontsize=10.2, color=INK)
         ax.tick_params(axis="x", labelsize=10.0)
-        ax.legend(
-            handles=[
-                plt.Line2D(
-                    [0],
-                    [0],
-                    marker="o",
-                    color="none",
-                    markerfacecolor="white",
-                    markeredgecolor="#526273",
-                    markeredgewidth=0.8,
-                    label="Languages",
-                    markersize=4.6,
-                ),
-                plt.Line2D([0], [0], color=INK, lw=1.8, label="Median tick"),
-            ],
-            loc="upper right",
+        language_handles = [
+            plt.Line2D(
+                [0], [0], marker="o", color="none",
+                markerfacecolor=blend_hex(LANG_COLORS.get(lang.upper(), NAVY), (1, 1, 1), 0.25),
+                markeredgecolor=blend_hex(LANG_COLORS.get(lang.upper(), NAVY), (0, 0, 0), 0.18),
+                markeredgewidth=0.7, label=lang.upper(), markersize=4.6,
+            )
+            for lang in CORE_LANGS
+        ]
+        # The row labels already name the representation, so the key only has
+        # to identify languages. Four columns keep its text legible at the
+        # final one-column size.
+        fig.legend(
+            handles=language_handles,
+            loc="upper center",
+            bbox_to_anchor=(0.5, 0.995),
+            ncol=4,
             frameon=True,
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
             fontsize=10.0,
-            borderpad=0.24,
-            handlelength=1.25,
-            labelspacing=0.28,
+            borderpad=0.22,
+            handlelength=0.78,
+            handletextpad=0.18,
+            columnspacing=0.52,
+            labelspacing=0.20,
         )
-        fig.tight_layout(pad=0.35)
+        # Keep the two legend keys explicit while giving the data panel most of
+        # the column. The previous 0.66 top bound made the marks unnecessarily
+        # small and left a large blank band above the axes.
+        fig.subplots_adjust(left=0.31, right=0.995, bottom=0.20, top=0.80)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
 
     _plot_overlap_delta_swarm("exp2_overlap.pdf")
-    _plot_overlap_slice("en_100m", "EN-100M", "exp2_overlap_100m.pdf")
+    _plot_overlap_slice("en_100m", "Same total training steps", "exp2_overlap_100m.pdf")
 
     if stats_df is not None and not stats_df.empty:
-        base_label_map = {"en_50m": "EN-50M", "en_100m": "EN-100M"}
+        base_label_map = {"en_50m": "Same English exposure", "en_100m": "Same total training steps"}
         fam_label_map = {f"en_{lang}": f"EN+{lang.upper()}" for lang in en_families_in_df(en, setup="a")}
         if "quality_tier" in stats_df.columns:
             stats_df = stats_df[stats_df["quality_tier"] == "all"].copy()
@@ -1471,7 +1517,7 @@ def build_exp2_quality_table(stats_df: pd.DataFrame | None, latex_root: Path) ->
     ].copy()
     if s.empty:
         return
-    s["baseline"] = s["baseline"].map({"en_50m": "EN-50M", "en_100m": "EN-100M"}).fillna(s["baseline"])
+    s["baseline"] = s["baseline"].map({"en_50m": "Same English exposure", "en_100m": "Same total training steps"}).fillna(s["baseline"])
     fam_map = {f"en_{lang}": f"EN+{lang.upper()}" for lang in CORE_LANGS}
     s["family"] = s["family"].map(fam_map).fillna(s["family"])
     s["quality_tier"] = s["quality_tier"].map(
@@ -1490,6 +1536,159 @@ def build_exp2_quality_table(stats_df: pd.DataFrame | None, latex_root: Path) ->
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "exp2_quality_tiers.tex")
     write_table(lines, latex_root / "tables" / "appendix_exp2_quality_tiers.tex")
+
+
+def build_appendix_ci_guide(ci: pd.DataFrame | None, latex_root: Path) -> None:
+    """Show the primary uncertainty pattern without repeating three metrics per pair."""
+    if ci is None or ci.empty:
+        return
+    needed = {"repr_type", "model_a", "model_b", "metric", "mean", "ci_low", "ci_high"}
+    if not needed.issubset(ci.columns):
+        return
+    d = ci[
+        (ci["metric"] == "axis_abs_projection_diff_mean")
+        & ci["model_a"].isin(["en_50m", "en_100m"])
+        & ci["repr_type"].isin(["embedding_matrix", "pre_lmhead_contextual"])
+    ].copy()
+    parsed = d["model_b"].astype(str).map(parse_en_target)
+    d["language"] = parsed.map(lambda x: x[0].upper() if x is not None else None)
+    d["documents"] = parsed.map(lambda x: x[1] if x is not None else None)
+    d = d[d["documents"].isin(["a", "b"]) & d["language"].isin([x.upper() for x in CORE_LANGS])].copy()
+    if d.empty:
+        return
+
+    lang_order = [x.upper() for x in CORE_LANGS]
+    y = np.arange(len(lang_order), dtype=float)
+    fig, axes_grid = plt.subplots(2, 2, figsize=(7.25, 6.05), sharex=True, sharey=True, facecolor=PAPER_BG)
+    axes = axes_grid.ravel()
+    settings = [
+        ("en_50m", "a", "Same English exposure", "Shared English documents"),
+        ("en_50m", "b", "Same English exposure", "Separate English documents"),
+        ("en_100m", "a", "Same total training steps", "Shared English documents"),
+        ("en_100m", "b", "Same total training steps", "Separate English documents"),
+    ]
+    repr_specs = [
+        ("embedding_matrix", "Token embedding", "o", -0.14, "white", "#5f7890"),
+        ("pre_lmhead_contextual", "Contextual state", "s", 0.14, "#9fc4e6", NAVY),
+    ]
+    for ax, (model_a, documents, title, subtitle) in zip(axes, settings):
+        style_paper_axis(ax, grid_axis="x")
+        ax.axvline(0.0, color="#626a75", linestyle=(0, (3, 2)), linewidth=1.0, zorder=1)
+        sub = d[(d["model_a"] == model_a) & (d["documents"] == documents)]
+        for repr_type, label, marker, yoff, face, edge in repr_specs:
+            rsub = sub[sub["repr_type"] == repr_type].set_index("language").reindex(lang_order)
+            x = rsub["mean"].to_numpy(dtype=float)
+            low = rsub["ci_low"].to_numpy(dtype=float)
+            high = rsub["ci_high"].to_numpy(dtype=float)
+            xerr = np.vstack([np.maximum(0.0, x - low), np.maximum(0.0, high - x)])
+            ax.errorbar(
+                x,
+                y + yoff,
+                xerr=xerr,
+                fmt=marker,
+                markersize=5.0,
+                markerfacecolor=face,
+                markeredgecolor=edge,
+                markeredgewidth=0.9,
+                ecolor=edge,
+                elinewidth=1.0,
+                capsize=2.2,
+                linestyle="none",
+                label=label,
+                zorder=3,
+            )
+        ax.set_title(title, fontsize=10.5, color=INK, pad=15, fontweight="bold")
+        ax.text(0.5, 1.015, subtitle, transform=ax.transAxes, ha="center", va="bottom", fontsize=8.8, color=MUTED)
+        ax.set_yticks(y)
+        ax.set_yticklabels(lang_order, fontsize=9.5, fontweight="bold")
+        color_language_ticklabels(ax, axis="y")
+        ax.invert_yaxis()
+        ax.tick_params(axis="x", labelsize=9.2)
+        ax.set_xlabel("")
+    axes[0].set_ylabel("Additional training language", fontsize=9.5, color=INK)
+    axes[2].set_ylabel("Additional training language", fontsize=9.5, color=INK)
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, 0.998), ncol=2,
+               frameon=True, facecolor="white", edgecolor="#c5ccd7", fontsize=9.3)
+    fig.supxlabel(r"Difference beyond English-only seed variation, $\Delta D_{Axis}$", fontsize=9.8, y=0.025, color=INK)
+    fig.subplots_adjust(left=0.12, right=0.99, bottom=0.10, top=0.89, wspace=0.15, hspace=0.30)
+    fig.savefig(latex_root / "figures" / "appendix_ci_guide.pdf", dpi=450, bbox_inches="tight", pad_inches=0.04)
+    plt.close(fig)
+
+
+def build_quality_tier_pattern(stats_df: pd.DataFrame | None, latex_root: Path) -> None:
+    """Replace the p-value dump with the effect-size pattern across quality tiers."""
+    if stats_df is None or stats_df.empty:
+        return
+    needed = {"repr_type", "baseline", "family", "quality_tier", "median_delta_jaccard"}
+    if not needed.issubset(stats_df.columns):
+        return
+    d = stats_df[
+        (stats_df["repr_type"] == "pre_lmhead_contextual")
+        & stats_df["quality_tier"].isin(["high", "medium", "low"])
+        & stats_df["baseline"].isin(["en_50m", "en_100m"])
+    ].copy()
+    d["language"] = d["family"].astype(str).str.replace(r"^en_", "", regex=True).str.upper()
+    d = d[d["language"].isin([x.upper() for x in CORE_LANGS])]
+    if d.empty:
+        return
+
+    tier_order = ["high", "medium", "low"]
+    tier_label = {"high": "High quality", "medium": "Medium quality", "low": "Low quality"}
+    ybase = {tier: i for i, tier in enumerate(tier_order)}
+    offsets = np.linspace(-0.23, 0.23, len(CORE_LANGS))
+    offset_map = {lang.upper(): offsets[i] for i, lang in enumerate(CORE_LANGS)}
+    max_abs = max(0.03, float(d["median_delta_jaccard"].abs().max()) * 1.18)
+    # Stack the two controls so the figure remains readable at one-column width.
+    # A column-width float can share a page with the surrounding appendix prose,
+    # unlike the earlier shallow two-column version that tended to occupy a float page.
+    fig, axes = plt.subplots(2, 1, figsize=(3.45, 4.42), sharex=True, sharey=True, facecolor=PAPER_BG)
+    settings = [
+        ("en_50m", "Same English exposure", "1,500 English steps per model"),
+        ("en_100m", "Same total training steps", "3,000 training steps per model"),
+    ]
+    for ax, (baseline, title, subtitle) in zip(axes, settings):
+        style_paper_axis(ax, grid_axis="x")
+        ax.axvline(0.0, color="#626a75", linestyle=(0, (3, 2)), linewidth=1.0, zorder=1)
+        sub = d[d["baseline"] == baseline]
+        for _, row in sub.iterrows():
+            lang = str(row["language"])
+            tier = str(row["quality_tier"])
+            color = LANG_COLORS.get(lang, NAVY)
+            ax.scatter(
+                [float(row["median_delta_jaccard"])],
+                [ybase[tier] + offset_map[lang]],
+                s=25,
+                marker="o",
+                facecolors=blend_hex(color, (1, 1, 1), 0.28),
+                edgecolors=blend_hex(color, (0, 0, 0), 0.20),
+                linewidths=0.7,
+                zorder=3,
+            )
+        ax.set_xlim(-max_abs, max_abs)
+        ax.set_ylim(-0.52, 2.52)
+        ax.invert_yaxis()
+        ax.set_yticks(range(len(tier_order)))
+        ax.set_yticklabels([tier_label[x] for x in tier_order], fontsize=10.5)
+        ax.set_title(f"{title}\n{subtitle}", fontsize=10.5, color=INK, pad=4, fontweight="bold", linespacing=1.15)
+        ax.tick_params(axis="x", labelsize=10.2)
+    lang_handles = [
+        plt.Line2D([0], [0], marker="o", color="none",
+                   markerfacecolor=blend_hex(LANG_COLORS[lang.upper()], (1, 1, 1), 0.28),
+                   markeredgecolor=blend_hex(LANG_COLORS[lang.upper()], (0, 0, 0), 0.20),
+                   label=lang.upper(), markersize=4.8)
+        for lang in CORE_LANGS
+    ]
+    fig.legend(lang_handles, [h.get_label() for h in lang_handles], loc="upper center",
+               bbox_to_anchor=(0.5, 1.01), ncol=4, frameon=True, facecolor="white",
+               edgecolor="#c5ccd7", fontsize=9.8, handlelength=0.7, columnspacing=0.7,
+               handletextpad=0.2)
+    fig.supxlabel("Median change in contextual neighbor disagreement\nafter using separate English documents",
+                  fontsize=10.5, y=0.018, color=INK)
+    fig.subplots_adjust(left=0.25, right=0.985, bottom=0.145, top=0.73, hspace=0.58)
+    fig.savefig(latex_root / "figures" / "appendix_quality_tier_pattern.pdf", dpi=450,
+                bbox_inches="tight", pad_inches=0.04)
+    plt.close(fig)
 
 
 def build_appendix_daxis_interpretation(en: pd.DataFrame, latex_root: Path) -> None:
@@ -1521,7 +1720,7 @@ def build_appendix_daxis_interpretation(en: pd.DataFrame, latex_root: Path) -> N
     lines = [
         r"\begin{tabular}{@{}lrrr@{}}",
         r"\toprule",
-        r"Pair & Emb. & Ctx. & Difference \\",
+        r"Pair & Token embedding & Contextual state & Difference \\",
         r"\midrule",
     ]
     for _, r in piv.iterrows():
@@ -1547,7 +1746,7 @@ def build_exp3_table_fig(zh: pd.DataFrame, fr: pd.DataFrame, latex_root: Path) -
                         {
                             "target": target,
                             "repr": REPR_LABEL[repr_type],
-                            "mono": "50M" if mono.endswith("50m") else "100M",
+                            "mono": "1,500 training steps" if mono.endswith("50m") else "3,000 training steps",
                             "setup": setup.upper(),
                             "nn": r["nn_agree"],
                             "struct": r["struct_agree"],
@@ -1563,7 +1762,7 @@ def build_exp3_table_fig(zh: pd.DataFrame, fr: pd.DataFrame, latex_root: Path) -
     ]
     for target in ["ZH", "FR"]:
         tsub = df[df["target"] == target]
-        for mono in ["50M", "100M"]:
+        for mono in ["1,500 training steps", "3,000 training steps"]:
             mono_sub = tsub[tsub["mono"] == mono].reset_index(drop=True)
             for i, r in mono_sub.iterrows():
                 left = f"{target} ({mono})" if i == 0 else ""
@@ -1581,7 +1780,7 @@ def build_exp3_table_fig(zh: pd.DataFrame, fr: pd.DataFrame, latex_root: Path) -
         x = np.arange(len(metrics))
         width = 0.34
         for j, repr_name in enumerate(["Embedding", "Contextual"]):
-            short_label = repr_name
+            short_label = "Token embedding" if repr_name == "Embedding" else "Contextual state"
             vals = [sub[sub["repr"] == repr_name][m].iloc[0] for m, _ in metrics]
             bars = ax.bar(
                 x + (j - 0.5) * width,
@@ -1627,6 +1826,8 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
         c_axis = float(c["axis_abs_projection_diff_mean"].iloc[0])
         rows.append({
             "pair": label,
+            "baseline": ma,
+            "lang": parse_en_target(mb)[0].upper(),
             "embedding_axis": e_axis,
             "contextual_axis": c_axis,
             "gap": c_axis - e_axis,
@@ -1635,18 +1836,19 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
     if rdf.empty:
         return
 
-    def _plot_repr_gap_slice(base_lbl: str, out_name: str) -> None:
-        plot_df = rdf[rdf["pair"].str.startswith(base_lbl)].copy()
+    def _plot_repr_gap_slice(baseline: str, out_name: str) -> None:
+        plot_df = rdf[rdf["baseline"] == baseline].copy()
         if plot_df.empty:
             return
-        plot_df["lang"] = plot_df["pair"].map(lambda x: x.split(" vs ")[1].replace("EN+", ""))
         lang_rank = {lang.upper(): i for i, lang in enumerate([l.upper() for l in CORE_LANGS])}
         plot_df["lang_rank"] = plot_df["lang"].map(lambda x: lang_rank.get(str(x).upper(), 999))
         plot_df = plot_df.sort_values("lang_rank").reset_index(drop=True)
         plot_df["delta_ctx_minus_emb"] = plot_df["contextual_axis"] - plot_df["embedding_axis"]
         y = np.arange(len(plot_df))
 
-        fig, ax = plt.subplots(figsize=(COL_FIG_W, COL_FIG_H), facecolor=PAPER_BG)
+        is_appendix = baseline == "en_100m"
+        fig_size = (6.90, 3.70) if is_appendix else (COL_FIG_W, COL_FIG_H)
+        fig, ax = plt.subplots(figsize=fig_size, facecolor=PAPER_BG)
         style_paper_axis(ax, grid_axis="x")
         ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.0, zorder=0)
         for i, rr in plot_df.iterrows():
@@ -1698,11 +1900,11 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
         ax.set_xlabel(
-            f"EN-null-centered $D_{{Axis}}$ ({base_lbl}, shared docs)",
+            (r"English-space $\Delta D_{Axis}$ beyond seed variation"),
             labelpad=4,
-            fontsize=10.0,
+            fontsize=9.5 if not is_appendix else 10.0,
         )
-        ax.set_ylabel("Language", fontsize=10.0)
+        ax.set_ylabel("")
         ax.tick_params(axis="x", labelsize=10.0)
         ax.legend(
             handles=[
@@ -1710,25 +1912,28 @@ def build_exp4_ratio(en: pd.DataFrame, ci: pd.DataFrame | None, latex_root: Path
                 plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Contextual state", markersize=6),
             ],
             loc="upper center",
-            bbox_to_anchor=(0.5, 1.15),
+            bbox_to_anchor=(0.5, 1.24 if not is_appendix else 1.16),
             ncol=2,
             frameon=True,
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=10.0,
+            fontsize=9.0 if not is_appendix else 10.0,
         )
-        fig.tight_layout(pad=0.35)
+        if is_appendix:
+            fig.subplots_adjust(left=0.10, right=0.985, bottom=0.20, top=0.78)
+        else:
+            fig.subplots_adjust(left=0.17, right=0.985, bottom=0.22, top=0.72)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
 
-    _plot_repr_gap_slice("EN-50M", "exp4_ratio.pdf")
-    _plot_repr_gap_slice("EN-100M", "exp4_ratio_100m.pdf")
+    _plot_repr_gap_slice("en_50m", "exp4_ratio.pdf")
+    _plot_repr_gap_slice("en_100m", "exp4_ratio_100m.pdf")
 
     lines = [
         r"\begin{tabular}{@{}lrrr@{}}",
         r"\toprule",
-        r"Pair & $\Delta D_A$ (Embedding) & $\Delta D_A$ (Contextual) & Ctx.-Emb. \\",
+        r"Pair & $\Delta D_A$ (Token embedding) & $\Delta D_A$ (Contextual state) & Difference \\",
         r"\midrule",
     ]
     for _, r in rdf.iterrows():
@@ -1832,7 +2037,7 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
         piv["delta_affine_minus_orth"] = piv["Affine"] - piv["Orthogonal"]
         y = np.arange(len(piv))
 
-        fig, ax = plt.subplots(figsize=(COL_FIG_W, COL_FIG_H), facecolor=PAPER_BG)
+        fig, ax = plt.subplots(figsize=(6.90, 3.70), facecolor=PAPER_BG)
         style_paper_axis(ax, grid_axis="x")
         ax.axvline(0.0, color="#666666", linestyle=(0, (4, 2)), linewidth=1.0, zorder=0)
         for i, rr in piv.iterrows():
@@ -1870,7 +2075,7 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
         ax.set_xlabel(
-            f"Contextual $\Delta D_{{Axis}}$ by alignment ({model_a.replace('en_', 'EN-').upper()}, shared docs)",
+            f"Contextual-state $\Delta D_{{Axis}}$ ({EN_REFERENCE_LABEL[model_a]}, shared English documents)",
             fontsize=10.0,
         )
         ax.set_ylabel("Language", fontsize=10.0)
@@ -1881,7 +2086,7 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
                 plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Affine", markersize=6),
             ],
             loc="upper center",
-            bbox_to_anchor=(0.5, 1.15),
+            bbox_to_anchor=(0.5, 1.16),
             ncol=2,
             frameon=True,
             facecolor="white",
@@ -1889,45 +2094,53 @@ def build_exp5_alignment_method_artifacts(aln_df: pd.DataFrame | None, latex_roo
             framealpha=0.96,
             fontsize=10.0,
         )
-        fig.tight_layout(pad=0.35)
+        fig.subplots_adjust(left=0.10, right=0.985, bottom=0.20, top=0.78)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
 
     _plot_alignment_slice("en_50m", "exp5_alignment_methods.pdf")
     _plot_alignment_slice("en_100m", "exp5_alignment_methods_100m.pdf")
 
-    # Appendix table with compact numeric summary.
+    # Compact main-text table, grouped by evaluated representation and fit anchors.
     metrics = [
         ("jaccard_at_k_mean", r"$\Delta D_{NN}$"),
         ("frobenius_cultural_similarity", r"$\Delta D_{Struct}$"),
         ("axis_abs_projection_diff_mean", r"$\Delta D_{Axis}$"),
     ]
     lines = [
-        r"\begin{tabular}{@{}llllrr@{}}",
+        r"\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lllrrrr@{}}",
         r"\toprule",
-        r"Representation & Alignment method & Metric & Mean & Std. dev. & Anchor residual/anchor \\",
+        r"& & & \multicolumn{3}{c}{Held-out difference (mean $\pm$ SD)} & \multicolumn{1}{c}{Alignment fit} \\",
+        r"\cmidrule(lr){4-6}\cmidrule(l){7-7}",
+        r"Representation & Alignment & Fitted on & $D_{NN}$ & $D_{Struct}$ & $D_{Axis}$ & Error / word \\",
         r"\midrule",
     ]
-    for repr_name in ["Embedding", "Contextual"]:
+    repr_label = {"Embedding": "Token embedding", "Contextual": "Contextual state"}
+    method_rows = [
+        ("Orthogonal\n(Embedding anchors)", "Orthogonal", "Token embedding"),
+        ("Orthogonal\n(Contextual anchors)", "Orthogonal", "Contextual state"),
+        ("Affine\n(Embedding anchors)", "Affine", "Token embedding"),
+    ]
+    for repr_idx, repr_name in enumerate(["Embedding", "Contextual"]):
         srepr = d[d["repr"] == repr_name]
-        for method in method_order:
+        for row_idx, (method, map_label, anchor_label) in enumerate(method_rows):
             sm = srepr[srepr["method"] == method]
             if sm.empty:
                 continue
             residual = float(sm["anchor_residual_per_anchor"].mean())
-            first = True
-            for metric_col, metric_lbl in metrics:
+            left_repr = repr_label[repr_name] if row_idx == 0 else ""
+            formatted = []
+            for metric_col, _ in metrics:
                 vals = sm[metric_col].astype(float)
-                left_repr = repr_name if first else ""
-                left_method = method.replace("\n", " ") if first else ""
-                lines.append(
-                    f"{left_repr} & {left_method} & {metric_lbl} & {_fmt(vals.mean())} & {_fmt(vals.std(ddof=0))} & {_fmt(residual)} \\\\"
-                )
-                first = False
-            lines.append(r"\cmidrule(lr){1-6}")
-    if lines[-1] == r"\cmidrule(lr){1-6}":
-        lines.pop()
-    lines += [r"\bottomrule", r"\end{tabular}"]
+                formatted.append("$" + f"{vals.mean():.3f} \pm {vals.std(ddof=0):.3f}" + "$")
+            lines.append(
+                f"{left_repr} & {map_label} & {anchor_label} & "
+                + " & ".join(formatted)
+                + f" & {residual:.3f} \\\\"
+            )
+        if repr_idx == 0:
+            lines.append(r"\cmidrule(lr){1-7}")
+    lines += [r"\bottomrule", r"\end{tabular*}"]
     write_table(lines, latex_root / "tables" / "exp5_alignment_methods.tex")
 
 
@@ -2058,26 +2271,47 @@ def build_exp4_signed_axis_scatter(
                             agg["score"] = agg["mean_abs"] * agg["range"] * (agg["n_pos"] * agg["n_neg"])
                             cand = agg[agg["flip"]].sort_values("score", ascending=False)
                             if not cand.empty:
-                                top_n = 4
-                                # Prefer a compact, human-readable main-paper panel over
-                                # an exhaustive hotspot list. Fill from the ranked list only
-                                # if some preferred rows are unavailable.
-                                per_axis_cap = 1
+                                top_n = 12
+                                # Show enough examples to make the cross-language pattern
+                                # visible without asking readers to infer it from two cases.
+                                # Keep the rows semantically varied rather than filling the
+                                # panel with near-duplicates from one axis.
+                                per_axis_cap = 2
                                 keep: list[str] = []
                                 axis_counts: dict[str, int] = {}
-                                cand_index = cand.index.tolist()
+                                concept_seen: set[str] = set()
+                                # Kinship terms such as "uncle" and "aunt" produced
+                                # directionally large but semantically opaque examples on
+                                # the lineage/mobility axis. Keep the figure focused on rows
+                                # whose endpoint contrast is immediately understandable.
+                                excluded_concepts = {"uncle", "aunt"}
+                                cand_index = [
+                                    idx for idx in cand.index.tolist()
+                                    if idx.split(" | ", 1)[0].strip().lower() not in excluded_concepts
+                                ]
 
                                 preferred_rows = [
+                                    "wedding dress | white->red",
+                                    "community | homeland->migration",
+                                    "prophet | fasting->feasting",
+                                    "father | uniform->personalized",
+                                    "curry | vegetarian->meat",
+                                    "merit | certainty->ambiguity",
                                     "earring | ornate->plain",
                                     "ceremonial mask | uniform->personalized",
                                     "hosting | tradition->modernity",
                                     "meal | clan->individual",
                                     "handshake | formal->informal",
+                                    "eid | fasting->feasting",
                                 ]
 
                                 for pinned in preferred_rows:
                                     if pinned in cand_index and len(keep) < top_n:
+                                        p_concept = pinned.split(" | ", 1)[0]
+                                        if p_concept in concept_seen:
+                                            continue
                                         keep.append(pinned)
+                                        concept_seen.add(p_concept)
                                         p_axis = pinned.split(" | ", 1)[1]
                                         axis_counts[p_axis] = axis_counts.get(p_axis, 0) + 1
 
@@ -2087,6 +2321,9 @@ def build_exp4_signed_axis_scatter(
                                     if idx in keep:
                                         continue
                                     parts = idx.split(" | ", 1)
+                                    concept_name = parts[0]
+                                    if concept_name in concept_seen:
+                                        continue
                                     axis_name = parts[1] if len(parts) == 2 else ""
                                     if axis_name:
                                         count = axis_counts.get(axis_name, 0)
@@ -2094,74 +2331,66 @@ def build_exp4_signed_axis_scatter(
                                             continue
                                         axis_counts[axis_name] = count + 1
                                     keep.append(idx)
+                                    concept_seen.add(concept_name)
                                     if len(keep) >= top_n:
                                         break
-                                h = mat.loc[keep].copy()
-
-                                # Shorten row labels for visual scan in one figure.
-                                def _short_label(s: str) -> str:
-                                    probe, axis = s.split(" | ", 1)
-                                    probe_s = probe if len(probe) <= 22 else probe[:21] + "..."
-                                    axis_s = axis.replace("->", " -> ")
-                                    axis_s = axis_s if len(axis_s) <= 26 else axis_s[:25] + "..."
-                                    return f"{probe_s}\n{axis_s}"
-
-                                # Save original labels before index reassignment (used for
-                                # domain lookup and for the supporting CSV below).
+                                # `signed` is EN-only minus bilingual projection. Negating it
+                                # makes the visual read directly as the bilingual model's
+                                # movement relative to the English-only reference: left is
+                                # toward endpoint/polarity 1 and right toward polarity 2.
+                                h = -mat.loc[keep].copy()
                                 orig_labels = keep[:]
-                                h.index = [_short_label(x) for x in h.index]
+                                concepts: list[str] = []
+                                endpoint_1: list[str] = []
+                                endpoint_2: list[str] = []
+                                for label in orig_labels:
+                                    probe, axis = label.split(" | ", 1)
+                                    left_word, right_word = axis.split("->", 1)
+                                    concepts.append(probe if len(probe) <= 22 else probe[:21] + "…")
+                                    endpoint_1.append(left_word)
+                                    endpoint_2.append(right_word)
+                                h.index = concepts
                                 q = np.nanpercentile(np.abs(h.to_numpy()), 95)
                                 max_abs = float(np.nanmax(np.abs(h.to_numpy())))
                                 vmax = float(max(0.25, q, max_abs * 1.02))
 
                                 langs_ordered = list(h.columns)  # ZH, FR, FAS, ...
-                                sign_counts = pd.DataFrame(
-                                    {
-                                        "en_only": (h > eps).sum(axis=1).astype(int),
-                                        "en_l2": (h < -eps).sum(axis=1).astype(int),
-                                        "near_zero": ((h >= -eps) & (h <= eps)).sum(axis=1).astype(int),
-                                    },
-                                    index=h.index,
-                                )
-
                                 n_rows = len(h.index)
-                                fig, ax = plt.subplots(figsize=(7.20, 2.72), facecolor=PAPER_BG)
-                                style_paper_axis(ax, grid_axis="x")
+                                fig_h = max(5.35, n_rows * 0.38 + 1.25)
+                                fig, ax = plt.subplots(figsize=(7.20, fig_h), facecolor=PAPER_BG)
+                                style_paper_axis(ax, grid_axis=None)
                                 ax.axvspan(-eps, eps, color=SOFT_GRAY, alpha=0.96, zorder=0)
                                 ax.axvline(0.0, color="#5f6672", lw=1.0, ls=(0, (3, 2)), zorder=2)
                                 ax.text(
-                                    -vmax,
-                                    1.02,
-                                    "EN+L2 side",
-                                    transform=ax.get_xaxis_transform(),
-                                    ha="left",
-                                    va="bottom",
-                                    fontsize=10.0,
-                                    color=MUTED,
-                                )
-                                ax.text(
-                                    vmax,
-                                    1.02,
-                                    "EN-only side",
-                                    transform=ax.get_xaxis_transform(),
-                                    ha="right",
-                                    va="bottom",
-                                    fontsize=10.0,
-                                    color=MUTED,
-                                )
-                                ax.text(
-                                    vmax * 1.23,
-                                    1.02,
-                                    "side counts\nL2 / EN / 0",
+                                    -vmax * 1.08,
+                                    1.025,
+                                    "Endpoint 1",
                                     transform=ax.get_xaxis_transform(),
                                     ha="center",
                                     va="bottom",
-                                    fontsize=10.0,
-                                    color=MUTED,
+                                    fontsize=10.0, fontweight="bold", color=INK,
+                                )
+                                ax.text(
+                                    0.0,
+                                    1.025,
+                                    "English-only reference",
+                                    transform=ax.get_xaxis_transform(),
+                                    ha="center",
+                                    va="bottom",
+                                    fontsize=9.4, color=MUTED,
+                                )
+                                ax.text(
+                                    vmax * 1.08,
+                                    1.025,
+                                    "Endpoint 2",
+                                    transform=ax.get_xaxis_transform(),
+                                    ha="center",
+                                    va="bottom",
+                                    fontsize=10.0, fontweight="bold", color=INK,
                                 )
                                 lang_offsets = {
                                     str(lg).upper(): off
-                                    for lg, off in zip(langs_ordered, np.linspace(-0.32, 0.32, len(langs_ordered)))
+                                    for lg, off in zip(langs_ordered, np.linspace(-0.24, 0.24, len(langs_ordered)))
                                 }
 
                                 for i_row in range(n_rows):
@@ -2169,21 +2398,18 @@ def build_exp4_signed_axis_scatter(
                                     if row_vals.empty:
                                         continue
                                     yrow = float(i_row)
-                                    rmin = float(row_vals.min())
-                                    rmax = float(row_vals.max())
-                                    rail = FancyBboxPatch(
-                                        (rmin, yrow - 0.055),
-                                        max(rmax - rmin, 0.002),
-                                        0.11,
-                                        boxstyle="round,pad=0.0,rounding_size=0.045",
-                                        facecolor=RAIL_BG,
-                                        edgecolor="none",
-                                        alpha=0.88,
-                                        transform=ax.transData,
-                                        zorder=1,
+                                    ax.plot([-vmax, vmax], [yrow, yrow], color=RAIL_BG, lw=1.45, zorder=1)
+                                    ax.scatter([-vmax, vmax], [yrow, yrow], s=9, color=RAIL_BG, zorder=1)
+                                    ax.text(
+                                        -vmax * 1.08, yrow, endpoint_1[i_row],
+                                        ha="center", va="center", fontsize=9.2,
+                                        fontstyle="italic", color=INK,
                                     )
-                                    ax.add_patch(rail)
-                                    ax.axhline(yrow, color=RAIL_LINE, lw=0.62, zorder=0)
+                                    ax.text(
+                                        vmax * 1.08, yrow, endpoint_2[i_row],
+                                        ha="center", va="center", fontsize=9.2,
+                                        fontstyle="italic", color=INK,
+                                    )
                                     for lg, val in h.iloc[i_row].items():
                                         if pd.isna(val):
                                             continue
@@ -2191,48 +2417,30 @@ def build_exp4_signed_axis_scatter(
                                         ax.scatter(
                                             [float(val)],
                                             [yrow + lang_offsets.get(str(lg).upper(), 0.0)],
-                                            s=23,
+                                            s=24,
                                             marker="o",
                                             color=blend_hex(c, (1, 1, 1), 0.18),
-                                            edgecolors="white",
-                                            linewidths=0.60,
+                                            edgecolors=blend_hex(c, (0, 0, 0), 0.20),
+                                            linewidths=0.55,
                                             zorder=4,
                                         )
-                                    pos = int(sign_counts.iloc[i_row]["en_only"])
-                                    neg = int(sign_counts.iloc[i_row]["en_l2"])
-                                    zero = int(sign_counts.iloc[i_row]["near_zero"])
-                                    ax.text(
-                                        vmax * 1.23,
-                                        yrow,
-                                        f"{neg} / {pos} / {zero}",
-                                        ha="center",
-                                        va="center",
-                                        fontsize=10.0,
-                                        color=INK,
-                                        bbox=dict(
-                                            boxstyle="round,pad=0.18,rounding_size=0.06",
-                                            facecolor="white",
-                                            edgecolor="#c7cfd9",
-                                            linewidth=0.65,
-                                        ),
-                                        zorder=5,
-                                    )
 
-                                ax.set_xlim(-vmax * 1.08, vmax * 1.40)
-                                ax.set_ylim(-0.58, n_rows - 0.35)
+                                ax.set_xlim(-vmax * 1.23, vmax * 1.23)
+                                ax.set_ylim(-0.55, n_rows - 0.45)
                                 ax.invert_yaxis()
                                 ax.set_yticks(range(n_rows))
-                                ax.set_yticklabels(h.index, fontsize=10.0, color=INK)
-                                for tick in ax.get_yticklabels():
-                                    tick.set_linespacing(0.88)
-                                ax.tick_params(axis="y", length=0, pad=3)
-                                ax.set_xticks([-vmax, -vmax / 2.0, 0.0, vmax / 2.0, vmax])
+                                ax.set_yticklabels(h.index, fontsize=9.4, color=INK, fontweight="bold")
+                                ax.tick_params(axis="y", length=0, pad=5)
+                                ax.set_xticks([-vmax / 2.0, 0.0, vmax / 2.0])
                                 ax.set_xticklabels(
-                                    [f"{-vmax:.2f}", f"{-vmax/2:.2f}", "0", f"{vmax/2:.2f}", f"{vmax:.2f}"],
-                                    fontsize=10.0,
+                                    [f"{-vmax/2:.2f}", "0", f"{vmax/2:.2f}"],
+                                    fontsize=9.4,
                                     color=INK,
                                 )
-                                ax.set_xlabel(r"Signed contextual shift $\Delta s$ (EN-only minus EN+L2)", fontsize=10.0, color=INK, labelpad=4)
+                                ax.set_xlabel(
+                                    "Difference in projection (bilingual minus English-only)",
+                                    fontsize=10.0, color=INK, labelpad=4,
+                                )
                                 leg_handles = [
                                     plt.Line2D(
                                         [0],
@@ -2240,7 +2448,7 @@ def build_exp4_signed_axis_scatter(
                                         marker="o",
                                         color="none",
                                         markerfacecolor=blend_hex(LANG_COLORS.get(lg, NAVY), (1, 1, 1), 0.18),
-                                        markeredgecolor="white",
+                                        markeredgecolor=blend_hex(LANG_COLORS.get(lg, NAVY), (0, 0, 0), 0.20),
                                         label=lg,
                                         markersize=5.4,
                                     )
@@ -2249,17 +2457,17 @@ def build_exp4_signed_axis_scatter(
                                 ax.legend(
                                     handles=leg_handles,
                                     loc="lower center",
-                                    bbox_to_anchor=(0.5, 1.08),
+                                    bbox_to_anchor=(0.5, 1.10),
                                     ncol=min(8, len(langs_ordered)),
                                     frameon=True,
                                     facecolor="white",
                                     edgecolor="#c5ccd7",
                                     framealpha=0.96,
-                                    fontsize=10.0,
+                                    fontsize=9.4,
                                     handletextpad=0.20,
                                     columnspacing=0.58,
                                 )
-                                fig.subplots_adjust(left=0.21, right=0.95, bottom=0.20, top=0.78)
+                                fig.subplots_adjust(left=0.16, right=0.985, bottom=0.13, top=0.85)
                                 fig.savefig(
                                     latex_root / "figures" / "exp4_signed_axes.pdf",
                                     dpi=450,
@@ -2338,16 +2546,22 @@ def build_exp4_signed_axis_scatter(
                                         mat100 = mat100[cols100]
                                         keep100 = [k for k in orig_labels if k in mat100.index]
                                         if keep100:
-                                            h100 = mat100.loc[keep100].copy()
-                                            h100.index = [_short_label(x) for x in keep100]
+                                            # Match the main polarity plot: show the bilingual-minus-English
+                                            # direction, label both semantic endpoints, and retain all languages.
+                                            h100 = -mat100.loc[keep100].copy()
+                                            concepts100 = [str(x).split(" | ", 1)[0] for x in keep100]
+                                            axes100 = [str(x).split(" | ", 1)[1] for x in keep100]
+                                            endpoint_1_100 = [x.split("->", 1)[0].strip() for x in axes100]
+                                            endpoint_2_100 = [x.split("->", 1)[1].strip() for x in axes100]
+                                            h100.index = concepts100
                                             q100 = np.nanpercentile(np.abs(h100.to_numpy()), 95)
                                             max_abs100 = float(np.nanmax(np.abs(h100.to_numpy())))
                                             vmax100 = float(max(0.25, q100, max_abs100 * 1.02))
                                             langs100 = list(h100.columns)
                                             n_rows100 = len(h100)
-                                            fig_h100 = max(4.80, n_rows100 * 0.58 + 2.05)
+                                            fig_h100 = max(5.35, n_rows100 * 0.38 + 1.25)
                                             fig100, ax100 = plt.subplots(figsize=(7.15, fig_h100), facecolor=PAPER_BG)
-                                            fig100.subplots_adjust(left=0.36, right=0.97, bottom=0.18, top=0.82)
+                                            fig100.subplots_adjust(left=0.16, right=0.985, bottom=0.13, top=0.85)
                                             style_paper_axis(ax100, grid_axis="x")
                                             lang_offsets100 = {
                                                 str(lg).upper(): off
@@ -2355,45 +2569,30 @@ def build_exp4_signed_axis_scatter(
                                             }
                                             ax100.axvspan(-eps_icon, eps_icon, color=SOFT_GRAY, alpha=0.96, zorder=0)
                                             ax100.axvline(0.0, color="#5f6672", lw=1.0, ls=(0, (3, 2)), zorder=2)
-                                            ax100.text(
-                                                -vmax100,
-                                                1.02,
-                                                "EN+L2 side",
-                                                transform=ax100.get_xaxis_transform(),
-                                                ha="left",
-                                                va="bottom",
-                                                fontsize=10.0,
-                                                color=MUTED,
-                                            )
-                                            ax100.text(
-                                                vmax100,
-                                                1.02,
-                                                "EN-only side",
-                                                transform=ax100.get_xaxis_transform(),
-                                                ha="right",
-                                                va="bottom",
-                                                fontsize=10.0,
-                                                color=MUTED,
-                                            )
+                                            ax100.text(-vmax100 * 1.08, 1.025, "Endpoint 1",
+                                                       transform=ax100.get_xaxis_transform(), ha="center",
+                                                       va="bottom", fontsize=10.0, fontweight="bold", color=INK)
+                                            ax100.text(0.0, 1.025, "English-only reference",
+                                                       transform=ax100.get_xaxis_transform(), ha="center",
+                                                       va="bottom", fontsize=9.7, color=MUTED)
+                                            ax100.text(vmax100 * 1.08, 1.025, "Endpoint 2",
+                                                       transform=ax100.get_xaxis_transform(), ha="center",
+                                                       va="bottom", fontsize=10.0, fontweight="bold", color=INK)
                                             for i_row in range(n_rows100):
                                                 row_vals = h100.iloc[i_row]
                                                 vals = row_vals.dropna().astype(float)
                                                 if vals.empty:
                                                     continue
-                                                vmin_i = float(vals.min())
-                                                vmax_i = float(vals.max())
-                                                rail = FancyBboxPatch(
-                                                    (vmin_i, i_row - 0.055),
-                                                    max(vmax_i - vmin_i, 0.002),
-                                                    0.11,
-                                                    boxstyle="round,pad=0.0,rounding_size=0.045",
-                                                    facecolor=RAIL_BG,
-                                                    edgecolor="none",
-                                                    alpha=0.88,
-                                                    transform=ax100.transData,
-                                                    zorder=1,
-                                                )
-                                                ax100.add_patch(rail)
+                                                ax100.plot([-vmax100, vmax100], [i_row, i_row],
+                                                           color=RAIL_BG, lw=1.45, zorder=1)
+                                                ax100.scatter([-vmax100, vmax100], [i_row, i_row],
+                                                              s=9, color=RAIL_BG, zorder=1)
+                                                ax100.text(-vmax100 * 1.08, i_row, endpoint_1_100[i_row],
+                                                           ha="center", va="center", fontsize=9.2,
+                                                           fontstyle="italic", color=INK)
+                                                ax100.text(vmax100 * 1.08, i_row, endpoint_2_100[i_row],
+                                                           ha="center", va="center", fontsize=9.2,
+                                                           fontstyle="italic", color=INK)
                                                 for lg, val in zip(langs100, row_vals):
                                                     if pd.isna(val):
                                                         continue
@@ -2408,22 +2607,20 @@ def build_exp4_signed_axis_scatter(
                                                         linewidths=0.55,
                                                     )
                                                 ax100.axhline(i_row, color=RAIL_LINE, lw=0.62, zorder=0)
-                                            ax100.set_xlim(-vmax100 * 1.08, vmax100 * 1.08)
-                                            ax100.set_ylim(-0.6, n_rows100 - 0.35)
+                                            ax100.set_xlim(-vmax100 * 1.23, vmax100 * 1.23)
+                                            ax100.set_ylim(-0.55, n_rows100 - 0.45)
                                             ax100.invert_yaxis()
                                             ax100.set_yticks(range(n_rows100))
                                             ax100.set_yticklabels(h100.index, fontsize=10.0, color=INK)
                                             for tick in ax100.get_yticklabels():
                                                 tick.set_linespacing(0.90)
                                             ax100.set_xlabel(
-                                                "Signed contextual shift $\\Delta s$ (EN-100M minus EN+L2)",
-                                                fontsize=10.0,
-                                                color=INK,
-                                                labelpad=4,
+                                                "Difference in projection (bilingual minus English-only, 3,000 steps)",
+                                                fontsize=10.0, color=INK, labelpad=4,
                                             )
-                                            ax100.set_xticks([-vmax100, -vmax100 / 2, 0.0, vmax100 / 2, vmax100])
+                                            ax100.set_xticks([-vmax100 / 2, 0.0, vmax100 / 2])
                                             ax100.set_xticklabels(
-                                                [f"{-vmax100:.2f}", f"{-vmax100/2:.2f}", "0", f"{vmax100/2:.2f}", f"{vmax100:.2f}"],
+                                                [f"{-vmax100/2:.2f}", "0", f"{vmax100/2:.2f}"],
                                                 fontsize=10.0,
                                                 color=INK,
                                             )
@@ -2445,7 +2642,7 @@ def build_exp4_signed_axis_scatter(
                                             ax100.legend(
                                                 handles=leg_handles100,
                                                 loc="lower center",
-                                                bbox_to_anchor=(0.5, 1.07),
+                                                bbox_to_anchor=(0.5, 1.10),
                                                 ncol=min(8, max(1, len(langs100))),
                                                 fontsize=10.0,
                                                 frameon=True,
@@ -2776,9 +2973,9 @@ def build_appendix_l2_signed_hotspots(
     # Visuals: per-language signed hotspots (appendix companion), packed as two 2x2 panels.
     def _short_label(s: str) -> str:
         probe, axis = s.split(" | ", 1)
-        probe_s = probe if len(probe) <= 20 else probe[:19] + "…"
-        axis_s = axis if len(axis) <= 22 else axis[:21] + "…"
-        return f"{probe_s} | {axis_s}"
+        probe_s = probe if len(probe) <= 19 else probe[:18] + "…"
+        axis_s = axis if len(axis) <= 24 else axis[:23] + "…"
+        return f"{probe_s}\n{axis_s.replace('->', ' → ')}"
 
     def _select_lang_rows(series: pd.Series) -> list[str]:
         s = series.dropna().astype(float)
@@ -2798,7 +2995,8 @@ def build_appendix_l2_signed_hotspots(
 
     # Build per-language candidates, then assign globally unique examples so
     # y-axis entries do not repeat across the appendix panels.
-    top_n = 12
+    # Five clear rows per language yield forty examples across the full figure.
+    top_n = 5
     cand_per_lang: dict[str, list[str]] = {lg: _select_lang_rows(filt_mat[lg]) for lg in cols if lg in filt_mat.columns}
     used_rows: set[str] = set()
     per_lang: dict[str, pd.DataFrame] = {}
@@ -2826,8 +3024,8 @@ def build_appendix_l2_signed_hotspots(
     xlim = vmax * 1.12
 
     def _draw_panel(lang_list: list[str], out_png: str) -> None:
-        fig, axes = plt.subplots(2, 2, figsize=(8.4, 7.6), sharex=True)
-        axes = axes.flatten()
+        fig, axes = plt.subplots(4, 1, figsize=(7.0, 8.8), sharex=True, facecolor=PAPER_BG)
+        axes = np.atleast_1d(axes).flatten()
         for ax, lg in zip(axes, lang_list):
             sub = per_lang.get(lg, pd.DataFrame(columns=["signed"]))
             if sub.empty:
@@ -2852,20 +3050,24 @@ def build_appendix_l2_signed_hotspots(
             ax.scatter(vals, y, s=26, color=LANG_COLORS.get(lg, "#4c78a8"), edgecolors="white", linewidths=0.45, zorder=2)
 
             ax.set_yticks(y)
-            ax.set_yticklabels(labels_unique, fontsize=12.0, fontfamily="monospace")
-            ax.set_title(f"{lg} (L2-50M vs EN+L2)", fontsize=13, pad=4)
+            ax.set_yticklabels(labels_unique, fontsize=11.0)
+            ax.set_title(f"{lg} target-language space", fontsize=12.5, pad=3, fontweight="bold")
             ax.set_xlim(-xlim, xlim)
             ax.grid(axis="x", linestyle=(0, (3, 2)), linewidth=0.45, alpha=0.42)
             ax.spines["top"].set_visible(False)
             ax.spines["right"].set_visible(False)
             ax.spines["left"].set_visible(False)
             ax.tick_params(axis="y", length=0, pad=2)
-            ax.tick_params(axis="x", labelsize=11)
+            ax.tick_params(axis="x", labelsize=11.0)
 
         for ax in axes[len(lang_list):]:
             ax.axis("off")
-        fig.supxlabel("Signed shift (L2-50M minus EN+L2): left = EN+L2 higher, right = L2-50M higher", fontsize=12)
-        fig.subplots_adjust(left=0.24, right=0.99, bottom=0.08, top=0.96, wspace=0.60, hspace=0.34)
+        fig.supxlabel(
+            "Monolingual minus bilingual projection shift: left = bilingual higher; right = monolingual higher",
+            fontsize=11.0,
+            y=0.018,
+        )
+        fig.subplots_adjust(left=0.34, right=0.995, bottom=0.09, top=0.97, hspace=0.72)
         fig.savefig(latex_root / "figures" / out_png, dpi=450, bbox_inches="tight", pad_inches=0.04)
         plt.close(fig)
 
@@ -3050,42 +3252,54 @@ def build_category_heatmap(strat: pd.DataFrame | None, latex_root: Path) -> None
         row_color_lookup[pretty] = DOMAIN_COLORS.get(raw_label, INK)
     pvt.index = display_index
 
-    fig, ax = plt.subplots(figsize=(8.4, 5.8), facecolor=PAPER_BG)
+    # Split the two training controls vertically. This keeps all eight languages
+    # and both document-overlap conditions while making the labels readable and
+    # using the appendix page efficiently.
+    fig, axes = plt.subplots(2, 1, figsize=(7.5, 6.2), sharey=True, facecolor=PAPER_BG)
     vmin = float(np.nanmin(pvt.values))
     vmax = float(np.nanmax(pvt.values))
     norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    sns.heatmap(
-        pvt,
-        cmap="YlOrBr",
-        norm=norm,
-        annot=False,
-        linewidths=0.8,
-        linecolor="black",
-        cbar_kws={"label": r"Mean $D_{Axis}$ (higher = worse mismatch)", "shrink": 0.8},
-        ax=ax,
-    )
-    ax.collections[0].colorbar.ax.locator = MaxNLocator(4)
-    ax.collections[0].colorbar.update_ticks()
-    ax.set_xlabel("Model pair", fontsize=11)
-    ax.set_ylabel("Probe category", fontsize=11)
-    ax.tick_params(axis="x", labelsize=11.2, pad=2)
-    ax.tick_params(axis="y", labelsize=11.2, rotation=0)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=90, ha="center", va="top")
-    for boundary in range(8, len(pvt.columns), 8):
-        ax.axvline(boundary, color=INK, linewidth=1.2)
-    for tick in ax.get_yticklabels():
-        tick.set_color(row_color_lookup.get(tick.get_text(), INK))
-        tick.set_fontweight("bold")
-    for tick in ax.get_xticklabels():
-        lang = tick.get_text().split("-")[-1]
-        tick.set_color(LANG_COLORS.get(lang, INK))
-        tick.set_fontweight("bold")
-    ax.collections[0].colorbar.ax.tick_params(labelsize=11)
-    ax.text(4, -0.70, "50M shared", ha="center", va="bottom", fontsize=11.2, color=INK)
-    ax.text(12, -0.70, "50M disjoint", ha="center", va="bottom", fontsize=11.2, color=INK)
-    ax.text(20, -0.70, "100M shared", ha="center", va="bottom", fontsize=11.2, color=INK)
-    ax.text(28, -0.70, "100M disjoint", ha="center", va="bottom", fontsize=11.2, color=INK)
-    fig.subplots_adjust(left=0.11, right=0.93, bottom=0.34, top=0.92)
+    cbar_ax = fig.add_axes([0.91, 0.19, 0.018, 0.62])
+    panels = [
+        (pvt.iloc[:, :16], "Same English exposure", "Both models receive 1,500 English training steps"),
+        (pvt.iloc[:, 16:], "Same total training steps", "Both models receive 3,000 total training steps"),
+    ]
+    for panel_idx, (ax, (panel, title, subtitle)) in enumerate(zip(axes, panels)):
+        sns.heatmap(
+            panel,
+            cmap="YlOrBr",
+            norm=norm,
+            annot=False,
+            linewidths=0.8,
+            linecolor="black",
+            cbar=panel_idx == 0,
+            cbar_ax=cbar_ax if panel_idx == 0 else None,
+            cbar_kws={"label": r"Mean $D_{Axis}$ (higher = worse mismatch)"},
+            ax=ax,
+        )
+        ax.axvline(8, color=INK, linewidth=1.3)
+        ax.set_xlabel("")
+        ax.set_ylabel("Probe category", fontsize=13.0)
+        ax.tick_params(axis="x", labelsize=13.0, pad=2)
+        ax.tick_params(axis="y", labelsize=13.0, rotation=0)
+        simple_ticks = [tick.get_text().split("-")[-1] for tick in ax.get_xticklabels()]
+        ax.set_xticklabels(simple_ticks, rotation=90, ha="center", va="top")
+        ax.set_title(title, fontsize=14.0, fontweight="bold", color=INK, pad=32)
+        ax.text(0.5, 1.12, subtitle, transform=ax.transAxes, ha="center", va="bottom", fontsize=12.5, color=MUTED)
+        ax.text(4, -0.12, "Shared English documents", ha="center", va="bottom", fontsize=12.5, color=INK)
+        ax.text(12, -0.12, "Separate English documents", ha="center", va="bottom", fontsize=12.5, color=INK)
+        for tick in ax.get_yticklabels():
+            tick.set_color(row_color_lookup.get(tick.get_text(), INK))
+            tick.set_fontweight("bold")
+        for tick in ax.get_xticklabels():
+            lang = tick.get_text().split("-")[-1]
+            tick.set_color(LANG_COLORS.get(lang, INK))
+            tick.set_fontweight("bold")
+    cbar_ax.yaxis.set_major_locator(MaxNLocator(4))
+    cbar_ax.tick_params(labelsize=12.5)
+    cbar_ax.yaxis.label.set_size(13.0)
+    axes[-1].set_xlabel("Training setting and additional language", fontsize=13.0)
+    fig.subplots_adjust(left=0.19, right=0.88, bottom=0.15, top=0.90, hspace=0.92)
     fig.savefig(latex_root / "figures" / "category_heatmap.pdf", dpi=450, bbox_inches="tight", pad_inches=0.05)
     plt.close(fig)
 
@@ -3110,7 +3324,8 @@ def build_layerwise_artifacts(layerwise_df: pd.DataFrame | None, latex_root: Pat
         ].copy()
         if dbase.empty:
             return
-        fig, ax = plt.subplots(figsize=(COL_FIG_W, 2.70), facecolor=PAPER_BG)
+        layer_fig_size = (6.90, 3.70) if model_a == "en_100m" else (COL_FIG_W, 2.85)
+        fig, ax = plt.subplots(figsize=layer_fig_size, facecolor=PAPER_BG)
         style_paper_axis(ax, grid_axis="both")
         vals = []
         layers_ref = None
@@ -3166,7 +3381,7 @@ def build_layerwise_artifacts(layerwise_df: pd.DataFrame | None, latex_root: Pat
                 markerfacecolor="white",
                 markeredgecolor=INK,
                 markeredgewidth=0.9,
-                label=f"{model_a.replace('en_', 'EN-').upper()} mean across L2",
+                label=f"{EN_REFERENCE_TITLE.get(model_a, model_a)} mean across languages",
                 zorder=3,
             )
             ax.annotate(
@@ -3182,8 +3397,10 @@ def build_layerwise_artifacts(layerwise_df: pd.DataFrame | None, latex_root: Pat
         ax.set_xlabel("Transformer layer", fontsize=10.0)
         ax.set_ylabel(r"Normalized contextual $D_{Axis}$", fontsize=10.0)
         ax.tick_params(labelsize=10.0)
-        fig.tight_layout(pad=0.35)
-        fig.subplots_adjust(left=0.16)
+        if model_a == "en_100m":
+            fig.subplots_adjust(left=0.10, right=0.985, bottom=0.20, top=0.95)
+        else:
+            fig.subplots_adjust(left=0.17, right=0.985, bottom=0.22, top=0.94)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight")
         plt.close(fig)
 
@@ -3235,10 +3452,7 @@ def build_norm_control_artifacts(
         "row_l2": "Row-L2",
         "neutral_z": "Neutral-z",
     }
-    base_label = {
-        "en_50m": "EN-50M",
-        "en_100m": "EN-100M",
-    }
+    base_label = EN_REFERENCE_TITLE
 
     pivot = final.pivot_table(
         index=["model_a", "model_b", "normalization"],
@@ -3269,7 +3483,7 @@ def build_norm_control_artifacts(
     lines = [
         r"\begin{tabular}{@{}llrrrrr@{}}",
         r"\toprule",
-        r"Baseline & Control & Embed. & Context. & Gap & +Pairs & Final/Input \\",
+        r"Setting & Length control & Token embedding & Contextual state & Gap & Positive pairs & Final/input \\",
         r"\midrule",
     ]
     for base in ["en_50m", "en_100m"]:
@@ -3297,14 +3511,14 @@ def build_norm_control_artifacts(
     if layer.empty:
         return
 
-    fig, axes = plt.subplots(2, 1, figsize=(COL_FIG_W, 3.72), sharex=True, facecolor=PAPER_BG)
+    fig, axes = plt.subplots(2, 1, figsize=(COL_FIG_W, 3.56), sharex=True, facecolor=PAPER_BG)
     configs = [
         ("row_l2", "Row-normalized vectors", r"Row-L2 $D_{Axis}$"),
         ("neutral_z", "Neutral-anchor z-scored axes", r"Neutral-z $D_{Axis}$"),
     ]
     base_styles = {
-        "en_50m": {"label": "EN-50M", "color": NAVY, "linestyle": "-"},
-        "en_100m": {"label": "EN-100M", "color": ORANGE, "linestyle": (0, (3, 2))},
+        "en_50m": {"label": "Same English exposure", "color": NAVY, "linestyle": "-"},
+        "en_100m": {"label": "Same total steps", "color": ORANGE, "linestyle": (0, (3, 2))},
     }
     for ax, (norm, title, ylabel) in zip(axes, configs):
         style_paper_axis(ax, grid_axis="both")
@@ -3340,13 +3554,29 @@ def build_norm_control_artifacts(
                 markeredgewidth=0.7,
                 label=style["label"],
             )
-        ax.set_title(title, fontsize=10.0, fontweight="bold", color=INK, pad=3)
-        ax.set_ylabel(ylabel, fontsize=10.0)
-        ax.tick_params(labelsize=10.0)
-        ax.legend(frameon=False, fontsize=10.0, loc="upper left", ncol=2, handlelength=1.8, columnspacing=0.8)
-    axes[-1].set_xlabel("Transformer layer", fontsize=10.0)
-    fig.tight_layout(pad=0.35)
-    fig.subplots_adjust(hspace=0.34, left=0.18)
+        ax.set_title(title, fontsize=12.5, fontweight="bold", color=INK, pad=3)
+        ax.set_ylabel(ylabel, fontsize=12.5)
+        ax.tick_params(labelsize=12.5)
+        # A two-column legend was wider than the figure canvas. With
+        # bbox_inches="tight" that widened the exported PDF and shrank the
+        # actual plots when included at column width. Stack the full labels.
+        if ax.get_legend() is not None:
+            ax.get_legend().remove()
+    axes[-1].set_xlabel("Transformer layer", fontsize=12.5)
+    handles, _ = axes[0].get_legend_handles_labels()
+    if handles:
+        fig.legend(
+            handles,
+            ["English exposure", "Total steps"],
+            loc="lower center",
+            bbox_to_anchor=(0.5, 0.005),
+            ncol=2,
+            frameon=False,
+            fontsize=12.5,
+            handlelength=1.4,
+            columnspacing=0.8,
+        )
+    fig.subplots_adjust(hspace=0.50, left=0.20, right=0.99, bottom=0.24, top=0.98)
     fig.savefig(latex_root / "figures" / "norm_controlled_layerwise.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
 
@@ -3389,35 +3619,46 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
         return
     d = perhead_df.copy()
     d["pair"] = d.apply(lambda r: en_pair_label(str(r["model_a"]), str(r["model_b"]), include_setup=True), axis=1)
-    pivot = d.pivot_table(index=["pair", "layer"], columns="head", values="axis_abs_projection_diff_mean", aggfunc="mean")
-
-    fig, ax = plt.subplots(figsize=(8.4, 5.8))
-    vmin = float(np.nanmin(pivot.values))
-    vmax = float(np.nanmax(pivot.values))
-    norm = colors.Normalize(vmin=vmin, vmax=vmax)
-    sns.heatmap(
-        pivot,
-        cmap="YlOrBr",
-        norm=norm,
-        annot=False,
-        linewidths=0.35,
-        linecolor="black",
-        cbar_kws={"label": r"Mean $D_{Axis}$ (higher = worse mismatch)", "shrink": 0.85},
-        ax=ax,
+    d["language"] = d["model_b"].astype(str).map(
+        lambda x: parse_en_target(x)[0].upper() if parse_en_target(x) else str(x).upper()
     )
-    ax.collections[0].colorbar.ax.locator = MaxNLocator(4)
-    ax.collections[0].colorbar.update_ticks()
-    ax.set_xlabel("Attention head index")
-    ax.set_ylabel("Pair / Layer")
-    ax.tick_params(axis="x", labelsize=11.5)
-    ytick_labels = [tick.get_text() for tick in ax.get_yticklabels()]
-    if len(ytick_labels) > 32:
-        show_every = 2
-        ax.set_yticks(np.arange(0.5, len(ytick_labels), show_every))
-        ax.set_yticklabels(ytick_labels[::show_every], fontsize=11.5)
-    else:
-        ax.tick_params(axis="y", labelsize=11.5)
-    fig.tight_layout()
+    lang_rank = {lang.upper(): i for i, lang in enumerate(CORE_LANGS)}
+    d["language_rank"] = d["language"].map(lambda x: lang_rank.get(str(x).upper(), 999))
+    vmin = float(np.nanmin(d["axis_abs_projection_diff_mean"].to_numpy(dtype=float)))
+    vmax = float(np.nanmax(d["axis_abs_projection_diff_mean"].to_numpy(dtype=float)))
+    norm = colors.Normalize(vmin=vmin, vmax=vmax)
+    fig, axes = plt.subplots(2, 1, figsize=(7.0, 9.2), facecolor=PAPER_BG)
+    for ax, base in zip(axes, ["en_50m", "en_100m"]):
+        sub = d[d["model_a"] == base].sort_values(["language_rank", "layer", "head"]).copy()
+        sub["row_label"] = sub.apply(lambda r: f"{r['language']}  layer {int(r['layer'])}", axis=1)
+        row_order = sub[["language_rank", "language", "layer", "row_label"]].drop_duplicates()
+        row_order = row_order.sort_values(["language_rank", "layer"])["row_label"].tolist()
+        pivot = sub.pivot_table(
+            index="row_label",
+            columns="head",
+            values="axis_abs_projection_diff_mean",
+            aggfunc="mean",
+        ).reindex(row_order)
+        sns.heatmap(
+            pivot,
+            cmap="YlOrBr",
+            norm=norm,
+            annot=False,
+            linewidths=0.30,
+            linecolor="#7c7469",
+            cbar=False,
+            ax=ax,
+        )
+        ax.set_title(EN_REFERENCE_TITLE[base], fontsize=12, fontweight="bold", pad=8)
+        ax.set_xlabel("Channel slice", fontsize=11.0)
+        ax.set_ylabel("")
+        ax.tick_params(axis="x", labelsize=10.0, rotation=0)
+        ax.tick_params(axis="y", labelsize=10.0, rotation=0)
+    fig.subplots_adjust(left=0.17, right=0.84, bottom=0.06, top=0.95, hspace=0.34)
+    cbar_ax = fig.add_axes([0.88, 0.22, 0.025, 0.56])
+    cbar = fig.colorbar(axes[1].collections[0], cax=cbar_ax)
+    cbar.set_label(r"Mean $D_{Axis}$", fontsize=11.0)
+    cbar.ax.yaxis.set_major_locator(MaxNLocator(4))
     fig.savefig(latex_root / "figures" / "appendix_perhead_heatmap.pdf", dpi=450, bbox_inches="tight")
     plt.close(fig)
 
@@ -3430,7 +3671,7 @@ def build_perhead_artifacts(perhead_df: pd.DataFrame | None, latex_root: Path) -
     lines = [
         r"\begin{tabular}{@{}llrr@{}}",
         r"\toprule",
-        r"Pair & Layer & Head & Mean $D_{Axis}$ \\",
+        r"Pair & Layer & Channel slice & Mean $D_{Axis}$ \\",
         r"\midrule",
     ]
     for _, r in top.iterrows():
@@ -3516,9 +3757,9 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
     lines = [
         r"\begin{tabular}{@{}lrrrrrr@{}}",
         r"\toprule",
-        r" & \multicolumn{2}{c}{Ctx./emb. ratio} & \multicolumn{2}{c}{Overlap gain $D_{NN}$} & \multicolumn{2}{c}{Overlap gain $D_{Axis}$} \\",
+        r" & \multicolumn{2}{c}{Contextual / token ratio} & \multicolumn{2}{c}{Overlap gain $D_{NN}$} & \multicolumn{2}{c}{Overlap gain $D_{Axis}$} \\",
         r"\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}",
-        r"Lang & 50M & 100M & Emb. & Ctx. & Emb. & Ctx. \\",
+        r"Lang & \shortstack{1,500\\steps} & \shortstack{3,000\\steps} & \shortstack{Token\\embedding} & \shortstack{Contextual\\state} & \shortstack{Token\\embedding} & \shortstack{Contextual\\state} \\",
         r"\midrule",
     ]
     for _, r in out.iterrows():
@@ -3543,7 +3784,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         ].copy()
         if c.empty:
             continue
-        c["baseline"] = c["model_a"].map({f"{lang}_50m": "50M", f"{lang}_100m": "100M"})
+        c["baseline"] = c["model_a"].map({f"{lang}_50m": "1,500 training steps", f"{lang}_100m": "3,000 training steps"})
         c["language"] = lang_label[lang]
         ci_rows.append(c[["language", "baseline", "mean", "ci_low", "ci_high"]])
 
@@ -3572,7 +3813,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         color="#f4a261",
         edgecolor="black",
         linewidth=0.8,
-        label="50M baseline",
+        label="1,500 training steps",
     )
     b2 = axes[0].bar(
         x + width / 2,
@@ -3581,13 +3822,13 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         color="#2a9d8f",
         edgecolor="black",
         linewidth=0.8,
-        label="100M baseline",
+        label="3,000 training steps",
     )
     for b in b1:
         b.set_hatch("//")
     for b in b2:
         b.set_hatch("..")
-    axes[0].set_ylabel(r"Contextual / embedding $D_{Axis}$ ratio", fontsize=12)
+    axes[0].set_ylabel("Contextual / embedding\n$D_{Axis}$ ratio", fontsize=12, linespacing=1.05)
     axes[0].set_xticks(x)
     axes[0].set_xticklabels(out["language"].tolist())
     axes[0].tick_params(axis="both", labelsize=11)
@@ -3610,7 +3851,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         color="#cdcdcd",
         edgecolor="black",
         linewidth=0.8,
-        label="Embedding",
+        label="Token embedding",
     )
     b4 = axes[1].bar(
         x + width / 2,
@@ -3619,7 +3860,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
         color="#9fc4e6",
         edgecolor="black",
         linewidth=0.8,
-        label="Contextual",
+        label="Contextual state",
     )
     for b in b3:
         b.set_hatch("..")
@@ -3716,7 +3957,7 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
             xs = np.linspace(xfit.min(), xfit.max(), 50)
             ax.plot(xs, m * xs + b, color="#264653", linewidth=1.3, linestyle=(0, (3, 2)))
         ax.set_xlabel("Distance proxy (higher means farther from English)")
-        ax.set_ylabel(r"Mean amplification ratio $(D_{Axis}^{Ctx}/D_{Axis}^{Emb})$")
+        ax.set_ylabel(r"Mean contextual-state / token-embedding $D_{Axis}$ ratio")
         ax.grid(True, linestyle=(0, (3, 2)), linewidth=0.5, alpha=0.42)
         ax.spines["top"].set_visible(False)
         ax.spines["right"].set_visible(False)
@@ -3731,8 +3972,8 @@ def build_multilingual_expansion_artifacts(multilingual_root: Path, latex_root: 
             f"OLS intercept & {_fmt(coef[0])} \\\\",
             f"OLS coef: script-match (Latin=1) & {_fmt(coef[1])} \\\\",
             f"OLS coef: family-match (Indo-European=1) & {_fmt(coef[2])} \\\\",
-            f"OLS coef: baseline(100M=1) & {_fmt(coef[3])} \\\\",
-            f"OLS $R^2$ (pooled 50M/100M; $n={len(long)}$) & {_fmt(r2)} \\\\",
+            f"OLS coef: 3,000-step reference & {_fmt(coef[3])} \\\\",
+            f"OLS $R^2$ (both reference lengths; $n={len(long)}$) & {_fmt(r2)} \\\\",
             f"Spearman $\\rho$(distance proxy, mean ratio; $n={len(reg)}$) & {_fmt(float(rho))} \\\\",
             f"Spearman $p$-value & {float(pval):.3f} \\\\",
             r"\bottomrule",
@@ -3798,7 +4039,9 @@ def build_main_multilingual_validation_figure(
         ref = None
 
         y = np.arange(len(p))
-        fig, ax = plt.subplots(figsize=(COL_FIG_W, COL_FIG_H), facecolor=PAPER_BG)
+        is_appendix = baseline == "100m"
+        multi_fig_size = (6.90, 3.70) if is_appendix else (COL_FIG_W, COL_FIG_H)
+        fig, ax = plt.subplots(figsize=multi_fig_size, facecolor=PAPER_BG)
         style_paper_axis(ax, grid_axis="x")
         ctx_vals = p[ctx_col].to_numpy(dtype=float)
         emb_vals = p[emb_col].to_numpy(dtype=float)
@@ -3826,14 +4069,18 @@ def build_main_multilingual_validation_figure(
         ax.set_yticklabels(p["lang_code"].astype(str).str.upper().tolist(), fontsize=10.0, fontweight="bold")
         color_language_ticklabels(ax, axis="y")
         ax.invert_yaxis()
-        ax.set_ylabel("Language", fontsize=10.0)
-        ax.set_xlabel(f"$D_{{Axis}}$ in {baseline.upper()} space (mono. vs EN+L2, shared docs)", fontsize=10.0)
+        ax.set_ylabel("")
+        reference = "1,500-step" if baseline == "50m" else "3,000-step"
+        ax.set_xlabel(
+            f"$D_{{Axis}}$ in {reference} monolingual space",
+            fontsize=9.2 if not is_appendix else 10.0,
+        )
         ax.tick_params(axis="x", labelsize=10.0)
         xmax = max(float(np.nanmax(ctx_vals)), float(np.nanmax(emb_vals)))
         ax.set_xlim(0.0, xmax * 1.22)
         handles = [
-            plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Embedding", markersize=6),
-            plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Contextual", markersize=6),
+            plt.Line2D([0], [0], marker="o", color="none", markerfacecolor="white", markeredgecolor="#4c5a67", label="Token embedding", markersize=6),
+            plt.Line2D([0], [0], marker="s", color="none", markerfacecolor="#c9dff2", markeredgecolor="#4c5a67", label="Contextual state", markersize=6),
         ]
         if ref is not None:
             handles.append(
@@ -3842,17 +4089,20 @@ def build_main_multilingual_validation_figure(
         ax.legend(
             handles=handles,
             loc="upper center",
-            bbox_to_anchor=(0.5, 1.22),
+            bbox_to_anchor=(0.5, 1.24 if not is_appendix else 1.16),
             ncol=2,
             frameon=True,
             facecolor="white",
             edgecolor="#c5ccd7",
             framealpha=0.96,
-            fontsize=10.0,
+            fontsize=9.0 if not is_appendix else 10.0,
             columnspacing=0.80,
             handletextpad=0.35,
         )
-        fig.subplots_adjust(left=0.16, right=0.985, bottom=0.20, top=0.82)
+        if is_appendix:
+            fig.subplots_adjust(left=0.10, right=0.985, bottom=0.20, top=0.78)
+        else:
+            fig.subplots_adjust(left=0.17, right=0.985, bottom=0.22, top=0.72)
         fig.savefig(latex_root / "figures" / out_name, dpi=450, bbox_inches="tight", pad_inches=0.05)
         plt.close(fig)
 
@@ -3872,11 +4122,18 @@ def build_same_language_controls_table(ctrl_df: pd.DataFrame | None, latex_root:
         write_table(lines, latex_root / "tables" / "same_language_controls.tex")
         return
     x = ctrl_df.copy()
-    x["baseline"] = x["language"].astype(str)
+    x["baseline"] = x["language"].astype(str).map(
+        {
+            "EN-50M": "Same English exposure",
+            "EN-100M": "Same total training steps",
+            "en_50m": "Same English exposure",
+            "en_100m": "Same total training steps",
+        }
+    ).fillna(x["language"].astype(str))
     x["repr"] = x["eval_repr"].map(
         {
-            "embedding_matrix": "Embedding",
-            "pre_lmhead_contextual": "Contextual",
+            "embedding_matrix": "Token embedding",
+            "pre_lmhead_contextual": "Contextual state",
         }
     ).fillna(x["eval_repr"])
     g = (
@@ -3887,7 +4144,7 @@ def build_same_language_controls_table(ctrl_df: pd.DataFrame | None, latex_root:
     lines = [
         r"\begin{tabular}{@{}llrrr@{}}",
         r"\toprule",
-        r"Baseline & Representation & Mean raw $D_{Axis}$ & Std. dev. & EN-seed pairs \\",
+        r"Setting & Representation & Mean raw $D_{Axis}$ & Std. dev. & English seed pairs \\",
         r"\midrule",
     ]
     for _, r in g.sort_values(["baseline", "repr"]).iterrows():
@@ -3913,8 +4170,8 @@ def build_framework_holdout_table(framework_df: pd.DataFrame | None, latex_root:
     if agg.empty:
         return
     repr_map = {
-        "embedding_matrix": "Embedding",
-        "pre_lmhead_contextual": "Contextual",
+        "embedding_matrix": "Token embedding",
+        "pre_lmhead_contextual": "Contextual state",
     }
     agg["repr"] = agg["eval_repr"].map(repr_map).fillna(agg["eval_repr"])
     g = agg.groupby("repr", as_index=False)[["daxis_matched", "daxis_heldout", "delta_heldout_minus_matched"]].mean()
@@ -3970,7 +4227,7 @@ def build_progress_sensitivity_table(progress_df: pd.DataFrame | None, latex_roo
         lines = [
             r"\begin{tabular}{@{}lrrrrr@{}}",
             r"\toprule",
-            r"Language & 500 Emb. & 500 Ctx. & 3000 Emb. & 3000 Ctx. & Mean gap \\",
+            r"Language & \shortstack{500-step\\token embedding} & \shortstack{500-step\\contextual state} & \shortstack{3,000-step\\token embedding} & \shortstack{3,000-step\\contextual state} & Mean gap \\",
             r"\midrule",
         ]
         for r in rows:
@@ -3982,21 +4239,21 @@ def build_progress_sensitivity_table(progress_df: pd.DataFrame | None, latex_roo
         return
     p = progress_df.copy()
     repr_map = {
-        "embedding_matrix": "Embedding",
-        "pre_lmhead_contextual": "Contextual",
-        "ratio_ctx_over_emb": "Contextual/Embedding ratio",
+        "embedding_matrix": "Token embedding",
+        "pre_lmhead_contextual": "Contextual state",
+        "ratio_ctx_over_emb": "Contextual / token ratio",
     }
     p["repr"] = p["repr_type"].map(repr_map).fillna(p["repr_type"])
     lines = [
         r"\begin{tabular}{@{}llrrr@{}}",
         r"\toprule",
-        r"Language & Quantity & 50M & 100M & 100M minus 50M \\",
+        r"Language & Quantity & \shortstack{1,500\\steps} & \shortstack{3,000\\steps} & Difference \\",
         r"\midrule",
     ]
     for lang in sorted(p["language"].unique()):
         sub = p[p["language"] == lang]
         first = True
-        for key in ["Embedding", "Contextual", "Contextual/Embedding ratio"]:
+        for key in ["Token embedding", "Contextual state", "Contextual / token ratio"]:
             s = sub[sub["repr"] == key]
             if s.empty:
                 continue
@@ -4031,7 +4288,7 @@ def build_dense_progress_trajectory_figure(progress_df: pd.DataFrame | None, lat
     axes = axes.flatten()
     markers = {"embedding_matrix": "o", "pre_lmhead_contextual": "s"}
     linestyles = {"embedding_matrix": (0, (3, 2)), "pre_lmhead_contextual": "-"}
-    labels = {"embedding_matrix": "Embedding", "pre_lmhead_contextual": "Contextual"}
+    labels = {"embedding_matrix": "Token embedding", "pre_lmhead_contextual": "Contextual state"}
 
     for ax, lang in zip(axes, order):
         style_paper_axis(ax, grid_axis="y")
@@ -4111,7 +4368,7 @@ def build_dense_progress_summary_figure(progress_df: pd.DataFrame | None, latex_
     style_paper_axis(ax, grid_axis="y")
     configs = {
         "embedding_matrix": {
-            "label": "Embedding",
+            "label": "Token embedding",
             "color": "#5f7890",
             "marker": "o",
             "linestyle": (0, (3, 2)),
@@ -4119,7 +4376,7 @@ def build_dense_progress_summary_figure(progress_df: pd.DataFrame | None, latex_
             "individual_alpha": 0.20,
         },
         "pre_lmhead_contextual": {
-            "label": "Contextual",
+            "label": "Contextual state",
             "color": NAVY,
             "marker": "s",
             "linestyle": "-",
@@ -4196,21 +4453,26 @@ def build_anchor_sensitivity_table(anchor_df: pd.DataFrame | None, latex_root: P
         .mean()
     )
     lines = [
-        r"\begin{tabular}{@{}llrrr@{}}",
+        r"\begin{tabular}{@{}lcccc@{}}",
         r"\toprule",
-        r"Baseline & Representation & Anchor subset & Mean $D_{Axis}$ & Residual / anchor \\",
+        r" & \multicolumn{2}{c}{Held-out mean $D_{Axis}$} & \multicolumn{2}{c}{Alignment residual per anchor} \\",
+        r"\cmidrule(lr){2-3}\cmidrule(l){4-5}",
+        r"Setting & Token embedding & Contextual state & Token embedding & Contextual state \\",
         r"\midrule",
     ]
-    repr_map = {
-        "embedding_matrix": "Embedding",
-        "pre_lmhead_contextual": "Contextual",
-    }
-    base_map = {"en_50m": "EN-50M", "en_100m": "EN-100M"}
-    for _, r in g.sort_values(["baseline", "repr_type", "subset_size"]).iterrows():
-        lines.append(
-            f"{base_map.get(str(r['baseline']), str(r['baseline']))} & {repr_map.get(str(r['repr_type']), str(r['repr_type']))} & "
-            f"{int(r['subset_size'])} & {_fmt(r['axis_abs_projection_diff_mean'])} & {_fmt(r['anchor_residual_per_anchor'])} \\\\"
-        )
+    for base in ["en_50m", "en_100m"]:
+        values = []
+        for repr_type in ["embedding_matrix", "pre_lmhead_contextual"]:
+            sub = g[(g["baseline"] == base) & (g["repr_type"] == repr_type)]
+            lo = float(sub["axis_abs_projection_diff_mean"].min())
+            hi = float(sub["axis_abs_projection_diff_mean"].max())
+            values.append(_fmt(lo) if np.isclose(lo, hi) else f"{_fmt(lo)}--{_fmt(hi)}")
+        for repr_type in ["embedding_matrix", "pre_lmhead_contextual"]:
+            sub = g[(g["baseline"] == base) & (g["repr_type"] == repr_type)].set_index("subset_size")
+            first = float(sub.loc[500, "anchor_residual_per_anchor"])
+            last = float(sub.loc[3000, "anchor_residual_per_anchor"])
+            values.append(f"{_fmt(first)} $\\rightarrow$ {_fmt(last)}")
+        lines.append(f"{EN_REFERENCE_TITLE[base]} & " + " & ".join(values) + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     write_table(lines, latex_root / "tables" / "anchor_sensitivity.tex")
 
@@ -4264,8 +4526,8 @@ def build_scope_tests_table(scope_df: pd.DataFrame | None, latex_root: Path) -> 
     label_map = {
         "contextual_gt_embedding_axis": "Main EN-centered gap",
         "anchor_sensitivity_ctx_gt_emb": "Anchor-subset reruns",
-        "en_50m": "EN-50M",
-        "en_100m": "EN-100M",
+        "en_50m": "Same English exposure",
+        "en_100m": "Same total training steps",
         "all": "All",
     }
     lines = [
@@ -4394,7 +4656,7 @@ def build_main_multilingual_regression_figure_and_table(multilingual_root: Path,
     lines = [
         r"\begin{tabular}{@{}lllrr@{}}",
         r"\toprule",
-        r"Language & Family & IDV Dist. & Ratio (50M) & Ratio (100M) \\",
+        r"Language & Family & IDV distance & \shortstack{Ratio at\\1,500 steps} & \shortstack{Ratio at\\3,000 steps} \\",
         r"\midrule",
     ]
 
@@ -4510,6 +4772,8 @@ def main() -> None:
     build_exp1_procrustes_table(en, args.latex_root)
     build_exp2_table_fig(en, stats_df, args.latex_root, same_lang_df=same_lang_df)
     build_exp2_quality_table(stats_df, args.latex_root)
+    build_appendix_ci_guide(ci, args.latex_root)
+    build_quality_tier_pattern(stats_df, args.latex_root)
     build_exp3_table_fig(zh, fr, args.latex_root)
     build_exp4_ratio(en, ci, args.latex_root)
     build_exp5_alignment_method_artifacts(aln_method_df, args.latex_root)
