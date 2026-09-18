@@ -1,5 +1,9 @@
 # Double Trouble: Bilingual Pretraining Leaves Language-Conditioned Effects in Shared-Language Representations
 
+[Anjishnu Mukherjee](https://iamshnoo.github.io/), Ziwei Zhu, Antonios Anastasopoulos · EMNLP ’26 (Main)
+
+[Paper](https://iamshnoo.github.io/papers/double-trouble-camera-ready.pdf) · [Research overview and publications](https://iamshnoo.github.io/#double-trouble)
+
 This repository contains the training pipeline, model and data manifests, probe
 inventory, evaluation code, released results, and paper figures for a controlled
 study of bilingual pretraining. We ask whether an English concept is represented
